@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>外掛：</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID：</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>致謝</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>許可證</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD 應用程式圖示</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>&quot;Built with Qt&quot; 標誌</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
@@ -363,6 +373,11 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>重置為 &quot;未定義&quot;。</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>點質量參數圖示</translation>
     </message>
 </context>
 <context>
@@ -1252,9 +1267,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>無效的影像大小（寬度x高度必須小於%1）。</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>無法算繪圖片</translation>
     </message>
 </context>
 <context>
@@ -1354,7 +1374,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>塊狀列表</translation>
@@ -2171,18 +2191,38 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>命令列</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>命令列</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>命令列輸入框</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>輸入命令、選項或座標</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>命令列輸出</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>命令、選項和訊息的歷程記錄</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>無效值：</translation>
     </message>
@@ -2266,6 +2306,11 @@ Do you wish to recover it?</source>
         <source>Show information as dialog</source>
         <translation>以對話形式顯示資訊</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>顯示標題列</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2332,6 +2377,11 @@ Do you wish to recover it?</source>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>轉換：</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>轉換繪圖單位</translation>
     </message>
 </context>
 <context>
@@ -3013,12 +3063,14 @@ Do you wish to recover it?</source>
         <translation>輸入固定的標籤或留空以獲得自動標籤</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>上公差</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>下公差</translation>
     </message>
@@ -4367,12 +4419,12 @@ is already in the list.</source>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>顯示ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>指令碼外殼</translation>
     </message>
@@ -4396,6 +4448,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>不要再顯示這個對話方塊</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>顯示標題列</translation>
     </message>
 </context>
 <context>
@@ -5250,6 +5307,11 @@ is already in the list.</source>
         <source>Background Color:</source>
         <translation>背景顏色：</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD 應用程式圖示</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5437,7 +5499,12 @@ is already in the list.</source>
         <translation>選擇插入或輸入空隙。(未實施)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+49"/>
+        <source>Illustration of the casting options</source>
+        <translation>鑄造選項圖解</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>版本</translation>
     </message>
@@ -5492,7 +5559,7 @@ is already in the list.</source>
         <translation>刪除了塗在基礎實體上的。(永續性關閉)</translation>
     </message>
     <message>
-        <location line="-933"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;輸入空間大小&gt;。</translation>
     </message>
@@ -5502,7 +5569,7 @@ is already in the list.</source>
         <translation>窗簾繩結</translation>
     </message>
     <message>
-        <location line="+543"/>
+        <location line="+546"/>
         <source>#Undefined#</source>
         <translation>#未定義#</translation>
     </message>
@@ -5938,6 +6005,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>使用以 Qt RHI (Rendering Hardware Interface) 為基礎的硬體加速圖形檢視，而非以影像為基礎的圖形檢視</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>使用 RHI 圖形檢視</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>預設情況下，抗鋸齒開啟</translation>
     </message>
@@ -8013,7 +8090,7 @@ is already in the list.</source>
         <translation>隱藏所有層</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>解凍所有層面</translation>
     </message>
@@ -8023,7 +8100,7 @@ is already in the list.</source>
         <translation>凍結所有圖層</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>鎖定所有層</translation>
     </message>
@@ -8157,7 +8234,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>圖層列表</translation>
     </message>
@@ -9019,7 +9096,12 @@ is already in the list.</source>
         <translation>保持原樣</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>鏡像參數圖解</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>使用當前層和屬性</translation>
     </message>
@@ -9260,6 +9342,11 @@ is already in the list.</source>
         <source>Form</source>
         <translation>形狀</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>滑鼠按鍵圖解</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9364,7 +9451,7 @@ is already in the list.</source>
         <translation>格式：</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>無標題 %1</translation>
     </message>
@@ -9802,6 +9889,106 @@ is already in the list.</source>
         <source>Size (pixel):</source>
         <translation>尺寸（畫素）：</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>帶加號的方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>點</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>帶十字的圓和方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>帶垂直線的圓</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>帶加號的圓</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>帶加號的圓和方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>帶點的方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>不可見</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>垂直線</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>加號</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>十字</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>圓和方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>帶垂直線的方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>帶點的圓</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>帶十字的圓</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>帶垂直線的圓和方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>圓</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>帶十字的方形</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>帶點的圓和方形</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10057,7 +10244,7 @@ is already in the list.</source>
         <translation>自動將圖畫貼在紙上？</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>拖動以移動紙張</translation>
     </message>
@@ -10067,13 +10254,13 @@ is already in the list.</source>
         <translation>已完成</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>頁面設定</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>匯出到PDF</translation>
     </message>
@@ -10214,7 +10401,7 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10274,7 +10461,7 @@ is already in the list.</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>使用自動測量</translation>
     </message>
@@ -10300,7 +10487,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>屬性編輯器</translation>
@@ -10716,7 +10903,12 @@ is already in the list.</source>
         <translation>多份</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>旋轉二參數圖解</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>角度a：</translation>
     </message>
@@ -10759,7 +10951,12 @@ is already in the list.</source>
         <translation>多份</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>旋轉參數圖解</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>角度(a)：</translation>
     </message>
@@ -11133,7 +11330,12 @@ is already in the list.</source>
         <translation>多份</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>比例參數圖解</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>因素十：</translation>
     </message>
@@ -11582,7 +11784,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>至少有兩點是相同的。</translation>
@@ -11967,6 +12169,11 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Relative</source>
         <translation>相對</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>設定座標</translation>
     </message>
 </context>
 <context>
@@ -13090,6 +13297,11 @@ is already in the list.</source>
         <source>Filter</source>
         <translation>過濾器</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>清除過濾器</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13180,7 +13392,12 @@ is already in the list.</source>
         <translation>多份</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>移動/複製參數圖解</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>使用當前層和屬性</translation>
     </message>
@@ -13257,7 +13474,12 @@ is already in the list.</source>
         <translation>多份</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>移動和旋轉參數圖解</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>角度(a)：</translation>
     </message>
@@ -13618,7 +13840,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>不支援掉線資料</translation>
     </message>
@@ -13654,7 +13876,7 @@ is already in the list.</source>
         <translation>恢復預設值</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>插入符號</translation>
     </message>

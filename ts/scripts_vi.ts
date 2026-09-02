@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Ghi công</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Giấy phép</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>Biểu tượng ứng dụng QCAD</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logo &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Giới thiệu</translation>
     </message>
@@ -363,6 +373,11 @@ các thay đổi tùy chọn có hiệu lực.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Đặt lại về &apos;Chưa xác định&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Minh họa các tham số khối lượng điểm</translation>
     </message>
 </context>
 <context>
@@ -1252,9 +1267,14 @@ Bạn có muốn khôi phục không?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Cỡ ảnh không hợp lệ (rộng x cao phải nhỏ hơn %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Không thể kết xuất hình ảnh</translation>
     </message>
 </context>
 <context>
@@ -1354,7 +1374,7 @@ Bạn có muốn khôi phục không?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Danh sách khối</translation>
@@ -2171,18 +2191,38 @@ Bạn có muốn khôi phục không?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Dòng lệnh</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Dòng lệnh</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Dòng nhập lệnh</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Nhập một lệnh, một tùy chọn hoặc tọa độ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Đầu ra dòng lệnh</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Lịch sử lệnh, tùy chọn và thông báo</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Giá trị không hợp lệ:</translation>
     </message>
@@ -2266,6 +2306,11 @@ Bạn có muốn khôi phục không?</translation>
         <source>Show information as dialog</source>
         <translation>Hiện thông tin dưới dạng hộp thoại</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Hiện thanh tiêu đề</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2322,6 +2367,11 @@ Bạn có muốn khôi phục không?</translation>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Chuyển đổi:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Chuyển đổi đơn vị bản vẽ</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -3013,12 +3063,14 @@ Bạn có muốn khôi phục không?</translation>
         <translation>Nhập nhãn cố định hoặc để trống cho nhãn tự động</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Dung sai trên</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Dung sai dưới</translation>
     </message>
@@ -4367,12 +4419,12 @@ is already in the list.</source>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Hiện ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Shell kịch bản</translation>
     </message>
@@ -4396,6 +4448,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Không hiển thị hộp thoại này nữa</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Hiện thanh tiêu đề</translation>
     </message>
 </context>
 <context>
@@ -5250,6 +5307,11 @@ is already in the list.</source>
         <source>Background Color:</source>
         <translation>Màu nền:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>Biểu tượng ứng dụng QCAD</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5447,7 +5509,12 @@ is already in the list.</source>
         <translation>Nút dây rèm</translation>
     </message>
     <message>
-        <location line="+262"/>
+        <location line="+34"/>
+        <source>Illustration of the casting options</source>
+        <translation>Minh họa các tùy chọn đổ cọ</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Phiên bản</translation>
     </message>
@@ -5788,7 +5855,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+25"/>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+1317"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+1330"/>
         <source>Selection</source>
         <translation>Vùng chọn</translation>
     </message>
@@ -5824,7 +5891,7 @@ is already in the list.</source>
         <translation>Khoảng cách lưới tối thiểu (px):</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1291"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1304"/>
         <source>Origin</source>
         <translation>Gốc tọa độ</translation>
     </message>
@@ -5950,6 +6017,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Dùng khung nhìn đồ họa tăng tốc phần cứng dựa trên Qt RHI (Rendering Hardware Interface) thay cho khung nhìn đồ họa dựa trên ảnh</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Dùng khung nhìn đồ họa RHI</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Bật khử răng cưa theo mặc định</translation>
     </message>
@@ -8033,7 +8110,7 @@ is already in the list.</source>
         <translation>Đang ẩn tất cả lớp</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Đang rã đông tất cả lớp</translation>
     </message>
@@ -8043,7 +8120,7 @@ is already in the list.</source>
         <translation>Đang đóng băng tất cả lớp</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Đang khóa tất cả lớp</translation>
     </message>
@@ -8157,7 +8234,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Danh sách lớp</translation>
     </message>
@@ -9019,7 +9096,12 @@ is already in the list.</source>
         <translation>&amp;Giữ bản gốc</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Minh họa các tham số đối xứng</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Dùng lớp hiện hành và &amp;thuộc tính</translation>
     </message>
@@ -9260,6 +9342,11 @@ is already in the list.</source>
         <source>Form</source>
         <translation>Biểu mẫu</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Minh họa các nút chuột</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9364,7 +9451,7 @@ is already in the list.</source>
         <translation>Định dạng:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Chưa đặt tên %1</translation>
     </message>
@@ -9802,6 +9889,106 @@ is already in the list.</source>
         <source>Size (pixel):</source>
         <translation>Kích cỡ (điểm ảnh):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Hình vuông có dấu cộng</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Chấm</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Đường tròn và hình vuông có chữ thập</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Đường tròn có đường thẳng đứng</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Đường tròn có dấu cộng</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Đường tròn và hình vuông có dấu cộng</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Hình vuông có chấm</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Vô hình</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Đường thẳng đứng</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Dấu cộng</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Hình vuông</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Chữ thập</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Đường tròn và hình vuông</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Hình vuông có đường thẳng đứng</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Đường tròn có chấm</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Đường tròn có chữ thập</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Đường tròn và hình vuông có đường thẳng đứng</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Đường tròn</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Hình vuông có chữ thập</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Đường tròn và hình vuông có chấm</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10057,7 +10244,7 @@ is already in the list.</source>
         <translation>Tự động khít bản vẽ vào giấy?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Kéo để di chuyển giấy</translation>
     </message>
@@ -10067,13 +10254,13 @@ is already in the list.</source>
         <translation>Xong</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Thiết lập trang</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Xuất sang PDF</translation>
     </message>
@@ -10264,7 +10451,7 @@ is already in the list.</source>
         <translation>Chỉ cập nhật khi không có gì thay đổi trong thời gian trễ cập nhật</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10324,7 +10511,7 @@ is already in the list.</source>
         <translation>Tự động</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Dùng đo tự động</translation>
     </message>
@@ -10350,7 +10537,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Trình sửa thuộc tính</translation>
@@ -10716,7 +10903,12 @@ is already in the list.</source>
         <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Minh họa các tham số xoay hai</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Góc &amp;a:</translation>
     </message>
@@ -10759,7 +10951,12 @@ is already in the list.</source>
         <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Minh họa các tham số xoay</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Góc (a):</translation>
     </message>
@@ -11133,7 +11330,12 @@ is already in the list.</source>
         <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Minh họa các tham số tỷ lệ</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Hệ số x:</translation>
     </message>
@@ -11582,7 +11784,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Có ít nhất hai điểm trùng nhau.</translation>
@@ -11962,6 +12164,11 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Tương đối</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Đặt tọa độ</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13090,6 +13297,11 @@ is already in the list.</source>
         <source>Filter</source>
         <translation>Bộ lọc</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Xóa bộ lọc</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13180,7 +13392,12 @@ is already in the list.</source>
         <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Minh họa các tham số di chuyển / sao chép</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Dùng lớp hiện hành và &amp;thuộc tính</translation>
     </message>
@@ -13257,7 +13474,12 @@ is already in the list.</source>
         <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Minh họa các tham số di chuyển và xoay</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Góc (a):</translation>
     </message>
@@ -13618,7 +13840,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Dữ liệu được thả không được hỗ trợ</translation>
     </message>
@@ -13654,7 +13876,7 @@ is already in the list.</source>
         <translation>Khôi phục mặc định</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Chèn ký hiệu</translation>
     </message>

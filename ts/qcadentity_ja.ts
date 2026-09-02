@@ -586,32 +586,32 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Gradient</source>
-        <translation type="unfinished"></translation>
+        <translation>グラデーション</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Color 1</source>
-        <translation type="unfinished"></translation>
+        <translation>色1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color 2</source>
-        <translation type="unfinished"></translation>
+        <translation>色2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>シフト</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>One Color</source>
-        <translation type="unfinished"></translation>
+        <translation>単色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tint</source>
-        <translation type="unfinished"></translation>
+        <translation>シェード／ティント</translation>
     </message>
     <message>
         <location line="+231"/>

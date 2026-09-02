@@ -608,32 +608,32 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Gradient</source>
-        <translation type="unfinished"></translation>
+        <translation>漸層</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Color 1</source>
-        <translation type="unfinished"></translation>
+        <translation>顏色 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color 2</source>
-        <translation type="unfinished"></translation>
+        <translation>顏色 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>One Color</source>
-        <translation type="unfinished"></translation>
+        <translation>單色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tint</source>
-        <translation type="unfinished"></translation>
+        <translation>暗調 / 亮調</translation>
     </message>
     <message>
         <location line="+2"/>

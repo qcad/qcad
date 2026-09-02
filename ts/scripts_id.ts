@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Kredit</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Lisensi</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>Ikon aplikasi QCAD</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logo &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Tentang</translation>
     </message>
@@ -363,6 +373,11 @@ agar perubahan preferensi dapat diterapkan.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Atur ulang ke &apos;Tidak ditentukan&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Ilustrasi parameter massa titik</translation>
     </message>
 </context>
 <context>
@@ -1252,9 +1267,14 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ukuran gambar tidak valid (lebar x tinggi harus kurang dari %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Tidak dapat merender gambar</translation>
     </message>
 </context>
 <context>
@@ -1354,7 +1374,7 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Daftar Blok</translation>
@@ -2171,18 +2191,38 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Baris Perintah</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>Baris Perintah</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Baris masukan perintah</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Masukkan sebuah perintah, sebuah opsi atau koordinat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Keluaran baris perintah</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Riwayat perintah, opsi dan pesan</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Nilai tidak valid:</translation>
     </message>
@@ -2266,6 +2306,11 @@ Apakah Anda ingin memulihkannya?</translation>
         <source>Show information as dialog</source>
         <translation>Menampilkan informasi sebagai dialog</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Tampilkan bilah judul</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2322,6 +2367,11 @@ Apakah Anda ingin memulihkannya?</translation>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Konversi:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Konversi unit gambar</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -3013,12 +3063,14 @@ Apakah Anda ingin memulihkannya?</translation>
         <translation>Masukkan label tetap atau biarkan kosong untuk label otomatis</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Toleransi atas</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Toleransi yang lebih rendah</translation>
     </message>
@@ -4367,12 +4419,12 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Tampilkan Shell ECMAScript</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>Script Shell</translation>
     </message>
@@ -4396,6 +4448,11 @@ sudah ada dalam daftar.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Jangan tampilkan dialog ini lagi</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Tampilkan bilah judul</translation>
     </message>
 </context>
 <context>
@@ -5250,6 +5307,11 @@ sudah ada dalam daftar.</translation>
         <source>Background Color:</source>
         <translation>Warna Latar Belakang:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>Ikon aplikasi QCAD</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5447,7 +5509,12 @@ sudah ada dalam daftar.</translation>
         <translation>Simpul Tali Tirai</translation>
     </message>
     <message>
-        <location line="+262"/>
+        <location line="+34"/>
+        <source>Illustration of the casting options</source>
+        <translation>Ilustrasi opsi pengecoran</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Versi</translation>
     </message>
@@ -5938,6 +6005,16 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Gunakan tampilan grafik berakselerasi perangkat keras berbasis Qt RHI (Rendering Hardware Interface) alih-alih tampilan grafik berbasis gambar</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Gunakan tampilan grafik RHI</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing aktif secara default</translation>
     </message>
@@ -8033,7 +8110,7 @@ sudah ada dalam daftar.</translation>
         <translation>Menyembunyikan semua lapisan</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Mencairkan semua lapisan</translation>
     </message>
@@ -8043,7 +8120,7 @@ sudah ada dalam daftar.</translation>
         <translation>Membekukan semua lapisan</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Mengunci semua lapisan</translation>
     </message>
@@ -8157,7 +8234,7 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Daftar Lapisan</translation>
     </message>
@@ -9019,7 +9096,12 @@ sudah ada dalam daftar.</translation>
         <translation>Tetap orisinal</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Ilustrasi parameter cermin</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Gunakan layer dan atribut saat ini</translation>
     </message>
@@ -9260,6 +9342,11 @@ sudah ada dalam daftar.</translation>
         <source>Form</source>
         <translation>Formulir</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Ilustrasi tombol tetikus</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9364,7 +9451,7 @@ sudah ada dalam daftar.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Tanpa judul %1</translation>
     </message>
@@ -9802,6 +9889,106 @@ sudah ada dalam daftar.</translation>
         <source>Size (pixel):</source>
         <translation>Ukuran (piksel):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Persegi dengan tanda plus</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Titik</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Lingkaran dan persegi dengan silang</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Lingkaran dengan garis vertikal</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Lingkaran dengan tanda plus</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Lingkaran dan persegi dengan tanda plus</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Persegi dengan titik</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Tak terlihat</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Garis vertikal</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Tanda plus</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Persegi</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Silang</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Lingkaran dan persegi</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Persegi dengan garis vertikal</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Lingkaran dengan titik</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Lingkaran dengan silang</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Lingkaran dan persegi dengan garis vertikal</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Lingkaran</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Persegi dengan silang</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Lingkaran dan persegi dengan titik</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10057,7 +10244,7 @@ sudah ada dalam daftar.</translation>
         <translation>Menyesuaikan gambar secara otomatis ke kertas?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Seret untuk memindahkan kertas</translation>
     </message>
@@ -10067,13 +10254,13 @@ sudah ada dalam daftar.</translation>
         <translation>Selesai</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Pengaturan Halaman</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Ekspor ke PDF</translation>
     </message>
@@ -10264,7 +10451,7 @@ sudah ada dalam daftar.</translation>
         <translation>Desimal/presisi untuk nilai properti yang ditampilkan:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10324,7 +10511,7 @@ sudah ada dalam daftar.</translation>
         <translation>Otomatis</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Gunakan pengukuran otomatis</translation>
     </message>
@@ -10350,7 +10537,7 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Editor Properti</translation>
@@ -10716,7 +10903,12 @@ sudah ada dalam daftar.</translation>
         <translation>Beberapa salinan</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Ilustrasi parameter putar dua</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Sudut a:</translation>
     </message>
@@ -10759,7 +10951,12 @@ sudah ada dalam daftar.</translation>
         <translation>Beberapa salinan</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Ilustrasi parameter rotasi</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Sudut (a):</translation>
     </message>
@@ -11133,7 +11330,12 @@ sudah ada dalam daftar.</translation>
         <translation>Beberapa salinan</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Ilustrasi parameter skala</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Faktor x:</translation>
     </message>
@@ -11582,7 +11784,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Paling tidak, ada dua poin yang identik.</translation>
@@ -11962,6 +12164,11 @@ sudah ada dalam daftar.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Relatif</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Tetapkan koordinat</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13090,6 +13297,11 @@ sudah ada dalam daftar.</translation>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Bersihkan filter</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13180,7 +13392,12 @@ sudah ada dalam daftar.</translation>
         <translation>Beberapa salinan</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Ilustrasi parameter pindahkan / salin</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Gunakan layer dan atribut saat ini</translation>
     </message>
@@ -13257,7 +13474,12 @@ sudah ada dalam daftar.</translation>
         <translation>Beberapa salinan</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Ilustrasi parameter pindah dan putar</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Sudut (a):</translation>
     </message>
@@ -13618,7 +13840,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Data yang dijatuhkan tidak didukung</translation>
     </message>
@@ -13654,7 +13876,7 @@ sudah ada dalam daftar.</translation>
         <translation>Memulihkan default</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Sisipkan Simbol</translation>
     </message>

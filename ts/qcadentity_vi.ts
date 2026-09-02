@@ -665,32 +665,32 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Gradient</source>
-        <translation type="unfinished"></translation>
+        <translation>Chuyển sắc</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Color 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Dịch chuyển</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>One Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Một màu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tint</source>
-        <translation type="unfinished"></translation>
+        <translation>Tối / Sáng</translation>
     </message>
     <message>
         <location line="+2"/>

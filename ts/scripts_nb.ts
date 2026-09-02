@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Kreditter</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Lisenser</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD-programikon</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logo &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
@@ -363,6 +373,11 @@ preferanseendringene skal tre i kraft.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Tilbakestill til &apos;Udefinert&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Illustrasjon av punktmasseparametrene</translation>
     </message>
 </context>
 <context>
@@ -1254,9 +1269,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ugyldig bildestørrelse (bredde x høyde må være mindre enn %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Kan ikke gjengi bildet</translation>
     </message>
 </context>
 <context>
@@ -1356,7 +1376,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Blokkliste</translation>
@@ -2173,18 +2193,38 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Kommandolinje</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>Kommandolinje</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Kommandolinjeledetekst</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Skriv inn en kommando, et alternativ eller koordinater</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Kommandolinjeutdata</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Historikk over kommandoer, alternativer og meldinger</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Ugyldig verdi:</translation>
     </message>
@@ -2268,6 +2308,11 @@ Do you wish to recover it?</source>
         <source>Show information as dialog</source>
         <translation>Vis informasjon som dialogboks</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Vis tittellinjen</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2324,6 +2369,11 @@ Do you wish to recover it?</source>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Konverter:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Konverter tegningsenhet</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -3016,12 +3066,14 @@ Do you wish to recover it?</source>
         <translation>Angi fast etikett eller la være tom for automatisk etikett</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Øvre toleranse</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Lavere toleranse</translation>
     </message>
@@ -4371,12 +4423,12 @@ er allerede i listen.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Vis ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>Skript Shell</translation>
     </message>
@@ -4400,6 +4452,11 @@ er allerede i listen.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Ikke vis denne dialogen igjen</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Vis tittellinjen</translation>
     </message>
 </context>
 <context>
@@ -5255,6 +5312,11 @@ er allerede i listen.</translation>
         <source>Background Color:</source>
         <translation>Bakgrunnsfarge:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD-programikon</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5452,7 +5514,12 @@ er allerede i listen.</translation>
         <translation>Knute for gardintau</translation>
     </message>
     <message>
-        <location line="+262"/>
+        <location line="+34"/>
+        <source>Illustration of the casting options</source>
+        <translation>Illustrasjon av avstøpningsalternativene</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Versjon</translation>
     </message>
@@ -5943,6 +6010,16 @@ er allerede i listen.</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Bruk den maskinvareakselererte grafikkvisningen basert på Qt RHI (Rendering Hardware Interface) i stedet for den bildebaserte grafikkvisningen</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Bruk RHI-grafikkvisning</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing på som standard</translation>
     </message>
@@ -8038,7 +8115,7 @@ er allerede i listen.</translation>
         <translation>Skjuler alle lag</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Tining av alle lag</translation>
     </message>
@@ -8048,7 +8125,7 @@ er allerede i listen.</translation>
         <translation>Frysing av alle lag</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Låsing av alle lag</translation>
     </message>
@@ -8162,7 +8239,7 @@ er allerede i listen.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Lagliste</translation>
     </message>
@@ -9024,7 +9101,12 @@ er allerede i listen.</translation>
         <translation>Behold originalen</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Illustrasjon av speilingsparametrene</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Bruk gjeldende lag og attributter</translation>
     </message>
@@ -9265,6 +9347,11 @@ er allerede i listen.</translation>
         <source>Form</source>
         <translation>Skjema</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Illustrasjon av museknappene</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9369,7 +9456,7 @@ er allerede i listen.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Uten tittel %1</translation>
     </message>
@@ -9809,6 +9896,106 @@ er allerede i listen.</translation>
         <source>Size (pixel):</source>
         <translation>Størrelse (piksler):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Kvadrat med plusstegn</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Punkt</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Sirkel og kvadrat med kryss</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Sirkel med vertikal linje</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Sirkel med plusstegn</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Sirkel og kvadrat med plusstegn</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Kvadrat med punkt</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Usynlig</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Vertikal linje</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Plusstegn</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Kvadrat</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Kryss</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Sirkel og kvadrat</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Kvadrat med vertikal linje</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Sirkel med punkt</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Sirkel med kryss</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Sirkel og kvadrat med vertikal linje</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Sirkel</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Kvadrat med kryss</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Sirkel og kvadrat med punkt</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10064,7 +10251,7 @@ er allerede i listen.</translation>
         <translation>Automatisk tilpasning av tegning til papir?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Dra for å flytte papir</translation>
     </message>
@@ -10074,13 +10261,13 @@ er allerede i listen.</translation>
         <translation>Ferdig</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Sideinnstillinger</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Eksporter til PDF</translation>
     </message>
@@ -10271,7 +10458,7 @@ er allerede i listen.</translation>
         <translation>Desimaler / presisjon for viste egenskapsverdier:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10331,7 +10518,7 @@ er allerede i listen.</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Bruk automatisk måling</translation>
     </message>
@@ -10357,7 +10544,7 @@ er allerede i listen.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Egenskapseditor</translation>
@@ -10723,7 +10910,12 @@ er allerede i listen.</translation>
         <translation>Flere kopier</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Illustrasjon av parametrene for roter to</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Vinkel a:</translation>
     </message>
@@ -10766,7 +10958,12 @@ er allerede i listen.</translation>
         <translation>Flere kopier</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Illustrasjon av rotasjonsparametrene</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Vinkel (a):</translation>
     </message>
@@ -11140,7 +11337,12 @@ er allerede i listen.</translation>
         <translation>Flere kopier</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Illustrasjon av skalaparametrene</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Faktor x:</translation>
     </message>
@@ -11592,7 +11794,7 @@ er allerede i listen.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minst to punkter er identiske.</translation>
@@ -11972,6 +12174,11 @@ er allerede i listen.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Relativ</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Angi koordinat</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13100,6 +13307,11 @@ er allerede i listen.</translation>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Tøm filteret</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13190,7 +13402,12 @@ er allerede i listen.</translation>
         <translation>Flere kopier</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Illustrasjon av parametrene for flytt/kopier</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Bruk gjeldende lag og attributter</translation>
     </message>
@@ -13267,7 +13484,12 @@ er allerede i listen.</translation>
         <translation>Flere kopier</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Illustrasjon av parametrene for flytt og roter</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Vinkel (a):</translation>
     </message>
@@ -13628,7 +13850,7 @@ er allerede i listen.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Tapte data støttes ikke</translation>
     </message>
@@ -13664,7 +13886,7 @@ er allerede i listen.</translation>
         <translation>Gjenopprett standardinnstillinger</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Sett inn symbol</translation>
     </message>

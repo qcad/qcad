@@ -35,12 +35,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>プラグイン:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>クレジット</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>ライセンス</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD アプリケーションアイコン</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>「Built with Qt」ロゴ</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>ソフトウェアについて</translation>
     </message>
@@ -363,6 +373,11 @@ QCADを再起動してください。</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>「未定義」にリセットする</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>点質量パラメータの図解</translation>
     </message>
 </context>
 <context>
@@ -1252,9 +1267,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation> 無効な画像サイズ(幅x高さは%1よりも小さく)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>画像をレンダリングできません</translation>
     </message>
 </context>
 <context>
@@ -1349,13 +1369,13 @@ Do you wish to recover it?</source>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>ブロックリスト</translation>
     </message>
     <message>
-        <location line="-111"/>
+        <location line="-126"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -2165,13 +2185,13 @@ Do you wish to recover it?</source>
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+123"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+138"/>
         <source>&amp;Command Line</source>
         <translation>&amp;C コマンドライン</translation>
     </message>
     <message>
-        <location line="-93"/>
-        <location line="+113"/>
+        <location line="-108"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>コマンドライン</translation>
@@ -2202,12 +2222,32 @@ Do you wish to recover it?</source>
         <translation>トランザクションが失敗しました。ブロックの再帰、およびロックされているか非表示のレイヤーまたはブロックを確認してください。</translation>
     </message>
     <message>
-        <location line="-417"/>
+        <location line="-438"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="+292"/>
+        <location line="+127"/>
+        <source>Command Line Prompt</source>
+        <translation>コマンドライン入力</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>コマンド、オプションまたは座標を入力</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>コマンドライン出力</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>コマンド、オプション、メッセージの履歴</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>不正な値:</translation>
     </message>
@@ -2265,6 +2305,11 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <source>Show information as dialog</source>
         <translation>ダイアログとして情報を表示</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>タイトルバーを表示</translation>
     </message>
 </context>
 <context>
@@ -2332,6 +2377,11 @@ Do you wish to recover it?</source>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>変換:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>図面単位を変換</translation>
     </message>
 </context>
 <context>
@@ -3013,12 +3063,14 @@ Do you wish to recover it?</source>
         <translation>固定ラベルを入力または自動ラベルを削除</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>許容誤差の上限</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>許容誤差の下限</translation>
     </message>
@@ -4367,12 +4419,12 @@ is already in the list.</source>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>ECMAScript シェルを表示する</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>スクリプトシェル</translation>
     </message>
@@ -4396,6 +4448,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>このダイアログを二度と表示しない</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>タイトルバーを表示</translation>
     </message>
 </context>
 <context>
@@ -5250,6 +5307,11 @@ is already in the list.</source>
         <source>Background Color:</source>
         <translation>背景色:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD アプリケーションアイコン</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5437,7 +5499,12 @@ is already in the list.</source>
         <translation>挿入」または「空白の入力」を選択します。(未実装)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+49"/>
+        <source>Illustration of the casting options</source>
+        <translation>キャスティングオプションの図解</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>バージョン</translation>
     </message>
@@ -5492,7 +5559,7 @@ is already in the list.</source>
         <translation>ベースとなる実体を塗り潰したものを削除。(永続化オフ)</translation>
     </message>
     <message>
-        <location line="-933"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;スペースサイズを入力してください&gt;。</translation>
     </message>
@@ -5502,7 +5569,7 @@ is already in the list.</source>
         <translation>カーテンロープの結び方</translation>
     </message>
     <message>
-        <location line="+543"/>
+        <location line="+546"/>
         <source>#Undefined#</source>
         <translation>#未定義#</translation>
     </message>
@@ -5892,7 +5959,17 @@ is already in the list.</source>
         <translation>ポイントに線の太さを適用する</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+16"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>画像ベースのグラフィックビューの代わりに、Qt RHI (Rendering Hardware Interface) に基づくハードウェアアクセラレーションのグラフィックビューを使用します</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>RHI グラフィックビューを使用</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Retina/高解像度ディスプレイではフル解像度を使用します。</translation>
     </message>
@@ -5933,7 +6010,7 @@ is already in the list.</source>
         <translation>永続的な選択</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1082"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5963,7 +6040,7 @@ is already in the list.</source>
         <translation>表示と性能</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+33"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>カスタム幅のポリラインは常に少なくとも1ピクセル幅でレンダリングされます。</translation>
     </message>
@@ -5978,7 +6055,7 @@ is already in the list.</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
-        <location line="-400"/>
+        <location line="-413"/>
         <source>Linetypes and Lineweights</source>
         <translation>線種と線幅</translation>
     </message>
@@ -5988,7 +6065,7 @@ is already in the list.</source>
         <translation>デフォルトの線幅:</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+137"/>
         <source>Anti-aliasing on by default</source>
         <translation>デフォルトでアンチエイリアスする</translation>
     </message>
@@ -5998,12 +6075,12 @@ is already in the list.</source>
         <translation>ハッチング表示のタイムアウト:</translation>
     </message>
     <message>
-        <location line="-487"/>
+        <location line="-500"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+237"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
@@ -8033,7 +8110,7 @@ is already in the list.</source>
         <translation>全てのレイヤーを非表示</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>全てのレイヤの解凍</translation>
     </message>
@@ -8043,7 +8120,7 @@ is already in the list.</source>
         <translation>全てのレイヤの凍結</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>全てのレイヤーをロック</translation>
     </message>
@@ -8156,13 +8233,13 @@ is already in the list.</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+70"/>
         <source>&amp;Layer List</source>
         <translation>&amp;L 画層リスト</translation>
     </message>
     <message>
-        <location line="-55"/>
-        <location line="+109"/>
+        <location line="-70"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>画層リスト</translation>
     </message>
@@ -9019,7 +9096,12 @@ is already in the list.</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>鏡像反転パラメータの図解</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
@@ -9260,6 +9342,11 @@ is already in the list.</source>
         <source>Form</source>
         <translation>フォーム</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>マウスボタンの図解</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9364,7 +9451,7 @@ is already in the list.</source>
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>無題%1</translation>
     </message>
@@ -9802,6 +9889,106 @@ is already in the list.</source>
         <source>Size (pixel):</source>
         <translation>ピクセルサイズ:</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>プラス記号付き四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>点</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>十字付き円と四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>垂直線付き円</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>プラス記号付き円</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>プラス記号付き円と四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>点付き四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>非表示</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>垂直線</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>プラス記号</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>十字</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>円と四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>垂直線付き四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>点付き円</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>十字付き円</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>垂直線付き円と四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>円</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>十字付き四角</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>点付き円と四角</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10057,7 +10244,7 @@ is already in the list.</source>
         <translation>図面を用紙にオートフィットさせる？</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>用紙を移動するためドラッグしてください</translation>
     </message>
@@ -10067,13 +10254,13 @@ is already in the list.</source>
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>ページ設定</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>PDFにエクスポート</translation>
     </message>
@@ -10214,12 +10401,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1736"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1743"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1504"/>
+        <location line="-1508"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10269,12 +10456,12 @@ is already in the list.</source>
         <translation>すべてのプロパティを表示する</translation>
     </message>
     <message>
-        <location line="+839"/>
+        <location line="+843"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="-885"/>
+        <location line="-889"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -10284,7 +10471,7 @@ is already in the list.</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>自動計測を使用</translation>
     </message>
@@ -10300,7 +10487,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+433"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>プロパティエディタ</translation>
@@ -10716,7 +10903,12 @@ is already in the list.</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>回転２パラメータの図解</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>アングルa</translation>
     </message>
@@ -10759,7 +10951,12 @@ is already in the list.</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>回転パラメータの図解</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;A 角度(a):</translation>
     </message>
@@ -11133,7 +11330,12 @@ is already in the list.</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>縮尺パラメータの図解</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>ファクターx</translation>
     </message>
@@ -11582,7 +11784,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -11962,6 +12164,11 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Relative</source>
         <translation>相対的</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>座標を設定</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13090,6 +13297,11 @@ is already in the list.</source>
         <source>Filter</source>
         <translation>フィルター</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>フィルタをクリア</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13180,7 +13392,12 @@ is already in the list.</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>移動/コピーパラメータの図解</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>
@@ -13257,7 +13474,12 @@ is already in the list.</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>移動と回転パラメータの図解</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;A 角度(a):</translation>
     </message>
@@ -13618,7 +13840,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>ドロップされたデータはサポートされていません</translation>
     </message>
@@ -13654,7 +13876,7 @@ is already in the list.</source>
         <translation>デフォルトを置き換え</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>シンボルを挿入</translation>
     </message>

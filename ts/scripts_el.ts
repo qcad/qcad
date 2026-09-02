@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Συντελεστές</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Άδειες</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>Εικονίδιο εφαρμογής QCAD</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Λογότυπο &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Σχετικά με το</translation>
     </message>
@@ -363,6 +373,11 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Επαναφορά σε &apos;Undefined&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Απεικόνιση των παραμέτρων σημειακής μάζας</translation>
     </message>
 </context>
 <context>
@@ -1254,9 +1269,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Μη έγκυρο μέγεθος εικόνας (πλάτος x ύψος πρέπει να είναι μικρότερο από %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Δεν είναι δυνατή η απόδοση της εικόνας</translation>
     </message>
 </context>
 <context>
@@ -1356,7 +1376,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Λίστα μπλοκ</translation>
@@ -2173,18 +2193,38 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Γραμμή εντολών</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Γραμμή εντολών</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Γραμμή εισαγωγής εντολών</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Εισαγάγετε μια εντολή, μια επιλογή ή συντεταγμένες</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Έξοδος γραμμής εντολών</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Ιστορικό εντολών, επιλογών και μηνυμάτων</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Μη έγκυρη τιμή:</translation>
     </message>
@@ -2268,6 +2308,11 @@ Do you wish to recover it?</source>
         <source>Show information as dialog</source>
         <translation>Εμφάνιση πληροφοριών ως διάλογος</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Εμφάνιση γραμμής τίτλου</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2324,6 +2369,11 @@ Do you wish to recover it?</source>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Μετατρέψτε:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Μετατροπή μονάδας σχεδίασης</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -3016,12 +3066,14 @@ Do you wish to recover it?</source>
         <translation>Εισάγετε σταθερή ετικέτα ή αφήστε την κενή για αυτόματη ετικέτα</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Ανώτερη ανοχή</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Χαμηλότερη ανοχή</translation>
     </message>
@@ -4371,12 +4423,12 @@ is already in the list.</source>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Εμφάνιση του κελύφους ECMAScript</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>Script Shell</translation>
     </message>
@@ -4400,6 +4452,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Να μην εμφανιστεί ξανά αυτός ο διάλογος</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Εμφάνιση γραμμής τίτλου</translation>
     </message>
 </context>
 <context>
@@ -5255,6 +5312,11 @@ is already in the list.</source>
         <source>Background Color:</source>
         <translation>Χρώμα φόντου:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>Εικονίδιο εφαρμογής QCAD</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5452,7 +5514,12 @@ is already in the list.</source>
         <translation>Κόμπος σχοινιού κουρτίνας</translation>
     </message>
     <message>
-        <location line="+262"/>
+        <location line="+34"/>
+        <source>Illustration of the casting options</source>
+        <translation>Απεικόνιση των επιλογών χύτευσης</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Έκδοση</translation>
     </message>
@@ -5943,6 +6010,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Χρήση της προβολής γραφικών με επιτάχυνση υλικού βάσει Qt RHI (Rendering Hardware Interface) αντί της προβολής γραφικών βάσει εικόνας</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Χρήση προβολής γραφικών RHI</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing ενεργοποιημένο από προεπιλογή</translation>
     </message>
@@ -8038,7 +8115,7 @@ is already in the list.</source>
         <translation>Απόκρυψη όλων των επιπέδων</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Απόψυξη όλων των στρωμάτων</translation>
     </message>
@@ -8048,7 +8125,7 @@ is already in the list.</source>
         <translation>Κατάψυξη όλων των στρωμάτων</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Κλείδωμα όλων των επιπέδων</translation>
     </message>
@@ -8162,7 +8239,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Λίστα επιπέδων</translation>
     </message>
@@ -9024,7 +9101,12 @@ is already in the list.</source>
         <translation>&amp;Διατήρηση αρχικού</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Απεικόνιση των παραμέτρων καθρεφτισμού</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Χρήση τρέχοντος στρώματος και &amp;χαρακτηριστικών</translation>
     </message>
@@ -9265,6 +9347,11 @@ is already in the list.</source>
         <source>Form</source>
         <translation>Φόρμα</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Απεικόνιση των πλήκτρων του ποντικιού</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9369,7 +9456,7 @@ is already in the list.</source>
         <translation>Μορφή:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Χωρίς τίτλο %1</translation>
     </message>
@@ -9809,6 +9896,106 @@ is already in the list.</source>
         <source>Size (pixel):</source>
         <translation>Μέγεθος (pixel):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Τετράγωνο με σύμβολο συν</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Τελεία</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Κύκλος και τετράγωνο με σταυρό</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Κύκλος με κατακόρυφη γραμμή</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Κύκλος με σύμβολο συν</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Κύκλος και τετράγωνο με σύμβολο συν</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Τετράγωνο με τελεία</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Αόρατο</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Κατακόρυφη γραμμή</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Σύμβολο συν</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Τετράγωνο</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Σταυρός</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Κύκλος και τετράγωνο</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Τετράγωνο με κατακόρυφη γραμμή</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Κύκλος με τελεία</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Κύκλος με σταυρό</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Κύκλος και τετράγωνο με κατακόρυφη γραμμή</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Κύκλος</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Τετράγωνο με σταυρό</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Κύκλος και τετράγωνο με τελεία</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10064,7 +10251,7 @@ is already in the list.</source>
         <translation>Αυτόματη προσαρμογή σχεδίου στο χαρτί</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Σύρετε για να μετακινήσετε το χαρτί</translation>
     </message>
@@ -10074,13 +10261,13 @@ is already in the list.</source>
         <translation>Έτοιμο</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Ρυθμίσεις σελίδας</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Εξαγωγή σε PDF</translation>
     </message>
@@ -10271,7 +10458,7 @@ is already in the list.</source>
         <translation>Δεκαδικά / ακρίβεια για τις εμφανιζόμενες τιμές ιδιοτήτων:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10331,7 +10518,7 @@ is already in the list.</source>
         <translation>Αυτόματο</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Χρήση αυτόματης μέτρησης</translation>
     </message>
@@ -10357,7 +10544,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Επεξεργαστής ιδιοτήτων</translation>
@@ -10723,7 +10910,12 @@ is already in the list.</source>
         <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Απεικόνιση των παραμέτρων διπλής περιστροφής</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Γωνία α:</translation>
     </message>
@@ -10766,7 +10958,12 @@ is already in the list.</source>
         <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Απεικόνιση των παραμέτρων περιστροφής</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Γωνία (a):</translation>
     </message>
@@ -11140,7 +11337,12 @@ is already in the list.</source>
         <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Απεικόνιση των παραμέτρων κλίμακας</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Συντελεστής x:</translation>
     </message>
@@ -11592,7 +11794,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Τουλάχιστον δύο σημεία είναι πανομοιότυπα.</translation>
@@ -11972,6 +12174,11 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Σχετικό</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Ορισμός συντεταγμένης</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13100,6 +13307,11 @@ is already in the list.</source>
         <source>Filter</source>
         <translation>Φίλτρο</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Καθαρισμός φίλτρου</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13190,7 +13402,12 @@ is already in the list.</source>
         <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Απεικόνιση των παραμέτρων μετακίνησης / αντιγραφής</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Χρήση τρέχοντος στρώματος και &amp;χαρακτηριστικών</translation>
     </message>
@@ -13267,7 +13484,12 @@ is already in the list.</source>
         <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Απεικόνιση των παραμέτρων μετακίνησης και περιστροφής</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Γωνία (a):</translation>
     </message>
@@ -13628,7 +13850,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Δεν υποστηρίζεται η απόρριψη δεδομένων</translation>
     </message>
@@ -13664,7 +13886,7 @@ is already in the list.</source>
         <translation>Επαναφορά προεπιλογών</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Εισαγωγή συμβόλου</translation>
     </message>

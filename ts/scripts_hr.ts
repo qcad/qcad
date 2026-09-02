@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Dodatak:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Zasluge</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Licence</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>Ikona aplikacije QCAD</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logo &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>O</translation>
     </message>
@@ -363,6 +373,11 @@ primjenjivanje promijenjenih postavki.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Resetiraj na &apos;Nedefinirano&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Ilustracija parametara točkaste mase</translation>
     </message>
 </context>
 <context>
@@ -1256,9 +1271,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nevažeća veličina slike (širina x visina mora biti manja od %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Nije moguće renderirati sliku</translation>
     </message>
 </context>
 <context>
@@ -1359,7 +1379,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Popis blokova</translation>
@@ -2176,18 +2196,38 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Naredbena linija</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Naredbeni redak</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Redak za unos naredbi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Unesite naredbu, opciju ili koordinate</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Ispis naredbene linije</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Povijest naredbi, opcija i poruka</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Neispravna vrijednost:</translation>
     </message>
@@ -2271,6 +2311,11 @@ Do you wish to recover it?</source>
         <source>Show information as dialog</source>
         <translation>Prikaži informacije kao dijaloški okvir</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Prikaži naslovnu traku</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2337,6 +2382,11 @@ Do you wish to recover it?</source>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Pretvori:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Pretvori crtaću jedinicu</translation>
     </message>
 </context>
 <context>
@@ -3020,12 +3070,14 @@ Do you wish to recover it?</source>
         <translation>Unesi stalnu oznaku ili ostavi prazno za automatsko označavanje</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Gornja tolerancija</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Donja tolerancija</translation>
     </message>
@@ -4376,12 +4428,12 @@ večpostoji na popisu.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Prikaži ECMAScript ljusku</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Skriptna ljuska</translation>
     </message>
@@ -4405,6 +4457,11 @@ večpostoji na popisu.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Ne prikazuj više ovaj dijaloški okvir</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Prikaži naslovnu traku</translation>
     </message>
 </context>
 <context>
@@ -5261,6 +5318,11 @@ večpostoji na popisu.</translation>
         <source>Background Color:</source>
         <translation>Boja pozadine:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>Ikona aplikacije QCAD</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5448,7 +5510,12 @@ večpostoji na popisu.</translation>
         <translation>Odaberi umetak ili unesi prazan prostor. (Nije implementirano)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+49"/>
+        <source>Illustration of the casting options</source>
+        <translation>Ilustracija opcija postavljanja</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Verzija</translation>
     </message>
@@ -5503,7 +5570,7 @@ večpostoji na popisu.</translation>
         <translation>Izbrisani prebojani osnovni entiteti. (trajno isključeno)</translation>
     </message>
     <message>
-        <location line="-933"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Unesite veličinu razmaka&gt;</translation>
     </message>
@@ -5513,7 +5580,7 @@ večpostoji na popisu.</translation>
         <translation>Čvor zavjese</translation>
     </message>
     <message>
-        <location line="+543"/>
+        <location line="+546"/>
         <source>#Undefined#</source>
         <translation>#Nedefinirano#</translation>
     </message>
@@ -5949,6 +6016,16 @@ večpostoji na popisu.</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Koristi grafički prikaz s hardverskim ubrzanjem temeljen na Qt RHI (Rendering Hardware Interface) umjesto grafičkog prikaza temeljenog na slici</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Koristi RHI grafički prikaz</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Zaglađivanje rubova zadano uključeno</translation>
     </message>
@@ -8024,7 +8101,7 @@ večpostoji na popisu.</translation>
         <translation>Skrivanje svih slojeva</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Odmrzavanje svih slojeva</translation>
     </message>
@@ -8034,7 +8111,7 @@ večpostoji na popisu.</translation>
         <translation>Zamrzavanje svih slojeva</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Zaključavanje svih slojeva</translation>
     </message>
@@ -8168,7 +8245,7 @@ večpostoji na popisu.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Sloj popis</translation>
     </message>
@@ -9030,7 +9107,12 @@ večpostoji na popisu.</translation>
         <translation>&amp;Zadrži original</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Ilustracija parametara zrcaljenja</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;Koristi trenutni sloj i atribute</translation>
     </message>
@@ -9271,6 +9353,11 @@ večpostoji na popisu.</translation>
         <source>Form</source>
         <translation>Obrazac</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Ilustracija tipki miša</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9375,7 +9462,7 @@ večpostoji na popisu.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Bez naziva %1</translation>
     </message>
@@ -9817,6 +9904,106 @@ večpostoji na popisu.</translation>
         <source>Size (pixel):</source>
         <translation>Veličina (piksel):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Kvadrat sa znakom plus</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Točka</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Kružnica i kvadrat s križićem</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Kružnica s okomitom crtom</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Kružnica sa znakom plus</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Kružnica i kvadrat sa znakom plus</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Kvadrat s točkom</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Nevidljiv</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Okomita crta</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Znak plus</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Kvadrat</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Križić</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Kružnica i kvadrat</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Kvadrat s okomitom crtom</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Kružnica s točkom</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Kružnica s križićem</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Kružnica i kvadrat s okomitom crtom</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Kružnica</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Kvadrat s križićem</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Kružnica i kvadrat s točkom</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10072,7 +10259,7 @@ večpostoji na popisu.</translation>
         <translation>Automatski prilagoditi crtež papiru?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Povuci za pomicanje papira</translation>
     </message>
@@ -10082,13 +10269,13 @@ večpostoji na popisu.</translation>
         <translation>Završeno</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Postavke stranice</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Izvezi u PDF</translation>
     </message>
@@ -10229,7 +10416,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10289,7 +10476,7 @@ večpostoji na popisu.</translation>
         <translation>Automatski</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Koristi automatsko mjerenje</translation>
     </message>
@@ -10315,7 +10502,7 @@ večpostoji na popisu.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Uređivač svojstava</translation>
@@ -10731,7 +10918,12 @@ večpostoji na popisu.</translation>
         <translation>&amp;Više kopija</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Ilustracija parametara rotiranja dva</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Kut &amp;a:</translation>
     </message>
@@ -10774,7 +10966,12 @@ večpostoji na popisu.</translation>
         <translation>&amp;Više kopija</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Ilustracija parametara rotacije</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Kut (a):</translation>
     </message>
@@ -11148,7 +11345,12 @@ večpostoji na popisu.</translation>
         <translation>&amp;Više kopija</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Ilustracija parametara mjerila</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Faktor x:</translation>
     </message>
@@ -11603,7 +11805,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Najmanje dvije točke su identične.</translation>
@@ -11988,6 +12190,11 @@ večpostoji na popisu.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Relativno</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Postavi koordinatu</translation>
     </message>
 </context>
 <context>
@@ -13111,6 +13318,11 @@ večpostoji na popisu.</translation>
         <source>Filter</source>
         <translation>Filtar</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Očisti filtar</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13201,7 +13413,12 @@ večpostoji na popisu.</translation>
         <translation>&amp;Više kopija</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Ilustracija parametara premještanja / kopiranja</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;Koristi trenutni sloj i atribute</translation>
     </message>
@@ -13278,7 +13495,12 @@ večpostoji na popisu.</translation>
         <translation>&amp;Više kopija</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Ilustracija parametara premještanja i rotiranja</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Kut (a):</translation>
     </message>
@@ -13639,7 +13861,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Ispušteni podaci nisu podržani</translation>
     </message>
@@ -13675,7 +13897,7 @@ večpostoji na popisu.</translation>
         <translation>Vrati zadano</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Umetni simbol</translation>
     </message>

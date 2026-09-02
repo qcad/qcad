@@ -665,32 +665,32 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Gradient</source>
-        <translation type="unfinished"></translation>
+        <translation>그라데이션</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Color 1</source>
-        <translation type="unfinished"></translation>
+        <translation>색상 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color 2</source>
-        <translation type="unfinished"></translation>
+        <translation>색상 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>이동</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>One Color</source>
-        <translation type="unfinished"></translation>
+        <translation>단색</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tint</source>
-        <translation type="unfinished"></translation>
+        <translation>음영 / 밝기</translation>
     </message>
     <message>
         <location line="+2"/>

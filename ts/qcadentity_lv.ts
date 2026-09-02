@@ -665,32 +665,32 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Gradient</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradients</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Color 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Krāsa 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Krāsa 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Nobīde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>One Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Viena krāsa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tint</source>
-        <translation type="unfinished"></translation>
+        <translation>Ēna / Tonis</translation>
     </message>
     <message>
         <location line="+2"/>

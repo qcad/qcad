@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Krediit</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Litsentsid</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD rakenduse ikoon</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logo &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Kohta</translation>
     </message>
@@ -363,6 +373,11 @@ eelistuste muudatused jõustuksid.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Nullida &apos;Undefined&apos; (määratlemata)</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Punktmassi parameetrite illustratsioon</translation>
     </message>
 </context>
 <context>
@@ -1254,9 +1269,14 @@ Kas soovite seda taastada?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Kehtetu pildi suurus (laius x kõrgus peab olema väiksem kui %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Pilti ei saa renderdada</translation>
     </message>
 </context>
 <context>
@@ -1356,7 +1376,7 @@ Kas soovite seda taastada?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Plokkide nimekiri</translation>
@@ -2173,18 +2193,38 @@ Kas soovite seda taastada?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Käsurea</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>&amp;amp;Käsurea</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Käsurea sisestusrida</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Sisestage käsk, valik või koordinaadid</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Käsurea väljund</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Käskude, valikute ja teadete ajalugu</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Kehtetu väärtus:</translation>
     </message>
@@ -2268,6 +2308,11 @@ Kas soovite seda taastada?</translation>
         <source>Show information as dialog</source>
         <translation>Näita teavet dialoogina</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Näita tiitliriba</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2324,6 +2369,11 @@ Kas soovite seda taastada?</translation>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Teisenda:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Teisenda joonistusüksus</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -3016,12 +3066,14 @@ Kas soovite seda taastada?</translation>
         <translation>Sisestage fikseeritud silt või jätke automaatse sildi jaoks tühjaks</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Ülemine tolerants</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Madalam tolerantsus</translation>
     </message>
@@ -4371,12 +4423,12 @@ on juba loendis.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Näita ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;amp;Skripti kest</translation>
     </message>
@@ -4400,6 +4452,11 @@ on juba loendis.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Ära näita seda dialoogi uuesti</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Näita tiitliriba</translation>
     </message>
 </context>
 <context>
@@ -5255,6 +5312,11 @@ on juba loendis.</translation>
         <source>Background Color:</source>
         <translation>Taustavärv:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD rakenduse ikoon</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5452,7 +5514,12 @@ on juba loendis.</translation>
         <translation>Kardinate köis sõlme</translation>
     </message>
     <message>
-        <location line="+262"/>
+        <location line="+34"/>
+        <source>Illustration of the casting options</source>
+        <translation>Valuvariantide illustratsioon</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Versioon</translation>
     </message>
@@ -5943,6 +6010,16 @@ on juba loendis.</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Kasuta pildipõhise graafikavaate asemel Qt RHI-l (Rendering Hardware Interface) põhinevat riistvarakiirendusega graafikavaadet</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Kasuta RHI graafikavaadet</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing vaikimisi sisse lülitatud</translation>
     </message>
@@ -8038,7 +8115,7 @@ on juba loendis.</translation>
         <translation>Kõigi kihtide peitmine</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Kõikide kihtide sulatamine</translation>
     </message>
@@ -8048,7 +8125,7 @@ on juba loendis.</translation>
         <translation>Kõigi kihtide külmutamine</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Kõigi kihtide lukustamine</translation>
     </message>
@@ -8162,7 +8239,7 @@ on juba loendis.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Kihtide nimekiri</translation>
     </message>
@@ -9024,7 +9101,12 @@ on juba loendis.</translation>
         <translation>&amp;amp;Hoidke originaal</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Peegeldusparameetrite illustratsioon</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;amp;Kasutage praegust kihti ja atribuute</translation>
     </message>
@@ -9265,6 +9347,11 @@ on juba loendis.</translation>
         <source>Form</source>
         <translation>Vorm</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Hiirenuppude illustratsioon</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9369,7 +9456,7 @@ on juba loendis.</translation>
         <translation>Formaat:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Ilma pealkirjata %1</translation>
     </message>
@@ -9809,6 +9896,106 @@ on juba loendis.</translation>
         <source>Size (pixel):</source>
         <translation>Suurus (pikslid):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Ruut plussmärgiga</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Punkt</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Ring ja ruut ristiga</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Ring vertikaalse joonega</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Ring plussmärgiga</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Ring ja ruut plussmärgiga</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Ruut punktiga</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Nähtamatu</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Vertikaalne joon</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Plussmärk</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Ruut</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Rist</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Ring ja ruut</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Ruut vertikaalse joonega</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Ring punktiga</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Ring ristiga</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Ring ja ruut vertikaalse joonega</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Ring</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Ruut ristiga</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Ring ja ruut punktiga</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10064,7 +10251,7 @@ on juba loendis.</translation>
         <translation>Automaatselt paberile sobiv joonis?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Paberi liigutamiseks lohistage</translation>
     </message>
@@ -10074,13 +10261,13 @@ on juba loendis.</translation>
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Lehekülje seaded</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Eksportida PDF-i</translation>
     </message>
@@ -10271,7 +10458,7 @@ on juba loendis.</translation>
         <translation>Kuvatud omaduste väärtuste kümnendmärgid / täpsus:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10331,7 +10518,7 @@ on juba loendis.</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Kasutage automaatset mõõtmist</translation>
     </message>
@@ -10357,7 +10544,7 @@ on juba loendis.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Omaduste redaktor</translation>
@@ -10723,7 +10910,12 @@ on juba loendis.</translation>
         <translation>&amp;amp;Mitu koopiat</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Kahekordse pööramise parameetrite illustratsioon</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>&amp;amp;Nurk a:</translation>
     </message>
@@ -10766,7 +10958,12 @@ on juba loendis.</translation>
         <translation>&amp;amp;Mitu koopiat</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Pööramisparameetrite illustratsioon</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;amp;Nurk (a):</translation>
     </message>
@@ -11140,7 +11337,12 @@ on juba loendis.</translation>
         <translation>&amp;amp;Mitu koopiat</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Skaalaparameetrite illustratsioon</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Tegur x:</translation>
     </message>
@@ -11592,7 +11794,7 @@ on juba loendis.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähemalt kaks punkti on identsed.</translation>
@@ -11972,6 +12174,11 @@ on juba loendis.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Suhteline</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Määra koordinaat</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13100,6 +13307,11 @@ on juba loendis.</translation>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Tühjenda filter</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13190,7 +13402,12 @@ on juba loendis.</translation>
         <translation>&amp;amp;Mitu koopiat</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Liigutamise / kopeerimise parameetrite illustratsioon</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;amp;Kasutage praegust kihti ja atribuute</translation>
     </message>
@@ -13267,7 +13484,12 @@ on juba loendis.</translation>
         <translation>&amp;amp;Mitu koopiat</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Liigutamise ja pööramise parameetrite illustratsioon</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;amp;Nurk (a):</translation>
     </message>
@@ -13628,7 +13850,7 @@ on juba loendis.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Andmete mahajäämine ei ole toetatud</translation>
     </message>
@@ -13664,7 +13886,7 @@ on juba loendis.</translation>
         <translation>Taastada vaikimisi seadistused</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Sisesta sümbol</translation>
     </message>

@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>플러그인:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>크레딧</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>라이선스</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD 애플리케이션 아이콘</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>&quot;Built with Qt&quot; 로고</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>정보</translation>
     </message>
@@ -363,6 +373,11 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>&apos;정의되지 않음&apos;으로 재설정</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>포인트 질량 매개변수 그림</translation>
     </message>
 </context>
 <context>
@@ -1252,9 +1267,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>이미지 크기가 잘못되었습니다(너비 x 높이가 %1보다 작아야 함)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>이미지를 렌더링할 수 없습니다</translation>
     </message>
 </context>
 <context>
@@ -1354,7 +1374,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>블록 목록</translation>
@@ -2171,18 +2191,38 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>명령줄</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>명령줄</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>명령줄 입력란</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>명령, 옵션 또는 좌표를 입력하십시오</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>명령줄 출력</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>명령, 옵션 및 메시지 기록</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>잘못된 값입니다:</translation>
     </message>
@@ -2266,6 +2306,11 @@ Do you wish to recover it?</source>
         <source>Show information as dialog</source>
         <translation>대화 상자로 정보 표시</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>제목 표시줄 표시</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2322,6 +2367,11 @@ Do you wish to recover it?</source>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>변환:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>그리기 단위 변환</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -3013,12 +3063,14 @@ Do you wish to recover it?</source>
         <translation>고정 라벨을 입력하거나 자동 라벨을 위해 비워둡니다</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>상한 허용 오차</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>낮은 허용 오차</translation>
     </message>
@@ -4367,12 +4419,12 @@ is already in the list.</source>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>ECMAScript 셸 표시</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>스크립트 셸</translation>
     </message>
@@ -4396,6 +4448,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>이 대화 상자를 다시 표시하지 않기</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>제목 표시줄 표시</translation>
     </message>
 </context>
 <context>
@@ -5250,6 +5307,11 @@ is already in the list.</source>
         <source>Background Color:</source>
         <translation>배경색:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD 애플리케이션 아이콘</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5447,7 +5509,12 @@ is already in the list.</source>
         <translation>커튼 로프 매듭</translation>
     </message>
     <message>
-        <location line="+262"/>
+        <location line="+34"/>
+        <source>Illustration of the casting options</source>
+        <translation>캐스팅 옵션 그림</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>버전</translation>
     </message>
@@ -5938,6 +6005,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>이미지 기반 그래픽 보기 대신 Qt RHI(Rendering Hardware Interface) 기반의 하드웨어 가속 그래픽 보기를 사용합니다</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>RHI 그래픽 보기 사용</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>기본적으로 앤티 앨리어싱 켜짐</translation>
     </message>
@@ -8033,7 +8110,7 @@ is already in the list.</source>
         <translation>모든 레이어 숨기기</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>모든 레이어 해동하기</translation>
     </message>
@@ -8043,7 +8120,7 @@ is already in the list.</source>
         <translation>모든 레이어 동결</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>모든 레이어 잠금</translation>
     </message>
@@ -8157,7 +8234,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>레이어 목록</translation>
     </message>
@@ -9019,7 +9096,12 @@ is already in the list.</source>
         <translation>원본 유지</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>대칭 매개변수 그림</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>현재 레이어 및 속성 사용</translation>
     </message>
@@ -9260,6 +9342,11 @@ is already in the list.</source>
         <source>Form</source>
         <translation>양식</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>마우스 버튼 그림</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9364,7 +9451,7 @@ is already in the list.</source>
         <translation>형식:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>제목 없음 %1</translation>
     </message>
@@ -9802,6 +9889,106 @@ is already in the list.</source>
         <source>Size (pixel):</source>
         <translation>크기(픽셀):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>더하기 기호가 있는 사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>점</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>십자가 있는 원과 사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>수직선이 있는 원</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>더하기 기호가 있는 원</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>더하기 기호가 있는 원과 사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>점이 있는 사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>보이지 않음</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>수직선</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>더하기 기호</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>십자</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>원과 사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>수직선이 있는 사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>점이 있는 원</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>십자가 있는 원</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>수직선이 있는 원과 사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>원</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>십자가 있는 사각형</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>점이 있는 원과 사각형</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10057,7 +10244,7 @@ is already in the list.</source>
         <translation>도면을 종이에 자동으로 맞추시겠습니까?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>드래그하여 용지 이동</translation>
     </message>
@@ -10067,13 +10254,13 @@ is already in the list.</source>
         <translation>완료</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>페이지 설정</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>PDF로 내보내기</translation>
     </message>
@@ -10264,7 +10451,7 @@ is already in the list.</source>
         <translation>표시되는 프로퍼티 값의 소수점/정밀도입니다:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>: </translation>
     </message>
@@ -10324,7 +10511,7 @@ is already in the list.</source>
         <translation>자동</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>자동 측정 사용</translation>
     </message>
@@ -10350,7 +10537,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>속성 편집기</translation>
@@ -10716,7 +10903,12 @@ is already in the list.</source>
         <translation>여러 복사본</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>두 중심 회전 매개변수 그림</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>각도 a:</translation>
     </message>
@@ -10759,7 +10951,12 @@ is already in the list.</source>
         <translation>여러 복사본</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>회전 매개변수 그림</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>각도(a):</translation>
     </message>
@@ -11133,7 +11330,12 @@ is already in the list.</source>
         <translation>여러 복사본</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>축척 매개변수 그림</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>팩터 x:</translation>
     </message>
@@ -11582,7 +11784,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>최소 두 개의 포인트가 동일합니다.</translation>
@@ -11962,6 +12164,11 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Relative</source>
         <translation>상대</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>좌표 설정</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13090,6 +13297,11 @@ is already in the list.</source>
         <source>Filter</source>
         <translation>필터</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>필터 지우기</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13180,7 +13392,12 @@ is already in the list.</source>
         <translation>여러 복사본</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>이동/복사 매개변수 그림</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>현재 레이어 및 속성 사용</translation>
     </message>
@@ -13257,7 +13474,12 @@ is already in the list.</source>
         <translation>여러 복사본</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>이동 및 회전 매개변수 그림</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>각도(a):</translation>
     </message>
@@ -13618,7 +13840,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>삭제된 데이터는 지원되지 않습니다</translation>
     </message>
@@ -13654,7 +13876,7 @@ is already in the list.</source>
         <translation>기본값 복원</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>기호 삽입</translation>
     </message>

@@ -20,12 +20,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Laajennusosa:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Tekijät</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Lisenssit</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD-sovelluksen kuvake</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logo &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
@@ -363,6 +373,11 @@ asetuksien muutokset astuvat voimaan.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Nollaus &apos;Undefined&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Kuva pistemassan parametreista</translation>
     </message>
 </context>
 <context>
@@ -1254,9 +1269,14 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Väärä kuvan koko (leveys x korkeus on oltava pienempi kuin %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Kuvaa ei voi renderöidä</translation>
     </message>
 </context>
 <context>
@@ -1356,7 +1376,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Lohkoluettelo</translation>
@@ -2173,18 +2193,38 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komentorivi</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Komentorivi</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Komentorivin kehote</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Anna komento, valinta tai koordinaatit</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Komentorivin tuloste</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Komentojen, valintojen ja viestien historia</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Virheellinen arvo:</translation>
     </message>
@@ -2268,6 +2308,11 @@ Haluatko palauttaa sen?</translation>
         <source>Show information as dialog</source>
         <translation>Näytä tiedot viesti-ikkunassa</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Näytä otsikkopalkki</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2334,6 +2379,11 @@ Haluatko palauttaa sen?</translation>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Muunna:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Muunna piirtoyksikkö</translation>
     </message>
 </context>
 <context>
@@ -3016,12 +3066,14 @@ Haluatko palauttaa sen?</translation>
         <translation>Lisää kiinteä selite tai jätä tyhjäksi automaattiselle selitteelle</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Ylätoleranssi</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Alatoleranssi</translation>
     </message>
@@ -4371,12 +4423,12 @@ on jo luettelossa.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Näytä ECMASkripin shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Skripti shell</translation>
     </message>
@@ -4400,6 +4452,11 @@ on jo luettelossa.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Älä näytä tätä valintaikkunaa uudelleen</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Näytä otsikkopalkki</translation>
     </message>
 </context>
 <context>
@@ -5255,6 +5312,11 @@ on jo luettelossa.</translation>
         <source>Background Color:</source>
         <translation>Taustaväri:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD-sovelluksen kuvake</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5442,7 +5504,12 @@ on jo luettelossa.</translation>
         <translation>Valitse Insertion tai Enter void space. (Ei toteutettu)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+49"/>
+        <source>Illustration of the casting options</source>
+        <translation>Kuva valuvaihtoehdoista</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Versio</translation>
     </message>
@@ -5497,7 +5564,7 @@ on jo luettelossa.</translation>
         <translation>Poistettu maalattu pohjayksiköiden päälle. (Pysyvä pois päältä)</translation>
     </message>
     <message>
-        <location line="-933"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Syötä tilan koko&gt;</translation>
     </message>
@@ -5507,7 +5574,7 @@ on jo luettelossa.</translation>
         <translation>Verho köysi solmu</translation>
     </message>
     <message>
-        <location line="+543"/>
+        <location line="+546"/>
         <source>#Undefined#</source>
         <translation>#Määrittämätön#</translation>
     </message>
@@ -5908,6 +5975,16 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+16"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Käytä Qt RHI:hin (Rendering Hardware Interface) perustuvaa laitteistokiihdytettyä grafiikkanäkymää kuvapohjaisen grafiikkanäkymän sijaan</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Käytä RHI-grafiikkanäkymää</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Pehmennys päällä on oletuksena</translation>
     </message>
@@ -5963,7 +6040,7 @@ on jo luettelossa.</translation>
         <translation>Säikeiden määrä:</translation>
     </message>
     <message>
-        <location line="-207"/>
+        <location line="-220"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -5998,7 +6075,7 @@ on jo luettelossa.</translation>
         <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+116"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Renderöi aina vähintään 1 pikselin levyiset polyviivat mukautetuilla leveyksillä</translation>
     </message>
@@ -8013,7 +8090,7 @@ on jo luettelossa.</translation>
         <translation>Piilotetaan kaikki tasot</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Sulautetaan kaikki tasot</translation>
     </message>
@@ -8023,7 +8100,7 @@ on jo luettelossa.</translation>
         <translation>Kaikki tasot jäädytetään</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Kaikki tasot lukitaan</translation>
     </message>
@@ -8033,7 +8110,7 @@ on jo luettelossa.</translation>
         <translation>Avataan kaikki tasot</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="-138"/>
         <source>&amp;Layer</source>
         <translation>&amp;Taso</translation>
     </message>
@@ -8161,13 +8238,13 @@ on jo luettelossa.</translation>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+70"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Tasojen lista</translation>
     </message>
     <message>
-        <location line="-55"/>
-        <location line="+109"/>
+        <location line="-70"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Tasojen lista</translation>
     </message>
@@ -9024,7 +9101,12 @@ on jo luettelossa.</translation>
         <translation>&amp;Säilytä alkuperäinen</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Kuva peilausparametreista</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>
@@ -9265,6 +9347,11 @@ on jo luettelossa.</translation>
         <source>Form</source>
         <translation>Muoto</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Kuva hiiren painikkeista</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9369,7 +9456,7 @@ on jo luettelossa.</translation>
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Nimetön %1</translation>
     </message>
@@ -9809,6 +9896,106 @@ on jo luettelossa.</translation>
         <source>Size (pixel):</source>
         <translation>Koko (pikseleissä):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Neliö plusmerkillä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Piste</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Ympyrä ja neliö ristillä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Ympyrä pystyviivalla</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Ympyrä plusmerkillä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Ympyrä ja neliö plusmerkillä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Neliö pisteellä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Näkymätön</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Pystyviiva</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Plusmerkki</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Neliö</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Risti</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Ympyrä ja neliö</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Neliö pystyviivalla</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Ympyrä pisteellä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Ympyrä ristillä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Ympyrä ja neliö pystyviivalla</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Ympyrä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Neliö ristillä</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Ympyrä ja neliö pisteellä</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10064,7 +10251,7 @@ on jo luettelossa.</translation>
         <translation>Sovita piirustus automaattisesti paperille?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Siirrä paperia vetämällä</translation>
     </message>
@@ -10074,13 +10261,13 @@ on jo luettelossa.</translation>
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Sivun asetukset</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Vie PDF:ksi</translation>
     </message>
@@ -10271,12 +10458,12 @@ on jo luettelossa.</translation>
         <translation>Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1736"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1743"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1504"/>
+        <location line="-1508"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10336,7 +10523,7 @@ on jo luettelossa.</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>
@@ -10357,7 +10544,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Ominaisuuksien muokkaaminen</translation>
@@ -10723,7 +10910,12 @@ on jo luettelossa.</translation>
         <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Kuva kierrä kaksi -parametreista</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Kulma &amp;a:</translation>
     </message>
@@ -10766,7 +10958,12 @@ on jo luettelossa.</translation>
         <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Kuva kiertoparametreista</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Kulma (a):</translation>
     </message>
@@ -11140,7 +11337,12 @@ on jo luettelossa.</translation>
         <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Kuva mittakaavaparametreista</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Kerroin x:</translation>
     </message>
@@ -11592,7 +11794,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>
@@ -11972,6 +12174,11 @@ on jo luettelossa.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Suhteellinen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Aseta koordinaatti</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13100,6 +13307,11 @@ on jo luettelossa.</translation>
         <source>Filter</source>
         <translation>Suodatin</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Tyhjennä suodatin</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13190,7 +13402,12 @@ on jo luettelossa.</translation>
         <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Kuva siirto- ja kopiointiparametreista</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>
@@ -13267,7 +13484,12 @@ on jo luettelossa.</translation>
         <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Kuva siirto- ja kiertoparametreista</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Kulma (a):</translation>
     </message>
@@ -13628,7 +13850,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>
@@ -13664,7 +13886,7 @@ on jo luettelossa.</translation>
         <translation>Palauta oletusarvot</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Lisää symboli</translation>
     </message>

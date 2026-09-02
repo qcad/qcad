@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Credits</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Licenser</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD-programikon</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logotyp &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
@@ -363,6 +373,11 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Återställs till &apos;Odefinierad&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Illustration av punktmasseparametrarna</translation>
     </message>
 </context>
 <context>
@@ -1252,9 +1267,14 @@ Vill du återställa den?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ogiltig bildstorlek (bredd x höjd måste vara mindre än %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Kan inte rendera bilden</translation>
     </message>
 </context>
 <context>
@@ -1354,7 +1374,7 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Lista över block</translation>
@@ -2171,18 +2191,38 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Kommandorad</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>Kommandorad</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Kommandoradsprompt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Ange ett kommando, ett alternativ eller koordinater</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Kommandoradsutdata</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Historik över kommandon, alternativ och meddelanden</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Ogiltigt värde:</translation>
     </message>
@@ -2266,6 +2306,11 @@ Vill du återställa den?</translation>
         <source>Show information as dialog</source>
         <translation>Visa information som en dialogruta</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Visa namnlisten</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2332,6 +2377,11 @@ Vill du återställa den?</translation>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Konvertera:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Konvertera ritenhet</translation>
     </message>
 </context>
 <context>
@@ -3014,12 +3064,14 @@ Vill du återställa den?</translation>
         <translation>Skriv in fast etikett eller lämna tom för automatisk etikett</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Övre tolerans</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Undre tolerans</translation>
     </message>
@@ -4369,12 +4421,12 @@ finns redan i listan.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Visa ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>Skriptskal</translation>
     </message>
@@ -4398,6 +4450,11 @@ finns redan i listan.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Visa inte den här dialogrutan igen</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Visa namnlisten</translation>
     </message>
 </context>
 <context>
@@ -5253,6 +5310,11 @@ finns redan i listan.</translation>
         <source>Background Color:</source>
         <translation>Bakgrundsfärg:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD-programikon</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5440,7 +5502,12 @@ finns redan i listan.</translation>
         <translation>Välj Infogning eller Ange tomrum. (Ej implementerat)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+49"/>
+        <source>Illustration of the casting options</source>
+        <translation>Illustration av gjutningsalternativen</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
@@ -5495,7 +5562,7 @@ finns redan i listan.</translation>
         <translation>Borttagen målad över basenheter. (bestående av)</translation>
     </message>
     <message>
-        <location line="-933"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Ange storlek på utrymme&gt;</translation>
     </message>
@@ -5505,7 +5572,7 @@ finns redan i listan.</translation>
         <translation>Gardin rep knut</translation>
     </message>
     <message>
-        <location line="+543"/>
+        <location line="+546"/>
         <source>#Undefined#</source>
         <translation>#Odefinierad#</translation>
     </message>
@@ -5921,6 +5988,16 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Använd den hårdvaruaccelererade grafiska vyn baserad på Qt RHI (Rendering Hardware Interface) i stället för den bildbaserade grafiska vyn</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Använd RHI-grafikvy</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing aktiverad som standard</translation>
     </message>
@@ -8016,7 +8093,7 @@ finns redan i listan.</translation>
         <translation>Dölja alla lager</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Tina alla lager</translation>
     </message>
@@ -8026,7 +8103,7 @@ finns redan i listan.</translation>
         <translation>Frysning av alla lager</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Låsning av alla lager</translation>
     </message>
@@ -8160,7 +8237,7 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Lista över lager</translation>
     </message>
@@ -9022,7 +9099,12 @@ finns redan i listan.</translation>
         <translation>Behåll originalet</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Illustration av spegelparametrarna</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Använd aktuellt lager och aktuella attribut</translation>
     </message>
@@ -9263,6 +9345,11 @@ finns redan i listan.</translation>
         <source>Form</source>
         <translation>Formulär</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Illustration av musknapparna</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9367,7 +9454,7 @@ finns redan i listan.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Utan titel %1</translation>
     </message>
@@ -9807,6 +9894,106 @@ finns redan i listan.</translation>
         <source>Size (pixel):</source>
         <translation>Storlek (pixel):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Kvadrat med plustecken</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Punkt</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Cirkel och kvadrat med kryss</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Cirkel med vertikal linje</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Cirkel med plustecken</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Cirkel och kvadrat med plustecken</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Kvadrat med punkt</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Osynlig</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Vertikal linje</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Plustecken</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Kvadrat</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Kryss</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Cirkel och kvadrat</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Kvadrat med vertikal linje</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Cirkel med punkt</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Cirkel med kryss</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Cirkel och kvadrat med vertikal linje</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Cirkel</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Kvadrat med kryss</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Cirkel och kvadrat med punkt</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10062,7 +10249,7 @@ finns redan i listan.</translation>
         <translation>Automatisk anpassning av ritning till papper?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Dra för att flytta papper</translation>
     </message>
@@ -10072,13 +10259,13 @@ finns redan i listan.</translation>
         <translation>Klart</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Sidinställningar</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Exportera till PDF</translation>
     </message>
@@ -10219,7 +10406,7 @@ finns redan i listan.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10279,7 +10466,7 @@ finns redan i listan.</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Använd automatisk mätning</translation>
     </message>
@@ -10305,7 +10492,7 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Egenskapsredigerare</translation>
@@ -10721,7 +10908,12 @@ finns redan i listan.</translation>
         <translation>Flera kopior</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Illustration av parametrarna för rotera två</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Vinkel a:</translation>
     </message>
@@ -10764,7 +10956,12 @@ finns redan i listan.</translation>
         <translation>Flera kopior</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Illustration av rotationsparametrarna</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Vinkel (a):</translation>
     </message>
@@ -11138,7 +11335,12 @@ finns redan i listan.</translation>
         <translation>Flera kopior</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Illustration av skalparametrarna</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Faktor x:</translation>
     </message>
@@ -11590,7 +11792,7 @@ finns redan i listan.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minst två punkter är identiska.</translation>
@@ -11975,6 +12177,11 @@ finns redan i listan.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Relativ</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Ange koordinat</translation>
     </message>
 </context>
 <context>
@@ -13098,6 +13305,11 @@ finns redan i listan.</translation>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Rensa filtret</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13188,7 +13400,12 @@ finns redan i listan.</translation>
         <translation>Flera kopior</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Illustration av parametrarna för flytta/kopiera</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Använd aktuellt lager och aktuella attribut</translation>
     </message>
@@ -13265,7 +13482,12 @@ finns redan i listan.</translation>
         <translation>Flera kopior</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Illustration av parametrarna för flytta och rotera</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Vinkel (a):</translation>
     </message>
@@ -13626,7 +13848,7 @@ finns redan i listan.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Uppgifter som tappats bort stöds inte</translation>
     </message>
@@ -13662,7 +13884,7 @@ finns redan i listan.</translation>
         <translation>Återställa standardvärden</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Infoga symbol</translation>
     </message>

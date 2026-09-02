@@ -35,12 +35,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Модуль:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>Идентификатор:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Об авторах</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Лицензии</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>Значок приложения QCAD</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Логотип &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>О программе</translation>
     </message>
@@ -363,6 +373,11 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Сброс в &apos;Не определено&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Иллюстрация параметров точечной массы</translation>
     </message>
 </context>
 <context>
@@ -1256,9 +1271,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Неверный размер изображения (ширина х высота должно быть меньше, чем %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Не удалось отрисовать изображение</translation>
     </message>
 </context>
 <context>
@@ -1353,13 +1373,13 @@ Do you wish to recover it?</source>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Список блоков</translation>
     </message>
     <message>
-        <location line="-111"/>
+        <location line="-126"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -2175,18 +2195,38 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Командная строка</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Командная строка</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Строка ввода команд</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Введите команду, параметр или координаты</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Вывод командной строки</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>История команд, параметров и сообщений</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Неверное значение:</translation>
     </message>
@@ -2270,6 +2310,11 @@ Do you wish to recover it?</source>
         <source>Show information as dialog</source>
         <translation>Показать информацию как диалог</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Показывать заголовок окна</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2336,6 +2381,11 @@ Do you wish to recover it?</source>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Преобразовать:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Преобразовать единицы измерения чертежа</translation>
     </message>
 </context>
 <context>
@@ -3019,12 +3069,14 @@ Do you wish to recover it?</source>
         <translation>Введите фиксированную метку или оставьте пустым для автоматической метки</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Больше допуск</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Меньше допуск</translation>
     </message>
@@ -4375,12 +4427,12 @@ is already in the list.</source>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Показать оболочку ECMAScript</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Оболочка сценария</translation>
     </message>
@@ -4404,6 +4456,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Больше не показывать этот диалог</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Показывать заголовок окна</translation>
     </message>
 </context>
 <context>
@@ -5260,6 +5317,11 @@ is already in the list.</source>
         <source>Background Color:</source>
         <translation>Цвет фона:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>Значок приложения QCAD</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5447,7 +5509,12 @@ is already in the list.</source>
         <translation>Выбрать вставку или ввести пустое пространство. (Не реализовано)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+49"/>
+        <source>Illustration of the casting options</source>
+        <translation>Иллюстрация параметров размещения</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Версия</translation>
     </message>
@@ -5502,7 +5569,7 @@ is already in the list.</source>
         <translation>Удалить запечатанные роликовым штампом базовые объекты. (постоянно выключено)</translation>
     </message>
     <message>
-        <location line="-933"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Введите размер пространства&gt;</translation>
     </message>
@@ -5512,7 +5579,7 @@ is already in the list.</source>
         <translation>Узел подхвата</translation>
     </message>
     <message>
-        <location line="+543"/>
+        <location line="+546"/>
         <source>#Undefined#</source>
         <translation>#Не задано#</translation>
     </message>
@@ -5902,7 +5969,17 @@ is already in the list.</source>
         <translation>Применить вес линии к точкам</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+16"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Использовать аппаратно ускоренный графический вид на основе Qt RHI (Rendering Hardware Interface) вместо графического вида на основе изображения</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Использовать графический вид RHI</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Использовать полное разрешение для дисплея Retina / дисплея с высоким разрешением</translation>
     </message>
@@ -5948,7 +6025,7 @@ is already in the list.</source>
         <translation>Постоянное выделение</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1082"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5978,7 +6055,7 @@ is already in the list.</source>
         <translation>Отображение и производительность</translation>
     </message>
     <message>
-        <location line="+359"/>
+        <location line="+372"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Отображать объекты с более чем N тире как непрерывные:</translation>
     </message>
@@ -5988,7 +6065,7 @@ is already in the list.</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
-        <location line="-132"/>
+        <location line="-145"/>
         <source>Linetypes and Lineweights</source>
         <translation>Типы и вес линий</translation>
     </message>
@@ -6003,7 +6080,7 @@ is already in the list.</source>
         <translation>Автоматически использовать типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+116"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Всегда отображать полилинии с пользовательской шириной не менее 1 пикселя</translation>
     </message>
@@ -8038,7 +8115,7 @@ is already in the list.</source>
         <translation>Скрытие всех слоёв</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Размораживание всех слоёв</translation>
     </message>
@@ -8048,7 +8125,7 @@ is already in the list.</source>
         <translation>Замораживание всех слоёв</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Блокировка всех слоёв</translation>
     </message>
@@ -8058,7 +8135,7 @@ is already in the list.</source>
         <translation>Разблокировка всех слоёв</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="-138"/>
         <source>&amp;Layer</source>
         <translation>С&amp;лой</translation>
     </message>
@@ -8166,13 +8243,13 @@ is already in the list.</source>
         <translation>Виджеты</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+70"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Список слоёв</translation>
     </message>
     <message>
-        <location line="-55"/>
-        <location line="+109"/>
+        <location line="-70"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Список слоёв</translation>
     </message>
@@ -9029,7 +9106,12 @@ is already in the list.</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Иллюстрация параметров отражения</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
@@ -9270,6 +9352,11 @@ is already in the list.</source>
         <source>Form</source>
         <translation>Форма</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Иллюстрация кнопок мыши</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9374,7 +9461,7 @@ is already in the list.</source>
         <translation>Формат:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Без имени %1</translation>
     </message>
@@ -9816,6 +9903,106 @@ is already in the list.</source>
         <source>Size (pixel):</source>
         <translation>Размер (в пикселях):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Квадрат со знаком плюс</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Точка</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Окружность и квадрат с крестиком</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Окружность с вертикальной линией</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Окружность со знаком плюс</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Окружность и квадрат со знаком плюс</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Квадрат с точкой</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Невидимый</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Вертикальная линия</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Знак плюс</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Квадрат</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Крестик</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Окружность и квадрат</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Квадрат с вертикальной линией</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Окружность с точкой</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Окружность с крестиком</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Окружность и квадрат с вертикальной линией</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Окружность</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Квадрат с крестиком</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Окружность и квадрат с точкой</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10071,7 +10258,7 @@ is already in the list.</source>
         <translation>Автоматически подогнать чертёж под бумагу?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Для перемещения бумаги перетащите её</translation>
     </message>
@@ -10081,13 +10268,13 @@ is already in the list.</source>
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Настройки страницы</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Экспортировать в PDF</translation>
     </message>
@@ -10228,12 +10415,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1736"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1743"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1504"/>
+        <location line="-1508"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10293,7 +10480,7 @@ is already in the list.</source>
         <translation>Автоматический</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Использовать автоматическое измерение</translation>
     </message>
@@ -10309,13 +10496,13 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+433"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Редактор свойств</translation>
     </message>
     <message>
-        <location line="-93"/>
+        <location line="-108"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -10730,7 +10917,12 @@ is already in the list.</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Иллюстрация параметров вращения вокруг двух центров</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Угол &amp;a:</translation>
     </message>
@@ -10773,7 +10965,12 @@ is already in the list.</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Иллюстрация параметров вращения</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Угол (a):</translation>
     </message>
@@ -11147,7 +11344,12 @@ is already in the list.</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Иллюстрация параметров масштаба</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Коэффициент х:</translation>
     </message>
@@ -11602,7 +11804,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>По крайней мере две точки идентичны.</translation>
@@ -11982,6 +12184,11 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Относительно</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Задать координату</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13110,6 +13317,11 @@ is already in the list.</source>
         <source>Filter</source>
         <translation>Фильтр</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Очистить фильтр</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13200,7 +13412,12 @@ is already in the list.</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Иллюстрация параметров перемещения/копирования</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
@@ -13277,7 +13494,12 @@ is already in the list.</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Иллюстрация параметров перемещения и вращения</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Угол (a):</translation>
     </message>
@@ -13638,7 +13860,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Удалённые данные не поддерживаются</translation>
     </message>
@@ -13674,7 +13896,7 @@ is already in the list.</source>
         <translation>Восстановить умолчания</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Вставить символ</translation>
     </message>

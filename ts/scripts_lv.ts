@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Spraudnis:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Kredīti</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Licences</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD lietojumprogrammas ikona</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logotips &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Par</translation>
     </message>
@@ -363,6 +373,11 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Atiestatīts uz &apos;Nenoteikts&apos;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Punkta masas parametru ilustrācija</translation>
     </message>
 </context>
 <context>
@@ -1256,9 +1271,14 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nepareizs attēla izmērs (platumam x augstumam jābūt mazākam par %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Nevar atveidot attēlu</translation>
     </message>
 </context>
 <context>
@@ -1358,7 +1378,7 @@ Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Bloku saraksts</translation>
@@ -2175,18 +2195,38 @@ Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komandrindas</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>Komandrindas</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Komandu ievades rinda</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Ievadiet komandu, opciju vai koordinātas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Komandrindas izvade</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Komandu, opciju un ziņojumu vēsture</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Nederīga vērtība:</translation>
     </message>
@@ -2270,6 +2310,11 @@ Vai vēlaties to atjaunot?</translation>
         <source>Show information as dialog</source>
         <translation>Rādīt informāciju kā dialoglodziņu</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Rādīt virsraksta joslu</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2326,6 +2371,11 @@ Vai vēlaties to atjaunot?</translation>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Pārvērst:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Konvertēt zīmēšanas vienību</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -3019,12 +3069,14 @@ Vai vēlaties to atjaunot?</translation>
         <translation>Ievadiet fiksētu etiķeti vai atstājiet tukšu automātiskai etiķetei</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Augšējā pielaide</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Zemāka tolerance</translation>
     </message>
@@ -4375,12 +4427,12 @@ jau ir sarakstā.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Rādīt ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>Skriptu apvalks</translation>
     </message>
@@ -4404,6 +4456,11 @@ jau ir sarakstā.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Nerādiet šo dialoglodziņu vēlreiz</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Rādīt virsraksta joslu</translation>
     </message>
 </context>
 <context>
@@ -5260,6 +5317,11 @@ jau ir sarakstā.</translation>
         <source>Background Color:</source>
         <translation>Fona krāsa:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD lietojumprogrammas ikona</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5457,7 +5519,12 @@ jau ir sarakstā.</translation>
         <translation>Aizkaru virves mezgls</translation>
     </message>
     <message>
-        <location line="+262"/>
+        <location line="+34"/>
+        <source>Illustration of the casting options</source>
+        <translation>Liešanas iespēju ilustrācija</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Versija</translation>
     </message>
@@ -5948,6 +6015,16 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Izmantot aparatūras paātrinātu grafikas skatu, kas balstīts uz Qt RHI (Rendering Hardware Interface), nevis attēlā balstītu grafikas skatu</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Izmantot RHI grafikas skatu</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Pēc noklusējuma ieslēgta izlīdzināšanas novēršana</translation>
     </message>
@@ -8043,7 +8120,7 @@ jau ir sarakstā.</translation>
         <translation>Visu slāņu slēpšana</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Visu slāņu atkausēšana</translation>
     </message>
@@ -8053,7 +8130,7 @@ jau ir sarakstā.</translation>
         <translation>Visu slāņu sasaldēšana</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Visu slāņu bloķēšana</translation>
     </message>
@@ -8167,7 +8244,7 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Slāņu saraksts</translation>
     </message>
@@ -9029,7 +9106,12 @@ jau ir sarakstā.</translation>
         <translation>Saglabāt oriģinālu</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Spoguļošanas parametru ilustrācija</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Izmantot pašreizējo slāni un atribūtus</translation>
     </message>
@@ -9270,6 +9352,11 @@ jau ir sarakstā.</translation>
         <source>Form</source>
         <translation>Veidlapa</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Peles pogu ilustrācija</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9374,7 +9461,7 @@ jau ir sarakstā.</translation>
         <translation>Formāts:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Bez nosaukuma %1</translation>
     </message>
@@ -9816,6 +9903,106 @@ jau ir sarakstā.</translation>
         <source>Size (pixel):</source>
         <translation>Izmērs (pikseļi):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Kvadrāts ar plusa zīmi</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Punkts</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Aplis un kvadrāts ar krustiņu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Aplis ar vertikālu līniju</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Aplis ar plusa zīmi</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Aplis un kvadrāts ar plusa zīmi</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Kvadrāts ar punktu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Neredzams</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Vertikāla līnija</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Plusa zīme</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Kvadrāts</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Krustiņš</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Aplis un kvadrāts</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Kvadrāts ar vertikālu līniju</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Aplis ar punktu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Aplis ar krustiņu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Aplis un kvadrāts ar vertikālu līniju</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Aplis</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Kvadrāts ar krustiņu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Aplis un kvadrāts ar punktu</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10071,7 +10258,7 @@ jau ir sarakstā.</translation>
         <translation>Automātiski pielāgot zīmējumu papīram?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Velciet, lai pārvietotu papīru</translation>
     </message>
@@ -10081,13 +10268,13 @@ jau ir sarakstā.</translation>
         <translation>Paveikts</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Lapas iestatījumi</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Eksportēt uz PDF</translation>
     </message>
@@ -10278,7 +10465,7 @@ jau ir sarakstā.</translation>
         <translation>Attēloto īpašību vērtību decimāldaļas / precizitāte:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10338,7 +10525,7 @@ jau ir sarakstā.</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Izmantojiet automātisko mērījumu</translation>
     </message>
@@ -10364,7 +10551,7 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Īpašību redaktors</translation>
@@ -10730,7 +10917,12 @@ jau ir sarakstā.</translation>
         <translation>Vairākas kopijas</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Divkāršas pagriešanas parametru ilustrācija</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Leņķis a:</translation>
     </message>
@@ -10773,7 +10965,12 @@ jau ir sarakstā.</translation>
         <translation>Vairākas kopijas</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Pagriešanas parametru ilustrācija</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Leņķis (a):</translation>
     </message>
@@ -11147,7 +11344,12 @@ jau ir sarakstā.</translation>
         <translation>Vairākas kopijas</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Mēroga parametru ilustrācija</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>X faktors:</translation>
     </message>
@@ -11602,7 +11804,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vismaz divi punkti ir identiski.</translation>
@@ -11982,6 +12184,11 @@ jau ir sarakstā.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Relatīvais</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Iestatīt koordinātu</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13110,6 +13317,11 @@ jau ir sarakstā.</translation>
         <source>Filter</source>
         <translation>Filtrs</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Notīrīt filtru</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13200,7 +13412,12 @@ jau ir sarakstā.</translation>
         <translation>Vairākas kopijas</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Pārvietošanas / kopēšanas parametru ilustrācija</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Izmantot pašreizējo slāni un atribūtus</translation>
     </message>
@@ -13277,7 +13494,12 @@ jau ir sarakstā.</translation>
         <translation>Vairākas kopijas</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Pārvietošanas un pagriešanas parametru ilustrācija</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Leņķis (a):</translation>
     </message>
@@ -13638,7 +13860,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Nav atbalstīta datu atmešana</translation>
     </message>
@@ -13674,7 +13896,7 @@ jau ir sarakstā.</translation>
         <translation>Atjaunot noklusējuma iestatījumus</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Ievietot simbolu</translation>
     </message>

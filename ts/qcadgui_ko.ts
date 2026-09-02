@@ -80,9 +80,17 @@
     </message>
 </context>
 <context>
+    <name>RGraphicsViewQt</name>
+    <message>
+        <location filename="../src/gui/RGraphicsViewQt.cpp" line="+51"/>
+        <source>Drawing View</source>
+        <translation>도면 보기</translation>
+    </message>
+</context>
+<context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+190"/>
         <source>Invalid</source>
         <translation>유효하지 않음</translation>
     </message>

@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Eklenti:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Krediler</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Lisanslar</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD uygulama simgesi</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>&quot;Built with Qt&quot; logosu</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
@@ -363,6 +373,11 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>&apos;Tanımlanmamış&apos; olarak sıfırla</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Noktasal kütle parametrelerinin gösterimi</translation>
     </message>
 </context>
 <context>
@@ -1252,9 +1267,14 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Geçersiz resim boyutu (genişlik x yükseklik %1&apos;den az olmalıdır)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Resim oluşturulamıyor</translation>
     </message>
 </context>
 <context>
@@ -1354,7 +1374,7 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Blok Listesi</translation>
@@ -2171,18 +2191,38 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komut Satırı</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Komut Satırı</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Komut satırı istemi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Bir komut, bir seçenek veya koordinat girin</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Komut satırı çıktısı</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Komutların, seçeneklerin ve mesajların geçmişi</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Geçersiz değer:</translation>
     </message>
@@ -2266,6 +2306,11 @@ Kurtarmak ister misiniz?</translation>
         <source>Show information as dialog</source>
         <translation>Bilgileri iletişim olarak göster</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Başlık çubuğunu göster</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2322,6 +2367,11 @@ Kurtarmak ister misiniz?</translation>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Dönüştür:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Çizim birimini dönüştür</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -3013,12 +3063,14 @@ Kurtarmak ister misiniz?</translation>
         <translation>Sabit etiket girin veya otomatik etiket için boş bırakın</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Üst hata payı</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Alt hata payı</translation>
     </message>
@@ -4367,12 +4419,12 @@ zaten listede.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>ECMAScript Kabuğunu Göster</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>Senaryo Kabuğu</translation>
     </message>
@@ -4396,6 +4448,11 @@ zaten listede.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Bu iletişim kutusunu bir daha gösterme</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Başlık çubuğunu göster</translation>
     </message>
 </context>
 <context>
@@ -5250,6 +5307,11 @@ zaten listede.</translation>
         <source>Background Color:</source>
         <translation>Arkaplan Rengi:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD uygulama simgesi</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5437,7 +5499,12 @@ zaten listede.</translation>
         <translation>Ekleme&apos;yi seçin veya Boş alan girin. (Uygulanmadı)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+49"/>
+        <source>Illustration of the casting options</source>
+        <translation>Döküm seçeneklerinin gösterimi</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Versiyon</translation>
     </message>
@@ -5492,7 +5559,7 @@ zaten listede.</translation>
         <translation>Temel varlıklar üzerinde boyalı olarak silindi. (kalıcı kapalı)</translation>
     </message>
     <message>
-        <location line="-933"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Alan boyutunu girin&gt;</translation>
     </message>
@@ -5502,7 +5569,7 @@ zaten listede.</translation>
         <translation>Perde İp Düğümü</translation>
     </message>
     <message>
-        <location line="+543"/>
+        <location line="+546"/>
         <source>#Undefined#</source>
         <translation>#Tanımsız#</translation>
     </message>
@@ -5918,6 +5985,16 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Görüntü tabanlı grafik görünümü yerine Qt RHI (Rendering Hardware Interface) tabanlı donanım hızlandırmalı grafik görünümünü kullan</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>RHI grafik görünümünü kullan</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing varsayılan olarak açık</translation>
     </message>
@@ -8013,7 +8090,7 @@ zaten listede.</translation>
         <translation>Tüm katmanları gizleme</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Tüm katmanların çözdürülmesi</translation>
     </message>
@@ -8023,7 +8100,7 @@ zaten listede.</translation>
         <translation>Tüm katmanların dondurulması</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Tüm katmanları kilitleme</translation>
     </message>
@@ -8157,7 +8234,7 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Katman Listesi</translation>
     </message>
@@ -9019,7 +9096,12 @@ zaten listede.</translation>
         <translation>Orijinali saklayın</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Ayna parametrelerinin gösterimi</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
@@ -9260,6 +9342,11 @@ zaten listede.</translation>
         <source>Form</source>
         <translation>Form</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Fare düğmelerinin gösterimi</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9364,7 +9451,7 @@ zaten listede.</translation>
         <translation>Biçim:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>%1 isimsiz</translation>
     </message>
@@ -9802,6 +9889,106 @@ zaten listede.</translation>
         <source>Size (pixel):</source>
         <translation>Boyut (piksel):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Artı işaretli kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Nokta</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Çarpılı daire ve kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Dikey çizgili daire</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Artı işaretli daire</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Artı işaretli daire ve kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Noktalı kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Görünmez</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Dikey çizgi</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Artı işareti</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Çarpı</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Daire ve kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Dikey çizgili kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Noktalı daire</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Çarpılı daire</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Dikey çizgili daire ve kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Daire</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Çarpılı kare</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Noktalı daire ve kare</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10057,7 +10244,7 @@ zaten listede.</translation>
         <translation>Çizimi kağıda otomatik sığdırma?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Kağıt taşımak için sürükleyin</translation>
     </message>
@@ -10067,13 +10254,13 @@ zaten listede.</translation>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Sayfa Ayarları</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>PDF Olarak Dışa Aktar</translation>
     </message>
@@ -10264,7 +10451,7 @@ zaten listede.</translation>
         <translation>Gelişmiş boyut stili geçersiz kılmalarını görüntüleme</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10324,7 +10511,7 @@ zaten listede.</translation>
         <translation>Oto</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Otomatik ölçümü kullanın</translation>
     </message>
@@ -10350,7 +10537,7 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Özellik Düzenleyicisi</translation>
@@ -10716,7 +10903,12 @@ zaten listede.</translation>
         <translation>Birden fazla kopya</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>İki merkezli döndürme parametrelerinin gösterimi</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Açı a:</translation>
     </message>
@@ -10759,7 +10951,12 @@ zaten listede.</translation>
         <translation>Birden fazla kopya</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Döndürme parametrelerinin gösterimi</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Açı (a):</translation>
     </message>
@@ -11133,7 +11330,12 @@ zaten listede.</translation>
         <translation>Birden fazla kopya</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Ölçek parametrelerinin gösterimi</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>Faktör x:</translation>
     </message>
@@ -11582,7 +11784,7 @@ zaten listede.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>En az iki nokta aynıdır.</translation>
@@ -11962,6 +12164,11 @@ zaten listede.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Göreceli</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Koordinatı ayarla</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -13090,6 +13297,11 @@ zaten listede.</translation>
         <source>Filter</source>
         <translation>Filtre</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Filtreyi temizle</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13180,7 +13392,12 @@ zaten listede.</translation>
         <translation>Birden fazla kopya</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Taşıma / kopyalama parametrelerinin gösterimi</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
@@ -13257,7 +13474,12 @@ zaten listede.</translation>
         <translation>Birden fazla kopya</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Taşıma ve döndürme parametrelerinin gösterimi</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Açı (a):</translation>
     </message>
@@ -13618,7 +13840,7 @@ zaten listede.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
@@ -13654,7 +13876,7 @@ zaten listede.</translation>
         <translation>Varsayılanları geri yükle</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Sembol Ekle</translation>
     </message>

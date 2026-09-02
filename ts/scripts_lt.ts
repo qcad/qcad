@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+457"/>
         <source>Plugin:</source>
         <translation>Įskiepis:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-432"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Kreditai</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+176"/>
         <source>Licenses</source>
         <translation>Licencijos</translation>
     </message>
@@ -237,7 +237,17 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+24"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD programos piktograma</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Built with Qt logo</source>
+        <translation>Logotipas &quot;Built with Qt&quot;</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>About</source>
         <translation>Apie</translation>
     </message>
@@ -363,6 +373,11 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
         <translation>Atstatyti į &quot;Neapibrėžta</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Illustration of the point mass parameters</source>
+        <translation>Taškinės masės parametrų iliustracija</translation>
     </message>
 </context>
 <context>
@@ -1256,9 +1271,14 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+61"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Netinkamas vaizdo dydis (plotis x aukštis turi būti mažesnis nei %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot render image</source>
+        <translation>Nepavyko atvaizduoti paveikslėlio</translation>
     </message>
 </context>
 <context>
@@ -1358,7 +1378,7 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Blokų sąrašas</translation>
@@ -2175,18 +2195,38 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+113"/>
+        <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komandinė eilutė</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-26"/>
         <source>&amp;Command Line</source>
         <translation>Komandinė eilutė</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+19"/>
+        <source>Command Line Prompt</source>
+        <translation>Komandų įvedimo eilutė</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter a command, an option or coordinates</source>
+        <translation>Įveskite komandą, parinktį arba koordinates</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Command Line Output</source>
+        <translation>Komandinės eilutės išvestis</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>History of commands, options and messages</source>
+        <translation>Komandų, parinkčių ir pranešimų istorija</translation>
+    </message>
+    <message>
+        <location line="+183"/>
         <source>Invalid value:</source>
         <translation>Netinkama reikšmė:</translation>
     </message>
@@ -2270,6 +2310,11 @@ Ar norite jį atkurti?</translation>
         <source>Show information as dialog</source>
         <translation>Rodyti informaciją kaip dialogo langą</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <source>Show Title Bar</source>
+        <translation>Rodyti antraštės juostą</translation>
+    </message>
 </context>
 <context>
     <name>CommandLineExamples</name>
@@ -2336,6 +2381,11 @@ Ar norite jį atkurti?</translation>
         <location line="+33"/>
         <source>Convert:</source>
         <translation>Konvertuoti:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert Drawing Unit</source>
+        <translation>Konvertuoti piešimo vienetą</translation>
     </message>
 </context>
 <context>
@@ -3019,12 +3069,14 @@ Ar norite jį atkurti?</translation>
         <translation>Įveskite fiksuotą etiketę arba palikite tuščią, jei norite naudoti automatinę etiketę</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+14"/>
+        <location line="+50"/>
         <source>Upper tolerance</source>
         <translation>Didžiausia leistina paklaida</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+7"/>
+        <location line="+50"/>
         <source>Lower tolerance</source>
         <translation>Mažesnė tolerancija</translation>
     </message>
@@ -4375,12 +4427,12 @@ jau yra sąraše.</translation>
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
         <translation>Rodyti &quot;ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>Skriptų apvalkalas</translation>
     </message>
@@ -4404,6 +4456,11 @@ jau yra sąraše.</translation>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Daugiau nerodyti šio dialogo lango</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
+        <source>Show Title Bar</source>
+        <translation>Rodyti antraštės juostą</translation>
     </message>
 </context>
 <context>
@@ -5260,6 +5317,11 @@ jau yra sąraše.</translation>
         <source>Background Color:</source>
         <translation>Fono spalva:</translation>
     </message>
+    <message>
+        <location filename="../scripts/Widgets/FirstStart/FirstStartDialog.ui" line="+56"/>
+        <source>QCAD application icon</source>
+        <translation>QCAD programos piktograma</translation>
+    </message>
 </context>
 <context>
     <name>FlexPainter</name>
@@ -5447,7 +5509,12 @@ jau yra sąraše.</translation>
         <translation>Pasirinkite Įterpimas arba Įveskite tuščią vietą. (Neįgyvendinta)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+49"/>
+        <source>Illustration of the casting options</source>
+        <translation>Liejimo parinkčių iliustracija</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Version</source>
         <translation>Versija</translation>
     </message>
@@ -5502,7 +5569,7 @@ jau yra sąraše.</translation>
         <translation>Ištrinti dažyti ant bazinių subjektų. (nuolatinis išjungtas)</translation>
     </message>
     <message>
-        <location line="-933"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Įveskite vietos dydį&gt;</translation>
     </message>
@@ -5512,7 +5579,7 @@ jau yra sąraše.</translation>
         <translation>Užuolaidų virvės mazgas</translation>
     </message>
     <message>
-        <location line="+543"/>
+        <location line="+546"/>
         <source>#Undefined#</source>
         <translation>#Nedeterminuota#</translation>
     </message>
@@ -5948,6 +6015,16 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
+        <translation>Naudoti aparatiškai spartinamą grafikos vaizdą, pagrįstą Qt RHI (Rendering Hardware Interface), vietoj vaizdu pagrįsto grafikos vaizdo</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use RHI Graphicsview</source>
+        <translation>Naudoti RHI grafikos vaizdą</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Anti-aliasing on by default</source>
         <translation>Pagal numatytuosius nustatymus įjungta &quot;Anti-aliasing&quot; funkcija</translation>
     </message>
@@ -8023,7 +8100,7 @@ jau yra sąraše.</translation>
         <translation>Visų sluoksnių paslėpimas</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Thawing all layers</source>
         <translation>Visų sluoksnių atšildymas</translation>
     </message>
@@ -8033,7 +8110,7 @@ jau yra sąraše.</translation>
         <translation>Visų sluoksnių užšaldymas</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source>Locking all layers</source>
         <translation>Visų sluoksnių užrakinimas</translation>
     </message>
@@ -8167,7 +8244,7 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+124"/>
         <source>Layer List</source>
         <translation>Sluoksnių sąrašas</translation>
     </message>
@@ -9029,7 +9106,12 @@ jau yra sąraše.</translation>
         <translation>Išlaikykite originalą</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+49"/>
+        <source>Illustration of the mirror parameters</source>
+        <translation>Veidrodinio atspindžio parametrų iliustracija</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Naudoti dabartinį sluoksnį ir atributus</translation>
     </message>
@@ -9270,6 +9352,11 @@ jau yra sąraše.</translation>
         <source>Form</source>
         <translation>Forma</translation>
     </message>
+    <message>
+        <location line="+42"/>
+        <source>Illustration of the mouse buttons</source>
+        <translation>Pelės mygtukų iliustracija</translation>
+    </message>
 </context>
 <context>
     <name>MyPositionDialog</name>
@@ -9374,7 +9461,7 @@ jau yra sąraše.</translation>
         <translation>Formatas:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Untitled %1</source>
         <translation>Be pavadinimo %1</translation>
     </message>
@@ -9816,6 +9903,106 @@ jau yra sąraše.</translation>
         <source>Size (pixel):</source>
         <translation>Dydis (pikselių):</translation>
     </message>
+    <message>
+        <location line="+39"/>
+        <source>Square with Plus</source>
+        <translation>Kvadratas su pliuso ženklu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Dot</source>
+        <translation>Taškas</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Circle and Square with Cross</source>
+        <translation>Apskritimas ir kvadratas su kryželiu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Vertical Line</source>
+        <translation>Apskritimas su vertikalia linija</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Plus</source>
+        <translation>Apskritimas su pliuso ženklu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Plus</source>
+        <translation>Apskritimas ir kvadratas su pliuso ženklu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Dot</source>
+        <translation>Kvadratas su tašku</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Invisible</source>
+        <translation>Nematomas</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Vertical Line</source>
+        <translation>Vertikali linija</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Plus</source>
+        <translation>Pliuso ženklas</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square</source>
+        <translation>Kvadratas</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cross</source>
+        <translation>Kryželis</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square</source>
+        <translation>Apskritimas ir kvadratas</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Vertical Line</source>
+        <translation>Kvadratas su vertikalia linija</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Dot</source>
+        <translation>Apskritimas su tašku</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle with Cross</source>
+        <translation>Apskritimas su kryželiu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Vertical Line</source>
+        <translation>Apskritimas ir kvadratas su vertikalia linija</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle</source>
+        <translation>Apskritimas</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Square with Cross</source>
+        <translation>Kvadratas su kryželiu</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Circle and Square with Dot</source>
+        <translation>Apskritimas ir kvadratas su tašku</translation>
+    </message>
 </context>
 <context>
     <name>PointPole</name>
@@ -10071,7 +10258,7 @@ jau yra sąraše.</translation>
         <translation>Automatinis brėžinio pritaikymas prie popieriaus?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+213"/>
         <source>Drag to move paper</source>
         <translation>Vilkite, kad perkeltumėte popierių</translation>
     </message>
@@ -10081,13 +10268,13 @@ jau yra sąraše.</translation>
         <translation>Atlikta</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Puslapio nustatymai</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+318"/>
         <source>Export to PDF</source>
         <translation>Eksportuoti į PDF</translation>
     </message>
@@ -10228,7 +10415,7 @@ jau yra sąraše.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10288,7 +10475,7 @@ jau yra sąraše.</translation>
         <translation>Automatinis</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+205"/>
         <source>Use auto measurement</source>
         <translation>Naudokite automatinį matavimą</translation>
     </message>
@@ -10314,7 +10501,7 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+83"/>
+        <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Savybių redaktorius</translation>
@@ -10730,7 +10917,12 @@ jau yra sąraše.</translation>
         <translation>Kelios kopijos</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotate two parameters</source>
+        <translation>Dvigubo sukimo parametrų iliustracija</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Angle &amp;a:</source>
         <translation>Kampas a:</translation>
     </message>
@@ -10773,7 +10965,12 @@ jau yra sąraše.</translation>
         <translation>Kelios kopijos</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the rotation parameters</source>
+        <translation>Sukimo parametrų iliustracija</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Kampas (a):</translation>
     </message>
@@ -11147,7 +11344,12 @@ jau yra sąraše.</translation>
         <translation>Kelios kopijos</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+59"/>
+        <source>Illustration of the scale parameters</source>
+        <translation>Mastelio parametrų iliustracija</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>Factor x:</source>
         <translation>X veiksnys:</translation>
     </message>
@@ -11602,7 +11804,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Bent du taškai yra vienodi.</translation>
@@ -11987,6 +12189,11 @@ jau yra sąraše.</translation>
         <location line="+3"/>
         <source>Relative</source>
         <translation>Santykinis</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set Coordinate</source>
+        <translation>Nustatyti koordinatę</translation>
     </message>
 </context>
 <context>
@@ -13110,6 +13317,11 @@ jau yra sąraše.</translation>
         <source>Filter</source>
         <translation>Filtras</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Clear Filter</source>
+        <translation>Išvalyti filtrą</translation>
+    </message>
 </context>
 <context>
     <name>Transform</name>
@@ -13200,7 +13412,12 @@ jau yra sąraše.</translation>
         <translation>Kelios kopijos</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+59"/>
+        <source>Illustration of the move / copy parameters</source>
+        <translation>Perkėlimo / kopijavimo parametrų iliustracija</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Naudoti dabartinį sluoksnį ir atributus</translation>
     </message>
@@ -13277,7 +13494,12 @@ jau yra sąraše.</translation>
         <translation>Kelios kopijos</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+59"/>
+        <source>Illustration of the move and rotate parameters</source>
+        <translation>Perkėlimo ir sukimo parametrų iliustracija</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>&amp;Angle (a):</source>
         <translation>Kampas (a):</translation>
     </message>
@@ -13638,7 +13860,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
         <source>Dropped data not supported</source>
         <translation>Nepalaikomi nutolę duomenys</translation>
     </message>
@@ -13674,7 +13896,7 @@ jau yra sąraše.</translation>
         <translation>Atkurti numatytąsias nuostatas</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+132"/>
         <source>Insert Symbol</source>
         <translation>Įterpti simbolį</translation>
     </message>
