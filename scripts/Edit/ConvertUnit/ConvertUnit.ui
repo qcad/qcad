@@ -112,6 +112,9 @@
    </item>
    <item>
     <widget class="QToolButton" name="Convert">
+     <property name="toolTip">
+      <string>Convert Drawing Unit</string>
+     </property>
      <property name="icon">
       <iconset>
        <normaloff>Tick.svg</normaloff>Tick.svg</iconset>

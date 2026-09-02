@@ -46,6 +46,9 @@
      </item>
      <item>
       <widget class="QToolButton" name="Clear">
+       <property name="toolTip">
+        <string>Clear Filter</string>
+       </property>
        <property name="styleSheet">
         <string notr="true">border:none;</string>
        </property>

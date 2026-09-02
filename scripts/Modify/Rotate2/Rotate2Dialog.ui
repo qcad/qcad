@@ -108,6 +108,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QToolButton" name="toolButton">
+         <property name="toolTip">
+          <string>Illustration of the rotate two parameters</string>
+         </property>
          <property name="minimumSize">
           <size>
            <width>210</width>

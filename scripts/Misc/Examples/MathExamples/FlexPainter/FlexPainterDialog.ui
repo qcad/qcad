@@ -452,6 +452,9 @@ BUG: Interferes with group castings.</string>
        </property>
        <item alignment="Qt::AlignRight">
         <widget class="QToolButton" name="CommandPic">
+         <property name="toolTip">
+          <string>Illustration of the casting options</string>
+         </property>
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
