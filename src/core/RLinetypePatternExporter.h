@@ -54,12 +54,30 @@ public:
     RVector getPointAt(double d, int* index = NULL);
     double getAngleAt(double d);
     int getShapeAt(double d);
-    void exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2, double angle);
+    void exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2, double angle,
+                             double d1 = RNANDOUBLE, double d2 = RNANDOUBLE);
+
+private:
+    /**
+     * Sampled arc length parametrization of a spline shape
+     * (monotonic distance from start -> spline parameter).
+     */
+    struct SplineDistTable {
+        QVector<double> dists;
+        QVector<double> ts;
+    };
+
+    const SplineDistTable* getSplineTable(int i);
+    static double lookupT(const SplineDistTable& table, double dist);
 
 private:
     RExporter& exporter;
     QList<QSharedPointer<RShape> > shapes;
     std::vector<double> lengthAt;
+    // cached arc length tables for spline shapes (lazily built),
+    // avoids a full arc length inversion through the spline proxy for
+    // every single dash of a linetype pattern:
+    QMap<int, SplineDistTable> splineTables;
 };
 
 #endif

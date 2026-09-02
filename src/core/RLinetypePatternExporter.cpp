@@ -95,7 +95,7 @@ void RLinetypePatternExporter::exportLineSegment(const RLine& line, double angle
         exporter.exportLineSegment(RLine(p1OnShape, p2OnShape), a);
     }
     else {
-        exportShapesBetween(i1, p1OnShape, i2, p2OnShape, a);
+        exportShapesBetween(i1, p1OnShape, i2, p2OnShape, a, line.startPoint.x, line.endPoint.x);
     }
 }
 
@@ -120,15 +120,34 @@ RVector RLinetypePatternExporter::getPointAt(double d, int* index) {
     else {
         a = d - lengthAt[i-1];
     }
-    QList<RVector> points = shapes[i]->getPointsWithDistanceToEnd(a, RS::FromStart);
-    if (points.isEmpty()) {
+
+    RVector ret = RVector::invalid;
+
+    // fast path for splines: distance to point through the cached arc
+    // length table (a call into the spline proxy inverts the arc
+    // length from scratch every time which makes dashed splines
+    // unusably slow):
+    const SplineDistTable* table = getSplineTable(i);
+    if (table!=NULL) {
+        QSharedPointer<RSpline> spline = shapes[i].dynamicCast<RSpline>();
+        ret = spline->getPointAt(lookupT(*table, a));
+    }
+    else {
+        QList<RVector> points = shapes[i]->getPointsWithDistanceToEnd(a, RS::FromStart);
+        if (points.isEmpty()) {
+            return RVector::invalid;
+        }
+        ret = points[0];
+    }
+
+    if (!ret.isValid()) {
         return RVector::invalid;
     }
 
     if (index) {
         *index = i;
     }
-    return points[0];
+    return ret;
 }
 
 double RLinetypePatternExporter::getAngleAt(double d) {
@@ -137,7 +156,126 @@ double RLinetypePatternExporter::getAngleAt(double d) {
         return 0.0;
     }
     double a = d - (i==0 ? 0.0 : lengthAt[i-1]);
+
+    // fast path for splines (see getPointAt):
+    const SplineDistTable* table = getSplineTable(i);
+    if (table!=NULL) {
+        QSharedPointer<RSpline> spline = shapes[i].dynamicCast<RSpline>();
+        return spline->getAngleAtT(lookupT(*table, a));
+    }
+
     return shapes[i]->getAngleAt(a);
+}
+
+/**
+ * \return Cached arc length table for shape at index i or NULL if the
+ *      shape is not a spline. The table is built on first use.
+ */
+const RLinetypePatternExporter::SplineDistTable* RLinetypePatternExporter::getSplineTable(int i) {
+    if (i<0 || i>=shapes.length() || i>=(int)lengthAt.size()) {
+        return NULL;
+    }
+
+    QMap<int, SplineDistTable>::const_iterator it = splineTables.find(i);
+    if (it!=splineTables.constEnd()) {
+        return it->dists.isEmpty() ? NULL : &it.value();
+    }
+
+    SplineDistTable& table = splineTables[i];
+
+    QSharedPointer<RSpline> spline = shapes[i].dynamicCast<RSpline>();
+    if (spline.isNull() || !spline->isValid()) {
+        // marked as not applicable (empty table):
+        return NULL;
+    }
+
+    double tMin = spline->getTMin();
+    double tMax = spline->getTMax();
+    if (!RMath::isNormal(tMin) || !RMath::isNormal(tMax) || tMax-tMin<RS::PointTolerance) {
+        return NULL;
+    }
+
+    // sample density: 32 intervals per knot span, each interval length
+    // corrected with its mid point (chord error negligible for the
+    // purpose of placing pattern dashes):
+    int spans = qMax(1, spline->countControlPoints() - spline->getDegree());
+    int n = qBound(64, spans*32, 4096);
+
+    table.dists.reserve(n+1);
+    table.ts.reserve(n+1);
+
+    double dist = 0.0;
+    RVector prev = spline->getPointAt(tMin);
+    table.dists.append(0.0);
+    table.ts.append(tMin);
+    for (int k=1; k<=n; k++) {
+        double t = tMin + (tMax-tMin)*k/n;
+        double tm = tMin + (tMax-tMin)*(k-0.5)/n;
+        RVector pm = spline->getPointAt(tm);
+        RVector p = spline->getPointAt(t);
+        if (!pm.isValid() || !p.isValid()) {
+            table.dists.clear();
+            table.ts.clear();
+            return NULL;
+        }
+        dist += prev.getDistanceTo(pm) + pm.getDistanceTo(p);
+        table.dists.append(dist);
+        table.ts.append(t);
+        prev = p;
+    }
+
+    if (dist<RS::PointTolerance) {
+        table.dists.clear();
+        table.ts.clear();
+        return NULL;
+    }
+
+    // normalize to the shape length used by the pattern walk
+    // (lengthAt), so table distances and pattern distances line up
+    // exactly at both ends:
+    double shapeLength = lengthAt[i] - (i==0 ? 0.0 : lengthAt[i-1]);
+    if (shapeLength>RS::PointTolerance) {
+        double f = shapeLength / dist;
+        for (int k=0; k<table.dists.length(); k++) {
+            table.dists[k] *= f;
+        }
+    }
+
+    return &table;
+}
+
+/**
+ * \return Spline parameter for the given distance from the start of
+ *      the spline, interpolated from the given arc length table.
+ */
+double RLinetypePatternExporter::lookupT(const SplineDistTable& table, double dist) {
+    if (dist<=table.dists.first()) {
+        return table.ts.first();
+    }
+    if (dist>=table.dists.last()) {
+        return table.ts.last();
+    }
+
+    // binary search for the interval containing dist:
+    int lo = 0;
+    int hi = table.dists.length()-1;
+    while (hi-lo>1) {
+        int mid = (lo+hi)/2;
+        if (table.dists[mid]<=dist) {
+            lo = mid;
+        }
+        else {
+            hi = mid;
+        }
+    }
+
+    double d1 = table.dists[lo];
+    double d2 = table.dists[hi];
+    if (d2-d1<RS::PointTolerance) {
+        return table.ts[lo];
+    }
+    double r = (dist-d1) / (d2-d1);
+    return table.ts[lo] + (table.ts[hi]-table.ts[lo])*r;
 }
 
 int RLinetypePatternExporter::getShapeAt(double d) {
@@ -157,12 +295,33 @@ int RLinetypePatternExporter::getShapeAt(double d) {
     return -1;
 }
 
-void RLinetypePatternExporter::exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2, double angle) {
+void RLinetypePatternExporter::exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2, double angle,
+                                                   double d1, double d2) {
     for (int i=i1; i<=i2; i++) {
         if (i!=i1 && i!=i2) {
             // whole shape is between points:
             exporter.exportShapeSegment(shapes[i], angle);
             continue;
+        }
+
+        // fast path for splines: extract the dash as a sub spline by
+        // parameter through the cached arc length table instead of
+        // trimming a clone (trimming a spline inverts a point to a
+        // parameter through the spline proxy for every single dash):
+        const SplineDistTable* table = getSplineTable(i);
+        if (table!=NULL && !RMath::isNaN(d1) && !RMath::isNaN(d2)) {
+            QSharedPointer<RSpline> spline = shapes[i].dynamicCast<RSpline>();
+            double shapeStart = (i==0 ? 0.0 : lengthAt[i-1]);
+            double t1 = (i==i1) ? lookupT(*table, d1-shapeStart) : spline->getTMin();
+            double t2 = (i==i2) ? lookupT(*table, d2-shapeStart) : spline->getTMax();
+            if (t2-t1>RS::PointTolerance) {
+                RSpline sub = spline->getSubSpline(t1, t2);
+                if (sub.isValid()) {
+                    exporter.exportShapeSegment(QSharedPointer<RShape>(new RSpline(sub)), angle);
+                    continue;
+                }
+            }
+            // fall through to the generic trim path on failure:
         }
 
         QSharedPointer<RShape> shape = shapes[i]->clone();
