@@ -32,6 +32,7 @@ add_library(qcadgui SHARED
     RDockWidget.cpp RDockWidget.h
     REventFilter.cpp REventFilter.h
     RToolOptionEventFilter.cpp RToolOptionEventFilter.h
+    RAccessibleToolTipFilter.cpp RAccessibleToolTipFilter.h
     REventHandler.cpp REventHandler.h
     RFileSystemModel.cpp RFileSystemModel.h
     RFlowLayout.cpp RFlowLayout.h

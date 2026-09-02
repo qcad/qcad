@@ -14,6 +14,7 @@ SOURCES += \
     RDockWidget.cpp \
     REventFilter.cpp \
     RToolOptionEventFilter.cpp \
+    RAccessibleToolTipFilter.cpp \
     REventHandler.cpp \
     RFileSystemModel.cpp \
     RFlowLayout.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     RDockWidget.h \
     REventFilter.h \
     RToolOptionEventFilter.h \
+    RAccessibleToolTipFilter.h \
     REventHandler.h \
     RFileSystemModel.h \
     RFlowLayout.h \

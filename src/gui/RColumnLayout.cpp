@@ -189,6 +189,10 @@ void RColumnLayout::setGeometry() const {
 
     std::sort(itemList.begin(), itemList.end(), itemLessThan);
 
+    // previous visible widget for keyboard focus order (Tab):
+    // follows visual order (top to bottom / left to right) instead of creation order:
+    QWidget* prevWidget = NULL;
+
     int previousSo = -1;
     for (int i=0; i<itemList.length(); ++i) {
         QWidget* widget = itemList[i].first->widget();
@@ -222,6 +226,7 @@ void RColumnLayout::setGeometry() const {
                 w=0;
             }
 //            if (dbg) qDebug("BackButton");
+            prevWidget = tb;
             continue;
         }
 
@@ -251,6 +256,11 @@ void RColumnLayout::setGeometry() const {
 
         QWidget* wd = qobject_cast<QWidget*>(itemList[i].first->widget());
         wd->setGeometry(w,h, buttonSize,buttonSize);
+
+        if (prevWidget!=NULL) {
+            QWidget::setTabOrder(prevWidget, wd);
+        }
+        prevWidget = wd;
 
         if (horizontal) {
             h+=buttonSize;

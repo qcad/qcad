@@ -135,6 +135,9 @@ int RFlowLayout::doLayout(const QRect& rect, bool testOnly) const {
     int y = effectiveRect.y();
     int lineHeight = 0;
 
+    // previous visible widget for tab order (left to right, top to bottom):
+    QWidget* prevWidget = NULL;
+
     QLayoutItem* item;
     foreach (item, itemList) {
         QWidget* wid = item->widget();
@@ -176,6 +179,12 @@ int RFlowLayout::doLayout(const QRect& rect, bool testOnly) const {
 
         if (!testOnly) {
             item->setGeometry(QRect(QPoint(x, y), item->sizeHint()));
+
+            // keyboard focus order follows visual order (creation order otherwise):
+            if (prevWidget!=NULL) {
+                QWidget::setTabOrder(prevWidget, wid);
+            }
+            prevWidget = wid;
         }
 
         x = nextX;

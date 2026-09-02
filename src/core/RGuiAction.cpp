@@ -163,6 +163,13 @@ void RGuiAction::initTexts() {
 
     QAction::setText(textAndKeycode);
 
+    // text used by tool buttons (QToolButton::setDefaultAction) and thus
+    // by screen readers (accessible name): without shortcut, "&" and "...":
+    QString iconText = textOnly;
+    iconText.remove("...");
+    iconText.remove(QChar(0x2026));
+    QAction::setIconText(iconText.trimmed());
+
     QString tip = oriToolTip;
     if (tip.isNull()) {
         tip = textOnly;

@@ -82,7 +82,8 @@ void RCommandLine::paste() {
 bool RCommandLine::event(QEvent* event) {
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*> (event);
-        if (ke->key() == Qt::Key_Tab) {
+        if (ke->key() == Qt::Key_Tab && !text().isEmpty()) {
+            // complete command (Tab in empty command line: standard focus chain):
             emit completeCommand(text());
             return true;
         }

@@ -152,6 +152,12 @@ CommandLine.init = function(basePath) {
 
     var teHistory = formWidget.findChild("History");
     var leCommand = formWidget.findChild("CommandEdit");
+
+    // names and descriptions for screen readers (e.g. VoiceOver):
+    leCommand.accessibleName = qsTr("Command Line Prompt");
+    leCommand.accessibleDescription = qsTr("Enter a command, an option or coordinates");
+    teHistory.accessibleName = qsTr("Command Line Output");
+    teHistory.accessibleDescription = qsTr("History of commands, options and messages");
     WidgetFactory.initLineEditInfoTools(leCommand);
     var lCommand = formWidget.findChild("CommandLabel");
     var bToggleTitleBar = formWidget.findChild("ToggleTitleBar");

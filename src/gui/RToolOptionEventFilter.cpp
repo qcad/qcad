@@ -35,16 +35,18 @@ bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
         QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
 
         if (keyEvent->key() == Qt::Key_Tab || keyEvent->key() == Qt::Key_Backtab) {
-            // ignore the Tab and Shift+Tab keys
-            //event->accept();
-            if (event->type() == QEvent::KeyPress) {
-                RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
-                if (appWin!=NULL) {
-                    appWin->handleTabKey(obj, keyEvent->key()==Qt::Key_Backtab);
+            // Tab / Shift+Tab: move to next / previous widget in options tool bar:
+            bool backTab = (keyEvent->key()==Qt::Key_Backtab);
+            RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+            if (appWin!=NULL) {
+                if (!appWin->handleTabKey(obj, backTab)) {
+                    // no next / previous widget in options tool bar:
+                    // leave options tool bar (standard focus chain),
+                    // otherwise the focus would be stuck in the tool bar:
+                    appWin->focusNextPrevWidget(!backTab, qobject_cast<QWidget*>(obj));
                 }
             }
             return true;
-            //return QObject::eventFilter(obj, event);
         }
 
         if (keyEvent->key() == Qt::Key_Enter || keyEvent->key() == Qt::Key_Return) {

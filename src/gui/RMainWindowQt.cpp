@@ -38,6 +38,7 @@
 #include "RGuiAction.h"
 #include "RGraphicsViewImage.h"
 #include "RGraphicsViewQt.h"
+#include "RAccessibleToolTipFilter.h"
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
@@ -79,6 +80,9 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
         }
     }
     setWindowTitle("RMainWindowQt");
+
+    // keep accessible descriptions (screen readers) free of HTML tool tip markup:
+    qApp->installEventFilter(new RAccessibleToolTipFilter(this));
 
     RSingleApplication* singleApp = dynamic_cast<RSingleApplication*> (qApp);
     if (singleApp!=NULL) {
@@ -1003,4 +1007,92 @@ bool RMainWindowQt::event(QEvent* e) {
     bool ret = QMainWindow::event(e);
     return ret;
 #endif
+}
+
+/**
+ * Moves the keyboard focus to the next (or previous) widget in the
+ * focus chain of this main window, starting at widget \c from
+ * (default: current focus widget). This is the standard Tab / Shift+Tab
+ * behavior, used by widgets which handle Tab themselves (graphics view,
+ * options tool bar) to continue the focus chain when they cannot handle it.
+ *
+ * Unlike QWidget::focusNextPrevChild, this skips ancestors of \c from:
+ * QMdiSubWindow is focusable but immediately passes the focus back to its
+ * child widget (the graphics view), which would trap the focus.
+ */
+bool RMainWindowQt::focusNextPrevWidget(bool next, QWidget* from) {
+    if (from==NULL) {
+        from = QApplication::focusWidget();
+    }
+    if (from==NULL) {
+        return QMainWindow::focusNextPrevChild(next);
+    }
+
+    QWidget* w = from;
+    for (int i=0; i<100000; i++) {
+        w = next ? w->nextInFocusChain() : w->previousInFocusChain();
+        if (w==NULL || w==from) {
+            break;
+        }
+        if ((w->focusPolicy() & Qt::TabFocus)!=Qt::TabFocus) {
+            continue;
+        }
+        if (w->focusProxy()!=NULL) {
+            continue;
+        }
+        if (!isAncestorOf(w)) {
+            continue;
+        }
+        if (w->isAncestorOf(from)) {
+            // e.g. QMdiSubWindow: would give focus back to child:
+            continue;
+        }
+        if (!isFocusReachable(w)) {
+            continue;
+        }
+        w->setFocus(next ? Qt::TabFocusReason : Qt::BacktabFocusReason);
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * \return True if the given widget can be reached with the keyboard (Tab):
+ * enabled, visible and not covered, e.g. by another dock widget in the same
+ * tab stack (such dock widgets report isVisible() true but have an empty
+ * visible region). Widgets in scroll areas are checked at the level of the
+ * scroll area, since they might be scrolled out of view temporarily.
+ */
+bool RMainWindowQt::isFocusReachable(QWidget* w) const {
+    if (w==NULL || !w->isEnabled() || !w->isVisibleTo(const_cast<RMainWindowQt*>(this))) {
+        return false;
+    }
+
+    // widget in scroll area (e.g. property editor): check outermost scroll area:
+    QWidget* check = w;
+    for (QWidget* p = w->parentWidget(); p!=NULL && p!=this; p = p->parentWidget()) {
+        if (qobject_cast<QAbstractScrollArea*>(p)!=NULL) {
+            check = p;
+        }
+    }
+
+    // covered (dock widget tab not on top of stack) or zero size:
+    if (check->visibleRegion().isEmpty()) {
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Standard Tab / Shift+Tab handling of the main window, using
+ * focusNextPrevWidget to skip widgets which are not reachable
+ * (e.g. in dock widgets not on top of their tab stack).
+ */
+bool RMainWindowQt::focusNextPrevChild(bool next) {
+    if (focusNextPrevWidget(next)) {
+        return true;
+    }
+    return QMainWindow::focusNextPrevChild(next);
 }

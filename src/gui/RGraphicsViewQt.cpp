@@ -47,6 +47,9 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
     setFocusPolicy(Qt::WheelFocus);
     setMouseTracking(true);
 
+    // name for assistive technologies (e.g. VoiceOver):
+    setAccessibleName(tr("Drawing View"));
+
     // has no effect for now (Qt <= 5.10):
 //#if QT_VERSION >= 0x050A00
 //    setTabletTracking(true);
@@ -400,18 +403,32 @@ void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
 
     imageView->handleKeyPressEvent(*event);
 
-    if (event->key()==Qt::Key_Tab) {
-        RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
-        if (appWin!=NULL) {
-            if (appWin->handleTabKey(NULL)) {
-                event->accept();
-            }
-        }
-    }
-
     // we're NOT accepting the event here to make sure the
     // event handler of the main window has a chance to
     // handle key press events (e.g. enter to show tool dialog)
+}
+
+/**
+ * Tab / Shift+Tab with focus in the graphics view:
+ * moves the keyboard focus to the first / last widget of the options tool bar
+ * if there is one (RMainWindowQt::handleTabKey). Otherwise, the focus continues
+ * to the next / previous widget of the main window. Without this, the focus
+ * would get stuck in the graphics view, since QMdiArea only cycles through its
+ * sub windows (keyboard / screen reader navigation).
+ */
+bool RGraphicsViewQt::focusNextPrevChild(bool next) {
+    RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+    if (appWin==NULL) {
+        return QWidget::focusNextPrevChild(next);
+    }
+
+    // Tab / Shift+Tab: focus first / last widget of options tool bar if any:
+    if (appWin->handleTabKey(NULL, !next)) {
+        return true;
+    }
+
+    // no options tool bar: continue with next / previous widget of main window:
+    return appWin->focusNextPrevWidget(next, this);
 }
 
 void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {

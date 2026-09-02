@@ -116,6 +116,20 @@ public:
         return false;
     }
 
+    /**
+     * Moves the keyboard focus to the next (or previous) widget in the
+     * focus chain of the main window (standard Tab / Shift+Tab behavior).
+     * Used by widgets that handle Tab themselves (graphics view, options
+     * tool bar) to continue the focus chain when they cannot handle it.
+     */
+    bool focusNextPrevWidget(bool next, QWidget* from = NULL);
+    bool isFocusReachable(QWidget* w) const;
+
+protected:
+    virtual bool focusNextPrevChild(bool next);
+
+public:
+
     virtual void reloadXRefs(RDocumentInterface* di, const QSet<QString>& dirtyXRefPaths);
 
     virtual void postSelectionChangedEvent();
