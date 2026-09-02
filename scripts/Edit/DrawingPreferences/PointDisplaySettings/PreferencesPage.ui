@@ -73,6 +73,9 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="2" column="2">
       <widget class="QPushButton" name="Button66">
+       <property name="toolTip">
+        <string>Square with Plus</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -105,6 +108,9 @@
      </item>
      <item row="0" column="0">
       <widget class="QPushButton" name="Button0">
+       <property name="toolTip">
+        <string>Dot</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -149,6 +155,9 @@
      </item>
      <item row="3" column="3">
       <widget class="QPushButton" name="Button99">
+       <property name="toolTip">
+        <string>Circle and Square with Cross</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -181,6 +190,9 @@
      </item>
      <item row="1" column="4">
       <widget class="QPushButton" name="Button36">
+       <property name="toolTip">
+        <string>Circle with Vertical Line</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -213,6 +225,9 @@
      </item>
      <item row="1" column="2">
       <widget class="QPushButton" name="Button34">
+       <property name="toolTip">
+        <string>Circle with Plus</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -245,6 +260,9 @@
      </item>
      <item row="3" column="2">
       <widget class="QPushButton" name="Button98">
+       <property name="toolTip">
+        <string>Circle and Square with Plus</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -277,6 +295,9 @@
      </item>
      <item row="2" column="0">
       <widget class="QPushButton" name="Button64">
+       <property name="toolTip">
+        <string>Square with Dot</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -309,6 +330,9 @@
      </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="Button1">
+       <property name="toolTip">
+        <string>Invisible</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -347,6 +371,9 @@
      </item>
      <item row="0" column="4">
       <widget class="QPushButton" name="Button4">
+       <property name="toolTip">
+        <string>Vertical Line</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -379,6 +406,9 @@
      </item>
      <item row="0" column="2">
       <widget class="QPushButton" name="Button2">
+       <property name="toolTip">
+        <string>Plus</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -411,6 +441,9 @@
      </item>
      <item row="2" column="1">
       <widget class="QPushButton" name="Button65">
+       <property name="toolTip">
+        <string>Square</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -443,6 +476,9 @@
      </item>
      <item row="0" column="3">
       <widget class="QPushButton" name="Button3">
+       <property name="toolTip">
+        <string>Cross</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -475,6 +511,9 @@
      </item>
      <item row="3" column="1">
       <widget class="QPushButton" name="Button97">
+       <property name="toolTip">
+        <string>Circle and Square</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -507,6 +546,9 @@
      </item>
      <item row="2" column="4">
       <widget class="QPushButton" name="Button68">
+       <property name="toolTip">
+        <string>Square with Vertical Line</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -539,6 +581,9 @@
      </item>
      <item row="1" column="0">
       <widget class="QPushButton" name="Button32">
+       <property name="toolTip">
+        <string>Circle with Dot</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -571,6 +616,9 @@
      </item>
      <item row="1" column="3">
       <widget class="QPushButton" name="Button35">
+       <property name="toolTip">
+        <string>Circle with Cross</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -603,6 +651,9 @@
      </item>
      <item row="3" column="4">
       <widget class="QPushButton" name="Button100">
+       <property name="toolTip">
+        <string>Circle and Square with Vertical Line</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -635,6 +686,9 @@
      </item>
      <item row="1" column="1">
       <widget class="QPushButton" name="Button33">
+       <property name="toolTip">
+        <string>Circle</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -667,6 +721,9 @@
      </item>
      <item row="2" column="3">
       <widget class="QPushButton" name="Button67">
+       <property name="toolTip">
+        <string>Square with Cross</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -699,6 +756,9 @@
      </item>
      <item row="3" column="0">
       <widget class="QPushButton" name="Button96">
+       <property name="toolTip">
+        <string>Circle and Square with Dot</string>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>

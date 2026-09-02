@@ -74,6 +74,9 @@
    </item>
    <item>
     <widget class="QToolButton" name="UpperToleranceIcon">
+     <property name="toolTip">
+      <string>Upper tolerance</string>
+     </property>
      <property name="minimumSize">
       <size>
        <width>22</width>
@@ -128,6 +131,9 @@
    </item>
    <item>
     <widget class="QToolButton" name="LowerToleranceIcon">
+     <property name="toolTip">
+      <string>Lower tolerance</string>
+     </property>
      <property name="minimumSize">
       <size>
        <width>22</width>

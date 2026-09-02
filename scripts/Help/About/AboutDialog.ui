@@ -20,6 +20,9 @@
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QToolButton" name="Icon">
+         <property name="toolTip">
+          <string>QCAD application icon</string>
+         </property>
          <property name="minimumSize">
           <size>
            <width>128</width>
@@ -62,6 +65,9 @@
        </item>
        <item>
         <widget class="QToolButton" name="toolButton">
+         <property name="toolTip">
+          <string>Built with Qt logo</string>
+         </property>
          <property name="minimumSize">
           <size>
            <width>128</width>

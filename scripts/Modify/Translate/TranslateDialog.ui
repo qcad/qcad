@@ -108,6 +108,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QToolButton" name="toolButton">
+         <property name="toolTip">
+          <string>Illustration of the move / copy parameters</string>
+         </property>
          <property name="styleSheet">
           <string notr="true">border: 1px inset;background-color: rgb(255, 255, 255);</string>
          </property>

@@ -124,6 +124,9 @@
         </item>
         <item>
          <widget class="QToolButton" name="ToggleTitleBar">
+          <property name="toolTip">
+           <string>Show Title Bar</string>
+          </property>
           <property name="icon">
            <iconset>
             <normaloff>ToggleTitleBar.svg</normaloff>ToggleTitleBar.svg</iconset>

@@ -86,6 +86,9 @@
    </item>
    <item row="0" column="1">
     <widget class="QToolButton" name="toolButton">
+     <property name="toolTip">
+      <string>Illustration of the point mass parameters</string>
+     </property>
      <property name="styleSheet">
       <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
      </property>

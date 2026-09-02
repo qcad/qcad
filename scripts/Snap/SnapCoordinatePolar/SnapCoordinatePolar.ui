@@ -102,6 +102,9 @@
    </item>
    <item>
     <widget class="QToolButton" name="Set">
+     <property name="toolTip">
+      <string>Set Coordinate</string>
+     </property>
      <property name="icon">
       <iconset>
        <normaloff>Tick.svg</normaloff>Tick.svg</iconset>
