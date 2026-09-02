@@ -232,8 +232,12 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     }
 
     QPainter wPainter(this);
-    //wPainter.drawImage(0,0,buffer);
-    wPainter.drawImage(rect(), buffer);
+    // Blit the buffer 1:1 in device pixels. The buffer is size()*dpr rounded
+    // to whole pixels; drawing it into rect() (size()*dpr device pixels) on a
+    // fractional dpr display (e.g. 1.25 under Windows 125%) would resample
+    // it by a non-integer factor and drop a row (or column), cutting off
+    // the bottom of the ruler labels.
+    wPainter.drawImage(QRectF(0, 0, buffer.width()/dpr, buffer.height()/dpr), buffer);
     RVector p = view->mapToView(cursorPosition);
     if (RSettings::getHighResolutionGraphicsView()) {
         p /= dpr;
