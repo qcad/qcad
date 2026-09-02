@@ -1178,6 +1178,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
         if (w.objectName==="Reset") {
             w.icon = new QIcon(WidgetFactory.includeBasePath + "/ResetToDefaults.svg");
             w.toolTip = qsTr("Restore defaults");
+            WidgetFactory.initAccessibleName(w);
         }
     }
 
@@ -1200,10 +1201,87 @@ WidgetFactory.adjustIcons = function(includeBasePath, widget) {
                 w.icon = new QIcon(iconFile);
             }
         }
+
+        if (WidgetFactory.isButton(w)) {
+            // icon only buttons: make sure screen readers have a name:
+            WidgetFactory.initAccessibleName(w);
+        }
         else {
             WidgetFactory.adjustIcons(includeBasePath, w);
         }
     }
+};
+
+/**
+ * \return True if the given widget is a button (QToolButton, QPushButton,
+ * QCheckBox, QRadioButton). Note that isOfType only matches exact types,
+ * not base classes such as QAbstractButton.
+ */
+WidgetFactory.isButton = function(w) {
+    return isOfType(w, QToolButton) || isOfType(w, QPushButton) ||
+           isOfType(w, QCheckBox) || isOfType(w, QRadioButton);
+};
+
+/**
+ * Sets the accessible name of the given button for assistive technologies
+ * (e.g. macOS VoiceOver) if it has none.
+ *
+ * Qt derives the accessible name from the button text. Icon only buttons
+ * have no text, so the tool tip is used instead. Tool buttons with a
+ * default action inherit the action text and are left alone.
+ *
+ * \param w QToolButton, QPushButton, QCheckBox or QRadioButton
+ */
+WidgetFactory.initAccessibleName = function(w) {
+    if (!WidgetFactory.isButton(w)) {
+        return;
+    }
+
+    if (w.accessibleName.length!==0) {
+        // explicitly set (e.g. in UI file):
+        return;
+    }
+
+    if (WidgetFactory.getPlainText(w.text).length!==0) {
+        // Qt uses the button text as accessible name:
+        return;
+    }
+
+    var name = WidgetFactory.getPlainText(w.toolTip);
+    if (name.length===0) {
+        return;
+    }
+
+    w.accessibleName = name;
+};
+
+/**
+ * \return The given tool tip or button text as plain text: HTML tags
+ * removed, entities decoded, keyboard accelerator markers (&) removed,
+ * white space collapsed.
+ */
+WidgetFactory.getPlainText = function(text) {
+    if (isNull(text) || text.length===0) {
+        return "";
+    }
+
+    var ret = text;
+    // HTML tool tips (e.g. RGuiAction tool tips with shortcut in a span):
+    if (ret.indexOf("<")!==-1) {
+        ret = ret.replace(/<br\s*\/?>/gi, " ");
+        ret = ret.replace(/<[^>]*>/g, "");
+        ret = ret.replace(/&nbsp;/g, " ");
+        ret = ret.replace(/&lt;/g, "<");
+        ret = ret.replace(/&gt;/g, ">");
+        ret = ret.replace(/&quot;/g, "\"");
+        ret = ret.replace(/&amp;/g, "&");
+    }
+    else {
+        // accelerator markers (&Line -> Line, && -> &):
+        ret = ret.replace(/&(&?)/g, "$1");
+    }
+    ret = ret.replace(/\s+/g, " ");
+    return ret.trim();
 };
 
 WidgetFactory.initLineEditInfoTools = function(mathLineEdit) {
