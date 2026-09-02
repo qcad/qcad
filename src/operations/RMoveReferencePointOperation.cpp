@@ -61,6 +61,13 @@ RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool previ
         if (entity.isNull()) {
             continue;
         }
+
+        // entities that update themselves when one of their reference points
+        // is moved (e.g. custom entities regenerating their block) have to do
+        // so in the document this operation is applied to. for previews, that
+        // is the preview document and not the document the entity was
+        // queried from:
+        entity->setDocument(&document);
         
         // move all selected reference points:
         if (moveSelected) {
