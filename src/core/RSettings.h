@@ -267,6 +267,10 @@ public:
     static void setValue(const QString& key, const QVariant& value, bool overwrite=true);
     static void removeValue(const QString& key);
 
+    static void setDefaultValue(const QString& key, const QVariant& value);
+    static QVariant getDefaultValue(const QString& key);
+    static bool hasDefaultValue(const QString& key);
+
     static void setApplicationNameOverride(const QString& n);
     static QString getApplicationNameOverride();
     static bool hasApplicationNameOverride();
@@ -338,6 +342,9 @@ private:
     static bool noWrite;
     // cache for faster access:
     static QVariantMap cache;
+    // defaults registered at runtime (e.g. by style plugins), used when
+    // a key has no stored value, overriding the caller's default:
+    static QVariantMap defaults;
 
     // variables for very fast access:
     static QFont* rulerFont;

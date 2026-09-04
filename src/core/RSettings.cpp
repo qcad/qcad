@@ -58,6 +58,7 @@
 
 bool RSettings::noWrite = false;
 QVariantMap RSettings::cache;
+QVariantMap RSettings::defaults;
 
 QString RSettings::launchPath;
 QString RSettings::themePath;
@@ -1780,6 +1781,10 @@ QVariant RSettings::getValue(const QString& key, const QVariant& defaultValue) {
     // slow operation:
     QVariant ret = getQSettings()->value(key);
     if (!ret.isValid()) {
+        // no stored value: registered runtime default wins over caller's default:
+        if (defaults.contains(key)) {
+            return defaults[key];
+        }
         return defaultValue;
     }
     if (ret.canConvert<RColor>()) {
@@ -2016,6 +2021,24 @@ QStringList RSettings::getScaleList(const RS::Unit unit) {
 /**
  * Sets the variable with the given key and value, overwriting an existing value if overwrite is true (default).
  */
+/**
+ * Registers a runtime default for the given key. The default is returned by
+ * getValue() and the typed getters instead of the caller's default value
+ * whenever no value is stored for the key. Defaults are not persisted.
+ * Used for example by style plugins to adjust UI defaults such as icon sizes.
+ */
+void RSettings::setDefaultValue(const QString& key, const QVariant& value) {
+    defaults[key] = value;
+}
+
+QVariant RSettings::getDefaultValue(const QString& key) {
+    return defaults.value(key);
+}
+
+bool RSettings::hasDefaultValue(const QString& key) {
+    return defaults.contains(key);
+}
+
 void RSettings::setValue(const QString& key, const QVariant& value, bool overwrite) {
     if (!isInitialized()) {
         return;
