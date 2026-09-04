@@ -521,7 +521,14 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         var key = WidgetFactory.getKeyString(group, c);
         var value = undefined;
         if (reset && !isNull(c.property("defaultValue")) && (typeof(c.property("SettingsGroup"))=="undefined" || c.property("SettingsGroup")===group)) {
-            value = c.property("defaultValue");
+            // runtime default registered with RSettings (e.g. by a style plugin)
+            // takes precedence over the default from the .ui file:
+            if (isNull(map) && isNull(document) && isFunction(RSettings.hasDefaultValue) && RSettings.hasDefaultValue(key)) {
+                value = RSettings.getDefaultValue(key);
+            }
+            else {
+                value = c.property("defaultValue");
+            }
         } else {
             if (!isNull(map)) {
                 value = map.get(key);
