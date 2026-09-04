@@ -575,6 +575,10 @@ CommandLine.init = function(basePath) {
                 .arg(platformName)
                 );
 
+    if (typeof(RGraphicsViewRhi2D)!=="undefined" && isFunction(RGraphicsViewRhi2D.getRhiInfo)) {
+        EAction.handleUserMessage(RGraphicsViewRhi2D.getRhiInfo());
+    }
+
     var pl = new RPaletteListenerAdapter();
     appWin.addPaletteListener(pl);
     pl.paletteChanged.connect(CommandLine.initColors);
