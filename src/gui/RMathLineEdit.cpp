@@ -24,7 +24,6 @@
 #include <QPalette>
 #include <QToolTip>
 
-#include "RAccessibleToolTipFilter.h"
 #include "RDocument.h"
 #include "RMainWindow.h"
 #include "RMath.h"
@@ -37,6 +36,7 @@ RMathLineEdit::RMathLineEdit(QWidget* parent) :
     angle(false),
     integer(false),
     value(0.0),
+    plainNumber(true),
     noEmit(false),
     noResultInToolTip(false) {
 
@@ -72,7 +72,8 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
 
     // most common case (double value):
     QRegularExpression rx("^[+-]?\\d*\\.?\\d+$");
-    if (RS::exactMatch(rx, text)) {
+    plainNumber = RS::exactMatch(rx, text);
+    if (plainNumber) {
         value = text.toDouble();
         hasError = false;
         hasFormula = false;
@@ -104,6 +105,7 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
 
     if (hasError) {
         error = RMath::getError();
+        resultText = error;
         //res = defaultValue;
         // special case: don't report an error for text between *
         // (e.g. *VARIES* in property editor)
@@ -120,6 +122,7 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
 #else
         str.sprintf("%.6g",value);
 #endif
+        resultText = str;
         setToolTip(str);
     }
 
@@ -214,25 +217,19 @@ void RMathLineEdit::slotTextEdited(const QString& text) {
             // key stroke, announce the result instead (the accessible
             // description of this widget is kept up to date by
             // RAccessibleToolTipFilter):
-            QString result = RAccessibleToolTipFilter::toPlainText(toolTip());
-            if (!originalToolTip.isEmpty()) {
-                QString prefix = RAccessibleToolTipFilter::toPlainText(originalToolTip) + ", ";
-                if (result.startsWith(prefix)) {
-                    result = result.mid(prefix.length());
-                }
-            }
-            // announce valid results only (errors while typing would be noise)
-            // and only if the result differs from the typed text:
-            if (error.isEmpty() && !result.isEmpty() && result!=text.trimmed()) {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-                QAccessibleAnnouncementEvent ev(this, result);
+            // announce valid results of formulas only
+            // (errors while typing would be noise, plain numbers are
+            // already read as typed):
+            if (error.isEmpty() && !plainNumber && !resultText.isEmpty()) {
+                QAccessibleAnnouncementEvent ev(this, resultText);
                 ev.setPoliteness(QAccessible::AnnouncementPoliteness::Polite);
                 QAccessible::updateAccessibility(&ev);
-#else
-                QAccessibleEvent ev(this, QAccessible::DescriptionChanged);
-                QAccessible::updateAccessibility(&ev);
-#endif
             }
+#else
+            // no live announcements before Qt 6.8, the updated accessible
+            // description (set by RAccessibleToolTipFilter) has to do
+#endif
             return;
         }
 

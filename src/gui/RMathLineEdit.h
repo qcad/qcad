@@ -120,6 +120,10 @@ private:
     double value;
     //RS::Unit defaultUnit;
     QString error;
+    // plain text result (or error) as shown in the tool tip:
+    QString resultText;
+    // true if the current text is a plain numeric literal (no formula):
+    bool plainNumber;
     QString originalToolTip;
     bool noEmit;
     bool noResultInToolTip;
