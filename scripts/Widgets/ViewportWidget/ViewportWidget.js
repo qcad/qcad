@@ -358,9 +358,11 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
  * graphics view (RGraphicsViewRhi2D). Called from init if the RHI3D plugin
  * is loaded and the preference "Use RHI Graphicsview" is enabled.
  *
- * The RHI view provides its own navigation (pan / zoom) and grid, the
- * scrollbars, rulers and grid info label of the viewport template are
- * hidden.
+ * The RHI view comes with its own viewport widget
+ * (RGraphicsViewportRhi2D: scrollbars, grid info label and space for
+ * rulers around the view) and provides its own navigation (pan / zoom)
+ * and grid. The scrollbars, rulers and grid info label of the viewport
+ * template are hidden.
  *
  * \param vpw Widget created from the viewport UI file
  * (ViewportWidgetQt.ui) which contains the graphics view.
@@ -379,14 +381,14 @@ ViewportWidget.prototype.initRhiGraphicsView = function(vpw) {
     this.graphicsView = undefined;
 
     // the graphics view is in cell 1,1 of the grid layout of
-    // ViewportWidgetQt.ui (surrounded by rulers and scrollbars):
-    this.rhiView = new RGraphicsViewRhi2D(vpw);
+    // ViewportWidgetQt.ui (surrounded by rulers and scrollbars). The
+    // RHI viewport widget (view with its own scrollbars and grid info
+    // label) takes that cell:
+    this.rhiViewport = new RGraphicsViewportRhi2D(vpw);
+    this.rhiViewport.objectName = "RhiViewport";
+    this.rhiView = this.rhiViewport.getGraphicsView();
     this.rhiView.objectName = "GraphicsView";
-    // expanding size policy as for the graphics view in the UI file
-    // (without it, the grid layout only assigns part of the available
-    // space to the column / row of the view):
-    this.rhiView.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding);
-    layout.addWidget(this.rhiView, 1, 1);
+    layout.addWidget(this.rhiViewport, 1, 1);
 
     var view = this.rhiView.getRGraphicsView();
     view.setViewportNumber(this.vpNumber);
@@ -402,13 +404,16 @@ ViewportWidget.prototype.initRhiGraphicsView = function(vpw) {
     scene.setView(this.rhiView);
 
     // the RHI view navigates with the mouse (middle button pan, wheel
-    // zoom) and paints its own grid, hide scrollbars, rulers and grid
-    // info label:
+    // zoom), paints its own grid and its viewport widget has its own
+    // scrollbars and grid info label: hide the scrollbars, rulers and
+    // grid info label of the viewport template (direct children of the
+    // template widget, the children of the RHI viewport widget have
+    // different object names):
     var names = ["HorizontalScrollBar", "VerticalScrollBar", "InfoLabel",
                  "HorizontalRuler", "VerticalRuler",
                  "CornerTopLeft", "CornerTopRight", "CornerBottomLeft"];
     for (var i=0; i<names.length; i++) {
-        var child = this.vpWidget.findChild(names[i]);
+        var child = vpw.findChild(names[i]);
         if (!isNull(child)) {
             child.hide();
         }
