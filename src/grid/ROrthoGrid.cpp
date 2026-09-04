@@ -797,6 +797,37 @@ QString ROrthoGrid::getInfoText() {
     return infoText;
 }
 
+/**
+ * \return The effective grid spacing as computed by the last call to
+ * update: the fixed or automatic grid spacing, or the automatic grid
+ * spacing if the grid is currently switched off because the spacing
+ * would be below the minimum pixel spacing (e.g. for rulers which show
+ * ticks at grid points, see paintRuler). Invalid if unknown.
+ */
+RVector ROrthoGrid::getSpacing() const {
+    RVector ret = spacing;
+    if (!ret.isValid() ||
+        (autoSpacing.isValid() && autoSpacing.getMagnitude2D() < ret.getMagnitude2D() && autoSpacing.getMagnitude2D()>RS::PointTolerance)) {
+        ret = autoSpacing;
+    }
+    return ret;
+}
+
+/**
+ * \return The effective meta grid spacing as computed by the last call
+ * to update: the fixed or automatic meta grid spacing, or the
+ * automatic meta grid spacing if the meta grid is currently switched
+ * off because the spacing would be below the minimum pixel spacing.
+ * Invalid if unknown.
+ */
+RVector ROrthoGrid::getMetaSpacing() const {
+    RVector ret = metaSpacing;
+    if (!ret.isValid()) {
+        ret = autoMetaSpacing;
+    }
+    return ret;
+}
+
 bool ROrthoGrid::isIsometric() const {
     if (isometric==-1) {
         int viewportNumber = getViewportNumber();

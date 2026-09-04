@@ -58,6 +58,8 @@ public:
     virtual void paintRuler(RRuler& ruler, qreal devicePixelRatio = 1.0);
 
     virtual QString getInfoText();
+    RVector getSpacing() const;
+    RVector getMetaSpacing() const;
 
     QList<RVector> getIdealSpacing(int minPixelSpacing, const RVector& minSpacing, const RVector& minMetaSpacing);
 
