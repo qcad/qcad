@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QAccessible>
 #include <QColor>
 #include <QComboBox>
 #include <QKeyEvent>
@@ -23,6 +24,7 @@
 #include <QPalette>
 #include <QToolTip>
 
+#include "RAccessibleToolTipFilter.h"
 #include "RDocument.h"
 #include "RMainWindow.h"
 #include "RMath.h"
@@ -206,6 +208,34 @@ void RMathLineEdit::slotTextEdited(const QString& text) {
     noEmit = false;
 
     if (parentWidget()!=NULL && isVisible() && !noResultInToolTip) {
+        if (QAccessible::isActive()) {
+            // screen reader active (e.g. VoiceOver):
+            // a tool tip window would be announced as an empty dialog on every
+            // key stroke, announce the result instead (the accessible
+            // description of this widget is kept up to date by
+            // RAccessibleToolTipFilter):
+            QString result = RAccessibleToolTipFilter::toPlainText(toolTip());
+            if (!originalToolTip.isEmpty()) {
+                QString prefix = RAccessibleToolTipFilter::toPlainText(originalToolTip) + ", ";
+                if (result.startsWith(prefix)) {
+                    result = result.mid(prefix.length());
+                }
+            }
+            // announce valid results only (errors while typing would be noise)
+            // and only if the result differs from the typed text:
+            if (error.isEmpty() && !result.isEmpty() && result!=text.trimmed()) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+                QAccessibleAnnouncementEvent ev(this, result);
+                ev.setPoliteness(QAccessible::AnnouncementPoliteness::Polite);
+                QAccessible::updateAccessibility(&ev);
+#else
+                QAccessibleEvent ev(this, QAccessible::DescriptionChanged);
+                QAccessible::updateAccessibility(&ev);
+#endif
+            }
+            return;
+        }
+
         QPoint tPos = parentWidget()->mapToGlobal(pos());
         tPos+=QPoint(0, height());
         QToolTip::showText(tPos, toolTip(), this);
