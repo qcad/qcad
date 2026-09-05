@@ -80,6 +80,18 @@ public:
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0,
                                  bool draft = false, double strictRange = RMAXDOUBLE) const;
 
+    /**
+     * \return Distance from the given point to the entities of the referenced
+     *      block (same as getDistanceTo). If useBoundingBox is true and this
+     *      block reference owns its block (custom entity), every point inside
+     *      the bounding box of the block reference is treated as being within
+     *      strictRange, i.e. the entity can be selected by clicking anywhere
+     *      inside its bounding box. If useBoundingBox is false, only the
+     *      distance to the actual (visible) entities of the block counts.
+     */
+    double getDistanceToContents(const RVector& point, bool limited, double range,
+                                 bool draft, double strictRange, bool useBoundingBox) const;
+
     RBox getQueryBoxInBlockCoordinates(const RBox& box) const;
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const;
 

@@ -155,6 +155,12 @@ RVector RBlockReferenceData::getVectorTo(const RVector& point, bool limited, dou
 double RBlockReferenceData::getDistanceTo(const RVector& point,
         bool limited, double range, bool draft, double strictRange) const {
 
+    return getDistanceToContents(point, limited, range, draft, strictRange, true);
+}
+
+double RBlockReferenceData::getDistanceToContents(const RVector& point,
+        bool limited, double range, bool draft, double strictRange, bool useBoundingBox) const {
+
     if (document == NULL) {
         return RNANDOUBLE;
     }
@@ -187,7 +193,7 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
     QSet<REntity::Id>::iterator it;
     double minDist = RNANDOUBLE;
 
-    if (hasBlockOwnership() && getBoundingBox().contains(point)) {
+    if (useBoundingBox && hasBlockOwnership() && getBoundingBox().contains(point)) {
         minDist = strictRange;
     }
 
