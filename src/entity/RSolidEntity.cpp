@@ -217,6 +217,14 @@ void RSolidEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) 
     pl.appendVertex(data.getVertexAt(2));
     pl.setClosed(true);
 
+    // a solid is a plain fill without an outline: the outline would be
+    // stroked with the lineweight of the entity (round joins), bloating
+    // and rounding the corners of small solids such as arrow heads and
+    // showing the linetype pattern along the edges:
+    QPen pen = e.getPen();
+    pen.setStyle(Qt::NoPen);
+    e.setPen(pen);
+
     e.exportPolyline(pl);
 }
 
