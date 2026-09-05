@@ -237,6 +237,7 @@ public:
     void update() const;
 
     virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
+    QList<double> getTsAtPoint(const RVector& point, double tolerance=RS::PointTolerance) const;
 
     bool isDirty() const {
         return dirty;

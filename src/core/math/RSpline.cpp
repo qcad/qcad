@@ -1755,6 +1755,10 @@ void RSpline::updateBoundingBox() const {
  * \return List of bezier spline segments which together represent this curve.
  */
 QList<RSpline> RSpline::getBezierSegments(const RBox& queryBox) const {
+    // the control points of a spline defined by fit points are only
+    // available once the spline has been updated:
+    updateInternal();
+
     int ctrlCount = countControlPoints();
 
     // spline is a single bezier segment:
@@ -1967,46 +1971,49 @@ RSpline RSpline::createFrom(PLib::NurbsCurve_2Dd& sp) {
 }
 */
 
+/**
+ * \return All parameters at which this spline passes through the given
+ * point (closer than the given tolerance), in ascending order. A spline
+ * that crosses itself passes through the intersection point twice and thus
+ * yields two parameters for it; for any other point on the spline a single
+ * parameter is returned. Points that the spline does not pass through yield
+ * no parameter at all. Unlike getTAtPoint this is not limited to a single
+ * (arbitrary) parameter for points the spline passes through more than once.
+ *
+ * Requires a spline proxy (QCAD Professional), see RSplineProxy::getTsAtPoint.
+ */
+QList<double> RSpline::getTsAtPoint(const RVector& point, double tolerance) const {
+    if (hasProxy()) {
+        return splineProxy->getTsAtPoint(*this, point, tolerance);
+    }
+    return QList<double>();
+}
+
+/**
+ * Splits this spline at the given points.
+ *
+ * A point that the spline passes through more than once (a point where
+ * the spline crosses itself) splits the spline at every pass: a spline
+ * that crosses itself once is split into three pieces at the intersection
+ * point, none of which crosses itself. Requires a spline proxy (QCAD
+ * Professional), see RSplineProxy::splitAt.
+ */
 QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) const {
     if (points.length()==0 || !RSpline::hasProxy()) {
         return RShape::splitAt(points);
     }
-
-    QList<QSharedPointer<RShape> > ret;
-
-    QMultiMap<double, RVector> sortable;
-    for (int i=0; i<points.length(); i++) {
-        double t = getTAtPoint(points[i]);
-        sortable.insert(t, points[i]);
-    }
-
-    QList<double> keys = sortable.keys();
-#if QT_VERSION >= 0x060000
-    std::sort(keys.begin(), keys.end());
-#else
-    qSort(keys);
-#endif
-
-    QList<RVector> sortedPoints;
-    for (int i=0; i<keys.length(); i++) {
-        QList<RVector> values = sortable.values(keys[i]);
-        for (int k=0; k<values.length(); k++) {
-            sortedPoints.append(values[k]);
-        }
-    }
-
-    QList<RSpline> subSplines = splitAtPoints(sortedPoints);
-    for (int i=0; i<subSplines.length(); i++) {
-        ret.append(subSplines[i].clone());
-    }
-    return ret;
+    return splineProxy->splitAt(*this, points);
 }
 
 /**
- * Finds _some_ self intersection points of splines. Used for snapping to those intersections.
- * Note that this does not find all intersections and might also return non-intersections.
- * Most notably, self-intersections of bezier segments are not detected.
- * This is not suitable to reliably detect the existence of self intersections.
+ * \return The points at which this spline crosses itself.
+ *
+ * Requires a spline proxy (QCAD Professional): crossings between different
+ * bezier segments of the spline as well as loops inside a single bezier
+ * segment are found, the points at which consecutive segments meet are not
+ * reported. Used for snapping and for splitting a spline that crosses
+ * itself into simple pieces (see splitAt). Without a proxy, no points are
+ * returned.
  */
 QList<RVector> RSpline::getSelfIntersectionPoints(double tolerance) const {
     return getIntersectionPointsSS(*this, *this, true, true, tolerance);

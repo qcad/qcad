@@ -47,6 +47,22 @@ public:
     virtual RSpline simplify(const RSpline& spline, double tolerance) = 0;
     virtual RPolyline approximateWithArcs(const RSpline& spline, double tolerance=0.001, double radiusLimit=RDEFAULT_MIN1) = 0;
     virtual QList<RVector> getIntersectionPoints(const RSpline& spline, const RShape& other, bool limited=true, bool same=false, double tolerance=RS::PointTolerance) = 0;
+    /**
+     * \return All parameters at which the spline passes through the given
+     * point (closer than tolerance), in ascending order. See
+     * RSpline::getTsAtPoint.
+     */
+    virtual QList<double> getTsAtPoint(const RSpline& spline, const RVector& point, double tolerance) {
+        Q_UNUSED(spline)
+        Q_UNUSED(point)
+        Q_UNUSED(tolerance)
+        return QList<double>();
+    }
+    /**
+     * Splits the spline at the given points, at every parameter at which
+     * the spline passes through a point. See RSpline::splitAt.
+     */
+    virtual QList<QSharedPointer<RShape> > splitAt(const RSpline& spline, const QList<RVector>& points) = 0;
 };
 
 #endif
