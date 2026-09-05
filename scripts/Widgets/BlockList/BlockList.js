@@ -658,7 +658,17 @@ BlockList.initStyle = function(upd) {
     var blockList = appWin.findChild("BlockList");
     var highlightingIsDark = RSettings.getWidgetSelectionColor(blockList).lightness()<128;
     var backgroundIsDark = RSettings.hasDarkGuiBackground();
+
     var useAlternativeIcons = backgroundIsDark && !highlightingIsDark || !backgroundIsDark && highlightingIsDark;
+
+    if (RS.getSystemId()==="win") {
+        useAlternativeIcons = false;
+    }
+
+    if (RSettings.getMajorVersion()<4 && !RSettings.getOriginalArguments().contains("-v4")) {
+        // v4 uses visual cues instead of colors to identify states:
+        useAlternativeIcons = false;
+    }
 
     // use inverse icons for selected items:
     // in dark mode, if the highlight color is also dark, the normal icons are already good for selected items:
