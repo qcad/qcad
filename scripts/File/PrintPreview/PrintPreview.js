@@ -917,6 +917,20 @@ PrintPreviewImpl.prototype.slotPrint = function(pdfFile, pdfVersion) {
  * Prints the drawing or exports it to the given PDF file.
  */
 PrintPreviewImpl.slotPrint = function(pdfFile, pdfVersion) {
+    return PrintPreviewImpl.printWith(Print, pdfFile, pdfVersion);
+};
+
+/**
+ * Prints the drawing or exports it to the given PDF file using the
+ * given Print class (Print, PrintPro, ...) for the view with focus.
+ *
+ * If the view with focus cannot paint to a printer (e.g. the RHI based view),
+ * the drawing is printed through a temporary off-screen image based view
+ * instead.
+ *
+ * \param printClass Constructor of Print or a class derived from Print.
+ */
+PrintPreviewImpl.printWith = function(printClass, pdfFile, pdfVersion) {
     var mdiChild = EAction.getMdiChild();
     var view = mdiChild.getLastKnownViewWithFocus();
 
@@ -928,7 +942,7 @@ PrintPreviewImpl.slotPrint = function(pdfFile, pdfVersion) {
         var viewImage = new RGraphicsViewImage();
         viewImage.setNumThreads(1);
         viewImage.setScene(scene, false);
-        var printOffScreen = new Print(undefined, EAction.getDocument(), viewImage);
+        var printOffScreen = new printClass(undefined, EAction.getDocument(), viewImage);
         var ret = printOffScreen.print(pdfFile, undefined, pdfVersion);
         scene.unregisterView(viewImage);
         destr(viewImage);
@@ -937,7 +951,7 @@ PrintPreviewImpl.slotPrint = function(pdfFile, pdfVersion) {
         return ret;
     }
 
-    var print = new Print(undefined, EAction.getDocument(), view);
+    var print = new printClass(undefined, EAction.getDocument(), view);
     return print.print(pdfFile, undefined, pdfVersion);
 };
 
