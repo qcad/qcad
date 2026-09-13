@@ -128,6 +128,12 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
         connect(tabBar, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
     }
 
+    // the clone has to pick up style sheet changes of the original tab bar
+    // (e.g. the icon of the tab close buttons):
+    if (tabBar->styleSheet()!=tabBarOri->styleSheet()) {
+        tabBar->setStyleSheet(tabBarOri->styleSheet());
+    }
+
     tabBar->blockSignals(true);
 
     updateTabBarSize();
