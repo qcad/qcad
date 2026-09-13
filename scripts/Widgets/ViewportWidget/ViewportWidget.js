@@ -300,6 +300,14 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         this.graphicsView.setFocus();
     }
 
+    // the document interface remembers the view that had the focus last.
+    // setting the focus above produces no focus event while a modal dialog is
+    // open (e.g. when the viewport layout is switched in the drawing
+    // preferences), so point it at this view explicitly:
+    if (this.vpNumber === 0 && isFunction(this.documentInterface.setLastKnownViewWithFocus)) {
+        this.documentInterface.setLastKnownViewWithFocus(imageView);
+    }
+
     this.hsb = this.vpWidget.findChild("HorizontalScrollBar");
     if (!isNull(this.hsb)) {
         this.hsb.singleStep = 50;

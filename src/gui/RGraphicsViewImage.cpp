@@ -76,8 +76,23 @@ RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
 RGraphicsViewImage::~RGraphicsViewImage() {
     //qDebug() << "RGraphicsViewImage::~RGraphicsViewImage()";
 
+    // the workers are owned by this view (see initWorkers): make sure their
+    // threads have finished and free their image buffers. without this, every
+    // viewport switch leaks one full size image buffer and one thread object
+    // per thread and per viewport:
+    for (int i=0; i<workers.length(); i++) {
+        RGraphicsViewWorker* worker = workers[i];
+        if (worker==NULL) {
+            continue;
+        }
+        worker->wait();
+        delete worker;
+    }
+    workers.clear();
+
     if (decorationWorker!=NULL) {
         delete decorationWorker;
+        decorationWorker = NULL;
     }
 }
 

@@ -231,6 +231,7 @@ public:
 
     void registerScene(RGraphicsScene& scene);
     void unregisterScene(RGraphicsScene& scene);
+    void deleteScenesWithoutViews();
 
     void setCursor(const QCursor& cursor, bool global = true);
 

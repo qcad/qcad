@@ -79,8 +79,26 @@ RGraphicsView::~RGraphicsView() {
         grid = NULL;
     }
     if (scene!=NULL) {
+        // the document interface keeps a raw pointer to the view that had the
+        // focus last. that pointer must not survive this view or it is later
+        // dereferenced (e.g. dynamic_cast in RGraphicsViewQt::focusInEvent)
+        // after the view has been deleted. this happens for example when the
+        // viewport layout is switched in the drawing preferences:
+        RDocumentInterface* di = getDocumentInterface();
+        if (di!=NULL && di->getLastKnownViewWithFocus()==this) {
+            di->setLastKnownViewWithFocus(NULL);
+        }
+
         scene->unregisterView(this);
         scene = NULL;
+
+        // the scene this view was attached to is owned by the document
+        // interface, not by this view. if no other view uses it, it would stay
+        // registered (and be regenerated) for the rest of the session, so
+        // delete it here:
+        if (di!=NULL) {
+            di->deleteScenesWithoutViews();
+        }
     }
 }
 
