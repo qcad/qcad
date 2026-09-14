@@ -31,7 +31,8 @@ RGraphicsScene::RGraphicsScene(RDocumentInterface& documentInterface)
       colorMode(true),
       previewIsEmpty(true),
       highlightedReferencePoint(RVector::invalid),
-      deleting(false) {
+      deleting(false),
+      hadViews(false) {
 
     setVisualExporter(true);
 
@@ -40,6 +41,12 @@ RGraphicsScene::RGraphicsScene(RDocumentInterface& documentInterface)
 
 RGraphicsScene::~RGraphicsScene() {
     deleting = true;
+
+    // the document interface keeps a raw pointer to every registered scene:
+    // that pointer must not survive this scene (e.g. regenerateScenes would
+    // dereference it):
+    documentInterface.unregisterScene(*this);
+
     while (!views.isEmpty()) {
         RGraphicsView* view = views.takeFirst();
         if (view!=NULL) {
@@ -100,6 +107,7 @@ void RGraphicsScene::registerView(RGraphicsView* view, bool regen) {
         return;
     }
     views.push_back(view);
+    hadViews = true;
     if (documentInterface.getLastKnownViewWithFocus()==NULL) {
         documentInterface.setLastKnownViewWithFocus(view);
     }

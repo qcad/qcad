@@ -702,6 +702,48 @@ void RDocumentInterface::unregisterScene(RGraphicsScene& scene) {
     scenes.removeOne(&scene);
 }
 
+/**
+ * Deletes all registered scenes that have no view attached to them anymore.
+ *
+ * A scene is created for and used by exactly one viewport but owned by this
+ * document interface. When the viewports are recreated (e.g. when the viewport
+ * layout is switched in the drawing preferences), the views of the previous
+ * viewports are deleted but their scenes are not: they would stay registered
+ * here for the rest of the session, occupying memory and being regenerated on
+ * every call to regenerateScenes.
+ *
+ * Called whenever a view is deleted (see RGraphicsView::~RGraphicsView).
+ * Scenes that never had a view or that are shared with a view that is still
+ * alive are not affected.
+ */
+void RDocumentInterface::deleteScenesWithoutViews() {
+    if (deleting) {
+        // scenes are deleted by the destructor:
+        return;
+    }
+
+    // note: ~RGraphicsScene unregisters the scene, i.e. removes it from
+    // 'scenes'. a scene without views deletes no views, so this cannot
+    // recurse into this function:
+    QList<RGraphicsScene*> obsolete;
+    QList<RGraphicsScene*>::iterator it;
+    for (it = scenes.begin(); it != scenes.end(); it++) {
+        RGraphicsScene* scene = *it;
+        if (scene == NULL) {
+            continue;
+        }
+        // scenes that never had a view are left alone: they might still be
+        // under construction or manage their view in another way:
+        if (scene->hasHadViews() && scene->getGraphicsViews().isEmpty()) {
+            obsolete.append(scene);
+        }
+    }
+
+    for (int i = 0; i < obsolete.length(); i++) {
+        delete obsolete[i];
+    }
+}
+
 void RDocumentInterface::enableUpdates() {
     allowUpdate = true;
 }

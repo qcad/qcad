@@ -109,6 +109,17 @@ public:
     virtual void registerView(RGraphicsView* view, bool regen=true);
     virtual void unregisterView(RGraphicsView* view);
 
+    /**
+     * \return True if at least one view has been registered with this scene
+     * since it was created. Together with an empty list of views this means
+     * that all views of this scene have been deleted and the scene is not
+     * used anymore.
+     * \see RDocumentInterface::deleteScenesWithoutViews
+     */
+    bool hasHadViews() const {
+        return hadViews;
+    }
+
     virtual void beginPreview();
     virtual void endPreview();
     virtual void clearPreview();
@@ -197,6 +208,7 @@ protected:
 
 private:
     bool deleting;
+    bool hadViews;
 };
 
 Q_DECLARE_METATYPE(QList<RGraphicsScene*>)
