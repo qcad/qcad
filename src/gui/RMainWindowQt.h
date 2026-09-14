@@ -248,6 +248,11 @@ protected:
 
     virtual bool event(QEvent* e);
 
+    /**
+     * \nonscriptable
+     */
+    static bool isStaleAutoRepeatKeyEvent(QKeyEvent* ke);
+
     void restoreClosedDockWidgets();
 
 public slots:

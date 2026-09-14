@@ -938,6 +938,97 @@ double RGraphicsSceneQt::getLineTypePatternScale(const RLinetypePattern& p) cons
     return factor;
 }
 
+/**
+ * Translates the cached drawables (painter paths, texts, images), clip
+ * rectangles and reference points of the given entities by the given
+ * offset instead of exporting the entities again.
+ *
+ * Entities whose graphical representation depends on their absolute
+ * position (hatches: pattern origin, block references and viewports:
+ * transforms, nested entities) or that have no cached representation yet
+ * are exported again.
+ */
+void RGraphicsSceneQt::translateEntities(QSet<REntity::Id>& affectedEntities, const RVector& offset) {
+    if (exportToPreview || !offset.isValid()) {
+        regenerate(affectedEntities, false);
+        return;
+    }
+
+    QSet<REntity::Id> regen;
+
+    QSet<REntity::Id>::iterator it;
+    for (it=affectedEntities.begin(); it!=affectedEntities.end(); ++it) {
+        REntity::Id entityId = *it;
+
+        QHash<RObject::Id, QList<RGraphicsSceneDrawable> >::iterator dit = drawables.find(entityId);
+        if (dit==drawables.end()) {
+            // not exported (e.g. invisible) or new:
+            regen.insert(entityId);
+            continue;
+        }
+
+        QSharedPointer<REntity> entity = document->queryEntityDirect(entityId);
+        if (entity.isNull() || entity->isUndone()) {
+            regen.insert(entityId);
+            continue;
+        }
+
+        RS::EntityType type = entity->getType();
+        if (type==RS::EntityHatch || type==RS::EntityBlockRef ||
+            type==RS::EntityViewport || type==RS::EntityBlockRefAttr) {
+            // pattern origin / transforms / nested entities:
+            regen.insert(entityId);
+            continue;
+        }
+
+        QList<RGraphicsSceneDrawable>& list = dit.value();
+        bool translatable = true;
+        for (int i=0; i<list.length(); i++) {
+            RGraphicsSceneDrawable::Type t = list[i].getType();
+            if (t==RGraphicsSceneDrawable::Transform || t==RGraphicsSceneDrawable::EndTransform || t==RGraphicsSceneDrawable::Invalid) {
+                translatable = false;
+                break;
+            }
+        }
+        if (!translatable) {
+            regen.insert(entityId);
+            continue;
+        }
+
+        for (int i=0; i<list.length(); i++) {
+            RGraphicsSceneDrawable& d = list[i];
+            if (d.isPainterPath()) {
+                d.getPainterPath().move(offset);
+            }
+            else if (d.isText()) {
+                d.getText().move(offset);
+            }
+            else if (d.isImage()) {
+                d.getImage().move(offset);
+            }
+        }
+
+        QHash<RObject::Id, RBox>::iterator cit = clipRectangles.find(entityId);
+        if (cit!=clipRectangles.end()) {
+            cit.value().move(offset);
+        }
+
+        QMap<REntity::Id, QList<RRefPoint> >::iterator rit = referencePoints.find(entityId);
+        if (rit!=referencePoints.end()) {
+            QList<RRefPoint>& rps = rit.value();
+            for (int i=0; i<rps.length(); i++) {
+                rps[i].move(offset);
+            }
+        }
+    }
+
+    drawablesVersion++;
+
+    if (!regen.isEmpty()) {
+        regenerate(regen, false);
+    }
+}
+
 void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
     RGraphicsScene::unexportEntity(entityId);
     if (!exportToPreview) {

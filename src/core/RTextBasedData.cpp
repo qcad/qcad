@@ -362,7 +362,33 @@ bool RTextBasedData::moveReferencePoint(const RVector& referencePoint, const RVe
 bool RTextBasedData::move(const RVector& offset) {
     position.move(offset);
     alignmentPoint.move(offset);
-    update(false);
+
+    // a pure translation does not change the rendered text:
+    // translate cached painter paths, bounding box and text layouts instead
+    // of invalidating them (rendering text is expensive):
+    if (!dirty) {
+        if (boundingBox.isValid()) {
+            boundingBox.move(offset);
+        }
+        for (int i=0; i<painterPaths.length(); i++) {
+            painterPaths[i].move(offset);
+        }
+    }
+    else {
+        // rendered representation is not valid, drop it:
+        boundingBox = RBox();
+        painterPaths.clear();
+    }
+
+    QTransform t = QTransform::fromTranslate(offset.x, offset.y);
+    for (int i=0; i<textLayouts.length(); i++) {
+        // layout transform maps layout coordinates to drawing coordinates:
+        textLayouts[i].transform *= t;
+        if (textLayouts[i].boundingBox.isValid()) {
+            textLayouts[i].boundingBox.move(offset);
+        }
+    }
+
     return true;
 }
 

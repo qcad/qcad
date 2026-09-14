@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QElapsedTimer>
 #include <QComboBox>
 #include <QLineEdit>
 #include <QMenu>
@@ -746,6 +747,65 @@ void RMainWindowQt::clearKeyLog() {
     keyLog.clear();
 }
 
+/**
+ * \return True if the given key event is an auto repeated cursor key event
+ *      that has been waiting in the event queue for longer than the
+ *      configured threshold (Keyboard/StaleAutoRepeatThreshold, ms).
+ *
+ * Auto repeated key events are queued by the system at the key repeat rate.
+ * If handling one event takes longer than the repeat interval (e.g. moving
+ * a large selection with the cursor keys), the queue fills up and the
+ * queued events are still processed after the key has been released.
+ * Dropping stale auto repeat events keeps the reaction to the cursor keys
+ * smooth and stops moving the selection when the key is released.
+ *
+ * The event time stamp and the wall clock use different bases, the base
+ * offset is calibrated with the smallest observed delay (an event that was
+ * processed immediately) and re-calibrated on every deliberate key press.
+ */
+bool RMainWindowQt::isStaleAutoRepeatKeyEvent(QKeyEvent* ke) {
+    static QElapsedTimer wallClock;
+    static qint64 baseOffset = 0;
+    static bool baseOffsetValid = false;
+
+    if (ke==NULL) {
+        return false;
+    }
+
+    int key = ke->key();
+    if (key!=Qt::Key_Up && key!=Qt::Key_Down && key!=Qt::Key_Left && key!=Qt::Key_Right) {
+        return false;
+    }
+
+    if (!RSettings::getBoolValue("Keyboard/DropStaleAutoRepeatEvents", true)) {
+        return false;
+    }
+
+    quint64 ts = ke->timestamp();
+    if (ts==0) {
+        // no time stamp available:
+        return false;
+    }
+
+    if (!wallClock.isValid()) {
+        wallClock.start();
+    }
+    qint64 offset = wallClock.elapsed() - (qint64)ts;
+
+    if (!ke->isAutoRepeat() || !baseOffsetValid || offset<baseOffset) {
+        // deliberate key press or event processed faster than any before:
+        // (re-)calibrate the clock base offset:
+        baseOffset = offset;
+        baseOffsetValid = true;
+        return false;
+    }
+
+    // time the event has been waiting in the queue (ms):
+    qint64 delay = offset - baseOffset;
+    int threshold = RSettings::getIntValue("Keyboard/StaleAutoRepeatThreshold", 100);
+    return delay>threshold;
+}
+
 bool RMainWindowQt::event(QEvent* e) {
     if (e==NULL) {
         return false;
@@ -804,6 +864,15 @@ bool RMainWindowQt::event(QEvent* e) {
     {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
         if (ke!=NULL) {
+            // drop auto repeated cursor key events that have been waiting in
+            // the event queue for too long (e.g. moving a large selection
+            // with the cursor keys is slower than the key repeat rate):
+            // processing them would keep moving the selection after the
+            // key was released:
+            if (isStaleAutoRepeatKeyEvent(ke)) {
+                e->accept();
+                return true;
+            }
 
             // notify key listeners,
             // e.g. for up / down / left / right keys
@@ -933,12 +1002,27 @@ bool RMainWindowQt::event(QEvent* e) {
     {
         RTransactionEvent* te = dynamic_cast<RTransactionEvent*>(e);
         if (te!=NULL) {
+            RTransaction t = te->getTransaction();
             // combined properties might have changed (deleted entities):
             notifyPropertyListeners(getDocument(), te->hasOnlyChanges());
-            // selection might have changed (deleted entities):
-            notifySelectionListeners(getDocumentInterface());
+            // selection might have changed (deleted entities, undo / redo,
+            // selection status recorded as property change).
+            // a transaction that only changed properties of existing
+            // entities or a pure translation of entities (moving a
+            // selection, possibly replacing entities that are cloned on
+            // change such as hatches by identical, moved clones) cannot
+            // have changed the selection in a way that matters to selection
+            // listeners (number, types, layers of selected entities).
+            // in that case, don't notify selection listeners
+            // (selection listeners can be expensive for large selections):
+            bool selectionUnchanged = (te->hasOnlyChanges() || t.isTranslation()) &&
+                !t.isType(RTransaction::Undo) &&
+                !t.isType(RTransaction::Redo) &&
+                !t.hasPropertyChanges(RObject::PropertySelected);
+            if (!selectionUnchanged) {
+                notifySelectionListeners(getDocumentInterface());
+            }
             // notify transaction listeners:
-            RTransaction t = te->getTransaction();
             notifyTransactionListeners(getDocument(), &t);
             return true;
         }

@@ -30,6 +30,7 @@
 #include "RObject.h"
 #include "RPropertyTypeId.h"
 #include "RPropertyChange.h"
+#include "RVector.h"
 
 class RBlock;
 class RStorage;
@@ -276,6 +277,43 @@ public:
         return onlyChanges;
     }
 
+    bool hasPropertyChanges(const RPropertyTypeId& propertyTypeId) const;
+
+    /**
+     * Marks this transaction as a pure translation of entities by the
+     * given offset. Objects added to the transaction after this call and
+     * before the transaction is committed are recorded as translated
+     * (see \ref getTranslatedObjectIds). Objects that are modified later
+     * (e.g. by inter transaction listeners) are removed from that set.
+     * Graphics scenes can use this information to translate cached
+     * graphical representations instead of regenerating them.
+     */
+    void setTranslation(const RVector& offset);
+
+    /**
+     * \return Translation offset of this transaction or an invalid vector
+     *      if this transaction is not a pure translation.
+     */
+    RVector getTranslation() const {
+        return translation;
+    }
+
+    /**
+     * \return True if this transaction is a pure translation of the objects
+     *      returned by \ref getTranslatedObjectIds.
+     */
+    bool isTranslation() const {
+        return translation.isValid();
+    }
+
+    /**
+     * \return Set of IDs of existing objects that have been translated by
+     *      this transaction (see \ref setTranslation).
+     */
+    QSet<RObject::Id> getTranslatedObjectIds() const {
+        return translatedObjectIds;
+    }
+
     void fail();
 
     void endCycle();
@@ -415,6 +453,21 @@ protected:
      * True if a block is being deleted to prevent recursion in deleteObject.
      */
     bool deletingBlock;
+
+    /**
+     * Translation offset if this transaction is a pure translation,
+     * invalid vector otherwise.
+     */
+    RVector translation;
+    /**
+     * True while objects added to this transaction are recorded as
+     * translated objects.
+     */
+    bool recordingTranslation;
+    /**
+     * IDs of objects that have been purely translated by this transaction.
+     */
+    QSet<RObject::Id> translatedObjectIds;
 
     /**
      * List of block names that have been already used in this transaction.

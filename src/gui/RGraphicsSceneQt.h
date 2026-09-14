@@ -76,6 +76,7 @@ public:
     virtual void clear();
 
     virtual void updateSelectionStatus(QSet<RObject::Id>& affectedEntities, bool updateViews);
+    virtual void translateEntities(QSet<RObject::Id>& affectedEntities, const RVector& offset);
 
     virtual void clearPreview();
 

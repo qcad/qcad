@@ -810,6 +810,17 @@ void RDocumentInterface::regenerateScenes(QSet<REntity::Id>& entityIds, bool upd
 }
 
 /**
+ * Translates the graphical representation of the given entities in all
+ * scenes by the given offset (see \ref RGraphicsScene::translateEntities).
+ */
+void RDocumentInterface::translateScenes(QSet<REntity::Id>& entityIds, const RVector& offset) {
+    QList<RGraphicsScene*>::iterator it;
+    for (it=scenes.begin(); it!=scenes.end(); it++) {
+        (*it)->translateEntities(entityIds, offset);
+    }
+}
+
+/**
  * \overload
  */
 void RDocumentInterface::regenerateScenes(REntity::Id entityId, bool updateViews) {
@@ -2757,7 +2768,28 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         }
     }
     else {
-        regenerateScenes(entityIdsToRegenerate, false);
+        if (transaction.isTranslation() &&
+            !transaction.isType(RTransaction::Undo) &&
+            !transaction.isType(RTransaction::Redo)) {
+
+            // pure translation of entities (e.g. moving a selection):
+            // translate the graphical representation of the translated
+            // entities, regenerate everything else:
+            QSet<REntity::Id> translatedIds = transaction.getTranslatedObjectIds();
+            translatedIds.intersect(entityIdsToRegenerate);
+            QSet<REntity::Id> otherIds = entityIdsToRegenerate;
+            otherIds.subtract(translatedIds);
+
+            if (!translatedIds.isEmpty()) {
+                translateScenes(translatedIds, transaction.getTranslation());
+            }
+            if (!otherIds.isEmpty()) {
+                regenerateScenes(otherIds, false);
+            }
+        }
+        else {
+            regenerateScenes(entityIdsToRegenerate, false);
+        }
     }
 
     regenerateViews(entityIdsToRegenerate);

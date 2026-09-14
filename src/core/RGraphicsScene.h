@@ -79,6 +79,13 @@ public:
 
     virtual void regenerate(bool undone = false, bool invisible = false);
     virtual void regenerate(QSet<RObject::Id>& affectedEntities, bool updateViews);
+    /**
+     * Translates the graphical representation of the given entities by the
+     * given offset. The default implementation regenerates the entities.
+     * Scenes that cache the graphical representation of entities may
+     * override this for performance reasons.
+     */
+    virtual void translateEntities(QSet<RObject::Id>& affectedEntities, const RVector& offset);
     virtual void updateSelectionStatus(QSet<RObject::Id>& affectedEntities, bool updateViews);
     virtual void regenerateViews(bool force=false);
     virtual void regenerateViews(QSet<RObject::Id>& affectedEntities);

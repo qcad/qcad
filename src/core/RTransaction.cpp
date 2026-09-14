@@ -48,6 +48,8 @@ RTransaction::RTransaction()
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
       deletingBlock(false),
+      translation(RVector::invalid),
+      recordingTranslation(false),
       keepHandles(false),
       keepChildren(false),
       undoing(false),
@@ -74,6 +76,8 @@ RTransaction::RTransaction(RStorage& storage)
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
       deletingBlock(false),
+      translation(RVector::invalid),
+      recordingTranslation(false),
       keepHandles(false),
       keepChildren(false),
       undoing(false),
@@ -111,6 +115,8 @@ RTransaction::RTransaction(
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
       deletingBlock(false),
+      translation(RVector::invalid),
+      recordingTranslation(false),
       keepHandles(false),
       keepChildren(false),
       undoing(false),
@@ -149,6 +155,8 @@ RTransaction::RTransaction(
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
       deletingBlock(false),
+      translation(RVector::invalid),
+      recordingTranslation(false),
       keepHandles(false),
       keepChildren(false),
       undoing(false),
@@ -400,6 +408,10 @@ void RTransaction::commit() {
         //qWarning() << "RTransaction::commit: transaction is in state 'failed'";
         //return;
     }
+
+    // objects added from now on (e.g. by inter transaction listeners) are
+    // not part of the pure translation:
+    recordingTranslation = false;
 
     //if (!isPreview()) {
         // no inter translation listener notification in preview:
@@ -805,6 +817,21 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     bool objectHasChanged = false;
     QSharedPointer<RObject> oldObject;
 
+    // keep track of objects that are purely translated by this transaction
+    // (see setTranslation):
+    if (translation.isValid()) {
+        if (recordingTranslation) {
+            if (object->getId() != RObject::INVALID_ID) {
+                translatedObjectIds.insert(object->getId());
+            }
+        }
+        else {
+            // object modified after translation (e.g. by inter transaction
+            // listener): not a pure translation:
+            translatedObjectIds.remove(object->getId());
+        }
+    }
+
     // object is an existing object that might have changed:
     if (object->getId() != RObject::INVALID_ID) {
         // store diff between previous object and this object
@@ -996,13 +1023,34 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
  */
 bool RTransaction::addPropertyChange(RObject::Id objectId, const RPropertyChange& propertyChange) {
     if (!RS::compare(propertyChange.oldValue, propertyChange.newValue, true)) {
-        //propertyChanges.insert(objectId, propertyChange);
-        QList<RPropertyChange> pc = propertyChanges.value(objectId);
-        pc.append(propertyChange);
-        propertyChanges.insert(objectId, pc);
+        // append in place (no copy of the list of changes for this object):
+        propertyChanges[objectId].append(propertyChange);
         return true;
     }
     return false;
+}
+
+/**
+ * \return True if this transaction contains at least one change of the
+ *      given property for any object.
+ */
+bool RTransaction::hasPropertyChanges(const RPropertyTypeId& propertyTypeId) const {
+    QMap<RObject::Id, QList<RPropertyChange> >::const_iterator it;
+    for (it=propertyChanges.constBegin(); it!=propertyChanges.constEnd(); ++it) {
+        const QList<RPropertyChange>& changes = it.value();
+        for (int i=0; i<changes.length(); i++) {
+            if (changes[i].getPropertyTypeId()==propertyTypeId) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+void RTransaction::setTranslation(const RVector& offset) {
+    translation = offset;
+    recordingTranslation = offset.isValid();
+    translatedObjectIds.clear();
 }
 
 
@@ -1074,6 +1122,9 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
 }
 
 void RTransaction::deleteObject(RObject::Id objectId, bool force) {
+    // deleted objects are never purely translated:
+    translatedObjectIds.remove(objectId);
+
     QSharedPointer<RObject> obj = storage->queryObject(objectId);
     deleteObject(obj, force);
 }

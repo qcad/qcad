@@ -221,6 +221,7 @@ public:
     void regenerateScenes(bool undone = false, bool invisible = false);
     void regenerateScenes(QSet<RObject::Id>& entityIds, bool updateViews);
     void regenerateScenes(RObject::Id entityId, bool updateViews);
+    void translateScenes(QSet<RObject::Id>& entityIds, const RVector& offset);
 
     void updateSelectionStatus(QSet<RObject::Id>& entityIds, bool updateViews);
     void updateSelectionStatus(RObject::Id entityId, bool updateViews);

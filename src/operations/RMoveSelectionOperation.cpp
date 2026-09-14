@@ -43,6 +43,10 @@ RTransaction RMoveSelectionOperation::apply(RDocument& document, bool preview) {
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
     transaction.setTypes(transactionTypes);
+    // this transaction is a pure translation of the moved entities:
+    // graphics scenes can translate the cached graphical representations
+    // of these entities instead of regenerating them:
+    transaction.setTranslation(targetPoint - referencePoint);
 
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
 

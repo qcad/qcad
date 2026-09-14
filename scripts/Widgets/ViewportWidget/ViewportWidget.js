@@ -154,7 +154,13 @@ ViewportWidget.prototype.initEventHandler = function() {
     if (!isNull(this.rhiView)) {
         // the RHI based graphics view handles its own navigation and
         // forwards events to the document interface through its
-        // RGraphicsView adapter (no scrollbars, rulers or drag and drop):
+        // RGraphicsView adapter (no scrollbars, rulers). Drops into the
+        // drawing area (e.g. image or drawing files) are handled like
+        // for the image based graphics view (insert instead of open):
+        if (!isNull(this.rhiView.drop) && !isNull(this.rhiView.dragEnter)) {
+            this.rhiView.drop.connect(function(e) { ViewportWidget.handleDrop(e); });
+            this.rhiView.dragEnter.connect(function(e) { e.acceptProposedAction(); });
+        }
         return;
     }
 
@@ -472,6 +478,17 @@ EventHandler.prototype = new REventHandler();
  * \param event QDropEvent
  */
 EventHandler.prototype.drop = function(event) {
+    ViewportWidget.handleDrop(event);
+};
+
+/**
+ * Handles drop into the drawing area of any graphics view type
+ * (RGraphicsViewQt or RGraphicsViewRhi2D): dropped files are inserted
+ * into the current drawing (script items as script blocks, bitmaps as
+ * images, everything else as blocks from file).
+ * \param event QDropEvent
+ */
+ViewportWidget.handleDrop = function(event) {
     var mimeData = event.mimeData();
     var urls = getUrlsFromMimeData(mimeData);
 

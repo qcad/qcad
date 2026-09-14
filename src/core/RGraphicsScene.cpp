@@ -173,6 +173,16 @@ void RGraphicsScene::regenerate(QSet<REntity::Id>& affectedEntities, bool update
 }
 
 /**
+ * Translates the graphical representation of the given entities by the given
+ * offset. The default implementation exports the entities again (regenerate).
+ */
+void RGraphicsScene::translateEntities(QSet<REntity::Id>& affectedEntities, const RVector& offset) {
+    Q_UNUSED(offset)
+    // virtual: scenes may implement additional bookkeeping in regenerate:
+    regenerate(affectedEntities, false);
+}
+
+/**
  * Updates the selection status of the given entities. The default implementation
  * exports the entities again. May be overridden for performance reasons.
  */
