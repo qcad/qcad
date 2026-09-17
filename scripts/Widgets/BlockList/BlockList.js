@@ -140,18 +140,47 @@ RBlockListQt.getContextMenuScriptFileXRefOnly = function(blockList) {
     return scriptFileXRefOnly;
 };
 
-RBlockListQt.prototype.contextMenuEvent = function(e) {
-    var item = this.itemAt(e.pos());
-    if (!isNull(item)) {
-        this.setCurrentItem(item);
+/**
+ * Creates the context menu of the block list without showing it.
+ *
+ * Kept separate from contextMenuEvent, so that the very same menu can be shown
+ * without QMenu::exec() and its own event loop (e.g. by the tutorial generator,
+ * which drives the UI from the main event loop).
+ *
+ * \param blockList Block list widget or undefined for the block list of the
+ *        main window.
+ * \param item Item (block) the context menu is created for or undefined for
+ *        the current item of the block list.
+ *
+ * \return New QMenu (owned by the caller) or undefined.
+ */
+RBlockListQt.getContextMenu = function(blockList, item) {
+    if (isNull(blockList)) {
+        blockList = RBlockListQt.getWidget();
+    }
+    if (isNull(blockList)) {
+        return undefined;
     }
 
-    var document = this.di.getDocument();
-    var blockName = this.getBlockName(item);
-    var block = document.queryBlockDirect(blockName);
+    if (isNull(item)) {
+        item = blockList.currentItem();
+    }
+
+    var document = undefined;
+    if (!isNull(blockList.di)) {
+        document = blockList.di.getDocument();
+    }
+    if (isNull(document)) {
+        document = EAction.getDocument();
+    }
+
     var isXRef = false;
-    if (!isNull(block)) {
-        isXRef = block.isXRef();
+    if (!isNull(document) && !isNull(item)) {
+        var blockName = item.data(BlockList.colName, Qt.UserRole);
+        var block = document.queryBlockDirect(blockName);
+        if (!isNull(block)) {
+            isXRef = block.isXRef();
+        }
     }
 
     var menu = new QMenu();
@@ -167,9 +196,21 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
     RGuiAction.getByScriptFile("scripts/Block/SelectBlockReferences/SelectBlockReferences.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/DeselectBlockReferences/DeselectBlockReferences.js").addToMenu(menu);
 
-    RBlockListQt.complementContextMenu(menu, RBlockListQt.getWidget(), isXRef);
+    RBlockListQt.complementContextMenu(menu, blockList, isXRef);
 
-    menu.exec(QCursor.pos());
+    return menu;
+};
+
+RBlockListQt.prototype.contextMenuEvent = function(e) {
+    var item = this.itemAt(e.pos());
+    if (!isNull(item)) {
+        this.setCurrentItem(item);
+    }
+
+    var menu = RBlockListQt.getContextMenu(this, item);
+    if (!isNull(menu)) {
+        menu.exec(QCursor.pos());
+    }
 
     e.ignore();
 };
