@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QAccessible>
 #include <QApplication>
 #include <QColor>
 #include <QDir>
@@ -1810,6 +1811,37 @@ QVariant RSettings::getValue(const QString& key, const QVariant& defaultValue) {
 bool RSettings::getBoolValue(const QString& key, bool defaultValue) {
     QVariant ret = getValue(key, defaultValue);
     return ret.toBool();
+}
+
+/**
+ * \return True if a screen reader (e.g. VoiceOver, Narrator, Orca) or another
+ * assistive tool is attached to the application.
+ *
+ * Query this whenever the information is needed, never once at startup: a
+ * screen reader is usually only attached after the widgets have been created
+ * (on macOS, accessibility is activated the first time an assistive client
+ * asks the window for an attribute), and it can be started and stopped at any
+ * time.
+ */
+bool RSettings::isScreenReaderActive() {
+    return QAccessible::isActive();
+}
+
+/**
+ * \return True if the cursor keys navigate through the items of lists and
+ * trees (layer list, block list, ...) instead of being forwarded to the main
+ * window (where they move the selected entities).
+ *
+ * This is the user setting Keyboard/EnableKeyboardNavigationInLists, but it
+ * is always on while a screen reader is attached: without the cursor keys
+ * there is no way to move through the items of a list at all, which would
+ * make those lists unusable with e.g. VoiceOver.
+ */
+bool RSettings::isKeyboardNavigationInListsEnabled() {
+    if (isScreenReaderActive()) {
+        return true;
+    }
+    return getBoolValue("Keyboard/EnableKeyboardNavigationInLists", false);
 }
 
 /**

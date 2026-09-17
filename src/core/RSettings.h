@@ -259,6 +259,9 @@ public:
 
     static QStringList getScaleList(const RS::Unit unit);
 
+    static bool isScreenReaderActive();
+    static bool isKeyboardNavigationInListsEnabled();
+
     /**
      * \nonscriptable
      */
