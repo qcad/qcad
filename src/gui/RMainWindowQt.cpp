@@ -40,6 +40,7 @@
 #include "RGraphicsViewImage.h"
 #include "RGraphicsViewQt.h"
 #include "RAccessibleToolTipFilter.h"
+#include "RAccessibleFlatTree.h"
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
@@ -84,6 +85,8 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
 
     // keep accessible descriptions (screen readers) free of HTML tool tip markup:
     qApp->installEventFilter(new RAccessibleToolTipFilter(this));
+    // alternative accessibility implementation for opted in tree widgets:
+    RAccessibleFlatTree::install();
 
     RSingleApplication* singleApp = dynamic_cast<RSingleApplication*> (qApp);
     if (singleApp!=NULL) {
