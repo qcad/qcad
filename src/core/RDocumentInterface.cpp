@@ -535,7 +535,7 @@ void RDocumentInterface::suspend() {
     suspended = true;
 }
 
-void RDocumentInterface::resume() {
+void RDocumentInterface::checkDirtyXRefs() {
     // ask user if changed XRefs should be reloaded:
     if (!dirtyXRefPaths.isEmpty()) {
         RMainWindow* appWin = RMainWindow::getMainWindow();
@@ -546,6 +546,10 @@ void RDocumentInterface::resume() {
 
         dirtyXRefPaths.clear();
     }
+}
+
+void RDocumentInterface::resume() {
+    checkDirtyXRefs();
 
     if (currentSnap!=NULL) {
         currentSnap->showUiOptions();

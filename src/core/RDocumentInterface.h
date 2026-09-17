@@ -180,6 +180,8 @@ public:
     void suspend();
     void resume();
 
+    void checkDirtyXRefs();
+
     void setClickMode(RAction::ClickMode m);
     RAction::ClickMode getClickMode();
 

@@ -164,6 +164,13 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         return;
     }
 
+    if (isNull(this.di)) {
+        return;
+    }
+
+    // check for dirty XRefs while nothing else is happening:
+    this.di.checkDirtyXRefs();
+
     view = event.getGraphicsView();
 
     switch (this.state) {
@@ -175,7 +182,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         } else {
             if (RSettings.getBoolValue("GraphicsView/HighlightEntity", true)===true) {
 
-                entityId = EAction.getEntityIdUnderCursor(this.getDocumentInterface(), event, undefined, true);
+                entityId = EAction.getEntityIdUnderCursor(this.di, event, undefined, true);
 
 //                range = view.mapDistanceFromView(this.pickRangePixels);
 //                var strictRange = view.mapDistanceFromView(10);
@@ -277,7 +284,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
     case DefaultAction.State.SettingCorner2:
         this.d2Model = event.getModelPosition();
         Select.previewSelectionBox(
-            this.getDocumentInterface(),
+            this.di,
             new RBox(this.d1Model, this.d2Model),
             this.d1Model.x > this.d2Model.x
         );
