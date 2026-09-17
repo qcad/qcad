@@ -49,7 +49,9 @@
  * (RGraphicsSceneRhi3D) exports its entities into the view it is attached
  * to (i.e. onto the GPU) and cannot be rendered by an image based view:
  * the rendered frame is read back from the RHI based view instead (see
- * \ref renderBitmapRhi).
+ * \ref renderBitmapRhi), or the document is rendered through a temporary
+ * off screen image based view if the RHI based view cannot render the
+ * requested size (see \ref renderBitmapImageOffScreen).
  */
 function exportBitmap(doc, scene, fileName, properties, view) {
     var ret;
@@ -269,6 +271,12 @@ function renderBitmapImage(doc, scene, properties, view) {
     view.setNumThreads(numThreadsOri);
     if (viewCreated) {
         scene.unregisterView(view);
+        // deleting a view which is still attached to a scene makes the
+        // document interface delete that scene if no other view uses it
+        // (RDocumentInterface::deleteScenesWithoutViews): detach the
+        // temporary view from the scene of the caller first, or the
+        // caller is left with a deleted scene:
+        view.setScene(null, false);
         destr(view);
     }
 
@@ -279,10 +287,20 @@ function renderBitmapImage(doc, scene, properties, view) {
  * Renders the given RHI based scene (RGraphicsSceneRhi3D) by reading the
  * frame rendered by the given RHI based view back from the GPU.
  *
- * The RHI based view renders into its own (on screen) window and not into
- * an image of arbitrary size: it is resized and zoomed to the exported
- * area for the export and restored afterwards. The rendered frame is in
- * device pixels and scaled to the exported size.
+ * The view is displayed on screen and typically managed by a layout
+ * (resizing it to the exported size is not possible): it renders into a
+ * color buffer of the exported size instead (a texture on the GPU, see
+ * RGraphicsViewRhi3D::setExportSize) while it keeps its geometry on
+ * screen. One pixel of that color buffer is one (device independent)
+ * pixel of the view during the export, so the rendered frame has
+ * exactly the exported size and the exported area is the same as for an
+ * image based view of that size.
+ *
+ * Images which are larger than the maximum texture size of the GPU
+ * cannot be rendered by the RHI based view: they are rendered by a
+ * temporary off screen image based view instead (see
+ * \ref renderBitmapImageOffScreen), which is also used as a fallback if
+ * the frame cannot be rendered at all.
  *
  * Options which are implemented by the image based view only (paint
  * origin, antialiasing, alpha channel, text height threshold, number of
@@ -300,6 +318,18 @@ function renderBitmapImage(doc, scene, properties, view) {
  * \return QImage or undefined.
  */
 function renderBitmapRhi(doc, scene, properties, rhiView) {
+    // the frame is rendered into a texture on the GPU: images which are
+    // larger than the maximum texture size are rendered by an image
+    // based view (which renders into an image of arbitrary size):
+    var maxSize = rhiView.getMaxExportSize();
+    if (maxSize>0 &&
+        (properties["width"]>maxSize || properties["height"]>maxSize)) {
+
+        qDebug("bitmap export: image is larger than the maximum texture size (" +
+               maxSize + "): using an image based view");
+        return renderBitmapImageOffScreen(doc, scene, properties);
+    }
+
     // the RGraphicsView interface of the view (navigation, zooming):
     // owned by the view, 2D views only:
     var view = undefined;
@@ -309,8 +339,6 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
 
     // the view is displayed on screen: remember its state to restore it
     // after the export:
-    var oriWidth = rhiView.width;
-    var oriHeight = rhiView.height;
     var oriFactor, oriOffset, oriBackgroundColor, oriExporting, oriHairlineMinimumMode, oriColorCorrection;
     if (!isNull(view)) {
         oriFactor = view.getFactor();
@@ -321,9 +349,10 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
         oriColorCorrection = rhiView.getColorCorrectionOverride();
     }
 
-    // the zoom depends on the size of the view: resize first:
-    rhiView.resize(properties["width"], properties["height"]);
-    QCoreApplication.processEvents();
+    // the zoom depends on the size of the view: switch to the exported
+    // size first (the view reports it as its size while it renders into
+    // the color buffer of that size):
+    rhiView.setExportSize(properties["width"], properties["height"]);
 
     if (!isNull(view)) {
         if (properties["backgroundColor"]) {
@@ -337,7 +366,7 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
         view.setExporting(true);
         view.setHairlineMinimumMode(true);
 
-        zoomBitmapView(doc, view, properties, getRhiMargin(properties["margin"]));
+        zoomBitmapView(doc, view, properties, properties["margin"]);
     }
 
     // the colors of the entities of an RHI based scene are resolved at
@@ -355,11 +384,13 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
         properties["initView"](isNull(view) ? rhiView : view);
     }
 
-    // render a frame and read it back from the GPU:
-    var buffer = rhiView.grab().toImage();
+    // render a frame into the color buffer of the exported size and read
+    // it back from the GPU (QWidget.grab cannot be used: it renders the
+    // color buffer into an image of the size of the widget):
+    var buffer = rhiView.grabFramebuffer();
 
     // restore the state of the view:
-    rhiView.resize(oriWidth, oriHeight);
+    rhiView.resetExportSize();
     if (!isNull(view)) {
         view.setExporting(oriExporting);
         view.setHairlineMinimumMode(oriHairlineMinimumMode);
@@ -376,12 +407,16 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
     QCoreApplication.processEvents();
 
     if (isNull(buffer) || buffer.isNull()) {
-        return undefined;
+        // the frame could not be rendered (e.g. the color buffer exceeds
+        // the limits of the GPU): fall back to an image based view:
+        qDebug("bitmap export: cannot render frame: using an image based view");
+        return renderBitmapImageOffScreen(doc, scene, properties);
     }
 
-    // the view renders in device pixels (e.g. twice the size of the view
-    // on a high resolution screen):
+    // the color buffer has the exported size, this should never happen:
     if (buffer.width()!==properties["width"] || buffer.height()!==properties["height"]) {
+        qWarning("bitmap export: unexpected frame size: " +
+                 buffer.width() + "x" + buffer.height());
         buffer = buffer.scaled(properties["width"], properties["height"],
                                Qt.IgnoreAspectRatio, Qt.SmoothTransformation);
     }
@@ -399,20 +434,35 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
 }
 
 /**
- * \return Margin to use for zooming an RHI based view.
+ * Renders the scene of the document of the given scene through a
+ * temporary off screen image based view (RGraphicsSceneQt /
+ * RGraphicsViewImage), for exports which the RHI based view cannot
+ * render (see \ref renderBitmapRhi). The image based view renders into
+ * an image of arbitrary size on the CPU.
  *
- * RGraphicsView.zoomTo doubles the margin if the high resolution graphics
- * view is enabled: the image of an image based view is in device pixels.
- * RHI based views navigate in device independent pixels (the frame is
- * scaled to the exported size after rendering): compensate, so the margin
- * is the same in the exported image.
+ * \return QImage or undefined.
  */
-function getRhiMargin(margin) {
-    if (RSettings.getHighResolutionGraphicsView()) {
-        return Math.floor(margin / 2);
-    }
+function renderBitmapImageOffScreen(doc, scene, properties) {
+    var di = scene.getDocumentInterface();
+    var imageScene = new RGraphicsSceneQt(di);
+    var imageView = new RGraphicsViewImage();
+    imageView.setScene(imageScene, false);
 
-    return margin;
+    // the entities are exported into the new scene (which is empty):
+    properties["regen"] = true;
+
+    var buffer = renderBitmapImage(doc, imageScene, properties, imageView);
+
+    // the image based view is owned by its creator
+    // (RGraphicsViewImage::isShared): deleting the scene unregisters it
+    // from the document interface and detaches the view, which is
+    // deleted after that (deleting the view first would make the
+    // document interface delete the scene, see
+    // RDocumentInterface::deleteScenesWithoutViews):
+    destr(imageScene);
+    destr(imageView);
+
+    return buffer;
 }
 
 /**
