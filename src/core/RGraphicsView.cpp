@@ -363,10 +363,14 @@ void RGraphicsView::zoomTo(const RBox& window, int margin) {
         return;
     }
 
-    int m = margin;
-    if (RSettings::getHighResolutionGraphicsView()) {
-        m*=2;
-    }
+    // the margin is given in device independent pixels, the view
+    // coordinates it is subtracted from are view pixels: device pixels for
+    // views which render at the device pixel ratio of the screen
+    // (RGraphicsViewImage with the high resolution graphics view enabled),
+    // device independent pixels for views which do not (the RHI based
+    // views, which render at the device pixel ratio but map coordinates in
+    // device independent pixels):
+    int m = (int)(margin * getDevicePixelRatio());
 
     if (w>1.0e-6) {
         f.x = (getWidth() - 2 * m) / w;
