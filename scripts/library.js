@@ -67,12 +67,10 @@ function requiresFramework(minVersion, maxVersion) {
 
     if (frameworkV < minV) {
         qCritical("QCAD Application Framework is too old for script plugin ", includeBasePath);
-        debugger;
     }
 
     if (frameworkV > maxV) {
         qCritical("QCAD Application Framework is too new for script plugin", includeBasePath);
-        debugger;
     }
 }
 

@@ -751,9 +751,6 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                             gridLayout.addWidget(controls[0], row,1);
                             gridLayout.addWidget(controls[1], row,2);
                         }
-                        else {
-                            debugger;
-                        }
 
                         // 'remove custom property' button:
                         if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom) &&
@@ -1555,7 +1552,6 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         }
         else {
             // custom something, cannot handle this:
-            debugger;
         }
     }
     else {

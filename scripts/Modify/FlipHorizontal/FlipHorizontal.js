@@ -58,7 +58,7 @@ FlipHorizontal.flip = function(di, horizontally, toolTitle) {
         var id = ids[i];
         var entity = document.queryEntity(id);
         if (isNull(entity)) {
-            debugger;
+            continue;
         }
 
         entity.mirror(axis);

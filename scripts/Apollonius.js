@@ -34,7 +34,6 @@ Apollonius.constructionShapes = [];
 Apollonius.getSolutions = function(shape1, shape2, shape3) {
     if (isArray(shape1) && isNull(shape2) && isNull(shape3)) {
         if (shape1.length!==3) {
-            debugger;
             return [];
         }
         return Apollonius.getSolutions(shape1[0], shape1[1], shape1[2]);
@@ -684,7 +683,6 @@ Apollonius.compareShapes = function(shape1, shape2) {
                RMath.fuzzyCompare(shape1.radius, shape2.radius);
     }
 
-    debugger;
     return false;
 };
 
@@ -2246,11 +2244,12 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
             var p = shape.getIntersectionPoints(s, false)[0];
             var pInverse = Apollonius.getInverseShape(new RPoint(p), inversionCircle);
 
-            if (!pInverse.position.isValid()) {
-                debugger;
+            if (pInverse.position.isValid()) {
+                return RCircle.createFrom2Points(center, pInverse.position);
             }
-
-            return RCircle.createFrom2Points(center, pInverse.position);
+            else {
+                qWarning("invalid inverse point for line shape: " + pInverse.position);
+            }
         }
     }
 
@@ -2273,7 +2272,6 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
             var s = new RLine(inversionCircle.center, circle.center);
             ips = s.getIntersectionPoints(getPtr(circle), false);
             if (ips.length<1) {
-                debugger;
                 return undefined;
             }
 
@@ -2281,7 +2279,6 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
 
             if (p.equalsFuzzy(inversionCircle.center)) {
                 if (ips.length<2) {
-                    debugger;
                     return undefined;
                 }
                 p = ips[1];
@@ -2289,11 +2286,13 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
 
             var pInverse = Apollonius.getInverseShape(new RPoint(p), inversionCircle);
 
-            if (!pInverse.position.isValid()) {
-                debugger;
+            if (pInverse.position.isValid()) {
+                return new RLine(pInverse.position, s.getAngle() + Math.PI/2, 1.0);
+            }
+            else {
+                qWarning("invalid inverse point for line shape: " + pInverse.position);
             }
 
-            return new RLine(pInverse.position, s.getAngle() + Math.PI/2, 1.0);
         }
         else {
             var l = new RLine(inversionCircle.center, circle.center);
@@ -2307,18 +2306,14 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
             var p1Inverse = Apollonius.getInverseShape(new RPoint(p1), inversionCircle);
             var p2Inverse = Apollonius.getInverseShape(new RPoint(p2), inversionCircle);
 
-            if (!p1Inverse.position.isValid()) {
-                debugger;
+            if (p1Inverse.position.isValid() && p2Inverse.position.isValid()) {
+                return RCircle.createFrom2Points(p1Inverse.position, p2Inverse.position);
             }
-            if (!p2Inverse.position.isValid()) {
-                debugger;
+            else {
+                qWarning("invalid inverse points for circle shape: " + p1Inverse.position + ", " + p2Inverse.position);
             }
-
-            return RCircle.createFrom2Points(p1Inverse.position, p2Inverse.position);
         }
     }
-
-    debugger;
 };
 
 /**

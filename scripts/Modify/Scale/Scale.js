@@ -397,7 +397,6 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
 
     // non-uniform scaling of hatches:
     if (isHatchEntity(entity)) {
-        //debugger;
         var data = entity.getData();
         var newHatchData = new RHatchData();
         newHatchData.setDocument(data.getDocument());

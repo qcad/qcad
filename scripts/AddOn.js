@@ -249,7 +249,7 @@ AddOn.prototype.hasShortcuts = function() {
         }
         return ret;
     } catch (e) {
-        debugger;
+
     }
     return undefined;
 };

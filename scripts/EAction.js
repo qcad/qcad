@@ -227,7 +227,6 @@ EAction.prototype.setUiOptions = function(uiFile, split) {
 EAction.prototype.setState = function(state) {
     if (!isNumber(state)) {
         qWarning("EAction.prototype.setState: invalid state");
-        debugger;
         return;
     }
 

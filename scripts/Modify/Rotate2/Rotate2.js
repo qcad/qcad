@@ -196,10 +196,6 @@ Rotate2.prototype.transform = function(entity, k, op, preview, flags) {
 
 Rotate2.prototype.slotPrimaryAngleChanged = function(value) {
     this.primaryAngle = value;
-    qDebug("this.primaryAngle: ", this.primaryAngle);
-    if (this.primaryAngle>29.9) {
-        debugger;
-    }
 };
 
 Rotate2.prototype.slotSecondaryAngleChanged = function(value) {

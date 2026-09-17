@@ -55,7 +55,7 @@ ToFront.prototype.moveTo = function(front) {
         var id = ids[i];
         var entity = document.queryEntity(id);
         if (isNull(entity)) {
-            debugger;
+            continue;
         }
 
         entity.setDrawOrder(drawOrder+offset);

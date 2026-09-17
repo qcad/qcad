@@ -191,17 +191,6 @@ DimRotated.prototype.getEntity = function(preview) {
 DimRotated.prototype.initEntity = function(entity, preview) {
 };
 
-/*
-DimRotated.prototype.showUiOptions = function(resume, restoreFromSettings) {
-    Dimension.prototype.showUiOptions.call(this, resume, restoreFromSettings);
-};
-
-DimRotated.prototype.hideUiOptions = function(saveToSettings) {
-            debugger;
-    Dimension.prototype.hideUiOptions.call(this, saveToSettings);
-};
-*/
-
 /**
  * Called when the user changes the angle in the options toolbar.
  */
