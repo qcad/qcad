@@ -1389,6 +1389,10 @@ Kurtarmak ister misiniz?</translation>
         <source>Enable alternating row colors</source>
         <translation>Alternatif satır renklerini etkinleştir</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Geçerli blok</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

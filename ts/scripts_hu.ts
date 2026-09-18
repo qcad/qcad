@@ -1389,6 +1389,10 @@ Szeretné helyreállítani?</translation>
         <source>Enable alternating row colors</source>
         <translation>Váltakozó sorszínek használata</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Aktuális blokk</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

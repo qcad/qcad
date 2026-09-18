@@ -1389,6 +1389,10 @@ Bạn có muốn khôi phục không?</translation>
         <source>Enable alternating row colors</source>
         <translation>Bật màu hàng xen kẽ</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Khối hiện hành</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

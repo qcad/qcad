@@ -1391,6 +1391,10 @@ Do you wish to recover it?</source>
         <source>Enable alternating row colors</source>
         <translation>Aktiver vekslende radfarger</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Gjeldende blokk</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

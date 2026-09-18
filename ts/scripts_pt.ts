@@ -1391,6 +1391,10 @@ Você deseja recuperá-lo?</translation>
         <source>Enable alternating row colors</source>
         <translation>Ative alternando as cores das linhas</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Bloco atual</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

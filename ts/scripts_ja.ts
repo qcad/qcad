@@ -1389,6 +1389,10 @@ Do you wish to recover it?</source>
         <source>Enable alternating row colors</source>
         <translation>行の交互色を使用する</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>現在のブロック</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

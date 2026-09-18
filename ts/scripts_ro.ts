@@ -1393,6 +1393,10 @@ Doriți să îl recuperați?</translation>
         <source>Enable alternating row colors</source>
         <translation>Activați culorile alternante ale rândurilor</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Blocul curent</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

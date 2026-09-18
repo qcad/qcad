@@ -1394,6 +1394,10 @@ Do you wish to recover it?</source>
         <source>Enable alternating row colors</source>
         <translation>Omogući naizmjenične boje redaka</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Trenutni blok</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

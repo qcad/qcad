@@ -1391,6 +1391,10 @@ Ali jo želite obnoviti?</translation>
         <source>Enable alternating row colors</source>
         <translation>Omogoči alternirane barve vrstic</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Trenutni zbir</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

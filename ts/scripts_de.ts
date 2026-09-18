@@ -1391,6 +1391,10 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <source>Enable alternating row colors</source>
         <translation>Alternierende Zeilenfarben aktivieren</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Aktueller Block</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

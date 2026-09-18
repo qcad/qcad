@@ -1391,6 +1391,10 @@ Do you wish to recover it?</source>
         <source>Enable alternating row colors</source>
         <translation>Ενεργοποίηση εναλλασσόμενων χρωμάτων σειρών</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Τρέχον μπλοκ</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

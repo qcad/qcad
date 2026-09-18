@@ -1393,6 +1393,10 @@ Prajete si ho obnoviť?</translation>
         <source>Enable alternating row colors</source>
         <translation>Každý druhý riadok označiť farbou</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Aktuálny blok</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

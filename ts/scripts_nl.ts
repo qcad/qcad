@@ -1391,6 +1391,10 @@ Wilt u deze herstellen?</translation>
         <source>Enable alternating row colors</source>
         <translation>Afwisselende rij kleuren inschakelen</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Huidig blok</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

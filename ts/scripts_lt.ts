@@ -1393,6 +1393,10 @@ Ar norite jį atkurti?</translation>
         <source>Enable alternating row colors</source>
         <translation>Įjungti kintančias eilučių spalvas</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Esamas blokas</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

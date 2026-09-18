@@ -1393,6 +1393,10 @@ Vai vēlaties to atjaunot?</translation>
         <source>Enable alternating row colors</source>
         <translation>Iespējot pārmaiņus rindu krāsas</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Pašreizējais bloks</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

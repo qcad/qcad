@@ -1389,6 +1389,10 @@ Vill du återställa den?</translation>
         <source>Enable alternating row colors</source>
         <translation>Aktivera alternerande radfärger</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Aktuellt block</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

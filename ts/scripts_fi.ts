@@ -1391,6 +1391,10 @@ Haluatko palauttaa sen?</translation>
         <source>Enable alternating row colors</source>
         <translation>Salli vaihtelevat rivien värit</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Nykyinen lohko</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

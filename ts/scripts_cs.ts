@@ -1391,6 +1391,10 @@ Přejete si ho obnovit?</translation>
         <source>Enable alternating row colors</source>
         <translation>Povolit střídavé barvy řádků</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Aktuální blok</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

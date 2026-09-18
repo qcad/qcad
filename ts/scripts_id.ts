@@ -1389,6 +1389,10 @@ Apakah Anda ingin memulihkannya?</translation>
         <source>Enable alternating row colors</source>
         <translation>Mengaktifkan warna baris bergantian</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Blok saat ini</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

@@ -1391,6 +1391,10 @@ Kas soovite seda taastada?</translation>
         <source>Enable alternating row colors</source>
         <translation>Lubage vahelduvad reavärvid</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Praegune plokk</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>

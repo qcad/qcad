@@ -1393,6 +1393,10 @@ Czy chcesz go odzyskać?</translation>
         <source>Enable alternating row colors</source>
         <translation>Naprzemienne kolory wierszy</translation>
     </message>
+    <message>
+        <source>Current block</source>
+        <translation>Bieżący blok</translation>
+    </message>
 </context>
 <context>
     <name>BlockListAttributes</name>
