@@ -86,6 +86,80 @@ Modify.getMenu = function() {
     return menu;
 };
 
+/**
+ * \return Sub menu of the modify menu that contains the transformation
+ * tools (move, rotate, scale, mirror, ...).
+ */
+Modify.getTransformMenu = function() {
+    var menu = EAction.getSubMenu(
+        Modify.getMenu(),
+        13100, 100,
+        qsTr("&Transform"),
+        "ModifyTransformMenu"
+    );
+    menu.setProperty("scriptFile", Modify.includeBasePath + "/Modify.js");
+    return menu;
+};
+
+/**
+ * \return Sub menu of the modify menu that contains the offset tools.
+ */
+Modify.getOffsetMenu = function() {
+    var menu = EAction.getSubMenu(
+        Modify.getMenu(),
+        13150, 100,
+        qsTr("&Offset"),
+        "ModifyOffsetMenu"
+    );
+    menu.setProperty("scriptFile", Modify.includeBasePath + "/Modify.js");
+    return menu;
+};
+
+/**
+ * \return Sub menu of the modify menu that contains the tools that trim,
+ * extend, break up or divide entities.
+ */
+Modify.getTrimMenu = function() {
+    var menu = EAction.getSubMenu(
+        Modify.getMenu(),
+        13200, 100,
+        qsTr("Trim and Di&vide"),
+        "ModifyTrimMenu"
+    );
+    menu.setProperty("scriptFile", Modify.includeBasePath + "/Modify.js");
+    return menu;
+};
+
+/**
+ * \return Sub menu of the modify menu that contains the corner tools
+ * (chamfer / bevel, round).
+ */
+Modify.getCornerMenu = function() {
+    var menu = EAction.getSubMenu(
+        Modify.getMenu(),
+        13300, 100,
+        qsTr("&Corners"),
+        "ModifyCornerMenu"
+    );
+    menu.setProperty("scriptFile", Modify.includeBasePath + "/Modify.js");
+    return menu;
+};
+
+/**
+ * \return Sub menu of the modify menu that contains the tools that edit
+ * a particular type of entity (text, tolerance, hatch).
+ */
+Modify.getEntityMenu = function() {
+    var menu = EAction.getSubMenu(
+        Modify.getMenu(),
+        13500, 100,
+        qsTr("Entit&ies"),
+        "ModifyEntityMenu"
+    );
+    menu.setProperty("scriptFile", Modify.includeBasePath + "/Modify.js");
+    return menu;
+};
+
 Modify.getToolBar = function() {
     var tb = EAction.getToolBar(Modify.getTitle(), "ModifyToolBar");
     tb.visible = false;
@@ -131,6 +205,11 @@ Modify.prototype.getTitle = function() {
 
 Modify.init = function() {
     Modify.getMenu();
+    Modify.getTransformMenu();
+    Modify.getOffsetMenu();
+    Modify.getTrimMenu();
+    Modify.getCornerMenu();
+    Modify.getEntityMenu();
     Modify.getToolBar();
     Modify.getCadToolBarPanel();
     Modify.getToolMatrixPanel();

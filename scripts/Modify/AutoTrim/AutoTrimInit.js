@@ -6,5 +6,5 @@ function init(basePath) {
     action.setDefaultCommands(["autotrim", "ax"]);
     action.setGroupSortOrder(13400);
     action.setSortOrder(400);
-    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
+    action.setWidgetNames(["ModifyTrimMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
 }
