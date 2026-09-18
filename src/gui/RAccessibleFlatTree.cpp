@@ -19,6 +19,7 @@
 
 #include "RAccessibleFlatTree.h"
 
+#include <QAbstractItemModel>
 #include <QAccessible>
 #include <QAccessibleWidget>
 #include <QHeaderView>
@@ -42,9 +43,10 @@ namespace {
  */
 class RAccessibleFlatTreeItem : public QAccessibleInterface {
 public:
-    RAccessibleFlatTreeItem(QTreeWidget* tree, QTreeWidgetItem* item)
+    RAccessibleFlatTreeItem(QTreeWidget* tree, QTreeWidgetItem* item, int column)
         : tree(tree),
-          item(item) {
+          item(item),
+          column(column) {
     }
 
     bool isValid() const override {
@@ -98,11 +100,11 @@ public:
 
         switch (t) {
         case QAccessible::Name: {
-            const QString explicitText = item->data(0, Qt::AccessibleTextRole).toString();
-            return explicitText.isEmpty() ? item->text(0) : explicitText;
+            const QString explicitText = item->data(column, Qt::AccessibleTextRole).toString();
+            return explicitText.isEmpty() ? item->text(column) : explicitText;
         }
         case QAccessible::Description: {
-            const QString description = item->data(0, Qt::AccessibleDescriptionRole).toString();
+            const QString description = item->data(column, Qt::AccessibleDescriptionRole).toString();
             // the name is already read as the value of the item: do not let
             // the same text be announced a second time as its label:
             if (description == text(QAccessible::Name)) {
@@ -120,6 +122,10 @@ public:
         Q_UNUSED(text)
     }
 
+    /**
+     * \return The rectangle of the whole row: one item is reported as one
+     * element, independently of the column its text is read from.
+     */
     QRect rect() const override {
         if (!isValid()) {
             return QRect();
@@ -128,6 +134,8 @@ public:
         if (r.isNull()) {
             return QRect();
         }
+        r.setX(0);
+        r.setWidth(tree->viewport()->width());
         r.translate(tree->viewport()->mapToGlobal(QPoint(0, 0)));
         return r;
     }
@@ -169,6 +177,7 @@ public:
 private:
     QPointer<QTreeWidget> tree;
     QTreeWidgetItem* item;
+    int column;
 };
 
 /**
@@ -178,15 +187,34 @@ private:
 class RAccessibleFlatTreeView : public QAccessibleWidget, public QAccessibleSelectionInterface {
 public:
     explicit RAccessibleFlatTreeView(QTreeWidget* tree)
-        : QAccessibleWidget(tree, QAccessible::List) {
+        : QAccessibleWidget(tree, QAccessible::List),
+          watcher(new QObject()) {
+
+        // items are cached by item pointer: the cache has to be dropped
+        // before items are deleted, or a screen reader which still holds an
+        // element would read a deleted item (the layer list and the block
+        // list rebuild all their items whenever the drawing changes).
+        // the watcher object owns the connections and is deleted with this
+        // interface, so no callback can outlive it:
+        QAbstractItemModel* model = tree->model();
+        if (model != NULL) {
+            QObject::connect(model, &QAbstractItemModel::modelAboutToBeReset,
+                             watcher, [this]() { dropItemInterfaces(); });
+            QObject::connect(model, &QAbstractItemModel::rowsAboutToBeRemoved,
+                             watcher, [this]() { dropItemInterfaces(); });
+            QObject::connect(model, &QAbstractItemModel::columnsAboutToBeRemoved,
+                             watcher, [this]() { dropItemInterfaces(); });
+            QObject::connect(model, &QAbstractItemModel::layoutAboutToBeChanged,
+                             watcher, [this]() { dropItemInterfaces(); });
+            QObject::connect(model, &QObject::destroyed,
+                             watcher, [this]() { dropItemInterfaces(); });
+        }
     }
 
     ~RAccessibleFlatTreeView() override {
-        QHash<QTreeWidgetItem*, QAccessible::Id>::const_iterator it;
-        for (it = itemIds.constBegin(); it != itemIds.constEnd(); it++) {
-            QAccessible::deleteAccessibleInterface(it.value());
-        }
-        itemIds.clear();
+        delete watcher;
+        watcher = NULL;
+        dropItemInterfaces();
     }
 
     void* interface_cast(QAccessible::InterfaceType t) override {
@@ -197,22 +225,35 @@ public:
     }
 
     int childCount() const override {
-        return getVisibleItems().size() + getHeaderOffset();
+        return (getVisibleItems().size() + getHeaderOffset()) * getColumnCount();
     }
 
+    /**
+     * \return The interface of the item at the given child index, or NULL.
+     *
+     * Child indexes are cell indexes, as used by Qt's own item view
+     * accessibility: the index space of QTreeViewPrivate::accessibleTree2Index
+     * is kept identical, so that the child indexes of the focus and selection
+     * events QTreeView sends refer to the same items here. Only the column
+     * which holds the item text is exposed, so that an item shows up as one
+     * element and not once per column.
+     */
     QAccessibleInterface* child(int index) const override {
-        const int offset = getHeaderOffset();
-        if (index < offset) {
-            // Qt's item views count the header as the first child, even if it
-            // is hidden. The index space is kept identical here, so that the
-            // child indexes of the focus and selection events QTreeView sends
-            // (QTreeViewPrivate::accessibleChildIndex) refer to the same
-            // items. The header itself is not exposed:
+        if (index < 0) {
+            return NULL;
+        }
+        const int columns = getColumnCount();
+        if (index % columns != getAccessibleColumn()) {
+            return NULL;
+        }
+        // Qt's item views count the header as the first row, even if it is
+        // hidden. The header itself is not exposed:
+        const int i = index / columns - getHeaderOffset();
+        if (i < 0) {
             return NULL;
         }
         const QList<QTreeWidgetItem*> items = getVisibleItems();
-        const int i = index - offset;
-        if (i < 0 || i >= items.size()) {
+        if (i >= items.size()) {
             return NULL;
         }
         return getItemInterface(items.at(i));
@@ -228,7 +269,7 @@ public:
         if (i < 0) {
             return -1;
         }
-        return i + getHeaderOffset();
+        return (i + getHeaderOffset()) * getColumnCount() + getAccessibleColumn();
     }
 
     QAccessibleInterface* childAt(int x, int y) const override {
@@ -315,8 +356,16 @@ public:
     }
 
     bool selectAll() override {
-        // navigation trees are single selection:
-        return false;
+        QTreeWidget* tree = getTreeWidget();
+        if (tree == NULL) {
+            return false;
+        }
+        if (tree->selectionMode() != QAbstractItemView::MultiSelection &&
+            tree->selectionMode() != QAbstractItemView::ExtendedSelection) {
+            return false;
+        }
+        tree->selectAll();
+        return true;
     }
 
     bool clear() override {
@@ -340,6 +389,33 @@ private:
     int getHeaderOffset() const {
         QTreeWidget* tree = getTreeWidget();
         return (tree != NULL && tree->header() != NULL) ? 1 : 0;
+    }
+
+    /**
+     * \return Number of columns of the tree, at least 1.
+     */
+    int getColumnCount() const {
+        QTreeWidget* tree = getTreeWidget();
+        if (tree == NULL) {
+            return 1;
+        }
+        return qMax(1, tree->columnCount());
+    }
+
+    /**
+     * \return Index of the column which holds the text of an item.
+     */
+    int getAccessibleColumn() const {
+        QTreeWidget* tree = getTreeWidget();
+        if (tree == NULL) {
+            return 0;
+        }
+        bool ok = false;
+        const int c = tree->property(RAccessibleFlatTree::columnPropertyName()).toInt(&ok);
+        if (!ok || c < 0 || c >= getColumnCount()) {
+            return 0;
+        }
+        return c;
     }
 
     static QTreeWidgetItem* getTreeItem(const QAccessibleInterface* iface) {
@@ -402,12 +478,26 @@ private:
             itemIds.remove(item);
         }
 
-        QAccessibleInterface* iface = new RAccessibleFlatTreeItem(getTreeWidget(), item);
+        QAccessibleInterface* iface =
+                new RAccessibleFlatTreeItem(getTreeWidget(), item, getAccessibleColumn());
         QAccessible::registerAccessibleInterface(iface);
         itemIds.insert(item, QAccessible::uniqueId(iface));
         return iface;
     }
 
+    /**
+     * Drops all cached item interfaces. Called before items are removed
+     * from the tree, so that no interface can refer to a deleted item.
+     */
+    void dropItemInterfaces() const {
+        QHash<QTreeWidgetItem*, QAccessible::Id>::const_iterator it;
+        for (it = itemIds.constBegin(); it != itemIds.constEnd(); it++) {
+            QAccessible::deleteAccessibleInterface(it.value());
+        }
+        itemIds.clear();
+    }
+
+    QObject* watcher;
     mutable QHash<QTreeWidgetItem*, QAccessible::Id> itemIds;
 };
 
@@ -419,11 +509,6 @@ QAccessibleInterface* raccessibleFlatTreeFactory(const QString& classname, QObje
         return NULL;
     }
     if (!tree->property(RAccessibleFlatTree::propertyName()).toBool()) {
-        return NULL;
-    }
-    if (tree->columnCount() != 1) {
-        // the child index mapping assumes a single column, other trees keep
-        // the default Qt implementation:
         return NULL;
     }
     return new RAccessibleFlatTreeView(tree);

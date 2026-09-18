@@ -16,6 +16,7 @@ SOURCES += \
     RToolOptionEventFilter.cpp \
     RAccessibleToolTipFilter.cpp \
     RAccessibleFlatTree.cpp \
+    RAccessibleToolButton.cpp \
     REventHandler.cpp \
     RFileSystemModel.cpp \
     RFlowLayout.cpp \
@@ -58,6 +59,7 @@ HEADERS += \
     RToolOptionEventFilter.h \
     RAccessibleToolTipFilter.h \
     RAccessibleFlatTree.h \
+    RAccessibleToolButton.h \
     REventHandler.h \
     RFileSystemModel.h \
     RFlowLayout.h \

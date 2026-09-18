@@ -83,6 +83,9 @@
        </item>
        <item>
         <widget class="QTreeWidget" name="Category">
+         <property name="RAccessibleFlatTree" stdset="0">
+          <bool>true</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>200</width>

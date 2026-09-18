@@ -313,7 +313,12 @@ AbstractPreferences.prototype.beginEvent = function() {
     this.pageWidget = this.dialog.findChild("Page");
     this.filterWidget = this.dialog.findChild("Filter");
     this.titleWidget = this.dialog.findChild("Title");
-    
+
+    // the tree header is hidden, so screen readers (e.g. macOS VoiceOver)
+    // have no label for the navigation tree and the filter field:
+    this.treeWidget.accessibleName = title;
+    this.filterWidget.accessibleName = this.filterWidget.placeholderText;
+
     var splitter = this.dialog.findChild("splitter");
     splitter.setStretchFactor(0, 1);
     splitter.setStretchFactor(1, 4);
@@ -321,6 +326,17 @@ AbstractPreferences.prototype.beginEvent = function() {
     // connections:
     this.treeWidget.itemSelectionChanged.connect(this, this.showPage);
     this.filterWidget.textChanged.connect(this, this.filterTree);
+    // Down in the filter field moves on to the (filtered) navigation tree.
+    // A widget shortcut is used because the line edit does not use the arrow
+    // keys and its key events cannot be intercepted from script code
+    // (Return is not used here: it activates the OK button of the dialog):
+    this.treeShortcut = new QShortcut(this.filterWidget);
+    this.treeShortcut.objectName = "FilterToTree";
+    this.treeShortcut.context = Qt.WidgetShortcut;
+    // note: QKeySequence has no binding for the int / QKeyCombination
+    // constructor, the key is given as portable text:
+    this.treeShortcut.key = new QKeySequence("Down");
+    this.treeShortcut.activated.connect(this, this.focusTreeWidget);
 
     var btApply = this.dialog.findChild("ButtonBox").button(QDialogButtonBox.Apply);
     btApply.clicked.connect(this, this.applyPreferences);
@@ -332,6 +348,16 @@ AbstractPreferences.prototype.beginEvent = function() {
 
     if (!isNull(this.initialClassName)) {
         this.showPageFor(this.initialClassName);
+    }
+
+    // make sure the navigation tree always has a current item: without one
+    // there is nothing for a screen reader to announce when the tree gets
+    // the focus and the arrow keys have no anchor to start from:
+    if (isNull(this.treeWidget.currentItem())) {
+        var firstItem = AbstractPreferences.getFirstVisibleItem(this.treeWidget);
+        if (!isNull(firstItem)) {
+            this.treeWidget.setCurrentItem(firstItem);
+        }
     }
 
     this.filterWidget.setFocus();
@@ -346,6 +372,23 @@ AbstractPreferences.prototype.beginEvent = function() {
     destrDialog(this.dialog);
     EAction.activateMainWindow();
     this.terminate();
+};
+
+/**
+ * Makes the text of the given navigation tree item available to screen
+ * readers.
+ *
+ * Qt maps a tree item to macOS as a plain group: QAccessible::TreeItem is
+ * not in the role map of the Cocoa plugin, and it is not covered by
+ * QCocoaAccessible::hasValueAttribute either, so the item has neither a
+ * useful role nor an AXValue. Its text ends up in AXTitle only, which
+ * VoiceOver does not read for a group. The accessible label of the item
+ * (AXDescription) comes from QAccessible::Description, which Qt reads from
+ * Qt::AccessibleDescriptionRole - so setting that role gives VoiceOver
+ * something to announce.
+ */
+AbstractPreferences.initAccessibleItemText = function(item, text) {
+    item.setData(0, Qt.AccessibleDescriptionRole, text);
 };
 
 /**
@@ -406,6 +449,7 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
         item = undefined;
         if (items.length === 0) {
             item = new QTreeWidgetItem(treeWidget, [ cat[0] ]);
+            AbstractPreferences.initAccessibleItemText(item, cat[0]);
             treeWidget.addTopLevelItem(item);
             if (cat.length === 1) {
                 item.setData(0, Qt.UserRole, i);
@@ -426,6 +470,7 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
             }
             if (isNull(subItem)) {
                 subItem = new QTreeWidgetItem(parent, [ cat[x] ]);
+                AbstractPreferences.initAccessibleItemText(subItem, cat[x]);
                 parent.addChild(subItem);
                 if (x == cat.length - 1) {
                     subItem.setData(0, Qt.UserRole, i);
@@ -721,6 +766,23 @@ AbstractPreferences.prototype.updateTreeWidget = function(filterText) {
             item.setHidden(true);
         }
     }
+
+    // the filter may have hidden the current item: move on to the first
+    // remaining category, so that the tree keeps a current item a screen
+    // reader can announce and the arrow keys can start from.
+    // an item that shows a preference page is left alone: the user is
+    // working on that page and it must not disappear while typing a filter.
+    // only top level items are considered as the new current item, so that
+    // typing a filter does not load a page for every matching sub category.
+    var current = this.treeWidget.currentItem();
+    if (isNull(current) ||
+        (current.isHidden() && isNull(current.data(0, Qt.UserRole)))) {
+
+        var firstItem = AbstractPreferences.getFirstVisibleItem(this.treeWidget);
+        if (!isNull(firstItem)) {
+            this.treeWidget.setCurrentItem(firstItem);
+        }
+    }
 };
 
 /**
@@ -775,6 +837,37 @@ AbstractPreferences.prototype.filterItems = function(item, rexp, showAll) {
 };
 
 /**
+ * \return The first top level item of the given navigation tree that is
+ * not hidden by the filter or undefined if the filter matches nothing.
+ */
+AbstractPreferences.getFirstVisibleItem = function(treeWidget) {
+    for (var i=0; i<treeWidget.topLevelItemCount; ++i) {
+        var item = treeWidget.topLevelItem(i);
+        if (!item.isHidden()) {
+            return item;
+        }
+    }
+    return undefined;
+};
+
+/**
+ * Moves the keyboard focus from the filter field to the navigation tree
+ * and makes sure the tree has a visible current item. This is the keyboard
+ * (and screen reader) path from the filter to the matching categories,
+ * in addition to Tab.
+ */
+AbstractPreferences.prototype.focusTreeWidget = function() {
+    var item = this.treeWidget.currentItem();
+    if (isNull(item) || item.isHidden()) {
+        item = AbstractPreferences.getFirstVisibleItem(this.treeWidget);
+        if (!isNull(item)) {
+            this.treeWidget.setCurrentItem(item);
+        }
+    }
+    this.treeWidget.setFocus();
+};
+
+/**
  * Called when user enters a filter text for the navigation tree.
  */
 AbstractPreferences.prototype.filterTree = function(text) {
@@ -826,6 +919,9 @@ AbstractPreferences.prototype.showPage = function() {
     } else {
         this.titleWidget.text = pText + item.text(0);
     }
+    // label the page area for screen readers (the title label above it is
+    // not associated with the page widget):
+    this.pageWidget.accessibleName = this.titleWidget.text;
     var i = item.data(0, Qt.UserRole);
     var widget;
     if (!isNull(i)) {

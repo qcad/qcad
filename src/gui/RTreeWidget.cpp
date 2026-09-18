@@ -16,12 +16,52 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "REventFilter.h"
 #include "RSettings.h"
 #include "RTreeWidget.h"
 
 #include <QContextMenuEvent>
+#include <QCoreApplication>
 #include <QHeaderView>
+
+namespace {
+
+/**
+ * \internal
+ * Forwards key events of a list to its parent widget, so that the cursor keys
+ * reach the main window (where they move the selected entities) instead of
+ * navigating through the items of the list.
+ *
+ * Whether the keys are forwarded is decided for every single event, not once
+ * when the filter is installed: a screen reader is usually only attached after
+ * the widgets have been created, and it can be started and stopped at any
+ * time (see RSettings::isKeyboardNavigationInListsEnabled).
+ */
+class RTreeWidgetKeyForwarder : public QObject {
+public:
+    explicit RTreeWidgetKeyForwarder(QObject* parent) : QObject(parent) {
+    }
+
+protected:
+    bool eventFilter(QObject* obj, QEvent* e) override {
+        if (e==NULL || (e->type()!=QEvent::KeyPress && e->type()!=QEvent::KeyRelease)) {
+            return QObject::eventFilter(obj, e);
+        }
+
+        if (RSettings::isKeyboardNavigationInListsEnabled()) {
+            // the list handles the key itself:
+            return false;
+        }
+
+        QObject* parent = obj->parent();
+        if (parent!=NULL) {
+            QCoreApplication::sendEvent(parent, e);
+            e->accept();
+        }
+        return true;
+    }
+};
+
+} // namespace
 
 /**
  * Default Constructor.
@@ -34,12 +74,11 @@ RTreeWidget::RTreeWidget(QWidget* parent) :
 //    iconOffset = 0;
 //#endif
 
-    if (RSettings::getBoolValue("Keyboard/EnableKeyboardNavigationInLists", false)!=true) {
-        // no keyboard navigation in lists:
-        // forward keyboard events to parent:
-        installEventFilter(new REventFilter(QEvent::KeyPress, true));
-        installEventFilter(new REventFilter(QEvent::KeyRelease, true));
-    }
+    // unless keyboard navigation in lists is enabled, keyboard events are
+    // forwarded to the parent. the filter is always installed and decides for
+    // each event, so that lists become navigable as soon as a screen reader
+    // is attached:
+    installEventFilter(new RTreeWidgetKeyForwarder(this));
 }
 
 /**

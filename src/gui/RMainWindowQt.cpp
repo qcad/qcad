@@ -21,6 +21,7 @@
 #include <QLineEdit>
 #include <QMenu>
 #include <QMdiArea>
+#include <QMdiSubWindow>
 #include <QSettings>
 #include <QScreen>
 #include <QStatusBar>
@@ -41,6 +42,7 @@
 #include "RGraphicsViewQt.h"
 #include "RAccessibleToolTipFilter.h"
 #include "RAccessibleFlatTree.h"
+#include "RAccessibleToolButton.h"
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
@@ -87,6 +89,8 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
     qApp->installEventFilter(new RAccessibleToolTipFilter(this));
     // alternative accessibility implementation for opted in tree widgets:
     RAccessibleFlatTree::install();
+    // tool buttons of tools are buttons, not check boxes (screen readers):
+    RAccessibleToolButton::install();
 
     RSingleApplication* singleApp = dynamic_cast<RSingleApplication*> (qApp);
     if (singleApp!=NULL) {
@@ -766,6 +770,23 @@ void RMainWindowQt::clearKeyLog() {
  * offset is calibrated with the smallest observed delay (an event that was
  * processed immediately) and re-calibrated on every deliberate key press.
  */
+/**
+ * \return True if the given key event is a cursor key event which has to be
+ * left to a screen reader (see RSettings::isScreenReaderActive).
+ */
+bool RMainWindowQt::isCursorKeyReservedForScreenReader(QKeyEvent* ke) {
+    if (ke==NULL) {
+        return false;
+    }
+
+    int key = ke->key();
+    if (key!=Qt::Key_Up && key!=Qt::Key_Down && key!=Qt::Key_Left && key!=Qt::Key_Right) {
+        return false;
+    }
+
+    return RSettings::isScreenReaderActive();
+}
+
 bool RMainWindowQt::isStaleAutoRepeatKeyEvent(QKeyEvent* ke) {
     static QElapsedTimer wallClock;
     static qint64 baseOffset = 0;
@@ -878,8 +899,15 @@ bool RMainWindowQt::event(QEvent* e) {
             }
 
             // notify key listeners,
-            // e.g. for up / down / left / right keys
-            notifyKeyListeners(ke);
+            // e.g. for up / down / left / right keys.
+            // while a screen reader is attached, the cursor keys belong to
+            // the screen reader: they are how its user moves through lists,
+            // docks and the rest of the user interface. They must not also
+            // move the selection or pan the view (QuickModify), which is
+            // what the key listeners do with them:
+            if (!isCursorKeyReservedForScreenReader(ke)) {
+                notifyKeyListeners(ke);
+            }
 
             // enter:
             if (ke->key()==Qt::Key_Enter || ke->key()==Qt::Key_Return) {
@@ -1112,6 +1140,11 @@ bool RMainWindowQt::focusNextPrevWidget(bool next, QWidget* from) {
         from = QApplication::focusWidget();
     }
     if (from==NULL) {
+        // no application wide focus widget (e.g. window not active):
+        // fall back to the focus child of this main window:
+        from = focusWidget();
+    }
+    if (from==NULL) {
         return QMainWindow::focusNextPrevChild(next);
     }
 
@@ -1131,7 +1164,12 @@ bool RMainWindowQt::focusNextPrevWidget(bool next, QWidget* from) {
             continue;
         }
         if (w->isAncestorOf(from)) {
-            // e.g. QMdiSubWindow: would give focus back to child:
+            // would give focus back to child:
+            continue;
+        }
+        if (qobject_cast<QMdiSubWindow*>(w)!=NULL) {
+            // MDI child: focusable, but only hands the focus on to the
+            // widget inside it (drawing view), which is visited anyway:
             continue;
         }
         if (!isFocusReachable(w)) {

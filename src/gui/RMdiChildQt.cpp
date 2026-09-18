@@ -16,6 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QApplication>
+
 #include "RDocumentInterface.h"
 #include "RGraphicsViewImage.h"
 #include "RMainWindowQt.h"
@@ -149,6 +151,40 @@ void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
         mdiArea->setActiveSubWindow(children.at(nextIndex));
     }
 #endif
+}
+
+/**
+ * Tab / Shift+Tab with the keyboard focus in a widget of this MDI child which
+ * does not handle the focus chain itself (e.g. the layout tab bar below the
+ * drawing area): moves the focus to the next / previous widget of the main
+ * window.
+ *
+ * QWidget::focusNextPrevChild delegates up the parent chain to the first
+ * window or sub window, i.e. to this QMdiSubWindow, and from there Qt only
+ * considers widgets inside the sub window. Without this override, the focus
+ * is trapped between the widgets of the MDI child (the layout tab bar and the
+ * graphics view), which cannot be left with the keyboard or a screen reader.
+ */
+bool RMdiChildQt::focusNextPrevChild(bool next) {
+    RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+    if (appWin!=NULL) {
+        QWidget* from = QApplication::focusWidget();
+        if (from==NULL || from==this || !isAncestorOf(from)) {
+            // no application wide focus widget (e.g. window not active):
+            // fall back to the focus child of this MDI child:
+            from = focusWidget();
+        }
+
+        // only if the focus is really inside this MDI child
+        // (not the MDI child itself: it hands the focus back to its view):
+        if (from!=NULL && from!=this && isAncestorOf(from)) {
+            if (appWin->focusNextPrevWidget(next, from)) {
+                return true;
+            }
+        }
+    }
+
+    return QMdiSubWindow::focusNextPrevChild(next);
 }
 
 QSize RMdiChildQt::sizeHint() const {

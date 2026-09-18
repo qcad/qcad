@@ -57,12 +57,23 @@
  * treeWidget->setProperty(RAccessibleFlatTree::propertyName(), true);
  * \endcode
  *
- * Only single column trees are handled, trees with more columns keep the
- * default Qt implementation.
+ * One item of the tree is reported as one element, no matter how many
+ * columns the tree has. The text of the item is read from the column
+ * given by the property columnPropertyName() (column 0 by default):
  *
- * \note Items of an opted in tree must not be deleted while the tree
- * exists (hiding them, e.g. to filter the tree, is fine): the item
- * interfaces are cached by item pointer.
+ * \code
+ * // e.g. block list: the block name is in column 2:
+ * treeWidget->setProperty(RAccessibleFlatTree::columnPropertyName(), 2);
+ * \endcode
+ *
+ * The text a screen reader reads for an item is Qt::AccessibleTextRole of
+ * that column if set, the displayed text of that column otherwise. Trees
+ * which show information as icons in other columns (layer list, block
+ * list) should set Qt::AccessibleTextRole to a text which also describes
+ * the state shown by those icons.
+ *
+ * Items may be added, removed and replaced at any time: the interfaces of
+ * removed items are dropped before the items are deleted.
  *
  * \ingroup gui
  */
@@ -79,6 +90,14 @@ public:
      */
     static const char* propertyName() {
         return "RAccessibleFlatTree";
+    }
+
+    /**
+     * \return Name of the widget property a tree widget sets to the index
+     * of the column which holds the text of an item (0 if not set).
+     */
+    static const char* columnPropertyName() {
+        return "RAccessibleFlatTreeColumn";
     }
 
 private:

@@ -253,6 +253,11 @@ protected:
      */
     static bool isStaleAutoRepeatKeyEvent(QKeyEvent* ke);
 
+    /**
+     * \nonscriptable
+     */
+    static bool isCursorKeyReservedForScreenReader(QKeyEvent* ke);
+
     void restoreClosedDockWidgets();
 
 public slots:

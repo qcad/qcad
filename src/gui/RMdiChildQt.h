@@ -74,6 +74,7 @@ signals:
 
 protected:
     virtual void closeEvent(QCloseEvent* closeEvent);
+    virtual bool focusNextPrevChild(bool next);
 
 private:
     RDocumentInterface* documentInterface;
