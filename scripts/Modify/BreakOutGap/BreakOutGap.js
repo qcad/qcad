@@ -174,7 +174,6 @@ BreakOutGap.prototype.getOperation = function(preview) {
         shape1 = trimEndPoint(shape1, this.pos, this.pos);
         this.cutPos = shape1.getEndPoint();
         var points = shape1.getPointsWithDistanceToEnd(this.offset/2);
-        qDebug("points[1].valid:" + points[1].valid);
 
         // make sure the line is changed to invalid:
         if (points[1].valid) {
