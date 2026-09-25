@@ -1493,12 +1493,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation>Gap:</translation>
+        <translation>Celah:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>Menembus Kesenjangan</translation>
+        <translation>&amp;Putus Celah</translation>
     </message>
 </context>
 <context>

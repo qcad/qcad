@@ -1500,7 +1500,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>Zadělat &amp;mezeru</translation>
+        <translation>Vylomit &amp;mezeru</translation>
     </message>
 </context>
 <context>

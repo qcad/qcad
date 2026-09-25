@@ -1497,12 +1497,12 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation>Plaisa:</translation>
+        <translation>Sprauga:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>Izlaušanās plaisa</translation>
+        <translation>Izlauzt spraugu</translation>
     </message>
 </context>
 <context>

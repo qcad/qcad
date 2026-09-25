@@ -1495,12 +1495,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation>Gap:</translation>
+        <translation>Åpning:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>Break out Gap</translation>
+        <translation>&amp;Bryt ut åpning</translation>
     </message>
 </context>
 <context>

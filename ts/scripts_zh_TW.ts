@@ -1493,12 +1493,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>突破缺口</translation>
+        <translation>打斷間隙</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation>差距：</translation>
+        <translation>間隙：</translation>
     </message>
 </context>
 <context>

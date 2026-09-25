@@ -1495,12 +1495,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation>Lõhe:</translation>
+        <translation>Vahe:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>&amp;amp;Break out Gap</translation>
+        <translation>&amp;Lõika vahe välja</translation>
     </message>
 </context>
 <context>

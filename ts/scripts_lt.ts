@@ -1497,7 +1497,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>Išeiti iš spragos</translation>
+        <translation>Išlaužti tarpą</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>

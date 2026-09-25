@@ -1497,12 +1497,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation>Розрив:</translation>
+        <translation>Проміжок:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>Розрив з проміжком</translation>
+        <translation>&amp;Вирізати проміжок</translation>
     </message>
 </context>
 <context>

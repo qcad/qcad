@@ -1498,7 +1498,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>격차 해소</translation>
+        <translation>간격 잘라내기</translation>
     </message>
 </context>
 <context>

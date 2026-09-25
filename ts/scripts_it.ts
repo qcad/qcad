@@ -1495,12 +1495,12 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation>Lacuna:</translation>
+        <translation>Spazio:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>&amp;Uscire un gap</translation>
+        <translation>&amp;Interrompi con spazio</translation>
     </message>
 </context>
 <context>

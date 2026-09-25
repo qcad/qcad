@@ -1500,7 +1500,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>&amp;Abstand heraustrennen</translation>
+        <translation>&amp;Zwischenraum heraustrennen</translation>
     </message>
 </context>
 <context>
