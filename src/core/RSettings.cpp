@@ -1744,6 +1744,11 @@ RColor RSettings::getColor(const QString& key, const RColor& defaultValue) {
     // slow operation:
     QVariant stored = getQSettings()->value(key);
     if (!stored.isValid()) {
+        // no stored value: registered runtime default wins over caller's default
+        // (see setDefaultValue, e.g. the background color of the RHI views):
+        if (defaults.contains(key)) {
+            return defaults[key].value<RColor>();
+        }
         return defaultValue;
     }
     RColor ret = stored.value<RColor>();
