@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["edittext", "modifytext", "mt"]);
     action.setGroupSortOrder(13500);
     action.setSortOrder(100);
-    action.setWidgetNames(["ModifyEntityMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
+    action.setWidgetNames(["ModifyEntityMenu", "!ModifyToolBar", "!ModifyToolsPanel", "ModifyMatrixPanel"]);
 }
