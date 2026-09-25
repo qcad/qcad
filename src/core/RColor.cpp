@@ -362,16 +362,25 @@ void RColor::init() {
     if (RPluginLoader::hasPlugin("PROTOOLS")) {
         QString palette = RSettings::getStringValue("UserPalette/Colors", "");
         QStringList colorStrings = palette.split("\n");
+        // trailing empty lines are no separators:
+        while (!colorStrings.isEmpty() && colorStrings.last().trimmed().isEmpty()) {
+            colorStrings.removeLast();
+        }
+        // separator between standard and user colors:
         bool first = true;
+        bool lastWasSeparator = false;
         for (int i=0; i<colorStrings.length(); i++) {
             QString colorString = colorStrings[i];
-            if (colorString.isEmpty()) {
-                continue;
-            }
             //qDebug() << "color:" << colorString;
             QStringList tuples = colorString.split(",");
-            if (tuples.length()<2) {
-                init("---", RColor());
+            if (colorString.trimmed().isEmpty() || tuples.length()<2) {
+                // empty line or line without color code (e.g. "---"):
+                // separator, consecutive separators are collapsed:
+                if (!lastWasSeparator) {
+                    init("---", RColor());
+                }
+                first = false;
+                lastWasSeparator = true;
                 continue;
             }
             QString title = colorString.left(colorString.length()-tuples.last().length()-1);
@@ -382,6 +391,7 @@ void RColor::init() {
                 first = false;
             }
             init(title, RColor(code));
+            lastWasSeparator = false;
         }
     }
 }
