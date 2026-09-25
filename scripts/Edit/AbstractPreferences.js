@@ -346,8 +346,17 @@ AbstractPreferences.prototype.beginEvent = function() {
     AbstractPreferences.fillTreeWidget(this.addOns, this.treeWidget, this.appPreferences);
     this.treeWidget.expandAll();
 
+    var restoreScrollPositions = false;
     if (!isNull(this.initialClassName)) {
         this.showPageFor(this.initialClassName);
+    }
+    else if (isNull(this.treeWidget.currentItem())) {
+        // no page requested: show the page that was open last time:
+        var lastPage = RSettings.getStringValue(this.getSettingsKey("LastPage"), "");
+        if (lastPage.length>0) {
+            this.showPageFor(lastPage);
+            restoreScrollPositions = this.getCurrentClassName()===lastPage;
+        }
     }
 
     // make sure the navigation tree always has a current item: without one
@@ -360,9 +369,26 @@ AbstractPreferences.prototype.beginEvent = function() {
         }
     }
 
+    if (!isNull(this.treeWidget.currentItem())) {
+        this.treeWidget.scrollToItem(this.treeWidget.currentItem());
+    }
+
     this.filterWidget.setFocus();
 
-    if (this.dialog.exec() === QDialog.Accepted.valueOf()) {
+    if (restoreScrollPositions) {
+        // scroll ranges are only known once the dialog is shown and laid out:
+        var timer = new QTimer(this.dialog);
+        timer.singleShot = true;
+        timer.timeout.connect(this, this.restoreScrollPositions);
+        timer.start(0);
+    }
+
+    var accepted = this.dialog.exec() === QDialog.Accepted.valueOf();
+
+    // remember page and scroll positions for next time:
+    this.saveLastPage();
+
+    if (accepted) {
         // apply calls save and apply:
         this.applyPreferences();
     }
@@ -956,6 +982,100 @@ AbstractPreferences.prototype.showPage = function() {
     }
     this.pageWidget.setCurrentWidget(widget);
     this.treeWidget.setCurrentItem(item);
+};
+
+/**
+ * \return RSettings key used to store dialog state for the application
+ * or drawing preferences dialog.
+ */
+AbstractPreferences.prototype.getSettingsKey = function(name) {
+    return "PreferencesDialog/" + (this.appPreferences ? "App" : "Drawing") + name;
+};
+
+/**
+ * \return Class name of the add-on of the current page or undefined.
+ */
+AbstractPreferences.prototype.getCurrentClassName = function() {
+    var item = this.treeWidget.currentItem();
+    if (isNull(item)) {
+        return undefined;
+    }
+    var ix = item.data(0, Qt.UserRole);
+    if (isNull(ix) || isNull(this.addOns[ix])) {
+        return undefined;
+    }
+    return this.addOns[ix].getClassName();
+};
+
+/**
+ * \return All scroll areas of the current preference page.
+ */
+AbstractPreferences.prototype.getCurrentScrollAreas = function() {
+    var widget = this.pageWidget.currentWidget();
+    if (isNull(widget) || widget.objectName==="empty") {
+        return [];
+    }
+    var ret = [];
+    var collect = function(w) {
+        var children = w.children();
+        for (var i=0; i<children.length; i++) {
+            var c = children[i];
+            if (isNull(c)) {
+                continue;
+            }
+            if (isOfType(c, QScrollArea)) {
+                ret.push(c);
+            }
+            collect(c);
+        }
+    };
+    // the page itself is often a scroll area:
+    if (isOfType(widget, QScrollArea)) {
+        ret.push(widget);
+    }
+    collect(widget);
+    return ret;
+};
+
+/**
+ * Stores the current page and the scroll positions of its scroll areas.
+ */
+AbstractPreferences.prototype.saveLastPage = function() {
+    var className = this.getCurrentClassName();
+    if (isNull(className)) {
+        return;
+    }
+    RSettings.setValue(this.getSettingsKey("LastPage"), className);
+
+    var positions = [];
+    var scrollAreas = this.getCurrentScrollAreas();
+    for (var i=0; i<scrollAreas.length; i++) {
+        var sa = scrollAreas[i];
+        positions.push(sa.horizontalScrollBar().value + "," + sa.verticalScrollBar().value);
+    }
+    RSettings.setValue(this.getSettingsKey("LastScrollPositions"), positions.join(";"));
+};
+
+/**
+ * Restores the scroll positions of the scroll areas of the current page
+ * as stored by saveLastPage.
+ */
+AbstractPreferences.prototype.restoreScrollPositions = function() {
+    var str = RSettings.getStringValue(this.getSettingsKey("LastScrollPositions"), "");
+    if (str.length===0) {
+        return;
+    }
+    var positions = str.split(";");
+    var scrollAreas = this.getCurrentScrollAreas();
+    for (var i=0, k=0; i<scrollAreas.length && k<positions.length; i++) {
+        var sa = scrollAreas[i];
+        var xy = positions[k++].split(",");
+        if (xy.length!==2) {
+            continue;
+        }
+        sa.horizontalScrollBar().value = parseInt(xy[0], 10);
+        sa.verticalScrollBar().value = parseInt(xy[1], 10);
+    }
 };
 
 AbstractPreferences.prototype.showPageFor = function(className) {
