@@ -799,12 +799,14 @@ QList<RVector> REllipse::getEndPoints() const {
 }
 
 /**
- * \todo implement
+ * \return Middle point of the ellipse arc (at half its arc length). Empty for
+ * full ellipses or if no ellipse proxy is available.
  */
 QList<RVector> REllipse::getMiddlePoints() const {
-    QList<RVector> ret;
-    //ret.append(getMiddlePoint());
-    return ret;
+    if (REllipse::hasProxy()) {
+        return REllipse::getEllipseProxy()->getMiddlePoints(*this);
+    }
+    return QList<RVector>();
 }
 
 QList<RVector> REllipse::getCenterPoints() const {
@@ -814,14 +816,15 @@ QList<RVector> REllipse::getCenterPoints() const {
 }
 
 /**
- * \todo implement
+ * \return Point(s) on the ellipse at arc length \c distance from the start
+ * and / or end, controlled by the \c from bitmask (RS::FromStart, RS::FromEnd,
+ * RS::FromAny). Empty if no ellipse proxy is available.
  */
 QList<RVector> REllipse::getPointsWithDistanceToEnd(double distance, int from) const {
-    Q_UNUSED(distance)
-    Q_UNUSED(from)
-
-    QList<RVector> ret;
-    return ret;
+    if (REllipse::hasProxy()) {
+        return REllipse::getEllipseProxy()->getPointsWithDistanceToEnd(*this, distance, from);
+    }
+    return QList<RVector>();
 }
 
 QList<RVector> REllipse::getPointCloud(double segmentLength) const {

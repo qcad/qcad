@@ -46,6 +46,26 @@ public:
 
     virtual REllipse createInscribed(const RVector& pp1, const RVector& pp2, const RVector& pp3, const RVector& pp4, const RVector& centerHint = RVector::invalid) const = 0;
     virtual REllipse createFrom4Points(const RVector& pp1, const RVector& pp2, const RVector& pp3, const RVector& pp4) const = 0;
+
+    /**
+     * \return Middle point(s) of the given ellipse arc, measured along the
+     * arc length. See REllipse::getMiddlePoints.
+     */
+    virtual QList<RVector> getMiddlePoints(const REllipse& ellipse) const {
+        Q_UNUSED(ellipse)
+        return QList<RVector>();
+    }
+
+    /**
+     * \return Point(s) at the given arc length distance from the start and / or
+     * end of the given ellipse arc. See REllipse::getPointsWithDistanceToEnd.
+     */
+    virtual QList<RVector> getPointsWithDistanceToEnd(const REllipse& ellipse, double distance, int from) const {
+        Q_UNUSED(ellipse)
+        Q_UNUSED(distance)
+        Q_UNUSED(from)
+        return QList<RVector>();
+    }
 };
 
 #endif
