@@ -383,9 +383,9 @@ DrawPolyline.prototype.applyOperation = function(op) {
 };
 
 /**
- * Called when user clicks the 'Close' button to close the polyline.
+ * Called when user clicks the 'CloseSequence' button to close the polyline.
  */
-DrawPolyline.prototype.slotClose = function() {
+DrawPolyline.prototype.slotCloseSequence = function() {
     if (isNull(this.polylineEntity)) {
         return;
     }
@@ -508,7 +508,7 @@ DrawPolyline.prototype.updateButtonStates = function() {
     }
 
     var optionsToolBar = EAction.getOptionsToolBar();
-    w = optionsToolBar.findChild("Close");
+    w = optionsToolBar.findChild("CloseSequence");
     if (!isNull(this.polylineEntity)) {
         w.enabled = (this.polylineEntity.countVertices() >= 3) ? true : false;
     }
@@ -556,7 +556,7 @@ DrawPolyline.prototype.commandEvent = function(event) {
 
     str = qsTr("close");
     if (str.startsWith(cmd)) {
-        this.slotClose();
+        this.slotCloseSequence();
         event.accept();
         return;
     }

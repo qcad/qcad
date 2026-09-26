@@ -301,7 +301,7 @@ Line2P.prototype.getOperation = function(preview) {
     return new RAddObjectOperation(e, this.getToolTitle());
 };
 
-Line2P.prototype.slotClose = function() {
+Line2P.prototype.slotCloseSequence = function() {
     if (this.isRayOrXLine()) {
         return;
     }
@@ -402,7 +402,7 @@ Line2P.prototype.updateButtonStates = function() {
         }
     }
     
-    w = optionsToolBar.findChild("Close");
+    w = optionsToolBar.findChild("CloseSequence");
     if (!isNull(w)) {
         if (this.pointList.length > 2 && !this.isRayOrXLine()) {
             w.enabled = true;
@@ -452,7 +452,7 @@ Line2P.prototype.commandEvent = function(event) {
 
     str = "close";
     if (str.startsWith(cmd)) {
-        this.slotClose();
+        this.slotCloseSequence();
         event.accept();
         return;
     }

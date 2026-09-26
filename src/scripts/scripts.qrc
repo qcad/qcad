@@ -552,8 +552,8 @@
     <file alias="scripts/Draw/Line/Line.js">../../scripts/Draw/Line/Line.js</file>
     <file alias="scripts/Draw/Line/Line.svg">../../scripts/Draw/Line/Line.svg</file>
     <file alias="scripts/Draw/Line/Line.ui">../../scripts/Draw/Line/Line.ui</file>
-    <file alias="scripts/Draw/Line/Line2P/Close-inverse.svg">../../scripts/Draw/Line/Line2P/Close-inverse.svg</file>
-    <file alias="scripts/Draw/Line/Line2P/Close.svg">../../scripts/Draw/Line/Line2P/Close.svg</file>
+    <file alias="scripts/Draw/Line/Line2P/CloseSequence-inverse.svg">../../scripts/Draw/Line/Line2P/CloseSequence-inverse.svg</file>
+    <file alias="scripts/Draw/Line/Line2P/CloseSequence.svg">../../scripts/Draw/Line/Line2P/CloseSequence.svg</file>
     <file alias="scripts/Draw/Line/Line2P/Line2P-inverse.svg">../../scripts/Draw/Line/Line2P/Line2P-inverse.svg</file>
     <file alias="scripts/Draw/Line/Line2P/Line2P.js">../../scripts/Draw/Line/Line2P/Line2P.js</file>
     <file alias="scripts/Draw/Line/Line2P/Line2P.svg">../../scripts/Draw/Line/Line2P/Line2P.svg</file>
@@ -708,8 +708,8 @@
     <file alias="scripts/Draw/Point/Point1P/Point1PInit.js">../../scripts/Draw/Point/Point1P/Point1PInit.js</file>
     <file alias="scripts/Draw/Point/Point1P/Tests/Point1PTest00.js">../../scripts/Draw/Point/Point1P/Tests/Point1PTest00.js</file>
     <file alias="scripts/Draw/Point/Point1P/Tests/required/Point1PTest00_000.dxf">../../scripts/Draw/Point/Point1P/Tests/required/Point1PTest00_000.dxf</file>
-    <file alias="scripts/Draw/Polyline/DrawPolyline/Close-inverse.svg">../../scripts/Draw/Polyline/DrawPolyline/Close-inverse.svg</file>
-    <file alias="scripts/Draw/Polyline/DrawPolyline/Close.svg">../../scripts/Draw/Polyline/DrawPolyline/Close.svg</file>
+    <file alias="scripts/Draw/Polyline/DrawPolyline/CloseSequence-inverse.svg">../../scripts/Draw/Polyline/DrawPolyline/CloseSequence-inverse.svg</file>
+    <file alias="scripts/Draw/Polyline/DrawPolyline/CloseSequence.svg">../../scripts/Draw/Polyline/DrawPolyline/CloseSequence.svg</file>
     <file alias="scripts/Draw/Polyline/DrawPolyline/DrawPolyline-inverse.svg">../../scripts/Draw/Polyline/DrawPolyline/DrawPolyline-inverse.svg</file>
     <file alias="scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js">../../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js</file>
     <file alias="scripts/Draw/Polyline/DrawPolyline/DrawPolyline.svg">../../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.svg</file>

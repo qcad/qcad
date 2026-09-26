@@ -12,7 +12,7 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <widget class="QToolButton" name="Close">
+    <widget class="QToolButton" name="CloseSequence">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -27,7 +27,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>Close.svg</normaloff>Close.svg</iconset>
+       <normaloff>CloseSequence.svg</normaloff>CloseSequence.svg</iconset>
      </property>
     </widget>
    </item>
