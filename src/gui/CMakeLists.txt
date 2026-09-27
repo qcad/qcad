@@ -27,6 +27,7 @@ add_library(qcadgui SHARED
     RColumnLayout.cpp RColumnLayout.h
     RCloseCurrentEvent.h
     RColorCombo.cpp RColorCombo.h
+    RColorDialog.cpp RColorDialog.h
     RComboBox.cpp RComboBox.h
     RCommandLine.cpp RCommandLine.h
     RDockWidget.cpp RDockWidget.h

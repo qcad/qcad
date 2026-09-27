@@ -43,6 +43,7 @@
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
+#include "RColorDialog.h"
 #include "RDimAlignedEntity.h"
 #include "RDimAngularEntity.h"
 #include "RDimAngular2LEntity.h"
@@ -403,6 +404,11 @@ int main(int argc, char *argv[]) {
     RLinetypeListMetric::init();
     RLinetypeListImperial::init();
 
+    if (guiEnabled) {
+        // restore the custom colors of the color dialog (QCAD3.ini):
+        RColorDialog::loadCustomColors();
+    }
+
     // check for autostart option:
     QString autostartFile;
     QStringList arguments = app->arguments();
@@ -447,6 +453,9 @@ int main(int argc, char *argv[]) {
 #endif
 
     RPluginLoader::unloadPlugins();
+
+    // store the custom colors of the color dialog (QCAD3.ini):
+    RColorDialog::saveCustomColors();
 
     RSettings::uninit();
     RFontList::uninit();

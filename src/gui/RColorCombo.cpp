@@ -20,6 +20,7 @@
 #include <QColor>
 
 #include "RColorCombo.h"
+#include "RColorDialog.h"
 #include "RColor.h"
 
 RColorCombo::RColorCombo(QWidget *parent) :
@@ -114,6 +115,10 @@ void RColorCombo::colorChanged(int index) {
             clr = QColorDialog::getColor(currentColor, NULL, "",
                     showAlphaChannel ? QColorDialog::ShowAlphaChannel
                             : (QColorDialog::ColorDialogOption) 0);
+
+            // the user may have added the chosen color to the custom colors
+            // of the dialog: store them for the next session:
+            RColorDialog::saveCustomColors();
         }
         if (clr.isValid()) {
             currentColor = clr;
