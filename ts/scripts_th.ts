@@ -75,7 +75,7 @@
     <message>
         <location line="+1"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation>เครื่องมือ คุณสมบัติ และรูปแบบไฟล์เพิ่มเติมรวมถึง DWG มีอยู่ใน &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; หรือ &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;</translation>
+        <translation>เครื่องมือ ฟีเจอร์ และรูปแบบไฟล์เพิ่มเติมรวมถึง DWG มีให้ใช้ใน &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; หรือ &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,7 +90,7 @@
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation>ส่วนหนึ่งของซอฟต์แวร์นี้ © %1 The Qt Company Ltd.</translation>
+        <translation>บางส่วนของซอฟต์แวร์นี้ © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1025,7 +1025,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Points on entity</translation>
+        <translation>จุดบนวัตถุ</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1038,7 +1038,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Auto &amp;Trim</translation>
+        <translation>&amp;ตัดแต่งอัตโนมัติ</translation>
     </message>
 </context>
 <context>
@@ -1054,7 +1054,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation>Export to PDF</translation>
+        <translation>ส่งออกเป็น PDF</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
@@ -1081,17 +1081,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>The two entities cannot be bevelled.</translation>
+        <translation>ไม่สามารถลบมุมวัตถุทั้งสองได้</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>First entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุแรกได้</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Second entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุที่สองได้</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
@@ -1119,17 +1119,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation>Error while generating bitmap file &quot;%1&quot;: %2</translation>
+        <translation>เกิดข้อผิดพลาดขณะสร้างไฟล์บิตแมป &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation>Bitmap file has been exported to &quot;%1&quot;</translation>
+        <translation>ส่งออกไฟล์บิตแมปไปยัง &quot;%1&quot; แล้ว</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Files</source>
-        <translation>Files</translation>
+        <translation>ไฟล์</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1159,7 +1159,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+33"/>
         <source>Pixels per drawing unit:</source>
-        <translation>Pixels per drawing unit:</translation>
+        <translation>พิกเซลต่อหน่วยแบบวาด:</translation>
     </message>
     <message>
         <location line="+280"/>
@@ -1169,7 +1169,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Export bounding box of selection</source>
-        <translation>Export bounding box of selection</translation>
+        <translation>ส่งออกกรอบขอบเขตของการเลือก</translation>
     </message>
     <message>
         <location line="-107"/>
@@ -1215,12 +1215,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Monochrome</source>
-        <translation>Monochrome</translation>
+        <translation>ขาวดำ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation>Grayscale</translation>
+        <translation>ระดับสีเทา</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1241,12 +1241,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="-197"/>
         <source>Margin</source>
-        <translation>Margin</translation>
+        <translation>ระยะขอบ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation>Margin:</translation>
+        <translation>ระยะขอบ:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -1261,7 +1261,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation>Bit&amp;map Export...</translation>
+        <translation>ส่งออก&amp;บิตแมป...</translation>
     </message>
 </context>
 <context>
@@ -1269,7 +1269,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+63"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation>Invalid image size (width x height must be less than %1)</translation>
+        <translation>ขนาดภาพไม่ถูกต้อง (ความกว้าง x ความสูง ต้องน้อยกว่า %1)</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1292,17 +1292,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+82"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation>ไม่สามารถ edit block while editing a block in-place</translation>
+        <translation>ไม่สามารถแก้ไขบล็อกขณะกำลังแก้ไขบล็อกแบบในตำแหน่งได้</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation>ไม่สามารถ edit external reference</translation>
+        <translation>ไม่สามารถแก้ไขการอ้างอิงภายนอกได้</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation>ไม่สามารถ edit block from external reference</translation>
+        <translation>ไม่สามารถแก้ไขบล็อกจากการอ้างอิงภายนอกได้</translation>
     </message>
 </context>
 <context>
@@ -1311,32 +1311,32 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Block/BlockDialog.js" line="+79"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation>block</translation>
+        <translation>บล็อก</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Leading or trailing spaces.</translation>
+        <translation>มีช่องว่างนำหน้าหรือต่อท้าย</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation>Block name is empty.</translation>
+        <translation>ชื่อบล็อกว่างเปล่า</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation>Block name is invalid.</translation>
+        <translation>ชื่อบล็อกไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</translation>
+        <translation>บล็อก &quot;%1&quot; มีอยู่แล้ว&lt;br&gt;และจะถูกเขียนทับ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
-        <translation>Block already exists.</translation>
+        <translation>มีบล็อกนี้อยู่แล้ว</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
@@ -1383,12 +1383,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
-        <translation>Hide internal blocks</translation>
+        <translation>ซ่อนบล็อกภายใน</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable alternating row colors</source>
-        <translation>Enable alternating row colors</translation>
+        <translation>เปิดใช้สีแถวสลับกัน</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
@@ -1406,12 +1406,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>บล็อก อ้างอิง Id:</translation>
+        <translation>ID การอ้างอิงบล็อก:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation>บล็อก Attribute:</translation>
+        <translation>คุณลักษณะบล็อก:</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1424,7 +1424,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>Export Block List (CSV)</translation>
+        <translation>ส่งออกรายการบล็อก (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1442,7 +1442,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation>Export Block References List (CSV)</translation>
+        <translation>ส่งออกรายการการอ้างอิงบล็อก (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1470,7 +1470,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation>Remove Segment</translation>
+        <translation>ลบส่วน</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
@@ -1516,22 +1516,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation>First break point</translation>
+        <translation>จุดตัดแบ่งแรก</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Second break point</translation>
+        <translation>จุดตัดแบ่งที่สอง</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Click the part of the circle or ellipse to remove</source>
-        <translation>Click the part of the circle or ellipse to remove</translation>
+        <translation>คลิกส่วนของวงกลมหรือวงรีที่ต้องการลบ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation>Remove Segment</translation>
+        <translation>ลบส่วน</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
@@ -1544,7 +1544,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Help/BrowseUserManual/BrowseUserManualInit.js" line="+2"/>
         <source>Browse User Manual</source>
-        <translation>Browse User Manual</translation>
+        <translation>เปิดดูคู่มือผู้ใช้</translation>
     </message>
 </context>
 <context>
@@ -1557,17 +1557,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation>CAD Toolbar</translation>
+        <translation>แถบเครื่องมือ CAD</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation>Icon size:</translation>
+        <translation>ขนาดไอคอน:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation>Pixel</translation>
+        <translation>พิกเซล</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1585,22 +1585,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
-        <translation>Expand all</translation>
+        <translation>ขยายทั้งหมด</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Collapse all</translation>
+        <translation>ยุบทั้งหมด</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation>List View</translation>
+        <translation>มุมมองรายการ</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation>Icon View</translation>
+        <translation>มุมมองไอคอน</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -1616,12 +1616,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation>Icon size:</translation>
+        <translation>ขนาดไอคอน:</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Pixel</source>
-        <translation>Pixel</translation>
+        <translation>พิกเซล</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1631,7 +1631,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation>List view</translation>
+        <translation>มุมมองรายการ</translation>
     </message>
 </context>
 <context>
@@ -1639,7 +1639,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation>Set Font to Arial</translation>
+        <translation>ตั้งฟอนต์เป็น Arial</translation>
     </message>
 </context>
 <context>
@@ -1648,7 +1648,7 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation>Checking for Updates...</translation>
+        <translation>กำลังตรวจสอบการอัปเดต...</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1658,17 +1658,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation>No connection to server or file not found. Please try again later.</translation>
+        <translation>ไม่มีการเชื่อมต่อกับเซิร์ฟเวอร์หรือไม่พบไฟล์ โปรดลองอีกครั้งในภายหลัง</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
-        <translation>Automatically check for updates</translation>
+        <translation>ตรวจสอบการอัปเดตโดยอัตโนมัติ</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation>Check for &amp;Updates...</translation>
+        <translation>ตรวจสอบ&amp;การอัปเดต...</translation>
     </message>
 </context>
 <context>
@@ -1747,12 +1747,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation>Center Left of Line P1 - P2</translation>
+        <translation>จุดศูนย์กลางอยู่ทางซ้ายของเส้น P1 - P2</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation>Center Right of Line P1 - P2</translation>
+        <translation>จุดศูนย์กลางอยู่ทางขวาของเส้น P1 - P2</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -1770,17 +1770,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation>First line, arc or circle</translation>
+        <translation>เส้น ส่วนโค้ง หรือวงกลมแรก</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation>Second line, arc or circle</translation>
+        <translation>เส้น ส่วนโค้ง หรือวงกลมที่สอง</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on circle line</source>
-        <translation>Point on circle line</translation>
+        <translation>จุดบนเส้นรอบวง</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1796,12 +1796,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 Tan&amp;gents and Point</translation>
+        <translation>2 เส้น&amp;สัมผัสและจุด</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>วาด วงกลม แทนเจนต์ to two องค์ประกอบ ผ่าน จุด</translation>
+        <translation>วาดวงกลมที่สัมผัสกับวัตถุสองชิ้นและผ่านจุด</translation>
     </message>
 </context>
 <context>
@@ -1809,12 +1809,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation>First line, arc or circle</translation>
+        <translation>เส้น ส่วนโค้ง หรือวงกลมแรก</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second line, arc or circle</source>
-        <translation>Second line, arc or circle</translation>
+        <translation>เส้น ส่วนโค้ง หรือวงกลมที่สอง</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1839,7 +1839,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation>วาด วงกลม แทนเจนต์ to two องค์ประกอบ with given รัศมี</translation>
+        <translation>วาดวงกลมที่สัมผัสกับวัตถุสองชิ้นด้วยรัศมีที่กำหนด</translation>
     </message>
 </context>
 <context>
@@ -1875,12 +1875,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3T.js" line="+84"/>
         <source>First line, arc or circle</source>
-        <translation>First line, arc or circle</translation>
+        <translation>เส้น ส่วนโค้ง หรือวงกลมแรก</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line, arc or circle</source>
-        <translation>Second line, arc or circle</translation>
+        <translation>เส้น ส่วนโค้ง หรือวงกลมที่สอง</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1906,7 +1906,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
-        <translation>วาด วงกลม แทนเจนต์ to three องค์ประกอบ</translation>
+        <translation>วาดวงกลมที่สัมผัสกับวัตถุสามชิ้น</translation>
     </message>
 </context>
 <context>
@@ -1926,17 +1926,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation>Center, &amp;Diameter</translation>
+        <translation>จุดศูนย์กลาง, &amp;เส้นผ่านศูนย์กลาง</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle from center and diameter</source>
-        <translation>วาด วงกลม from จุดศูนย์กลาง and เส้นผ่านศูนย์กลาง</translation>
+        <translation>วาดวงกลมจากจุดศูนย์กลางและเส้นผ่านศูนย์กลาง</translation>
     </message>
 </context>
 <context>
@@ -1949,7 +1949,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Point on circle or radius</source>
-        <translation>Point on circle or radius</translation>
+        <translation>จุดบนวงกลมหรือรัศมี</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCPInit.js" line="+2"/>
@@ -1979,12 +1979,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation>Center, &amp;Radius</translation>
+        <translation>จุดศูนย์กลาง, &amp;รัศมี</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2030,7 +2030,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw concentric circle through point</source>
-        <translation>วาด ศูนย์กลางร่วม วงกลม ผ่าน จุด</translation>
+        <translation>วาดวงกลมร่วมศูนย์กลางผ่านจุด</translation>
     </message>
 </context>
 <context>
@@ -2038,17 +2038,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2P.js" line="+75"/>
         <source>Line, arc or circle</source>
-        <translation>Line, arc or circle</translation>
+        <translation>เส้น ส่วนโค้ง หรือวงกลม</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation>First point on circle line</translation>
+        <translation>จุดแรกบนเส้นรอบวง</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation>Second point on circle line</translation>
+        <translation>จุดที่สองบนเส้นรอบวง</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2069,7 +2069,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation>วาด วงกลม ผ่าน two points and แทนเจนต์ to one องค์ประกอบ</translation>
+        <translation>วาดวงกลมผ่านสองจุดและสัมผัสกับวัตถุหนึ่งชิ้น</translation>
     </message>
 </context>
 <context>
@@ -2092,7 +2092,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>วาด วงกลม แทนเจนต์ to องค์ประกอบ ผ่าน จุด with รัศมี</translation>
+        <translation>วาดวงกลมที่สัมผัสกับวัตถุ ผ่านจุด ด้วยรัศมีที่กำหนด</translation>
     </message>
 </context>
 <context>
@@ -2116,7 +2116,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Closing Drawing...</translation>
+        <translation>กำลังปิดแบบวาด...</translation>
     </message>
 </context>
 <context>
@@ -2145,17 +2145,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Defaults for New Drawings</translation>
+        <translation>ค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Colors</source>
-        <translation>Printing - Colors</translation>
+        <translation>การพิมพ์ - สี</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>Printing</translation>
+        <translation>การพิมพ์</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2170,22 +2170,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+44"/>
         <source>Color Mode</source>
-        <translation>Color Mode</translation>
+        <translation>โหมดสี</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
-        <translation>Full color</translation>
+        <translation>สีเต็ม</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation>Grayscale</translation>
+        <translation>ระดับสีเทา</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation>Black / white</translation>
+        <translation>ขาว / ดำ</translation>
     </message>
 </context>
 <context>
@@ -2230,32 +2230,32 @@ Do you wish to recover it?</source>
     <message>
         <location line="+183"/>
         <source>Invalid value:</source>
-        <translation>ไม่ถูกต้อง Value:</translation>
+        <translation>ค่าไม่ถูกต้อง:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation>Invalid coordinate or distance &quot;%1&quot;.</translation>
+        <translation>พิกัดหรือระยะทาง &quot;%1&quot; ไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation>Unknown command or invalid coordinate or value: &quot;%1&quot;</translation>
+        <translation>คำสั่งที่ไม่รู้จัก หรือพิกัดหรือค่าไม่ถูกต้อง: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &quot;%1&quot;</source>
-        <translation>Numbers may be entered as: &quot;%1&quot;</translation>
+        <translation>สามารถป้อนตัวเลขในรูปแบบ: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</translation>
+        <translation>สามารถป้อนพิกัดในรูปแบบ: &quot;%1&quot; (สัมบูรณ์) หรือ &quot;%2&quot; (สัมพัทธ์) หรือ &quot;%3&quot; (เชิงขั้ว) หรือ &quot;%4&quot; (เชิงขั้วสัมพัทธ์)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation>You may change the number / coordinate format in the application preferences.</translation>
+        <translation>คุณสามารถเปลี่ยนรูปแบบตัวเลข / พิกัดได้ในการตั้งค่าแอปพลิเคชัน</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -2300,17 +2300,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation>History size:</translation>
+        <translation>ขนาดประวัติ:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation>Show warnings as dialog</translation>
+        <translation>แสดงคำเตือนเป็นกล่องโต้ตอบ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation>Show information as dialog</translation>
+        <translation>แสดงข้อมูลเป็นกล่องโต้ตอบ</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
@@ -2347,22 +2347,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation>Nothing to be done.</translation>
+        <translation>ไม่มีสิ่งที่ต้องทำ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation>Unit &quot;%1&quot; selected. Nothing to be done</translation>
+        <translation>เลือกหน่วย &quot;%1&quot; อยู่แล้ว ไม่มีสิ่งที่ต้องทำ</translation>
     </message>
     <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
-        <translation>Converted drawing from %1 to %2</translation>
+        <translation>แปลงแบบวาดจาก %1 เป็น %2 แล้ว</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation>From:</translation>
+        <translation>จาก:</translation>
     </message>
     <message>
         <location line="+56"/>
@@ -2372,7 +2372,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+33"/>
         <source>Convert:</source>
-        <translation>Convert:</translation>
+        <translation>แปลง:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2382,12 +2382,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation>Convert Drawing &amp;Unit</translation>
+        <translation>แปลง&amp;หน่วยแบบวาด</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
-        <translation>Convert drawing to a different drawing unit</translation>
+        <translation>แปลงแบบวาดเป็นหน่วยแบบวาดอื่น</translation>
     </message>
 </context>
 <context>
@@ -2400,7 +2400,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation>Coordinate Display</translation>
+        <translation>การแสดงพิกัด</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
@@ -2415,17 +2415,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translation>Relative Cartesian Coordinate</translation>
+        <translation>พิกัดคาร์ทีเซียนสัมพัทธ์</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translation>Relative Polar Coordinate</translation>
+        <translation>พิกัดเชิงขั้วสัมพัทธ์</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation>Forced update every N mouse moves:</translation>
+        <translation>บังคับอัปเดตทุก N ครั้งที่เลื่อนเมาส์:</translation>
     </message>
 </context>
 <context>
@@ -2459,22 +2459,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+24"/>
         <source>Increment:</source>
-        <translation>Increment:</translation>
+        <translation>ค่าที่เพิ่มขึ้น:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Number Format:</source>
-        <translation>Number Format:</translation>
+        <translation>รูปแบบตัวเลข:</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Prefix:</source>
-        <translation>Prefix:</translation>
+        <translation>คำนำหน้า:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Suffix:</source>
-        <translation>Suffix:</translation>
+        <translation>คำต่อท้าย:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
@@ -2484,7 +2484,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Auto increment number</source>
-        <translation>Auto increment number</translation>
+        <translation>เพิ่มตัวเลขอัตโนมัติ</translation>
     </message>
 </context>
 <context>
@@ -2505,17 +2505,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation>Select arc, circle, ellipse or elliptical arc</translation>
+        <translation>เลือกส่วนโค้ง วงกลม วงรี หรือส่วนโค้งวงรี</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation>Centerline Cross</translation>
+        <translation>เครื่องหมายกากบาทเส้นศูนย์กลาง</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation>วาด centerline cross in arcs, circles or ellipses</translation>
+        <translation>วาดเครื่องหมายกากบาทเส้นศูนย์กลางในส่วนโค้ง วงกลม หรือวงรี</translation>
     </message>
 </context>
 <context>
@@ -2533,7 +2533,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation>Mode:</translation>
+        <translation>โหมด:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2548,7 +2548,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation>Percent</translation>
+        <translation>เปอร์เซ็นต์</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2577,12 +2577,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>Select entity or region</translation>
+        <translation>เลือกวัตถุหรือพื้นที่</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation>Move entity or reference</translation>
+        <translation>ย้ายวัตถุหรือจุดอ้างอิง</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2602,12 +2602,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation>Move entity to desired location</translation>
+        <translation>ย้ายวัตถุไปยังตำแหน่งที่ต้องการ</translation>
     </message>
     <message>
         <location line="+416"/>
         <source>Move Reference Point</source>
-        <translation>Move Reference Point</translation>
+        <translation>ย้ายจุดอ้างอิง</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2617,12 +2617,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation>Move Entity</translation>
+        <translation>ย้ายวัตถุ</translation>
     </message>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</translation>
+        <translation>กำลังแก้ไขบล็อก &quot;%1&quot;&lt;br&gt;เลือก &lt;i&gt;บล็อก &gt; กลับไปยังแบบวาดหลัก&lt;/i&gt; เมื่อเสร็จสิ้น</translation>
     </message>
 </context>
 <context>
@@ -2645,7 +2645,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation>Scroll (Trackpad, Multi-Touch Mouse)</translation>
+        <translation>เลื่อน (แทร็กแพด, เมาส์มัลติทัช)</translation>
     </message>
 </context>
 <context>
@@ -2698,7 +2698,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Character Map</translation>
+        <translation>ตารางอักขระ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2708,7 +2708,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation>Arcs and Circles</translation>
+        <translation>ส่วนโค้งและวงกลม</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2815,7 +2815,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.js" line="+80"/>
         <source>Arc or first of two lines</source>
-        <translation>Arc or first of two lines</translation>
+        <translation>ส่วนโค้ง หรือเส้นแรกจากสองเส้น</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2825,7 +2825,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation>Dimension arc location</translation>
+        <translation>ตำแหน่งส่วนโค้งมิติ</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
@@ -2848,12 +2848,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>เลือก อาร์ก or วงกลม องค์ประกอบ</translation>
+        <translation>เลือกส่วนโค้งหรือวงกลม</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Dimension line location or angle</translation>
+        <translation>ตำแหน่งหรือมุมของเส้นมิติ</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
@@ -2876,7 +2876,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw horizontal dimension</source>
-        <translation>วาด แนวนอน มิติ</translation>
+        <translation>วาดมิติแนวนอน</translation>
     </message>
 </context>
 <context>
@@ -2907,12 +2907,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>เลือก อาร์ก or วงกลม องค์ประกอบ</translation>
+        <translation>เลือกส่วนโค้งหรือวงกลม</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Dimension line location or angle</translation>
+        <translation>ตำแหน่งหรือมุมของเส้นมิติ</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
@@ -2930,7 +2930,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>No dimension entities with custom label positions selected.</translation>
+        <translation>ไม่ได้เลือกวัตถุมิติที่มีตำแหน่งป้ายกำกับแบบกำหนดเอง</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
@@ -2988,7 +2988,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw vertical dimension</source>
-        <translation>วาด แนวตั้ง มิติ</translation>
+        <translation>วาดมิติแนวตั้ง</translation>
     </message>
 </context>
 <context>
@@ -2996,7 +2996,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
-        <translation>ไม่มีprefix</translation>
+        <translation>ไม่มีคำนำหน้า</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3006,7 +3006,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation>Metric screw</translation>
+        <translation>สกรูเมตริก</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3021,27 +3021,27 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation>Plus/Minus</translation>
+        <translation>บวก/ลบ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation>Almost equal to</translation>
+        <translation>เกือบเท่ากับ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation>Asymptotically equal to</translation>
+        <translation>เท่ากับเชิงเส้นกำกับ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation>Square</translation>
+        <translation>สี่เหลี่ยมจัตุรัส</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation>Delta</translation>
+        <translation>เดลตา</translation>
     </message>
     <message>
         <location line="+122"/>
@@ -3051,22 +3051,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>มิติ</translation>
+        <translation>&amp;มิติ</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation>Label:</translation>
+        <translation>ป้ายกำกับ:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Prefix</source>
-        <translation>Prefix</translation>
+        <translation>คำนำหน้า</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation>Enter fixed label or leave empty for automatic label</translation>
+        <translation>ป้อนป้ายกำกับคงที่ หรือเว้นว่างไว้สำหรับป้ายกำกับอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -3078,7 +3078,7 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Lower tolerance</translation>
+        <translation>ค่าความคลาดเคลื่อนล่าง</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3106,12 +3106,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</translation>
+        <translation>มาตราส่วนสำหรับมิติใหม่ไม่ใช่ 1:1 ป้ายกำกับมิติจะแสดงค่าที่แตกต่างจากค่าที่วัดได้ในแบบวาด คุณสามารถแก้ไขตัวคูณมาตราส่วนได้ในแถบเครื่องมือตัวเลือกที่ด้านบน</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation>Don&apos;t show this warning again</translation>
+        <translation>ไม่ต้องแสดงคำเตือนนี้อีก</translation>
     </message>
 </context>
 <context>
@@ -3119,7 +3119,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Defaults for New Drawings</translation>
+        <translation>ค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -3155,7 +3155,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</translation>
+        <translation>หน่วยแบบวาดต้องเป็น &quot;นิ้ว&quot; จึงจะแสดงป้ายกำกับมิติในรูปแบบ &quot;สถาปัตยกรรม&quot; หรือ &quot;วิศวกรรม&quot; ได้ รูปแบบถูกเปลี่ยนเป็น &quot;ทศนิยม&quot;</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
@@ -3165,7 +3165,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation>Horizontal text labels</translation>
+        <translation>ป้ายกำกับข้อความแนวนอน</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3175,27 +3175,27 @@ Do you wish to recover it?</source>
     <message>
         <location line="+13"/>
         <source>Sizes</source>
-        <translation>Sizes</translation>
+        <translation>ขนาด</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Keep proportions</source>
-        <translation>Keep proportions</translation>
+        <translation>คงสัดส่วน</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Dimension line gap:</source>
-        <translation>มิติ เส้น Gap:</translation>
+        <translation>ระยะห่างเส้นมิติ:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation>Arrow size:</translation>
+        <translation>ขนาดลูกศร:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation>Extension เส้น Extension:</translation>
+        <translation>ส่วนยื่นของเส้นต่อมิติ:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -3205,22 +3205,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation>Extension เส้น ออฟเซ็ต:</translation>
+        <translation>ระยะเยื้องของเส้นต่อมิติ:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dimension line increment:</source>
-        <translation>มิติ เส้น Increment:</translation>
+        <translation>ระยะเพิ่มของเส้นมิติ:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation>Size ขยาย Factor:</translation>
+        <translation>ตัวคูณมาตราส่วนขนาด:</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation>Arrow Style</translation>
+        <translation>รูปแบบลูกศร</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -3230,7 +3230,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Architectural tick</translation>
+        <translation>ขีดสถาปัตยกรรม</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3240,32 +3240,32 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation>Label font:</translation>
+        <translation>ฟอนต์ป้ายกำกับ:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation>Label color:</translation>
+        <translation>สีป้ายกำกับ:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation>Number Format</translation>
+        <translation>รูปแบบตัวเลข</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation>Decimal separator:</translation>
+        <translation>ตัวคั่นทศนิยม:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
-        <translation>Label Format</translation>
+        <translation>รูปแบบป้ายกำกับ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation>Linear Dimensions</translation>
+        <translation>มิติเชิงเส้น</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3275,13 +3275,13 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation>P&amp;recision:</translation>
+        <translation>&amp;ความแม่นยำ:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation>Show trailing zeros</translation>
+        <translation>แสดงเลขศูนย์ต่อท้าย</translation>
     </message>
     <message>
         <location line="-50"/>
@@ -3291,12 +3291,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation>F&amp;ormat:</translation>
+        <translation>&amp;รูปแบบ:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation>Pre&amp;cision:</translation>
+        <translation>&amp;ความแม่นยำ:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3312,14 +3312,14 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation>The folder
+        <translation>โฟลเดอร์
 &quot;%1&quot;
-is already in the list.</translation>
+มีอยู่ในรายการแล้ว</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
-        <translation>Folder not added</translation>
+        <translation>ไม่ได้เพิ่มโฟลเดอร์</translation>
     </message>
 </context>
 <context>
@@ -3327,7 +3327,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Display &amp;Distance/Angle</translation>
+        <translation>แสดง&amp;ระยะทาง/มุม</translation>
     </message>
 </context>
 <context>
@@ -3335,7 +3335,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>เลือก เส้น อาร์ก วงกลม วงรี สไปลน์ or พอลิไลน์</translation>
+        <translation>เลือกเส้น ส่วนโค้ง วงกลม วงรี สไปลน์ หรือโพลีไลน์</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3473,7 +3473,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation>วาด &amp;Bounding Box</translation>
+        <translation>วาด&amp;กรอบขอบเขต</translation>
     </message>
 </context>
 <context>
@@ -3489,7 +3489,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation>First vertex</translation>
+        <translation>จุดยอดแรก</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -3529,12 +3529,12 @@ is already in the list.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Redo Segment</translation>
+        <translation>ทำซ้ำส่วน</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation>อาร์ก With รัศมี:</translation>
+        <translation>ส่วนโค้งที่มีรัศมี:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -3544,17 +3544,17 @@ is already in the list.</translation>
     <message>
         <location line="+39"/>
         <source>Restrict length or angle</source>
-        <translation>Restrict length or angle</translation>
+        <translation>จำกัดความยาวหรือมุม</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>วาด &amp;Fms Lanes</translation>
+        <translation>วาด&amp;ช่องทาง Fms</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>วาด FMS Lanes (ribs)</translation>
+        <translation>วาดเลน FMS (ริบ)</translation>
     </message>
 </context>
 <context>
@@ -3564,67 +3564,67 @@ is already in the list.</translation>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation>Command ended.</translation>
+        <translation>สิ้นสุดคำสั่งแล้ว</translation>
     </message>
     <message>
         <location line="-1293"/>
         <source>No import file selected.</source>
-        <translation>ไม่มีimport file selected</translation>
+        <translation>ไม่ได้เลือกไฟล์ที่จะนำเข้า</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No file opened.</source>
-        <translation>ไม่มีfile opened</translation>
+        <translation>ไม่ได้เปิดไฟล์</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>DrawFromCSV script (v3.03) by CVH</source>
-        <translation>DrawFromCSV script (v3.03) by CVH</translation>
+        <translation>สคริปต์ DrawFromCSV (v3.03) โดย CVH</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Cast CSV</translation>
+        <translation>สร้างจาก CSV</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Reading from file: %1</source>
-        <translation>Reading from file: %1</translation>
+        <translation>กำลังอ่านจากไฟล์: %1</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation>Switched to comma/dot CSV style.</translation>
+        <translation>เปลี่ยนเป็นรูปแบบ CSV แบบจุลภาค/จุดแล้ว</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation>Switched to semicolon/dot CSV style.</translation>
+        <translation>เปลี่ยนเป็นรูปแบบ CSV แบบอัฒภาค/จุดแล้ว</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation>Switched to semicolon/comma CSV style.</translation>
+        <translation>เปลี่ยนเป็นรูปแบบ CSV แบบอัฒภาค/จุลภาคแล้ว</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation>Unsupported or invalid CSV style, ignored. Text line: %1</translation>
+        <translation>รูปแบบ CSV ไม่รองรับหรือไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation>Setting new relative origin failed, ignored. Text line: %1</translation>
+        <translation>ตั้งค่าจุดกำเนิดสัมพัทธ์ใหม่ไม่สำเร็จ จึงข้ามไป บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation>Setting new rounding radius failed, ignored. Text line: %1</translation>
+        <translation>ตั้งค่ารัศมีการทำมุมมนใหม่ไม่สำเร็จ จึงข้ามไป บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation>Rounding polylines requires QCAD Professional, ignored. Text line: %1</translation>
+        <translation>การทำมุมมนโพลีไลน์ต้องใช้ QCAD Professional จึงข้ามไป บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3634,22 +3634,22 @@ is already in the list.</translation>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</translation>
+        <translation>สวิตช์ตั้งค่า &apos;Layer&apos; ที่ใช้งานไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</translation>
+        <translation>สวิตช์ &apos;New layer&apos; ไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</translation>
+        <translation>ไม่สามารถซ่อนเลเยอร์ที่ไม่มีอยู่ได้ จึงข้ามไป บรรทัดข้อความ: %1%2 เลเยอร์: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</translation>
+        <translation>สวิตช์ &apos;HideLayer&apos; ไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3704,7 +3704,7 @@ is already in the list.</translation>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation>Low field count.</translation>
+        <translation>จำนวนฟิลด์น้อยเกินไป</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3733,7 +3733,7 @@ is already in the list.</translation>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation>Odd field count.</translation>
+        <translation>จำนวนฟิลด์เป็นเลขคี่</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -3896,7 +3896,7 @@ is already in the list.</translation>
     <message>
         <location line="-21"/>
         <source>Radius too small.</source>
-        <translation>Radius too small.</translation>
+        <translation>รัศมีเล็กเกินไป</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -3915,19 +3915,19 @@ is already in the list.</translation>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation>Equal positions 1-4.</translation>
+        <translation>ตำแหน่ง 1-4 เท่ากัน</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation>Equal positions 2-4.</translation>
+        <translation>ตำแหน่ง 2-4 เท่ากัน</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation>Equal positions 3-4.</translation>
+        <translation>ตำแหน่ง 3-4 เท่ากัน</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3937,17 +3937,17 @@ is already in the list.</translation>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation>Size in Xไม่ถูกต้อง</translation>
+        <translation>ขนาดในแนว X ไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation>Size in Yไม่ถูกต้อง</translation>
+        <translation>ขนาดในแนว Y ไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation>Polygon: less than 5 references.</translation>
+        <translation>รูปหลายเหลี่ยม: การอ้างอิงน้อยกว่า 5 รายการ</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3960,7 +3960,7 @@ is already in the list.</translation>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation>Polyline, less than 2 references.</translation>
+        <translation>โพลีไลน์ การอ้างอิงน้อยกว่า 2 รายการ</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3970,7 +3970,7 @@ is already in the list.</translation>
     <message>
         <location line="+18"/>
         <source>Unsupported QCAD Professional feature.</source>
-        <translation>Unsupported QCAD Professional feature.</translation>
+        <translation>ไม่รองรับคุณสมบัติของ QCAD Professional</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3995,147 +3995,147 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation>Vert. alignmentไม่ถูกต้อง</translation>
+        <translation>การจัดแนวแนวตั้งไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation>Horz. alignmentไม่ถูกต้อง</translation>
+        <translation>การจัดแนวแนวนอนไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation>Drawing directionไม่ถูกต้อง</translation>
+        <translation>ทิศทางการวาดไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation>Line spacing styleไม่ถูกต้อง</translation>
+        <translation>รูปแบบระยะห่างบรรทัดไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation>Line spacingไม่ถูกต้อง</translation>
+        <translation>ระยะห่างบรรทัดไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation>Unsupported method. Text line: %1</translation>
+        <translation>ไม่รองรับวิธีนี้ บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list.</source>
-        <translation>Error with first optional list.</translation>
+        <translation>เกิดข้อผิดพลาดกับรายการเสริมรายการแรก</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list.</source>
-        <translation>Error with second optional list.</translation>
+        <translation>เกิดข้อผิดพลาดกับรายการเสริมรายการที่สอง</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation>Not a correct entry, ignored. Text line: %1 &gt; %2</translation>
+        <translation>รายการไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Casted entries: %1 out of %2 text lines</translation>
+        <translation>รายการที่สร้าง: %1 จาก %2 บรรทัดข้อความ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Nothing casted.</translation>
+        <translation>ไม่มีสิ่งใดถูกสร้าง</translation>
     </message>
     <message>
         <location line="+227"/>
         <source>Attributes empty. Text line: %1</source>
-        <translation>Attributes empty. Text line: %1</translation>
+        <translation>คุณลักษณะว่างเปล่า บรรทัดข้อความ: %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation>Not a correct layer name, ignored. Text line: %1%2 Name: %3</translation>
+        <translation>ชื่อเลเยอร์ไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1%2 ชื่อ: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</translation>
+        <translation>ไม่มีเลเยอร์นี้ จึงข้ามไป บรรทัดข้อความ: %1%2 เลเยอร์: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation>Not a correct color, ignored. Text line: %1%2 Color: %3</translation>
+        <translation>สีไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1%2 สี: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</translation>
+        <translation>น้ำหนักเส้นไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1%2 น้ำหนัก: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</translation>
+        <translation>ประเภทเส้นไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1%2 ประเภท: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</translation>
+        <translation>มาตราส่วนประเภทเส้นไม่ถูกต้อง จึงข้ามไป บรรทัดข้อความ: %1%2 มาตราส่วน: %3</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation>Unsupported attribute, ignored. Text line: %1 &gt; %2</translation>
+        <translation>ไม่รองรับคุณลักษณะนี้ จึงข้ามไป บรรทัดข้อความ: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation>Not a correct layer name. Text line: %1%2 Name: %3</translation>
+        <translation>ชื่อเลเยอร์ไม่ถูกต้อง บรรทัดข้อความ: %1%2 ชื่อ: %3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</translation>
+        <translation>ไม่มีเลเยอร์หลัก บรรทัดข้อความ: %1%2 เลเยอร์: %3</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation>Not a correct color. Text line: %1%2 Color: %3</translation>
+        <translation>สีไม่ถูกต้อง บรรทัดข้อความ: %1%2 สี: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Not a correct Lineweight. Text line: %1%2 Weight: %3</translation>
+        <translation>น้ำหนักเส้นไม่ถูกต้อง บรรทัดข้อความ: %1%2 น้ำหนัก: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation>Not a correct Linetype. Text line: %1%2 Type: %3</translation>
+        <translation>ประเภทเส้นไม่ถูกต้อง บรรทัดข้อความ: %1%2 ประเภท: %3</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation>Add/Update layer ignored.</translation>
+        <translation>ข้ามการเพิ่ม/อัปเดตเลเยอร์</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation>Updated layer: %1</translation>
+        <translation>อัปเดตเลเยอร์แล้ว: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation>Added new layer: %1</translation>
+        <translation>เพิ่มเลเยอร์ใหม่แล้ว: %1</translation>
     </message>
     <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation>Importing CSV complete. Command ended.</translation>
+        <translation>นำเข้า CSV เสร็จสมบูรณ์ สิ้นสุดคำสั่งแล้ว</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation>วาด from CSV</translation>
+        <translation>วาดจาก CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4155,7 +4155,7 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation>Draws entities based on textual entries in a CSV file</translation>
+        <translation>วาดวัตถุตามรายการข้อความในไฟล์ CSV</translation>
     </message>
 </context>
 <context>
@@ -4176,7 +4176,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
-        <translation>First vertex</translation>
+        <translation>จุดยอดแรก</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4211,7 +4211,7 @@ is already in the list.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation>อาร์ก With รัศมี:</translation>
+        <translation>ส่วนโค้งที่มีรัศมี:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -4226,12 +4226,12 @@ is already in the list.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Redo Segment</translation>
+        <translation>ทำซ้ำส่วน</translation>
     </message>
     <message>
         <location line="+93"/>
         <source>Restrict length or angle</source>
-        <translation>Restrict length or angle</translation>
+        <translation>จำกัดความยาวหรือมุม</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
@@ -4241,7 +4241,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation>วาด พอลิไลน์ with เส้น and อาร์ก segments</translation>
+        <translation>วาดโพลีไลน์ด้วยส่วนที่เป็นเส้นและส่วนโค้ง</translation>
     </message>
 </context>
 <context>
@@ -4249,7 +4249,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Drawing &amp;Preferences</translation>
+        <translation>&amp;การตั้งค่าแบบวาด</translation>
     </message>
 </context>
 <context>
@@ -4304,27 +4304,27 @@ is already in the list.</translation>
     <message>
         <location line="+28"/>
         <source>Main Tools</source>
-        <translation>Main Tools</translation>
+        <translation>เครื่องมือหลัก</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CAD Tools</source>
-        <translation>CAD Tools</translation>
+        <translation>เครื่องมือ CAD</translation>
     </message>
     <message>
         <location line="+577"/>
         <source>Invalid position</source>
-        <translation>Invalid position</translation>
+        <translation>ตำแหน่งไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Entity is not in working set.</translation>
+        <translation>วัตถุไม่ได้อยู่ในชุดทำงาน</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>Entity is on a locked layer.</translation>
+        <translation>วัตถุอยู่บนเลเยอร์ที่ถูกล็อก</translation>
     </message>
     <message>
         <location line="+254"/>
@@ -4334,92 +4334,92 @@ is already in the list.</translation>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Entity is not a block reference.</translation>
+        <translation>วัตถุไม่ใช่การอ้างอิงบล็อก</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation>Entity is not a line or arc.</translation>
+        <translation>วัตถุไม่ใช่เส้นหรือส่วนโค้ง</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Entity is not a line, arc or polyline.</translation>
+        <translation>วัตถุไม่ใช่เส้น ส่วนโค้ง หรือโพลีไลน์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation>Entity is not a line.</translation>
+        <translation>วัตถุไม่ใช่เส้น</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation>Entity is not an arc.</translation>
+        <translation>วัตถุไม่ใช่ส่วนโค้ง</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation>Entity is not an arc or circle.</translation>
+        <translation>วัตถุไม่ใช่ส่วนโค้งหรือวงกลม</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation>Entity is not a line, arc or circle.</translation>
+        <translation>วัตถุไม่ใช่เส้น ส่วนโค้ง หรือวงกลม</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Entity is not a line, arc, spline, ellipse arc or polyline.</translation>
+        <translation>วัตถุไม่ใช่เส้น ส่วนโค้ง สไปลน์ ส่วนโค้งวงรี หรือโพลีไลน์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation>Entity is not an arc, circle or ellipse.</translation>
+        <translation>วัตถุไม่ใช่ส่วนโค้ง วงกลม หรือวงรี</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation>Entity is not a line, arc, circle or ellipse.</translation>
+        <translation>วัตถุไม่ใช่เส้น ส่วนโค้ง วงกลม หรือวงรี</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Entity is not a line, arc, circle, ellipse or polyline.</translation>
+        <translation>วัตถุไม่ใช่เส้น ส่วนโค้ง วงกลม วงรี หรือโพลีไลน์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation>Entity is not a line, arc, circle, ellipse or spline.</translation>
+        <translation>วัตถุไม่ใช่เส้น ส่วนโค้ง วงกลม วงรี หรือสไปลน์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Entity is not a line, arc, circle, spline or polyline.</translation>
+        <translation>วัตถุไม่ใช่เส้น ส่วนโค้ง วงกลม สไปลน์ หรือโพลีไลน์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Entity is not a line, arc, circle, ellipse, spline or polyline.</translation>
+        <translation>วัตถุไม่ใช่เส้น ส่วนโค้ง วงกลม วงรี สไปลน์ หรือโพลีไลน์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Entity is not a circle, ellipse, spline or polyline.</translation>
+        <translation>วัตถุไม่ใช่วงกลม วงรี สไปลน์ หรือโพลีไลน์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Entity is not a polyline.</translation>
+        <translation>วัตถุไม่ใช่โพลีไลน์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation>Entity is not a closed polyline.</translation>
+        <translation>วัตถุไม่ใช่โพลีไลน์แบบปิด</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Entity is not a spline with fit points.</translation>
+        <translation>วัตถุไม่ใช่สไปลน์ที่มีจุดผ่าน</translation>
     </message>
 </context>
 <context>
@@ -4427,7 +4427,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
-        <translation>Show ECMAScript Shell</translation>
+        <translation>แสดงเชลล์ ECMAScript</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -4443,17 +4443,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation>ECMAScript Shell</translation>
+        <translation>เชลล์ ECMAScript</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;คุณกำลังจะเปิดใช้งาน ECMAScript Shell&lt;/p&gt;&lt;p&gt;ผ่าน ECMAScript Shell คุณสามารถ &lt;span style=&quot; color:#ff0000;&quot;&gt;แก้ไขแบบร่างของคุณ&lt;/span&gt; แต่ยัง &lt;span style=&quot; color:#ff0000;&quot;&gt;ลบไฟล์&lt;/span&gt; หรือ &lt;span style=&quot; color:#ff0000;&quot;&gt;ทำให้แอปพลิเคชันขัดข้อง&lt;/span&gt; ซึ่งอาจนำไปสู่ &lt;span style=&quot; color:#ff0000;&quot;&gt;การสูญเสียข้อมูล&lt;/span&gt;&lt;/p&gt;&lt;p&gt;สำหรับโปรแกรมเมอร์ที่ไม่มีประสบการณ์ แนะนำให้จำกัดการใช้งาน ECMAScript shell กับ &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; ซึ่งถือว่า&quot;ปลอดภัย&quot; ในการใช้งาน&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;คุณกำลังจะเปิดใช้งานเชลล์ ECMAScript&lt;/p&gt;&lt;p&gt;ผ่านเชลล์ ECMAScript คุณสามารถ&lt;span style=&quot; color:#ff0000;&quot;&gt;แก้ไขแบบวาดของคุณ&lt;/span&gt; แต่ก็สามารถ&lt;span style=&quot; color:#ff0000;&quot;&gt;ลบไฟล์&lt;/span&gt; หรือ&lt;span style=&quot; color:#ff0000;&quot;&gt;ทำให้แอปพลิเคชันขัดข้อง&lt;/span&gt;ได้เช่นกัน ซึ่งอาจนำไปสู่&lt;span style=&quot; color:#ff0000;&quot;&gt;การสูญเสียข้อมูล&lt;/span&gt;&lt;/p&gt;&lt;p&gt;สำหรับโปรแกรมเมอร์ที่ยังไม่มีประสบการณ์ ขอแนะนำให้จำกัดการใช้เชลล์ ECMAScript ไว้เฉพาะ &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; ซึ่งถือว่า &quot;ปลอดภัย&quot; ในการใช้งาน&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation>Don&apos;t show this dialog again</translation>
+        <translation>ไม่ต้องแสดงกล่องโต้ตอบนี้อีก</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+96"/>
@@ -4466,7 +4466,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation>Edit Tools</translation>
+        <translation>เครื่องมือแก้ไข</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4484,7 +4484,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Edit contents of selected block</source>
-        <translation>Edit contents of selected block</translation>
+        <translation>แก้ไขเนื้อหาของบล็อกที่เลือก</translation>
     </message>
 </context>
 <context>
@@ -4497,12 +4497,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>E&amp;dit Block from Reference</translation>
+        <translation>&amp;แก้ไขบล็อกจากการอ้างอิง</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation>Edit block based on chosen block reference</translation>
+        <translation>แก้ไขบล็อกตามการอ้างอิงบล็อกที่เลือก</translation>
     </message>
 </context>
 <context>
@@ -4515,7 +4515,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Edit &amp;Hatch</translation>
+        <translation>&amp;แก้ไขแรเงา</translation>
     </message>
 </context>
 <context>
@@ -4544,7 +4544,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation>Edit Te&amp;xt</translation>
+        <translation>&amp;แก้ไขข้อความ</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4575,22 +4575,22 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation>Major point of ellipse or major radius</translation>
+        <translation>จุดแกนเอกของวงรีหรือรัศมีหลัก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
-        <translation>Major point of ellipse</translation>
+        <translation>จุดแกนเอกของวงรี</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation>Minor point of ellipse or minor radius</translation>
+        <translation>จุดแกนโทของวงรีหรือรัศมีรอง</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation>Minor point of ellipse</translation>
+        <translation>จุดแกนโทของวงรี</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4600,22 +4600,22 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Start parameter</source>
-        <translation>Start parameter</translation>
+        <translation>พารามิเตอร์เริ่มต้น</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
-        <translation>End parameter</translation>
+        <translation>พารามิเตอร์สิ้นสุด</translation>
     </message>
     <message>
         <location line="+249"/>
         <source>Invalid major radius.</source>
-        <translation>Invalid major radius.</translation>
+        <translation>รัศมีหลักไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation>Major รัศมี:</translation>
+        <translation>รัศมีหลัก:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -4625,7 +4625,7 @@ is already in the list.</translation>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation>Minor รัศมี:</translation>
+        <translation>รัศมีรอง:</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4660,7 +4660,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation>วาด วงรี อาร์ก from จุดศูนย์กลาง major จุด ratio and มุม</translation>
+        <translation>วาดส่วนโค้งวงรีจากจุดศูนย์กลาง จุดแกนเอก อัตราส่วน และมุม</translation>
     </message>
 </context>
 <context>
@@ -4673,7 +4673,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation>วาด full วงรี from จุดศูนย์กลาง major จุด and ratio</translation>
+        <translation>วาดวงรีเต็มวงจากจุดศูนย์กลาง จุดแกนเอก และอัตราส่วน</translation>
     </message>
 </context>
 <context>
@@ -4699,17 +4699,17 @@ is already in the list.</translation>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation>Ellipse with &amp;Diameters</translation>
+        <translation>วงรีด้วย&amp;เส้นผ่านศูนย์กลาง</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation>วาด วงรี with ตำแหน่ง and diameters</translation>
+        <translation>วาดวงรีด้วยตำแหน่งและเส้นผ่านศูนย์กลาง</translation>
     </message>
 </context>
 <context>
@@ -4732,7 +4732,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation>วาด ขนานกัน curve to วงรี</translation>
+        <translation>วาดเส้นโค้งขนานกับวงรี</translation>
     </message>
 </context>
 <context>
@@ -4745,12 +4745,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Parallel Curve (&amp;through Point)</translation>
+        <translation>เส้นโค้งขนาน (&amp;ผ่านจุด)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation>วาด ขนานกัน curve to วงรี ผ่าน จุด</translation>
+        <translation>วาดเส้นโค้งขนานกับวงรีผ่านจุด</translation>
     </message>
 </context>
 <context>
@@ -4776,17 +4776,17 @@ is already in the list.</translation>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation>Ellipse with &amp;Radii</translation>
+        <translation>วงรีด้วย&amp;รัศมี</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
-        <translation>วาด วงรี with ตำแหน่ง and radii</translation>
+        <translation>วาดวงรีด้วยตำแหน่งและรัศมี</translation>
     </message>
 </context>
 <context>
@@ -4794,7 +4794,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>&amp;Escape</translation>
+        <translation>&amp;ยกเลิก</translation>
     </message>
 </context>
 <context>
@@ -4810,7 +4810,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation>Added layer &quot;MyLayer&quot;</translation>
+        <translation>เพิ่มเลเยอร์ &quot;MyLayer&quot; แล้ว</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4831,12 +4831,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>Deleted line with ID %1</translation>
+        <translation>ลบเส้นที่มี ID %1 แล้ว</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</translation>
+        <translation>คุณสามารถใช้ &lt;i&gt;แก้ไข &gt; เลิกทำ&lt;/i&gt; เพื่อกู้คืนวัตถุเส้น</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4857,7 +4857,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation>วาด &amp;Colors</translation>
+        <translation>วาด&amp;สี</translation>
     </message>
 </context>
 <context>
@@ -4865,7 +4865,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>วาด &amp;Fonts</translation>
+        <translation>วาด&amp;ฟอนต์</translation>
     </message>
 </context>
 <context>
@@ -4873,12 +4873,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation>ตามเข็มนาฬิกา พอลิไลน์:</translation>
+        <translation>โพลีไลน์ตามเข็มนาฬิกา:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation>ทวนเข็มนาฬิกา พอลิไลน์:</translation>
+        <translation>โพลีไลน์ทวนเข็มนาฬิกา:</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -4891,7 +4891,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</translation>
+        <translation>เพิ่มคุณสมบัติกำหนดเอง &quot;MyCustomProperty&quot; ให้กับเลเยอร์ &quot;0&quot; แล้ว</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4919,7 +4919,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>วาด a dovetail joint</translation>
+        <translation>วาดข้อต่อหางเหยี่ยว</translation>
     </message>
 </context>
 <context>
@@ -4951,7 +4951,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation>Hello World.</translation>
+        <translation>สวัสดีชาวโลก</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4985,7 +4985,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation>Example Files %1</translation>
+        <translation>ไฟล์ตัวอย่าง %1</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -4995,7 +4995,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</translation>
+        <translation>ลงทะเบียนตัวส่งออกไฟล์สำหรับไฟล์ประเภท &quot;.example&quot; แล้ว ใช้ ไฟล์ &gt; บันทึกเป็น เพื่อดูการทำงานของตัวกรอง</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -5008,12 +5008,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation>Example Files %1</translation>
+        <translation>ไฟล์ตัวอย่าง %1</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation>Read from file: &quot;%1&quot;</translation>
+        <translation>อ่านจากไฟล์: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -5023,7 +5023,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</translation>
+        <translation>ลงทะเบียนตัวนำเข้าไฟล์สำหรับไฟล์ประเภท &quot;.example&quot; แล้ว ใช้ ไฟล์ &gt; เปิด เพื่อดูการทำงานของตัวกรอง</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -5041,7 +5041,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation>Enter Size</translation>
+        <translation>ป้อนขนาด</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5090,7 +5090,7 @@ is already in the list.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>วาด three points</translation>
+        <translation>วาดสามจุด</translation>
     </message>
 </context>
 <context>
@@ -5126,7 +5126,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Export XML</source>
-        <translation>Export XML</translation>
+        <translation>ส่งออก XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
@@ -5144,7 +5144,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation>Import XML</translation>
+        <translation>นำเข้า XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
@@ -5157,7 +5157,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation>Script &amp;Examples</translation>
+        <translation>&amp;ตัวอย่างสคริปต์</translation>
     </message>
 </context>
 <context>
@@ -5180,42 +5180,42 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
         <source>Spline approximation tolerance:</source>
-        <translation>สไปลน์ Approximation Tolerance:</translation>
+        <translation>ค่าความคลาดเคลื่อนในการประมาณสไปลน์:</translation>
     </message>
     <message>
         <location line="-118"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Explode splines to polylines with line segments</translation>
+        <translation>ระเบิดสไปลน์เป็นโพลีไลน์ที่มีส่วนเป็นเส้นตรง</translation>
     </message>
     <message>
         <location line="+111"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation>Ellipse segments (per full ellipse):</translation>
+        <translation>จำนวนส่วนของวงรี (ต่อวงรีเต็มวง):</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation>Convert splines from texts to arcs or lines if appropriate</translation>
+        <translation>แปลงสไปลน์จากข้อความเป็นส่วนโค้งหรือเส้นหากเหมาะสม</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Explode circles into polylines with two half circles</translation>
+        <translation>ระเบิดวงกลมเป็นโพลีไลน์ที่มีครึ่งวงกลมสองส่วน</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Explode text glyphs to polylines</translation>
+        <translation>ระเบิดรูปอักขระของข้อความเป็นโพลีไลน์</translation>
     </message>
     <message>
         <location line="-80"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Explode multiline texts into multiple simple text blocks</translation>
+        <translation>ระเบิดข้อความหลายบรรทัดเป็นบล็อกข้อความธรรมดาหลายบล็อก</translation>
     </message>
     <message>
         <location line="-41"/>
         <source>Spline segments:</source>
-        <translation>สไปลน์ Segments:</translation>
+        <translation>จำนวนส่วนของสไปลน์:</translation>
     </message>
 </context>
 <context>
@@ -5223,7 +5223,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
-        <translation>FA&amp;Qs (online)</translation>
+        <translation>&amp;คำถามที่พบบ่อย (ออนไลน์)</translation>
     </message>
 </context>
 <context>
@@ -5242,17 +5242,17 @@ is already in the list.</translation>
         <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
-        <translation>Format:</translation>
+        <translation>รูปแบบ:</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Overwrite File?</source>
-        <translation>Overwrite File?</translation>
+        <translation>เขียนทับไฟล์หรือไม่?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</translation>
+        <translation>มีไฟล์ &quot;%1&quot; อยู่แล้ว คุณต้องการเขียนทับหรือไม่?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5266,7 +5266,7 @@ is already in the list.</translation>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+244"/>
         <source>%1 First Start</source>
-        <translation>%1 First Start</translation>
+        <translation>การเริ่มใช้งาน %1 ครั้งแรก</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -5291,7 +5291,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</translation>
+        <translation>โปรดเลือกการตั้งค่าที่จะใช้สำหรับแบบวาดใหม่ การตั้งค่าทั้งหมดนี้สามารถเปลี่ยนภายหลังได้ในกล่องโต้ตอบการตั้งค่า</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -5301,12 +5301,12 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation>Default Paper Size:</translation>
+        <translation>ขนาดกระดาษเริ่มต้น:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation>Decimal จุด:</translation>
+        <translation>จุดทศนิยม:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5329,7 +5329,7 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation>Fp Added ชั้น:</translation>
+        <translation>เลเยอร์ที่ FP เพิ่ม:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
@@ -5339,7 +5339,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Paints over selection mimicking a roller stamp</translation>
+        <translation>ระบายทับการเลือกโดยเลียนแบบตรายางลูกกลิ้ง</translation>
     </message>
 </context>
 <context>
@@ -5347,82 +5347,82 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Painter Options</translation>
+        <translation>ตัวเลือกตัวระบาย</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Painters casting options</translation>
+        <translation>ตัวเลือกการสร้างของตัวระบาย</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>พลิกตัวระบาย</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Cast in group</translation>
+        <translation>สร้างเป็นกลุ่ม</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Cast on sub-layer</translation>
+        <translation>สร้างบนเลเยอร์ย่อย</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Add Begin Apex</translation>
+        <translation>เพิ่มยอดปลายเริ่มต้น</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Add End Apex</translation>
+        <translation>เพิ่มยอดปลายสิ้นสุด</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add Insertions</source>
-        <translation>Add Insertions</translation>
+        <translation>เพิ่มส่วนแทรก</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Painter set</translation>
+        <translation>ชุดตัวระบาย</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Mirror painters over baseline.</translation>
+        <translation>สะท้อนตัวระบายข้ามเส้นฐาน</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Group all castings to one operation.</translation>
+        <translation>รวมการสร้างทั้งหมดเป็นการดำเนินการเดียว</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Start with casting a begin apex on open forms.</translation>
+        <translation>เริ่มด้วยการสร้างยอดปลายเริ่มต้นบนรูปทรงเปิด</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>End with casting an end apex on open forms.</translation>
+        <translation>จบด้วยการสร้างยอดปลายสิ้นสุดบนรูปทรงเปิด</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation>Add insertions in between eg. spacers, knots. (Not implemented)</translation>
+        <translation>เพิ่มส่วนแทรกคั่นระหว่าง เช่น ตัวเว้นระยะ ปม (ยังไม่ได้พัฒนา)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Preview of painters.</translation>
+        <translation>ดูตัวอย่างตัวระบาย</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Select painter set.</translation>
+        <translation>เลือกชุดตัวระบาย</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5462,7 +5462,7 @@ is already in the list.</translation>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>SawtoothWave</translation>
+        <translation>คลื่นฟันเลื่อย</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5472,17 +5472,17 @@ is already in the list.</translation>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>SteppedWave</translation>
+        <translation>คลื่นขั้นบันได</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>SqauredShape</translation>
+        <translation>รูปทรงสี่เหลี่ยม</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>SqauredShapeFlexing</translation>
+        <translation>รูปทรงสี่เหลี่ยมแบบโค้งงอ</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5492,17 +5492,17 @@ is already in the list.</translation>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation>Insertion type</translation>
+        <translation>ประเภทการแทรก</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation>Preview of insertion.</translation>
+        <translation>ตัวอย่างการแทรก</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Select Insertion or Enter void space. (Not implemented)</translation>
+        <translation>เลือกการแทรกหรือป้อนช่องว่าง (ยังไม่รองรับ)</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -5517,52 +5517,52 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
+        <translation>FlexPainter เบต้า 0.42e © CVH 2020 </translation>
     </message>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation>Document Units.</translation>
+        <translation>หน่วยเอกสาร</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Enter painter width. (+0)</translation>
+        <translation>ป้อนความกว้างลวดลาย (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Enter main painter stepsize. (+0)</translation>
+        <translation>ป้อนขนาดขั้นของลวดลายหลัก (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Enter main painter length. (+)</translation>
+        <translation>ป้อนความยาวลวดลายหลัก (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Keep painters proportional.</translation>
+        <translation>คงสัดส่วนของลวดลาย</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Select percentage of Stepsize.</translation>
+        <translation>เลือกเปอร์เซ็นต์ของขนาดขั้น</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Adapt scaling f 1.00-0.90 to fit the whole form.</translation>
+        <translation>ปรับตัวคูณมาตราส่วน f 1.00-0.90 ให้พอดีกับรูปทรงทั้งหมด</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Verbose info. (persistent on)</translation>
+        <translation>ข้อมูลโดยละเอียด (เปิดค้างไว้)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Deleted painted over base entities. (persistent off)</translation>
+        <translation>ลบวัตถุฐานที่ถูกวาดทับ (ปิดค้างไว้)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5572,7 +5572,7 @@ is already in the list.</translation>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation>Curtain Rope Knot</translation>
+        <translation>ปมเชือกผ้าม่าน</translation>
     </message>
     <message>
         <location line="+546"/>
@@ -5592,12 +5592,12 @@ is already in the list.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Repetitive Painter options</translation>
+        <translation>ตัวเลือกลวดลายซ้ำ</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Stepsize :</source>
-        <translation>Stepsize :</translation>
+        <translation>ขนาดขั้น :</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5607,17 +5607,17 @@ is already in the list.</translation>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation>Closed Forms shifting % :</translation>
+        <translation>การเลื่อนรูปทรงปิด % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Open forms scaling options</translation>
+        <translation>ตัวเลือกการปรับมาตราส่วนรูปทรงเปิด</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation>Dynamically scale to fit</translation>
+        <translation>ปรับมาตราส่วนแบบไดนามิกให้พอดี</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -5627,7 +5627,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation>Centered</translation>
+        <translation>จัดกึ่งกลาง</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5637,12 +5637,12 @@ is already in the list.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose *</translation>
+        <translation>แสดงรายละเอียด *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>Delete Base Entities *</translation>
+        <translation>ลบวัตถุฐาน *</translation>
     </message>
 </context>
 <context>
@@ -5650,7 +5650,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation>Flip Hori&amp;zontal</translation>
+        <translation>&amp;พลิกแนวนอน</translation>
     </message>
 </context>
 <context>
@@ -5658,7 +5658,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation>Flip Verti&amp;cal</translation>
+        <translation>&amp;พลิกแนวตั้ง</translation>
     </message>
 </context>
 <context>
@@ -5666,12 +5666,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation>Flush Undo History</translation>
+        <translation>ล้างประวัติการเลิกทำ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Are you sure that you want to flush the undo / redo transaction history?</translation>
+        <translation>คุณแน่ใจหรือไม่ว่าต้องการล้างประวัติธุรกรรมการเลิกทำ / ทำซ้ำ?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5681,7 +5681,7 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>Flush &amp;Undo History</translation>
+        <translation>&amp;ล้างประวัติการเลิกทำ</translation>
     </message>
 </context>
 <context>
@@ -5702,17 +5702,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation>ฟอร์ม</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation>Cube size:</translation>
+        <translation>ขนาดลูกบาศก์:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>วาด glue lap</translation>
+        <translation>วาดแถบกาว</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
@@ -5743,7 +5743,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Four: Equal</translation>
+        <translation>สี่: เท่ากัน</translation>
     </message>
 </context>
 <context>
@@ -5751,7 +5751,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Four: Left</translation>
+        <translation>สี่: ซ้าย</translation>
     </message>
 </context>
 <context>
@@ -5759,7 +5759,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Four: Right</translation>
+        <translation>สี่: ขวา</translation>
     </message>
 </context>
 <context>
@@ -5767,42 +5767,42 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Right-Click</source>
-        <translation>Right-Click</translation>
+        <translation>คลิกขวา</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation>Right-click to deselect entities</translation>
+        <translation>คลิกขวาเพื่อยกเลิกการเลือกวัตถุ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-Click</source>
-        <translation>Double-Click</translation>
+        <translation>ดับเบิลคลิก</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation>Double-click to edit text</translation>
+        <translation>ดับเบิลคลิกเพื่อแก้ไขข้อความ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Double-click to edit hatch</translation>
+        <translation>ดับเบิลคลิกเพื่อแก้ไขแรเงา</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation>Double-click on block reference opens block</translation>
+        <translation>ดับเบิลคลิกบนการอ้างอิงบล็อกเพื่อเปิดบล็อก</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation>Edit block reference in-place</translation>
+        <translation>แก้ไขการอ้างอิงบล็อกในตำแหน่งเดิม</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Double-click to select contour</source>
-        <translation>Double-click to select contour</translation>
+        <translation>ดับเบิลคลิกเพื่อเลือกเส้นขอบ</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -5812,7 +5812,7 @@ is already in the list.</translation>
     <message>
         <location line="+16"/>
         <source>Right double-click to reset</source>
-        <translation>Right double-click to reset</translation>
+        <translation>ดับเบิลคลิกขวาเพื่อรีเซ็ต</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5822,27 +5822,27 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation>Select block references together with attributes</translation>
+        <translation>เลือกการอ้างอิงบล็อกพร้อมกับคุณลักษณะ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation>Hide attributes when block references are hidden</translation>
+        <translation>ซ่อนคุณลักษณะเมื่อการอ้างอิงบล็อกถูกซ่อน</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation>Cursor Range</translation>
+        <translation>ระยะเคอร์เซอร์</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Cursor range for picking entities:</source>
-        <translation>Cursor range for picking entities:</translation>
+        <translation>ระยะเคอร์เซอร์สำหรับการเลือกวัตถุ:</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Cursor range for snap:</source>
-        <translation>Cursor range for snap:</translation>
+        <translation>ระยะเคอร์เซอร์สำหรับการจับ:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5862,27 +5862,27 @@ is already in the list.</translation>
     <message>
         <location line="-109"/>
         <source>Highlight entity within range</source>
-        <translation>Highlight entity within range</translation>
+        <translation>ไฮไลต์วัตถุที่อยู่ในระยะ</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
         <source>Automatically scale grid</source>
-        <translation>Automatically scale grid</translation>
+        <translation>ปรับมาตราส่วนกริดโดยอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation>Automatically scale meta grid</translation>
+        <translation>ปรับมาตราส่วนกริดหลักโดยอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Solid grid lines</translation>
+        <translation>เส้นกริดแบบทึบ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation>Minimal grid spacing (px):</translation>
+        <translation>ระยะห่างกริดต่ำสุด (px):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
@@ -5892,22 +5892,22 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Show large origin axis</translation>
+        <translation>แสดงแกนจุดกำเนิดขนาดใหญ่</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation>Rulers and Scrollbars</translation>
+        <translation>ไม้บรรทัดและแถบเลื่อน</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation>Show rulers</translation>
+        <translation>แสดงไม้บรรทัด</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation>Show scrollbars</translation>
+        <translation>แสดงแถบเลื่อน</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5917,17 +5917,17 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation>Show crosshairs</translation>
+        <translation>แสดงเส้นเล็ง</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation>Show large crosshairs</translation>
+        <translation>แสดงเส้นเล็งขนาดใหญ่</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation>This can be used if cursors are not visible on external monitors</translation>
+        <translation>ใช้ได้ในกรณีที่มองไม่เห็นเคอร์เซอร์บนจอภาพภายนอก</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5937,42 +5937,42 @@ is already in the list.</translation>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation>Auto Zoom</translation>
+        <translation>ซูมอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation>Margin (px):</translation>
+        <translation>ระยะขอบ (px):</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation>Auto zoom on load</translation>
+        <translation>ซูมอัตโนมัติเมื่อโหลด</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Color Adjustment</source>
-        <translation>Color Adjustment</translation>
+        <translation>การปรับสี</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Color lightness threshold:</source>
-        <translation>Color lightness threshold:</translation>
+        <translation>เกณฑ์ความสว่างของสี:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Prevent white on white / black on black display</source>
-        <translation>Prevent white on white / black on black display</translation>
+        <translation>ป้องกันการแสดงผลสีขาวบนพื้นขาว / สีดำบนพื้นดำ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Disable for printing</source>
-        <translation>Disable for printing</translation>
+        <translation>ปิดใช้งานสำหรับการพิมพ์</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Linetypes and Lineweights</translation>
+        <translation>ประเภทเส้นและน้ำหนักเส้น</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5982,12 +5982,12 @@ is already in the list.</translation>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Scale linetype patterns by line weight</translation>
+        <translation>ปรับมาตราส่วนรูปแบบประเภทเส้นตามน้ำหนักเส้น</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Pattern scale for lineweight 0.00mm:</translation>
+        <translation>มาตราส่วนรูปแบบสำหรับน้ำหนักเส้น 0.00mm:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -5997,12 +5997,12 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Display and Performance</source>
-        <translation>Display and Performance</translation>
+        <translation>การแสดงผลและประสิทธิภาพ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</source>
-        <translation>ใช้มุมมองกราฟิกที่เร่งความเร็วด้วยฮาร์ดแวร์ซึ่งอิงกับ Qt RHI (Rendering Hardware Interface) แทนมุมมองกราฟิกที่อิงกับรูปภาพ</translation>
+        <translation>ใช้มุมมองกราฟิกที่เร่งความเร็วด้วยฮาร์ดแวร์บนพื้นฐาน Qt RHI (Rendering Hardware Interface) แทนมุมมองกราฟิกที่อิงกับรูปภาพ</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6017,33 +6017,33 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation>Use full resolution for Retina / high resolution display</translation>
+        <translation>ใช้ความละเอียดเต็มสำหรับจอแสดงผล Retina / ความละเอียดสูง</translation>
     </message>
     <message>
         <location line="+596"/>
         <source>Reference point size (px):</source>
-        <translation>Reference point size (px):</translation>
+        <translation>ขนาดจุดอ้างอิง (px):</translation>
     </message>
     <message>
         <location line="+209"/>
         <source>Allocation limit for bitmaps (MB):</source>
-        <translation>Allocation limit for bitmaps (MB):</translation>
+        <translation>ขีดจำกัดการจัดสรรหน่วยความจำสำหรับบิตแมป (MB):</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation>Dot length in line patterns:</translation>
+        <translation>ความยาวจุดในรูปแบบเส้น:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
-        <translation>Persistent selection</translation>
+        <translation>การเลือกแบบคงอยู่</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-766"/>
         <source>Number of preview entities:</source>
-        <translation>Number of preview entities:</translation>
+        <translation>จำนวนวัตถุในการดูตัวอย่าง:</translation>
     </message>
     <message>
         <location line="-121"/>
@@ -6073,17 +6073,17 @@ is already in the list.</translation>
     <message>
         <location line="+325"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation>Display arcs as lines below this angle (degrees):</translation>
+        <translation>แสดงส่วนโค้งเป็นเส้นตรงเมื่อมุมต่ำกว่าค่านี้ (องศา):</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation>Minimum angle step for rendering arcs (degrees):</translation>
+        <translation>ขั้นมุมต่ำสุดสำหรับการเรนเดอร์ส่วนโค้ง (องศา):</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation>Display entities with more than N dashes as continuous:</translation>
+        <translation>แสดงวัตถุที่มีเส้นประมากกว่า N ช่วงเป็นเส้นต่อเนื่อง:</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -6098,12 +6098,12 @@ is already in the list.</translation>
     <message>
         <location line="-11"/>
         <source>Number of threads:</source>
-        <translation>Number of threads:</translation>
+        <translation>จำนวนเธรด:</translation>
     </message>
     <message>
         <location line="+437"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation>Maximum selected entities with reference points:</translation>
+        <translation>จำนวนวัตถุที่เลือกสูงสุดที่มีจุดอ้างอิง:</translation>
     </message>
     <message>
         <location line="+217"/>
@@ -6113,12 +6113,12 @@ is already in the list.</translation>
     <message>
         <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation>Maximum selected entities with displayed reference points:</translation>
+        <translation>จำนวนวัตถุที่เลือกสูงสุดที่แสดงจุดอ้างอิง:</translation>
     </message>
     <message>
         <location line="+219"/>
         <source>Maximum complexity for solid fills at high quality:</source>
-        <translation>Maximum complexity for solid fills at high quality:</translation>
+        <translation>ความซับซ้อนสูงสุดสำหรับการเติมทึบคุณภาพสูง:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
@@ -6152,12 +6152,12 @@ is already in the list.</translation>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation>Crosshairs:</translation>
+        <translation>เส้นเล็ง:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation>Inactive crosshairs:</translation>
+        <translation>เส้นเล็งที่ไม่ใช้งาน:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6167,12 +6167,12 @@ is already in the list.</translation>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation>Origin:</translation>
+        <translation>จุดกำเนิด:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Relative zero:</source>
-        <translation>Relative zero:</translation>
+        <translation>ศูนย์สัมพัทธ์:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6187,7 +6187,7 @@ is already in the list.</translation>
     <message>
         <location line="+36"/>
         <source>Meta grid:</source>
-        <translation>Meta grid:</translation>
+        <translation>กริดหลัก:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6197,7 +6197,7 @@ is already in the list.</translation>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation>Primary selection color:</translation>
+        <translation>สีการเลือกหลัก:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6207,47 +6207,47 @@ is already in the list.</translation>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation>Secondary selection color:</translation>
+        <translation>สีการเลือกรอง:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation>Primary อ้างอิง Points:</translation>
+        <translation>จุดอ้างอิงหลัก:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation>Secondary อ้างอิง Points:</translation>
+        <translation>จุดอ้างอิงรอง:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box border:</source>
-        <translation>Selection box border:</translation>
+        <translation>เส้นขอบกรอบการเลือก:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation>Selection box fill:</translation>
+        <translation>การเติมกรอบการเลือก:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation>Cross-selection box fill:</translation>
+        <translation>การเติมกรอบการเลือกแบบตัดผ่าน:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation>เริ่ม Points:</translation>
+        <translation>จุดเริ่มต้น:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>End points:</source>
-        <translation>จุดสิ้นสุด Points:</translation>
+        <translation>จุดปลาย:</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Tertiary reference points:</source>
-        <translation>Tertiary อ้างอิง Points:</translation>
+        <translation>จุดอ้างอิงลำดับที่สาม:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6262,17 +6262,17 @@ is already in the list.</translation>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Snap label:</translation>
+        <translation>ป้ายการจับ:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation>Info Tools</translation>
+        <translation>เครื่องมือข้อมูล</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation>Measurements and labels:</translation>
+        <translation>การวัดและป้ายกำกับ:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6282,7 +6282,7 @@ is already in the list.</translation>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation>Auxiliary shapes:</translation>
+        <translation>รูปทรงเสริม:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6305,17 +6305,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation>Ruler font:</translation>
+        <translation>ฟอนต์ไม้บรรทัด:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Snap label font:</translation>
+        <translation>ฟอนต์ป้ายการจับ:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation>Info label font:</translation>
+        <translation>ฟอนต์ป้ายข้อมูล:</translation>
     </message>
 </context>
 <context>
@@ -6323,27 +6323,27 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+349"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation>Mouse wheel zoom factor:</translation>
+        <translation>ตัวคูณการซูมของล้อเมาส์:</translation>
     </message>
     <message>
         <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation>Limit zoom and scroll to prevent overflows</translation>
+        <translation>จำกัดการซูมและการเลื่อนเพื่อป้องกันค่าล้น</translation>
     </message>
     <message>
         <location line="+444"/>
         <source>Enable pan gesture</source>
-        <translation>Enable pan gesture</translation>
+        <translation>เปิดใช้ท่าทางการแพน</translation>
     </message>
     <message>
         <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation>Reverse mouse wheel direction for zoom</translation>
+        <translation>กลับทิศทางล้อเมาส์สำหรับการซูม</translation>
     </message>
     <message>
         <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
-        <translation>Limit scrolling to vertical and horizontal</translation>
+        <translation>จำกัดการเลื่อนเฉพาะแนวตั้งและแนวนอน</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6353,7 +6353,7 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Panning threshold (px):</source>
-        <translation>Panning threshold (px):</translation>
+        <translation>เกณฑ์การแพน (px):</translation>
     </message>
     <message>
         <location line="+327"/>
@@ -6363,12 +6363,12 @@ is already in the list.</translation>
     <message>
         <location line="-14"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation>Mouse wheel / two finger swipe:</translation>
+        <translation>ล้อเมาส์ / การปัดสองนิ้ว:</translation>
     </message>
     <message>
         <location line="-306"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation>Middle mouse button zoom factor:</translation>
+        <translation>ตัวคูณการซูมของปุ่มกลางเมาส์:</translation>
     </message>
 </context>
 <context>
@@ -6402,7 +6402,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Defaults for New Drawings</translation>
+        <translation>ค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6430,7 +6430,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Hatch Tools</translation>
+        <translation>เครื่องมือแรเงา</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -6486,17 +6486,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation>ไม่มีboundary selected</translation>
+        <translation>ไม่ได้เลือกขอบเขต</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Loop not closed at point %1/%2.</translation>
+        <translation>ลูปไม่ปิดที่จุด %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</translation>
+        <translation>วัตถุขอบเขตแต่ละรายการต้องเป็นเส้น ส่วนโค้ง วงกลม ส่วนโค้งวงรี วงรี โพลีไลน์ หรือสไปลน์ พบ:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
@@ -6506,7 +6506,7 @@ is already in the list.</translation>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Create hatch or solid fill from selected boundary</translation>
+        <translation>สร้างแรเงาหรือการเติมทึบจากขอบเขตที่เลือก</translation>
     </message>
 </context>
 <context>
@@ -6576,12 +6576,12 @@ is already in the list.</translation>
     <message>
         <location line="+83"/>
         <source>Files</source>
-        <translation>Files</translation>
+        <translation>ไฟล์</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>All Image Files (%1)</source>
-        <translation>All Image Files (%1)</translation>
+        <translation>ไฟล์ภาพทั้งหมด (%1)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -6591,12 +6591,12 @@ is already in the list.</translation>
     <message>
         <location line="+8"/>
         <source>Import Bitmap</source>
-        <translation>Import Bitmap</translation>
+        <translation>นำเข้าบิตแมป</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Format:</source>
-        <translation>Format:</translation>
+        <translation>รูปแบบ:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -6611,7 +6611,7 @@ is already in the list.</translation>
     <message>
         <location line="+23"/>
         <source>Keep proportions</source>
-        <translation>Keep proportions</translation>
+        <translation>คงสัดส่วน</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -6639,12 +6639,12 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Error while importing file %1</source>
-        <translation>Error while importing file %1</translation>
+        <translation>เกิดข้อผิดพลาดขณะนำเข้าไฟล์ %1</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>ไม่มีimport filters have been found. Aborting</translation>
+        <translation>ไม่พบตัวกรองการนำเข้า กำลังยกเลิก...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6659,7 +6659,7 @@ is already in the list.</translation>
     <message>
         <location line="+9"/>
         <source>Format:</source>
-        <translation>Format:</translation>
+        <translation>รูปแบบ:</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
@@ -6674,7 +6674,7 @@ is already in the list.</translation>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Rotate pasted entities&lt;br&gt;by this angle</translation>
+        <translation>หมุนวัตถุที่วาง&lt;br&gt;ตามมุมนี้</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -6684,22 +6684,22 @@ is already in the list.</translation>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Scale pasted entities&lt;br&gt;by this factor</translation>
+        <translation>ปรับมาตราส่วนวัตถุที่วาง&lt;br&gt;ตามตัวคูณนี้</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Flip pasted entities&lt;br&gt;horizontally</translation>
+        <translation>พลิกวัตถุที่วาง&lt;br&gt;ในแนวนอน</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Flip pasted entities&lt;br&gt;vertically</translation>
+        <translation>พลิกวัตถุที่วาง&lt;br&gt;ในแนวตั้ง</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</translation>
+        <translation>วางวัตถุทั้งหมด&lt;br&gt;ลงในเลเยอร์ปัจจุบัน&lt;br&gt;แทนเลเยอร์เดิม</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6709,22 +6709,22 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation>Overwrite Layers</translation>
+        <translation>เขียนทับเลเยอร์</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Overwrite Blocks</translation>
+        <translation>เขียนทับบล็อก</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</translation>
+        <translation>เขียนทับเลเยอร์ที่มีอยู่&lt;br&gt;ในแบบวาดด้วย&lt;br&gt;เลเยอร์จากคลิปบอร์ด</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</translation>
+        <translation>เขียนทับบล็อกที่มีอยู่&lt;br&gt;ในแบบวาดด้วย&lt;br&gt;บล็อกจากคลิปบอร์ด</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
@@ -6742,7 +6742,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Import Points</translation>
+        <translation>นำเข้าจุด</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -6760,7 +6760,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Specify position</translation>
+        <translation>ระบุตำแหน่ง</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -6775,17 +6775,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation>Add &amp;custom 2D centroid</translation>
+        <translation>&amp;เพิ่มเซนทรอยด์ 2D แบบกำหนดเอง</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation>Create a customizable 2D Centroid marker</translation>
+        <translation>สร้างเครื่องหมายเซนทรอยด์ 2D ที่กำหนดเองได้</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation>Creates a new point mass 2D Centroid marker customizable by dialog</translation>
+        <translation>สร้างเครื่องหมายเซนทรอยด์ 2D แบบมวลจุดใหม่ที่กำหนดเองได้ผ่านกล่องโต้ตอบ</translation>
     </message>
 </context>
 <context>
@@ -6793,12 +6793,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>Specify first line</translation>
+        <translation>ระบุเส้นแรก</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>Specify second line</translation>
+        <translation>ระบุเส้นที่สอง</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -6816,7 +6816,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation>เลือก อาร์ก วงกลม วงรี or elliptical อาร์ก</translation>
+        <translation>เลือกส่วนโค้ง วงกลม วงรี หรือส่วนโค้งวงรี</translation>
     </message>
     <message>
         <location line="+236"/>
@@ -6837,7 +6837,7 @@ is already in the list.</translation>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation>วงกลม พื้นที่:</translation>
+        <translation>พื้นที่วงกลม:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6865,7 +6865,7 @@ is already in the list.</translation>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>วงรี อาร์ก พื้นที่:</translation>
+        <translation>พื้นที่ส่วนโค้งวงรี:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6894,13 +6894,13 @@ is already in the list.</translation>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation>วงรี พื้นที่:</translation>
+        <translation>พื้นที่วงรี:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>อาร์ก พื้นที่:</translation>
+        <translation>พื้นที่ส่วนโค้ง:</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -6915,17 +6915,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
         <source>Mode:</source>
-        <translation>Mode:</translation>
+        <translation>โหมด:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Calculate Area of Segment</source>
-        <translation>Calculate Area of Segment</translation>
+        <translation>คำนวณพื้นที่ส่วนตัดวงกลม</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Calculate Area of Sector</source>
-        <translation>Calculate Area of Sector</translation>
+        <translation>คำนวณพื้นที่เสี้ยววงกลม</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6945,12 +6945,12 @@ is already in the list.</translation>
     <message>
         <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation>Add lengths/circumference to drawing</translation>
+        <translation>เพิ่มความยาว/เส้นรอบวงลงในแบบวาด</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Arc/Circle/Ellipse Area</translation>
+        <translation>พื้นที่ส่วนโค้ง/วงกลม/วงรี</translation>
     </message>
 </context>
 <context>
@@ -6958,12 +6958,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation>Set next polygon corner</translation>
+        <translation>กำหนดมุมถัดไปของรูปหลายเหลี่ยม</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation>Polygon พื้นที่:</translation>
+        <translation>พื้นที่รูปหลายเหลี่ยม:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6973,17 +6973,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation>Calculate length and close tool.</translation>
+        <translation>คำนวณความยาวและปิดเครื่องมือ</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation>Close Tool.</translation>
+        <translation>ปิดเครื่องมือ</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>Pol&amp;ygonal Area</translation>
+        <translation>&amp;พื้นที่รูปหลายเหลี่ยม</translation>
     </message>
 </context>
 <context>
@@ -6991,43 +6991,43 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
-        <translation>ไม่มีselection</translation>
+        <translation>ไม่มีการเลือก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation>Please, make a selection first. Command terminated.</translation>
+        <translation>โปรดทำการเลือกก่อน สิ้นสุดคำสั่ง</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation>Not implemented. Command terminated.</translation>
+        <translation>ยังไม่รองรับ สิ้นสุดคำสั่ง</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation>Area 2D Centroid script (v0.32) by CVH</translation>
+        <translation>สคริปต์เซนทรอยด์พื้นที่ 2D (v0.32) โดย CVH</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation>Arc sector mode</translation>
+        <translation>โหมดเสี้ยวส่วนโค้ง</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation>Enclosed พื้นที่:</translation>
+        <translation>พื้นที่ปิดล้อม:</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
-        <translation>Approximated Enclosed พื้นที่:</translation>
+        <translation>พื้นที่ปิดล้อมโดยประมาณ:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Hatched พื้นที่:</translation>
+        <translation>พื้นที่แรเงา:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7037,7 +7037,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Differential Hatched พื้นที่:</translation>
+        <translation>พื้นที่แรเงาส่วนต่าง:</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7047,33 +7047,33 @@ is already in the list.</translation>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation>Multiple entities in selection.</translation>
+        <translation>มีวัตถุหลายรายการในการเลือก</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation>Centroid markers circle in selection. No results.</translation>
+        <translation>มีวงกลมเครื่องหมายเซนทรอยด์ในการเลือก ไม่มีผลลัพธ์</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Unsupported entity type. No results.</source>
-        <translation>Unsupported entity type. No results.</translation>
+        <translation>ประเภทวัตถุที่ไม่รองรับ ไม่มีผลลัพธ์</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>No results.</source>
-        <translation>ไม่มีresults</translation>
+        <translation>ไม่มีผลลัพธ์</translation>
     </message>
     <message>
         <location line="+49"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation>(Incl. approximations)</translation>
+        <translation>(รวมค่าประมาณ)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation>Approximated เซนทรอยด์:</translation>
+        <translation>เซนทรอยด์โดยประมาณ:</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7084,23 +7084,23 @@ is already in the list.</translation>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Encountered an unsupported polyline with custom widths</translation>
+        <translation>พบโพลีไลน์ที่ไม่รองรับซึ่งมีความกว้างกำหนดเอง</translation>
     </message>
     <message>
         <location line="-488"/>
         <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation>Encountered an unsupported polygon with custom widths</translation>
+        <translation>พบรูปหลายเหลี่ยมที่ไม่รองรับซึ่งมีความกว้างกำหนดเอง</translation>
     </message>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Unhandled shape from hatch loop.</translation>
+        <translation>รูปทรงจากลูปแรเงาที่ไม่ได้รับการจัดการ</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation>Self-intersecting shape near (%1). No Results.</translation>
+        <translation>รูปทรงตัดกันเองใกล้ (%1). ไม่มีผลลัพธ์</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
@@ -7110,12 +7110,12 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation>Create an area 2D Centroid for a selected entity</translation>
+        <translation>สร้างเซนทรอยด์ 2D แบบพื้นที่สำหรับวัตถุที่เลือก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</translation>
+        <translation>สร้างเครื่องหมายเซนทรอยด์ 2D ความหนาแน่นเชิงพื้นที่สม่ำเสมอใหม่และป้ายค่าสำหรับวัตถุที่เลือก</translation>
     </message>
 </context>
 <context>
@@ -7138,12 +7138,12 @@ is already in the list.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Bearing:</translation>
+        <translation>มุมแบริ่ง:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation>Azimuth:</translation>
+        <translation>มุมอะซิมัท:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -7161,7 +7161,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation>Point mass</translation>
+        <translation>มวลจุด</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7201,7 +7201,7 @@ is already in the list.</translation>
     <message>
         <location line="-1"/>
         <source>Density</source>
-        <translation>Density</translation>
+        <translation>ความหนาแน่น</translation>
     </message>
 </context>
 <context>
@@ -7214,7 +7214,7 @@ is already in the list.</translation>
     <message>
         <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation>Deactivated/removed the 2D Centroids transaction listener.</translation>
+        <translation>ปิดใช้งาน/ลบตัวรับฟังธุรกรรมเซนทรอยด์ 2D แล้ว</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7222,12 +7222,12 @@ is already in the list.</translation>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation>Syntax error: &apos;%1&apos; parse error</translation>
+        <translation>ข้อผิดพลาดทางไวยากรณ์: การแยกวิเคราะห์ &apos;%1&apos; ผิดพลาด</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation>Centroid &amp;Listener</translation>
+        <translation>&amp;ตัวรับฟังเซนทรอยด์</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7245,12 +7245,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation>Specify first entity</translation>
+        <translation>ระบุวัตถุแรก</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation>Specify second entity</translation>
+        <translation>ระบุวัตถุที่สอง</translation>
     </message>
     <message>
         <location line="+95"/>
@@ -7260,7 +7260,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation>Distance &amp;Entity to Entity</translation>
+        <translation>ระยะทางจาก&amp;วัตถุถึงวัตถุ</translation>
     </message>
 </context>
 <context>
@@ -7268,7 +7268,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation>Specify entity</translation>
+        <translation>ระบุวัตถุ</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7283,7 +7283,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Distance &amp;Entity to Point</translation>
+        <translation>ระยะทางจาก&amp;วัตถุถึงจุด</translation>
     </message>
 </context>
 <context>
@@ -7306,12 +7306,12 @@ is already in the list.</translation>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation>Delta X:</translation>
+        <translation>ผลต่าง X:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation>Delta Y:</translation>
+        <translation>ผลต่าง Y:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7321,7 +7321,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation>Distance &amp;Point to Point</translation>
+        <translation>ระยะทางจาก&amp;จุดถึงจุด</translation>
     </message>
 </context>
 <context>
@@ -7350,7 +7350,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation>Relative P&amp;olar Position</translation>
+        <translation>ตำแหน่ง&amp;เชิงขั้วสัมพัทธ์</translation>
     </message>
 </context>
 <context>
@@ -7366,12 +7366,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation>ไม่มีselection</translation>
+        <translation>ไม่มีการเลือก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation>Please, make a selection first. Command terminated.</translation>
+        <translation>โปรดทำการเลือกก่อน สิ้นสุดคำสั่ง</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7381,86 +7381,86 @@ is already in the list.</translation>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation>Encountered a missing coordinate value.</translation>
+        <translation>พบค่าพิกัดที่ขาดหายไป</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation>Encountered an invalid coordinate value.</translation>
+        <translation>พบค่าพิกัดที่ไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation>Encountered a missing &apos;%1&apos; value.</translation>
+        <translation>พบค่า &apos;%1&apos; ที่ขาดหายไป</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation>Encountered an invalid &apos;%1&apos; value.</translation>
+        <translation>พบค่า &apos;%1&apos; ที่ไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation>Encountered an unknown marker type.</translation>
+        <translation>พบประเภทเครื่องหมายที่ไม่รู้จัก</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation>ไม่มีresult</translation>
+        <translation>ไม่มีผลลัพธ์</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation>ไม่มี2D Centroid markers found in the selection</translation>
+        <translation>ไม่พบเครื่องหมายเซนทรอยด์ 2D ในการเลือก</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation>Single marker selected, point mass = %1</translation>
+        <translation>เลือกเครื่องหมายเดียว มวลจุด = %1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation>Density is undefined</translation>
+        <translation>ไม่ได้กำหนดความหนาแน่น</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation>Results in a division by zero.</translation>
+        <translation>ส่งผลให้เกิดการหารด้วยศูนย์</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation>Results in a NaN value.</translation>
+        <translation>ส่งผลให้ได้ค่า NaN.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation>Combined 2D Centroid</translation>
+        <translation>เซนทรอยด์ 2D รวม</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation>Combined uniform point mass (%1):</translation>
+        <translation>มวลจุดสม่ำเสมอรวม (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation>Combined point mass (%1):</translation>
+        <translation>มวลจุดรวม (%1):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation>All densities are undefined</translation>
+        <translation>ความหนาแน่นทั้งหมดไม่ได้กำหนด</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation>Some densities are undefined</translation>
+        <translation>ความหนาแน่นบางส่วนไม่ได้กำหนด</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7475,7 +7475,7 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation>Combined เซนทรอยด์:</translation>
+        <translation>เซนทรอยด์รวม:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
@@ -7485,12 +7485,12 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation>Combine selected 2D Centroid markers weighted</translation>
+        <translation>รวมเครื่องหมายเซนทรอยด์ 2D ที่เลือกแบบถ่วงน้ำหนัก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation>Combines selected 2D Centroid markers, summing all properties weighted</translation>
+        <translation>รวมเครื่องหมายเซนทรอยด์ 2D ที่เลือก โดยรวมคุณสมบัติทั้งหมดแบบถ่วงน้ำหนัก</translation>
     </message>
 </context>
 <context>
@@ -7498,12 +7498,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation>ไม่มีselection</translation>
+        <translation>ไม่มีการเลือก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation>Please, make a selection first. Command terminated.</translation>
+        <translation>โปรดทำการเลือกก่อน สิ้นสุดคำสั่ง</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -7514,22 +7514,22 @@ is already in the list.</translation>
         <location line="+35"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation>Approximated ความยาว:</translation>
+        <translation>ความยาวโดยประมาณ:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation>Unsupported entity type. No results.</translation>
+        <translation>ประเภทวัตถุที่ไม่รองรับ ไม่มีผลลัพธ์</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation>ไม่มีresults</translation>
+        <translation>ไม่มีผลลัพธ์</translation>
     </message>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation>Wire 2D Centroid script (v0.32) by CVH</translation>
+        <translation>สคริปต์เซนทรอยด์ 2D แบบเส้นลวด (v0.32) โดย CVH</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -7539,7 +7539,7 @@ is already in the list.</translation>
     <message>
         <location line="+55"/>
         <source>Results in a division by zero.</source>
-        <translation>Results in a division by zero.</translation>
+        <translation>ส่งผลให้เกิดการหารด้วยศูนย์</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -7555,12 +7555,12 @@ is already in the list.</translation>
         <location line="+4"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation>(Incl. approximations)</translation>
+        <translation>(รวมค่าประมาณ)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation>Approximated เซนทรอยด์:</translation>
+        <translation>เซนทรอยด์โดยประมาณ:</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7570,12 +7570,12 @@ is already in the list.</translation>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Encountered an unsupported polyline with custom widths</translation>
+        <translation>พบโพลีไลน์ที่ไม่รองรับซึ่งมีความกว้างกำหนดเอง</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation>Encountered an unsupported polygon with custom widths</translation>
+        <translation>พบรูปหลายเหลี่ยมที่ไม่รองรับซึ่งมีความกว้างกำหนดเอง</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
@@ -7585,12 +7585,12 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation>Create a wire 2D Centroid for a selection</translation>
+        <translation>สร้างเซนทรอยด์ 2D แบบเส้นลวดสำหรับการเลือก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</translation>
+        <translation>สร้างเครื่องหมายเซนทรอยด์ 2D ความหนาแน่นเชิงเส้นสม่ำเสมอใหม่และป้ายค่าสำหรับชุดวัตถุที่เลือก</translation>
     </message>
 </context>
 <context>
@@ -7626,17 +7626,17 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation>Cartesian coordinate separator:</translation>
+        <translation>ตัวคั่นพิกัดคาร์ทีเซียน:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation>Polar coordinate separator:</translation>
+        <translation>ตัวคั่นพิกัดเชิงขั้ว:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation>Relative coordinate prefix:</translation>
+        <translation>คำนำหน้าพิกัดสัมพัทธ์:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -7656,12 +7656,12 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation>Relative Cartesian coordinate:</translation>
+        <translation>พิกัดคาร์ทีเซียนสัมพัทธ์:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation>Relative polar coordinate:</translation>
+        <translation>พิกัดเชิงขั้วสัมพัทธ์:</translation>
     </message>
 </context>
 <context>
@@ -7674,13 +7674,13 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>Coordinate Format</source>
-        <translation>Coordinate Format</translation>
+        <translation>รูปแบบพิกัด</translation>
     </message>
     <message>
         <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
-        <translation>Comma</translation>
+        <translation>จุลภาค</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -7693,37 +7693,37 @@ is already in the list.</translation>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation>Semicolon</translation>
+        <translation>อัฒภาค</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation>Less Than</translation>
+        <translation>น้อยกว่า</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>At</translation>
+        <translation>แอต</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Percentage</source>
-        <translation>Percentage</translation>
+        <translation>เปอร์เซ็นต์</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation>Dollar</translation>
+        <translation>ดอลลาร์</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation>Hash</translation>
+        <translation>แฮช</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Dot</source>
-        <translation>Dot</translation>
+        <translation>จุด</translation>
     </message>
 </context>
 <context>
@@ -7741,7 +7741,7 @@ is already in the list.</translation>
     <message>
         <location line="+22"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation>Rotate block&lt;br&gt;by this angle</translation>
+        <translation>หมุนบล็อก&lt;br&gt;ตามมุมนี้</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -7751,7 +7751,7 @@ is already in the list.</translation>
     <message>
         <location line="+22"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation>Scale block in X&lt;br&gt;by this factor</translation>
+        <translation>ปรับมาตราส่วนบล็อกในแกน X&lt;br&gt;ตามตัวคูณนี้</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -7761,33 +7761,33 @@ is already in the list.</translation>
     <message>
         <location line="+25"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation>Scale block in Y&lt;br&gt;by this factor</translation>
+        <translation>ปรับมาตราส่วนบล็อกในแกน Y&lt;br&gt;ตามตัวคูณนี้</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation>Keep Proportions</translation>
+        <translation>คงสัดส่วน</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation>Flip block&lt;br&gt;horizontally</translation>
+        <translation>พลิกบล็อก&lt;br&gt;ในแนวนอน</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation>Flip block&lt;br&gt;vertically</translation>
+        <translation>พลิกบล็อก&lt;br&gt;ในแนวตั้ง</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation>Single Block</translation>
+        <translation>บล็อกเดี่ยว</translation>
     </message>
     <message>
         <location line="+17"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation>Array of Blocks</translation>
+        <translation>อาร์เรย์ของบล็อก</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
@@ -7802,12 +7802,12 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation>Column Spacing:</translation>
+        <translation>ระยะห่างคอลัมน์:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation>Row Spacing:</translation>
+        <translation>ระยะห่างแถว:</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
@@ -7820,12 +7820,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
-        <translation>ไม่สามารถ import file from URL: </translation>
+        <translation>ไม่สามารถนำเข้าไฟล์จาก URL: </translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation>Adjusted invalid block name to &quot;%1&quot;</translation>
+        <translation>ปรับชื่อบล็อกที่ไม่ถูกต้องเป็น &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -7840,7 +7840,7 @@ is already in the list.</translation>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Rotate pasted entities&lt;br&gt;by this angle</translation>
+        <translation>หมุนวัตถุที่วาง&lt;br&gt;ตามมุมนี้</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -7850,37 +7850,37 @@ is already in the list.</translation>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Scale pasted entities&lt;br&gt;by this factor</translation>
+        <translation>ปรับมาตราส่วนวัตถุที่วาง&lt;br&gt;ตามตัวคูณนี้</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Flip pasted entities&lt;br&gt;horizontally</translation>
+        <translation>พลิกวัตถุที่วาง&lt;br&gt;ในแนวนอน</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Flip pasted entities&lt;br&gt;vertically</translation>
+        <translation>พลิกวัตถุที่วาง&lt;br&gt;ในแนวตั้ง</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</translation>
+        <translation>เขียนทับเลเยอร์ที่มีอยู่&lt;br&gt;ในแบบวาดด้วย&lt;br&gt;เลเยอร์จากคลิปบอร์ด</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation>Overwrite Layers</translation>
+        <translation>เขียนทับเลเยอร์</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Overwrite Blocks</translation>
+        <translation>เขียนทับบล็อก</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</translation>
+        <translation>เขียนทับบล็อกที่มีอยู่&lt;br&gt;ในแบบวาดด้วย&lt;br&gt;บล็อกจากคลิปบอร์ด</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
@@ -7893,32 +7893,32 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation>Insert &amp;Script</translation>
+        <translation>แทรก&amp;สคริปต์</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation>ไม่สามารถ read file:</translation>
+        <translation>ไม่สามารถอ่านไฟล์:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation>ไม่มีconstructor found in file:</translation>
+        <translation>ไม่พบคอนสตรัคเตอร์ในไฟล์:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation>ไม่มี&apos;init&apos; function found in file:</translation>
+        <translation>ไม่พบฟังก์ชัน &apos;init&apos; ในไฟล์:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation>ไม่มี&apos;generate&apos; function found in file:</translation>
+        <translation>ไม่พบฟังก์ชัน &apos;generate&apos; ในไฟล์:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation>ไม่มี&apos;generatePreview&apos; function found in file:</translation>
+        <translation>ไม่พบฟังก์ชัน &apos;generatePreview&apos; ในไฟล์:</translation>
     </message>
 </context>
 <context>
@@ -7931,7 +7931,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Invert the current selection</source>
-        <translation>Invert the current selection</translation>
+        <translation>กลับการเลือกปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -7944,28 +7944,28 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation>Isometric True Scale</translation>
+        <translation>ไอโซเมตริกมาตราส่วนจริง</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation>Planometric</translation>
+        <translation>แพลโนเมตริก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation>Dimetric</translation>
+        <translation>ไดเมตริก</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Cabinet</translation>
+        <translation>คาบิเนต</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Cavalier</translation>
+        <translation>คาวาเลียร์</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
@@ -7985,7 +7985,7 @@ is already in the list.</translation>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Left back</translation>
+        <translation>ด้านหลังซ้าย</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7995,22 +7995,22 @@ is already in the list.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Right back</translation>
+        <translation>ด้านหลังขวา</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation>Rotate selection counter-clockwise before projection</translation>
+        <translation>หมุนการเลือกทวนเข็มนาฬิกาก่อนการฉาย</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation>Rotate selection clockwise before projection</translation>
+        <translation>หมุนการเลือกตามเข็มนาฬิกาก่อนการฉาย</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation>Method:</translation>
+        <translation>วิธีการ:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8031,7 +8031,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation>Isometric Grid &amp;Off</translation>
+        <translation>&amp;ปิดกริดไอโซเมตริก</translation>
     </message>
 </context>
 <context>
@@ -8071,12 +8071,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>Shortcut timeout:</translation>
+        <translation>เวลาหมดของปุ่มลัด:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation>Enable keyboard navigation in list widgets</translation>
+        <translation>เปิดใช้การนำทางด้วยแป้นพิมพ์ในวิดเจ็ตรายการ</translation>
     </message>
 </context>
 <context>
@@ -8097,7 +8097,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation>Language of user interface:</translation>
+        <translation>ภาษาของส่วนติดต่อผู้ใช้:</translation>
     </message>
 </context>
 <context>
@@ -8105,7 +8105,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
-        <translation>Language Settings</translation>
+        <translation>การตั้งค่าภาษา</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8118,22 +8118,22 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Default lineweight for new layers:</translation>
+        <translation>น้ำหนักเส้นเริ่มต้นสำหรับเลเยอร์ใหม่:</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Default color for new layers:</source>
-        <translation>Default color for new layers:</translation>
+        <translation>สีเริ่มต้นสำหรับเลเยอร์ใหม่:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Default lineweight for layer 0:</translation>
+        <translation>น้ำหนักเส้นเริ่มต้นสำหรับเลเยอร์ 0:</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Default color for layer 0:</source>
-        <translation>Default color for layer 0:</translation>
+        <translation>สีเริ่มต้นสำหรับเลเยอร์ 0:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
@@ -8186,27 +8186,27 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>Compatibility</source>
-        <translation>Compatibility</translation>
+        <translation>ความเข้ากันได้</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation>Layer 0</translation>
+        <translation>เลเยอร์ 0</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation>Layer 0 behaves like a regular layer (QCAD)</translation>
+        <translation>เลเยอร์ 0 ทำงานเหมือนเลเยอร์ปกติ (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>Layer 0 behaves differently (best compatibility)</translation>
+        <translation>เลเยอร์ 0 ทำงานแตกต่างออกไป (เข้ากันได้ดีที่สุด)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Entities in blocks on layer 0 take on attributes and visibility of block reference.</translation>
+        <translation>วัตถุในบล็อกที่อยู่บนเลเยอร์ 0 จะรับคุณสมบัติและการมองเห็นของการอ้างอิงบล็อก</translation>
     </message>
 </context>
 <context>
@@ -8220,17 +8220,17 @@ is already in the list.</translation>
     <message>
         <location line="+158"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Leading or trailing spaces.</translation>
+        <translation>มีช่องว่างนำหน้าหรือต่อท้าย</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation>Layer name is empty.</translation>
+        <translation>ชื่อเลเยอร์ว่างเปล่า</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation>Layer already exists.</translation>
+        <translation>มีเลเยอร์นี้อยู่แล้ว</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
@@ -8292,7 +8292,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation>Enable alternating row colors</translation>
+        <translation>เปิดใช้สีแถวสลับกัน</translation>
     </message>
 </context>
 <context>
@@ -8315,7 +8315,7 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Arrow head</translation>
+        <translation>หัวลูกศร</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -8325,7 +8325,7 @@ is already in the list.</translation>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>วาด leader (line sequence with arrow)</translation>
+        <translation>วาดเส้นนำ (ลำดับเส้นพร้อมลูกศร)</translation>
     </message>
 </context>
 <context>
@@ -8333,7 +8333,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Leader was created successfully</translation>
+        <translation>สร้างเส้นนำสำเร็จแล้ว</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
@@ -8379,7 +8379,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Same Entity Type as Original</translation>
+        <translation>ประเภทวัตถุเดียวกับต้นฉบับ</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8389,7 +8389,7 @@ is already in the list.</translation>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation>Infinite Line</translation>
+        <translation>เส้นไม่มีที่สิ้นสุด</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8412,7 +8412,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Close Sequence</translation>
+        <translation>ปิดลำดับ</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8422,7 +8422,7 @@ is already in the list.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Redo Segment</translation>
+        <translation>ทำซ้ำส่วน</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8447,12 +8447,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation>Line from &amp;2 Points</translation>
+        <translation>เส้นจาก &amp;2 จุด</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
-        <translation>วาด single เส้น or sequence of lines</translation>
+        <translation>วาดเส้นเดี่ยวหรือลำดับของเส้น</translation>
     </message>
 </context>
 <context>
@@ -8465,7 +8465,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Specify position</translation>
+        <translation>ระบุตำแหน่ง</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -8485,17 +8485,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation>Line from &amp;Angle</translation>
+        <translation>เส้นจาก&amp;มุม</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
-        <translation>วาด เส้น at a given absolute มุม</translation>
+        <translation>วาดเส้นที่มุมสัมบูรณ์ที่กำหนด</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation>Line length</translation>
+        <translation>ความยาวเส้น</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8505,7 +8505,7 @@ is already in the list.</translation>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation>Line angle</translation>
+        <translation>มุมเส้น</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8515,7 +8515,7 @@ is already in the list.</translation>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
 </context>
 <context>
@@ -8533,7 +8533,7 @@ is already in the list.</translation>
     <message>
         <location line="+71"/>
         <source>Lines don&apos;t intersect.</source>
-        <translation>Lines don&apos;t intersect.</translation>
+        <translation>เส้นไม่ตัดกัน</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
@@ -8553,7 +8553,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>วาด มุม bisector, trisector, ...</translation>
+        <translation>วาดเส้นแบ่งครึ่งมุม เส้นแบ่งมุมสามส่วน ...</translation>
     </message>
 </context>
 <context>
@@ -8571,17 +8571,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation>Depth:</translation>
+        <translation>ความลึก:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger Width:</source>
-        <translation>Finger Width:</translation>
+        <translation>ความกว้างเดือยนิ้ว:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
-        <translation>Finger/Slot Ratio:</translation>
+        <translation>อัตราส่วนเดือยนิ้ว/ร่อง:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8591,27 +8591,27 @@ is already in the list.</translation>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation>Finger first</translation>
+        <translation>เดือยนิ้วก่อน</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation>Slot first</translation>
+        <translation>ร่องก่อน</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation>Tenons</translation>
+        <translation>เดือยเข้าไม้</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Box &amp;Joint from 2 Points</translation>
+        <translation>&amp;ข้อต่อกล่องจาก 2 จุด</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>วาด Box Joint Fingers, Slots and Tennons</translation>
+        <translation>วาดเดือยนิ้ว ร่อง และเดือยเข้าไม้ของข้อต่อกล่อง</translation>
     </message>
 </context>
 <context>
@@ -8629,22 +8629,22 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Number of Dovetails:</translation>
+        <translation>จำนวนหางเหยี่ยว:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Height:</source>
-        <translation>Dovetail Height:</translation>
+        <translation>ความสูงหางเหยี่ยว:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Dovetail Gradient:</translation>
+        <translation>ความลาดหางเหยี่ยว:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Dovetail/Pin Ratio:</translation>
+        <translation>อัตราส่วนหางเหยี่ยว/เดือย:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -8654,7 +8654,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>วาด a dovetail joint</translation>
+        <translation>วาดข้อต่อหางเหยี่ยว</translation>
     </message>
 </context>
 <context>
@@ -8662,12 +8662,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation>Press to start drawing</translation>
+        <translation>กดเพื่อเริ่มวาด</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation>Release to stop drawing</translation>
+        <translation>ปล่อยเพื่อหยุดวาด</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
@@ -8700,7 +8700,7 @@ is already in the list.</translation>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
 </context>
 <context>
@@ -8713,7 +8713,7 @@ is already in the list.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8741,17 +8741,17 @@ is already in the list.</translation>
     <message>
         <location line="+141"/>
         <source>No tangent possible</source>
-        <translation>ไม่มีtangent possible</translation>
+        <translation>ไม่สามารถสร้างเส้นสัมผัสได้</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation>Orthogonal / Tange&amp;nt</translation>
+        <translation>ตั้งฉาก / &amp;เส้นสัมผัส</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation>วาด เส้น orthogonal to เส้น and แทนเจนต์ to วงกลม อาร์ก or วงรี</translation>
+        <translation>วาดเส้นที่ตั้งฉากกับเส้นและสัมผัสกับวงกลม ส่วนโค้ง หรือวงรี</translation>
     </message>
 </context>
 <context>
@@ -8759,12 +8759,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation>Para&amp;llel (with Distance)</translation>
+        <translation>&amp;ขนาน (ตามระยะทาง)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation>วาด ขนานกัน to existing เส้น or ศูนย์กลางร่วม อาร์ก วงกลม</translation>
+        <translation>วาดเส้นขนานกับเส้นที่มีอยู่ หรือส่วนโค้ง วงกลม ร่วมศูนย์กลาง</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
@@ -8787,12 +8787,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Par&amp;allel (through Point)</translation>
+        <translation>&amp;ขนาน (ผ่านจุด)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation>วาด ขนานกัน เส้น or ศูนย์กลางร่วม อาร์ก or วงกลม ผ่าน a given จุด</translation>
+        <translation>วาดเส้นขนาน หรือส่วนโค้งหรือวงกลมร่วมศูนย์กลาง ผ่านจุดที่กำหนด</translation>
     </message>
 </context>
 <context>
@@ -8820,7 +8820,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation>Radical Axis of 2 Circles</translation>
+        <translation>แกนราดิคัลของวงกลม 2 วง</translation>
     </message>
 </context>
 <context>
@@ -8828,17 +8828,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+77"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation>เลือก ฐาน เส้น อาร์ก วงกลม วงรี or พอลิไลน์</translation>
+        <translation>เลือกเส้นฐาน ส่วนโค้ง วงกลม วงรี หรือโพลีไลน์</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set position</source>
-        <translation>Set position</translation>
+        <translation>กำหนดตำแหน่ง</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation>Relative มุม:</translation>
+        <translation>มุมสัมพัทธ์:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8848,7 +8848,7 @@ is already in the list.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -8868,7 +8868,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation>R&amp;elative Angle</translation>
+        <translation>มุม&amp;สัมพัทธ์</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8881,7 +8881,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation>Similarity Axes of 3 Circles</translation>
+        <translation>แกนความคล้ายของวงกลม 3 วง</translation>
     </message>
 </context>
 <context>
@@ -8889,7 +8889,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
-        <translation>เลือก เริ่ม จุด of แทนเจนต์</translation>
+        <translation>เลือกจุดเริ่มต้นของเส้นสัมผัส</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -8899,12 +8899,12 @@ is already in the list.</translation>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
-        <translation>ไม่มีtangent possible</translation>
+        <translation>ไม่สามารถสร้างเส้นสัมผัสได้</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation>ไม่สามารถ draw tangent from point inside circle to circle</translation>
+        <translation>ไม่สามารถวาดเส้นสัมผัสจากจุดภายในวงกลมไปยังวงกลมได้</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
@@ -8914,7 +8914,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
-        <translation>วาด แทนเจนต์ (point, circle)</translation>
+        <translation>วาดเส้นสัมผัส (จุด, วงกลม)</translation>
     </message>
 </context>
 <context>
@@ -8922,27 +8922,27 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
-        <translation>เลือก first วงกลม or อาร์ก</translation>
+        <translation>เลือกวงกลมหรือส่วนโค้งแรก</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose second circle or arc</source>
-        <translation>เลือก second วงกลม or อาร์ก</translation>
+        <translation>เลือกวงกลมหรือส่วนโค้งที่สอง</translation>
     </message>
     <message>
         <location line="+142"/>
         <source>No tangent possible</source>
-        <translation>ไม่มีtangent possible</translation>
+        <translation>ไม่สามารถสร้างเส้นสัมผัสได้</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>Tan&amp;gent (Two Circles)</translation>
+        <translation>เส้น&amp;สัมผัส (วงกลมสองวง)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation>วาด แทนเจนต์ (circle, circle)</translation>
+        <translation>วาดเส้นสัมผัส (วงกลม, วงกลม)</translation>
     </message>
 </context>
 <context>
@@ -8965,7 +8965,7 @@ is already in the list.</translation>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
 </context>
 <context>
@@ -8973,7 +8973,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation>Screen-based Line&amp;types</translation>
+        <translation>&amp;ประเภทเส้นตามหน้าจอ</translation>
     </message>
 </context>
 <context>
@@ -8981,7 +8981,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Defaults for New Drawings</translation>
+        <translation>ค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8997,12 +8997,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>Global Linetype ขยาย:</translation>
+        <translation>มาตราส่วนประเภทเส้นส่วนกลาง:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>Scale of linetypes matches the scale of each viewport</translation>
+        <translation>มาตราส่วนของประเภทเส้นตรงกับมาตราส่วนของแต่ละวิวพอร์ต</translation>
     </message>
 </context>
 <context>
@@ -9068,7 +9068,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation>MenusAndToolBars() is running...</translation>
+        <translation>MenusAndToolBars() กำลังทำงาน...</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9091,12 +9091,12 @@ is already in the list.</translation>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translation>First point of symmetry axis</translation>
+        <translation>จุดแรกของแกนสมมาตร</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation>Second point of symmetry axis</translation>
+        <translation>จุดที่สองของแกนสมมาตร</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
@@ -9124,12 +9124,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Mirror Options</translation>
+        <translation>ตัวเลือกการสะท้อน</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Number of Copies</translation>
+        <translation>จำนวนสำเนา</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9157,7 +9157,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Misc.js" line="+60"/>
         <source>Misc Tools</source>
-        <translation>Misc Tools</translation>
+        <translation>เครื่องมือเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9180,7 +9180,7 @@ is already in the list.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>Misc Block Tools</translation>
+        <translation>เครื่องมือบล็อกเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9198,12 +9198,12 @@ is already in the list.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation>Misc Development Tools</translation>
+        <translation>เครื่องมือพัฒนาเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>De&amp;velopment</source>
-        <translation>De&amp;velopment</translation>
+        <translation>&amp;การพัฒนา</translation>
     </message>
 </context>
 <context>
@@ -9216,12 +9216,12 @@ is already in the list.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation>Misc Drawing Tools</translation>
+        <translation>เครื่องมือวาดเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Misc Draw</translation>
+        <translation>วาดเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9239,7 +9239,7 @@ is already in the list.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation>Misc Import / Export Tools</translation>
+        <translation>เครื่องมือนำเข้า / ส่งออกเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9257,7 +9257,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation>Misc Information Tools</translation>
+        <translation>เครื่องมือข้อมูลเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9275,7 +9275,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation>Misc Modification Tools</translation>
+        <translation>เครื่องมือแก้ไขเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9293,7 +9293,7 @@ is already in the list.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation>Misc Selection Tools</translation>
+        <translation>เครื่องมือการเลือกเบ็ดเตล็ด</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9331,7 +9331,7 @@ is already in the list.</translation>
     <message>
         <location line="+17"/>
         <source>Modification Tools</source>
-        <translation>Modification Tools</translation>
+        <translation>เครื่องมือแก้ไข</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9344,7 +9344,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation>เลือก corner</translation>
+        <translation>เลือกมุม</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9359,7 +9359,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Set point</translation>
+        <translation>กำหนดจุด</translation>
     </message>
 </context>
 <context>
@@ -9375,12 +9375,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation>Import MOL</translation>
+        <translation>นำเข้า MOL</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>MOL Files</source>
-        <translation>MOL Files</translation>
+        <translation>ไฟล์ MOL</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9390,7 +9390,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
-        <translation>Leetro MOL Import...</translation>
+        <translation>นำเข้า Leetro MOL...</translation>
     </message>
 </context>
 <context>
@@ -9398,7 +9398,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation>Importing Leetro MOL file...</translation>
+        <translation>กำลังนำเข้าไฟล์ Leetro MOL...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9411,7 +9411,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation>ฟอร์ม</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -9434,7 +9434,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation>Enter Position</translation>
+        <translation>ป้อนตำแหน่ง</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9458,7 +9458,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation>My Scripts</translation>
+        <translation>สคริปต์ของฉัน</translation>
     </message>
 </context>
 <context>
@@ -9466,7 +9466,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Character Map</translation>
+        <translation>ตารางอักขระ</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9484,52 +9484,52 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Opening การเขียนแบบ:</translation>
+        <translation>กำลังเปิดแบบวาด:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Import Error</source>
-        <translation>Import Error</translation>
+        <translation>ข้อผิดพลาดในการนำเข้า</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cannot open file</source>
-        <translation>ไม่สามารถ open file</translation>
+        <translation>ไม่สามารถเปิดไฟล์</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation>No suitable Importer found. Please check file format and extension.</translation>
+        <translation>ไม่พบตัวนำเข้าที่เหมาะสม โปรดตรวจสอบรูปแบบไฟล์และนามสกุลไฟล์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation>File not found.</translation>
+        <translation>ไม่พบไฟล์</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation>Please check your access rights, the file format and file extension.</translation>
+        <translation>โปรดตรวจสอบสิทธิ์การเข้าถึง รูปแบบไฟล์ และนามสกุลไฟล์</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation>Import failed.</translation>
+        <translation>การนำเข้าล้มเหลว</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation>File is empty.</translation>
+        <translation>ไฟล์ว่างเปล่า</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing loaded successfully:</source>
-        <translation>การเขียนแบบ Loaded Successfully:</translation>
+        <translation>โหลดแบบวาดสำเร็จ:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation>Format:</translation>
+        <translation>รูปแบบ:</translation>
     </message>
     <message>
         <location line="+152"/>
@@ -9544,12 +9544,12 @@ is already in the list.</translation>
     <message>
         <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</translation>
+        <translation>คุณต้องการบันทึกการเปลี่ยนแปลงที่ทำใน&lt;br&gt;เอกสาร &apos;%1&apos; หรือไม่?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation>Your changes will be lost if you don&apos;t save them.</translation>
+        <translation>การเปลี่ยนแปลงของคุณจะสูญหายหากไม่บันทึก</translation>
     </message>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
@@ -9589,12 +9589,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Offset (with Distance)</translation>
+        <translation>ออฟเซ็ต (ด้วยระยะทาง)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Offset line, arc, circle or ellipse</translation>
+        <translation>ออฟเซ็ตเส้น ส่วนโค้ง วงกลม หรือวงรี</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
@@ -9622,12 +9622,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Offset (through Point)</translation>
+        <translation>ออฟเซ็ต (ผ่านจุด)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Offset line, arc, circle or ellipse through point</translation>
+        <translation>ออฟเซ็ตเส้น ส่วนโค้ง วงกลม หรือวงรีผ่านจุด</translation>
     </message>
 </context>
 <context>
@@ -9635,7 +9635,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>ไม่มีimport filters have been found. Aborting</translation>
+        <translation>ไม่พบตัวกรองการนำเข้า กำลังยกเลิก...</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9655,7 +9655,7 @@ is already in the list.</translation>
     <message>
         <location line="+5"/>
         <source>Open an existing drawing</source>
-        <translation>Open an existing drawing</translation>
+        <translation>เปิดแบบวาดที่มีอยู่</translation>
     </message>
 </context>
 <context>
@@ -9663,17 +9663,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
-        <translation>Defaults for New Drawings</translation>
+        <translation>ค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation>Printing - Page</translation>
+        <translation>การพิมพ์ - หน้า</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>Printing</translation>
+        <translation>การพิมพ์</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9688,7 +9688,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
-        <translation>Page Orientation</translation>
+        <translation>การวางแนวหน้ากระดาษ</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9713,12 +9713,12 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation>Paper width:</translation>
+        <translation>ความกว้างกระดาษ:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Paper height:</source>
-        <translation>Paper height:</translation>
+        <translation>ความสูงกระดาษ:</translation>
     </message>
     <message>
         <location line="+66"/>
@@ -9728,7 +9728,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation>Left:</translation>
+        <translation>ซ้าย:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9738,22 +9738,22 @@ is already in the list.</translation>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Right:</translation>
+        <translation>ขวา:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation>Bottom:</translation>
+        <translation>ล่าง:</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation>Set to Printer Margins</translation>
+        <translation>ตั้งเป็นระยะขอบของเครื่องพิมพ์</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation>Scale and Position</translation>
+        <translation>มาตราส่วนและตำแหน่ง</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9783,12 +9783,12 @@ is already in the list.</translation>
     <message>
         <location line="+16"/>
         <source>Point size (mm):</source>
-        <translation>จุด Size (Mm):</translation>
+        <translation>ขนาดจุด (mm):</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Show paper borders</source>
-        <translation>Show paper borders</translation>
+        <translation>แสดงขอบกระดาษ</translation>
     </message>
 </context>
 <context>
@@ -9829,17 +9829,17 @@ is already in the list.</translation>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Flip pasted entities&lt;br&gt;horizontally</translation>
+        <translation>พลิกวัตถุที่วาง&lt;br&gt;ในแนวนอน</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Flip pasted entities&lt;br&gt;vertically</translation>
+        <translation>พลิกวัตถุที่วาง&lt;br&gt;ในแนวตั้ง</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</translation>
+        <translation>วางวัตถุทั้งหมด&lt;br&gt;ลงในเลเยอร์ปัจจุบัน&lt;br&gt;แทนเลเยอร์เดิม</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9849,22 +9849,22 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation>Overwrite Layers</translation>
+        <translation>เขียนทับเลเยอร์</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Overwrite Blocks</translation>
+        <translation>เขียนทับบล็อก</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</translation>
+        <translation>เขียนทับเลเยอร์ที่มีอยู่&lt;br&gt;ในแบบวาดด้วย&lt;br&gt;เลเยอร์จากคลิปบอร์ด</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</translation>
+        <translation>เขียนทับบล็อกที่มีอยู่&lt;br&gt;ในแบบวาดด้วย&lt;br&gt;บล็อกจากคลิปบอร์ด</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
@@ -9874,7 +9874,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation>Reset to defaults every time tool is used</translation>
+        <translation>รีเซ็ตเป็นค่าเริ่มต้นทุกครั้งที่ใช้เครื่องมือ</translation>
     </message>
 </context>
 <context>
@@ -9882,12 +9882,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation>P&amp;DF Export</translation>
+        <translation>&amp;ส่งออก PDF</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
-        <translation>Exports the current drawing as PDF</translation>
+        <translation>ส่งออกแบบวาดปัจจุบันเป็น PDF</translation>
     </message>
 </context>
 <context>
@@ -9895,12 +9895,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation>Pen</translation>
+        <translation>ปากกา</translation>
     </message>
     <message>
         <location line="+73"/>
         <source>Reset to Defaults</source>
-        <translation>Reset to Defaults</translation>
+        <translation>รีเซ็ตเป็นค่าเริ่มต้น</translation>
     </message>
 </context>
 <context>
@@ -9934,7 +9934,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation>Single &amp;Point</translation>
+        <translation>&amp;จุดเดี่ยว</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9947,13 +9947,13 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Defaults for New Drawings</translation>
+        <translation>ค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation>Point Display</translation>
+        <translation>การแสดงจุด</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9963,12 +9963,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
-        <translation>Mode:</translation>
+        <translation>โหมด:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation>Size (pixel):</translation>
+        <translation>ขนาด (พิกเซล):</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -10076,7 +10076,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPole.js" line="+67"/>
         <source>Arc or circle</source>
-        <translation>Arc or circle</translation>
+        <translation>ส่วนโค้งหรือวงกลม</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -10086,7 +10086,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Pole of Line and Circle</translation>
+        <translation>โพลของเส้นและวงกลม</translation>
     </message>
 </context>
 <context>
@@ -10099,7 +10099,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Power Center of Three Circles</translation>
+        <translation>จุดศูนย์กลางกำลังของวงกลมสามวง</translation>
     </message>
 </context>
 <context>
@@ -10130,94 +10130,94 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation>Pick the first point</translation>
+        <translation>เลือกจุดแรก</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation>Pick the first break point</translation>
+        <translation>เลือกจุดตัดแบ่งแรก</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation>Pick the second point</translation>
+        <translation>เลือกจุดที่สอง</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation>Pick the second break point</translation>
+        <translation>เลือกจุดตัดแบ่งที่สอง</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Break Out Segment</translation>
+        <translation>ตัดส่วนออก</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>Remove line break segment</translation>
+        <translation>ลบส่วนเส้นที่ตัดแบ่ง</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation>Remove the line segment between the break symbol</translation>
+        <translation>ลบส่วนของเส้นระหว่างสัญลักษณ์ตัดแบ่ง</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation>Remove Segment</translation>
+        <translation>ลบส่วน</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation>Inherit entity properties</translation>
+        <translation>สืบทอดคุณสมบัติวัตถุ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation>Inherit all properties from the chosen entity</translation>
+        <translation>สืบทอดคุณสมบัติทั้งหมดจากวัตถุที่เลือก</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation>Inherit</translation>
+        <translation>สืบทอด</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+16"/>
         <source>Peak ratio</source>
-        <translation>Peak ratio</translation>
+        <translation>อัตราส่วนยอด</translation>
     </message>
     <message>
         <location line="-13"/>
         <location line="+16"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation>The ratio of the peak height to the break width</translation>
+        <translation>อัตราส่วนของความสูงยอดต่อความกว้างของการตัดแบ่ง</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Peak Ratio:</source>
-        <translation>Peak Ratio:</translation>
+        <translation>อัตราส่วนยอด:</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>First/Last segment inclined</source>
-        <translation>First/Last segment inclined</translation>
+        <translation>ส่วนแรก/สุดท้ายเอียง</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation>The first and last segment of the break symbol are inclined</translation>
+        <translation>ส่วนแรกและส่วนสุดท้ายของสัญลักษณ์ตัดแบ่งเป็นแนวเอียง</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation>First/Last segment vertical</translation>
+        <translation>ส่วนแรก/สุดท้ายแนวตั้ง</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation>The first and last segment of the break symbol are vertical</translation>
+        <translation>ส่วนแรกและส่วนสุดท้ายของสัญลักษณ์ตัดแบ่งเป็นแนวตั้ง</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
@@ -10227,7 +10227,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation>วาด a พอลิไลน์ break symbol from 2 points</translation>
+        <translation>วาดสัญลักษณ์ตัดแบ่งโพลีไลน์จาก 2 จุด</translation>
     </message>
 </context>
 <context>
@@ -10247,17 +10247,17 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Expand Tree</source>
-        <translation>Expand Tree</translation>
+        <translation>ขยายทรี</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Collapse Tree</translation>
+        <translation>ยุบทรี</translation>
     </message>
     <message>
         <location line="+75"/>
         <source>Restore to Default Values</source>
-        <translation>Restore to Default Values</translation>
+        <translation>คืนค่าเป็นค่าเริ่มต้น</translation>
     </message>
 </context>
 <context>
@@ -10294,12 +10294,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation>Print &amp;Current View</translation>
+        <translation>&amp;พิมพ์มุมมองปัจจุบัน</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current view</source>
-        <translation>Print current view</translation>
+        <translation>พิมพ์มุมมองปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -10307,12 +10307,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
-        <translation>Auto Paper Size</translation>
+        <translation>ขนาดกระดาษอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</translation>
+        <translation>ขนาดกระดาษถูกตั้งเป็นขนาดกำหนดเอง (%1x%2mm) คุณต้องการเปลี่ยนเป็นขนาดกระดาษเริ่มต้นของเครื่องพิมพ์ (%3) หรือไม่?</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -10322,12 +10322,12 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation>Auto fit drawing to paper?</translation>
+        <translation>ปรับแบบวาดให้พอดีกับกระดาษโดยอัตโนมัติหรือไม่?</translation>
     </message>
     <message>
         <location line="+206"/>
         <source>Drag to move paper</source>
-        <translation>Drag to move paper</translation>
+        <translation>ลากเพื่อย้ายกระดาษ</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10338,42 +10338,42 @@ is already in the list.</translation>
         <location line="+206"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation>Page Settings</translation>
+        <translation>การตั้งค่าหน้ากระดาษ</translation>
     </message>
     <message>
         <location line="+318"/>
         <source>Export to PDF</source>
-        <translation>Export to PDF</translation>
+        <translation>ส่งออกเป็น PDF</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Exporting to %1...</source>
-        <translation>Exporting to %1...</translation>
+        <translation>กำลังส่งออกไปยัง %1...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
-        <translation>Export complete: %1</translation>
+        <translation>ส่งออกเสร็จสมบูรณ์: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation>Export failed (cannot open file for writing): %1</translation>
+        <translation>การส่งออกล้มเหลว (ไม่สามารถเปิดไฟล์เพื่อเขียน): %1</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation>Close Print Preview</translation>
+        <translation>ปิดตัวอย่างก่อนพิมพ์</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation>Print...</translation>
+        <translation>พิมพ์...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation>Export as PDF...</translation>
+        <translation>ส่งออกเป็น PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10388,17 +10388,17 @@ is already in the list.</translation>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation>Move Paper Position</translation>
+        <translation>ย้ายตำแหน่งกระดาษ</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>Auto fit drawing to page(s)</translation>
+        <translation>ปรับแบบวาดให้พอดีกับหน้ากระดาษโดยอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Auto Center</translation>
+        <translation>จัดกึ่งกลางอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10413,47 +10413,47 @@ is already in the list.</translation>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation>Auto zoom to page</translation>
+        <translation>ซูมให้พอดีหน้ากระดาษโดยอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation>Full Color Mode</translation>
+        <translation>โหมดสีเต็ม</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation>Grayscale Mode</translation>
+        <translation>โหมดระดับสีเทา</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation>Black / White Mode</translation>
+        <translation>โหมดขาวดำ</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation>Show Paper Borders</translation>
+        <translation>แสดงขอบกระดาษ</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation>Print Crop Marks</translation>
+        <translation>พิมพ์เครื่องหมายตัดขอบ</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
-        <translation>Show More Options</translation>
+        <translation>แสดงตัวเลือกเพิ่มเติม</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>แสดงตัวอย่างก่อนพิมพ์</translation>
+        <translation>&amp;แสดงตัวอย่างก่อนพิมพ์</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
-        <translation>Preview how current drawing would be printed</translation>
+        <translation>ดูตัวอย่างว่าแบบวาดปัจจุบันจะถูกพิมพ์ออกมาอย่างไร</translation>
     </message>
 </context>
 <context>
@@ -10484,12 +10484,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
-        <translation>Display Z coordinates</translation>
+        <translation>แสดงพิกัด Z</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Display properties of current block and current layer</source>
-        <translation>Display properties of current block and current layer</translation>
+        <translation>แสดงคุณสมบัติของบล็อกปัจจุบันและเลเยอร์ปัจจุบัน</translation>
     </message>
     <message>
         <location line="-37"/>
@@ -10499,17 +10499,17 @@ is already in the list.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Maximum complexity for automatic hatch length calculation:</translation>
+        <translation>ความซับซ้อนสูงสุดสำหรับการคำนวณความยาวแรเงาอัตโนมัติ:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation>Update delay [ms]:</translation>
+        <translation>ระยะหน่วงการอัปเดต [ms]:</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation>Always show all properties (this may slow down selection of entities)</translation>
+        <translation>แสดงคุณสมบัติทั้งหมดเสมอ (อาจทำให้การเลือกวัตถุช้าลง)</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10519,17 +10519,17 @@ is already in the list.</translation>
     <message>
         <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation>Only update when nothing changes during update delay</translation>
+        <translation>อัปเดตเฉพาะเมื่อไม่มีการเปลี่ยนแปลงระหว่างระยะหน่วงการอัปเดต</translation>
     </message>
     <message>
         <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation>Decimals / precision for displayed property values:</translation>
+        <translation>ทศนิยม / ความแม่นยำสำหรับค่าคุณสมบัติที่แสดง:</translation>
     </message>
     <message>
         <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
-        <translation>Display advanced dimension style overrides</translation>
+        <translation>แสดงการแทนที่สไตล์มิติขั้นสูง</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+235"/>
@@ -10544,12 +10544,12 @@ is already in the list.</translation>
     <message>
         <location line="+21"/>
         <source>Specific Properties</source>
-        <translation>Specific Properties</translation>
+        <translation>คุณสมบัติเฉพาะ</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Dependent Entities</source>
-        <translation>Dependent Entities</translation>
+        <translation>วัตถุที่ขึ้นต่อกัน</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -10564,7 +10564,7 @@ is already in the list.</translation>
     <message>
         <location line="+76"/>
         <source>Remove this property from selected objects</source>
-        <translation>Remove this property from selected objects</translation>
+        <translation>ลบคุณสมบัตินี้ออกจากวัตถุที่เลือก</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -10584,7 +10584,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>Show all properties</translation>
+        <translation>แสดงคุณสมบัติทั้งหมด</translation>
     </message>
     <message>
         <location line="+161"/>
@@ -10626,12 +10626,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation>Selection:</translation>
+        <translation>การเลือก:</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation>General Properties</translation>
+        <translation>คุณสมบัติทั่วไป</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -10641,17 +10641,17 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Handle:</translation>
+        <translation>แฮนเดิล:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>Linetype ขยาย:</translation>
+        <translation>มาตราส่วนประเภทเส้น:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Protected:</source>
-        <translation>Protected:</translation>
+        <translation>ป้องกัน:</translation>
     </message>
 </context>
 <context>
@@ -10680,7 +10680,7 @@ is already in the list.</translation>
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation>Don&apos;t show this dialog at startup</translation>
+        <translation>ไม่ต้องแสดงกล่องโต้ตอบนี้เมื่อเริ่มโปรแกรม</translation>
     </message>
 </context>
 <context>
@@ -10688,7 +10688,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation>Recent files history size:</translation>
+        <translation>ขนาดประวัติไฟล์ล่าสุด:</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
@@ -10708,7 +10708,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Open &amp;Recent</translation>
+        <translation>&amp;เปิดไฟล์ล่าสุด</translation>
     </message>
 </context>
 <context>
@@ -10724,7 +10724,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation>Reload Linetype Definitions</translation>
+        <translation>โหลดนิยามประเภทเส้นใหม่</translation>
     </message>
 </context>
 <context>
@@ -10737,7 +10737,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
-        <translation>Delete selected block</translation>
+        <translation>ลบบล็อกที่เลือก</translation>
     </message>
 </context>
 <context>
@@ -10753,7 +10753,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Block/RenameBlock/RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
-        <translation>Re&amp;name Block</translation>
+        <translation>&amp;เปลี่ยนชื่อบล็อก</translation>
     </message>
 </context>
 <context>
@@ -10761,7 +10761,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation>Report &amp;Bug</translation>
+        <translation>&amp;รายงานข้อบกพร่อง</translation>
     </message>
 </context>
 <context>
@@ -10769,7 +10769,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation>Report &amp;Translation Error</translation>
+        <translation>&amp;รายงานข้อผิดพลาดในการแปล</translation>
     </message>
 </context>
 <context>
@@ -10802,7 +10802,7 @@ is already in the list.</translation>
         <location line="-40"/>
         <location line="+66"/>
         <source>Multiples</source>
-        <translation>Multiples</translation>
+        <translation>พหุคูณ</translation>
     </message>
     <message>
         <location line="-115"/>
@@ -10812,7 +10812,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation>Restrict &amp;Angle or Length</translation>
+        <translation>&amp;จำกัดมุมหรือความยาว</translation>
     </message>
 </context>
 <context>
@@ -10820,7 +10820,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation>Restrict &amp;Horizontally</translation>
+        <translation>&amp;จำกัดแนวนอน</translation>
     </message>
 </context>
 <context>
@@ -10828,7 +10828,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation>Restrictions &amp;Off</translation>
+        <translation>&amp;ปิดการจำกัด</translation>
     </message>
 </context>
 <context>
@@ -10836,7 +10836,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation>Restrict &amp;Orthogonally</translation>
+        <translation>&amp;จำกัดแนวตั้งฉาก</translation>
     </message>
 </context>
 <context>
@@ -10844,7 +10844,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation>Restrict &amp;Vertically</translation>
+        <translation>&amp;จำกัดแนวตั้ง</translation>
     </message>
 </context>
 <context>
@@ -10890,7 +10890,7 @@ is already in the list.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation>Invalid rotation angle</translation>
+        <translation>มุมการหมุนไม่ถูกต้อง</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10900,7 +10900,7 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Number of Copies:</translation>
+        <translation>จำนวนสำเนา:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -10915,7 +10915,7 @@ is already in the list.</translation>
     <message>
         <location line="+26"/>
         <source>Define angle using mouse cursor</source>
-        <translation>Define angle using mouse cursor</translation>
+        <translation>กำหนดมุมโดยใช้เคอร์เซอร์เมาส์</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10928,22 +10928,22 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation>Center of primary rotation</translation>
+        <translation>จุดศูนย์กลางของการหมุนหลัก</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation>Center of secondary rotation</translation>
+        <translation>จุดศูนย์กลางของการหมุนรอง</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation>Primary มุม:</translation>
+        <translation>มุมหลัก:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Secondary Angle:</source>
-        <translation>Secondary มุม:</translation>
+        <translation>มุมรอง:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10953,7 +10953,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>Rotate T&amp;wo</translation>
+        <translation>&amp;หมุนสองครั้ง</translation>
     </message>
 </context>
 <context>
@@ -10961,12 +10961,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Rotate Two Options</translation>
+        <translation>ตัวเลือกหมุนสองครั้ง</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Number of Copies</translation>
+        <translation>จำนวนสำเนา</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11009,12 +11009,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation>Rotate Options</translation>
+        <translation>ตัวเลือกการหมุน</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Number of Copies</translation>
+        <translation>จำนวนสำเนา</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11044,7 +11044,7 @@ is already in the list.</translation>
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation>Define angle using mouse cursor</translation>
+        <translation>กำหนดมุมโดยใช้เคอร์เซอร์เมาส์</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -11057,17 +11057,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation>The two entities cannot be rounded.</translation>
+        <translation>ไม่สามารถทำมุมมนให้วัตถุทั้งสองได้</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>First entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุแรกได้</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Second entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุที่สองได้</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -11090,7 +11090,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation>Open Script File</translation>
+        <translation>เปิดไฟล์สคริปต์</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11100,17 +11100,17 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>ECMAScript Files</source>
-        <translation>ECMAScript Files</translation>
+        <translation>ไฟล์ ECMAScript</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation>Run Script</translation>
+        <translation>เรียกใช้สคริปต์</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Running Script</translation>
+        <translation>กำลังเรียกใช้สคริปต์</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -11120,17 +11120,17 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation>Don&apos;t show this dialog again</translation>
+        <translation>ไม่ต้องแสดงกล่องโต้ตอบนี้อีก</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation>R&amp;un Script</translation>
+        <translation>&amp;เรียกใช้สคริปต์</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Open and run a script file</source>
-        <translation>Open and run a script file</translation>
+        <translation>เปิดและเรียกใช้ไฟล์สคริปต์</translation>
     </message>
 </context>
 <context>
@@ -11138,27 +11138,27 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
-        <translation>Overwrite File?</translation>
+        <translation>เขียนทับไฟล์หรือไม่?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</translation>
+        <translation>มีไฟล์ &quot;%1&quot; อยู่แล้ว คุณต้องการเขียนทับหรือไม่?</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>File Format Version Not Recommended</source>
-        <translation>File Format Version Not Recommended</translation>
+        <translation>ไม่แนะนำให้ใช้เวอร์ชันรูปแบบไฟล์นี้</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation>The file format version you are using is not recommended: &quot;%1&quot;.</translation>
+        <translation>ไม่แนะนำให้ใช้เวอร์ชันรูปแบบไฟล์ที่คุณกำลังใช้: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation>Custom properties will not be saved.</translation>
+        <translation>คุณสมบัติที่กำหนดเองจะไม่ถูกบันทึก</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11173,7 +11173,7 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>Proceed?</source>
-        <translation>Proceed?</translation>
+        <translation>ดำเนินการต่อหรือไม่?</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -11183,32 +11183,32 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation>Saving to file format version &quot;%1&quot;.</translation>
+        <translation>กำลังบันทึกเป็นเวอร์ชันรูปแบบไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Black entities and layers are saved as white.</translation>
+        <translation>วัตถุและเลเยอร์สีดำจะถูกบันทึกเป็นสีขาว</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation>Custom colors are adjusted to the nearest fixed color.</translation>
+        <translation>สีที่กำหนดเองจะถูกปรับเป็นสีคงที่ที่ใกล้เคียงที่สุด</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>File %1 has not been saved.</source>
-        <translation>File %1 has not been saved.</translation>
+        <translation>ไฟล์ %1 ยังไม่ได้บันทึก</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation>Saved file:</translation>
+        <translation>บันทึกไฟล์แล้ว:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation>Format:</translation>
+        <translation>รูปแบบ:</translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
@@ -11221,7 +11221,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation>File Dialog</translation>
+        <translation>กล่องโต้ตอบไฟล์</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11231,37 +11231,37 @@ is already in the list.</translation>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation>Opening</translation>
+        <translation>การเปิด</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation>Allow opening of zero size files (e.g. online files that are not synched to disk)</translation>
+        <translation>อนุญาตให้เปิดไฟล์ขนาดศูนย์ (เช่น ไฟล์ออนไลน์ที่ยังไม่ได้ซิงค์ลงดิสก์)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation>Decode strings in DXF/DWG as UTF-8 (experimental)</translation>
+        <translation>ถอดรหัสสตริงใน DXF/DWG เป็น UTF-8 (ทดลอง)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Saving</translation>
+        <translation>การบันทึก</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default format:</source>
-        <translation>Default format:</translation>
+        <translation>รูปแบบเริ่มต้น:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation>Show warning when saving to a file format that does not support 24bit colors</translation>
+        <translation>แสดงคำเตือนเมื่อบันทึกเป็นรูปแบบไฟล์ที่ไม่รองรับสี 24 บิต</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation>Store &quot;last saved by&quot; file information as:</translation>
+        <translation>เก็บข้อมูลไฟล์ &quot;last saved by&quot; เป็น:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11276,22 +11276,22 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation>Open/Save</translation>
+        <translation>เปิด/บันทึก</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation>ไม่มีexport filters have been found. Aborting</translation>
+        <translation>ไม่พบตัวกรองการส่งออก กำลังยกเลิก...</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Format:</source>
-        <translation>Format:</translation>
+        <translation>รูปแบบ:</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation>Save &amp;As...</translation>
+        <translation>&amp;บันทึกเป็น...</translation>
     </message>
 </context>
 <context>
@@ -11314,7 +11314,7 @@ is already in the list.</translation>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation>Focus point</translation>
+        <translation>จุดโฟกัส</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11329,7 +11329,7 @@ is already in the list.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation>Invalid scale factor</translation>
+        <translation>ตัวคูณมาตราส่วนไม่ถูกต้อง</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -11339,7 +11339,7 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Number of Copies:</translation>
+        <translation>จำนวนสำเนา:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -11349,7 +11349,7 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Factor x:</translation>
+        <translation>ตัวคูณ x:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11360,17 +11360,17 @@ is already in the list.</translation>
     <message>
         <location line="-10"/>
         <source>Factor y:</source>
-        <translation>Factor y:</translation>
+        <translation>ตัวคูณ y:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Proportional</source>
-        <translation>Proportional</translation>
+        <translation>ตามสัดส่วน</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation>Define factor using mouse cursor</translation>
+        <translation>กำหนดตัวคูณโดยใช้เคอร์เซอร์เมาส์</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -11388,12 +11388,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Scale Options</translation>
+        <translation>ตัวเลือกมาตราส่วน</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Number of Copies</translation>
+        <translation>จำนวนสำเนา</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11418,22 +11418,22 @@ is already in the list.</translation>
     <message>
         <location line="+59"/>
         <source>Factor x:</source>
-        <translation>Factor x:</translation>
+        <translation>ตัวคูณ x:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation>Factor y:</translation>
+        <translation>ตัวคูณ y:</translation>
     </message>
     <message>
         <location line="-26"/>
         <source>Proportional</source>
-        <translation>Proportional</translation>
+        <translation>ตามสัดส่วน</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Define factor using mouse cursor</source>
-        <translation>Define factor using mouse cursor</translation>
+        <translation>กำหนดตัวคูณโดยใช้เคอร์เซอร์เมาส์</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -11446,7 +11446,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation>Rescan scripts folder on startup</translation>
+        <translation>สแกนโฟลเดอร์สคริปต์ใหม่เมื่อเริ่มโปรแกรม</translation>
     </message>
 </context>
 <context>
@@ -11454,7 +11454,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation>Scripting</translation>
+        <translation>การเขียนสคริปต์</translation>
     </message>
 </context>
 <context>
@@ -11467,7 +11467,7 @@ is already in the list.</translation>
     <message>
         <location line="+13"/>
         <source>Selection Tools Panel</source>
-        <translation>Selection Tools Panel</translation>
+        <translation>แผงเครื่องมือการเลือก</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -11480,12 +11480,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation>เลือกทั้งหมด</translation>
+        <translation>&amp;เลือกทั้งหมด</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Select all visible entities</source>
-        <translation>Select all visible entities</translation>
+        <translation>เลือกวัตถุทั้งหมดที่มองเห็น</translation>
     </message>
 </context>
 <context>
@@ -11501,17 +11501,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
-        <translation>Select one or more objects only of the desired color</translation>
+        <translation>เลือกวัตถุหนึ่งชิ้นหรือมากกว่าเฉพาะที่มีสีที่ต้องการ</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation>Selected all visible entities of color %1</translation>
+        <translation>เลือกวัตถุที่มองเห็นทั้งหมดที่มีสี %1 แล้ว</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation>By Color</translation>
+        <translation>ตามสี</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11524,17 +11524,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation>วัตถุ Selected:</translation>
+        <translation>วัตถุที่เลือก:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation>Object is not a drawing entity:</translation>
+        <translation>วัตถุนี้ไม่ใช่วัตถุในแบบวาด:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>By Handle</translation>
+        <translation>ตามแฮนเดิล</translation>
     </message>
 </context>
 <context>
@@ -11542,12 +11542,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Selection by Handle</translation>
+        <translation>การเลือกตามแฮนเดิล</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Handle (hex):</translation>
+        <translation>แฮนเดิล (hex):</translation>
     </message>
 </context>
 <context>
@@ -11555,17 +11555,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation>เลือก องค์ประกอบ of contour</translation>
+        <translation>เลือกวัตถุของเส้นขอบ</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>Mode:</translation>
+        <translation>โหมด:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation>Replace the current selection</translation>
+        <translation>แทนที่การเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -11575,12 +11575,12 @@ is already in the list.</translation>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Subtract from the current selection</translation>
+        <translation>ลบออกจากการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Intersect with the current selection</translation>
+        <translation>ตัดร่วมกับการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11590,7 +11590,7 @@ is already in the list.</translation>
     <message>
         <location line="+30"/>
         <source>Same Layer</source>
-        <translation>Same Layer</translation>
+        <translation>เลเยอร์เดียวกัน</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -11618,12 +11618,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>Mode:</translation>
+        <translation>โหมด:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation>Replace the current selection</translation>
+        <translation>แทนที่การเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -11633,12 +11633,12 @@ is already in the list.</translation>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Subtract from the current selection</translation>
+        <translation>ลบออกจากการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Intersect with the current selection</translation>
+        <translation>ตัดร่วมกับการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
@@ -11674,17 +11674,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>เลือก องค์ประกอบ on ชั้น</translation>
+        <translation>เลือกวัตถุบนเลเยอร์</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>Mode:</translation>
+        <translation>โหมด:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation>Replace the current selection</translation>
+        <translation>แทนที่การเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -11694,12 +11694,12 @@ is already in the list.</translation>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Subtract from the current selection</translation>
+        <translation>ลบออกจากการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Intersect with the current selection</translation>
+        <translation>ตัดร่วมกับการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -11727,12 +11727,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>Mode:</translation>
+        <translation>โหมด:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation>Replace the current selection</translation>
+        <translation>แทนที่การเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -11742,17 +11742,17 @@ is already in the list.</translation>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Subtract from the current selection</translation>
+        <translation>ลบออกจากการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Intersect with the current selection</translation>
+        <translation>ตัดร่วมกับการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Cross Selection</translation>
+        <translation>การเลือกแบบตัดผ่าน</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -11770,12 +11770,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation>ไม่มีentities selected</translation>
+        <translation>ไม่มีวัตถุที่เลือก</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation>%1 %2 on Layer &quot;%3&quot;</translation>
+        <translation>%1 %2 บนเลเยอร์ &quot;%3&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11812,13 +11812,13 @@ is already in the list.</translation>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation>Selected entities:
-%1.</translation>
+        <translation>วัตถุที่เลือก:
+%1</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation>ฟอร์ม</translation>
     </message>
 </context>
 <context>
@@ -11831,7 +11831,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation>Set &amp;Relative Zero</translation>
+        <translation>ตั้ง&amp;ศูนย์สัมพัทธ์</translation>
     </message>
 </context>
 <context>
@@ -11849,7 +11849,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation>Create Polyline</translation>
+        <translation>สร้างโพลีไลน์</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11868,27 +11868,27 @@ is already in the list.</translation>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation>At least two points are identical.</translation>
+        <translation>มีจุดอย่างน้อยสองจุดที่ซ้ำกัน</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation>ไม่มีcircle possible</translation>
+        <translation>ไม่สามารถสร้างวงกลมได้</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation>ไม่มีarc possible</translation>
+        <translation>ไม่สามารถสร้างส่วนโค้งได้</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation>Invalid number of segments: %1.</translation>
+        <translation>จำนวนส่วนไม่ถูกต้อง: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation>Invalid ellipse major / minor: %1 / %2.</translation>
+        <translation>แกนเอก / แกนโทของวงรีไม่ถูกต้อง: %1 / %2</translation>
     </message>
 </context>
 <context>
@@ -11901,22 +11901,22 @@ is already in the list.</translation>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation>Middle of Side</translation>
+        <translation>กึ่งกลางด้าน</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Corners:</translation>
+        <translation>มุม:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>Pol&amp;ygon (Center, Side)</translation>
+        <translation>รูปหลาย&amp;เหลี่ยม (จุดศูนย์กลาง, ด้าน)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation>วาด regular polygon from จุดศูนย์กลาง and กลาง จุด of side</translation>
+        <translation>วาดรูปหลายเหลี่ยมด้านเท่าจากจุดศูนย์กลางและจุดกึ่งกลางของด้าน</translation>
     </message>
 </context>
 <context>
@@ -11924,42 +11924,42 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
-        <translation>First side</translation>
+        <translation>ด้านแรก</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation>First Corner</translation>
+        <translation>มุมแรก</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation>Second side</translation>
+        <translation>ด้านที่สอง</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation>Second Corner</translation>
+        <translation>มุมที่สอง</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Corners:</translation>
+        <translation>มุม:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Corner to Corner</source>
-        <translation>Corner to Corner</translation>
+        <translation>มุมถึงมุม</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation>Polygo&amp;n (Side, Side)</translation>
+        <translation>รูปหลาย&amp;เหลี่ยม (ด้าน, ด้าน)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation>วาด regular polygon from กลาง points of two opposite sides or two opposite corners</translation>
+        <translation>วาดรูปหลายเหลี่ยมด้านเท่าจากจุดกึ่งกลางของสองด้านที่อยู่ตรงข้ามกัน หรือจากสองมุมที่อยู่ตรงข้ามกัน</translation>
     </message>
 </context>
 <context>
@@ -11977,17 +11977,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Corners:</translation>
+        <translation>มุม:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>Pol&amp;ygon (Center, Corner)</translation>
+        <translation>รูปหลาย&amp;เหลี่ยม (จุดศูนย์กลาง, มุม)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>วาด regular polygon from จุดศูนย์กลาง and corner จุด</translation>
+        <translation>วาดรูปหลายเหลี่ยมด้านเท่าจากจุดศูนย์กลางและจุดมุม</translation>
     </message>
 </context>
 <context>
@@ -12005,17 +12005,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Corners:</translation>
+        <translation>มุม:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>Polygo&amp;n (2 Points of Side)</translation>
+        <translation>รูปหลาย&amp;เหลี่ยม (2 จุดของด้าน)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation>วาด regular polygon from จุดสิ้นสุด points of one side</translation>
+        <translation>วาดรูปหลายเหลี่ยมด้านเท่าจากจุดปลายของด้านหนึ่ง</translation>
     </message>
 </context>
 <context>
@@ -12028,7 +12028,7 @@ is already in the list.</translation>
     <message>
         <location line="+4"/>
         <source>Draw rectangle from two corners</source>
-        <translation>วาด rectangle from two corners</translation>
+        <translation>วาดสี่เหลี่ยมผืนผ้าจากสองมุม</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
@@ -12059,22 +12059,22 @@ is already in the list.</translation>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation>อ้างอิง จุด:</translation>
+        <translation>จุดอ้างอิง:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation>Create Polyline</translation>
+        <translation>สร้างโพลีไลน์</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>Rectangle with &amp;Size</translation>
+        <translation>สี่เหลี่ยมผืนผ้าตาม&amp;ขนาด</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw rectangle with position and size</source>
-        <translation>วาด rectangle with ตำแหน่ง and size</translation>
+        <translation>วาดสี่เหลี่ยมผืนผ้าตามตำแหน่งและขนาด</translation>
     </message>
 </context>
 <context>
@@ -12082,7 +12082,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation>Show &amp;Only Active</translation>
+        <translation>แสดง&amp;เฉพาะที่ใช้งานอยู่</translation>
     </message>
 </context>
 <context>
@@ -12106,12 +12106,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation>File &quot;%1&quot; doesn&apos;t exist.</translation>
+        <translation>ไม่มีไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation>Show &amp;Readme</translation>
+        <translation>แสดง&amp;ไฟล์ Readme</translation>
     </message>
 </context>
 <context>
@@ -12166,7 +12166,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
-        <translation>Set coordinate</translation>
+        <translation>กำหนดพิกัด</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12214,7 +12214,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
-        <translation>Radius (Distance)</translation>
+        <translation>รัศมี (ระยะทาง)</translation>
     </message>
     <message>
         <location line="-22"/>
@@ -12267,7 +12267,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap ระยะ:</translation>
+        <translation>ระยะจับ:</translation>
     </message>
 </context>
 <context>
@@ -12275,7 +12275,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation>Specify first point to measure distance from</translation>
+        <translation>ระบุจุดแรกที่จะวัดระยะทางจาก</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -12285,7 +12285,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap ระยะ:</translation>
+        <translation>ระยะจับ:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12295,12 +12295,12 @@ is already in the list.</translation>
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation>Percentage</translation>
+        <translation>เปอร์เซ็นต์</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation>Fraction</translation>
+        <translation>เศษส่วน</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
@@ -12310,7 +12310,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation>Snap distance between 2 points</translation>
+        <translation>จับที่ระยะทางระหว่าง 2 จุด</translation>
     </message>
 </context>
 <context>
@@ -12350,7 +12350,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation>Terminate manual intersection tool after one use</translation>
+        <translation>ปิดเครื่องมือจุดตัดแบบกำหนดเองหลังใช้งานหนึ่งครั้ง</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
@@ -12360,7 +12360,7 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Intersection Manual</translation>
+        <translation>จุดตัดแบบกำหนดเอง</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12468,12 +12468,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
-        <translation>First control point</translation>
+        <translation>จุดควบคุมแรก</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Next control point</source>
-        <translation>Next control point</translation>
+        <translation>จุดควบคุมถัดไป</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -12488,7 +12488,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>เลือก สไปลน์ Degree</translation>
+        <translation>เลือกดีกรีของสไปลน์</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -12508,7 +12508,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw spline from control points</source>
-        <translation>วาด สไปลน์ from control points</translation>
+        <translation>วาดสไปลน์จากจุดควบคุม</translation>
     </message>
 </context>
 <context>
@@ -12516,7 +12516,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation>Convert Straight Splines to Lines</translation>
+        <translation>แปลงสไปลน์ที่เป็นเส้นตรงเป็นเส้น</translation>
     </message>
 </context>
 <context>
@@ -12524,37 +12524,37 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
-        <translation>Status bar font:</translation>
+        <translation>ฟอนต์แถบสถานะ:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Status Bar Widgets</source>
-        <translation>Status Bar Widgets</translation>
+        <translation>วิดเจ็ตแถบสถานะ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation>Coordinate display</translation>
+        <translation>การแสดงพิกัด</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation>Mouse display</translation>
+        <translation>การแสดงเมาส์</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation>Selection display</translation>
+        <translation>การแสดงการเลือก</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation>Progress display</translation>
+        <translation>การแสดงความคืบหน้า</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation>Show status tips</translation>
+        <translation>แสดงคำแนะนำในแถบสถานะ</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
@@ -12598,12 +12598,12 @@ is already in the list.</translation>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation>ไม่มีselected entities in given range</translation>
+        <translation>ไม่มีวัตถุที่เลือกในช่วงที่กำหนด</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation>ไม่มีentities in given range</translation>
+        <translation>ไม่มีวัตถุในช่วงที่กำหนด</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
@@ -12621,7 +12621,7 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation>Automatically convert splines to lines / arcs if appropriate</translation>
+        <translation>แปลงสไปลน์เป็นเส้น / ส่วนโค้งโดยอัตโนมัติเมื่อเหมาะสม</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12631,7 +12631,7 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Import groups as layers</source>
-        <translation>Import groups as layers</translation>
+        <translation>นำเข้ากลุ่มเป็นเลเยอร์</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12652,17 +12652,17 @@ is already in the list.</translation>
         <location line="+0"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation>SVG Import</translation>
+        <translation>การนำเข้า SVG</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Import SVG</source>
-        <translation>Import SVG</translation>
+        <translation>นำเข้า SVG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation>SVG Files</translation>
+        <translation>ไฟล์ SVG</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12677,12 +12677,12 @@ is already in the list.</translation>
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation>Pixels / Inch</translation>
+        <translation>พิกเซล / นิ้ว</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation>SVG &amp;Import...</translation>
+        <translation>&amp;นำเข้า SVG...</translation>
     </message>
 </context>
 <context>
@@ -12698,7 +12698,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation>Show tab bar</translation>
+        <translation>แสดงแถบแท็บ</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
@@ -12748,17 +12748,17 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation>Font size in text dialog preview:</translation>
+        <translation>ขนาดฟอนต์ในตัวอย่างของกล่องโต้ตอบข้อความ:</translation>
     </message>
     <message>
         <location line="+99"/>
         <source>Show font preview in font controls</source>
-        <translation>Show font preview in font controls</translation>
+        <translation>แสดงตัวอย่างฟอนต์ในตัวควบคุมฟอนต์</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation>Use reduced selection of fonts:</translation>
+        <translation>ใช้ชุดฟอนต์แบบลดจำนวน:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12788,7 +12788,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Letter spacing</source>
-        <translation>Letter spacing</translation>
+        <translation>ระยะห่างตัวอักษร</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12803,7 +12803,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise</source>
-        <translation>Counter Clockwise</translation>
+        <translation>ทวนเข็มนาฬิกา</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12813,7 +12813,7 @@ is already in the list.</translation>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation>Fit text to line, arc or circle</translation>
+        <translation>จัดข้อความให้พอดีกับเส้น ส่วนโค้ง หรือวงกลม</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12836,7 +12836,7 @@ is already in the list.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Leader was created successfully</translation>
+        <translation>สร้างเส้นนำสำเร็จแล้ว</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
@@ -12866,7 +12866,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw text along an entity</source>
-        <translation>วาด text along an องค์ประกอบ</translation>
+        <translation>วาดข้อความตามแนววัตถุ</translation>
     </message>
 </context>
 <context>
@@ -12874,7 +12874,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
-        <translation>Default value:</translation>
+        <translation>ค่าเริ่มต้น:</translation>
     </message>
     <message>
         <location line="+275"/>
@@ -12889,7 +12889,7 @@ is already in the list.</translation>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>ตัด</translation>
+        <translation>&amp;ตัด</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12939,7 +12939,7 @@ is already in the list.</translation>
     <message>
         <location line="+349"/>
         <source>Others...</source>
-        <translation>Others...</translation>
+        <translation>อื่นๆ...</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -12949,7 +12949,7 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation>Plus-Minus</translation>
+        <translation>บวก-ลบ</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12964,57 +12964,57 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation>Multiplication</translation>
+        <translation>การคูณ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Division</translation>
+        <translation>การหาร</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation>Delta</translation>
+        <translation>เดลตา</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation>Pi</translation>
+        <translation>พาย</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation>Identity</translation>
+        <translation>เอกลักษณ์ (สมภาค)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation>Not equal</translation>
+        <translation>ไม่เท่ากับ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation>Ohm</translation>
+        <translation>โอห์ม</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation>Omega</translation>
+        <translation>โอเมกา</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>Squared</translation>
+        <translation>ยกกำลังสอง</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubed</translation>
+        <translation>ยกกำลังสาม</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>No-break space</translation>
+        <translation>ช่องว่างไม่ตัดบรรทัด</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13024,7 +13024,7 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
-        <translation>Main Font</translation>
+        <translation>ฟอนต์หลัก</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -13051,7 +13051,7 @@ is already in the list.</translation>
     <message>
         <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation>Text fits on one line and has no formatting</translation>
+        <translation>ข้อความอยู่ในบรรทัดเดียวและไม่มีการจัดรูปแบบ</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13066,7 +13066,7 @@ is already in the list.</translation>
     <message>
         <location line="+20"/>
         <source>Rich Text</source>
-        <translation>Rich Text</translation>
+        <translation>ข้อความแบบมีรูปแบบ</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -13096,7 +13096,7 @@ is already in the list.</translation>
     <message>
         <location line="+50"/>
         <source>Insert Symbol...</source>
-        <translation>Insert Symbol...</translation>
+        <translation>แทรกสัญลักษณ์...</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -13116,7 +13116,7 @@ is already in the list.</translation>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Prompt:</translation>
+        <translation>ข้อความแจ้ง:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -13131,12 +13131,12 @@ is already in the list.</translation>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation>เส้น Spacing Factor:</translation>
+        <translation>ตัวคูณระยะห่างบรรทัด:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation>Line Spacing Factor</translation>
+        <translation>ตัวคูณระยะห่างบรรทัด</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -13146,7 +13146,7 @@ is already in the list.</translation>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation>Rotation Angle</translation>
+        <translation>มุมหมุน</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -13166,7 +13166,7 @@ is already in the list.</translation>
     <message>
         <location line="+29"/>
         <source>Middle Right</source>
-        <translation>Middle Right</translation>
+        <translation>กลางขวา</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13176,27 +13176,27 @@ is already in the list.</translation>
     <message>
         <location line="+29"/>
         <source>Middle Center</source>
-        <translation>Middle Center</translation>
+        <translation>กลางกึ่งกลาง</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Left</source>
-        <translation>Middle Left</translation>
+        <translation>กลางซ้าย</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Left</source>
-        <translation>Base Left</translation>
+        <translation>ฐานซ้าย</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Center</source>
-        <translation>Base Center</translation>
+        <translation>ฐานกึ่งกลาง</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation>Base Right</translation>
+        <translation>ฐานขวา</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13277,7 +13277,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Send to Bac&amp;k</translation>
+        <translation>ส่งไป&amp;ด้านหลัง</translation>
     </message>
 </context>
 <context>
@@ -13285,7 +13285,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>Bring to &amp;Front</translation>
+        <translation>นำมา&amp;ด้านหน้า</translation>
     </message>
 </context>
 <context>
@@ -13325,12 +13325,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation>Icon size:</translation>
+        <translation>ขนาดไอคอน:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Pixel</source>
-        <translation>Pixel</translation>
+        <translation>พิกเซล</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13408,7 +13408,7 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation>Move/Copy</translation>
+        <translation>ย้าย/คัดลอก</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13428,7 +13428,7 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Number of Copies:</translation>
+        <translation>จำนวนสำเนา:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13443,7 +13443,7 @@ is already in the list.</translation>
     <message>
         <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
-        <translation>Move or copy entities once or multiple times</translation>
+        <translation>ย้ายหรือคัดลอกวัตถุหนึ่งครั้งหรือหลายครั้ง</translation>
     </message>
 </context>
 <context>
@@ -13451,12 +13451,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation>Move / Copy Options</translation>
+        <translation>ตัวเลือกการย้าย / คัดลอก</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Number of Copies</translation>
+        <translation>จำนวนสำเนา</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13495,7 +13495,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation>M&amp;ove and Rotate</translation>
+        <translation>&amp;ย้ายและหมุน</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
@@ -13505,7 +13505,7 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation>Move/Rotate</translation>
+        <translation>ย้าย/หมุน</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -13515,7 +13515,7 @@ is already in the list.</translation>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Number of Copies:</translation>
+        <translation>จำนวนสำเนา:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13533,12 +13533,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation>Move and Rotate Options</translation>
+        <translation>ตัวเลือกการย้ายและหมุน</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Number of Copies</translation>
+        <translation>จำนวนสำเนา</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13576,32 +13576,32 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>เลือก limiting องค์ประกอบ</translation>
+        <translation>เลือกวัตถุที่เป็นขอบเขตตัด</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation>เลือก องค์ประกอบ to ตัด</translation>
+        <translation>เลือกวัตถุที่จะตัดแต่ง</translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation>The two entities don&apos;t intersect, or are currently not supported for trimming.</translation>
+        <translation>วัตถุทั้งสองไม่ตัดกัน หรือยังไม่รองรับการตัดแต่งในขณะนี้</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>First entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุแรกได้</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุได้</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Second entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุที่สองได้</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
@@ -13622,7 +13622,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation>Script &amp;Tutorials</translation>
+        <translation>&amp;บทเรียนสคริปต์</translation>
     </message>
 </context>
 <context>
@@ -13646,22 +13646,22 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</translation>
+        <translation>การตั้งค่าเหล่านี้มีผลต่อความละเอียดและมาตราส่วนของส่วนติดต่อผู้ใช้ของ QCAD สามารถปรับการตั้งค่าเหล่านี้ได้หากมีปัญหากับส่วนติดต่อผู้ใช้ของ QCAD เช่น ไอคอนหรือป้ายข้อความที่มีขนาดใหญ่มากหรือเล็กมาก</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Auto screen scale factor</translation>
+        <translation>ตัวคูณมาตราส่วนหน้าจออัตโนมัติ</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Enable high DPI scaling</translation>
+        <translation>เปิดใช้การปรับมาตราส่วนสำหรับ DPI สูง</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation>ขยาย Factor:</translation>
+        <translation>ตัวคูณมาตราส่วน:</translation>
     </message>
 </context>
 <context>
@@ -13690,7 +13690,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Defaults for New Drawings</translation>
+        <translation>ค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13746,12 +13746,12 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation>Microinch</translation>
+        <translation>ไมโครนิ้ว</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation>Mil</translation>
+        <translation>มิล</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13766,57 +13766,57 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation>Nanometer</translation>
+        <translation>นาโนเมตร</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation>Micron</translation>
+        <translation>ไมครอน</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation>Decimeter</translation>
+        <translation>เดซิเมตร</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation>Decameter</translation>
+        <translation>เดคาเมตร</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation>Hectometer</translation>
+        <translation>เฮกโตเมตร</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation>Gigameter</translation>
+        <translation>กิกะเมตร</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation>Astro</translation>
+        <translation>หน่วยดาราศาสตร์</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation>Lightyear</translation>
+        <translation>ปีแสง</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation>Parsec</translation>
+        <translation>พาร์เซก</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation>Imperial</translation>
+        <translation>อิมพีเรียล</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation>Metric</translation>
+        <translation>เมตริก</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
@@ -13831,7 +13831,7 @@ is already in the list.</translation>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation>Measurement system (for line types and hatch patterns):</translation>
+        <translation>ระบบการวัด (สำหรับประเภทเส้นและลายแรเงา):</translation>
     </message>
 </context>
 <context>
@@ -13893,7 +13893,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Grid Spacing &lt; Meta Grid Spacing</translation>
+        <translation>ระยะห่างกริด &lt; ระยะห่างกริดหลัก</translation>
     </message>
 </context>
 <context>
@@ -13901,12 +13901,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Defaults for New Drawings</translation>
+        <translation>ค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Layout - Viewports</translation>
+        <translation>เลย์เอาต์ - วิวพอร์ต</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13924,22 +13924,22 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+512"/>
         <source>Dropped data not supported</source>
-        <translation>Dropped data not supported</translation>
+        <translation>ไม่รองรับข้อมูลที่ลากมาวาง</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation>ไม่สามารถ import file into existing drawing:</translation>
+        <translation>ไม่สามารถนำเข้าไฟล์ลงในแบบวาดที่มีอยู่:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation>Importing file:</translation>
+        <translation>กำลังนำเข้าไฟล์:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Importing URL: </source>
-        <translation>Importing URL: </translation>
+        <translation>กำลังนำเข้า URL: </translation>
     </message>
     <message>
         <location line="-401"/>
@@ -13965,12 +13965,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
-        <translation>Restore defaults</translation>
+        <translation>คืนค่าเริ่มต้น</translation>
     </message>
     <message>
         <location line="+132"/>
         <source>Insert Symbol</source>
-        <translation>Insert Symbol</translation>
+        <translation>แทรกสัญลักษณ์</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13985,17 +13985,17 @@ is already in the list.</translation>
     <message>
         <location line="-5"/>
         <source>Plus/Minus</source>
-        <translation>Plus/Minus</translation>
+        <translation>บวก/ลบ</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pi</source>
-        <translation>Pi</translation>
+        <translation>พาย</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Phi</source>
-        <translation>Phi</translation>
+        <translation>ฟาย</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14005,12 +14005,12 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation>Alt phi</translation>
+        <translation>ฟาย (แบบอื่น)</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Ohm</source>
-        <translation>Ohm</translation>
+        <translation>โอห์ม</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14020,22 +14020,22 @@ is already in the list.</translation>
     <message>
         <location line="-4"/>
         <source>Multiplication</source>
-        <translation>Multiplication</translation>
+        <translation>การคูณ</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Division</source>
-        <translation>Division</translation>
+        <translation>การหาร</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Square</source>
-        <translation>Square</translation>
+        <translation>สี่เหลี่ยมจัตุรัส</translation>
     </message>
     <message>
         <location line="-18"/>
         <source>Delta</source>
-        <translation>Delta</translation>
+        <translation>เดลตา</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -14045,7 +14045,7 @@ is already in the list.</translation>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation>Almost Equal</translation>
+        <translation>เกือบเท่ากับ</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14055,67 +14055,67 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation>Asymptotically Equal</translation>
+        <translation>เท่ากันเชิงเส้นกำกับ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation>Center Line</translation>
+        <translation>เส้นศูนย์กลาง</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Electrical Phase</source>
-        <translation>Electrical Phase</translation>
+        <translation>เฟสไฟฟ้า</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation>Identity</translation>
+        <translation>เอกลักษณ์ (สมภาค)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation>Not Equal</translation>
+        <translation>ไม่เท่ากับ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Omega</source>
-        <translation>Omega</translation>
+        <translation>โอเมกา</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation>Property Line</translation>
+        <translation>เส้นเขตที่ดิน</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Subscript 2</translation>
+        <translation>ตัวห้อย 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation>Square Root</translation>
+        <translation>รากที่สอง</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation>Squared</translation>
+        <translation>ยกกำลังสอง</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubed</translation>
+        <translation>ยกกำลังสาม</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation>Stacked text</translation>
+        <translation>ข้อความซ้อน</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation>Measured value</translation>
+        <translation>ค่าที่วัดได้</translation>
     </message>
     <message>
         <location line="+171"/>
@@ -14191,13 +14191,13 @@ is already in the list.</translation>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation>Centered</translation>
+        <translation>จัดกึ่งกลาง</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation>Show trailing zeroes</translation>
+        <translation>แสดงศูนย์ต่อท้าย</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -14207,12 +14207,12 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>Deg/min/sec</translation>
+        <translation>องศา/ลิปดา/ฟิลิปดา</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradians</translation>
+        <translation>เกรเดียน</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14228,7 +14228,7 @@ is already in the list.</translation>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation>Suppress trailing zeroes</translation>
+        <translation>ละศูนย์ต่อท้าย</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -14240,12 +14240,12 @@ is already in the list.</translation>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation>Counterclockwise</translation>
+        <translation>ทวนเข็มนาฬิกา</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation>Preceding</translation>
+        <translation>นำหน้า</translation>
     </message>
     <message>
         <location line="-86"/>
@@ -14256,7 +14256,7 @@ is already in the list.</translation>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation>Include 0&apos;0&quot;</translation>
+        <translation>รวม 0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14272,24 +14272,24 @@ is already in the list.</translation>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation>Include 0&apos;, suppress 0&quot;</translation>
+        <translation>แสดง 0&apos;, ซ่อน 0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation>Include 0&quot;, suppress 0&apos;</translation>
+        <translation>แสดง 0&quot;, ซ่อน 0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation>Suppress leading zeroes</translation>
+        <translation>ไม่แสดงเลขศูนย์นำหน้า</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation>Suppress leading / trailing zeroes</translation>
+        <translation>ไม่แสดงเลขศูนย์นำหน้า / ต่อท้าย</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -14336,7 +14336,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw horizontal construction line</source>
-        <translation>วาด แนวนอน construction เส้น</translation>
+        <translation>วาดเส้นก่อสร้างแนวนอน</translation>
     </message>
 </context>
 <context>
@@ -14349,7 +14349,7 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Draw vertical construction line</source>
-        <translation>วาด แนวตั้ง construction เส้น</translation>
+        <translation>วาดเส้นก่อสร้างแนวตั้ง</translation>
     </message>
 </context>
 <context>
@@ -14391,7 +14391,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation>ไม่มีselection found</translation>
+        <translation>ไม่พบการเลือก</translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
@@ -14404,22 +14404,22 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
-        <translation>Loading add-on translations...</translation>
+        <translation>กำลังโหลดคำแปลของส่วนเสริม...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation>Loading add-ons...</translation>
+        <translation>กำลังโหลดส่วนเสริม...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation>Initializing add-ons...</translation>
+        <translation>กำลังเริ่มต้นส่วนเสริม...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation>Initializing add-ons:</translation>
+        <translation>กำลังเริ่มต้นส่วนเสริม:</translation>
     </message>
 </context>
 <context>
@@ -14467,7 +14467,7 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation>Layouts</translation>
+        <translation>เลย์เอาต์</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14477,7 +14477,7 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation>Linetypes</translation>
+        <translation>ประเภทเส้น</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14497,7 +14497,7 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation>Dimension Styles</translation>
+        <translation>รูปแบบมิติ</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14527,7 +14527,7 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>Block References</translation>
+        <translation>การอ้างอิงบล็อก</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14537,12 +14537,12 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Block References and Attributes</translation>
+        <translation>การอ้างอิงบล็อกและคุณลักษณะ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Block Reference and Attributes</translation>
+        <translation>การอ้างอิงบล็อกและคุณลักษณะ</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14617,22 +14617,22 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>Angular Dimensions (2 Lines)</translation>
+        <translation>มิติเชิงมุม (2 เส้น)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Angular Dimension (2 Lines)</translation>
+        <translation>มิติเชิงมุม (2 เส้น)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Angular Dimensions (3 Points)</translation>
+        <translation>มิติเชิงมุม (3 จุด)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Angular Dimension (3 Points)</translation>
+        <translation>มิติเชิงมุม (3 จุด)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14643,7 +14643,7 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation>Diametric Dimensions</translation>
+        <translation>มิติเส้นผ่านศูนย์กลาง</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14653,32 +14653,32 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Ordinate Dimensions</translation>
+        <translation>มิติพิกัด</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>Ordinate Dimension</translation>
+        <translation>มิติพิกัด</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation>Rotated Dimensions</translation>
+        <translation>มิติแบบหมุน</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation>Rotated Dimension</translation>
+        <translation>มิติแบบหมุน</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation>Radial Dimensions</translation>
+        <translation>มิติรัศมี</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation>Radial Dimension</translation>
+        <translation>มิติรัศมี</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14743,12 +14743,12 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation>Infinite Lines</translation>
+        <translation>เส้นไม่จำกัดความยาว</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation>Infinite Line</translation>
+        <translation>เส้นไม่มีที่สิ้นสุด</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14849,17 +14849,17 @@ is already in the list.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation>Wipeouts</translation>
+        <translation>ไวพเอาต์</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation>Wipeout</translation>
+        <translation>ไวพเอาต์</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation>External References</translation>
+        <translation>การอ้างอิงภายนอก</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14886,32 +14886,32 @@ is already in the list.</translation>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation>DXF Files</translation>
+        <translation>ไฟล์ DXF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation>SVG Files</translation>
+        <translation>ไฟล์ SVG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation>DXF Drawing</translation>
+        <translation>แบบวาด DXF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation>DWG Drawing</translation>
+        <translation>แบบวาด DWG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation>PDF File</translation>
+        <translation>ไฟล์ PDF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation>PDF/A-1B File</translation>
+        <translation>ไฟล์ PDF/A-1B</translation>
     </message>
 </context>
 <context>
@@ -14935,7 +14935,7 @@ is already in the list.</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation>Isometric Grid</translation>
+        <translation>กริดไอโซเมตริก</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -14975,7 +14975,7 @@ is already in the list.</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation>Meta Grid Spacing</translation>
+        <translation>ระยะห่างกริดหลัก</translation>
     </message>
     <message>
         <location line="-390"/>
@@ -15002,22 +15002,22 @@ is already in the list.</translation>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation>ID does not refer to an entity:</translation>
+        <translation>ID ไม่ได้อ้างถึงวัตถุ:</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>First entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุแรกได้</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุได้</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Second entity cannot be trimmed.</translation>
+        <translation>ไม่สามารถตัดแต่งวัตถุที่สองได้</translation>
     </message>
 </context>
 </TS>
