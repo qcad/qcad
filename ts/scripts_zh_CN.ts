@@ -290,7 +290,7 @@
         <translation>绘图首选项</translation>
     </message>
     <message>
-        <location line="+373"/>
+        <location line="+399"/>
         <source>Apply preferences</source>
         <translation>应用首选项</translation>
     </message>

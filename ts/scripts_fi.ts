@@ -290,7 +290,7 @@
         <translation>Piirroksen asetukset</translation>
     </message>
     <message>
-        <location line="+373"/>
+        <location line="+399"/>
         <source>Apply preferences</source>
         <translation>Käytä asetuksia</translation>
     </message>

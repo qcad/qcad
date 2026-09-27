@@ -290,7 +290,7 @@
         <translation>Preferencje rysowania</translation>
     </message>
     <message>
-        <location line="+373"/>
+        <location line="+399"/>
         <source>Apply preferences</source>
         <translation>Zastosuj preferencje</translation>
     </message>

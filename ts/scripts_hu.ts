@@ -290,7 +290,7 @@
         <translation>Rajz beállítások</translation>
     </message>
     <message>
-        <location line="+373"/>
+        <location line="+399"/>
         <source>Apply preferences</source>
         <translation>Beállítások alkalmazása</translation>
     </message>

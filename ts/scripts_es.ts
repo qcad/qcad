@@ -290,7 +290,7 @@
         <translation>Preferencias del dibujo</translation>
     </message>
     <message>
-        <location line="+373"/>
+        <location line="+399"/>
         <source>Apply preferences</source>
         <translation>Aplicar preferencias</translation>
     </message>

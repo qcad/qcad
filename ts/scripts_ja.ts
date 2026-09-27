@@ -290,7 +290,7 @@
         <translation>図面設定</translation>
     </message>
     <message>
-        <location line="+373"/>
+        <location line="+399"/>
         <source>Apply preferences</source>
         <translation>設定を適用</translation>
     </message>

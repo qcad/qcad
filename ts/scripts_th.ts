@@ -290,7 +290,7 @@
         <translation>การตั้งค่าการเขียนแบบ</translation>
     </message>
     <message>
-        <location line="+373"/>
+        <location line="+399"/>
         <source>Apply preferences</source>
         <translation>นำการตั้งค่าไปใช้</translation>
     </message>
