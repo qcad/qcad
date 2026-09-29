@@ -271,11 +271,6 @@ int main(int argc, char *argv[]) {
             TransformProcessType(&psn, kProcessTransformToForegroundApplication);
         }
     }
-
-    // TODO: make available as script function:
-//    if (!app->arguments().contains("-show-menu-icons")) {
-//        QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
-//    }
 #endif
 
     if (RSettings::getBoolValue("MenuBar/ShowIcons", true)==false) {
