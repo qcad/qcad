@@ -34,7 +34,7 @@
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="+154"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="+159"/>
         <source>Custom</source>
         <translation>Własna</translation>
     </message>
