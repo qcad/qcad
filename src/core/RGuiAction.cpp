@@ -948,11 +948,14 @@ void RGuiAction::setScriptFile(const QString& sf, bool isSecondary) {
         actionsByScriptFile[relSf] = this;
     }
 
-    // implicitely set icon file if available:
+    // implicitely set icon file if available (default or theme icon):
     QString iconFilePath = fi.path() + QDir::separator() + fi.completeBaseName() + ".svg";
-    //if (QFileInfo(iconFilePath).exists()) {
+    if (iconFile.isEmpty() || !RGuiAction::getIconPath(iconFilePath).isEmpty()) {
         setIcon(iconFilePath);
-    //}
+    }
+    // else: keep existing icon, e.g. when a script file is replaced by
+    // an extended version without own icon (ToggleLayerLock -> ToggleLayerLockPro),
+    // so that theme overrides of the original icon still apply
 }
 
 QString RGuiAction::getScriptClass() const {
