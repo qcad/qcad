@@ -40,6 +40,10 @@
  * not changed. Key codes are spelled letter by letter so that they are not
  * read as words ("er").
  *
+ * The same observer keeps menu icons visible on macOS 27 and later, where
+ * AppKit hides menu item images unless the item's preferredImageVisibility
+ * is set to visible.
+ *
  * Installed by RMainWindowQt on macOS.
  */
 class QCADGUI_EXPORT RMacMenuAccessibility {

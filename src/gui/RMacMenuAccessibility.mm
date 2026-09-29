@@ -21,6 +21,7 @@
 
 #import <AppKit/AppKit.h>
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 #include <QRegularExpression>
 
@@ -68,10 +69,37 @@ namespace {
 // key of the associated object that remembers the label we set on an item:
 char spokenLabelKey;
 
+// NSMenuItemImageVisibilityVisible (macOS 27 SDK):
+const NSInteger imageVisibilityVisible = 1;
+
+/**
+ * macOS 27 hides menu item images by default (preferredImageVisibility
+ * Automatic). Qt only sets the image of an item if icons in menus are
+ * enabled (Qt::AA_DontShowIconsInMenus, MenuBar/ShowIcons), so every item
+ * with an image asks for it to be visible. Called through the runtime to
+ * compile with older SDKs, no-op before macOS 27.
+ */
+void updateMenuItemImageVisibility(NSMenuItem* item) {
+    if (item.image == nil) {
+        return;
+    }
+    static const SEL getter = NSSelectorFromString(@"preferredImageVisibility");
+    static const SEL setter = NSSelectorFromString(@"setPreferredImageVisibility:");
+    if (![item respondsToSelector:setter]) {
+        return;
+    }
+    // setting the value posts NSMenuDidChangeItemNotification again:
+    if (((NSInteger (*)(id, SEL))objc_msgSend)(item, getter) == imageVisibilityVisible) {
+        return;
+    }
+    ((void (*)(id, SEL, NSInteger))objc_msgSend)(item, setter, imageVisibilityVisible);
+}
+
 void updateMenuItem(NSMenuItem* item) {
     if (item == nil || item.isSeparatorItem) {
         return;
     }
+    updateMenuItemImageVisibility(item);
     QString title = QString::fromNSString(item.title);
     QString spoken = RMacMenuAccessibility::getSpokenTitle(title);
 
