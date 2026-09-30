@@ -403,7 +403,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation>&amp;Adicione uma camada</translation>
+        <translation>&amp;Adicionar camada</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
@@ -413,7 +413,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation>Adicione uma camada</translation>
+        <translation>Adicionar camada</translation>
     </message>
 </context>
 <context>
@@ -982,7 +982,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Salto automático</translation>
+        <translation>Snap automático</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1070,7 +1070,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Ver gráficos</translation>
+        <translation>Vista gráfica</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2022,7 +2022,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Concêntrico (&amp;through Point)</translation>
+        <translation>Concêntrico (&amp;através de ponto)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2134,7 +2134,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Ver gráficos</translation>
+        <translation>Vista gráfica</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2435,7 +2435,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Copie</translation>
+        <translation>&amp;Copiar</translation>
     </message>
 </context>
 <context>
@@ -2499,7 +2499,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>&amp;Crie um bloco a partir da seleção</translation>
+        <translation>&amp;Criar bloco a partir da seleção</translation>
     </message>
 </context>
 <context>
@@ -2563,7 +2563,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>&amp;Corte</translation>
+        <translation>&amp;Cortar</translation>
     </message>
 </context>
 <context>
@@ -2571,7 +2571,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>&amp;Corte com referência</translation>
+        <translation>&amp;Cortar com referência</translation>
     </message>
 </context>
 <context>
@@ -5180,12 +5180,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Fragmente</translation>
+        <translation>Explodir</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Fragmente contornos de texto em polilinhas</translation>
+        <translation>Explodir contornos de texto em polilinhas</translation>
     </message>
     <message>
         <location line="-121"/>
@@ -5205,7 +5205,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="-125"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Fragmente splines para polilinhas com segmentos de linha</translation>
+        <translation>Explodir splines em polilinhas com segmentos de linha</translation>
     </message>
     <message>
         <location line="+135"/>
@@ -5215,7 +5215,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Fragmente texto com várias linhas em vários blocos de texto simples</translation>
+        <translation>Explodir textos com várias linhas em vários blocos de texto simples</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -5694,7 +5694,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Ver gráficos</translation>
+        <translation>Vista gráfica</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6137,7 +6137,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation>Ver gráficos</translation>
+        <translation>Vista gráfica</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6252,7 +6252,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Ferramentas de salto</translation>
+        <translation>Ferramentas de snap</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6353,7 +6353,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+199"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation>Roda do mouse fator de zoom:</translation>
+        <translation>Fator de zoom da roda do rato:</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -6394,7 +6394,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Ver gráficos</translation>
+        <translation>Vista gráfica</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6631,7 +6631,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation>&amp;Insira um Bitmap</translation>
+        <translation>&amp;Inserir bitmap</translation>
     </message>
 </context>
 <context>
@@ -7741,7 +7741,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;Insira um bloco</translation>
+        <translation>&amp;Inserir bloco</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
@@ -8260,7 +8260,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Peso da linha:</translation>
+        <translation>Espessura da linha:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -8366,7 +8366,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>A&amp;longue / encurte</translation>
+        <translation>A&amp;longar / encurtar</translation>
     </message>
 </context>
 <context>
@@ -9116,7 +9116,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Copie</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -9889,7 +9889,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation>Exporte para &amp;PDF</translation>
+        <translation>Exportar para &amp;PDF</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10380,7 +10380,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation>Fechar pré-visualização de impressão</translation>
+        <translation>Fechar pré-visualização da impressão</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10410,7 +10410,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>Desenho de ajuste automático à página(s)</translation>
+        <translation>Ajustar automaticamente o desenho à(s) página(s)</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -10450,7 +10450,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation>Mostrar fronteiras de papel</translation>
+        <translation>Mostrar bordas do papel</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -10578,7 +10578,7 @@ já se encontra na lista.</translation>
         <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation>Editor de propriedade</translation>
+        <translation>Editor de propriedades</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -10752,7 +10752,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation>&amp;Remova uma camada</translation>
+        <translation>&amp;Eliminar camada</translation>
     </message>
 </context>
 <context>
@@ -10907,7 +10907,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Copie</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11346,7 +11346,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Copie</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -12137,7 +12137,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Ferramentas Snap</translation>
+        <translation>Ferramentas de snap</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -12155,12 +12155,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Salto</translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Salto automático</translation>
+        <translation>Snap automático</translation>
     </message>
 </context>
 <context>
@@ -12277,7 +12277,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Distância do salto:</translation>
+        <translation>Distância do snap:</translation>
     </message>
 </context>
 <context>
@@ -12300,12 +12300,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation>Distância do salto entre 2 pontos</translation>
+        <translation>Distância do snap entre 2 pontos</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Distância do salto:</translation>
+        <translation>Distância do snap:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12328,7 +12328,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>&amp;End</translation>
+        <translation>&amp;Extremidade</translation>
     </message>
 </context>
 <context>
@@ -12365,12 +12365,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Encaixe</translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Interseccione manualmente</translation>
+        <translation>Intersecção manual</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12899,12 +12899,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Cor&amp;te</translation>
+        <translation>Cor&amp;tar</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Copie</translation>
+        <translation>&amp;Copiar</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13081,12 +13081,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+56"/>
         <source>Cut</source>
-        <translation>Corte</translation>
+        <translation>Cortar</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation>Copie</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13443,7 +13443,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Copie</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13520,7 +13520,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation>Copie</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13893,7 +13893,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Janelas de visualização</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13926,7 +13926,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Janelas de visualização</translation>
     </message>
 </context>
 <context>
@@ -14333,7 +14333,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>&amp;Zoom da janela</translation>
+        <translation>Zoom de &amp;janela</translation>
     </message>
 </context>
 <context>

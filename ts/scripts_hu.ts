@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Rajz beállítások</translation>
+        <translation>Rajzolási beállítások</translation>
     </message>
     <message>
         <location line="+399"/>
@@ -3130,7 +3130,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Méretvonal</translation>
+        <translation>Méret</translation>
     </message>
     <message>
         <location line="+112"/>
@@ -10399,7 +10399,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation>Papír helyzetének szerkesztése</translation>
+        <translation>Papír helyzetének változtatása</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10409,7 +10409,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Középre igazítás</translation>
+        <translation>Automatikusan középre</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -13117,7 +13117,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Felirat:</translation>
+        <translation>Kérdés:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -14594,7 +14594,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Méretvonal</translation>
+        <translation>Méret</translation>
     </message>
     <message>
         <location line="+2"/>

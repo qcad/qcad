@@ -400,7 +400,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Largura da linha</translation>
+        <translation>Espessura da linha</translation>
     </message>
     <message>
         <location line="+1"/>

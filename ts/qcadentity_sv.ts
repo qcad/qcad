@@ -308,7 +308,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation>Fråga</translation>
+        <translation>Uppmaning</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
@@ -710,7 +710,7 @@
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Opacitet</translation>
+        <translation>Toning</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>

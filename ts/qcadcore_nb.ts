@@ -352,7 +352,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location line="+1"/>

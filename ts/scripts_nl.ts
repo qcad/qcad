@@ -2986,7 +2986,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimVertical/DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation>&amp;Vertikaal</translation>
+        <translation>&amp;Verticaal</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8351,12 +8351,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation>Lijn of book kiezen</translation>
+        <translation>Lijn of boog kiezen</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Bedrag:</translation>
+        <translation>Lengte:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8417,7 +8417,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Sequence sluiten</translation>
+        <translation>Reeks sluiten</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9316,7 +9316,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+14"/>
         <source>&amp;Offset</source>
-        <translation>&amp;Afzet</translation>
+        <translation>&amp;Offset</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -9575,12 +9575,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Afzet (met afstand)</translation>
+        <translation>Offset (met afstand)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Lijn, boog, cirkel of ellips afzetten</translation>
+        <translation>Lijn, boog, cirkel of ellips offsetten</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
@@ -9629,12 +9629,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Afzet (door punt)</translation>
+        <translation>Offset (door punt)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Lijn, boog, cirkel of ellips afzetten door punt</translation>
+        <translation>Lijn, boog, cirkel of ellips offsetten door punt</translation>
     </message>
 </context>
 <context>
@@ -10455,7 +10455,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>Afdruk voor&amp;beeld</translation>
+        <translation>Afdruk&amp;voorbeeld</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11587,7 +11587,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Kruisen met de huidige selectie</translation>
+        <translation>Doorsnede met de huidige selectie</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11645,7 +11645,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Kruisen met de huidige selectie</translation>
+        <translation>Doorsnede met de huidige selectie</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
@@ -11706,7 +11706,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Kruisen met de huidige selectie</translation>
+        <translation>Doorsnede met de huidige selectie</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -11754,7 +11754,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Kruisen met de huidige selectie</translation>
+        <translation>Doorsnede met de huidige selectie</translation>
     </message>
     <message>
         <location line="+27"/>

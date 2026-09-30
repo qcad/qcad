@@ -59,7 +59,7 @@
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>垂直</translation>
+        <translation>垂線</translation>
     </message>
     <message>
         <location line="+3"/>

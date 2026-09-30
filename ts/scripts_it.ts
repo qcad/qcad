@@ -1040,7 +1040,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Raccorda &amp;automatico</translation>
+        <translation>Taglio &amp;automatico</translation>
     </message>
 </context>
 <context>
@@ -2684,7 +2684,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>&amp;Deselezionare entità di livello</translation>
+        <translation>&amp;Deseleziona entità del livello</translation>
     </message>
 </context>
 <context>
@@ -3049,7 +3049,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation>Strumenti dimensione</translation>
+        <translation>Strumenti di quotatura</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5200,7 +5200,7 @@ is already in the list.</source>
     <message>
         <location line="-111"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Explode spline in polilinee con segmenti di linea</translation>
+        <translation>Esplodi le spline in polilinee con segmenti di linea</translation>
     </message>
     <message>
         <location line="+125"/>
@@ -6435,7 +6435,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+98"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Tratteggi</translation>
+        <translation>&amp;Tratteggio</translation>
     </message>
     <message>
         <location line="-26"/>
@@ -6448,7 +6448,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Tratteggi</translation>
+        <translation>Tratteggio</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -8239,7 +8239,7 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Larghezza:</translation>
+        <translation>Spessore di linea:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -10415,7 +10415,7 @@ is already in the list.</source>
     <message>
         <location line="-65"/>
         <source>Auto Center</source>
-        <translation>Auto centro</translation>
+        <translation>Centratura automatica</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10608,7 +10608,7 @@ is already in the list.</source>
     <message>
         <location line="-146"/>
         <source>Handle:</source>
-        <translation>Maniglia:</translation>
+        <translation>Handle:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
@@ -11572,7 +11572,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>(De-)Select connected entities</source>
-        <translation>(De-)selezione delle entità collegati</translation>
+        <translation>(De)seleziona le entità collegate</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -11673,7 +11673,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>&amp;Selezionare entità di livello</translation>
+        <translation>&amp;Seleziona entità del livello</translation>
     </message>
 </context>
 <context>
@@ -14386,7 +14386,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation>Zoom &amp;in</translation>
+        <translation>Zoom &amp;avanti</translation>
     </message>
 </context>
 <context>
@@ -14394,7 +14394,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>Zoom a&amp;ll&apos;esterno</translation>
+        <translation>Zoom &amp;indietro</translation>
     </message>
 </context>
 <context>

@@ -1048,7 +1048,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation>&amp;Automaattinen mittakaava</translation>
+        <translation>&amp;Automaattinen zoomaus</translation>
     </message>
 </context>
 <context>
@@ -3054,7 +3054,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>M&amp;ittasuhde</translation>
+        <translation>M&amp;itoitus</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -3238,7 +3238,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation>Tarra</translation>
+        <translation>Selite</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4252,7 +4252,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Piirros &amp;omat asetukset</translation>
+        <translation>Piirroksen &amp;asetukset</translation>
     </message>
 </context>
 <context>
@@ -4726,7 +4726,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation>Lukumäärä:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -4744,7 +4744,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation>Lukumäärä:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -5175,7 +5175,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Räjäytä</translation>
+        <translation>Pura</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -5852,7 +5852,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Korosta (ja nosta) vinoviivat ja kiinteät täytöt kantaman sisällä</translation>
+        <translation>Korosta (ja nosta) kuvioinnit ja kiinteät täytöt kantaman sisällä</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -5942,7 +5942,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation>Automaattinen suurennus/zoomaus</translation>
+        <translation>Automaattinen zoomaus</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5952,7 +5952,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation>Automaattinen zoomaus kuormituksessa</translation>
+        <translation>Automaattinen zoomaus avattaessa</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -7100,7 +7100,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Käsittelemätön muoto luukkusilmukasta.</translation>
+        <translation>Käsittelemätön muoto kuvioinnin silmukassa.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -8432,7 +8432,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation>Käytä kiinteää rivin pituutta</translation>
+        <translation>Käytä viivalle kiinteää pituutta</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8442,7 +8442,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation>Käytä kiinteää kulmaa linjalle</translation>
+        <translation>Käytä kiinteää kulmaa viivalle</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8764,7 +8764,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation>Yhden&amp;suuntainen (etäisyyden kanssa)</translation>
+        <translation>Yhden&amp;suuntainen (etäisyydellä)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9316,7 +9316,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+14"/>
         <source>&amp;Offset</source>
-        <translation>&amp;Poikkeama</translation>
+        <translation>&amp;Offset</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -9575,12 +9575,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Poikkeama (etäisyydellä)</translation>
+        <translation>Offset (etäisyydellä)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Poikkeama viivassa, kaaressa, ympyrässä tai ellipsissä</translation>
+        <translation>Offset viivasta, kaaresta, ympyrästä tai ellipsistä</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
@@ -9611,7 +9611,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation>Lukumäärä:</translation>
     </message>
 </context>
 <context>
@@ -9624,17 +9624,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation>Lukumäärä:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Poikkeama (pisteen kautta)</translation>
+        <translation>Offset (pisteen kautta)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Poikkeama viivassa, kaaressa, ympyrässä tai ellipsissä pisteen kautta</translation>
+        <translation>Offset viivasta, kaaresta, ympyrästä tai ellipsistä pisteen kautta</translation>
     </message>
 </context>
 <context>
@@ -10420,7 +10420,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation>Automaatinen zoomaus sivulle</translation>
+        <translation>Automaattinen zoomaus sivulle</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10506,7 +10506,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Automaattisen luukun pituuden laskennan suurin monimutkaisuus:</translation>
+        <translation>Automaattisen kuvioinnin pituuden laskennan suurin monimutkaisuus:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10536,7 +10536,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
-        <translation>Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
+        <translation>Näytä mittatyylin lisäohitukset</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2016"/>
@@ -10571,7 +10571,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+182"/>
         <source>Index</source>
-        <translation>Hakemisto</translation>
+        <translation>Indeksi</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -11079,7 +11079,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Tasaa</translation>
+        <translation>Rajaa</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11336,7 +11336,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;Asteikko</translation>
+        <translation>&amp;Skaalaa</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -12277,7 +12277,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Tartuntaetäisyys:</translation>
     </message>
 </context>
 <context>
@@ -12295,7 +12295,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Tartuntaetäisyys:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12328,7 +12328,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>&amp;Loppu</translation>
+        <translation>&amp;Päätepiste</translation>
     </message>
 </context>
 <context>
@@ -12393,7 +12393,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>&amp;Keskellä</translation>
+        <translation>&amp;Keskikohta</translation>
     </message>
 </context>
 <context>
@@ -12401,7 +12401,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>&amp;Keskellä käsivaraisesti</translation>
+        <translation>&amp;Keskikohta käsin</translation>
     </message>
 </context>
 <context>
@@ -13841,7 +13841,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation>Mittausjärjestelmä (viivatyypeille ja luukkukuvioille):</translation>
+        <translation>Mittausjärjestelmä (viivatyypeille ja kuviomalleille):</translation>
     </message>
 </context>
 <context>
@@ -14333,7 +14333,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>&amp;Ikkunan kokomuutos</translation>
+        <translation>&amp;Ikkunazoomaus</translation>
     </message>
 </context>
 <context>

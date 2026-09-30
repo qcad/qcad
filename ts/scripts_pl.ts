@@ -1085,17 +1085,17 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Obie jednostki nie mogą być ukosowane.</translation>
+        <translation>Tych dwóch obiektów nie można sfazować.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Pierwsza jednostka nie może być przycięta.</translation>
+        <translation>Nie można przyciąć pierwszego obiektu.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Druga jednostka nie może być przycięta.</translation>
+        <translation>Nie można przyciąć drugiego obiektu.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
@@ -2437,7 +2437,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation>Kopia</translation>
+        <translation>&amp;Kopiuj</translation>
     </message>
 </context>
 <context>
@@ -2565,7 +2565,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>Cięcie</translation>
+        <translation>&amp;Wytnij</translation>
     </message>
 </context>
 <context>
@@ -2573,7 +2573,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>Cięcie z odniesieniem</translation>
+        <translation>&amp;Wytnij z odniesieniem</translation>
     </message>
 </context>
 <context>
@@ -2581,12 +2581,12 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>Wybierz podmiot lub region</translation>
+        <translation>Wybierz obiekt lub obszar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation>Przenieś podmiot lub odniesienie</translation>
+        <translation>Przenieś obiekt lub punkt odniesienia</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2670,7 +2670,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+3"/>
         <source>Deselect all entities</source>
-        <translation>Odznacz wszystkie jednostki</translation>
+        <translation>Odznacz wszystkie obiekty</translation>
     </message>
 </context>
 <context>
@@ -2773,7 +2773,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation>na podmioty</translation>
+        <translation>na obiekty</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -2852,7 +2852,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>Wybierz jednostkę łuku lub okręgu</translation>
+        <translation>Wybierz łuk lub okrąg</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2911,7 +2911,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>Wybierz jednostkę łuku lub okręgu</translation>
+        <translation>Wybierz łuk lub okrąg</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4327,12 +4327,12 @@ jest już na liście.</translation>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Podmiot nie znajduje się w zestawie roboczym.</translation>
+        <translation>Obiekt nie znajduje się w zestawie roboczym.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>Podmiot znajduje się na zablokowanej warstwie.</translation>
+        <translation>Obiekt znajduje się na zablokowanej warstwie.</translation>
     </message>
     <message>
         <location line="+254"/>
@@ -4342,12 +4342,12 @@ jest już na liście.</translation>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Podmiot nie jest referencją do bloku.</translation>
+        <translation>Obiekt nie jest odniesieniem do bloku.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation>Podmiot nie jest linią ani łukiem.</translation>
+        <translation>Obiekt nie jest linią ani łukiem.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4357,37 +4357,37 @@ jest już na liście.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation>Podmiot nie jest linią.</translation>
+        <translation>Obiekt nie jest linią.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation>Podmiot nie jest łukiem.</translation>
+        <translation>Obiekt nie jest łukiem.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation>Podmiot nie jest łukiem ani okręgiem.</translation>
+        <translation>Obiekt nie jest łukiem ani okręgiem.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation>Podmiot nie jest linią, łukiem ani okręgiem.</translation>
+        <translation>Obiekt nie jest linią, łukiem ani okręgiem.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Podmiot nie jest linią, łukiem, splajnem, łukiem elipsy ani polilinią.</translation>
+        <translation>Obiekt nie jest linią, łukiem, splajnem, łukiem elipsy ani polilinią.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation>Podmiot nie jest łukiem, okręgiem ani elipsą.</translation>
+        <translation>Obiekt nie jest łukiem, okręgiem ani elipsą.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation>Podmiot nie jest linią, łukiem, okręgiem ani elipsą.</translation>
+        <translation>Obiekt nie jest linią, łukiem, okręgiem ani elipsą.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4402,7 +4402,7 @@ jest już na liście.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Podmiot nie jest linią, łukiem, okręgiem, splajnem ani polilinią.</translation>
+        <translation>Obiekt nie jest linią, łukiem, okręgiem, splajnem ani polilinią.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4412,22 +4412,22 @@ jest już na liście.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Jednostka nie jest okręgiem, elipsą, splajnem ani polilinią.</translation>
+        <translation>Obiekt nie jest okręgiem, elipsą, splajnem ani polilinią.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Podmiot nie jest polilinią.</translation>
+        <translation>Obiekt nie jest polilinią.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation>Podmiot nie jest zamkniętą polilinią.</translation>
+        <translation>Obiekt nie jest zamkniętą polilinią.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Podmiot nie jest splajnem z dopasowanymi punktami.</translation>
+        <translation>Obiekt nie jest splajnem z punktami dopasowania.</translation>
     </message>
 </context>
 <context>
@@ -4802,7 +4802,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Ucieczka</translation>
+        <translation>&amp;Anuluj</translation>
     </message>
 </context>
 <context>
@@ -5572,7 +5572,7 @@ jest już na liście.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Usunięto pomalowane podmioty bazowe. (trwałe wyłączone)</translation>
+        <translation>Usunięto zamalowane obiekty bazowe. (trwałe wyłączone)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -6103,7 +6103,7 @@ jest już na liście.</translation>
     <message>
         <location line="-263"/>
         <source>Number of preview entities:</source>
-        <translation>Liczba jednostek podglądu:</translation>
+        <translation>Liczba obiektów podglądu:</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -6113,12 +6113,12 @@ jest już na liście.</translation>
     <message>
         <location line="+267"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation>Maksymalnie wybrane jednostki z punktami odniesienia:</translation>
+        <translation>Maksymalna liczba zaznaczonych obiektów z punktami odniesienia:</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation>Maksymalnie wybrane jednostki z wyświetlonymi punktami odniesienia:</translation>
+        <translation>Maksymalna liczba zaznaczonych obiektów z wyświetlanymi punktami odniesienia:</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -7057,7 +7057,7 @@ jest już na liście.</translation>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation>Wiele podmiotów w wyborze.</translation>
+        <translation>Zaznaczono wiele obiektów.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -7067,7 +7067,7 @@ jest już na liście.</translation>
     <message>
         <location line="+29"/>
         <source>Unsupported entity type. No results.</source>
-        <translation>Nieobsługiwany typ podmiotu. Brak wyników.</translation>
+        <translation>Nieobsługiwany typ obiektu. Brak wyników.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7120,7 +7120,7 @@ jest już na liście.</translation>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation>Tworzenie obszaru 2D Centroid dla wybranej jednostki</translation>
+        <translation>Utwórz centroid 2D pola powierzchni dla wybranego obiektu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7278,7 +7278,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation>Określenie podmiotu</translation>
+        <translation>Wskaż obiekt</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7293,7 +7293,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Odległość Podmiot do punktu</translation>
+        <translation>Odległość &amp;obiekt – punkt</translation>
     </message>
 </context>
 <context>
@@ -7529,7 +7529,7 @@ jest już na liście.</translation>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation>Nieobsługiwany typ podmiotu. Brak wyników.</translation>
+        <translation>Nieobsługiwany typ obiektu. Brak wyników.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -8265,12 +8265,12 @@ jest już na liście.</translation>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Lineweight:</translation>
+        <translation>Szerokość linii:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation>Linetype:</translation>
+        <translation>Rodzaj linii:</translation>
     </message>
 </context>
 <context>
@@ -8361,7 +8361,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Kwota:</translation>
+        <translation>Wartość:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9359,12 +9359,12 @@ jest już na liście.</translation>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation>Wybierz pierwszą jednostkę</translation>
+        <translation>Wybierz pierwszy obiekt</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation>Wybierz drugą jednostkę</translation>
+        <translation>Wybierz drugi obiekt</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10417,7 +10417,7 @@ jest już na liście.</translation>
     <message>
         <location line="-65"/>
         <source>Auto Center</source>
-        <translation>Auto Centrum</translation>
+        <translation>Wyśrodkuj automatycznie</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10585,7 +10585,7 @@ jest już na liście.</translation>
         <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation>Edytor własności</translation>
+        <translation>Edytor właściwości</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -10730,7 +10730,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation>Redo</translation>
+        <translation>&amp;Ponów</translation>
     </message>
 </context>
 <context>
@@ -11071,17 +11071,17 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation>Te dwa podmioty nie mogą być zaokrąglone.</translation>
+        <translation>Tych dwóch obiektów nie można zaokrąglić.</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Pierwsza jednostka nie może być przycięta.</translation>
+        <translation>Nie można przyciąć pierwszego obiektu.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Druga jednostka nie może być przycięta.</translation>
+        <translation>Nie można przyciąć drugiego obiektu.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -11569,7 +11569,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation>Wybierz jednostkę konturu</translation>
+        <translation>Wybierz obiekt konturu</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -11670,12 +11670,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation>%1 podmiotów dodanych do selekcji.</translation>
+        <translation>Dodano do zaznaczenia obiekty: %1.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation>%1 podmiotów usuniętych z selekcji.</translation>
+        <translation>Usunięto z zaznaczenia obiekty: %1.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
@@ -12186,7 +12186,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
-        <translation>Ustawić współrzędne</translation>
+        <translation>Ustaw współrzędne</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12419,7 +12419,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>Na podmiot</translation>
+        <translation>&amp;Na obiekcie</translation>
     </message>
 </context>
 <context>
@@ -12618,12 +12618,12 @@ jest już na liście.</translation>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation>Brak wybranych podmiotów w podanym zakresie</translation>
+        <translation>Brak zaznaczonych obiektów w podanym zakresie</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation>Brak podmiotów w podanym zakresie</translation>
+        <translation>Brak obiektów w podanym zakresie</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
@@ -12870,7 +12870,7 @@ jest już na liście.</translation>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation>Wybierz podmiot</translation>
+        <translation>Wybierz obiekt</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12881,7 +12881,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation>Tekst Wzdłuż podmiotu</translation>
+        <translation>&amp;Tekst wzdłuż obiektu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12899,22 +12899,22 @@ jest już na liście.</translation>
     <message>
         <location line="+275"/>
         <source>&amp;Undo</source>
-        <translation>Undo</translation>
+        <translation>&amp;Cofnij</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation>Redo</translation>
+        <translation>&amp;Ponów</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Cięcie</translation>
+        <translation>Wy&amp;tnij</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation>Kopia</translation>
+        <translation>&amp;Kopiuj</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13081,12 +13081,12 @@ jest już na liście.</translation>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>Cięcie</translation>
+        <translation>Wytnij</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation>Kopia</translation>
+        <translation>Kopiuj</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13596,17 +13596,17 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>Wybierz podmiot ograniczający</translation>
+        <translation>Wybierz obiekt ograniczający</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation>Wybierz podmiot do przycięcia</translation>
+        <translation>Wybierz obiekt do przycięcia</translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation>Te dwie jednostki nie przecinają się lub nie są obecnie obsługiwane do przycinania.</translation>
+        <translation>Te dwa obiekty nie przecinają się lub ich przycinanie nie jest obecnie obsługiwane.</translation>
     </message>
     <message>
         <location line="+74"/>
@@ -13634,7 +13634,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Trim Oba</translation>
+        <translation>Przytnij &amp;oba</translation>
     </message>
 </context>
 <context>
@@ -13702,7 +13702,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation>Undo</translation>
+        <translation>&amp;Cofnij</translation>
     </message>
 </context>
 <context>
@@ -14395,7 +14395,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation>Zblizenie</translation>
+        <translation>&amp;Zbliżenie</translation>
     </message>
 </context>
 <context>
@@ -14527,12 +14527,12 @@ jest już na liście.</translation>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation>Podmiot</translation>
+        <translation>Obiekt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entities</source>
-        <translation>Podmioty</translation>
+        <translation>Obiekty</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14547,7 +14547,7 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>Blok Odniesienia</translation>
+        <translation>Odniesienia do bloków</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14890,13 +14890,13 @@ jest już na liście.</translation>
         <location line="+2"/>
         <location line="+9"/>
         <source>Unknown Entities</source>
-        <translation>Podmioty nieznane</translation>
+        <translation>Nieznane obiekty</translation>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation>Podmiot nieznany</translation>
+        <translation>Nieznany obiekt</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -15022,7 +15022,7 @@ jest już na liście.</translation>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation>ID nie odnosi się do podmiotu:</translation>
+        <translation>ID nie odnosi się do obiektu:</translation>
     </message>
     <message>
         <location line="-42"/>

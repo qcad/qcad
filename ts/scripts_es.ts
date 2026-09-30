@@ -997,7 +997,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation>Puntos media</translation>
+        <translation>Puntos medios</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1403,7 +1403,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation>Bloqueo:</translation>
+        <translation>Bloque:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4731,7 +4731,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>&amp;Curva paralelo (Distancia)</translation>
+        <translation>&amp;Curva paralela (con distancia)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4749,12 +4749,12 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Curva paralelo (a &amp;través de un punto)</translation>
+        <translation>Curva paralela (a &amp;través de un punto)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation>Dibujar curva paralela a través de un punto</translation>
+        <translation>Dibujar curva paralela a una elipse a través de un punto</translation>
     </message>
 </context>
 <context>
@@ -6073,7 +6073,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
+        <translation>Mostrar las entidades con más de N guiones como continuas:</translation>
     </message>
     <message>
         <location line="-85"/>
@@ -8833,7 +8833,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation>Angulo r&amp;elativo</translation>
+        <translation>Ángulo r&amp;elativo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+47"/>
@@ -9031,7 +9031,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation>&amp;Bloqueo cero relativo</translation>
+        <translation>&amp;Bloquear cero relativo</translation>
     </message>
 </context>
 <context>
@@ -9316,7 +9316,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+14"/>
         <source>&amp;Offset</source>
-        <translation>&amp;Equidistancia</translation>
+        <translation>&amp;Desfase</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -9575,12 +9575,12 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Equidistante (con distancia)</translation>
+        <translation>Desfase (con distancia)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Desvío línea, arco círculo o elipse</translation>
+        <translation>Desfasar línea, arco, círculo o elipse</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
@@ -9629,12 +9629,12 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Desvío (a través de un punto)</translation>
+        <translation>Desfase (a través de un punto)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Desvío línea, arco, círculo o elipse a través de un punto</translation>
+        <translation>Desfasar línea, arco, círculo o elipse a través de un punto</translation>
     </message>
 </context>
 <context>
@@ -10370,7 +10370,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>Imprimir &amp;vista previa</translation>
+        <translation>&amp;Vista previa de impresión</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10405,7 +10405,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>Ajuste dibujo a la página(s)</translation>
+        <translation>Ajustar dibujo a la(s) página(s)</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -10415,7 +10415,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-65"/>
         <source>Auto Center</source>
-        <translation>Centro</translation>
+        <translation>Centrado automático</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10496,7 +10496,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+906"/>
         <source>*VARIES*</source>
-        <translation>*VARIA*</translation>
+        <translation>*VARÍA*</translation>
     </message>
     <message>
         <location line="-1781"/>
@@ -11469,7 +11469,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation>Herramientas de seleccion</translation>
+        <translation>Herramientas de selección</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -11597,7 +11597,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Se cruzan con la selección actual</translation>
+        <translation>Intersecar con la selección actual</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11655,7 +11655,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Se cruzan con la selección actual</translation>
+        <translation>Intersecar con la selección actual</translation>
     </message>
 </context>
 <context>
@@ -11706,7 +11706,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Se cruzan con la selección actual</translation>
+        <translation>Intersecar con la selección actual</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -11764,7 +11764,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Se cruzan con la selección actual</translation>
+        <translation>Intersecar con la selección actual</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12033,7 +12033,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation>&amp;Rectangulo</translation>
+        <translation>&amp;Rectángulo</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12244,7 +12244,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+22"/>
         <source>Angle</source>
-        <translation>Angulo</translation>
+        <translation>Ángulo</translation>
     </message>
     <message>
         <location line="+16"/>

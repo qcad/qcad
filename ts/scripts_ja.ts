@@ -408,12 +408,12 @@ QCADを再起動してください。</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
-        <translation>レイヤー</translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation>レイヤーを追加</translation>
+        <translation>画層を追加</translation>
     </message>
 </context>
 <context>
@@ -990,12 +990,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation>終了点</translation>
+        <translation>端点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation>中央点</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1005,12 +1005,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation>垂直</translation>
+        <translation>垂線</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation>正接</translation>
+        <translation>接線</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2225,7 +2225,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>トランザクションが失敗しました。ブロックの再帰、およびロックされているか非表示のレイヤーまたはブロックを確認してください。</translation>
+        <translation>トランザクションが失敗しました。ブロックの再帰、およびロックされているか非表示の画層またはブロックを確認してください。</translation>
     </message>
     <message>
         <location line="-438"/>
@@ -2682,7 +2682,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>レイヤーエンティティの選択解除</translation>
+        <translation>&amp;D 画層エンティティの選択解除</translation>
     </message>
 </context>
 <context>
@@ -3629,7 +3629,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>存在しないレイヤに切り替えられない、無視される。テキスト行: %1%2 レイヤー: %3</translation>
+        <translation>存在しない画層に切り替えることはできません。無視されます。テキスト行: %1%2 画層: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3639,12 +3639,12 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation>正しい &apos;新規レイヤー&apos; スイッチではありません。無視されます。テキスト行: %1</translation>
+        <translation>正しい '新規画層' スイッチではありません。無視されます。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>存在しないレイヤーを隠すことはできません。テキスト行: %1%2 レイヤー: %3</translation>
+        <translation>存在しない画層を非表示にすることはできません。無視されます。テキスト行: %1%2 画層: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3654,7 +3654,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>存在しないレイヤーをフリーズできません、無視されます。テキスト行: %1%2 レイヤー: %3</translation>
+        <translation>存在しない画層を凍結することはできません。無視されます。テキスト行: %1%2 画層: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3664,7 +3664,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>存在しないレイヤーをロックできません、無視されます。テキスト行: %1%2 レイヤー: %3</translation>
+        <translation>存在しない画層をロックすることはできません。無視されます。テキスト行: %1%2 画層: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3674,7 +3674,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>存在しないレイヤを許可できない、無視される。テキスト行: %1%2 レイヤー: %3</translation>
+        <translation>存在しない画層を許可することはできません。無視されます。テキスト行: %1%2 画層: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4055,12 +4055,12 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation>正しいレイヤ名でないため、無視されます。テキスト行: %1%2 名前。%3</translation>
+        <translation>正しい画層名ではないため、無視されます。テキスト行: %1%2 名前: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>レイヤが存在しないため、無視されます。テキスト行: %1%2 レイヤ: %3</translation>
+        <translation>画層が存在しないため、無視されます。テキスト行: %1%2 画層: %3</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4090,12 +4090,12 @@ is already in the list.</source>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation>正しいレイヤ名ではありません。テキスト行: %1%2 名前。%3</translation>
+        <translation>正しい画層名ではありません。テキスト行: %1%2 名前: %3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation>親レイヤーが存在しません。テキスト行: %1%2 レイヤー: %3</translation>
+        <translation>親画層が存在しません。テキスト行: %1%2 画層: %3</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -4115,17 +4115,17 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation>レイヤーの追加/更新は無視されます。</translation>
+        <translation>画層の追加/更新は無視されます。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation>更新されたレイヤ: %1</translation>
+        <translation>更新された画層: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation>新しいレイヤーを追加しました: %1</translation>
+        <translation>新しい画層を追加しました: %1</translation>
     </message>
     <message>
         <location line="-447"/>
@@ -4810,12 +4810,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation>レイヤー &quot;MyLayer &quot;を追加</translation>
+        <translation>画層 "MyLayer" を追加しました</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation>レイヤーを追加する</translation>
+        <translation>画層を追加</translation>
     </message>
 </context>
 <context>
@@ -4891,12 +4891,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation>レイヤー &quot;0 &quot;にカスタムプロパティ &quot;MyCustomProperty &quot;を追加しました。</translation>
+        <translation>画層 "0" にカスタムプロパティ "MyCustomProperty" を追加しました。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation>レイヤーにカスタムプロパティを追加する</translation>
+        <translation>画層にカスタムプロパティを追加</translation>
     </message>
 </context>
 <context>
@@ -5324,12 +5324,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation>アクティブサブレイヤーの追加</translation>
+        <translation>アクティブな子画層を追加</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation>FPはレイヤーを追加しました</translation>
+        <translation>FP が追加した画層:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
@@ -5367,7 +5367,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>キャストオンサブレイヤー</translation>
+        <translation>子画層に描画</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6704,17 +6704,17 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>すべてのエンティティを&lt;br&gt;元のレイヤーの代わりに&lt;br&gt;現在のレイヤーに貼り付けます。</translation>
+        <translation>オリジナルの画層の代わりに&lt;br&gt;全てのエンティティを現在の画層に&lt;br&gt;貼り付け</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation>現在のレイヤーへ</translation>
+        <translation>現在の画層へ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation>レイヤーの上書き</translation>
+        <translation>画層の上書き</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6724,7 +6724,7 @@ is already in the list.</source>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>描画中の既存のレイヤーをクリップボードからのレイヤーで上書きする&lt;br&gt;。</translation>
+        <translation>クリップボードから図面の&lt;br&gt;既存の画層に上書き</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7870,7 +7870,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation>レイヤーの上書き</translation>
+        <translation>画層の上書き</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8118,27 +8118,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
-        <translation>新規レイヤーのデフォルト色:</translation>
+        <translation>新規画層のデフォルト色:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>レイヤー 0 のデフォルトの線幅</translation>
+        <translation>画層 0 のデフォルト線太さ:</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Default color for layer 0:</source>
-        <translation>レイヤー0のデフォルトの色</translation>
+        <translation>画層 0 のデフォルト色:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>新規レイヤーのデフォルト線太さ:</translation>
+        <translation>新規画層のデフォルト線太さ:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
-        <translation>レイヤツール</translation>
+        <translation>画層ツール</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -8148,32 +8148,32 @@ is already in the list.</source>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation>全てのレイヤーを表示</translation>
+        <translation>全ての画層を表示</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation>全てのレイヤーを非表示</translation>
+        <translation>全ての画層を非表示</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Thawing all layers</source>
-        <translation>全てのレイヤの解凍</translation>
+        <translation>全ての画層を解凍</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation>全てのレイヤの凍結</translation>
+        <translation>全ての画層を凍結</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Locking all layers</source>
-        <translation>全てのレイヤーをロック</translation>
+        <translation>全ての画層をロック</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation>全てのレイヤーをアンロック</translation>
+        <translation>全ての画層をアンロック</translation>
     </message>
 </context>
 <context>
@@ -8181,7 +8181,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation>レイヤー</translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8191,22 +8191,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation>レイヤー 0</translation>
+        <translation>画層 0</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation>レイヤー0は通常のレイヤーとして振る舞う(QCAD)</translation>
+        <translation>画層 0 は通常の画層として動作 (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>レイヤー０で異なる動作（最高の互換性）</translation>
+        <translation>画層 0 は異なる動作 (最高の互換性)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>レイヤー０のエンティティをブロック参照の属性と見た目にします。</translation>
+        <translation>画層 0 上のブロック内のエンティティは、ブロック参照の属性と表示状態を引き継ぎます。</translation>
     </message>
 </context>
 <context>
@@ -8220,7 +8220,7 @@ is already in the list.</source>
     <message>
         <location line="+158"/>
         <source>Leading or trailing spaces.</source>
-        <translation>上部または下部の余白</translation>
+        <translation>先頭または末尾のスペース。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8240,7 +8240,7 @@ is already in the list.</source>
     <message>
         <location line="-11"/>
         <source>Layer</source>
-        <translation>レイヤー</translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -8268,7 +8268,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation>レイヤー</translation>
+        <translation>&amp;L 画層</translation>
     </message>
 </context>
 <context>
@@ -8774,7 +8774,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>番号</translation>
+        <translation>個数:</translation>
     </message>
 </context>
 <context>
@@ -9018,7 +9018,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation>全てのレイヤーをロック</translation>
+        <translation>&amp;L 全ての画層をロック</translation>
     </message>
 </context>
 <context>
@@ -9111,7 +9111,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation>現在のレイヤーと属性を使用する</translation>
+        <translation>現在の画層と属性を使用</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9275,7 +9275,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation>その他の改造ツール</translation>
+        <translation>その他の修正ツール</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9604,7 +9604,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation>番号</translation>
+        <translation>個数:</translation>
     </message>
 </context>
 <context>
@@ -9733,12 +9733,12 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation>トップ</translation>
+        <translation>上:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>そうだね：</translation>
+        <translation>右:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9844,12 +9844,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation>現在のレイヤーへ</translation>
+        <translation>現在の画層へ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation>レイヤーの上書き</translation>
+        <translation>画層の上書き</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10611,7 +10611,7 @@ is already in the list.</source>
     <message>
         <location line="+47"/>
         <source>Display properties of current block and current layer</source>
-        <translation>現在のブロックと現在のレイヤーのプロパティを表示</translation>
+        <translation>現在のブロックと現在の画層のプロパティを表示</translation>
     </message>
     <message>
         <location line="-37"/>
@@ -10745,7 +10745,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation>レイヤーの削除</translation>
+        <translation>&amp;D 画層の削除</translation>
     </message>
 </context>
 <context>
@@ -10910,7 +10910,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation>現在のレイヤーと属性を使用する</translation>
+        <translation>現在の画層と属性を使用</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11349,7 +11349,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation>現在のレイヤーと属性を使用する</translation>
+        <translation>現在の画層と属性を使用</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11590,7 +11590,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Same Layer</source>
-        <translation>同一レイヤー</translation>
+        <translation>同一画層</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -11666,7 +11666,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>レイヤーエンティティの選択</translation>
+        <translation>&amp;S 画層エンティティの選択</translation>
     </message>
 </context>
 <context>
@@ -11786,7 +11786,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform>レイヤ &quot;%1&quot; の %n エンティティ。</numerusform>
+            <numerusform>画層 &quot;%1&quot; の %n エンティティ</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -11805,7 +11805,7 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform>%n レイヤー</numerusform>
+            <numerusform>%n 画層</numerusform>
         </translation>
     </message>
     <message>
@@ -12360,7 +12360,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>交点手動</translation>
+        <translation>交点（手動）</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12375,7 +12375,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation>手動交差点ツールを1回使用したら終了させる</translation>
+        <translation>交点（手動）ツールを1回使用したら終了する</translation>
     </message>
 </context>
 <context>
@@ -12667,12 +12667,12 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Layers</source>
-        <translation>レイヤー</translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import groups as layers</source>
-        <translation>グループをレイヤーとしてインポートする</translation>
+        <translation>グループを画層としてインポート</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13398,7 +13398,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation>更新</translation>
+        <translation>修正</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13443,7 +13443,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation>現在のレイヤーと属性を使用する</translation>
+        <translation>現在の画層と属性を使用</translation>
     </message>
 </context>
 <context>
@@ -13520,7 +13520,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation>現在のレイヤーと属性を使用する</translation>
+        <translation>現在の画層と属性を使用</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
@@ -13839,7 +13839,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation>全てのレイヤーをアンロック</translation>
+        <translation>&amp;U 全ての画層をアンロック</translation>
     </message>
 </context>
 <context>
@@ -14323,7 +14323,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>&amp;W 座標を指定してズーム</translation>
+        <translation>&amp;W 窓ズーム</translation>
     </message>
 </context>
 <context>
@@ -14457,12 +14457,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation>レイヤー</translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation>レイヤー</translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14859,7 +14859,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation>外部参考文献</translation>
+        <translation>外部参照</translation>
     </message>
     <message>
         <location line="+0"/>

@@ -455,7 +455,7 @@ preferanseendringene skal tre i kraft.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Arc</source>
-        <translation>Arc</translation>
+        <translation>&amp;Bue</translation>
     </message>
 </context>
 <context>
@@ -1313,7 +1313,7 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Block/BlockDialog.js" line="+79"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation>blokkere</translation>
+        <translation>blokk</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -2451,7 +2451,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
@@ -2563,7 +2563,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>Kutt</translation>
+        <translation>Klipp &amp;ut</translation>
     </message>
 </context>
 <context>
@@ -2571,7 +2571,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>Klipp med referanse</translation>
+        <translation>Klipp &amp;ut med referanse</translation>
     </message>
 </context>
 <context>
@@ -3019,7 +3019,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Bue</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3081,7 +3081,7 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Lavere toleranse</translation>
+        <translation>Nedre toleranse</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3091,7 +3091,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Tegning Skala</translation>
+        <translation>Tegningsskala</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3450,7 +3450,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
 </context>
 <context>
@@ -5082,7 +5082,7 @@ er allerede i listen.</translation>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -6267,7 +6267,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Trykk på etiketten:</translation>
+        <translation>Snapetikett:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6606,7 +6606,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+27"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
@@ -6760,7 +6760,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7339,7 +7339,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation>Stilling</translation>
+        <translation>&amp;Posisjon</translation>
     </message>
 </context>
 <context>
@@ -7736,7 +7736,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.js" line="+117"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
@@ -7835,7 +7835,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+83"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
@@ -8465,7 +8465,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="+71"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9700,12 +9700,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Portrett</translation>
+        <translation>Stående</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation>Landskap</translation>
+        <translation>Liggende</translation>
     </message>
     <message>
         <location line="-113"/>
@@ -9821,7 +9821,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+40"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
@@ -9936,7 +9936,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
@@ -10390,7 +10390,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Tegning Skala</translation>
+        <translation>Tegningsskala</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10405,17 +10405,17 @@ er allerede i listen.</translation>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Auto Center</translation>
+        <translation>Automatisk sentrering</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Portrett</translation>
+        <translation>Stående</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Landskap</translation>
+        <translation>Liggende</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11836,7 +11836,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZero.js" line="+50"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
@@ -12277,7 +12277,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Snap-avstand:</translation>
     </message>
 </context>
 <context>
@@ -12295,7 +12295,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Snap-avstand:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12328,7 +12328,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>Slutt</translation>
+        <translation>&amp;Endepunkt</translation>
     </message>
 </context>
 <context>
@@ -12370,7 +12370,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Håndbok for skjæringspunktet</translation>
+        <translation>Skjæringspunkt manuelt</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12385,7 +12385,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Håndbok for skjæringspunktet</translation>
+        <translation>&amp;Skjæringspunkt manuelt</translation>
     </message>
 </context>
 <context>
@@ -12401,7 +12401,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>Midtre håndbok</translation>
+        <translation>&amp;Midtpunkt manuelt</translation>
     </message>
 </context>
 <context>
@@ -12726,7 +12726,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
@@ -12866,7 +12866,7 @@ er allerede i listen.</translation>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
@@ -12899,7 +12899,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Kutt</translation>
+        <translation>Klipp &amp;ut</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13081,7 +13081,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>Kutt</translation>
+        <translation>Klipp ut</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13624,7 +13624,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Trim Begge</translation>
+        <translation>Trim &amp;begge</translation>
     </message>
 </context>
 <context>
@@ -14015,7 +14015,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Bue</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14333,7 +14333,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>Vindu Zoom</translation>
+        <translation>&amp;Vinduszoom</translation>
     </message>
 </context>
 <context>
@@ -14442,7 +14442,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation>Gjenstand</translation>
+        <translation>Objekt</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14562,7 +14562,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Bue</translation>
     </message>
     <message>
         <location line="+2"/>

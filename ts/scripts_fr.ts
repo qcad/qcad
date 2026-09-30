@@ -1946,7 +1946,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCP.js" line="+56"/>
         <source>Center</source>
-        <translation>Centrer</translation>
+        <translation>Centre</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3049,7 +3049,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation>Outils dimension</translation>
+        <translation>Outils de cotation</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -3086,12 +3086,12 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation>Echelle</translation>
+        <translation>Échelle</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Echelle du dessin</translation>
+        <translation>Échelle du dessin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4798,7 +4798,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>&amp;Échapement</translation>
+        <translation>&amp;Échappement</translation>
     </message>
 </context>
 <context>
@@ -6247,7 +6247,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Outils de accrochage</translation>
+        <translation>Outils d'accrochage</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6483,7 +6483,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation>Echelle :</translation>
+        <translation>Échelle :</translation>
     </message>
 </context>
 <context>
@@ -6689,7 +6689,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation>Echelle :</translation>
+        <translation>Échelle :</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7756,7 +7756,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+110"/>
         <source>Scale X:</source>
-        <translation>Echelle X:</translation>
+        <translation>Échelle X :</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7835,7 +7835,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation>Echelle :</translation>
+        <translation>Échelle :</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7999,7 +7999,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation>Isométrique echelle réelle</translation>
+        <translation>Isométrique échelle réelle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8422,7 +8422,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
-        <translation>Tracez une ligne unique ou d&apos;une séquence de lignes</translation>
+        <translation>Tracer une ligne unique ou une séquence de lignes</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -9755,7 +9755,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation>Défini sur marges de l&apos;imprimante</translation>
+        <translation>Définir sur les marges de l'imprimante</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -9765,7 +9765,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation>&amp;Echelle :</translation>
+        <translation>&amp;Échelle :</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9816,7 +9816,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+129"/>
         <source>Scale:</source>
-        <translation>Echelle :</translation>
+        <translation>Échelle :</translation>
     </message>
     <message>
         <location line="+91"/>
@@ -10157,7 +10157,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Ventiler le segment</translation>
+        <translation>Supprimer le segment</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
@@ -10390,12 +10390,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation>Echelle :</translation>
+        <translation>Échelle :</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Echelle du dessin</translation>
+        <translation>Échelle du dessin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10405,7 +10405,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>Auto ajustement de dessin à la page(s)</translation>
+        <translation>Ajuster automatiquement le dessin à la (aux) page(s)</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -10415,7 +10415,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="-65"/>
         <source>Auto Center</source>
-        <translation>Auto centre</translation>
+        <translation>Centrage automatique</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -11311,7 +11311,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation>Echelle</translation>
+        <translation>Échelle</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -11336,7 +11336,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;Echelle</translation>
+        <translation>&amp;Échelle</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -12168,7 +12168,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation>&amp;Centrer</translation>
+        <translation>&amp;Centre</translation>
     </message>
 </context>
 <context>
@@ -12370,7 +12370,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Intersection manuel</translation>
+        <translation>Intersection manuelle</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12401,7 +12401,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>&amp;Milieu manuelle</translation>
+        <translation>&amp;Milieu manuel</translation>
     </message>
 </context>
 <context>

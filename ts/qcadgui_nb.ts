@@ -49,7 +49,7 @@
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation>Slutt</translation>
+        <translation>Endepunkt</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -736,7 +736,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation>Stilling</translation>
+        <translation>Posisjon</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -773,7 +773,7 @@
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Fade</translation>
+        <translation>Toning</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>

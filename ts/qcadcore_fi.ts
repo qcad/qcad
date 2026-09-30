@@ -551,7 +551,7 @@
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation>X mittakaava</translation>
+        <translation>X-mittakaava</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -918,7 +918,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>Pisteviiva</translation>
+        <translation>Pistekatkoviiva</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -551,7 +551,7 @@
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation>Echelle X</translation>
+        <translation>Échelle X</translation>
     </message>
     <message>
         <location line="+1"/>

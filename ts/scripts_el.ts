@@ -2262,7 +2262,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Η συναλλαγή απέτυχε. Ελέγξτε για αναδρομές μπλοκ και κλειδωμένα ή αόρατα επίπεδα ή μπλοκ.</translation>
+        <translation>Η συναλλαγή απέτυχε. Ελέγξτε για αναδρομές μπλοκ και κλειδωμένα ή αόρατα στρώματα ή μπλοκ.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2571,7 +2571,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>Κοπή με αναφορά</translation>
+        <translation>&amp;Αποκοπή με αναφορά</translation>
     </message>
 </context>
 <context>
@@ -2986,7 +2986,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimVertical/DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation>Κατακόρυφο</translation>
+        <translation>&amp;Κατακόρυφη</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4118,7 +4118,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation>Το γονικό επίπεδο δεν υπάρχει. Γραμμή κειμένου: %1%2 Στρώμα: %3</translation>
+        <translation>Το γονικό στρώμα δεν υπάρχει. Γραμμή κειμένου: %1%2 Στρώμα: %3</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -4148,7 +4148,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation>Προστέθηκε νέο επίπεδο: %1</translation>
+        <translation>Προστέθηκε νέο στρώμα: %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
@@ -4328,7 +4328,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>Η οντότητα βρίσκεται σε κλειδωμένο επίπεδο.</translation>
+        <translation>Η οντότητα βρίσκεται σε κλειδωμένο στρώμα.</translation>
     </message>
     <message>
         <location line="+254"/>
@@ -4900,7 +4900,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation>Προσθήκη προσαρμοσμένης ιδιότητας σε ένα επίπεδο</translation>
+        <translation>Προσθήκη προσαρμοσμένης ιδιότητας σε ένα στρώμα</translation>
     </message>
 </context>
 <context>
@@ -5987,7 +5987,7 @@ is already in the list.</source>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Κλιμάκωση μοτίβων τύπου γραμμής με βάση το βάρος γραμμής</translation>
+        <translation>Κλιμάκωση μοτίβων τύπων γραμμής με βάση το πάχος γραμμής</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -6535,7 +6535,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation>Απόκρυψη όλων των επιπέδων</translation>
+        <translation>&amp;Απόκρυψη όλων των στρωμάτων</translation>
     </message>
 </context>
 <context>
@@ -7771,7 +7771,7 @@ is already in the list.</source>
     <message>
         <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation>Κρατήστε τις αναλογίες</translation>
+        <translation>Διατήρηση αναλογιών</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8123,22 +8123,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+26"/>
         <source>Default color for layer 0:</source>
-        <translation>Προεπιλεγμένο χρώμα για το επίπεδο 0:</translation>
+        <translation>Προεπιλεγμένο χρώμα για το στρώμα 0:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Προεπιλεγμένο βάρος γραμμής για νέα επίπεδα:</translation>
+        <translation>Προεπιλεγμένο βάρος γραμμής για νέα στρώματα:</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Default color for new layers:</source>
-        <translation>Προεπιλεγμένο χρώμα για νέες στρώσεις:</translation>
+        <translation>Προεπιλεγμένο χρώμα για νέα στρώματα:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Προεπιλεγμένο βάρος γραμμής για το επίπεδο 0:</translation>
+        <translation>Προεπιλεγμένο βάρος γραμμής για το στρώμα 0:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
@@ -8153,12 +8153,12 @@ is already in the list.</source>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation>Εμφάνιση όλων των επιπέδων</translation>
+        <translation>Εμφάνιση όλων των στρωμάτων</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation>Απόκρυψη όλων των επιπέδων</translation>
+        <translation>Απόκρυψη όλων των στρωμάτων</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -8173,12 +8173,12 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Locking all layers</source>
-        <translation>Κλείδωμα όλων των επιπέδων</translation>
+        <translation>Κλείδωμα όλων των στρωμάτων</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation>Ξεκλείδωμα όλων των επιπέδων</translation>
+        <translation>Ξεκλείδωμα όλων των στρωμάτων</translation>
     </message>
 </context>
 <context>
@@ -8206,12 +8206,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>Το επίπεδο 0 συμπεριφέρεται διαφορετικά (καλύτερη συμβατότητα)</translation>
+        <translation>Το στρώμα 0 συμπεριφέρεται διαφορετικά (καλύτερη συμβατότητα)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Οι οντότητες στα μπλοκ στο επίπεδο 0 αποκτούν τα χαρακτηριστικά και την ορατότητα της αναφοράς του μπλοκ.</translation>
+        <translation>Οι οντότητες στα μπλοκ στο στρώμα 0 αποκτούν τα χαρακτηριστικά και την ορατότητα της αναφοράς του μπλοκ.</translation>
     </message>
 </context>
 <context>
@@ -8260,7 +8260,7 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Βάρος γραμμής:</translation>
+        <translation>Πάχος γραμμής:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -8287,12 +8287,12 @@ is already in the list.</source>
         <location line="+0"/>
         <location line="+124"/>
         <source>Layer List</source>
-        <translation>Λίστα επιπέδων</translation>
+        <translation>Λίστα στρωμάτων</translation>
     </message>
     <message>
         <location line="-54"/>
         <source>&amp;Layer List</source>
-        <translation>Λίστα επιπέδων</translation>
+        <translation>&amp;Λίστα στρωμάτων</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -9023,7 +9023,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation>Κλείδωμα όλων των επιπέδων</translation>
+        <translation>&amp;Κλείδωμα όλων των στρωμάτων</translation>
     </message>
 </context>
 <context>
@@ -9755,7 +9755,7 @@ is already in the list.</source>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation>Ρύθμιση σε Περιθώρια εκτυπωτή</translation>
+        <translation>Ορισμός στα περιθώρια του εκτυπωτή</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -11170,7 +11170,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation>Όλες οι μαύρες οντότητες και τα επίπεδα θα αποθηκευτούν ως λευκά.</translation>
+        <translation>Όλες οι μαύρες οντότητες και τα στρώματα θα αποθηκευτούν ως λευκά.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11195,7 +11195,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Οι μαύρες οντότητες και τα επίπεδα αποθηκεύονται ως λευκά.</translation>
+        <translation>Οι μαύρες οντότητες και τα στρώματα αποθηκεύονται ως λευκά.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11681,7 +11681,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Επιλέξτε οντότητα στο επίπεδο</translation>
+        <translation>Επιλέξτε οντότητα στο στρώμα</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -11716,7 +11716,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>(Απο)επιλογή όλων των οντοτήτων στο ίδιο επίπεδο</translation>
+        <translation>(Απο)επιλογή όλων των οντοτήτων στο ίδιο στρώμα</translation>
     </message>
 </context>
 <context>
@@ -11787,7 +11787,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation>%1 %2 σε %3 επίπεδα</translation>
+        <translation>%1 %2 σε %3 στρώματα</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
@@ -12108,7 +12108,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>Εμφάνιση όλων των επιπέδων</translation>
+        <translation>&amp;Εμφάνιση όλων των στρωμάτων</translation>
     </message>
 </context>
 <context>
@@ -12206,7 +12206,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Σημάδι για σχετική συντεταγμένη</translation>
+        <translation>Επιλέξτε για σχετική συντεταγμένη</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12249,7 +12249,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Σημάδι για σχετική συντεταγμένη</translation>
+        <translation>Επιλέξτε για σχετική συντεταγμένη</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13616,7 +13616,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>Trim</translation>
+        <translation>&amp;Κοπή</translation>
     </message>
 </context>
 <context>
@@ -13849,7 +13849,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation>Ξεκλειδώστε όλα τα επίπεδα</translation>
+        <translation>&amp;Ξεκλείδωμα όλων των στρωμάτων</translation>
     </message>
 </context>
 <context>
@@ -14854,7 +14854,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Προβολή</translation>
+        <translation>Παράθυρο προβολής</translation>
     </message>
     <message>
         <location line="+2"/>

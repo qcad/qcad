@@ -582,7 +582,7 @@
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation>Vertikaal</translation>
+        <translation>Verticaal</translation>
     </message>
     <message>
         <location line="+1"/>

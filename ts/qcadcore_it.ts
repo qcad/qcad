@@ -464,7 +464,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Manico</translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>

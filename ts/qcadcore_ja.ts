@@ -217,7 +217,7 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation>現在のレイヤー</translation>
+        <translation>現在の画層</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -383,7 +383,7 @@
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation>レイヤー</translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -625,12 +625,12 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation>凍結レイヤー</translation>
+        <translation>凍結画層</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation>レイヤーID</translation>
+        <translation>画層ID</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-8"/>

@@ -897,7 +897,7 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation>Contínua</translation>
+        <translation>Continua</translation>
     </message>
     <message>
         <location line="+2"/>

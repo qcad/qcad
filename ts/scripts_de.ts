@@ -1579,7 +1579,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation>CAD Werkzeugleiste</translation>
+        <translation>CAD-Werkzeugleiste</translation>
     </message>
 </context>
 <context>
@@ -2499,7 +2499,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>Block erstellen von &amp;Selektion</translation>
+        <translation>Block aus &amp;Selektion erstellen</translation>
     </message>
 </context>
 <context>
@@ -13624,7 +13624,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>&amp;Beide Trimmen</translation>
+        <translation>&amp;Beide trimmen</translation>
     </message>
 </context>
 <context>

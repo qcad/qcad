@@ -773,7 +773,7 @@
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Σβήσιμο</translation>
+        <translation>Ξεθώριασμα</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>

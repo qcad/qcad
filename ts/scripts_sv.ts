@@ -2569,7 +2569,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>Klipp med referens</translation>
+        <translation>&amp;Klipp ut med referens</translation>
     </message>
 </context>
 <context>
@@ -3047,7 +3047,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation>Verktyg för dimensioner</translation>
+        <translation>Måttsättningsverktyg</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -3530,7 +3530,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segment för omarbetning</translation>
+        <translation>Gör om segment</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8359,7 +8359,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Belopp:</translation>
+        <translation>Längd:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8425,7 +8425,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segment för omarbetning</translation>
+        <translation>Gör om segment</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9698,12 +9698,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Porträtt</translation>
+        <translation>Stående</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation>Landskap</translation>
+        <translation>Liggande</translation>
     </message>
     <message>
         <location line="-113"/>
@@ -10413,17 +10413,17 @@ finns redan i listan.</translation>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Auto Center</translation>
+        <translation>Autocentrera</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Porträtt</translation>
+        <translation>Stående</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Landskap</translation>
+        <translation>Liggande</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10438,7 +10438,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation>Grayscale-läge</translation>
+        <translation>Gråskaleläge</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -10453,7 +10453,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation>Utskrift Crop Marks</translation>
+        <translation>Skriv ut skärmärken</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -10564,7 +10564,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+429"/>
         <source>*VARIES*</source>
-        <translation>*VARIES*</translation>
+        <translation>*VARIERAR*</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11082,7 +11082,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Trimma</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11580,12 +11580,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation>Ersätta det aktuella urvalet</translation>
+        <translation>Ersätt det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation>Lägg till det aktuella urvalet</translation>
+        <translation>Lägg till i det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11595,7 +11595,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Skär det aktuella urvalet</translation>
+        <translation>Snitt med det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11638,12 +11638,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation>Ersätta det aktuella urvalet</translation>
+        <translation>Ersätt det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation>Lägg till det aktuella urvalet</translation>
+        <translation>Lägg till i det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11653,7 +11653,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Skär det aktuella urvalet</translation>
+        <translation>Snitt med det aktuella urvalet</translation>
     </message>
 </context>
 <context>
@@ -11699,12 +11699,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation>Ersätta det aktuella urvalet</translation>
+        <translation>Ersätt det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation>Lägg till det aktuella urvalet</translation>
+        <translation>Lägg till i det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11714,7 +11714,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Skär det aktuella urvalet</translation>
+        <translation>Snitt med det aktuella urvalet</translation>
     </message>
 </context>
 <context>
@@ -11747,12 +11747,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation>Ersätta det aktuella urvalet</translation>
+        <translation>Ersätt det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation>Lägg till det aktuella urvalet</translation>
+        <translation>Lägg till i det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11762,7 +11762,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Skär det aktuella urvalet</translation>
+        <translation>Snitt med det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12140,7 +12140,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>Snap</translation>
+        <translation>&amp;Snäpp</translation>
     </message>
 </context>
 <context>
@@ -12148,12 +12148,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Snäpp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Auto Snap</translation>
+        <translation>Automatisk snäppning</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
@@ -12275,7 +12275,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Snäppavstånd:</translation>
     </message>
 </context>
 <context>
@@ -12293,7 +12293,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>Avståndshandbok</translation>
+        <translation>&amp;Avstånd (manuellt)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12303,7 +12303,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Snäppavstånd:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12358,27 +12358,27 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Snäpp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Manual för korsningar</translation>
+        <translation>Skärningspunkt manuellt</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation>Första enhet</translation>
+        <translation>Första entitet</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation>Andra enhet</translation>
+        <translation>Andra entitet</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Manual för korsningar</translation>
+        <translation>&amp;Skärningspunkt manuellt</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
@@ -12399,7 +12399,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>Middle Manual</translation>
+        <translation>&amp;Mittpunkt manuellt</translation>
     </message>
 </context>
 <context>
@@ -13109,12 +13109,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation>Tag:</translation>
+        <translation>Tagg:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Frågor:</translation>
+        <translation>Uppmaning:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -13614,7 +13614,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>Trim</translation>
+        <translation>&amp;Trimma</translation>
     </message>
 </context>
 <context>
@@ -14515,7 +14515,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+3"/>
         <source>Entities</source>
-        <translation>Enheter</translation>
+        <translation>Entiteter</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14565,7 +14565,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation>Egenskaper</translation>
+        <translation>Attribut</translation>
     </message>
     <message>
         <location line="+0"/>
