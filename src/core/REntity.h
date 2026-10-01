@@ -657,6 +657,21 @@ public:
      */
     virtual void exportEntity(RExporter& e, bool preview = false, bool forceSelected=false) const = 0;
 
+    /**
+     * \return True if the given exporter exports to a 3D view: a graphics
+     *      scene with the projection rendering hint RS::RenderThreeD
+     *      (RExporter::getProjectionRenderingHint). 2D graphics scenes
+     *      use RS::RenderTop, other exporters (file export, painter path
+     *      and shape exporters) always get the 2D representation.
+     *
+     * Entity types with a separate 3D representation (e.g. mesh entities
+     * which export their top view to 2D views and their triangles to 3D
+     * views, or custom entities, see RCustomEntityHandler::exportEntity3D)
+     * use this in their exportEntity implementation to decide which
+     * representation to export.
+     */
+    static bool isThreeDimensionalExport(RExporter& e);
+
     virtual void setAutoUpdatesBlocked(bool on) {
         getData().setAutoUpdatesBlocked(on);
     }

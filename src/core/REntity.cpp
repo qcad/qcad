@@ -19,6 +19,8 @@
 #include "RDebug.h"
 #include "RDocument.h"
 #include "REntity.h"
+#include "RExporter.h"
+#include "RGraphicsScene.h"
 #include "RShape.h"
 #include "RStorage.h"
 
@@ -449,6 +451,15 @@ bool REntity::isInWorkingSet() const {
 /**
  * \copydoc REntityData::setSelected
  */
+bool REntity::isThreeDimensionalExport(RExporter& e) {
+    if (e.getProjectionRenderingHint()!=RS::RenderThreeD) {
+        return false;
+    }
+    // RExporter defaults to RS::RenderThreeD, only graphics scenes
+    // distinguish between 2D (RS::RenderTop) and 3D views:
+    return dynamic_cast<RGraphicsScene*>(&e)!=NULL;
+}
+
 void REntity::setSelected(bool on) {
     if (isInWorkingSet()) {
         getData().setSelected(on);
