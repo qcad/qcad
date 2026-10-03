@@ -44,6 +44,22 @@ class RMouseEvent;
 class QCADCORE_EXPORT RSnap {
 public:
     /**
+     * \return True if the given view is a 3D view (a graphics scene with
+     *      the projection rendering hint RS::RenderThreeD, e.g. the RHI
+     *      3D view): snap distances are then compared on screen (see
+     *      \ref isInRange), not in the drawing plane.
+     */
+    static bool isThreeDimensionalView(RGraphicsView& view);
+
+    /**
+     * \return True if the given snapped position is within the given
+     *      range of the given cursor position: in the drawing plane for
+     *      2D views, on screen (snap range in pixels, see
+     *      RSettings::getSnapRange) for 3D views.
+     */
+    static bool isInRange(const RVector& snapped, const RVector& position, double range, RGraphicsView& view);
+
+    /**
      * Snap status, returned by snap tools (most importantly auto snap tool)
      * to indicate what snap was used.
      */
