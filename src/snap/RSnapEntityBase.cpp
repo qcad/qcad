@@ -71,6 +71,12 @@ RVector RSnapEntityBase::snap(
     double minDist = RMAXDOUBLE;
     double dist;
 
+    // 3D views (perspective): the candidate closest to the cursor on
+    // screen wins, not the closest in the drawing plane (e.g. the top
+    // and bottom corners of a cuboid share the same X / Y):
+    bool threeD = RSnap::isThreeDimensionalView(view);
+    RVector positionScreen = threeD ? view.mapToView(position) : RVector::invalid;
+
     QSet<REntity::Id>::const_iterator it;
     for (it=candidates.begin(); it!=candidates.end(); it++) {
         // 20111112: query direct:
@@ -92,7 +98,12 @@ RVector RSnapEntityBase::snap(
         RVector candidate;
         for (int i=0; i<candidates.length(); i++) {
             candidate = candidates[i];
-            dist = candidate.getDistanceTo2D(position);
+            if (threeD) {
+                dist = view.mapToView(candidate).getDistanceTo2D(positionScreen);
+            }
+            else {
+                dist = candidate.getDistanceTo2D(position);
+            }
             if (dist<minDist) {
                 lastSnap = candidate;
                 minDist = dist;
