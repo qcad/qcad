@@ -1987,6 +1987,10 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
     // apply minimum line weight:
     applyMinimumLineweight(pen);
 
+    if (isPrinting()) {
+        applyPrintingPenWorkaround(worker, pen);
+    }
+
     // highlighted:
     // don't highlight when printing
     if (!isPrintingOrExporting() && path.isHighlighted()) {
@@ -2249,6 +2253,55 @@ QList<RPainterPath> RGraphicsViewImage::getTextLayoutsPainterPaths(const RTextBa
     }
 
     return ret;
+}
+
+/**
+ * Works around the way Qt's PDF paint engine (PDF export, printing on
+ * Linux) strokes pens which it cannot write natively: pens with a
+ * transparent color (or any pen while the painter opacity is not 1.0).
+ * Such pens are stroked by Qt itself in painter coordinates (drawing
+ * units here) and the stroke outline is exported as a filled polygon.
+ * While doing so, Qt replaces pen widths below 0.0001 painter units with
+ * a fixed width of 0.1 painter units and flattens curves with a fixed
+ * tolerance of 0.25 painter units (see QPdf::Stroker::setPen,
+ * QStrokerOps::strokePath). In a drawing in Meters, the minimum print
+ * line weight of 0.01mm is 0.00001 drawing units: a transparent hatch
+ * printed from such a drawing (directly or through a viewport) ends up
+ * with 100mm wide pattern lines and polygonal arcs.
+ *
+ * Cosmetic pens are stroked by Qt in device coordinates instead, with
+ * the pen width in device pixels and a curve tolerance of 0.25 device
+ * pixels. The given pen is converted to an equivalent cosmetic pen if
+ * it would be stroked by Qt, using the current painter transformation
+ * to scale the width to device pixels. Opaque pens are not touched
+ * since those are written natively with their exact width.
+ *
+ * The Windows print engine strokes non-cosmetic pens in painter
+ * coordinates in the same way (QWin32PrintEnginePrivate::strokePath),
+ * cosmetic pens in device coordinates.
+ */
+void RGraphicsViewImage::applyPrintingPenWorkaround(RGraphicsViewWorker* worker, QPen& pen) {
+    if (worker==NULL) {
+        return;
+    }
+    if (pen.style()==Qt::NoPen || pen.isCosmetic()) {
+        return;
+    }
+    if (pen.color().alpha()==255) {
+        // opaque pen: written natively by the PDF engine, no work around needed
+        // (the painter opacity is only changed while drawing images):
+        return;
+    }
+
+    QTransform t = worker->getTransform();
+    // uniform scale factor from painter (drawing) units to device pixels:
+    double f = sqrt(fabs(t.determinant()));
+    if (RMath::isNaN(f) || f<RS::PointTolerance) {
+        return;
+    }
+
+    pen.setWidthF(pen.widthF() * f);
+    pen.setCosmetic(true);
 }
 
 void RGraphicsViewImage::applyMinimumLineweight(QPen& pen) {

@@ -390,6 +390,7 @@ public:
 protected:
     QList<RPainterPath> getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts);
     void applyMinimumLineweight(QPen& pen);
+    void applyPrintingPenWorkaround(RGraphicsViewWorker* worker, QPen& pen);
     void applyColorCorrection(QPen& pen);
     QColor getCorrectedColor(const QColor& col);
     void applyColorCorrection(QBrush& brush);
