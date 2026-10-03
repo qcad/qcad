@@ -405,8 +405,11 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     var powerCenter = Apollonius.getPowerCenter(circle1, circle2, circle3);
     //Apollonius.constructionShapes.push(new RPoint(powerCenter));
 
+    // Special case: collinear centers:
+    // The radical axes are parallel, the power center is at infinity and
+    // the construction below cannot be used. Solve algebraically instead:
     if (isNull(powerCenter)) {
-        return ret;
+        return Apollonius.getSolutionsCCCCollinear(c1, c2, c3);
     }
 
     var similarityAxes = Apollonius.getSimilarityAxes(circle1, circle2, circle3);
@@ -528,6 +531,115 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
 
     return ret;
 }
+
+/**
+ * \return Solutions for circles that are tangential to the three given circles
+ * with collinear centers (e.g. a circle between two others, touching both).
+ *
+ * In a coordinate system with the center line as X axis, the circle equations
+ * (x - xi)^2 + y^2 = (r + si*ri)^2 (si = +1 for external, -1 for internal
+ * tangency) reduce to two linear equations in x and r when subtracted from
+ * each other. y follows from the first equation (mirrored solutions).
+ */
+Apollonius.getSolutionsCCCCollinear = function(c1, c2, c3) {
+    var ret = [];
+
+    if (!isCircleShape(c1) || !isCircleShape(c2) || !isCircleShape(c3)) {
+        return ret;
+    }
+
+    // local coordinate system along the center line:
+    var origin = c1.center;
+    var dirV = c2.center.operator_subtract(origin);
+    dirV.setZ(0.0);
+    if (dirV.getMagnitude2D() < RS.PointTolerance) {
+        // concentric, handled elsewhere:
+        return ret;
+    }
+    var dir = dirV.getAngle();
+    var u = RVector.createPolar(1.0, dir);
+    var n = RVector.createPolar(1.0, dir + Math.PI/2);
+
+    var circles = [c1, c2, c3];
+    var xs = [];
+    var rs = [];
+    for (var i=0; i<circles.length; i++) {
+        var d = circles[i].center.operator_subtract(origin);
+        d.setZ(0.0);
+        xs.push(RVector.getDotProduct(d, u));
+        rs.push(Math.abs(circles[i].radius));
+    }
+
+    // all sign combinations for circle 2 and 3, circle 1 external (+1):
+    // the remaining combinations yield the same circles with a negative radius.
+    var signs = [ [1,1,1], [1,1,-1], [1,-1,1], [1,-1,-1] ];
+
+    for (var k=0; k<signs.length; k++) {
+        var s = signs[k];
+
+        // equation j minus equation 1:
+        // a_j * x + b_j * r = e_j
+        var a2 = -2.0 * (xs[1] - xs[0]);
+        var b2 = -2.0 * (s[1]*rs[1] - s[0]*rs[0]);
+        var e2 = rs[1]*rs[1] - rs[0]*rs[0] - xs[1]*xs[1] + xs[0]*xs[0];
+
+        var a3 = -2.0 * (xs[2] - xs[0]);
+        var b3 = -2.0 * (s[2]*rs[2] - s[0]*rs[0]);
+        var e3 = rs[2]*rs[2] - rs[0]*rs[0] - xs[2]*xs[2] + xs[0]*xs[0];
+
+        var det = a2*b3 - a3*b2;
+        if (Math.abs(det) < RS.PointTolerance) {
+            // no unique solution (e.g. solution would be a line):
+            continue;
+        }
+
+        var x = (e2*b3 - e3*b2) / det;
+        var r = (a2*e3 - a3*e2) / det;
+
+        // both signs of r are solutions of the squared equations,
+        // only a positive radius is a circle:
+        var rSigns = [ 1, -1 ];
+        for (var m=0; m<rSigns.length; m++) {
+            var rr = r;
+            var ss = s;
+            if (rSigns[m] < 0) {
+                // mirror sign combination: r -> -r, si -> -si
+                rr = -r;
+                ss = [ -s[0], -s[1], -s[2] ];
+            }
+            if (rr < RS.PointTolerance) {
+                continue;
+            }
+
+            var dy2 = (rr + ss[0]*rs[0]) * (rr + ss[0]*rs[0]) - (x - xs[0]) * (x - xs[0]);
+            if (dy2 < -RS.PointTolerance) {
+                continue;
+            }
+            var y = Math.sqrt(Math.max(dy2, 0.0));
+
+            var base = origin.operator_add(u.operator_multiply(x));
+            ret.push(new RCircle(base.operator_add(n.operator_multiply(y)), rr));
+            if (y > RS.PointTolerance) {
+                ret.push(new RCircle(base.operator_subtract(n.operator_multiply(y)), rr));
+            }
+        }
+    }
+
+    ret = Apollonius.removeDuplicates(ret);
+    ret = Apollonius.verify(ret, c1, c2, c3);
+
+    // a given circle that touches the other two is trivially a solution
+    // (e.g. a circle between two others, touching both), exclude it:
+    var filtered = [];
+    for (var i=0; i<ret.length; i++) {
+        if (!Apollonius.compareShapes(ret[i], c1) &&
+            !Apollonius.compareShapes(ret[i], c2) &&
+            !Apollonius.compareShapes(ret[i], c3)) {
+            filtered.push(ret[i]);
+        }
+    }
+    return filtered;
+};
 
 Apollonius.getSolutionsCCCAlt = function(c1, c2, c3) {
     var circle1 = c1;
