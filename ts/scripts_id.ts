@@ -884,7 +884,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
-        <translation>Mengajukan</translation>
+        <translation>File</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -5236,7 +5236,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;File</source>
-        <translation>Mengajukan</translation>
+        <translation>&amp;File</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -10693,7 +10693,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>File</source>
-        <translation>Mengajukan</translation>
+        <translation>File</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11271,7 +11271,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation>Mengajukan</translation>
+        <translation>File</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12646,7 +12646,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation>Mengajukan</translation>
+        <translation>File</translation>
     </message>
     <message>
         <location line="+0"/>

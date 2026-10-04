@@ -3639,7 +3639,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation>正しい '新規画層' スイッチではありません。無視されます。テキスト行: %1</translation>
+        <translation>正しい &apos;新規画層&apos; スイッチではありません。無視されます。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4810,7 +4810,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation>画層 "MyLayer" を追加しました</translation>
+        <translation>画層 &quot;MyLayer&quot; を追加しました</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4891,7 +4891,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation>画層 "0" にカスタムプロパティ "MyCustomProperty" を追加しました。</translation>
+        <translation>画層 &quot;0&quot; にカスタムプロパティ &quot;MyCustomProperty&quot; を追加しました。</translation>
     </message>
     <message>
         <location line="+10"/>

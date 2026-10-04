@@ -370,7 +370,7 @@
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+96"/>
         <location filename="../src/core/RObject.cpp" line="+71"/>
         <source>Type</source>
         <translation>タイプ</translation>

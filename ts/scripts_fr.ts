@@ -6247,7 +6247,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Outils d'accrochage</translation>
+        <translation>Outils d&apos;accrochage</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -9755,7 +9755,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation>Définir sur les marges de l'imprimante</translation>
+        <translation>Définir sur les marges de l&apos;imprimante</translation>
     </message>
     <message>
         <location line="+25"/>

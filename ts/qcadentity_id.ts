@@ -726,7 +726,7 @@
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation>Mengajukan</translation>
+        <translation>File</translation>
     </message>
     <message>
         <location line="+2"/>
