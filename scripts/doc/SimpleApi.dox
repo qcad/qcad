@@ -1,0 +1,225 @@
+/*!
+
+\page SimpleApi QCAD Simple API
+
+The QCAD Simple API is a small set of global ECMAScript functions that
+simplify common tasks such as adding, querying and modifying entities.
+It is mainly designed for use in the script shell (Misc > Development >
+Script Shell) and for short scripts, but it can also be used from any
+script or plugin. The complete function reference is available in the
+module \ref ecma_simple.
+
+\section simple_usage Usage
+
+In the script shell, the Simple API is available directly. In scripts,
+include the file simple.js:
+
+\code
+include("simple.js");
+
+addLine(0,0, 100,100);
+var c = addCircle([50,50], 25);
+trim(c, [75,50], [10,10]);
+\endcode
+
+The functions operate on the current document of the QCAD main window.
+Use \ref startTransaction to apply a series of calls as one transaction
+(one undo step) or to redirect calls to an off-screen document
+(\ref createDocument, \ref createDocumentInterface).
+
+\section simple_refs Entity References
+
+Functions that take an entity accept the entity in various forms.
+This applies to all modification functions (\ref trim, \ref round,
+\ref offset, \ref move, ...) as well as to the query functions
+\ref getEntity and \ref getShape:
+
+<table>
+<tr><th>Form</th><th>Example</th><th>Meaning</th></tr>
+<tr><td>Entity ID</td><td><tt>trim(1234, 1235)</tt></td>
+<td>The entity with the given ID in the current document.</td></tr>
+<tr><td>Entity object (REntity)</td><td><tt>var l = addLine(0,0, 10,0); move(l, [0,5]);</tt></td>
+<td>The entity is looked up by its ID in the current document. Entities returned by
+the add functions (\ref addLine, \ref addCircle, ...) can be passed directly.</td></tr>
+<tr><td>Shape (RShape)</td><td><tt>var s = new RLine(0,0, 10,0); offset(s, 1);</tt></td>
+<td>The operation is applied to the shape only, the drawing is not changed.
+Transformations (\ref move, \ref rotate, \ref scale, \ref mirror, \ref lengthen,
+\ref reverse) modify the shape in place. All other functions return the resulting
+shapes as an array and leave the given shapes unchanged.</td></tr>
+<tr><td>Position (RVector or [x,y])</td><td><tt>trim([2,0], [5,3])</tt></td>
+<td>The entity closest to the given position in the drawing. The position also
+serves as click position (see below).</td></tr>
+</table>
+
+Positions can always be given as RVector or as array <tt>[x,y]</tt>. Most functions
+also accept positions as two separate numbers (<tt>addLine(0,0, 100,100)</tt>).
+
+\subsection simple_clickpos Click Positions
+
+Some operations depend on where an entity was 'clicked': trimming keeps the part
+of the entity at the click position, rounding and beveling round the ends of the
+entities that are closest to the click positions, offsetting creates the parallel
+on the side of the click position.
+
+A click position may follow every entity reference that is not itself a position:
+
+\code
+trim(line1, [8,0], line2, [5,3])    // explicit click positions
+trim([8,0], [5,3])                  // positions as references: same result
+trim(line1, line2)                  // no click positions: middle points are used
+\endcode
+
+If no click position is given, the middle point of the entity is used.
+
+\section simple_results Return Values
+
+- Creation functions return the added entity (with a valid ID unless called
+  within a transaction).
+- Transformations (\ref move, \ref rotate, \ref scale, \ref mirror,
+  \ref lengthen, \ref reverse) return the modified entity.
+- Other modification functions (\ref trim, \ref round, \ref bevel, \ref offset,
+  \ref breakOut, \ref divide, \ref explode, \ref stretch) return the RTransaction
+  created by the operation or undefined when called within a transaction
+  (see \ref startTransaction) or if the operation failed. Failures are reported
+  with \ref warning.
+- If only shapes are passed, the resulting shapes are returned as an array.
+
+\section simple_functions Function Overview
+
+\subsection simple_functions_doc Documents and Application
+
+<table>
+<tr><td>\ref getMainWindow</td><td>Main application window.</td></tr>
+<tr><td>\ref getDocumentInterface</td><td>Current document interface.</td></tr>
+<tr><td>\ref getDocument</td><td>Current document.</td></tr>
+<tr><td>\ref getGraphicsView</td><td>Current graphics view.</td></tr>
+<tr><td>\ref createDocument</td><td>Creates an off-screen document.</td></tr>
+<tr><td>\ref createDocumentInterface</td><td>Creates an off-screen document interface.</td></tr>
+<tr><td>\ref disableInput, \ref enableInput, \ref isInputEnabled</td><td>Block user input during long operations.</td></tr>
+<tr><td>\ref update</td><td>Keeps the user interface up to date during long operations.</td></tr>
+<tr><td>\ref sleep</td><td>Sleeps for the given number of milliseconds.</td></tr>
+<tr><td>\ref warning</td><td>Prints a warning.</td></tr>
+</table>
+
+\subsection simple_functions_create Creation
+
+<table>
+<tr><td>\ref addPoint, \ref addLine, \ref addXLine, \ref addArc, \ref addCircle, \ref addEllipse,
+\ref addPolyline, \ref addSpline, \ref addSimpleText, \ref addSolid</td><td>Add entities to the drawing.</td></tr>
+<tr><td>\ref addShape, \ref addShapes, \ref addEntity, \ref addObject</td><td>Add shapes, entities or other objects (layers, blocks, ...).</td></tr>
+<tr><td>\ref addLayer, \ref hasLayer, \ref setCurrentLayer</td><td>Layers.</td></tr>
+<tr><td>\ref setCurrentColor</td><td>Color of newly added entities.</td></tr>
+<tr><td>\ref deleteObject</td><td>Deletes an object.</td></tr>
+</table>
+
+\subsection simple_functions_info Information and Queries
+
+<table>
+<tr><td>\ref getEntity</td><td>Entity for an entity ID, entity object or position.</td></tr>
+<tr><td>\ref getShape</td><td>Shape for an entity reference or shape.</td></tr>
+<tr><td>\ref getClosestEntity</td><td>Entity closest to a position.</td></tr>
+<tr><td>\ref getEntityShape</td><td>Shape of an entity (closest sub shape for complex entities).</td></tr>
+<tr><td>\ref getIntersectionPoints</td><td>Intersection points between two entities or shapes.</td></tr>
+<tr><td>\ref isPosition, \ref toVector</td><td>Position helpers (RVector or [x,y]).</td></tr>
+</table>
+
+\subsection simple_functions_modify Modification
+
+<table>
+<tr><td>\ref move, \ref rotate, \ref scale, \ref mirror</td><td>Transformations.</td></tr>
+<tr><td>\ref trim, \ref trimBoth</td><td>Trim one or both entities to each other (or extend them).</td></tr>
+<tr><td>\ref lengthen</td><td>Lengthen or shorten an entity at its start or end.</td></tr>
+<tr><td>\ref breakOut</td><td>Remove the segment between the closest intersections.</td></tr>
+<tr><td>\ref autoTrim</td><td>Keep only the segment between the closest intersections.</td></tr>
+<tr><td>\ref divide</td><td>Divide an entity at one or two positions.</td></tr>
+<tr><td>\ref round</td><td>Round a corner (fillet).</td></tr>
+<tr><td>\ref bevel, \ref chamfer</td><td>Bevel a corner (chamfer).</td></tr>
+<tr><td>\ref offset</td><td>Create parallels / concentric copies.</td></tr>
+<tr><td>\ref reverse</td><td>Reverse the direction of an entity.</td></tr>
+<tr><td>\ref explode</td><td>Explode an entity into its components.</td></tr>
+<tr><td>\ref stretch</td><td>Stretch the entities in an area.</td></tr>
+<tr><td>\ref deleteEntity</td><td>Delete an entity.</td></tr>
+<tr><td>\ref paste</td><td>Paste a document into another document.</td></tr>
+</table>
+
+\subsection simple_functions_transaction Transactions
+
+<table>
+<tr><td>\ref startTransaction, \ref endTransaction</td><td>Group calls into one transaction (one undo step) or
+apply them to an off-screen document.</td></tr>
+<tr><td>\ref getTransactionDocument, \ref getTransactionDocumentInterface</td><td>Document the current transaction applies to.</td></tr>
+<tr><td>\ref getOperation</td><td>Operation of the current transaction (for advanced use).</td></tr>
+</table>
+
+\subsection simple_functions_view View
+
+<table>
+<tr><td>\ref autoZoom</td><td>Auto zoom.</td></tr>
+<tr><td>\ref zoomTo</td><td>Zoom to an entity, box or position.</td></tr>
+</table>
+
+\subsection simple_functions_input User Input
+
+<table>
+<tr><td>\ref getInt, \ref getDouble, \ref getText, \ref getItem</td><td>Input dialogs.</td></tr>
+</table>
+
+\section simple_examples Examples
+
+Draw a rectangle from four lines and round its corners:
+
+\code
+startTransaction();
+var l1 = addLine(0,0, 100,0);
+var l2 = addLine(100,0, 100,50);
+var l3 = addLine(100,50, 0,50);
+var l4 = addLine(0,50, 0,0);
+endTransaction();
+
+round(l1, l2, 10);
+round(l2, l3, 10);
+round(l3, l4, 10);
+round(l4, l1, 10);
+\endcode
+
+Trim a line to a circle, keeping the part at the click position:
+
+\code
+var line = addLine(0,0, 100,0);
+var circle = addCircle([50,0], 20);
+trim(line, [10,0], circle);          // keeps the part from (0,0) to (30,0)
+\endcode
+
+Use positions only (e.g. with coordinates taken from the drawing):
+
+\code
+trimBoth([10,0], [50,30]);           // trim the entities at these positions to each other
+breakOut([60,5]);                    // remove the segment around (60,5)
+offset([50,0], 5, 3);                // three parallels on both sides of the entity at (50,0)
+bevel([10,0], [100,20], 5);          // chamfer the corner between the entities at these positions
+\endcode
+
+Work with shapes without changing the drawing:
+
+\code
+var s1 = new RLine(0,0, 10,0);
+var s2 = new RLine(10,0, 10,10);
+var res = round(s1, s2, 2);          // [trimmed s1, RArc, trimmed s2]
+addShapes(res);
+\endcode
+
+Apply a series of modifications as a single undo step or to an off-screen document:
+
+\code
+var di = createDocumentInterface();
+startTransaction(di);
+var a = addLine(0,0, 10,0);
+var b = addLine(5,-5, 5,5);
+trim(a, [8,0], b);
+endTransaction();
+di.exportFile("/tmp/out.dxf", "R27 (2013) DXF");
+\endcode
+
+<p>&nbsp;</p>
+
+*/

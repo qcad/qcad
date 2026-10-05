@@ -50,7 +50,7 @@ function endTransaction() {
 
         // apply operation to document interface:
         if (!isNull(__simpleDi)) {
-            __simpleDi.applyOperation(__simpleOp);
+            ret = __simpleDi.applyOperation(__simpleOp);
             __simpleDi = undefined;
             __simpleDoc = undefined;
         }
@@ -109,5 +109,10 @@ function getOperation() {
     if (!isNull(__simpleOp)) {
         return __simpleOp;
     }
-    return new RAddObjectsOperation();
+    var op = new RAddObjectsOperation();
+    if (__simpleUseOp===true) {
+        // keep operation for endTransaction:
+        __simpleOp = op;
+    }
+    return op;
 }

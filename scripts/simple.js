@@ -7,13 +7,19 @@
  * \ingroup ecma_scripts
  *
  * \brief This module defines the QCAD Simple API in ECMAScript.
- * The QCAD Simple API is meant to simplify common tasks such as adding entities.
+ * The QCAD Simple API is meant to simplify common tasks such as adding,
+ * querying and modifying entities (trimming, rounding, beveling, offsetting,
+ * breaking out, dividing, ...).
  * To use the QCAD Simple API in your scripts, include the file simple.js in your
  * script:
  *
  * \code
  * include("simple.js");
  * \endcode
+ *
+ * Entities can be referred to by entity ID, entity object, shape or by a
+ * position in the drawing. See \ref SimpleApi for an overview of the API,
+ * the entity reference conventions and examples.
  */
 include("library.js");
 include("input.js");

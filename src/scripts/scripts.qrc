@@ -3000,6 +3000,7 @@
     <file alias="scripts/splashscreen.png">../../scripts/splashscreen.png</file>
     <file alias="scripts/splashscreen@2x.png">../../scripts/splashscreen@2x.png</file>
     <file alias="scripts/sprintf.js">../../scripts/sprintf.js</file>
+    <file alias="scripts/Tests/SimpleApiTest.js">../../scripts/Tests/SimpleApiTest.js</file>
     <file alias="scripts/Tools/arguments.js">../../scripts/Tools/arguments.js</file>
     <file alias="scripts/Tools/ExTool/ExTool.js">../../scripts/Tools/ExTool/ExTool.js</file>
     <file alias="scripts/Tools/MergeDrawings/MergeDrawings.js">../../scripts/Tools/MergeDrawings/MergeDrawings.js</file>

@@ -12,6 +12,7 @@ The entry point is always autostart.js.
 
 <table>
 <tr><td>\ref library.js</td><td>Common functions.</td></tr>
+<tr><td>\ref SimpleApi "QCAD Simple API" (\ref simple.js)</td><td>Simplified functions for adding, querying and modifying entities (see \ref ecma_simple).</td></tr>
 <tr><td>\ref date.js</td><td>Provides date related functions.</td></tr>
 <tr><td>\ref sprintf.js</td>
 <td>Provides a C-like <a href="http://www.cplusplus.com/reference/clibrary/cstdio/sprintf" target="_blank">
