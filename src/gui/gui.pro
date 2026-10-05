@@ -121,6 +121,6 @@ DEFINES += QCADGUI_LIBRARY
 RC_FILE = gui.rc
 
 macx {
-    OBJECTIVE_SOURCES += $$PWD/RMacMenuAccessibility.mm
-    OBJECTIVE_HEADERS += $$PWD/RMacMenuAccessibility.h
+    OBJECTIVE_SOURCES += $$PWD/RMacMenuAccessibility.mm $$PWD/RMacModalMenuGuard.mm
+    OBJECTIVE_HEADERS += $$PWD/RMacMenuAccessibility.h $$PWD/RMacModalMenuGuard.h
 }

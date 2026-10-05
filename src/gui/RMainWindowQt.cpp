@@ -48,6 +48,7 @@
 #include "RAccessibleValueLabel.h"
 #ifdef Q_OS_MACOS
 #include "RMacMenuAccessibility.h"
+#include "RMacModalMenuGuard.h"
 #endif
 #include "RAccessibleToolButton.h"
 #include "RMainWindowQt.h"
@@ -110,6 +111,8 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
 #ifdef Q_OS_MACOS
     // spoken form of the native menu item titles (key codes, undo text):
     RMacMenuAccessibility::install();
+    // menu key equivalents stay with native modal panels (file dialogs):
+    RMacModalMenuGuard::install();
 #endif
 
     RSingleApplication* singleApp = dynamic_cast<RSingleApplication*> (qApp);

@@ -109,5 +109,6 @@ target_link_libraries(qcadgui PUBLIC
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     target_sources(qcadgui PRIVATE
         RMacMenuAccessibility.h RMacMenuAccessibility.mm
+        RMacModalMenuGuard.h RMacModalMenuGuard.mm
     )
 endif()
