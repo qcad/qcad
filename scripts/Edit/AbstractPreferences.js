@@ -490,6 +490,14 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
             for (var c = 0; c < parent.childCount(); ++c) {
                 var child = parent.child(c);
                 if (child.text(0) === cat[x]) {
+                    // the leaf of another add-on with the same (translated)
+                    // category path, e.g. Finnish "Muokkaa > Kierto" for both
+                    // "Edit > Rotate" and "Modify > Rotate": don't merge the
+                    // two pages into one item, the second page would be
+                    // unreachable:
+                    if (x == cat.length - 1 && !isNull(child.data(0, Qt.UserRole))) {
+                        continue;
+                    }
                     subItem = child;
                     break;
                 }
