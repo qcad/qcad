@@ -118,8 +118,14 @@ Apollonius.getSolutionsPPP = function(point1, point2, point3) {
 
 /**
  * \return Solutions for circles that are tangential to the three given circles.
+ *
+ * Two concentric circles are handled as a special case (locus construction).
+ * All other configurations are solved algebraically by
+ * Apollonius.getSolutionsCCCAlgebraic, which covers the general case as well
+ * as the special cases of collinear centers, mutually touching circles,
+ * circles through a common point, equal radii, nested circles, etc.
  */
-Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
+Apollonius.getSolutionsCCC = function(c1, c2, c3) {
     if (!isCircleShape(c1) ||
         !isCircleShape(c2) ||
         !isCircleShape(c3)) {
@@ -130,8 +136,6 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     var ret = [];
 
     var circle1 = c1;
-    var circle2 = c2;
-    var circle3 = c3;
     var rDiff = undefined;
     var locus = undefined;
 
@@ -200,432 +204,35 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
         return ret;
     } // End of enhancement by CVH
 
-    // Special case: All three circles intersect in one point:
-    // Exploits an enhanced algorithm by CVH
-    var commonIP = Apollonius.getCommonIntersectionPoint(c1, c2, c3);
-    if (!isNull(commonIP)) {
-        // # Remark by CVH # Better results with appropriate circle of inversion
-        // Relative sized inversion circle (FS#2590), opted for the local average radius:
-        var rInv = (Math.abs(c1.radius) + Math.abs(c2.radius) + Math.abs(c3.radius)) / 3;
-        var inversionCircle = new RCircle(commonIP, rInv);    // In 2D by default
-
-        // Construct inversion shapes:
-        var shapesInverse = Apollonius.getInverseShapes([c1, c2, c3], inversionCircle);
-
-        // Expecting nothing else than 3 line segments:
-        if (shapesInverse.length === 3 &&
-            isLineBasedShape(shapesInverse[0]) &&
-            isLineBasedShape(shapesInverse[1]) &&
-            isLineBasedShape(shapesInverse[2])) {
-
-            // Handle as LLL and get results (0-4):
-            var res = Apollonius.getSolutions(shapesInverse);
-            // Inverse the results back to solutions:
-            ret = Apollonius.getInverseShapes(res, inversionCircle);
-        }
-
-        // Return final results for any common intersection point case:
-        return ret;    // 0-4 solutions
-    } // End of enhancement by CVH
-
-    // special case: three circles of equal size:
-    if (RMath.fuzzyCompare(c1.radius, c2.radius) && RMath.fuzzyCompare(c1.radius, c3.radius)) {
-        // add outer and inner circles to result:
-        var sol = RCircle.createFrom3Points(c1.center, c2.center, c3.center);
-        if (sol.isValid()) {
-            var sol1 = sol.clone();
-            var sol2 = sol.clone();
-            sol1.radius = sol1.radius + c1.radius;
-            sol2.radius = Math.abs(sol2.radius - c1.radius);
-            ret.push(sol1);
-            ret.push(sol2);
-        }
-    }
-
-    // circle1 is always the smallest:
-    // # Remark by CVH # Ideally r3 >= r2 >= r1
-    // When not of (almost) the same size then order circles by ascending size:
-    else {
-        circle1 = c1;
-        circle2 = c2;
-        circle3 = c3;
-        // Swap first two when c1 > c2:
-        if (c1.radius > c2.radius) {
-            circle1 = c2;
-            circle2 = c1;
-        }
-        // Swap last two when circle2 > circle3:
-        if (circle2.radius > circle3.radius) {
-            circle3 = circle2;
-            circle2 = c3;
-        }
-        // Swap first two when circle1 > circle2:
-        if (circle1.radius > circle2.radius) {
-            var cTemp = circle2
-            circle2 = circle1;
-            circle1 = cTemp;
-        }
-    }
-
-    // Count how many times circles are intersecting each other:
-    var nIps12 = circle1.getIntersectionPoints(getPtr(circle2), false).length;    // Unlimited, avoids RBox test
-    var nIps13 = circle1.getIntersectionPoints(getPtr(circle3), false).length;    // Unlimited, avoids RBox test
-    var nIps23 = circle2.getIntersectionPoints(getPtr(circle3), false).length;    // Unlimited, avoids RBox test
-
-    // Special case: Each two circles are tangent:
-    // # Enhancement by CVH # Avoiding some to dozens false positive candidates
-    // Including the solution for the n=1 circles of a Pappus chain
-    if (nIps12 === 1 && nIps13 === 1 && nIps23 === 1) {
-        // Clear the return array (Has content with 3 circles of equal size):
-        ret = [];
-
-        // Get the tangent point of the smallest two circles:
-        var cInv = circle1.getIntersectionPoints(getPtr(circle2), false)[0];    // Unlimited, avoids RBox test
-        // Relative sized inversion circle (FS#2590), opted for the average of radii:
-        var rInv = (c1.radius + c2.radius + c3.radius) / 3;
-        // With a valid center construct the circle of inversion:
-        if (!cInv.isValid()) {
-            return ret;    // Empty, failed on no valid inversion center
-        }
-        var inversionCircle = new RCircle(cInv, rInv);
-        
-        // Construct inversion shapes:
-        var shapesInverse = Apollonius.getInverseShapes([circle1, circle2, circle3], inversionCircle);
-        
-        // Expecting nothing else than 3 shapes (Two line segments and a circle):
-        if (shapesInverse.length !== 3) {
-           return ret;    // Empty, failed on no 3 inversions
-        }
-        else {
-            // Handle as LLC and get results (0-2):
-            var res = Apollonius.getSolutions(shapesInverse);
-
-            // Expecting nothing else than 2 circles:
-            if (res.length === 2 &&
-                isCircleShape(res[0]) &&
-                isCircleShape(res[1])) {
-
-                // Inverse the results back to solutions:
-                ret = Apollonius.getInverseShapes(res, inversionCircle);
-            }
-
-            // Return final results for any case of 3 touching circles:
-            return ret;    // 0-2 solutions
-        }
-    } // End of enhancement by CVH
-
-/*
-    // circle1 is always the smallest:
-    else {
-        if (c2.radius <= c1.radius && c2.radius <= c3.radius) {
-            circle1 = c2;
-            circle2 = c1;
-            circle3 = c3;
-        }
-
-        if (c3.radius <= c1.radius && c3.radius <= c2.radius) {
-            circle1 = c3;
-            circle2 = c1;
-            circle3 = c2;
-        }
-    }
-
-//    qDebug("circle1: ", circle1);
-//    qDebug("circle2: ", circle2);
-//    qDebug("circle3: ", circle3);
-
-    // special case: three circles intersect in one point:
-    var commonIP = Apollonius.getCommonIntersectionPoint(circle1, circle2, circle3);
-    if (!isNull(commonIP)) {
-        var inversionCircle = new RCircle(commonIP, 10);
-        var shapesInverse = Apollonius.getInverseShapes([circle1, circle2, circle3], inversionCircle);
-
-        if (isLineBasedShape(shapesInverse[0]) &&
-            isLineBasedShape(shapesInverse[1]) &&
-            isLineBasedShape(shapesInverse[2])) {
-
-            var circlesTouching = Apollonius.getSolutions(shapesInverse);
-            ret = Apollonius.getInverseShapes(circlesTouching, inversionCircle);
-        }
-
-        return ret;
-    }
-
-    // special case: each circle intersects the other two,
-    // at least one intersects through two points:
-    var nIps12 = circle1.getIntersectionPoints(circle2).length;
-    var nIps13 = circle1.getIntersectionPoints(circle3).length;
-    var nIps23 = circle2.getIntersectionPoints(circle3).length;
-*/
-
-    // special case: each circle intersects the other two,
-    // at least one intersects through two points:
-    if (!intersect && nIps12>0 && nIps13>0 && nIps23>0 &&
-        (nIps12===2 || nIps13===2 || nIps23===2)) {
-
-        var ips12 = circle1.getIntersectionPoints(getPtr(circle2));
-        var ips13 = circle1.getIntersectionPoints(getPtr(circle3));
-        var ips23 = circle2.getIntersectionPoints(getPtr(circle3));
-
-        var inversionCircles = [];
-        var r;
-
-        if (ips12.length===2) {
-            r = ips12[0].getDistanceTo(ips12[1]);
-            inversionCircles.push(new RCircle(ips12[0], r));
-            inversionCircles.push(new RCircle(ips12[1], r));
-        }
-        if (ips13.length===2) {
-            r = ips13[0].getDistanceTo(ips13[1]);
-            inversionCircles.push(new RCircle(ips13[0], r));
-            inversionCircles.push(new RCircle(ips13[1], r));
-        }
-        if (ips23.length===2) {
-            r = ips23[0].getDistanceTo(ips23[1]);
-            inversionCircles.push(new RCircle(ips23[0], r));
-            inversionCircles.push(new RCircle(ips23[1], r));
-        }
-
-        for (var i=0; i<inversionCircles.length; i++) {
-            var circle1Inverse = Apollonius.getInverseShape(circle1, inversionCircles[i]);
-            var circle2Inverse = Apollonius.getInverseShape(circle2, inversionCircles[i]);
-            var circle3Inverse = Apollonius.getInverseShape(circle3, inversionCircles[i]);
-
-            var iSol = Apollonius.getSolutions(circle1Inverse, circle2Inverse, circle3Inverse);
-            var sol = Apollonius.getInverseShapes(iSol, inversionCircles[i]);
-
-            ret = ret.concat(sol);
-        }
-
-        ret = Apollonius.removeDuplicates(ret);
-
-        return ret;
-    }
-
-    var powerCenter = Apollonius.getPowerCenter(circle1, circle2, circle3);
-    //Apollonius.constructionShapes.push(new RPoint(powerCenter));
-
-    // Special case: collinear centers:
-    // The radical axes are parallel, the power center is at infinity and
-    // the construction below cannot be used. Solve algebraically instead:
-    if (isNull(powerCenter)) {
-        return Apollonius.getSolutionsCCCCollinear(c1, c2, c3);
-    }
-
-    var similarityAxes = Apollonius.getSimilarityAxes(circle1, circle2, circle3);
-
-    for (var i=0; i<similarityAxes.length; i++) {
-        // array may contain 'null' items to guarantee index for
-        // alpha, beta, gamma tests:
-        if (isNull(similarityAxes[i])) {
-            continue;
-        }
-
-        //Apollonius.constructionShapes.push(similarityAxes[i]);
-
-        var p, pp, q, qq, r, rr;
-
-        var pole1 = Apollonius.getPole(circle1, similarityAxes[i]);
-        var pole2 = Apollonius.getPole(circle2, similarityAxes[i]);
-        var pole3 = Apollonius.getPole(circle3, similarityAxes[i]);
-
-        if (isNull(pole1) || isNull(pole2) || isNull(pole3)) {
-            continue;
-        }
-
-//        Apollonius.constructionShapes.push(new RPoint(pole1));
-//        Apollonius.constructionShapes.push(new RPoint(pole2));
-//        Apollonius.constructionShapes.push(new RPoint(pole3));
-
-        var ray1 = new RLine(powerCenter, pole1);
-        var ray2 = new RLine(powerCenter, pole2);
-        var ray3 = new RLine(powerCenter, pole3);
-
-        var ips1 = ray1.getIntersectionPoints(getPtr(circle1), false);
-        var ips2 = ray2.getIntersectionPoints(getPtr(circle2), false);
-        var ips3 = ray3.getIntersectionPoints(getPtr(circle3), false);
-
-        var gotPoints = false;
-        if (circle1.contains(powerCenter) || circle2.contains(powerCenter) || circle3.contains(powerCenter)) {
-            var ipsRight = [];
-            var ipsLeft = [];
-            var ipss = [ips1, ips2, ips3];
-            for (var k=0; k<ipss.length; k++) {
-                var ips = ipss[k];
-                for (var n=0; n<ips.length; n++) {
-                    var ip = ips[n];
-                    if (similarityAxes[i].getSideOfPoint(ip)===RS.RightHand) {
-                        ipsRight.push(ip);
-                    }
-                    else {
-                        ipsLeft.push(ip);
-                    }
-                }
-            }
-            if (ipsRight.length===3 && ipsLeft.length===3) {
-                p = ipsRight[0];
-                q = ipsRight[1];
-                r = ipsRight[2];
-                pp = ipsLeft[0];
-                qq = ipsLeft[1];
-                rr = ipsLeft[2];
-                gotPoints = true;
-            }
-        }
-
-        if (!gotPoints) {
-            ips1 = RVector.getSortedByDistance(ips1, powerCenter);
-            ips2 = RVector.getSortedByDistance(ips2, powerCenter);
-            ips3 = RVector.getSortedByDistance(ips3, powerCenter);
-
-            if (ips1.length!==2 || ips2.length!==2 || ips3.length!==2) {
-                continue;
-            }
-
-            // alpha: +
-            if (i==0 || i==3) {
-                p = ips1[0];
-                pp = ips1[1];
-            }
-            // alpha: -
-            else {
-                p = ips1[1];
-                pp = ips1[0];
-            }
-
-            // beta: +
-            if (i==0 || i==2) {
-                q = ips2[0];
-                qq = ips2[1];
-            }
-            // beta: -
-            else {
-                q = ips2[1];
-                qq = ips2[0];
-            }
-
-            // gamma: +
-            if (i==0 || i==1) {
-                r = ips3[0];
-                rr = ips3[1];
-            }
-            // gamma: -
-            else {
-                r = ips3[1];
-                rr = ips3[0];
-            }
-        }
-
-        if (!isNull(p) && !isNull(q) && !isNull(r)) {
-            ret.push(RCircle.createFrom3Points(p,q,r));
-        }
-
-        if (!isNull(pp) && !isNull(qq) && !isNull(rr)) {
-            ret.push(RCircle.createFrom3Points(pp,qq,rr));
-        }
-    }
-
-    ret = ret.concat(Apollonius.getSolutionsCCCAlt(c1, c2, c3));
-    ret = Apollonius.removeDuplicates(ret);
-    ret = Apollonius.verify(ret, c1, c2, c3);
-
-    return ret;
-}
+    // all other cases:
+    var candidates = Apollonius.getSolutionsCCCAlgebraic(c1, c2, c3);
+    return Apollonius.filterCircleSolutions(candidates, c1, c2, c3);
+};
 
 /**
- * \return Solutions for circles that are tangential to the three given circles
- * with collinear centers (e.g. a circle between two others, touching both).
+ * Removes invalid candidates and duplicates from the given candidates for
+ * circles tangential to the three given circles, verifies tangency and
+ * excludes solutions identical to one of the given circles.
  *
- * In a coordinate system with the center line as X axis, the circle equations
- * (x - xi)^2 + y^2 = (r + si*ri)^2 (si = +1 for external, -1 for internal
- * tangency) reduce to two linear equations in x and r when subtracted from
- * each other. y follows from the first equation (mirrored solutions).
+ * \return Verified solutions for circles tangential to the three given circles.
  */
-Apollonius.getSolutionsCCCCollinear = function(c1, c2, c3) {
-    var ret = [];
+Apollonius.filterCircleSolutions = function(candidates, c1, c2, c3) {
+    var ret;
 
-    if (!isCircleShape(c1) || !isCircleShape(c2) || !isCircleShape(c3)) {
-        return ret;
-    }
-
-    // local coordinate system along the center line:
-    var origin = c1.center;
-    var dirV = c2.center.operator_subtract(origin);
-    dirV.setZ(0.0);
-    if (dirV.getMagnitude2D() < RS.PointTolerance) {
-        // concentric, handled elsewhere:
-        return ret;
-    }
-    var dir = dirV.getAngle();
-    var u = RVector.createPolar(1.0, dir);
-    var n = RVector.createPolar(1.0, dir + Math.PI/2);
-
-    var circles = [c1, c2, c3];
-    var xs = [];
-    var rs = [];
-    for (var i=0; i<circles.length; i++) {
-        var d = circles[i].center.operator_subtract(origin);
-        d.setZ(0.0);
-        xs.push(RVector.getDotProduct(d, u));
-        rs.push(Math.abs(circles[i].radius));
-    }
-
-    // all sign combinations for circle 2 and 3, circle 1 external (+1):
-    // the remaining combinations yield the same circles with a negative radius.
-    var signs = [ [1,1,1], [1,1,-1], [1,-1,1], [1,-1,-1] ];
-
-    for (var k=0; k<signs.length; k++) {
-        var s = signs[k];
-
-        // equation j minus equation 1:
-        // a_j * x + b_j * r = e_j
-        var a2 = -2.0 * (xs[1] - xs[0]);
-        var b2 = -2.0 * (s[1]*rs[1] - s[0]*rs[0]);
-        var e2 = rs[1]*rs[1] - rs[0]*rs[0] - xs[1]*xs[1] + xs[0]*xs[0];
-
-        var a3 = -2.0 * (xs[2] - xs[0]);
-        var b3 = -2.0 * (s[2]*rs[2] - s[0]*rs[0]);
-        var e3 = rs[2]*rs[2] - rs[0]*rs[0] - xs[2]*xs[2] + xs[0]*xs[0];
-
-        var det = a2*b3 - a3*b2;
-        if (Math.abs(det) < RS.PointTolerance) {
-            // no unique solution (e.g. solution would be a line):
+    // only valid circles:
+    var circles = [];
+    for (var i=0; i<candidates.length; i++) {
+        var c = candidates[i];
+        if (isNull(c) || !isCircleShape(c) || !c.isValid()) {
             continue;
         }
-
-        var x = (e2*b3 - e3*b2) / det;
-        var r = (a2*e3 - a3*e2) / det;
-
-        // both signs of r are solutions of the squared equations,
-        // only a positive radius is a circle:
-        var rSigns = [ 1, -1 ];
-        for (var m=0; m<rSigns.length; m++) {
-            var rr = r;
-            var ss = s;
-            if (rSigns[m] < 0) {
-                // mirror sign combination: r -> -r, si -> -si
-                rr = -r;
-                ss = [ -s[0], -s[1], -s[2] ];
-            }
-            if (rr < RS.PointTolerance) {
-                continue;
-            }
-
-            var dy2 = (rr + ss[0]*rs[0]) * (rr + ss[0]*rs[0]) - (x - xs[0]) * (x - xs[0]);
-            if (dy2 < -RS.PointTolerance) {
-                continue;
-            }
-            var y = Math.sqrt(Math.max(dy2, 0.0));
-
-            var base = origin.operator_add(u.operator_multiply(x));
-            ret.push(new RCircle(base.operator_add(n.operator_multiply(y)), rr));
-            if (y > RS.PointTolerance) {
-                ret.push(new RCircle(base.operator_subtract(n.operator_multiply(y)), rr));
-            }
+        if (!isFinite(c.radius) || c.radius < RS.PointTolerance) {
+            continue;
         }
+        circles.push(c);
     }
 
-    ret = Apollonius.removeDuplicates(ret);
+    ret = Apollonius.removeDuplicates(circles);
     ret = Apollonius.verify(ret, c1, c2, c3);
 
     // a given circle that touches the other two is trivially a solution
@@ -641,121 +248,172 @@ Apollonius.getSolutionsCCCCollinear = function(c1, c2, c3) {
     return filtered;
 };
 
-Apollonius.getSolutionsCCCAlt = function(c1, c2, c3) {
-    var circle1 = c1;
-    var circle2 = c2;
-    var circle3 = c3;
+/**
+ * \return Solutions for circles that are tangential to the three given circles,
+ * computed algebraically.
+ *
+ * A circle with center (x,y) and radius r is tangential to circle i if
+ * (x - xi)^2 + (y - yi)^2 = (r + si*ri)^2 with si = +1 for external and
+ * si = -1 for internal tangency. Subtracting the equation for circle 1 from
+ * the equations for circles 2 and 3 yields two linear equations in x, y and r.
+ * Two of the three unknowns are expressed in terms of the third one (the
+ * pair is chosen for numerical stability) and substituted into the equation
+ * for circle 1, which results in a quadratic equation in the remaining
+ * unknown.
+ *
+ * Handles collinear centers (power center at infinity), concentric circles,
+ * very small or very large circles and circles far from the origin.
+ *
+ * \return Unverified candidates (may contain duplicates for double solutions
+ * and the given circles themselves), see Apollonius.filterCircleSolutions.
+ */
+Apollonius.getSolutionsCCCAlgebraic = function(c1, c2, c3) {
+    var ret = [];
 
-    var allEqualSizes = RMath.fuzzyCompare(circle1.radius, circle2.radius) &&
-            RMath.fuzzyCompare(circle1.radius, circle3.radius);
-
-    if (!allEqualSizes
-        //&& !intersect
-            ) {
-        // make sure that circle1 has the smallest radius:
-        if (c2.radius <= c1.radius && c2.radius <= c3.radius) {
-            circle1 = c2;
-            circle2 = c1;
-            circle3 = c3;
-        }
-
-        if (c3.radius <= c1.radius && c3.radius <= c2.radius) {
-            circle1 = c3;
-            circle2 = c1;
-            circle3 = c2;
-        }
+    if (!isCircleShape(c1) || !isCircleShape(c2) || !isCircleShape(c3)) {
+        return ret;
     }
 
-    // build arrays of three shapes each: either PCC or PPC:
-    var shapes1 = [];
-    var shapes2 = [];
-    var shapes3 = [];
-    var shapes4 = [];
-
-    shapes1.push(new RPoint(circle1.center));
-    shapes2.push(new RPoint(circle1.center));
-    shapes3.push(new RPoint(circle1.center));
-    shapes4.push(new RPoint(circle1.center));
-
-    var circle21 = circle2.clone();
-    var circle22 = circle2.clone();
-    circle21.radius = Math.abs(circle21.radius - circle1.radius);
-    circle22.radius += circle1.radius;
-    //        Apollonius.constructionShapes.push(circle21);
-    //        Apollonius.constructionShapes.push(circle22);
-    if (RMath.fuzzyCompare(circle21.radius, 0.0)) {
-        circle21 = new RPoint(circle21.center);
+    // work relative to the center of circle 1 (numerical precision):
+    var origin = c1.center;
+    var circles = [c1, c2, c3];
+    var xs = [];
+    var ys = [];
+    var rs = [];
+    var scale = 0.0;
+    for (var i=0; i<circles.length; i++) {
+        var d = circles[i].center.operator_subtract(origin);
+        xs.push(d.x);
+        ys.push(d.y);
+        rs.push(Math.abs(circles[i].radius));
+        scale = Math.max(scale, Math.abs(d.x), Math.abs(d.y), rs[i]);
     }
-    shapes1.push(circle21.clone());
-    shapes2.push(circle21.clone());
-    shapes3.push(circle22.clone());
-    shapes4.push(circle22.clone());
-
-    var circle31 = circle3.clone();
-    var circle32 = circle3.clone();
-    circle31.radius = Math.abs(circle31.radius - circle1.radius);
-    circle32.radius += circle1.radius;
-    //        Apollonius.constructionShapes.push(circle31);
-    //        Apollonius.constructionShapes.push(circle32);
-    if (RMath.fuzzyCompare(circle31.radius, 0.0)) {
-        circle31 = new RPoint(circle31.center);
+    if (scale < RS.PointTolerance) {
+        return ret;
     }
-    shapes1.push(circle31.clone());
-    shapes3.push(circle31.clone());
-    shapes2.push(circle32.clone());
-    shapes4.push(circle32.clone());
+    var eps = 1e-12 * scale;
 
-    // intermediate solutions for PCC / PPC cases:
-    var iSol1 = Apollonius.getSolutions(shapes1[0],shapes1[1],shapes1[2]);
-    var iSol2 = Apollonius.getSolutions(shapes2[0],shapes2[1],shapes2[2]);
-    var iSol3 = Apollonius.getSolutions(shapes3[0],shapes3[1],shapes3[2]);
-    var iSol4 = Apollonius.getSolutions(shapes4[0],shapes4[1],shapes4[2]);
+    // all sign combinations (external / internal tangency to each circle):
+    for (var k=0; k<8; k++) {
+        var s1 = (k&1) ? -1 : 1;
+        var s2 = (k&2) ? -1 : 1;
+        var s3 = (k&4) ? -1 : 1;
 
-    //        for (var i=0; i<iSol1.length; i++) {
-    //            Apollonius.constructionShapes.push(iSol1[i]);
-    //        }
-    //        for (var i=0; i<shapes2.length; i++) {
-    //            Apollonius.constructionShapes.push(shapes2[i]);
-    //        }
-    //        for (var i=0; i<shapes3.length; i++) {
-    //            Apollonius.constructionShapes.push(shapes3[i]);
-    //        }
-    //        for (var i=0; i<shapes4.length; i++) {
-    //            if (!isNull(shapes4[i])) {
-    //                Apollonius.constructionShapes.push(shapes4[i]);
-    //            }
-    //        }
+        // linear equations (eq i minus eq 1):
+        // A_i * x + B_i * y + C_i * r = D_i
+        var A2 = 2.0 * xs[1];
+        var B2 = 2.0 * ys[1];
+        var C2 = 2.0 * (s2*rs[1] - s1*rs[0]);
+        var D2 = xs[1]*xs[1] + ys[1]*ys[1] - (rs[1]*rs[1] - rs[0]*rs[0]);
 
-    var iSols = [ iSol1, iSol2, iSol3, iSol4 ];
+        var A3 = 2.0 * xs[2];
+        var B3 = 2.0 * ys[2];
+        var C3 = 2.0 * (s3*rs[2] - s1*rs[0]);
+        var D3 = xs[2]*xs[2] + ys[2]*ys[2] - (rs[2]*rs[2] - rs[0]*rs[0]);
 
-    var candidates = [];
-    for (var i=0; i<iSols.length; i++) {
-        if (isNull(iSols[i])) {
-            continue;
+        // choose the best conditioned pair of unknowns to eliminate:
+        var detXY = A2*B3 - A3*B2;
+        var detXR = A2*C3 - A3*C2;
+        var detYR = B2*C3 - B3*C2;
+        var aDetXY = Math.abs(detXY);
+        var aDetXR = Math.abs(detXR);
+        var aDetYR = Math.abs(detYR);
+
+        // parametrization: x = px + qx*t, y = py + qy*t, r = pr + qr*t
+        var px, qx, py, qy, pr, qr;
+        if (aDetXY >= aDetXR && aDetXY >= aDetYR) {
+            if (aDetXY < eps*eps) {
+                continue;
+            }
+            // free variable: r
+            px = (D2*B3 - D3*B2) / detXY;
+            qx = (-C2*B3 + C3*B2) / detXY;
+            py = (A2*D3 - A3*D2) / detXY;
+            qy = (-A2*C3 + A3*C2) / detXY;
+            pr = 0.0;
+            qr = 1.0;
+        }
+        else if (aDetXR >= aDetYR) {
+            if (aDetXR < eps*eps) {
+                continue;
+            }
+            // free variable: y
+            px = (D2*C3 - D3*C2) / detXR;
+            qx = (-B2*C3 + B3*C2) / detXR;
+            pr = (A2*D3 - A3*D2) / detXR;
+            qr = (-A2*B3 + A3*B2) / detXR;
+            py = 0.0;
+            qy = 1.0;
+        }
+        else {
+            if (aDetYR < eps*eps) {
+                continue;
+            }
+            // free variable: x
+            py = (D2*C3 - D3*C2) / detYR;
+            qy = (-A2*C3 + A3*C2) / detYR;
+            pr = (B2*D3 - B3*D2) / detYR;
+            qr = (-B2*A3 + B3*A2) / detYR;
+            px = 0.0;
+            qx = 1.0;
         }
 
-        for (var k=0; k<iSols[i].length; k++) {
-            var obj = iSols[i][k];
-            var offsetShapes = ShapeAlgorithms.getOffsetShapes(obj, circle1.radius, 1, RS.BothSides);
-            for (var n=0; n<offsetShapes.length; n++) {
-                candidates.push(getPtr(offsetShapes[n]));
+        // substitute into eq 1: x^2 + y^2 = (r + s1*r1)^2
+        var ex = px;
+        var ey = py;
+        var er = pr + s1*rs[0];
+        var qa = qx*qx + qy*qy - qr*qr;
+        var qb = 2.0 * (ex*qx + ey*qy - er*qr);
+        var qc = ex*ex + ey*ey - er*er;
+
+        var ts = [];
+        if (Math.abs(qa) < 1e-12 * (qx*qx + qy*qy + qr*qr)) {
+            // linear (the second solution is a line):
+            if (Math.abs(qb) > eps) {
+                ts.push(-qc / qb);
             }
         }
+        else {
+            var disc = qb*qb - 4.0*qa*qc;
+            // double roots: a discriminant within rounding noise is
+            // regarded as zero (one solution instead of none or two
+            // practically identical ones), the candidates are verified later:
+            var discTol = 1e-10 * (qb*qb + Math.abs(4.0*qa*qc) + qa*qa*scale*scale);
+            if (Math.abs(disc) < discTol) {
+                disc = 0.0;
+            }
+            if (disc < 0.0) {
+                continue;
+            }
+            var sq = Math.sqrt(disc);
+            // numerically stable quadratic formula:
+            var q = (qb >= 0.0) ? -(qb + sq) / 2.0 : -(qb - sq) / 2.0;
+            if (Math.abs(q) > eps) {
+                ts.push(q / qa);
+                ts.push(qc / q);
+            }
+            else {
+                ts.push(-qb / (2.0*qa));
+            }
+        }
+
+        for (var m=0; m<ts.length; m++) {
+            var t = ts[m];
+            if (!isFinite(t)) {
+                continue;
+            }
+            var r = pr + qr*t;
+            if (r < RS.PointTolerance) {
+                // negative radius: same circle as with inverted signs
+                continue;
+            }
+            var x = px + qx*t;
+            var y = py + qy*t;
+            ret.push(new RCircle(new RVector(origin.x + x, origin.y + y), r));
+        }
     }
 
-    // innermost and outermost solutions for equal sized circles:
-    if (allEqualSizes) {
-        var sol = RCircle.createFrom3Points(circle1.center, circle2.center, circle3.center);
-        var sol1 = sol.clone();
-        var sol2 = sol.clone();
-        sol1.radius = sol1.radius + circle1.radius;
-        sol2.radius = Math.abs(sol2.radius - circle1.radius);
-        candidates.push(sol1);
-        candidates.push(sol2);
-    }
-
-    // filter out non-results:
-    return Apollonius.verify(candidates, circle1, circle2, circle3);
+    return ret;
 };
 
 Apollonius.removeDuplicates = function(shapes) {
@@ -791,11 +449,42 @@ Apollonius.compareShapes = function(shape1, shape2) {
             return false;
         }
 
-        return shape1.center.equalsFuzzy(shape2.center) &&
-               RMath.fuzzyCompare(shape1.radius, shape2.radius);
+        // Degenerate (multiple) solutions can only be determined with a
+        // reduced precision, use a tolerance relative to the size of the
+        // circles:
+        var tol = Apollonius.getCircleTolerance([shape1, shape2], 1.0e-5);
+        return shape1.center.equalsFuzzy(shape2.center, tol) &&
+               RMath.fuzzyCompare(shape1.radius, shape2.radius, tol);
     }
 
     return false;
+};
+
+/**
+ * \return Tolerance for fuzzy comparisons involving the given circles:
+ * factor times the size of the configuration (radii and distances between
+ * centers), with an allowance for the magnitude of the coordinates
+ * (precision loss far from the origin) and RS::PointTolerance as minimum.
+ */
+Apollonius.getCircleTolerance = function(circles, factor) {
+    var size = 0.0;
+    var mag = 0.0;
+    for (var i=0; i<circles.length; i++) {
+        var c = circles[i];
+        if (isNull(c) || !isCircleShape(c)) {
+            continue;
+        }
+        size = Math.max(size, Math.abs(c.radius));
+        mag = Math.max(mag, Math.abs(c.center.x), Math.abs(c.center.y));
+        for (var k=i+1; k<circles.length; k++) {
+            var ck = circles[k];
+            if (isNull(ck) || !isCircleShape(ck)) {
+                continue;
+            }
+            size = Math.max(size, c.center.getDistanceTo(ck.center));
+        }
+    }
+    return Math.max(RS.PointTolerance, factor * Math.max(size, 1.0e-6 * mag));
 };
 
 Apollonius.verify = function(candidates, shape1, shape2, shape3) {
@@ -854,8 +543,9 @@ Apollonius.shapesTouch = function(shape1, shape2) {
         }
         else if (isCircleShape(shape2)) {
             var d = shape1.center.getDistanceTo(shape2.center);
-            return RMath.fuzzyCompare(d, shape1.radius + shape2.radius) ||
-                   RMath.fuzzyCompare(d, Math.abs(shape1.radius - shape2.radius));
+            var tol = Apollonius.getCircleTolerance([shape1, shape2], 1.0e-9);
+            return RMath.fuzzyCompare(d, shape1.radius + shape2.radius, tol) ||
+                   RMath.fuzzyCompare(d, Math.abs(shape1.radius - shape2.radius), tol);
         }
     }
 
