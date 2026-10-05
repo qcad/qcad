@@ -124,7 +124,7 @@ void ROrthoGrid::update(bool force) {
     }
 
     viewBox = view.getBox();
-    int viewportNumber = view.getViewportNumber();
+    int viewportNumber = getSettingsViewportNumber();
 
     RDocument* doc = view.getDocument();
     if (doc == NULL) {
@@ -140,11 +140,22 @@ void ROrthoGrid::update(bool force) {
 
     RS::ProjectionRenderingHint hint =  scene->getProjectionRenderingHint();
 
-    // for 3d views, we have no convenient way to calculate the grid dimensions:
+    // 3D views: the grid is displayed on the X/Y plane. A 3D view which
+    // reports the area of the plane it displays as its view box (e.g.
+    // the RHI based 3D view, see RGraphicsViewRhi3DAdapter::getBox)
+    // gets a grid with the same settings as the 2D views (spacing,
+    // minimum pixel spacing, auto scaling). Without a usable view box,
+    // we have no convenient way to calculate the grid dimensions:
     if (hint == RS::RenderThreeD) {
-        gridBox = RBox(RVector(-1000, -1000), RVector(1000, 1000));
-        spacing = RVector(10.0, 10.0);
-        return;
+        if (!viewBox.isValid() || !viewBox.isSane() ||
+            viewBox.getWidth()<RS::PointTolerance || viewBox.getHeight()<RS::PointTolerance) {
+            gridBox = RBox(RVector(-1000, -1000), RVector(1000, 1000));
+            spacing = RVector(10.0, 10.0);
+            return;
+        }
+        // the Z range of the box is irrelevant for the grid on the plane:
+        viewBox = RBox(RVector(viewBox.getMinimum().x, viewBox.getMinimum().y, 0.0),
+                       RVector(viewBox.getMaximum().x, viewBox.getMaximum().y, 0.0));
     }
 
     QString key;
@@ -828,12 +839,23 @@ RVector ROrthoGrid::getMetaSpacing() const {
     return ret;
 }
 
+/**
+ * \return The viewport number whose grid settings (spacing, isometric
+ * grid, projection) apply to this grid: the viewport number of the
+ * view, or 0 for views without a viewport number (e.g. the 3D view
+ * which shows the grid with the settings of the first 2D viewport).
+ */
+int ROrthoGrid::getSettingsViewportNumber() const {
+    int viewportNumber = getViewportNumber();
+    if (viewportNumber<0) {
+        return 0;
+    }
+    return viewportNumber;
+}
+
 bool ROrthoGrid::isIsometric() const {
     if (isometric==-1) {
-        int viewportNumber = getViewportNumber();
-        if (viewportNumber==-1) {
-            return false;
-        }
+        int viewportNumber = getSettingsViewportNumber();
 
         RDocument* doc = getDocument();
         if (doc==NULL) {
@@ -862,10 +884,7 @@ void ROrthoGrid::setIsometric(bool on) {
 
 RS::IsoProjectionType ROrthoGrid::getProjection() const {
     if (projection==-1) {
-        int viewportNumber = getViewportNumber();
-        if (viewportNumber==-1) {
-            return RS::NoProjection;
-        }
+        int viewportNumber = getSettingsViewportNumber();
 
         RDocument* doc = getDocument();
         if (doc==NULL) {

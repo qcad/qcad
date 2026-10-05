@@ -160,6 +160,12 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
 
 double RBlockReferenceData::getDistanceToContents(const RVector& point,
         bool limited, double range, bool draft, double strictRange, bool useBoundingBox) const {
+    return getDistanceToContents(point, limited, range, draft, strictRange, useBoundingBox, false);
+}
+
+double RBlockReferenceData::getDistanceToContents(const RVector& point,
+        bool limited, double range, bool draft, double strictRange, bool useBoundingBox,
+        bool ignoreHatches) const {
 
     if (document == NULL) {
         return RNANDOUBLE;
@@ -202,6 +208,11 @@ double RBlockReferenceData::getDistanceToContents(const RVector& point,
             for (it = ids.begin(); it != ids.end(); it++) {
                 QSharedPointer<REntity> entity = queryEntity(*it, true);
                 if (entity.isNull()) {
+                    continue;
+                }
+
+                // fills of containers do not count (see ignoreHatches):
+                if (ignoreHatches && entity->isOfType(RS::EntityHatch)) {
                     continue;
                 }
 

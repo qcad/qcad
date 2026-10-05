@@ -92,6 +92,19 @@ public:
     double getDistanceToContents(const RVector& point, bool limited, double range,
                                  bool draft, double strictRange, bool useBoundingBox) const;
 
+    /**
+     * \copydoc getDistanceToContents(const RVector&, bool, double, bool, double, bool) const
+     *
+     * \param ignoreHatches True to ignore the hatches in the block: a
+     *      solid hatch counts as hit anywhere inside its boundary, which
+     *      would make a filled container (e.g. a swimlane with a
+     *      background) swallow every click inside it. With this flag only
+     *      the other entities of the block (border, texts, ...) count.
+     */
+    double getDistanceToContents(const RVector& point, bool limited, double range,
+                                 bool draft, double strictRange, bool useBoundingBox,
+                                 bool ignoreHatches) const;
+
     RBox getQueryBoxInBlockCoordinates(const RBox& box) const;
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const;
 

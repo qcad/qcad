@@ -77,6 +77,8 @@ public:
     static QList<RVector> getIdealGridSpacing(RGraphicsView& view, int minPixelSpacing, const RVector& minSpacing, const RVector& minMetaSpacing);
     static bool isFractionalFormat(RS::LinearFormat linearFormat);
 
+    int getSettingsViewportNumber() const;
+
 private:
     static double inchAutoscale(double value, double idealSpacing, RS::Unit unit);
 
