@@ -1414,8 +1414,11 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     loadXRefs();
 
     if (mainWindow!=NULL && notify==true && notifyGlobalListeners==true) {
-        mainWindow->notifyListeners();
+        // import listeners first: plugins may convert the imported data
+        // in place (e.g. blocks of faces into mesh entities), the widgets
+        // (block list, layer list, ...) must see the final state:
         mainWindow->notifyImportListenersPost(this);
+        mainWindow->notifyListeners();
     }
 
     return ret;
@@ -2431,6 +2434,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     bool entityDeleted = false;
 
     QList<RObject::Id> objectIds = transaction.getAffectedObjects();
+    QSet<RObject::Id> statusChanges = transaction.getStatusChanges();
 
     QSet<REntity::Id> entityIdsToRegenerate;
 
@@ -2439,6 +2443,18 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         RObject::Id objectId = *it;
         QSharedPointer<RObject> object = document.queryObjectDirect(objectId);
         if (object.isNull()) {
+            // object removed from the storage by a non-undoable transaction
+            // (an undoable transaction keeps deleted objects as undone):
+            // the scenes have to remove its graphical representation
+            // (RExporter::exportEntity(id) unexports IDs without entity),
+            // e.g. views which keep per entity geometry (RHI 3D) would
+            // otherwise show the old state of an entity which is cloned
+            // on change (new ID):
+            if (statusChanges.contains(objectId)) {
+                entityIdsToRegenerate.insert(objectId);
+                entityHasChanged = true;
+                entityDeleted = true;
+            }
             continue;
         }
 
