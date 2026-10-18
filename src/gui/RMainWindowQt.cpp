@@ -1241,6 +1241,13 @@ bool RMainWindowQt::isFocusReachable(QWidget* w) const {
         if (qobject_cast<QAbstractScrollArea*>(p)!=NULL) {
             check = p;
         }
+
+        // widget of another document (MDI child which is not current):
+        // focusing it would activate (switch to) that document:
+        QMdiSubWindow* sw = qobject_cast<QMdiSubWindow*>(p);
+        if (sw!=NULL && mdiArea!=NULL && sw!=mdiArea->currentSubWindow()) {
+            return false;
+        }
     }
 
     // covered (dock widget tab not on top of stack) or zero size:
