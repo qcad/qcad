@@ -57,6 +57,10 @@ add_library(qcadentity SHARED
     RFaceData.cpp RFaceData.h
     RFaceEntity.cpp RFaceEntity.h
     RHatchData.cpp RHatchData.h
+    RPolyMeshData.cpp RPolyMeshData.h
+    RPolyMeshDataProxy.h
+    RPolyMeshEntity.cpp RPolyMeshEntity.h
+    RPolyMeshEntityProxy.h
     RHatchEntity.cpp RHatchEntity.h
     RHatchProxy.h
     RImageData.cpp RImageData.h
