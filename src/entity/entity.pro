@@ -36,6 +36,8 @@ SOURCES = \
     RFaceData.cpp \
     RFaceEntity.cpp \
     RHatchData.cpp \
+    RPolyMeshData.cpp \
+    RPolyMeshEntity.cpp \
     RHatchEntity.cpp \
     RImageData.cpp \
     RImageEntity.cpp \
@@ -101,6 +103,10 @@ HEADERS = \
     RFaceData.h \
     RFaceEntity.h \
     RHatchData.h \
+    RPolyMeshData.h \
+    RPolyMeshDataProxy.h \
+    RPolyMeshEntity.h \
+    RPolyMeshEntityProxy.h \
     RHatchEntity.h \
     RHatchProxy.h \
     RImageData.h \

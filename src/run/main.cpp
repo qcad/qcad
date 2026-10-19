@@ -59,6 +59,7 @@
 #include "RDocumentVariables.h"
 #include "REllipseEntity.h"
 #include "RFaceEntity.h"
+#include "RPolyMeshEntity.h"
 #include "RFontList.h"
 #include "RHatchEntity.h"
 #include "RImageEntity.h"
@@ -356,6 +357,7 @@ int main(int argc, char *argv[]) {
     RSolidEntity::init();
     RTraceEntity::init();
     RFaceEntity::init();
+    RPolyMeshEntity::init();
     RSplineEntity::init();
     RXLineEntity::init();
     RRayEntity::init();
