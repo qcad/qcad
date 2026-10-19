@@ -440,12 +440,11 @@ function main() {
         pluginInfo = RPluginLoader.getPluginInfo(i);
         var np = pluginInfo.get("OverridePriority", "0");
         np = parseInt(np);
-        if (parseInt(np)>maxPri) {
+        // only plugins that provide a name override compete for it:
+        var n = pluginInfo.get("NameOverride", "");
+        if (n.length>0 && np>maxPri) {
             maxPri = np;
-            var n = pluginInfo.get("NameOverride", "");
-            if (n.length>0) {
-                qApp.applicationName = n;
-            }
+            qApp.applicationName = n;
         }
     }
 
