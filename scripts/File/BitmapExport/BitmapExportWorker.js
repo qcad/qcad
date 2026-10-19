@@ -339,13 +339,17 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
 
     // the view is displayed on screen: remember its state to restore it
     // after the export:
-    var oriFactor, oriOffset, oriBackgroundColor, oriExporting, oriHairlineMinimumMode, oriColorCorrection;
+    var oriFactor, oriOffset, oriBackgroundColor, oriExporting, oriHairlineMinimumMode;
+    var oriHasColorCorrection, oriColorCorrection;
     if (!isNull(view)) {
         oriFactor = view.getFactor();
         oriOffset = view.getOffset();
         oriBackgroundColor = view.getBackgroundColor();
         oriExporting = view.isExporting();
         oriHairlineMinimumMode = view.getHairlineMinimumMode();
+        // the override is tri-state (none, on, off): getColorCorrectionOverride
+        // reports true if there is no override:
+        oriHasColorCorrection = rhiView.hasColorCorrectionOverride();
         oriColorCorrection = rhiView.getColorCorrectionOverride();
     }
 
@@ -398,7 +402,12 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
             view.setBackgroundColor(oriBackgroundColor);
         }
         if (typeof(properties["colorCorrection"])!=="undefined") {
-            rhiView.setColorCorrectionOverride(oriColorCorrection);
+            if (oriHasColorCorrection) {
+                rhiView.setColorCorrectionOverride(oriColorCorrection);
+            }
+            else {
+                rhiView.resetColorCorrectionOverride();
+            }
         }
         rhiView.setOffset(oriOffset);
         rhiView.setFactor(oriFactor);
