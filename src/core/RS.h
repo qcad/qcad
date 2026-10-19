@@ -279,6 +279,7 @@ public:
         EntityTolerance,    /**< Tolerance */
         EntityWipeout,      /**< Wipeout */
         EntityXRef,         /**< XRef */
+        EntityPolyMesh,     /**< Polygon mesh (indexed faces, see RPolyMeshEntity) */
         EntityCustom = 1000,   /**< Custom entity with custom renderer */
 
         EntityUser = 2000   /**< User defined entity. Use this to identify
