@@ -165,6 +165,18 @@ CommandLine.init = function(basePath) {
     dock.objectName = "CommandLineDock";
     dock.setWidget(formWidget);
     //dock.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.MinimumExpanding);
+
+    // the dock widget can be reduced to show only the command line input
+    // (no history), but never less than that: minimum height of the dock
+    // contents is the height of the input row plus frame and separator line:
+    var inputHeight = Math.max(
+        leCommand.minimumSizeHint.height(),
+        lCommand.minimumSizeHint.height(),
+        bToggleTitleBar.minimumSizeHint.height(),
+        leCommand.minimumHeight
+    );
+    formWidget.minimumHeight = Math.max(formWidget.minimumSizeHint.height(), inputHeight + 8);
+
     appWin.addDockWidget(Qt.BottomDockWidgetArea, dock);
     dock.shown.connect(function() { action.setChecked(true); });
     dock.hidden.connect(function() { action.setChecked(false); });
@@ -206,9 +218,20 @@ CommandLine.init = function(basePath) {
         }
     }
 
+    // empty title bar widget used to hide the title bar of the dock widget:
+    // (an empty layout gives it a size hint of 0 instead of -1, so the
+    // minimum height of the dock widget matches its contents exactly)
+    function createEmptyTitleBar() {
+        var w = new QWidget(dock);
+        var l = new QVBoxLayout(w);
+        l.setContentsMargins(0, 0, 0, 0);
+        w.setLayout(l);
+        return w;
+    }
+
     var showTitleBar = RSettings.getBoolValue("Appearance/CommandLineTitleBar", false);
     if (!showTitleBar) {
-        dock.setTitleBarWidget(new QWidget(dock));
+        dock.setTitleBarWidget(createEmptyTitleBar());
         bToggleTitleBar.checked = false;
     }
     else {
@@ -223,7 +246,7 @@ CommandLine.init = function(basePath) {
                         RSettings.setValue("Appearance/CommandLineTitleBar", true);
                     }
                     else {
-                        dock.setTitleBarWidget(new QWidget(dock));
+                        dock.setTitleBarWidget(createEmptyTitleBar());
                         RSettings.setValue("Appearance/CommandLineTitleBar", false);
                     }
                 });
@@ -565,10 +588,17 @@ CommandLine.init = function(basePath) {
     if (RSettings.getQtVersion() >= 0x060000) {
         platformName = " / " + QGuiApplication.platformName();
     }
+    var completeVersionString =
+            "%1.%2.%3%4"
+            .arg(RSettings.getMajorVersion())
+            .arg(RSettings.getMinorVersion())
+            .arg(RSettings.getRevisionVersion())
+            .arg(RSettings.getBuildVersion() !== 0 ? "." + RSettings.getBuildVersion() : "");
+
     EAction.handleUserMessage(
                 "%1 %2 / Qt %3 / %4 %5%6"
                 .arg(qApp.applicationName)
-                .arg(RSettings.getVersionString())
+                .arg(completeVersionString)
                 .arg(RSettings.getQtVersionString())
                 .arg(system)
                 .arg(RS.getBuildCpuArchitecture())
