@@ -2006,6 +2006,14 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
     if (!obj.isNull()) {
         objectHandleMap.remove(obj->getHandle());
 
+        // update object type -> object ID -> object map
+        // (queryBlockReferences etc. iterate over this map: a deleted
+        // object must not be found there, e.g. a block reference deleted
+        // before its block in the same non-undoable transaction):
+        if (typeObjectMap.contains(obj->getType())) {
+            typeObjectMap[obj->getType()].remove(objectId);
+        }
+
         QSharedPointer<REntity> entity = obj.dynamicCast<REntity>();
         if (!entity.isNull()) {
             //blockEntityMap.remove(entity->getBlockId(), entity);
