@@ -1266,6 +1266,8 @@ function entityTypeToClass(type) {
         return "RTraceEntity";
     case RS.EntityFace:
         return "RFaceEntity";
+    case RS.EntityPolyMesh:
+        return "RPolyMeshEntity";
     case RS.EntitySpline:
         return "RSplineEntity";
     case RS.EntityTextBased:
@@ -1377,6 +1379,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Traces") : qsTr("Trace");
     case RS.EntityFace:
         return plural ? qsTr("Faces") : qsTr("Face");
+    case RS.EntityPolyMesh:
+        return plural ? qsTr("Polygon Meshes") : qsTr("Polygon Mesh");
     case RS.EntitySpline:
         return plural ? qsTr("Splines") : qsTr("Spline");
     case RS.EntityTextBased:
@@ -1392,7 +1396,7 @@ function entityTypeToString(type, plural) {
     case RS.EntityUnknown:
         return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
     default:
-        if (type>=RS.EntityCustom && type<RS.EntityUser) {
+        if (type>=RS.EntityCustom) {
             var handler = RCustomEntityRegistry.getHandler(type);
             if (!isNull(handler)) {
                 var name = handler.getEntityName(plural);
@@ -1486,6 +1490,8 @@ function getEntityType(typeName) {
         return RS.EntityTrace;
     case "Face":
         return RS.EntityFace;
+    case "Polygon Mesh":
+        return RS.EntityPolyMesh;
     case "Spline":
         return RS.EntitySpline;
     case "Text based":

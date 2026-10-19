@@ -57,6 +57,18 @@ ColorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docu
         var cb = pageWidget.findChild(def[0]);
         cb.setColor(new RColor(def[1]));
     }
+
+    // selection halos are a feature of the RHI based graphics view
+    // (plugin RHI3D): without it, the halo preferences are hidden:
+    if (!hasPlugin("RHI3D")) {
+        var haloWidgets = ["SelectionHalo", "widget_2", "SelectionHaloSizeLabel", "SelectionHaloSize"];
+        for (var k=0; k<haloWidgets.length; k++) {
+            var w = pageWidget.findChild(haloWidgets[k]);
+            if (!isNull(w)) {
+                w.hide();
+            }
+        }
+    }
 };
 
 /**

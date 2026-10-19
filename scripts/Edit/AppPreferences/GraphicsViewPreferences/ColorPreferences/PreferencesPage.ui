@@ -69,7 +69,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="label_23">
          <property name="minimumSize">
           <size>
            <width>250</width>
@@ -445,6 +445,51 @@
         </widget>
        </item>
        <item row="3" column="0">
+        <widget class="QCheckBox" name="SelectionHalo">
+         <property name="toolTip">
+          <string>Selected entities keep their color and are highlighted with a blurred halo in the selection color. Otherwise they are displayed in the selection color.</string>
+         </property>
+         <property name="text">
+          <string>Highlight selected entities with a halo</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QWidget" name="widget_2" native="true"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="SelectionHaloSizeLabel">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Halo size (px):</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="SelectionHaloSize">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="value">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
         <widget class="QLabel" name="label_13">
          <property name="minimumSize">
           <size>
@@ -460,7 +505,7 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
+       <item row="5" column="1">
         <widget class="RColorCombo" name="ReferencePointColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -480,7 +525,7 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="0">
+       <item row="6" column="0">
         <widget class="QLabel" name="label_15">
          <property name="text">
           <string>Secondary reference points:</string>
@@ -490,7 +535,7 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="1">
+       <item row="6" column="1">
         <widget class="RColorCombo" name="SecondaryReferencePointColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -510,7 +555,7 @@
          </property>
         </widget>
        </item>
-       <item row="9" column="0">
+       <item row="11" column="0">
         <widget class="QLabel" name="label_8">
          <property name="minimumSize">
           <size>
@@ -526,7 +571,7 @@
          </property>
         </widget>
        </item>
-       <item row="9" column="1">
+       <item row="11" column="1">
         <widget class="RColorCombo" name="SelectionBoxColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -546,7 +591,7 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="0">
+       <item row="12" column="0">
         <widget class="QLabel" name="label_9">
          <property name="minimumSize">
           <size>
@@ -562,7 +607,7 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="1">
+       <item row="12" column="1">
         <widget class="RColorCombo" name="SelectionBoxBackgroundColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -582,7 +627,7 @@
          </property>
         </widget>
        </item>
-       <item row="11" column="0">
+       <item row="13" column="0">
         <widget class="QLabel" name="label_12">
          <property name="minimumSize">
           <size>
@@ -598,7 +643,7 @@
          </property>
         </widget>
        </item>
-       <item row="11" column="1">
+       <item row="13" column="1">
         <widget class="RColorCombo" name="SelectionBoxBackgroundCrossColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -618,7 +663,7 @@
          </property>
         </widget>
        </item>
-       <item row="7" column="0">
+       <item row="9" column="0">
         <widget class="QLabel" name="label_18">
          <property name="text">
           <string>Start points:</string>
@@ -628,7 +673,7 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="0">
+       <item row="10" column="0">
         <widget class="QLabel" name="label_19">
          <property name="text">
           <string>End points:</string>
@@ -638,7 +683,7 @@
          </property>
         </widget>
        </item>
-       <item row="7" column="1">
+       <item row="9" column="1">
         <widget class="RColorCombo" name="StartReferencePointColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -658,7 +703,7 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="1">
+       <item row="10" column="1">
         <widget class="RColorCombo" name="EndReferencePointColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -678,7 +723,7 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="0">
+       <item row="7" column="0">
         <widget class="QLabel" name="label_20">
          <property name="text">
           <string>Tertiary reference points:</string>
@@ -688,7 +733,7 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="1">
+       <item row="7" column="1">
         <widget class="RColorCombo" name="TertiaryReferencePointColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -708,7 +753,7 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="0">
+       <item row="8" column="0">
         <widget class="QLabel" name="label_22">
          <property name="text">
           <string>Snap reference points:</string>
@@ -718,7 +763,7 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="1">
+       <item row="8" column="1">
         <widget class="RColorCombo" name="SnapReferencePointColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
