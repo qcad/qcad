@@ -530,7 +530,8 @@ RBlockListQt.prototype.itemColumnClickedSlot = function(item, column) {
 
     var doc = this.di.getDocument();
     var block = doc.queryBlock(this.getBlockName(item));
-    if (isFunction(block.isNull) && block.isNull()) {
+    if (isNull(block) || (isFunction(block.isNull) && block.isNull())) {
+        // stale item (block no longer exists):
         return;
     }
 
