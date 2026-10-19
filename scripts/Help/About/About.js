@@ -66,9 +66,9 @@ About.prototype.beginEvent = function() {
     this.initAboutPlugins(textBrowser);
 
     dialog.windowTitle = qsTr("About %1").arg(this.applicationName);
-    if (!isNull(this.iconFile)) {
-        dialog.findChild("Icon").icon = new QIcon(autoPath(this.iconFile));
-    }
+    var iconFile = isNull(this.iconFile) ? "scripts/qcad_icon.png" : this.iconFile;
+    dialog.findChild("Icon").pixmap = new QIcon(autoPath(iconFile)).pixmap(new QSize(128, 128));
+    dialog.findChild("BuiltWithQt").pixmap = new QIcon(autoPath("scripts/Help/About/BuiltWithQt.png")).pixmap(new QSize(160, 38));
 
     // init about view:
     textBrowser = dialog.findChild("AppText");
@@ -201,7 +201,7 @@ About.prototype.initAboutPlugins = function(textBrowser) {
         });
 
 
-        var maxPri = undefined;
+        var maxPri = {};
         for (var i=0; i<pluginInfos.length; i++) {
             html += "<table border='0' width='100%'>";
 
@@ -226,24 +226,24 @@ About.prototype.initAboutPlugins = function(textBrowser) {
             text = pluginInfo.get("Name", qsTr("No information available"));
             html += this.getTableRow(qsTr("Plugin:"), "<b>" + RS.escape(text) + "</b>", false);
 
-            // overrides:
-            if (isNull(maxPri) || pri>maxPri) {
-                maxPri = pri;
+            // overrides (priority is tracked per key, so a high priority
+            // plugin that only overrides the icon does not block the name):
+            text = pluginInfo.get("NameOverride");
+            if (!isNull(text) && (isNull(maxPri.name) || pri>maxPri.name)) {
+                maxPri.name = pri;
+                this.applicationName = text;
+            }
 
-                text = pluginInfo.get("NameOverride");
-                if (!isNull(text)) {
-                    this.applicationName = text;
-                }
+            text = pluginInfo.get("VersionOverride");
+            if (!isNull(text) && (isNull(maxPri.version) || pri>maxPri.version)) {
+                maxPri.version = pri;
+                this.version = text;
+            }
 
-                text = pluginInfo.get("VersionOverride");
-                if (!isNull(text)) {
-                    this.version = text;
-                }
-
-                text = pluginInfo.get("IconOverride");
-                if (!isNull(text)) {
-                    this.iconFile = text;
-                }
+            text = pluginInfo.get("IconOverride");
+            if (!isNull(text) && (isNull(maxPri.icon) || pri>maxPri.icon)) {
+                maxPri.icon = pri;
+                this.iconFile = text;
             }
 
             // ID:

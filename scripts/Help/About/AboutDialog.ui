@@ -19,34 +19,24 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QToolButton" name="Icon">
+        <widget class="QLabel" name="Icon">
          <property name="toolTip">
           <string>QCAD application icon</string>
          </property>
          <property name="minimumSize">
           <size>
-           <width>128</width>
+           <width>160</width>
            <height>128</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>128</width>
+           <width>160</width>
            <height>128</height>
           </size>
          </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;background-color:transparent;</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../../qcad_icon.png</normaloff>../../qcad_icon.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>128</width>
-           <height>128</height>
-          </size>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -64,34 +54,24 @@
         </spacer>
        </item>
        <item>
-        <widget class="QToolButton" name="toolButton">
+        <widget class="QLabel" name="BuiltWithQt">
          <property name="toolTip">
           <string>Built with Qt logo</string>
          </property>
          <property name="minimumSize">
           <size>
-           <width>128</width>
-           <height>31</height>
+           <width>160</width>
+           <height>38</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>128</width>
-           <height>31</height>
+           <width>160</width>
+           <height>38</height>
           </size>
          </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;background-color:transparent;</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>BuiltWithQt.png</normaloff>BuiltWithQt.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>128</width>
-           <height>31</height>
-          </size>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
