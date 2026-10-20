@@ -289,22 +289,17 @@ Explode.explodeEntity = function(entity, options) {
     else if (isPolylineEntity(entity)) {
         polyline = entity.getData().castToShape();
 
-        // explode polyline with segment widths:
-        if (RPolyline.hasProxy() && polyline.hasWidths()) {
+        // explode polyline with segment widths into its rendered outline:
+        if (RPolyline.hasProxy() && polyline.hasWidths() && RSettings.getQtVersion() >= 0x060000) {
+            ret = Explode.explodeThickPolyline(polyline);
+        }
+
+        // explode polyline with segment widths into left / right borders
+        // (Qt 5: no united outline available):
+        else if (RPolyline.hasProxy() && polyline.hasWidths()) {
 
             // list of polyline pairs (left / right):
-            var pls;
-            if (RSettings.getQtVersion() >= 0x060000) {
-                pls = [];
-                var plsLeft = polyline.getLeftOutline();
-                var plsRight = polyline.getRightOutline();
-                for (var i=0; i<plsLeft.length && i<plsRight.length; i++) {
-                    pls.push([plsLeft[i], plsRight[i]]);
-                }
-            }
-            else {
-                pls = polyline.getLeftRightOutline();
-            }
+            var pls = polyline.getLeftRightOutline();
 
             var first = true;
             var lastSegment = undefined;
@@ -761,4 +756,191 @@ Explode.explodeEntity = function(entity, options) {
     }
 
     return ret;
+};
+
+/**
+ * \return Lines, arcs and circles of the outline of the given polyline with
+ * widths, exactly as rendered (RPolyline::getOutline). Zero width bridges
+ * that connect holes or touching parts to the outer contour are removed and
+ * consecutive collinear lines or arcs with the same center and radius are
+ * merged.
+ */
+Explode.explodeThickPolyline = function(polyline) {
+    var ret = [];
+    var outlines = polyline.getOutline();
+    var i, k;
+
+    for (i=0; i<outlines.length; i++) {
+        var outline = outlines[i];
+        var n = outline.countSegments();
+        if (n===0) {
+            continue;
+        }
+
+        if (!outline.isClosed()) {
+            // thin part of polyline:
+            for (k=0; k<n; k++) {
+                var seg = getPtr(outline.getSegmentAt(k));
+                if (!isNull(seg) && seg.getLength()>RS.PointTolerance) {
+                    ret.push(seg.clone());
+                }
+            }
+            continue;
+        }
+
+        var tol = Math.max(outline.getBoundingBox().getSize().getMagnitude2D() * 1.0e-7, RS.PointTolerance);
+
+        // segments of outline as doubly linked cycle:
+        var segs = [];
+        var next = [];
+        var prev = [];
+        var removed = [];
+        for (k=0; k<n; k++) {
+            segs.push(getPtr(outline.getSegmentAt(k)));
+            next.push((k+1)%n);
+            prev.push((k+n-1)%n);
+            removed.push(false);
+        }
+
+        var unlink = function(idx) {
+            next[prev[idx]] = next[idx];
+            prev[next[idx]] = prev[idx];
+            removed[idx] = true;
+        };
+
+        // remove zero length segments (e.g. bridges to touching loops):
+        for (k=0; k<n; k++) {
+            if (isNull(segs[k]) || segs[k].getLength()<tol) {
+                unlink(k);
+            }
+        }
+
+        // cut bridges: pairs of line segments in opposite directions between
+        // the same vertices split the cycle into two cycles:
+        var lines = {};
+        var key = function(v1, v2) {
+            return v1.x + "," + v1.y + ";" + v2.x + "," + v2.y;
+        };
+        for (k=0; k<n; k++) {
+            if (removed[k] || Math.abs(outline.getBulgeAt(k))>RS.PointTolerance) {
+                continue;
+            }
+            var v1 = outline.getVertexAt(k);
+            var v2 = outline.getVertexAt((k+1)%n);
+            var j = lines[key(v2, v1)];
+            if (isNull(j) || removed[j]) {
+                lines[key(v1, v2)] = k;
+                continue;
+            }
+
+            // bridge j: A->B, k: B->A:
+            var pj = prev[j], nj = next[j];
+            var pk = prev[k], nk = next[k];
+            removed[j] = true;
+            removed[k] = true;
+            if (nj===k) {
+                // spike:
+                next[pj] = nk;
+                prev[nk] = pj;
+            }
+            else if (nk===j) {
+                next[pk] = nj;
+                prev[nj] = pk;
+            }
+            else {
+                next[pj] = nk;
+                prev[nk] = pj;
+                next[pk] = nj;
+                prev[nj] = pk;
+            }
+        }
+
+        // collect loops and merge consecutive segments:
+        var visited = [];
+        for (k=0; k<n; k++) {
+            if (removed[k] || visited[k]===true) {
+                continue;
+            }
+
+            var loop = [];
+            var idx = k;
+            while (visited[idx]!==true && !removed[idx]) {
+                visited[idx] = true;
+                loop.push(segs[idx].clone());
+                idx = next[idx];
+            }
+
+            loop = Explode.mergeSegments(loop, tol);
+
+            if (loop.length===1 && isArcShape(loop[0])) {
+                ret.push(new RCircle(loop[0].getCenter(), loop[0].getRadius()));
+                continue;
+            }
+
+            for (var m=0; m<loop.length; m++) {
+                ret.push(loop[m]);
+            }
+        }
+    }
+
+    return ret;
+};
+
+/**
+ * \return Given closed loop of lines and arcs with consecutive collinear
+ * lines and consecutive arcs with the same center and radius merged.
+ */
+Explode.mergeSegments = function(loop, tol) {
+    var merge = function(s1, s2) {
+        if (!s1.getEndPoint().equalsFuzzy(s2.getStartPoint(), tol)) {
+            return undefined;
+        }
+        if (isLineShape(s1) && isLineShape(s2)) {
+            var line = new RLine(s1.getStartPoint(), s2.getEndPoint());
+            if (line.getLength()<tol) {
+                return undefined;
+            }
+            if (line.getDistanceTo(s1.getEndPoint(), false)>tol ||
+                !RMath.fuzzyAngleCompare(s1.getDirection1(), s2.getDirection1(), 1.0e-3)) {
+                return undefined;
+            }
+            return line;
+        }
+        if (isArcShape(s1) && isArcShape(s2)) {
+            if (s1.isReversed()!==s2.isReversed() ||
+                !s1.getCenter().equalsFuzzy(s2.getCenter(), tol) ||
+                Math.abs(s1.getRadius()-s2.getRadius())>tol) {
+                return undefined;
+            }
+            var sweep = Math.abs(s1.getSweep()) + Math.abs(s2.getSweep());
+            if (sweep>2*Math.PI+1.0e-6) {
+                return undefined;
+            }
+            var arc = new RArc(s1.getCenter(), s1.getRadius(), s1.getStartAngle(), s2.getEndAngle(), s1.isReversed());
+            if (sweep>2*Math.PI-1.0e-6) {
+                // full circle:
+                arc.setEndAngle(arc.getStartAngle() + (arc.isReversed() ? -2*Math.PI : 2*Math.PI));
+            }
+            return arc;
+        }
+        return undefined;
+    };
+
+    var i = 0;
+    while (loop.length>1 && i<loop.length) {
+        var i2 = (i+1)%loop.length;
+        var merged = merge(loop[i], loop[i2]);
+        if (isNull(merged)) {
+            i++;
+            continue;
+        }
+        loop[i] = merged;
+        loop.splice(i2, 1);
+        if (i2<i) {
+            // merged with first segment:
+            i--;
+        }
+    }
+
+    return loop;
 };
