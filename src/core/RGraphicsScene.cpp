@@ -451,6 +451,29 @@ RRefPoint RGraphicsScene::getHighlightedReferencePoint() {
 }
 
 /**
+ * \return True if the given entity is highlighted when the mouse hovers
+ * over it according to the preferences: images and hatches only if
+ * enabled (GraphicsView/HighlightImage, GraphicsView/HighlightHatch,
+ * default off). Used by the implementations of highlightEntity, which
+ * may ignore it (e.g. scenes that highlight entities with a halo).
+ */
+bool RGraphicsScene::isHighlightEnabled(const REntity& entity) {
+    if (entity.getType()==RS::EntityImage) {
+        if (RSettings::getBoolValue("GraphicsView/HighlightImage", false)==false) {
+            return false;
+        }
+    }
+
+    if (entity.getType()==RS::EntityHatch) {
+        if (RSettings::getBoolValue("GraphicsView/HighlightHatch", false)==false) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+/**
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RGraphicsScene& gs) {

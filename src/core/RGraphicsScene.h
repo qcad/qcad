@@ -157,6 +157,8 @@ public:
      */
     virtual void highlightEntity(REntity& entity) = 0;
 
+    static bool isHighlightEnabled(const REntity& entity);
+
     virtual void highlightReferencePoint(const RRefPoint& position);
 
     virtual void selectReferencePoints(const RBox& box, bool add);

@@ -1822,18 +1822,8 @@ void RDocumentInterface::highlightEntity(REntity::Id entityId) {
         return;
     }
 
-    if (entity->getType()==RS::EntityImage) {
-        if (RSettings::getBoolValue("GraphicsView/HighlightImage", false)==false) {
-            return;
-        }
-    }
-
-    if (entity->getType()==RS::EntityHatch) {
-        if (RSettings::getBoolValue("GraphicsView/HighlightHatch", false)==false) {
-            return;
-        }
-    }
-
+    // images and hatches are filtered by the scenes according to the
+    // preferences (see RGraphicsScene::isHighlightEnabled):
     QList<RGraphicsScene*>::iterator it;
     for (it=scenes.begin(); it!=scenes.end(); it++) {
         (*it)->highlightEntity(*entity);

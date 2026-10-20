@@ -1343,6 +1343,10 @@ void RGraphicsSceneQt::addTextToPreview(const RTextBasedData& text) {
 }
 
 void RGraphicsSceneQt::highlightEntity(REntity& entity) {
+    if (!isHighlightEnabled(entity)) {
+        return;
+    }
+
     // get painter paths for closest entity:
     QList<RGraphicsSceneDrawable>* drawables = getDrawables(entity.getId());
     if (drawables==NULL) {

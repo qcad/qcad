@@ -49,6 +49,8 @@ ColorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docu
                 [ "MeasurementToolsColor", "#9bdc70" ],
                 [ "AuxShapeColor", "#7976c5" ],
                 [ "ZoomBoxColor", "#7f0000" ],
+                [ "HaloHighlightColor", "#80ff8000" ],
+                [ "HaloSelectionColor", "#8064ceff" ],
     ];
 
     for (var i=0; i<defaults.length; i++) {
@@ -58,15 +60,12 @@ ColorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docu
         cb.setColor(new RColor(def[1]));
     }
 
-    // selection halos are a feature of the RHI based graphics view
-    // (plugin RHI3D): without it, the halo preferences are hidden:
+    // halos are a feature of the RHI based graphics view (plugin RHI3D):
+    // without it, the halo preferences are hidden:
     if (!hasPlugin("RHI3D")) {
-        var haloWidgets = ["SelectionHalo", "widget_2", "SelectionHaloSizeLabel", "SelectionHaloSize"];
-        for (var k=0; k<haloWidgets.length; k++) {
-            var w = pageWidget.findChild(haloWidgets[k]);
-            if (!isNull(w)) {
-                w.hide();
-            }
+        var haloGroupBox = pageWidget.findChild("HaloGroupBox");
+        if (!isNull(haloGroupBox)) {
+            haloGroupBox.hide();
         }
     }
 };
