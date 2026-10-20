@@ -1257,6 +1257,7 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
                     filtered.push(blockName);
                 }
             }
+            filtered.sort(Array.alphaNumericalSorter);
             controls = this.initChoiceControls(
                         objectName, propertyTypeId, onlyChanges, control,
                         filtered);
