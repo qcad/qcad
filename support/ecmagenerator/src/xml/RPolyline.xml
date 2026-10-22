@@ -1118,6 +1118,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RPolyline" isPureVirtual="false">
         <arg type="double" typeName="double" name="radius"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="inverted"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getPolygon" cppName="getPolygon"

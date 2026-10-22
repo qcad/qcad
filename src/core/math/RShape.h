@@ -476,7 +476,7 @@ public:
             const RShape& limitingShape, const RVector& limitingClickPos,
             bool trimBoth, bool samePolyline);
 
-    static QList<QSharedPointer<RShape> > roundCorners(const QList<QSharedPointer<RShape> >& shapes, double radius);
+    static QList<QSharedPointer<RShape> > roundCorners(const QList<QSharedPointer<RShape> >& shapes, double radius, bool inverted = false);
 
     static QList<QSharedPointer<RShape> > getInnerMostContour(const RVector& position, const QList<QSharedPointer<RShape> >& shapes);
 

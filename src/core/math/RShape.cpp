@@ -2516,10 +2516,12 @@ QList<QSharedPointer<RShape> > RShape::trim(
 
 /**
  * Round every corner of the list of given (connected) shapes with the given radius.
+ *
+ * \param inverted True to invert the rounding arcs (concave rounding).
  */
-QList<QSharedPointer<RShape> > RShape::roundCorners(const QList<QSharedPointer<RShape> >& shapes, double radius) {
+QList<QSharedPointer<RShape> > RShape::roundCorners(const QList<QSharedPointer<RShape> >& shapes, double radius, bool inverted) {
     if (RShape::hasProxy()) {
-        return RShape::getShapeProxy()->roundAllCorners(shapes, radius);
+        return RShape::getShapeProxy()->roundAllCorners(shapes, radius, inverted);
     }
     return shapes;
 }

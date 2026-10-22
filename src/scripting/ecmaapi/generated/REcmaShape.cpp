@@ -11858,6 +11858,65 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isArray()
+        ) /* type: QList < QSharedPointer < RShape > > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray or QVariantMap
+                    QList < QSharedPointer < RShape > >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        RShape::
+       roundCorners(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RShape.roundCorners().",
                    context);
