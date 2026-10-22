@@ -133,6 +133,7 @@ public:
     void notifyPropertyListeners();
 
     void addExportListener(RExportListener* l);
+    void prependExportListener(RExportListener* l);
     void removeExportListener(RExportListener* l);
     void notifyExportListenersPre(RDocumentInterface* documentInterface);
     void notifyExportListenersPost(RDocumentInterface* documentInterface);
