@@ -3159,7 +3159,8 @@ function applyTheme() {
 
         if (!found) {
             if (theme!=="Default") {
-                qWarning("Cannot open theme: ", theme);
+                // no warning: some themes have no stylesheet:
+                //qWarning("Cannot open theme: ", theme);
             }
         }
     }
