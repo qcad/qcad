@@ -260,12 +260,31 @@ void RMainWindow::notifySelectionListeners(RDocumentInterface* documentInterface
 
 /**
  * Adds a listener for export events.
+ *
+ * Listeners are notified about pre export events in the order in which
+ * they were added and about post export and end of export events in
+ * reverse order, so that a listener which prepares the document before
+ * another listener (see \ref prependExportListener) restores it after
+ * that listener has restored its own changes.
  */
 void RMainWindow::addExportListener(RExportListener* l) {
     if (l != NULL) {
         exportListeners.push_back(l);
     } else {
         qWarning("RMainWindow::addExportListener(): Listener is NULL.");
+    }
+}
+
+/**
+ * Adds a listener for export events which is notified before all
+ * listeners added so far (pre export event) and after them (post export
+ * and end of export events), see \ref addExportListener.
+ */
+void RMainWindow::prependExportListener(RExportListener* l) {
+    if (l != NULL) {
+        exportListeners.push_front(l);
+    } else {
+        qWarning("RMainWindow::prependExportListener(): Listener is NULL.");
     }
 }
 
@@ -284,22 +303,22 @@ void RMainWindow::notifyExportListenersPre(RDocumentInterface* documentInterface
 }
 
 /**
- * Notifies all Export listeners about post export event.
+ * Notifies all Export listeners about post export event
+ * (in reverse order, see \ref addExportListener).
  */
 void RMainWindow::notifyExportListenersPost(RDocumentInterface* documentInterface) {
-    QList<RExportListener*>::iterator it;
-    for (it = exportListeners.begin(); it != exportListeners.end(); ++it) {
-        (*it)->postExportEvent(documentInterface);
+    for (int i=exportListeners.length()-1; i>=0; i--) {
+        exportListeners[i]->postExportEvent(documentInterface);
     }
 }
 
 /**
- * Notifies all Export listeners about end of export event.
+ * Notifies all Export listeners about end of export event
+ * (in reverse order, see \ref addExportListener).
  */
 void RMainWindow::notifyExportListenersEnd(RExporter* exporter) {
-    QList<RExportListener*>::iterator it;
-    for (it = exportListeners.begin(); it != exportListeners.end(); ++it) {
-        (*it)->endOfExportEvent(exporter);
+    for (int i=exportListeners.length()-1; i>=0; i--) {
+        exportListeners[i]->endOfExportEvent(exporter);
     }
 }
 

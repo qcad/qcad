@@ -1084,6 +1084,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="shapes" isConst="true" />
         <arg type="double" typeName="double" name="radius"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="inverted"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getInnerMostContour"

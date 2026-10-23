@@ -360,6 +360,132 @@
      </widget>
     </item>
     <item>
+     <widget class="QGroupBox" name="HaloGroupBox">
+      <property name="title">
+       <string>Halos</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout_11">
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="SelectionHalo">
+         <property name="toolTip">
+          <string>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</string>
+         </property>
+         <property name="text">
+          <string>Use halos for highlighting and selection</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QWidget" name="widget_2" native="true"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="SelectionHaloSizeLabel">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Halo size (px):</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="SelectionHaloSize">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="HaloHighlightColorLabel">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Halo color for highlighting:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="RColorCombo" name="HaloHighlightColor">
+         <property name="onlyFixed" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="showAlphaChannel" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="color" stdset="0">
+          <color>
+           <red>255</red>
+           <green>128</green>
+           <blue>0</blue>
+          </color>
+         </property>
+         <property name="blackWhite" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="HaloSelectionColorLabel">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Halo color for selection:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="RColorCombo" name="HaloSelectionColor">
+         <property name="onlyFixed" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="showAlphaChannel" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="color" stdset="0">
+          <color>
+           <red>100</red>
+           <green>206</green>
+           <blue>255</blue>
+          </color>
+         </property>
+         <property name="blackWhite" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
      <widget class="QGroupBox" name="groupBox_5">
       <property name="title">
        <string>Selection</string>
@@ -989,132 +1115,6 @@
            <red>127</red>
            <green>0</green>
            <blue>0</blue>
-          </color>
-         </property>
-         <property name="blackWhite" stdset="0">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="HaloGroupBox">
-      <property name="title">
-       <string>Halos</string>
-      </property>
-      <layout class="QFormLayout" name="formLayout_11">
-       <item row="0" column="0">
-        <widget class="QCheckBox" name="SelectionHalo">
-         <property name="toolTip">
-          <string>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</string>
-         </property>
-         <property name="text">
-          <string>Use halos for highlighting and selection</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QWidget" name="widget_2" native="true"/>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="SelectionHaloSizeLabel">
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Halo size (px):</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="SelectionHaloSize">
-         <property name="minimum">
-          <number>1</number>
-         </property>
-         <property name="maximum">
-          <number>20</number>
-         </property>
-         <property name="value">
-          <number>1</number>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="HaloHighlightColorLabel">
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Halo color for highlighting:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="RColorCombo" name="HaloHighlightColor">
-         <property name="onlyFixed" stdset="0">
-          <bool>true</bool>
-         </property>
-         <property name="showAlphaChannel" stdset="0">
-          <bool>true</bool>
-         </property>
-         <property name="color" stdset="0">
-          <color>
-           <red>255</red>
-           <green>128</green>
-           <blue>0</blue>
-          </color>
-         </property>
-         <property name="blackWhite" stdset="0">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="HaloSelectionColorLabel">
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Halo color for selection:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="RColorCombo" name="HaloSelectionColor">
-         <property name="onlyFixed" stdset="0">
-          <bool>true</bool>
-         </property>
-         <property name="showAlphaChannel" stdset="0">
-          <bool>true</bool>
-         </property>
-         <property name="color" stdset="0">
-          <color>
-           <red>100</red>
-           <green>206</green>
-           <blue>255</blue>
           </color>
          </property>
          <property name="blackWhite" stdset="0">

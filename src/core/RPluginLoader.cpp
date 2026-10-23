@@ -208,7 +208,7 @@ void RPluginLoader::loadPlugins(bool init) {
     }
 
     // load statically compiled in plugins:
-    qDebug() << "loading static plugins...";
+    //qDebug() << "loading static plugins...";
     QObjectList staticPlugins = QPluginLoader::staticInstances();
     for (int i=0; i<staticPlugins.size(); i++) {
         QObject* plugin = staticPlugins[i];
@@ -252,7 +252,7 @@ void RPluginLoader::loadPlugin(QObject* plugin, bool init, const QString& fileNa
         }
         else {
             // ignore other Qt plugins
-            qDebug() << "Plugin does not implement RPluginInterface:" << fileName;
+            //qDebug() << "Plugin does not implement RPluginInterface:" << fileName;
             return;
         }
     }

@@ -38,7 +38,7 @@ class QCADCORE_EXPORT RShapeProxy {
 public:
     virtual ~RShapeProxy() {}
 
-    virtual QList<QSharedPointer<RShape> > roundAllCorners(const QList<QSharedPointer<RShape> >& shapes, double radius) = 0;
+    virtual QList<QSharedPointer<RShape> > roundAllCorners(const QList<QSharedPointer<RShape> >& shapes, double radius, bool inverted = false) = 0;
 
     /**
      * Traces the inner most (smallest) closed contour around the given position

@@ -2389,9 +2389,16 @@ QList<RPolyline> RPolyline::morph(const RPolyline& target, int steps, RS::Easing
     return QList<RPolyline>();
 }
 
-RPolyline RPolyline::roundAllCorners(double radius) const {
+/**
+ * Rounds all corners of this polyline with the given radius.
+ *
+ * \param radius Radius of the rounding arcs.
+ * \param inverted True to invert the rounding arcs (concave rounding:
+ *     the arcs bulge into the corners instead of cutting them off).
+ */
+RPolyline RPolyline::roundAllCorners(double radius, bool inverted) const {
     if (polylineProxy!=NULL) {
-        return polylineProxy->roundAllCorners(*this, radius);
+        return polylineProxy->roundAllCorners(*this, radius, inverted);
     }
     return *this;
 }
