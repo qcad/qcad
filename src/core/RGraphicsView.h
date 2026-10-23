@@ -290,6 +290,21 @@ public:
         return lastKnownModelPosition;
     }
 
+    /**
+     * Forgets the positions of the last mouse event. Called when the
+     * current block of the document changes: the model position was
+     * captured in the coordinate system of the previous block and the
+     * screen position refers to its (possibly different) transformation,
+     * so simulateMouseMoveEvent must not replay them in the new block
+     * (the entity next to the stale position was highlighted after
+     * returning from a block to the model space). Nothing is simulated
+     * until the next real mouse move.
+     */
+    void invalidateLastKnownPositions() {
+        lastKnownModelPosition = RVector::invalid;
+        lastKnownScreenPosition = RVector::invalid;
+    }
+
     double getCurrentStepScaleFactor() const {
         return currentStepScaleFactor;
     }

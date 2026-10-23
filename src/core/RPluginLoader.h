@@ -90,8 +90,25 @@ public:
     static bool checkPluginLicense(QObject* plugin);
 
 private:
+    /**
+     * \return The plugin objects loaded by loadPlugins (dynamically loaded
+     * plugins in load order, then the statically linked plugins).
+     */
+    static QList<QObject*> getPluginObjects();
+
     static QList<RPluginInfo> pluginsInfo;
     static QStringList pluginFiles;
+    /**
+     * Instances of the dynamically loaded plugins (see loadPlugins). Used
+     * by postInitPlugins, initScriptExtensions and initTranslations instead
+     * of loading the plugins again by file name: a plugin file that has been
+     * removed from the plugins directory since the start (e.g. by a launcher
+     * script of another QCAD process that cleans the plugins directory)
+     * cannot be found by QPluginLoader anymore, although the plugin is
+     * loaded, and its script extensions would be missing in every script
+     * engine created later (document engines are created on demand).
+     */
+    static QList<QObject*> plugins;
 };
 
 Q_DECLARE_METATYPE(RPluginLoader*)

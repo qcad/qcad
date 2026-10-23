@@ -29,6 +29,7 @@
 
 QList<RPluginInfo > RPluginLoader::pluginsInfo;
 QStringList RPluginLoader::pluginFiles;
+QList<QObject*> RPluginLoader::plugins;
 
 
 QString RPluginLoader::getPluginSuffix() {
@@ -109,6 +110,7 @@ void RPluginLoader::loadPlugins(bool init) {
 
     pluginFiles.clear();
     pluginsInfo.clear();
+    plugins.clear();
 
 
 #ifndef Q_OS_MAC
@@ -198,6 +200,9 @@ void RPluginLoader::loadPlugins(bool init) {
         else {
             QPluginLoader loader(fileName);
             QObject* plugin = loader.instance();
+            if (plugin!=NULL) {
+                plugins.append(plugin);
+            }
             loadPlugin(plugin, init, fileName, loader.errorString());
         }
     }
@@ -211,6 +216,15 @@ void RPluginLoader::loadPlugins(bool init) {
     }
 }
 
+QList<QObject*> RPluginLoader::getPluginObjects() {
+    QList<QObject*> ret = plugins;
+    QObjectList staticPlugins = QPluginLoader::staticInstances();
+    for (int i=0; i<staticPlugins.size(); i++) {
+        ret.append(staticPlugins[i]);
+    }
+    return ret;
+}
+
 void RPluginLoader::unloadPlugins() {
     foreach (QString fileName, getPluginFiles()) {
         unloadPlugin(fileName, true);
@@ -221,6 +235,7 @@ void RPluginLoader::unloadPlugins() {
         QObject* plugin = staticPlugins[i];
         unloadPlugin(plugin);
     }
+    plugins.clear();
 }
 
 void RPluginLoader::loadPlugin(QObject* plugin, bool init, const QString& fileName, const QString& errorString) {
@@ -269,16 +284,10 @@ void RPluginLoader::unloadPlugin(QObject* plugin, bool remove) {
 }
 
 void RPluginLoader::postInitPlugins(RPluginInterface::InitStatus status) {
-    foreach (QString fileName, getPluginFiles()) {
-        QPluginLoader loader(fileName);
-        QObject* plugin = loader.instance();
-        postInitPlugin(plugin, status);
-    }
-
-    QObjectList staticPlugins = QPluginLoader::staticInstances();
-    for (int i=0; i<staticPlugins.size(); i++) {
-        QObject* plugin = staticPlugins[i];
-        postInitPlugin(plugin, status);
+    // loaded plugin objects, not the files (see plugins):
+    QList<QObject*> pluginObjects = getPluginObjects();
+    for (int i=0; i<pluginObjects.size(); i++) {
+        postInitPlugin(pluginObjects[i], status);
     }
 }
 
@@ -291,16 +300,10 @@ void RPluginLoader::postInitPlugin(QObject* plugin, RPluginInterface::InitStatus
 
 #if QT_VERSION < 0x060000
 void RPluginLoader::initScriptExtensions(QScriptEngine& engine) {
-    foreach (QString fileName, getPluginFiles()) {
-        QPluginLoader loader(fileName);
-        QObject* plugin = loader.instance();
-        initScriptExtensions(plugin, engine);
-    }
-
-    QObjectList staticPlugins = QPluginLoader::staticInstances();
-    for (int i=0; i<staticPlugins.size(); i++) {
-        QObject* plugin = staticPlugins[i];
-        initScriptExtensions(plugin, engine);
+    // loaded plugin objects, not the files (see plugins):
+    QList<QObject*> pluginObjects = getPluginObjects();
+    for (int i=0; i<pluginObjects.size(); i++) {
+        initScriptExtensions(pluginObjects[i], engine);
     }
 }
 
@@ -312,16 +315,10 @@ void RPluginLoader::initScriptExtensions(QObject* plugin, QScriptEngine& engine)
 }
 #else
 void RPluginLoader::initScriptExtensions(RScriptHandler& handler) {
-    foreach (QString fileName, getPluginFiles()) {
-        QPluginLoader loader(fileName);
-        QObject* plugin = loader.instance();
-        initScriptExtensions(plugin, handler);
-    }
-
-    QObjectList staticPlugins = QPluginLoader::staticInstances();
-    for (int i=0; i<staticPlugins.size(); i++) {
-        QObject* plugin = staticPlugins[i];
-        initScriptExtensions(plugin, handler);
+    // loaded plugin objects, not the files (see plugins):
+    QList<QObject*> pluginObjects = getPluginObjects();
+    for (int i=0; i<pluginObjects.size(); i++) {
+        initScriptExtensions(pluginObjects[i], handler);
     }
 }
 
@@ -334,16 +331,10 @@ void RPluginLoader::initScriptExtensions(QObject* plugin, RScriptHandler& handle
 #endif
 
 void RPluginLoader::initTranslations() {
-    foreach (QString fileName, getPluginFiles()) {
-        QPluginLoader loader(fileName);
-        QObject* plugin = loader.instance();
-        initTranslations(plugin);
-    }
-
-    QObjectList staticPlugins = QPluginLoader::staticInstances();
-    for (int i=0; i<staticPlugins.size(); i++) {
-        QObject* plugin = staticPlugins[i];
-        initTranslations(plugin);
+    // loaded plugin objects, not the files (see plugins):
+    QList<QObject*> pluginObjects = getPluginObjects();
+    for (int i=0; i<pluginObjects.size(); i++) {
+        initTranslations(pluginObjects[i]);
     }
 }
 

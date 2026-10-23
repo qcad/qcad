@@ -2871,6 +2871,22 @@ void RDocumentInterface::setCurrentLayer(const RLayer& layer) {
 void RDocumentInterface::setCurrentBlock(RBlock::Id blockId) {
     clearSelection();
     document.setCurrentBlock(blockId);
+
+    // the last known mouse positions of the views were captured in the
+    // coordinate system of the previous block: forget them, otherwise the
+    // simulated mouse move of the resuming default action (e.g. after
+    // Block > Edit Block) reuses them in the new block and highlights
+    // whatever entity happens to be close to that position (block tutorial:
+    // block reference highlighted after returning to the model space):
+    for (int i=0; i<scenes.length(); i++) {
+        QList<RGraphicsView*> views = scenes[i]->getGraphicsViews();
+        for (int k=0; k<views.length(); k++) {
+            if (views[k]!=NULL) {
+                views[k]->invalidateLastKnownPositions();
+            }
+        }
+    }
+
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyBlockListenersCurrentBlock(this);
     }
