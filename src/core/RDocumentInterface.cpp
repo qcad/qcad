@@ -1674,7 +1674,21 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
         if (event.modifiers()==Qt::AltModifier) {
             ret = restrictOrtho(ret, getRelativeZero(), RS::Orthogonal);
         }
-        
+
+        // 2D views: always snap to Z level 0, also when snapping to 3D
+        // objects (e.g. the corners of a mesh or workpiece) or relative
+        // to a point picked in a 3D view (snap restrictions):
+        if (!RSnap::isThreeDimensionalView(event.getGraphicsView())) {
+            if (ret.isValid()) {
+                ret.z = 0.0;
+            }
+            RVector lastSnap = currentSnap->getLastSnap();
+            if (lastSnap.isValid() && lastSnap.z != 0.0) {
+                lastSnap.z = 0.0;
+                currentSnap->setLastSnap(lastSnap);
+            }
+        }
+
         QList<REntity::Id> entityIds = currentSnap->getEntityIds();
         QList<REntity::Id>::iterator it;
         for (it=entityIds.begin(); it!=entityIds.end(); ++it) {
