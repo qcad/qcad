@@ -410,6 +410,16 @@ function main() {
         RSettings.removeValue("GraphicsViewColors/SelectionColor");
     }
 
+    // QCAD 27: anti-aliasing and the RHI based graphics view are on by
+    // default (see initVersionDefaults in RSettings.cpp). Reset these
+    // settings once if they were stored by an older version (e.g. by
+    // the preferences dialog), so that the new defaults apply:
+    var configVersion = RSettings.getIntValue("Application/Version", 0);
+    if (configVersion>0 && configVersion<27000000) {
+        RSettings.removeValue("GraphicsView/Antialiasing");
+        RSettings.removeValue("GraphicsView/UseRhiGraphicsView");
+    }
+
     if (RSettings.getStringValue("Application/Version", "")!==RSettings.getNumericalVersionString()) {
         newVersion = true;
     }
