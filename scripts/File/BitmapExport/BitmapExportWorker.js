@@ -303,8 +303,9 @@ function renderBitmapImage(doc, scene, properties, view) {
  * the frame cannot be rendered at all.
  *
  * Options which are implemented by the image based view only (paint
- * origin, antialiasing, alpha channel, text height threshold, number of
- * threads) are not available. The color modes (monochrome, grayscale) are
+ * origin, alpha channel, text height threshold, number of threads) are
+ * not available. Antialiasing is supported by 2D views only (3D views
+ * are always anti-aliased). The color modes (monochrome, grayscale) are
  * applied to the rendered image.
  *
  * The grid and the decorations (origin, crosshair, reference points, snap
@@ -340,9 +341,10 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
     // the view is displayed on screen: remember its state to restore it
     // after the export:
     var oriFactor, oriOffset, oriBackgroundColor, oriExporting, oriHairlineMinimumMode;
-    var oriHasColorCorrection, oriColorCorrection;
+    var oriHasColorCorrection, oriColorCorrection, oriAntialiasing;
     if (!isNull(view)) {
         oriFactor = view.getFactor();
+        oriAntialiasing = view.getAntialiasing();
         oriOffset = view.getOffset();
         oriBackgroundColor = view.getBackgroundColor();
         oriExporting = view.isExporting();
@@ -351,6 +353,13 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
         // reports true if there is no override:
         oriHasColorCorrection = rhiView.hasColorCorrectionOverride();
         oriColorCorrection = rhiView.getColorCorrectionOverride();
+    }
+
+    // the anti-aliasing flag of the view also sets the number of samples
+    // of the color buffer (see RGraphicsViewRhi3D::getEffectiveSampleCount):
+    // set it before the export size:
+    if (!isNull(view)) {
+        view.setAntialiasing(properties["antialiasing"]==null ? true : properties["antialiasing"]);
     }
 
     // the zoom depends on the size of the view: switch to the exported
@@ -394,6 +403,9 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
     var buffer = rhiView.grabFramebuffer();
 
     // restore the state of the view:
+    if (!isNull(view)) {
+        view.setAntialiasing(oriAntialiasing);
+    }
     rhiView.resetExportSize();
     if (!isNull(view)) {
         view.setExporting(oriExporting);
