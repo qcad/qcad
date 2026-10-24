@@ -32,10 +32,11 @@ qt_standard_project_setup()
 # update_qrc.sh only rewrites a .qrc when its content actually changed (via its
 # diff check), so rcc is only re-invoked when there is a real change.
 #
-# Windows cannot execute the shell script (it gets opened with the associated
-# text editor instead), so the .qrc files are only regenerated on systems
-# capable of running it; on Windows the checked-in .qrc files are used as-is.
-if(NOT WIN32)
+# The .qrc files are only regenerated on macOS. On Windows the shell script
+# cannot be executed (it gets opened with the associated text editor instead)
+# and on Linux it is not needed; on those platforms the checked-in .qrc files
+# are used as-is.
+if(APPLE)
     add_custom_command(
         OUTPUT
             ${CMAKE_CURRENT_SOURCE_DIR}/scripts.qrc
@@ -88,7 +89,7 @@ target_compile_definitions(qcadscripts PRIVATE
 
 # Ensure the .qrc files are regenerated before this target's resources are
 # compiled (the rcc command also depends on the .qrc files directly).
-if(NOT WIN32)
+if(APPLE)
     add_dependencies(qcadscripts qcadscripts_qrc)
 endif()
 
