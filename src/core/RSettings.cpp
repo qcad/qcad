@@ -47,6 +47,7 @@
 #endif
 
 #include "RMath.h"
+#include "RPluginLoader.h"
 #include "RS.h"
 #include "RSettings.h"
 #include "RSettingsBridge.h"
@@ -57,9 +58,35 @@
 #include "detectmacdarkmode.h"
 #endif
 
+/**
+ * \return Defaults which depend on the version of QCAD (used when the
+ * setting has no stored value, see getValue): since QCAD 27, the
+ * graphics views are anti-aliased and the RHI based graphics view
+ * (qcadrhi3d) is used by default.
+ */
+static QVariantMap initVersionDefaults() {
+    QVariantMap ret;
+    if (R_QCAD_VERSION_MAJOR>=27) {
+        ret["GraphicsView/Antialiasing"] = true;
+        ret["GraphicsView/UseRhiGraphicsView"] = true;
+    }
+    return ret;
+}
+
+/**
+ * \return True if the RHI based graphics view is used (see
+ * ViewportWidget.useRhiGraphicsView): preference on and the RHI plugin
+ * and its script bindings loaded.
+ */
+static bool isRhiGraphicsViewUsed() {
+    return RSettings::getBoolValue("GraphicsView/UseRhiGraphicsView", false) &&
+           RPluginLoader::hasPlugin("RHI3D") &&
+           RPluginLoader::hasPlugin("RHI3DJSAPI");
+}
+
 bool RSettings::noWrite = false;
 QVariantMap RSettings::cache;
-QVariantMap RSettings::defaults;
+QVariantMap RSettings::defaults = initVersionDefaults();
 
 QString RSettings::launchPath;
 QString RSettings::themePath;
@@ -1706,9 +1733,24 @@ void RSettings::setConcurrentDrawing(bool on) {
     concurrentDrawing = on;
 }
 
+/**
+ * \return True if the graphics view renders at the full resolution of
+ * high resolution (Retina) displays with view coordinates in device
+ * pixels (preference "GraphicsView/HighResolutionGraphicsView").
+ * Always false if the RHI based graphics view is used: it always
+ * renders at the full resolution of the display, with view coordinates
+ * in device independent pixels.
+ */
 bool RSettings::getHighResolutionGraphicsView() {
     if (highResolutionGraphicsView==-1) {
-        highResolutionGraphicsView = getValue("GraphicsView/HighResolutionGraphicsView", QVariant(false)).toBool();
+        bool ret = getValue("GraphicsView/HighResolutionGraphicsView", QVariant(false)).toBool() &&
+                   !isRhiGraphicsViewUsed();
+        if (RPluginLoader::countPlugins()==0) {
+            // plugins not loaded yet (or none available), the RHI
+            // based graphics view cannot be detected yet, don't cache:
+            return ret;
+        }
+        highResolutionGraphicsView = ret;
     }
     return (bool)highResolutionGraphicsView;
 }
