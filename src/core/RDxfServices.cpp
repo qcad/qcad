@@ -2307,7 +2307,8 @@ void RDxfServices::autoFixLinetypePattern(RLinetypePattern& pattern) {
 
 int RDxfServices::getFileQCADVersion(const RDocument& doc) {
     QString fileVersionStr = doc.getVariable("QCADVersion", "").toString();
-    QRegularExpression re("(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.(\\d+))?");
+    // version strings may have 1 to 4 components (e.g. "27", "27.1", "3.33.0", "3.33.0.1"):
+    QRegularExpression re("(\\d+)(?:\\.(\\d+))?(?:\\.(\\d+))?(?:\\.(\\d+))?");
 #if QT_VERSION >= 0x050000
     QRegularExpressionMatch match;
     qsizetype idx = fileVersionStr.indexOf(re, 0, &match);
