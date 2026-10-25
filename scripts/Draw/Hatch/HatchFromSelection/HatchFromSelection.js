@@ -179,6 +179,8 @@ HatchFromSelection.verifyBoundaryEntity = function(doc, entity) {
  * \return RHatchData object created from the given boundary entities entityIds or undefined.
  */
 HatchFromSelection.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
+    var i;
+
     if (isNull(ignoreOpenLoops)) {
         ignoreOpenLoops = false;
     }
@@ -186,16 +188,23 @@ HatchFromSelection.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
     var hatchData = new RHatchData();
     hatchData.setDocument(doc);
 
-    doc.traversed = {};
     HatchFromSelection.errorPoint = undefined;
 
-    for (var i=0; i<entityIds.length; i++) {
-        var entityId = entityIds[i];
-        if (doc.traversed[entityId]) {
+    // collect boundary candidates, including the entities of selected block
+    // references, so that loops can be formed from entities inside and
+    // outside of block references:
+    var candidates = [];
+    for (i=0; i<entityIds.length; i++) {
+        var entity = doc.queryEntityDirect(entityIds[i]);
+        HatchFromSelection.collectCandidates(doc, entity, candidates);
+    }
+
+    var traversed = [];
+    for (i=0; i<candidates.length; i++) {
+        if (traversed[i]) {
             continue;
         }
-        var entity = doc.queryEntityDirect(entityId);
-        if (!HatchFromSelection.traverse(hatchData, doc, entity, entityIds)) {
+        if (!HatchFromSelection.traverse(hatchData, candidates, i, traversed)) {
             if (ignoreOpenLoops) {
                 continue;
             }
@@ -209,12 +218,43 @@ HatchFromSelection.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
 };
 
 /**
- * Traverses the given candidates recursively for connected entities.
+ * Appends the given entity to the candidates. For block references, the
+ * visible entities of the block, transformed to the block reference, are
+ * appended instead (recursively).
+ */
+HatchFromSelection.collectCandidates = function(doc, entity, candidates) {
+    if (isNull(entity)) {
+        return;
+    }
+
+    if (isBlockReferenceEntity(entity)) {
+        var blockReferenceData = entity.getData();
+        var ids = doc.queryBlockEntities(blockReferenceData.getReferencedBlockId());
+        for (var i=0; i<ids.length; i++) {
+            var bEntity = blockReferenceData.queryEntity(ids[i], true);
+            if (isNull(bEntity)) {
+                continue;
+            }
+            if (!bEntity.isVisible()) {
+                continue;
+            }
+            HatchFromSelection.collectCandidates(doc, bEntity, candidates);
+        }
+        return;
+    }
+
+    candidates.push(entity);
+};
+
+/**
+ * Traverses the given candidates recursively for entities connected to the
+ * candidate with the given index.
  * Resulting loops are appended to the given hatch data.
  */
-HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
+HatchFromSelection.traverse = function(hatchData, candidates, index, traversed) {
     var i;
 
+    var entity = candidates[index];
     var entityData = entity.getData();
 
     // handle closed polyline loops:
@@ -237,7 +277,7 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
         }
         // TODO: add polyline as boundary:
 //        hatchData.addBoundary(entity.getData().castToShape());
-        docOrBlockRef.traversed[entity.getId()] = true;
+        traversed[index] = true;
         return true;
     }
 
@@ -250,39 +290,8 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
         else {
             hatchData.addBoundary(entityData.castToShape());
         }
-        docOrBlockRef.traversed[entity.getId()] = true;
+        traversed[index] = true;
         return true;
-    }
-
-    var document = EAction.getDocument();
-    if (isNull(document)) {
-        document = hatchData.getDocument();
-    }
-
-    // handle block reference:
-    if (isBlockReferenceEntity(entity)) {
-        var blockReferenceData = entity.getData();
-        blockReferenceData.traversed = {};
-        var ids = document.queryBlockEntities(blockReferenceData.getReferencedBlockId());
-        var ret = true;
-        for (i=0; i<ids.length; i++) {
-            if (blockReferenceData.traversed[ids[i]]) {
-                continue;
-            }
-
-            var bEntity = blockReferenceData.queryEntity(ids[i], true);
-            if (isNull(bEntity)) {
-                continue;
-            }
-            if (!bEntity.isVisible()) {
-                continue;
-            }
-            if (!HatchFromSelection.traverse(hatchData, blockReferenceData, bEntity, ids)) {
-                ret = false;
-                break;
-            }
-        }
-        return ret;
     }
 
     if (!isFunction(entityData.castToShape)) {
@@ -303,7 +312,7 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
 
     // connect 'loose' boundary elements into loops:
     hatchData.newLoop();
-    docOrBlockRef.traversed[entity.getId()] = true;
+    traversed[index] = true;
     if (RSettings.getQtVersion() >= 0x060000) {
         hatchData.addBoundary(shape.clone());
     }
@@ -319,24 +328,12 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
     do {
         done2 = true;
         HatchFromSelection.connectionPoint = currentShape.getEndPoint();
-        for (i = 0; i < candidateIds.length; i++) {
-            var entityId = candidateIds[i];
-            if (docOrBlockRef.traversed[entityId]) {
+        for (i = 0; i < candidates.length; i++) {
+            if (traversed[i]) {
                 continue;
             }
 
-            if (isFunction(docOrBlockRef.queryEntityDirect)) {
-                // query entity from document:
-                entity = docOrBlockRef.queryEntityDirect(entityId);
-            }
-            else {
-                // query entity from block reference:
-                entity = docOrBlockRef.queryEntity(entityId, true);
-            }
-
-            if (isBlockReferenceEntity(entity)) {
-                continue;
-            }
+            entity = candidates[i];
 
             if (HatchFromSelection.isClosedCurve(entity) || HatchFromSelection.isClosedPolyline(entity)) {
                 continue;
@@ -345,7 +342,7 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
             if (isFunction(entity.getLength)) {
                 // ignore zero length entities:
                 if (entity.getLength()<RS.PointTolerance) {
-                    docOrBlockRef.traversed[entityId] = true;
+                    traversed[i] = true;
                     continue;
                 }
             }
@@ -362,7 +359,7 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
             var epConnects = HatchFromSelection.connectionPoint.equalsFuzzy(ep, HatchFromSelection.tolerance);
 
             if (spConnects || epConnects) {
-                docOrBlockRef.traversed[entityId] = true;
+                traversed[i] = true;
                 shape = entity.getData().castToShape().clone();
                 if (epConnects) {
                     shape.reverse();
