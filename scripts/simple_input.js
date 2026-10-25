@@ -12,25 +12,30 @@
  * \param step - Spin box step value (Default = 1).
  * \param lower - minimum value (Default = -2147483647)
  * \param upper - maximum value (Default = 2147483647)
+ *
+ * \return The entered value or undefined if the dialog was canceled.
  */
 function getInt(title, prompt, value, step, lower, upper) {
     var dialog = new QInputDialog();
     dialog.setInputMode(QInputDialog.IntInput);
     dialog.setWindowTitle(title);
     dialog.setLabelText(prompt);
-	if (isNull(value)) value = 0;
+    if (isNull(value)) value = 0;
     dialog.setIntValue(value);
-	if (isNull(step)) step = 1;
+    if (isNull(step)) step = 1;
     dialog.setIntStep(step);
-	if (isNull(upper)) upper = 2147483647;
+    if (isNull(upper)) upper = 2147483647;
     dialog.setIntMaximum(upper);
-	if (isNull(lower)) lower = -2147483647;
+    if (isNull(lower)) lower = -2147483647;
     dialog.setIntMinimum(lower);
 
     if (!dialog.exec()) {
         destrDialog(dialog);
-	}
-    return dialog.intValue();
+        return undefined;
+    }
+    var ret = dialog.intValue();
+    destrDialog(dialog);
+    return ret;
 }
 
 /**
@@ -43,25 +48,30 @@ function getInt(title, prompt, value, step, lower, upper) {
  * \param prec - Spin button precision (Default = 1).
  * \param lower - minimum value (Default = -2147483647)
  * \param upper - maximum value (Default = 2147483647)
+ *
+ * \return The entered value or undefined if the dialog was canceled.
  */
 function getDouble(title, prompt, value, prec, lower, upper) {
     var dialog = new QInputDialog();
     dialog.setInputMode(QInputDialog.DoubleInput);
     dialog.setWindowTitle(title);
     dialog.setLabelText(prompt);
-	if (isNull(value)) value = 0.0;
+    if (isNull(value)) value = 0.0;
     dialog.setDoubleValue(value);
-	if (isNull(prec)) prec = 1;
+    if (isNull(prec)) prec = 1;
     dialog.setDoubleDecimals(prec);
-	if (isNull(upper)) upper = 2147483647;
+    if (isNull(upper)) upper = 2147483647;
     dialog.setDoubleMaximum(upper);
-	if (isNull(lower)) lower = -2147483647;
+    if (isNull(lower)) lower = -2147483647;
     dialog.setDoubleMinimum(lower);
 
     if (!dialog.exec()) {
         destrDialog(dialog);
-	}
-    return dialog.doubleValue();
+        return undefined;
+    }
+    var ret = dialog.doubleValue();
+    destrDialog(dialog);
+    return ret;
 }
 
 /**
@@ -71,19 +81,24 @@ function getDouble(title, prompt, value, prec, lower, upper) {
  * \param title - Title of dialog box 
  * \param prompt - Prompt to display.
  * \param txt - Text to display in the input box.
+ *
+ * \return The entered value or undefined if the dialog was canceled.
  */
 function getText(title, prompt, txt) {
     var dialog = new QInputDialog();
     dialog.setInputMode(QInputDialog.TextInput);
     dialog.setWindowTitle(title);
     dialog.setLabelText(prompt);
-	if (isNull(txt)) txt = "";
+    if (isNull(txt)) txt = "";
     dialog.setTextValue(txt);
 
     if (!dialog.exec()) {
         destrDialog(dialog);
-	}
-    return dialog.textValue();
+        return undefined;
+    }
+    var ret = dialog.textValue();
+    destrDialog(dialog);
+    return ret;
 }
 
 /**
@@ -95,31 +110,34 @@ function getText(title, prompt, txt) {
  * \param items - List of items to display in the combo box.
  * \param idx - index of item to display (Default = 0)
  * \param splitStr - Character or string to split the items (Default = ",")
+ *
+ * \return The entered value or undefined if the dialog was canceled.
  */
 function getItem(title, prompt, items, idx, splitStr) {
     var dialog = new QInputDialog();
     dialog.setInputMode(3);
     dialog.setWindowTitle(title);
     dialog.setLabelText(prompt);
-	if (isNull(splitStr)) splitStr = ",";
-	var itemlst = items.split(splitStr);
+    if (isNull(splitStr)) splitStr = ",";
+    var itemlst = items.split(splitStr);
     dialog.setComboBoxItems(itemlst);
-	if (isNull(idx)) idx = 0;
+    if (isNull(idx)) idx = 0;
     var children = dialog.children();
-	for (var i = 0; i < children.length; i++) {
-		var c = children[i];
-		if (isComboBox(c)) {
-			c.setCurrentIndex(idx);
-			break;
-		}
-	}
+    for (var i = 0; i < children.length; i++) {
+        var c = children[i];
+        if (isComboBox(c)) {
+            c.setCurrentIndex(idx);
+            break;
+        }
+    }
 
     if (!dialog.exec()) {
         destrDialog(dialog);
-	}
+        return undefined;
+    }
     var txt = dialog.textValue();
-	//var idx = itemlst.indexOf(txt, 0);
-	return txt;
+    destrDialog(dialog);
+    return txt;
 }
 
 

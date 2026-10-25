@@ -104,7 +104,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>CursorHand.svg</normaloff>CursorHand.svg</iconset>
+       <normaloff>MovePage.svg</normaloff>MovePage.svg</iconset>
      </property>
      <property name="checkable">
       <bool>true</bool>

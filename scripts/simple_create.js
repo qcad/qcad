@@ -178,14 +178,17 @@ function addXLine(startPoint, directionVector) {
  * Adds an arc to the drawing.
  * \ingroup ecma_simple
  *
+ * \param reversed True for a clockwise arc (optional, defaults to false).
+ *
  * \code
+ * addArc(cx,cy, radius, startAngle, endAngle)
  * addArc(cx,cy, radius, startAngle, endAngle, reversed)
  * addArc([cx,cy], radius, startAngle, endAngle, reversed)
  * addArc(new RVector(cx,cy), radius, startAngle, endAngle, reversed)
  * \endcode
  */
 function addArc(center, radius, startAngle, endAngle, reversed) {
-    if (arguments.length===6) {
+    if (arguments.length>=5 && isNumber(arguments[0]) && isNumber(arguments[1])) {
         return addArc(new RVector(arguments[0], arguments[1]), arguments[2], arguments[3], arguments[4], arguments[5]);
     }
 
@@ -196,6 +199,10 @@ function addArc(center, radius, startAngle, endAngle, reversed) {
     if (!isVector(center)) {
         qWarning("invalid center");
         throw("invalid center");
+    }
+
+    if (isNull(reversed)) {
+        reversed = false;
     }
 
     return addShape(new RArc(center, radius, deg2rad(startAngle), deg2rad(endAngle), reversed));
@@ -385,18 +392,16 @@ function addSpline(points, closed) {
  * \param italic True for italic text (TTF fonts only)
  *
  * \code
+ * addSimpleText(text, x, y)
  * addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, italic)
  * addSimpleText(text, [x, y], height, angle, font, vAlign, hAlign, bold, italic)
  * addSimpleText(text, new RVector(x, y), height, angle, font, vAlign, hAlign, bold, italic)
  * \endcode
  */
 function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold, italic) {
-    if (arguments.length===10) {
+    if (arguments.length>=3 && isNumber(arguments[1]) && isNumber(arguments[2])) {
+        // addSimpleText("text", x, y, ...)
         return addSimpleText(arguments[0], new RVector(arguments[1], arguments[2]), arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]);
-    }
-    if (arguments.length===3 && isNumber(position)) {
-        // addSimpleText("text", x, y)
-        return addSimpleText(arguments[0], new RVector(arguments[1], arguments[2]));
     }
 
     var doc = getTransactionDocument();
@@ -498,7 +503,7 @@ function addShapes(shapes) {
  *
  * \code
  * addShape(shape)
- * addShape(shape, new RColor(255,0,0), "CONTINUOUS", 0.05)
+ * addShape(shape, new RColor(255,0,0), "CONTINUOUS", RLineweight.Weight050)
  * \endcode
  */
 function addShape(shape, color, linetype, lineweight) {
@@ -520,11 +525,12 @@ function addShape(shape, color, linetype, lineweight) {
  * transaction.
  */
 function addEntity(entity, color, linetype, lineweight) {
+    var doc = getTransactionDocument();
+
     if (!isNull(color)) {
         entity.setColor(color);
     }
     else {
-        var doc = getTransactionDocument();
         if (!isNull(doc)) {
             entity.setColor(doc.getCurrentColor());
         }
@@ -533,7 +539,7 @@ function addEntity(entity, color, linetype, lineweight) {
     if (isNumber(linetype)) {
         entity.setLinetypeId(linetype);
     }
-    if (isString(linetype)) {
+    if (isString(linetype) && !isNull(doc)) {
         entity.setLinetypeId(doc.getLinetypeId(linetype));
     }
     if (isNumber(lineweight)) {
