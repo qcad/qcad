@@ -53,6 +53,18 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
     if (!hasPlugin("RHI3D") || typeof(RGraphicsViewRhi2D)==="undefined") {
         widgets["UseRhiGraphicsView"].visible = false;
     }
+    else {
+        // the RHI based graphics view always renders at the full
+        // resolution of the display (see
+        // RSettings::getHighResolutionGraphicsView): the preference only
+        // applies to the image based graphics view. The check box is
+        // restored after this (toggled is emitted if it is checked):
+        var cbHighRes = widgets["HighResolutionGraphicsView"];
+        cbHighRes.toolTip = qsTr("The RHI graphics view always uses the full resolution of the display");
+        widgets["UseRhiGraphicsView"].toggled.connect(function(checked) {
+            cbHighRes.enabled = !checked;
+        });
+    }
 };
 
 GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {

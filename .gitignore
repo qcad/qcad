@@ -5,3 +5,9 @@ plugins
 .qtcreator_build
 .claude
 deployment_log
+.DS_Store
+.qtcreator
+palettes
+postprocessors
+proj.db
+adinit.dat

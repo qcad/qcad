@@ -99,11 +99,17 @@ About.prototype.beginEvent = function() {
 
 About.prototype.initAboutApp = function(textBrowser) {
     var version = RSettings.getVersionString();
-    var versionComplete = "%1.%2.%3.%4"
+
+    // x.x.x for releases:
+    var versionComplete = "%1.%2.%3"
         .arg(RSettings.getMajorVersion())
         .arg(RSettings.getMinorVersion())
-        .arg(RSettings.getRevisionVersion())
-        .arg(RSettings.getBuildVersion());
+        .arg(RSettings.getRevisionVersion());
+
+    if (RSettings.getBuildVersion()>0) {
+        // x.x.x.x for development builds:
+        versionComplete = versionComplete + "." + RSettings.getBuildVersion();
+    }
 
     if (!isNull(this.version)) {
         version = "";
