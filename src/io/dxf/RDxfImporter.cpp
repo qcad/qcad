@@ -179,6 +179,23 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
 
     RImporter::endImport();
 
+    // old file without text rotation support for ordinate dimensions
+    // (text rotation written to DXF since QCAD 27):
+    // set text rotation to -90º for x ordinate dimensions:
+    if (!xOrdinateDimIds.isEmpty() && RDxfServices::getFileQCADVersion(*document)<27000000) {
+        RModifyObjectsOperation op;
+        for (int i=0; i<xOrdinateDimIds.size(); i++) {
+            QSharedPointer<RDimOrdinateEntity> dim = document->queryEntity(xOrdinateDimIds[i]).dynamicCast<RDimOrdinateEntity>();
+            if (dim.isNull()) {
+                continue;
+            }
+            dim->getData().setTextRotation(-M_PI/2);
+            op.addObject(dim, false);
+        }
+        op.apply(*document, false);
+    }
+    xOrdinateDimIds.clear();
+
     // set block reference IDs in the end to support nested blocks (FS#1016):
     //RSpatialIndex& si = document->getSpatialIndex();
     QSet<REntity::Id> ids = document->queryAllBlockReferences();
@@ -1064,7 +1081,7 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
                        lss,
                        data.lineSpacingFactor,
                        t, "Standard",
-                       data.angle);
+                       RMath::deg2rad(data.angle));
     ret.setUpperTolerance(uTol);
     ret.setLowerTolerance(lTol);
     ret.setArrow1Flipped(data.arrow1Flipped);
@@ -1187,12 +1204,14 @@ void RDxfImporter::addDimOrdinate(const DL_DimensionData& data,
         d.setMeasuringYAxis();
     }
 
-    if (d.isMeasuringXAxis()) {
-        d.setTextRotation(-M_PI/2);
-    }
-
     QSharedPointer<RDimOrdinateEntity> entity(new RDimOrdinateEntity(document, d));
     importEntity(entity);
+
+    // text rotation of x ordinate dimensions might have to be adjusted for
+    // old files, once the file version is known (see endImport):
+    if (d.isMeasuringXAxis() && RMath::fuzzyCompare(d.getTextRotation(), 0.0)) {
+        xOrdinateDimIds.append(entity->getId());
+    }
 }
 
 void RDxfImporter::addLeader(const DL_LeaderData& data) {

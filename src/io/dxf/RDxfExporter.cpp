@@ -379,8 +379,8 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
             QMap<QString, int> handles;
 
             // export all QCAD specific document variables:
-            QStringList variables = document->getVariables();
             document->setVariable("QCADVersion", RSettings::getVersionString());
+            QStringList variables = document->getVariables();
             variables.sort();
             for (int i=0; i<variables.size(); i++) {
                 QString key = variables[i];
@@ -1240,7 +1240,7 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                              (const char*)RDxfExporter::escapeUnicode(text),
                              // TODO: dim style:
                              (const char*)RDxfExporter::escapeUnicode(d.getFontName()),
-                             d.getTextRotation(),
+                             RMath::rad2deg(d.getTextRotation()),
                              d.getLinearFactor(),
                              d.getDimscale());
     dimData.arrow1Flipped = d.isArrow1Flipped();

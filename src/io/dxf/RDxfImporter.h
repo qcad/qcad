@@ -148,6 +148,9 @@ private:
     RDxfServices dxfServices;
     // list of locked layers. layers are locked after importing all entities:
     QStringList lockedLayers;
+    // x ordinate dimensions without text rotation, adjusted for old files
+    // after importing all entities:
+    QList<RObject::Id> xOrdinateDimIds;
 
     RPolyline polyline;
     bool polylinePlineGen;
