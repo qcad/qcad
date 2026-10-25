@@ -786,8 +786,8 @@
     <file alias="scripts/File/PrintPreview/ColorModeFullColor.svg">../../scripts/File/PrintPreview/ColorModeFullColor.svg</file>
     <file alias="scripts/File/PrintPreview/ColorModeGrayscale.svg">../../scripts/File/PrintPreview/ColorModeGrayscale.svg</file>
     <file alias="scripts/File/PrintPreview/CropMarks.svg">../../scripts/File/PrintPreview/CropMarks.svg</file>
-    <file alias="scripts/File/PrintPreview/CursorHand.svg">../../scripts/File/PrintPreview/CursorHand.svg</file>
     <file alias="scripts/File/PrintPreview/Landscape.svg">../../scripts/File/PrintPreview/Landscape.svg</file>
+    <file alias="scripts/File/PrintPreview/MovePage.svg">../../scripts/File/PrintPreview/MovePage.svg</file>
     <file alias="scripts/File/PrintPreview/PdfExport.svg">../../scripts/File/PrintPreview/PdfExport.svg</file>
     <file alias="scripts/File/PrintPreview/Portrait.svg">../../scripts/File/PrintPreview/Portrait.svg</file>
     <file alias="scripts/File/PrintPreview/Print.svg">../../scripts/File/PrintPreview/Print.svg</file>

@@ -538,6 +538,7 @@
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest05_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest05_000.dxf</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest06_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest06_000.dxf</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest07_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest07_000.dxf</file>
+    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest08_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest08_000.dxf</file>
     <file alias="scripts/Draw/Image/Image-inverse.svg">../../scripts/Draw/Image/Image-inverse.svg</file>
     <file alias="scripts/Draw/Image/Image.js">../../scripts/Draw/Image/Image.js</file>
     <file alias="scripts/Draw/Image/Image.svg">../../scripts/Draw/Image/Image.svg</file>
@@ -1301,8 +1302,8 @@
     <file alias="scripts/File/PrintPreview/ColorModeFullColor.svg">../../scripts/File/PrintPreview/ColorModeFullColor.svg</file>
     <file alias="scripts/File/PrintPreview/ColorModeGrayscale.svg">../../scripts/File/PrintPreview/ColorModeGrayscale.svg</file>
     <file alias="scripts/File/PrintPreview/CropMarks.svg">../../scripts/File/PrintPreview/CropMarks.svg</file>
-    <file alias="scripts/File/PrintPreview/CursorHand.svg">../../scripts/File/PrintPreview/CursorHand.svg</file>
     <file alias="scripts/File/PrintPreview/Landscape.svg">../../scripts/File/PrintPreview/Landscape.svg</file>
+    <file alias="scripts/File/PrintPreview/MovePage.svg">../../scripts/File/PrintPreview/MovePage.svg</file>
     <file alias="scripts/File/PrintPreview/PdfExport.svg">../../scripts/File/PrintPreview/PdfExport.svg</file>
     <file alias="scripts/File/PrintPreview/Portrait.svg">../../scripts/File/PrintPreview/Portrait.svg</file>
     <file alias="scripts/File/PrintPreview/Print.svg">../../scripts/File/PrintPreview/Print.svg</file>
@@ -2382,7 +2383,19 @@
     <file alias="scripts/Modify/BreakOutGap/BreakOutGap.ui">../../scripts/Modify/BreakOutGap/BreakOutGap.ui</file>
     <file alias="scripts/Modify/BreakOutGap/BreakOutGapInit.js">../../scripts/Modify/BreakOutGap/BreakOutGapInit.js</file>
     <file alias="scripts/Modify/BreakOutGap/Tests/BreakOutGapTest01.js">../../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest01.js</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/BreakOutGapTest02.js">../../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest02.js</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/BreakOutGapTest03.js">../../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest03.js</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/BreakOutGapTest04.js">../../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest04.js</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/BreakOutGapTest05.js">../../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest05.js</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/BreakOutGapTest06.js">../../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest06.js</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/BreakOutGapTest07.js">../../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest07.js</file>
     <file alias="scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest01_000.dxf">../../scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest01_000.dxf</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest02_000.dxf">../../scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest02_000.dxf</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest03_000.dxf">../../scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest03_000.dxf</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest04_000.dxf">../../scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest04_000.dxf</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest05_000.dxf">../../scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest05_000.dxf</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest06_000.dxf">../../scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest06_000.dxf</file>
+    <file alias="scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest07_000.dxf">../../scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest07_000.dxf</file>
     <file alias="scripts/Modify/BreakOutManual/BreakOutManual-inverse.svg">../../scripts/Modify/BreakOutManual/BreakOutManual-inverse.svg</file>
     <file alias="scripts/Modify/BreakOutManual/BreakOutManual.js">../../scripts/Modify/BreakOutManual/BreakOutManual.js</file>
     <file alias="scripts/Modify/BreakOutManual/BreakOutManual.svg">../../scripts/Modify/BreakOutManual/BreakOutManual.svg</file>
