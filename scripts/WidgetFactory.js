@@ -985,18 +985,25 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 if (hasData) {
                     var data;
                     var dataKey = key + ".data";
-                    if (!isNull(document)) {
-                        if (isObject(document)) {
-                            data = document.getCustomProperty("QCAD", key, undefined);
-                        }
-                        else {
-                            data = document.getVariable(dataKey);
-                        }
+                    if (!isNull(map)) {
+                        // used from a test: never fall back to settings,
+                        // which would override the value from the map:
+                        data = map.get(dataKey);
                     }
-                    // document has no value for key,
-                    // try settings for default value
-                    if (isNull(document) || isNull(data)) {
-                        data = RSettings.getValue(dataKey);
+                    else {
+                        if (!isNull(document)) {
+                            if (isObject(document)) {
+                                data = document.getCustomProperty("QCAD", key, undefined);
+                            }
+                            else {
+                                data = document.getVariable(dataKey);
+                            }
+                        }
+                        // document has no value for key,
+                        // try settings for default value
+                        if (isNull(document) || isNull(data)) {
+                            data = RSettings.getValue(dataKey);
+                        }
                     }
                     if (!isNull(data)) {
                         for (j = 0; j < c.count; ++j) {
