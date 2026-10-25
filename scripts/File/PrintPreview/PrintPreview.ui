@@ -98,7 +98,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QToolButton" name="Offset">
+    <widget class="QToolButton" name="MovePage">
      <property name="toolTip">
       <string>Move Paper Position</string>
      </property>

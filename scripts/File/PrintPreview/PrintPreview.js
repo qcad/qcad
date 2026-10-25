@@ -346,7 +346,7 @@ PrintPreviewImpl.prototype.setState = function(state) {
     }
 
     var optionsToolBar = EAction.getOptionsToolBar();
-    var offsetButton = optionsToolBar.findChild("Offset");
+    var offsetButton = optionsToolBar.findChild("MovePage");
     if (offsetButton) {
         offsetButton.checked = (this.state == PrintPreviewImpl.State.SettingOffset);
     }
@@ -997,7 +997,7 @@ PrintPreviewImpl.updateScaleString = function(document) {
  * Triggered by the offset tool button in the options toolbar.
  * Activates / deactivates the offset tool.
  */
-PrintPreviewImpl.prototype.slotOffsetChanged = function(checked) {
+PrintPreviewImpl.prototype.slotMovePageChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
