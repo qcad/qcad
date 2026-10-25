@@ -34,10 +34,10 @@ BreakOutGapTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BreakOutGapButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BreakOutGapProButton');
     this.setToolOption('BreakOutGap/Offset', '5');
-    this.updateToolOptions();
-    this.setToolOption('BreakOutGap/Offset', '5');
+    this.setToolOption('BreakOutGapPro/Offset', '5');
+    this.setToolOption('BreakOutGapPro/OneClick', 'false');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(21.6, 21.5);

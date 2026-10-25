@@ -99,7 +99,7 @@ DrawPolylineTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     var p = new RVector(50, 29.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.clickOnWidget('MainWindow::Options::Close');
+    this.clickOnWidget('MainWindow::Options::CloseSequence');
     var p = new RVector(28.5, 26.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(28.5, 26.9);

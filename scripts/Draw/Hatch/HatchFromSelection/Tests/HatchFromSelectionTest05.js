@@ -23,6 +23,7 @@ HatchFromSelectionTest05.prototype.test00 = function() {
     this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Type', 'HatchPattern')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Pattern', 'ANSI31')");
+    this.dlgAppendCode("map.put('DialogOpenedByTdb/PatternList', 'ANSI31')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Scale', '1.0')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Angle', '0.0')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");

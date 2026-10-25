@@ -57,7 +57,7 @@ RoundTest01.prototype.test00 = function() {
     var p = new RVector(9.4, 20.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::Options::Close');
+    TdbTest.clickOnWidget('MainWindow::Options::CloseSequence');
     this.setToolOption('DrawPolylinePro/ArcMode', 'false');
     this.setToolOption('DrawPolylinePro/UseRadius', 'false');
     this.setToolOption('DrawPolylinePro/Radius', '1');
