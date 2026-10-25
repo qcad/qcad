@@ -1079,7 +1079,7 @@ struct DXFLIB_EXPORT DL_DimensionData {
     std::string style;
     /**
      * Rotation angle of dimension text away from
-     * default orientation.
+     * default orientation in degrees (group code 53).
      */
     double angle;
     /**

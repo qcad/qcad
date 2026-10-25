@@ -3048,7 +3048,10 @@ void DL_Dxf::writeDimAligned(DL_WriterA& dw,
         dw.dxfReal(41, data.lineSpacingFactor); // opt
     }
 
-    dw.dxfReal(42, data.angle);
+    if (fabs(data.angle)>1.0e-9) {
+        // text rotation in degrees:
+        dw.dxfReal(53, data.angle);
+    }
 
     dw.dxfString(1, data.text);   // opt
     //dw.dxfString(3, data.style);
@@ -3111,7 +3114,10 @@ void DL_Dxf::writeDimLinear(DL_WriterA& dw,
         dw.dxfReal(41, data.lineSpacingFactor); // opt
     }
 
-    dw.dxfReal(42, data.angle);
+    if (fabs(data.angle)>1.0e-9) {
+        // text rotation in degrees:
+        dw.dxfReal(53, data.angle);
+    }
 
     dw.dxfString(1, data.text);   // opt
     //dw.dxfString(3, data.style);
@@ -3180,7 +3186,10 @@ void DL_Dxf::writeDimRadial(DL_WriterA& dw,
         dw.dxfReal(41, data.lineSpacingFactor); // opt
     }
 
-    dw.dxfReal(42, data.angle);
+    if (fabs(data.angle)>1.0e-9) {
+        // text rotation in degrees:
+        dw.dxfReal(53, data.angle);
+    }
 
     dw.dxfString(1, data.text);   // opt
     //dw.dxfString(3, data.style);
@@ -3241,7 +3250,10 @@ void DL_Dxf::writeDimDiametric(DL_WriterA& dw,
         dw.dxfReal(41, data.lineSpacingFactor); // opt
     }
 
-    dw.dxfReal(42, data.angle);
+    if (fabs(data.angle)>1.0e-9) {
+        // text rotation in degrees:
+        dw.dxfReal(53, data.angle);
+    }
 
     dw.dxfString(1, data.text);   // opt
     //dw.dxfString(3, data.style);
@@ -3302,7 +3314,10 @@ void DL_Dxf::writeDimAngular2L(DL_WriterA& dw,
         dw.dxfReal(41, data.lineSpacingFactor); // opt
     }
 
-    dw.dxfReal(42, data.angle);
+    if (fabs(data.angle)>1.0e-9) {
+        // text rotation in degrees:
+        dw.dxfReal(53, data.angle);
+    }
 
     dw.dxfString(1, data.text);   // opt
     //dw.dxfString(3, data.style);
@@ -3371,7 +3386,10 @@ void DL_Dxf::writeDimAngular3P(DL_WriterA& dw,
         dw.dxfReal(41, data.lineSpacingFactor); // opt
     }
 
-    dw.dxfReal(42, data.angle);
+    if (fabs(data.angle)>1.0e-9) {
+        // text rotation in degrees:
+        dw.dxfReal(53, data.angle);
+    }
 
     dw.dxfString(1, data.text);   // opt
     //dw.dxfString(3, data.style);
@@ -3440,6 +3458,11 @@ void DL_Dxf::writeDimOrdinate(DL_WriterA& dw,
         //dw.dxfInt(74, data.arrow1Flipped);
         //dw.dxfInt(75, data.arrow2Flipped);
         dw.dxfReal(41, data.lineSpacingFactor); // opt
+    }
+
+    if (fabs(data.angle)>1.0e-9) {
+        // text rotation in degrees:
+        dw.dxfReal(53, data.angle);
     }
 
     dw.dxfString(1, data.text);   // opt
