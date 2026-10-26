@@ -95,7 +95,7 @@ public:
         return QSharedPointer<RDimStyle>(new RDimStyle(*this));
     }
 
-    void updateDocumentVariables();
+    void updateDocumentVariables(RTransaction* transaction = NULL);
     void updateFromDocumentVariables();
 
     QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable=false, bool noAttributes=false, bool showOnRequest=false);

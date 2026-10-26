@@ -3,6 +3,7 @@
         
         #include "REcmaDimStyle.h"
         #include "RMetaTypes.h"
+        #include "RTransaction.h"
         #include "../REcmaHelper.h"
 
         // forwards declarations mapped to includes
@@ -2178,6 +2179,38 @@
     // return type 'void'
     
                self->updateDocumentVariables();
+    } else
+
+
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RTransaction * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDimStyle: Argument 0 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateDocumentVariables(a0);
     } else
 
 

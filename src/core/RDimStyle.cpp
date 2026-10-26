@@ -19,6 +19,7 @@
 #include "RDimStyle.h"
 #include "RDxfServices.h"
 #include "RDocument.h"
+#include "RTransaction.h"
 
 RPropertyTypeId RDimStyle::PropertyCustom;
 RPropertyTypeId RDimStyle::PropertyHandle;
@@ -124,11 +125,41 @@ void RDimStyle::initDimX(const RPropertyTypeId& propertyTypeId, RS::KnownVariabl
     RDimStyleData::dimXTypes[var] = type;
 }
 
-void RDimStyle::updateDocumentVariables() {
+/**
+ * Copies the dimension settings of this dim style to the document variables.
+ *
+ * All changes are made in the given transaction or, if no transaction is
+ * given, in one local transaction, so they form a single undo step (instead
+ * of one per variable). Variables that are already up to date are left
+ * alone and no transaction is created if nothing has changed.
+ */
+void RDimStyle::updateDocumentVariables(RTransaction* transaction) {
     RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return;
+    }
+
+    bool useLocalTransaction = false;
 
     for (int i=0; i<propertyVariables.length(); i++) {
-        doc->setKnownVariable(propertyVariables[i].second, getVariant(propertyVariables[i].second));
+        RS::KnownVariable key = propertyVariables[i].second;
+        QVariant value = getVariant(key);
+        if (doc->getKnownVariable(key)==value) {
+            continue;
+        }
+
+        if (transaction==NULL) {
+            transaction = new RTransaction(doc->getStorage(), "Change document setting", true);
+            transaction->setType(RTransaction::ChangeDocumentSetting);
+            useLocalTransaction = true;
+        }
+
+        doc->setKnownVariable(key, value, transaction);
+    }
+
+    if (useLocalTransaction) {
+        transaction->end();
+        delete transaction;
     }
 }
 

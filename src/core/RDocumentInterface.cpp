@@ -2749,23 +2749,23 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     }
 
     if (dimStyleHasChanged) {
-        RTransaction* t = new RTransaction(getStorage(), "Change document setting", true);
-        t->setType(RTransaction::ChangeDocumentSetting);
-
-        // update global document settings based on a modified dim style:
+        // update global document settings based on a modified dim style.
+        // The document variables only mirror the dim style and this runs
+        // again after undo / redo, so the transaction is not undoable: an
+        // undoable one would add an undo step that seemingly does nothing,
+        // split transaction groups (e.g. Convert Unit) and, when run during
+        // undo, overwrite the redo stack.
         QSharedPointer<RDimStyle> dimStyle = document.queryDimStyleDirect();
-        document.setKnownVariable(RS::DIMSCALE, dimStyle->getDouble(RS::DIMSCALE), t);
-        document.setKnownVariable(RS::DIMTXT, dimStyle->getDouble(RS::DIMTXT), t);
-        document.setKnownVariable(RS::DIMGAP, dimStyle->getDouble(RS::DIMGAP), t);
-        document.setKnownVariable(RS::DIMASZ, dimStyle->getDouble(RS::DIMASZ), t);
-        document.setKnownVariable(RS::DIMEXE, dimStyle->getDouble(RS::DIMEXE), t);
-        document.setKnownVariable(RS::DIMEXO, dimStyle->getDouble(RS::DIMEXO), t);
-        document.setKnownVariable(RS::DIMTAD, dimStyle->getInt(RS::DIMTAD), t);
-        document.setKnownVariable(RS::DIMTIH, dimStyle->getBool(RS::DIMTIH), t);
-
-        //t->addObject(docVars);
-        t->end();
-        delete t;
+        if (!dimStyle.isNull()) {
+            RTransaction t(getStorage(), "Change document setting", false);
+            t.setType(RTransaction::ChangeDocumentSetting);
+            dimStyle->updateDocumentVariables(&t);
+            // nothing changed: don't end, which would mark the document
+            // as modified:
+            if (!t.getAffectedObjects().isEmpty()) {
+                t.end();
+            }
+        }
     }
 
     if (/*layerHasChanged ||*/ !changedLayerIds.isEmpty() || blockHasChanged || linetypeHasChanged) {

@@ -769,7 +769,8 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     widgets["AngularShowTrailingZeros"].setProperty("Saved", true);
     transaction.addObject(dimStyle);
 
-    dimStyle.updateDocumentVariables();
+    // same transaction: one undo step for all dimension settings
+    dimStyle.updateDocumentVariables(transaction);
 
     // force update of bounding box of dimension entities:
     var ids = document.queryAllEntities(false, true);
