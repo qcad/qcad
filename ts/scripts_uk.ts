@@ -9,7 +9,7 @@
         <translation>Про %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+59"/>
         <location line="+142"/>
         <source>Version:</source>
         <translation>Версія:</translation>
@@ -242,12 +242,12 @@
         <translation>Значок програми QCAD</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Логотип &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>Про</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Налаштування креслення</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Застосувати налаштування</translation>
     </message>
@@ -427,7 +427,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Недопустимий радіус</translation>
     </message>
@@ -1372,13 +1372,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+786"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
         <source>Widgets</source>
         <translation>Віджети</translation>
     </message>
     <message>
-        <location line="-730"/>
-        <location line="+730"/>
+        <location line="-731"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1395,7 +1395,7 @@ Do you wish to recover it?</source>
         <translation>Увімкнути чергування кольорів для рядків</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
         <source>Current block</source>
         <translation>Поточний блок</translation>
     </message>
@@ -2202,7 +2202,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Командний рядок</translation>
     </message>
@@ -2232,7 +2232,7 @@ Do you wish to recover it?</source>
         <translation>Історія команд, параметрів і повідомлень</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Некоректне значення:</translation>
     </message>
@@ -2317,7 +2317,7 @@ Do you wish to recover it?</source>
         <translation>Показувати інформацію у вигляді діалогу</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Показувати заголовок вікна</translation>
     </message>
@@ -5063,6 +5063,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6140,7 +6150,7 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Графічний перегляд</translation>
     </message>
@@ -6198,6 +6208,36 @@ is already in the list.</source>
         <location line="+36"/>
         <source>Meta grid:</source>
         <translation>Мета-сітка:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Ореоли</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Підсвічені та виділені об&apos;єкти зберігають свій колір і відображаються з розмитим ореолом у кольорах ореолу, заданих нижче. Інакше вони відображаються кольором підсвічування або виділення.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Використовувати ореоли для підсвічування та виділення</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Розмір ореолу (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Колір ореолу для підсвічування:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Колір ореолу для виділення:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6392,6 +6432,11 @@ is already in the list.</source>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Зовнішній вигляд</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>Графічний вигляд RHI завжди використовує повну роздільну здатність дисплея</translation>
     </message>
 </context>
 <context>
@@ -10601,7 +10646,7 @@ is already in the list.</source>
         <translation>Показати всі властивості</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>Авто</translation>
     </message>
@@ -13983,7 +14028,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Відновити налаштування за замовчуванням</translation>
     </message>
@@ -14445,7 +14490,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Об&apos;єкти</translation>
     </message>
@@ -14832,6 +14877,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Полігональні сітки</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Полігональна сітка</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Сплайни</translation>
     </message>
@@ -14899,7 +14954,7 @@ is already in the list.</source>
         <translation>Невідомий об&apos;єкт</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Усі CAD файли</translation>
     </message>
@@ -15014,30 +15069,146 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>simple_info</name>
+    <message>
+        <location filename="../scripts/simple_info.js" line="+157"/>
+        <source>ID does not refer to an entity:</source>
+        <translation>ID не відповідає жодному об&apos;єкту:</translation>
+    </message>
+</context>
+<context>
     <name>simple_modify</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
-        <source>ID does not refer to an entity:</source>
-        <translation>Ідентифікатор не відповідає об&apos;єктові:</translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Перший об&apos;єкт не може бути обрізаний.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Об&apos;єкт не може бути обрізаний.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Не є посиланням на об&apos;єкт (ID, об&apos;єкт, форма або позиція):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Об&apos;єкт не має форми:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Потрібні два об&apos;єкти.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Обрізання в межах однієї полілінії вимагає обрізання обох сегментів.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Другий об&apos;єкт не може бути обрізаний.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Потрібно вказати величину.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Об&apos;єкт не можна подовжити.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Об&apos;єкт не можна розірвати.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Потрібно вказати позицію.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Об&apos;єкт не можна поділити.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Потрібно вказати радіус.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Ці два об&apos;єкти не можна заокруглити.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Потрібно вказати відстань.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>До цих двох об&apos;єктів неможливо застосувати фаску.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричного кола.</numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричних кіл.</numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричних кіл.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричної дуги.</numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричних дуг.</numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричних дуг.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>Об&apos;єкт не можна змістити.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Неможливо обернути напрям об&apos;єкта.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Об&apos;єкт не можна розбити.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Область має бути прямокутником, полілінією або двома кутовими позиціями.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Потрібно вказати зміщення.</translation>
     </message>
 </context>
 </TS>

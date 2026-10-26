@@ -9,7 +9,7 @@
         <translation>%1について</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+67"/>
         <source>Revision:</source>
         <translation>リビジョン:</translation>
     </message>
@@ -242,12 +242,12 @@
         <translation>QCAD アプリケーションアイコン</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>「Built with Qt」ロゴ</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>ソフトウェアについて</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>図面設定</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>設定を適用</translation>
     </message>
@@ -427,7 +427,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>無効な半径</translation>
     </message>
@@ -1369,7 +1369,7 @@ Do you wish to recover it?</source>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+56"/>
-        <location line="+730"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1391,7 +1391,7 @@ Do you wish to recover it?</source>
         <translation>行の交互色を使用する</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-289"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-290"/>
         <source>Current block</source>
         <translation>現在のブロック</translation>
     </message>
@@ -2198,12 +2198,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="-108"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>コマンドライン</translation>
     </message>
     <message>
-        <location line="+214"/>
+        <location line="+237"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>不明なコマンドまたは無効な座標もしくは値: &quot;%1&quot;</translation>
     </message>
@@ -2228,7 +2228,7 @@ Do you wish to recover it?</source>
         <translation>トランザクションが失敗しました。ブロックの再帰、およびロックされているか非表示の画層またはブロックを確認してください。</translation>
     </message>
     <message>
-        <location line="-438"/>
+        <location line="-461"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -2253,7 +2253,7 @@ Do you wish to recover it?</source>
         <translation>コマンド、オプション、メッセージの履歴</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>不正な値:</translation>
     </message>
@@ -2313,7 +2313,7 @@ Do you wish to recover it?</source>
         <translation>ダイアログとして情報を表示</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>タイトルバーを表示</translation>
     </message>
@@ -5055,6 +5055,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p、フルHD) 16:9</translation>
     </message>
@@ -6130,7 +6140,7 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>グラフィックビュー</translation>
     </message>
@@ -6178,6 +6188,36 @@ is already in the list.</source>
         <location line="+48"/>
         <source>Meta grid:</source>
         <translation>メタグリッド:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>ハロー</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>ハイライト表示および選択されたエンティティは元の色のまま、下記のハロー色によるぼかしたハロー付きで表示されます。それ以外の場合は、ハイライト色または選択色で表示されます。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>ハイライト表示と選択にハローを使用</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>ハローのサイズ (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>ハイライト表示のハロー色:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>選択のハロー色:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6290,7 +6330,7 @@ is already in the list.</source>
         <translation>ズームボックス:</translation>
     </message>
     <message>
-        <location line="-757"/>
+        <location line="-883"/>
         <source>Origin:</source>
         <translation>原点:</translation>
     </message>
@@ -6382,6 +6422,11 @@ is already in the list.</source>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>外見</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>RHI グラフィックビューは常にディスプレイの最大解像度を使用します</translation>
     </message>
 </context>
 <context>
@@ -10482,12 +10527,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2016"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1781"/>
+        <location line="-1782"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10537,17 +10582,17 @@ is already in the list.</source>
         <translation>すべてのプロパティを表示する</translation>
     </message>
     <message>
-        <location line="+842"/>
+        <location line="+843"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="-909"/>
+        <location line="-910"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+229"/>
         <source>Auto</source>
         <translation>自動</translation>
     </message>
@@ -13963,7 +14008,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
@@ -14425,7 +14470,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>オブジェクト</translation>
     </message>
@@ -14812,6 +14857,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>ポリゴンメッシュ</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>ポリゴンメッシュ</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>スプライン</translation>
     </message>
@@ -14879,7 +14934,7 @@ is already in the list.</source>
         <translation>不明なエンティティ</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>すべてのCADファイル</translation>
     </message>
@@ -14994,30 +15049,142 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>simple_info</name>
+    <message>
+        <location filename="../scripts/simple_info.js" line="+157"/>
+        <source>ID does not refer to an entity:</source>
+        <translation>ID がエンティティを参照していません:</translation>
+    </message>
+</context>
+<context>
     <name>simple_modify</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
-        <source>ID does not refer to an entity:</source>
-        <translation>IDは実体を指すものではない：</translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>最初のエンティティはトリムできません。</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>エンティティはトリムできません。</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>エンティティ参照（ID、エンティティ、形状、または位置）ではありません:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>エンティティに形状がありません:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>2 つのエンティティが必要です。</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>同じポリライン内でトリムするには、両方のセグメントをトリムする必要があります。</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>２つ目のエンティティはトリムできません。</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>量の指定が必要です。</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>エンティティを伸長できません。</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>エンティティをブレイクアウトできません。</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>位置の指定が必要です。</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>エンティティを分割できません。</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>半径の指定が必要です。</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>2 つのエンティティをフィレットできません。</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>距離の指定が必要です。</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>2 つのエンティティを面取りできません。</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>同心円を %n 個作成した後、半径が 0.0 未満になりました。</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>同心円弧を %n 個作成した後、半径が 0.0 未満になりました。</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>エンティティをオフセットできません。</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>エンティティを反転できません。</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>エンティティを分解できません。</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>領域は、ボックス、ポリライン、または 2 つのコーナー位置で指定する必要があります。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>移動量の指定が必要です。</translation>
     </message>
 </context>
 </TS>

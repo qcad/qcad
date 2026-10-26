@@ -9,7 +9,7 @@
         <translation>Over %1</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+67"/>
         <source>Revision:</source>
         <translation>Revision:</translation>
     </message>
@@ -242,12 +242,12 @@
         <translation>QCAD-programmapictogram</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Logo &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Tekeningsvoorkeuren</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Voorkeuren toepassen</translation>
     </message>
@@ -427,7 +427,7 @@ de wijzigingen door te voeren.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Ongeldige straal</translation>
     </message>
@@ -1371,7 +1371,7 @@ Wilt u deze herstellen?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+56"/>
-        <location line="+730"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1393,7 +1393,7 @@ Wilt u deze herstellen?</translation>
         <translation>Afwisselende rij kleuren inschakelen</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-289"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-290"/>
         <source>Current block</source>
         <translation>Huidig blok</translation>
     </message>
@@ -2200,7 +2200,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Opdrachtregel</translation>
     </message>
@@ -2230,7 +2230,7 @@ Wilt u deze herstellen?</translation>
         <translation>Geschiedenis van opdrachten, opties en meldingen</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Ongeldig waarde:</translation>
     </message>
@@ -2315,7 +2315,7 @@ Wilt u deze herstellen?</translation>
         <translation>Toon informatie als dialoogvenster</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Titelbalk tonen</translation>
     </message>
@@ -5059,6 +5059,16 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6135,7 +6145,7 @@ is al in de lijst.</translation>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Grafische weergave</translation>
     </message>
@@ -6183,6 +6193,36 @@ is al in de lijst.</translation>
         <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Meta raster:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Halo&apos;s</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Gemarkeerde en geselecteerde objecten behouden hun kleur en worden weergegeven met een vervaagde halo in de onderstaande halokleuren. Anders worden ze weergegeven in de markeer- of selectiekleur.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Halo&apos;s gebruiken voor markering en selectie</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Halogrootte (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Halokleur voor markering:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Halokleur voor selectie:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6295,7 +6335,7 @@ is al in de lijst.</translation>
         <translation>Zoomvensterrand:</translation>
     </message>
     <message>
-        <location line="-757"/>
+        <location line="-883"/>
         <source>Origin:</source>
         <translation>Oorsprong:</translation>
     </message>
@@ -6387,6 +6427,11 @@ is al in de lijst.</translation>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Weergave</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>De RHI-grafische weergave gebruikt altijd de volledige resolutie van het beeldscherm</translation>
     </message>
 </context>
 <context>
@@ -10489,12 +10534,12 @@ is al in de lijst.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2016"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1781"/>
+        <location line="-1782"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10549,7 +10594,7 @@ is al in de lijst.</translation>
         <translation>Toon alle eigenschappen</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
@@ -13973,7 +14018,7 @@ is al in de lijst.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>
@@ -14435,7 +14480,7 @@ is al in de lijst.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
@@ -14822,6 +14867,16 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Polygoonnetten</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Polygoonnet</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
@@ -14889,7 +14944,7 @@ is al in de lijst.</translation>
         <translation>Onbekende object</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Alle CAD bestanden</translation>
     </message>
@@ -15004,30 +15059,144 @@ is al in de lijst.</translation>
     </message>
 </context>
 <context>
+    <name>simple_info</name>
+    <message>
+        <location filename="../scripts/simple_info.js" line="+157"/>
+        <source>ID does not refer to an entity:</source>
+        <translation>ID verwijst niet naar een object:</translation>
+    </message>
+</context>
+<context>
     <name>simple_modify</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
-        <source>ID does not refer to an entity:</source>
-        <translation>ID verwijst niet naar een visuelle object:</translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Eerste object kan niet worden getrimmed.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Object kan niet worden getrimmed.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Geen objectverwijzing (ID, object, vorm of positie):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Object heeft geen vorm:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Er zijn twee objecten vereist.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Trimmen binnen dezelfde polylijn vereist het trimmen van beide segmenten.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Tweede object kan niet worden getrimmed.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Hoeveelheid is vereist.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Object kan niet worden verlengd.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Object kan niet worden uitgebroken.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Positie is vereist.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Object kan niet worden gesplitst.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Straal is vereist.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>De twee objecten kunnen niet worden afgerond.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Afstand is vereist.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>De twee objecten kunnen niet worden afgeschuind.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Straal gedaald tot onder 0.0 na %n concentrische cirkel.</numerusform>
+            <numerusform>Straal gedaald tot onder 0.0 na %n concentrische cirkels.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Straal gedaald tot onder 0.0 na %n concentrische boog.</numerusform>
+            <numerusform>Straal gedaald tot onder 0.0 na %n concentrische bogen.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>Object kan niet worden geoffset.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Object kan niet worden omgedraaid.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Object kan niet worden opgesplitst.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Gebied moet een kader, een polylijn of twee hoekposities zijn.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Verschuiving is vereist.</translation>
     </message>
 </context>
 </TS>

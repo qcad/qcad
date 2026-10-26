@@ -325,7 +325,7 @@
         <translation>외부 참조</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>순환(재귀적) 블록 참조가 감지되었습니다:</translation>
     </message>
@@ -393,7 +393,7 @@
         <translation>속성</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>스타일</translation>
     </message>

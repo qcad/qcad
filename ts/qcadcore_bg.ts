@@ -325,7 +325,7 @@
         <translation>Външна препратка</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Открито е кръгово (рекурсивно) препращане към блок:</translation>
     </message>
@@ -393,7 +393,7 @@
         <translation>Атрибути</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Стил</translation>
     </message>

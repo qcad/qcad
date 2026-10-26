@@ -325,7 +325,7 @@
         <translation>Väline viide</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Avastatud ringikujuline (rekursiivne) plokiviitamine:</translation>
     </message>
@@ -393,7 +393,7 @@
         <translation>Atribuudid</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Stiil</translation>
     </message>

@@ -721,7 +721,7 @@
         <translation>ID vrstvy</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Detekováno kruhové (rekurzivní) odkazování bloku</translation>
     </message>
@@ -731,7 +731,7 @@
         <translation>Název bloku:</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Styl</translation>
     </message>

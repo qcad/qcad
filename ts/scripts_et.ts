@@ -9,7 +9,7 @@
         <translation>Teave %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+59"/>
         <location line="+142"/>
         <source>Version:</source>
         <translation>Versioon:</translation>
@@ -242,12 +242,12 @@
         <translation>QCAD rakenduse ikoon</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Logo &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>Kohta</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Joonistamise eelistused</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Rakenda eelistusi</translation>
     </message>
@@ -427,7 +427,7 @@ eelistuste muudatused jõustuksid.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Kehtetu raadius</translation>
     </message>
@@ -1370,13 +1370,13 @@ Kas soovite seda taastada?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+786"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
         <source>Widgets</source>
         <translation>Vidinad</translation>
     </message>
     <message>
-        <location line="-730"/>
-        <location line="+730"/>
+        <location line="-731"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1393,7 +1393,7 @@ Kas soovite seda taastada?</translation>
         <translation>Lubage vahelduvad reavärvid</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
         <source>Current block</source>
         <translation>Praegune plokk</translation>
     </message>
@@ -2200,7 +2200,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Käsurea</translation>
     </message>
@@ -2230,7 +2230,7 @@ Kas soovite seda taastada?</translation>
         <translation>Käskude, valikute ja teadete ajalugu</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Kehtetu väärtus:</translation>
     </message>
@@ -2315,7 +2315,7 @@ Kas soovite seda taastada?</translation>
         <translation>Näita teavet dialoogina</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Näita tiitliriba</translation>
     </message>
@@ -5059,6 +5059,16 @@ on juba loendis.</translation>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6135,7 +6145,7 @@ on juba loendis.</translation>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Graafika vaade</translation>
     </message>
@@ -6193,6 +6203,36 @@ on juba loendis.</translation>
         <location line="+36"/>
         <source>Meta grid:</source>
         <translation>Meta-võrgustik:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Kuma</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Esile tõstetud ja valitud üksused säilitavad oma värvi ning neid kuvatakse hägusa kumaga allpool toodud kumavärvides. Vastasel juhul kuvatakse neid esiletõstmise või valiku värviga.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Kasuta esiletõstmiseks ja valimiseks kuma</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Kuma suurus (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Kuma värv esiletõstmisel:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Kuma värv valimisel:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6387,6 +6427,11 @@ on juba loendis.</translation>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Välimus</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>RHI-graafikavaade kasutab alati ekraani täislahutust</translation>
     </message>
 </context>
 <context>
@@ -10594,7 +10639,7 @@ on juba loendis.</translation>
         <translation>Näita kõiki omadusi</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -13973,7 +14018,7 @@ on juba loendis.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Taastada vaikimisi seadistused</translation>
     </message>
@@ -14435,7 +14480,7 @@ on juba loendis.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Objektid</translation>
     </message>
@@ -14822,6 +14867,16 @@ on juba loendis.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Polügoonvõrgud</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Polügoonvõrk</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
@@ -14889,7 +14944,7 @@ on juba loendis.</translation>
         <translation>Tundmatu üksus</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Kõik CAD-failid</translation>
     </message>
@@ -15004,30 +15059,144 @@ on juba loendis.</translation>
     </message>
 </context>
 <context>
-    <name>simple_modify</name>
+    <name>simple_info</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
+        <location filename="../scripts/simple_info.js" line="+157"/>
         <source>ID does not refer to an entity:</source>
         <translation>ID ei viita üksusele:</translation>
     </message>
+</context>
+<context>
+    <name>simple_modify</name>
     <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Esimest üksust ei saa kärpida.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Üksust ei saa kärpida.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Ei ole üksuse viide (ID, üksus, kuju või asukoht):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Üksusel puudub kuju:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Vaja on kahte üksust.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Kärpimine sama polüjoone piires nõuab mõlema segmendi kärpimist.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Teist üksust ei saa kärpida.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Kogus on nõutav.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Üksust ei saa pikendada.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Üksusest ei saa lõiku välja lõigata.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Asukoht on nõutav.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Üksust ei saa jagada.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Raadius on nõutav.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Neid kahte üksust ei saa ümardada.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Kaugus on nõutav.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>Neid kahte üksust ei saa faasida.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Raadius langes alla 0.0 pärast %n kontsentrilise ringi.</numerusform>
+            <numerusform>Raadius langes alla 0.0 pärast %n kontsentrilise ringi.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Raadius langes alla 0.0 pärast %n kontsentrilise kaare.</numerusform>
+            <numerusform>Raadius langes alla 0.0 pärast %n kontsentrilise kaare.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>Üksusele ei saa rakendada paralleelnihet.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Üksust ei saa ümber pöörata.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Üksust ei saa tükeldada.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Ala peab olema kast, polüjoon või kaks nurgapunkti.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Nihe on nõutav.</translation>
     </message>
 </context>
 </TS>

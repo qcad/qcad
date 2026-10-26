@@ -984,5 +984,15 @@
         <source>Frame</source>
         <translation>Rám</translation>
     </message>
+    <message>
+        <location filename="../src/entity/RPolyMeshEntity.cpp" line="+64"/>
+        <source>Vertices</source>
+        <translation>Vrcholy</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Faces</source>
+        <translation>Plochy</translation>
+    </message>
 </context>
 </TS>

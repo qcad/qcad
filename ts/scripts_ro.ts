@@ -9,7 +9,7 @@
         <translation>Despre %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+59"/>
         <location line="+142"/>
         <source>Version:</source>
         <translation>Versiunea:</translation>
@@ -242,12 +242,12 @@
         <translation>Pictograma aplicației QCAD</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Logo &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>Despre</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Preferințe de desenare</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Aplicați preferințele</translation>
     </message>
@@ -427,7 +427,7 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Raza invalidă</translation>
     </message>
@@ -1372,13 +1372,13 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+786"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
         <source>Widgets</source>
         <translation>Widgeturi</translation>
     </message>
     <message>
-        <location line="-730"/>
-        <location line="+730"/>
+        <location line="-731"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1395,7 +1395,7 @@ Doriți să îl recuperați?</translation>
         <translation>Activați culorile alternante ale rândurilor</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
         <source>Current block</source>
         <translation>Blocul curent</translation>
     </message>
@@ -2202,7 +2202,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Linia de comandă</translation>
     </message>
@@ -2232,7 +2232,7 @@ Doriți să îl recuperați?</translation>
         <translation>Istoricul comenzilor, opțiunilor și mesajelor</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Valoare invalidă:</translation>
     </message>
@@ -2317,7 +2317,7 @@ Doriți să îl recuperați?</translation>
         <translation>Afișați informațiile sub formă de dialog</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Afișează bara de titlu</translation>
     </message>
@@ -5063,6 +5063,16 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6140,7 +6150,7 @@ este deja în listă.</translation>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Vizualizare grafică</translation>
     </message>
@@ -6198,6 +6208,36 @@ este deja în listă.</translation>
         <location line="+36"/>
         <source>Meta grid:</source>
         <translation>Meta-grilă:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Halouri</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Entitățile evidențiate și selectate își păstrează culoarea și sunt afișate cu un halou estompat în culorile de halou de mai jos. Altfel, ele sunt afișate în culoarea de evidențiere sau de selecție.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Utilizați halouri pentru evidențiere și selecție</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Dimensiunea haloului (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Culoarea haloului pentru evidențiere:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Culoarea haloului pentru selecție:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6392,6 +6432,11 @@ este deja în listă.</translation>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Aspect</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>Vizualizarea grafică RHI utilizează întotdeauna rezoluția completă a ecranului</translation>
     </message>
 </context>
 <context>
@@ -10601,7 +10646,7 @@ este deja în listă.</translation>
         <translation>Arată toate proprietățile</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -13983,7 +14028,7 @@ este deja în listă.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Restabilirea valorilor implicite</translation>
     </message>
@@ -14445,7 +14490,7 @@ este deja în listă.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Obiecte</translation>
     </message>
@@ -14832,6 +14877,16 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Rețele poligonale</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Rețea poligonală</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
@@ -14899,7 +14954,7 @@ este deja în listă.</translation>
         <translation>Entitate necunoscută</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Toate fișierele CAD</translation>
     </message>
@@ -15014,30 +15069,146 @@ este deja în listă.</translation>
     </message>
 </context>
 <context>
-    <name>simple_modify</name>
+    <name>simple_info</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
+        <location filename="../scripts/simple_info.js" line="+157"/>
         <source>ID does not refer to an entity:</source>
         <translation>ID-ul nu se referă la o entitate:</translation>
     </message>
+</context>
+<context>
+    <name>simple_modify</name>
     <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Prima entitate nu poate fi tăiată.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Entitatea nu poate fi tăiată.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Nu este o referință la o entitate (ID, entitate, formă sau poziție):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Entitatea nu are formă:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Sunt necesare două entități.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Tăierea în cadrul aceleiași polilinii necesită tăierea ambelor segmente.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>A doua entitate nu poate fi tăiată.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Valoarea este necesară.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Entitatea nu poate fi prelungită.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Din entitate nu se poate decupa un segment.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Poziția este necesară.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Entitatea nu poate fi divizată.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Raza este necesară.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Cele două entități nu pot fi rotunjite.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Distanța este necesară.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>Cele două entități nu pot fi șanfrenate.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Raza a scăzut sub 0.0 după %n cerc concentric.</numerusform>
+            <numerusform>Raza a scăzut sub 0.0 după %n cercuri concentrice.</numerusform>
+            <numerusform>Raza a scăzut sub 0.0 după %n de cercuri concentrice.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Raza a scăzut sub 0.0 după %n arc concentric.</numerusform>
+            <numerusform>Raza a scăzut sub 0.0 după %n arce concentrice.</numerusform>
+            <numerusform>Raza a scăzut sub 0.0 după %n de arce concentrice.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>Entitatea nu poate fi decalată.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Entitatea nu poate fi inversată.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Entitatea nu poate fi descompusă.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Zona trebuie să fie o casetă, o polilinie sau două poziții de colț.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Decalajul este necesar.</translation>
     </message>
 </context>
 </TS>

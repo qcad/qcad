@@ -995,5 +995,15 @@
         <source>Frame</source>
         <translation>Keret</translation>
     </message>
+    <message>
+        <location filename="../src/entity/RPolyMeshEntity.cpp" line="+64"/>
+        <source>Vertices</source>
+        <translation>Csúcspontok</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Faces</source>
+        <translation>Felületek</translation>
+    </message>
 </context>
 </TS>

@@ -9,7 +9,7 @@
         <translation>Giới thiệu %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+59"/>
         <location line="+142"/>
         <source>Version:</source>
         <translation>Phiên bản:</translation>
@@ -242,12 +242,12 @@
         <translation>Biểu tượng ứng dụng QCAD</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Logo &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>Giới thiệu</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Tùy chọn bản vẽ</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Áp dụng tùy chọn</translation>
     </message>
@@ -427,7 +427,7 @@ các thay đổi tùy chọn có hiệu lực.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Bán kính không hợp lệ</translation>
     </message>
@@ -1368,13 +1368,13 @@ Bạn có muốn khôi phục không?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+786"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
         <source>Widgets</source>
         <translation>Widget</translation>
     </message>
     <message>
-        <location line="-730"/>
-        <location line="+730"/>
+        <location line="-731"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1391,7 +1391,7 @@ Bạn có muốn khôi phục không?</translation>
         <translation>Bật màu hàng xen kẽ</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
         <source>Current block</source>
         <translation>Khối hiện hành</translation>
     </message>
@@ -2198,7 +2198,7 @@ Bạn có muốn khôi phục không?</translation>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Dòng lệnh</translation>
     </message>
@@ -2228,7 +2228,7 @@ Bạn có muốn khôi phục không?</translation>
         <translation>Lịch sử lệnh, tùy chọn và thông báo</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Giá trị không hợp lệ:</translation>
     </message>
@@ -2313,7 +2313,7 @@ Bạn có muốn khôi phục không?</translation>
         <translation>Hiện thông tin dưới dạng hộp thoại</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Hiện thanh tiêu đề</translation>
     </message>
@@ -5055,6 +5055,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6130,7 +6140,7 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Khung nhìn đồ họa</translation>
     </message>
@@ -6188,6 +6198,36 @@ is already in the list.</source>
         <location line="+36"/>
         <source>Meta grid:</source>
         <translation>Lưới meta:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Quầng sáng</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Các đối tượng được làm nổi bật và được chọn giữ nguyên màu của chúng và được hiển thị với quầng sáng mờ theo các màu quầng sáng bên dưới. Nếu không, chúng được hiển thị bằng màu làm nổi bật hoặc màu vùng chọn.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Dùng quầng sáng khi làm nổi bật và chọn</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Cỡ quầng sáng (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Màu quầng sáng khi làm nổi bật:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Màu quầng sáng khi chọn:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6382,6 +6422,11 @@ is already in the list.</source>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Giao diện</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>Khung nhìn đồ họa RHI luôn dùng toàn bộ độ phân giải của màn hình</translation>
     </message>
 </context>
 <context>
@@ -10587,7 +10632,7 @@ is already in the list.</source>
         <translation>Hiện tất cả thuộc tính</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>Tự động</translation>
     </message>
@@ -13963,7 +14008,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Khôi phục mặc định</translation>
     </message>
@@ -14425,7 +14470,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Đối tượng</translation>
     </message>
@@ -14812,6 +14857,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Lưới đa giác</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Lưới đa giác</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Spline</translation>
     </message>
@@ -14879,7 +14934,7 @@ is already in the list.</source>
         <translation>Đối tượng không xác định</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Tất cả tệp CAD</translation>
     </message>
@@ -14994,30 +15049,142 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>simple_modify</name>
+    <name>simple_info</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
+        <location filename="../scripts/simple_info.js" line="+157"/>
         <source>ID does not refer to an entity:</source>
         <translation>ID không tham chiếu đến một đối tượng:</translation>
     </message>
+</context>
+<context>
+    <name>simple_modify</name>
     <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Không thể cắt xén đối tượng thứ nhất.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Không thể cắt xén đối tượng.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Không phải tham chiếu đối tượng (ID, đối tượng, hình hoặc vị trí):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Đối tượng không có hình:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Cần hai đối tượng.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Cắt xén trong cùng một đa tuyến yêu cầu cắt xén cả hai đoạn.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Không thể cắt xén đối tượng thứ hai.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Cần có lượng.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Không thể kéo dài đối tượng.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Không thể ngắt đoạn đối tượng.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Cần có vị trí.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Không thể chia đối tượng.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Cần có bán kính.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Không thể bo tròn hai đối tượng.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Cần có khoảng cách.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>Không thể vát hai đối tượng.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Bán kính giảm xuống dưới 0.0 sau %n đường tròn đồng tâm.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Bán kính giảm xuống dưới 0.0 sau %n cung đồng tâm.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>Không thể offset đối tượng.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Không thể đảo chiều đối tượng.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Không thể phá vỡ đối tượng.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Vùng phải là một khung, một đa tuyến hoặc hai vị trí góc.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Cần có độ dịch chuyển.</translation>
     </message>
 </context>
 </TS>

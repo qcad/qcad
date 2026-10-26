@@ -325,7 +325,7 @@
         <translation>การอ้างอิงภายนอก</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>ตรวจพบการอ้างอิงบล็อกแบบวงกลม (เรียกซ้ำ):</translation>
     </message>
@@ -731,7 +731,7 @@
         <translation>ID ชั้น</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>รูปแบบ</translation>
     </message>

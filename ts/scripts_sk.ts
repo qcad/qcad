@@ -9,7 +9,7 @@
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+67"/>
         <source>Revision:</source>
         <translation>Revízia:</translation>
     </message>
@@ -242,12 +242,12 @@
         <translation>Ikona aplikácie QCAD</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Logo &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>O programe</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Nastavenia Kreslenia</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Použiť nastavenia</translation>
     </message>
@@ -427,7 +427,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Neplatný polomer</translation>
     </message>
@@ -1372,13 +1372,13 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+786"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
     <message>
-        <location line="-730"/>
-        <location line="+730"/>
+        <location line="-731"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1395,7 +1395,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Každý druhý riadok označiť farbou</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
         <source>Current block</source>
         <translation>Aktuálny blok</translation>
     </message>
@@ -2202,7 +2202,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Príkazový riadok</translation>
     </message>
@@ -2232,7 +2232,7 @@ Prajete si ho obnoviť?</translation>
         <translation>História príkazov, volieb a správ</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Neplatná hodnota:</translation>
     </message>
@@ -2317,7 +2317,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Zobraziť informácie v samostatnom okienku</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Zobraziť záhlavie okna</translation>
     </message>
@@ -5063,6 +5063,16 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6140,7 +6150,7 @@ už existuje v zozname.</translation>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Pohľad grafiky</translation>
     </message>
@@ -6198,6 +6208,36 @@ už existuje v zozname.</translation>
         <location line="+36"/>
         <source>Meta grid:</source>
         <translation>Mriežka:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Žiara</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Zvýraznené a vybrané prvky si zachovajú svoju farbu a zobrazia sa s rozmazanou žiarou vo farbách žiary nižšie. Inak sa zobrazia vo farbe zvýraznenia alebo výberu.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Použiť žiaru na zvýraznenie a výber</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Veľkosť žiary (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Farba žiary pri zvýraznení:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Farba žiary pri výbere:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6392,6 +6432,11 @@ už existuje v zozname.</translation>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Vzhľad</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>Grafický pohľad RHI vždy používa plné rozlíšenie displeja</translation>
     </message>
 </context>
 <context>
@@ -10546,12 +10591,12 @@ už existuje v zozname.</translation>
         <translation>Zobrazenie rozšíreného štýlu dimenzie</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2016"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1781"/>
+        <location line="-1782"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10606,7 +10651,7 @@ už existuje v zozname.</translation>
         <translation>Zobraziť všetky vlastnosti</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>automatický</translation>
     </message>
@@ -13983,7 +14028,7 @@ už existuje v zozname.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Obnoviť predvolené</translation>
     </message>
@@ -14445,7 +14490,7 @@ už existuje v zozname.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Objekty</translation>
     </message>
@@ -14832,6 +14877,16 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Polygónové siete</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Polygónová sieť</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Spline-y</translation>
     </message>
@@ -14899,7 +14954,7 @@ už existuje v zozname.</translation>
         <translation>Neznámy Prvok</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Všetky CAD súbory</translation>
     </message>
@@ -15014,30 +15069,146 @@ už existuje v zozname.</translation>
     </message>
 </context>
 <context>
+    <name>simple_info</name>
+    <message>
+        <location filename="../scripts/simple_info.js" line="+157"/>
+        <source>ID does not refer to an entity:</source>
+        <translation>ID neodkazuje na prvok:</translation>
+    </message>
+</context>
+<context>
     <name>simple_modify</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
-        <source>ID does not refer to an entity:</source>
-        <translation>ID sa nevzťahuje na subjekt:</translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Prvý prvok sa nedá odrezať.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Prvok sa nedá odrezať.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Nie je odkaz na prvok (ID, prvok, tvar alebo poloha):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Prvok nemá tvar:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Vyžadujú sa dva prvky.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Orezanie v rámci tej istej krivky vyžaduje orezanie oboch segmentov.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Druhý prvok sa nedá odrezať.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Vyžaduje sa hodnota.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Prvok sa nedá predĺžiť.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Úsek prvku sa nedá vyrezať.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Vyžaduje sa poloha.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Prvok sa nedá rozdeliť.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Vyžaduje sa polomer.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Tieto dva prvky sa nedajú zaobliť.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Vyžaduje sa vzdialenosť.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>Medzi týmito dvomi prvkami sa nedá vytvoriť skosenie.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Polomer klesol pod hodnotu 0.0 po %n sústrednej kružnici.</numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 po %n sústredných kružniciach.</numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 po %n sústredných kružniciach.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Polomer klesol pod hodnotu 0.0 po %n sústrednom oblúku.</numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 po %n sústredných oblúkoch.</numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 po %n sústredných oblúkoch.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>K prvku sa nedá vytvoriť paralelka.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Smer prvku sa nedá obrátiť.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Prvok sa nedá rozložiť.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Oblasť musí byť obdĺžnik, krivka alebo dve rohové polohy.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Vyžaduje sa posunutie.</translation>
     </message>
 </context>
 </TS>

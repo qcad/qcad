@@ -9,7 +9,7 @@
         <translation>Tietoja %1</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+114"/>
         <source>Plugins</source>
         <translation>Laajennusosat</translation>
     </message>
@@ -242,12 +242,12 @@
         <translation>QCAD-sovelluksen kuvake</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Logo &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Piirroksen asetukset</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Käytä asetuksia</translation>
     </message>
@@ -427,7 +427,7 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
@@ -1370,13 +1370,13 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+786"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
-        <location line="-730"/>
-        <location line="+730"/>
+        <location line="-731"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1393,7 +1393,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Salli vaihtelevat rivien värit</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
         <source>Current block</source>
         <translation>Nykyinen lohko</translation>
     </message>
@@ -2200,7 +2200,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Komentorivi</translation>
     </message>
@@ -2230,7 +2230,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Komentojen, valintojen ja viestien historia</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Virheellinen arvo:</translation>
     </message>
@@ -2315,7 +2315,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Näytä tiedot viesti-ikkunassa</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Näytä otsikkopalkki</translation>
     </message>
@@ -5059,6 +5059,16 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080 p, Full HD) 16:9</translation>
     </message>
@@ -6135,7 +6145,7 @@ on jo luettelossa.</translation>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Graafinen näkymä</translation>
     </message>
@@ -6183,6 +6193,36 @@ on jo luettelossa.</translation>
         <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Aliruudukko:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Halot</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Korostetut ja valitut kohteet säilyttävät värinsä, ja niiden ympärille piirretään sumea halo alla olevilla haloväreillä. Muussa tapauksessa ne näytetään korostus- tai valintavärillä.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Käytä haloja korostukseen ja valintaan</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Halon koko (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Halon väri korostukselle:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Halon väri valinnalle:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6295,7 +6335,7 @@ on jo luettelossa.</translation>
         <translation>Suurenna/säädä laatikon reuna:</translation>
     </message>
     <message>
-        <location line="-757"/>
+        <location line="-883"/>
         <source>Origin:</source>
         <translation>Nollakohta:</translation>
     </message>
@@ -6387,6 +6427,11 @@ on jo luettelossa.</translation>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Ulkoasu</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>RHI-grafiikkanäkymä käyttää aina näytön täyttä tarkkuutta</translation>
     </message>
 </context>
 <context>
@@ -10539,12 +10584,12 @@ on jo luettelossa.</translation>
         <translation>Näytä mittatyylin lisäohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2016"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1781"/>
+        <location line="-1782"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10599,7 +10644,7 @@ on jo luettelossa.</translation>
         <translation>Näytä kaikki ominaisuudet</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>Automaattinen</translation>
     </message>
@@ -13973,7 +14018,7 @@ on jo luettelossa.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>
@@ -14435,7 +14480,7 @@ on jo luettelossa.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Esineet</translation>
     </message>
@@ -14822,6 +14867,16 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Monikulmioverkot</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Monikulmioverkko</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Käyrät</translation>
     </message>
@@ -14889,7 +14944,7 @@ on jo luettelossa.</translation>
         <translation>Tuntematon kohde</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Kaikki CAD -tiedostot</translation>
     </message>
@@ -15004,30 +15059,144 @@ on jo luettelossa.</translation>
     </message>
 </context>
 <context>
+    <name>simple_info</name>
+    <message>
+        <location filename="../scripts/simple_info.js" line="+157"/>
+        <source>ID does not refer to an entity:</source>
+        <translation>ID ei viittaa kohteeseen:</translation>
+    </message>
+</context>
+<context>
     <name>simple_modify</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
-        <source>ID does not refer to an entity:</source>
-        <translation>ID ei viittaa entiteettiin:</translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Ensimmäistä kohdetta ei voi hienosäätää.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Kohdetta ei voi hienosäätää.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Ei kohdeviittaus (ID, kohde, muoto tai sijainti):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Kohteella ei ole muotoa:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Tarvitaan kaksi kohdetta.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Saman murtoviivan sisällä rajaaminen edellyttää molempien segmenttien rajaamista.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Toista kohdetta ei voida hienosäätää.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Määrä vaaditaan.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Kohdetta ei voi pidentää.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Kohteesta ei voi katkaista osaa.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Sijainti vaaditaan.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Kohdetta ei voi jakaa.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Säde vaaditaan.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Näitä kahta kohdetta ei voida pyöristää.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Etäisyys vaaditaan.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>Näitä kahta kohdetta ei voida viistää.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Säde pieneni alle 0,0:n %n samankeskisen ympyrän jälkeen.</numerusform>
+            <numerusform>Säde pieneni alle 0,0:n %n samankeskisen ympyrän jälkeen.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Säde pieneni alle 0,0:n %n samankeskisen kaaren jälkeen.</numerusform>
+            <numerusform>Säde pieneni alle 0,0:n %n samankeskisen kaaren jälkeen.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>Kohteesta ei voi tehdä offsetia.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Kohteen suuntaa ei voi kääntää.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Kohdetta ei voi purkaa.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Alueen on oltava laatikko, murtoviiva tai kaksi kulmapistettä.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Siirtymä vaaditaan.</translation>
     </message>
 </context>
 </TS>

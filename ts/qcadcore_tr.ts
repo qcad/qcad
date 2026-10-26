@@ -325,7 +325,7 @@
         <translation>Harici referans</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Dairesel (özyinelemeli) blok referanslama tespit edildi:</translation>
     </message>
@@ -731,7 +731,7 @@
         <translation>Katman Kimliği</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Stil</translation>
     </message>

@@ -721,7 +721,7 @@
         <translation>Sluoksnio ID</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Aptikta žiedinė (rekursinė) bloko nuoroda:</translation>
     </message>
@@ -731,7 +731,7 @@
         <translation>Bloko pavadinimas:</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Stilius</translation>
     </message>

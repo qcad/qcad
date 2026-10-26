@@ -9,7 +9,7 @@
         <translation>Σχετικά με το %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+59"/>
         <location line="+142"/>
         <source>Version:</source>
         <translation>Έκδοση:</translation>
@@ -242,12 +242,12 @@
         <translation>Εικονίδιο εφαρμογής QCAD</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Λογότυπο &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>Σχετικά με το</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Προτιμήσεις σχεδίασης</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Εφαρμογή προτιμήσεων</translation>
     </message>
@@ -427,7 +427,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Μη έγκυρη ακτίνα</translation>
     </message>
@@ -1370,13 +1370,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+786"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
         <source>Widgets</source>
         <translation>Εργαλεία</translation>
     </message>
     <message>
-        <location line="-730"/>
-        <location line="+730"/>
+        <location line="-731"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1393,7 +1393,7 @@ Do you wish to recover it?</source>
         <translation>Ενεργοποίηση εναλλασσόμενων χρωμάτων σειρών</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
         <source>Current block</source>
         <translation>Τρέχον μπλοκ</translation>
     </message>
@@ -2200,7 +2200,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Γραμμή εντολών</translation>
     </message>
@@ -2230,7 +2230,7 @@ Do you wish to recover it?</source>
         <translation>Ιστορικό εντολών, επιλογών και μηνυμάτων</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Μη έγκυρη τιμή:</translation>
     </message>
@@ -2315,7 +2315,7 @@ Do you wish to recover it?</source>
         <translation>Εμφάνιση πληροφοριών ως διάλογος</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Εμφάνιση γραμμής τίτλου</translation>
     </message>
@@ -5059,6 +5059,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6135,7 +6145,7 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Προβολή γραφικών</translation>
     </message>
@@ -6193,6 +6203,36 @@ is already in the list.</source>
         <location line="+36"/>
         <source>Meta grid:</source>
         <translation>Μετα-πλέγμα:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Φωτοστέφανα</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Οι επισημασμένες και οι επιλεγμένες οντότητες διατηρούν το χρώμα τους και εμφανίζονται με ένα θολό φωτοστέφανο στα παρακάτω χρώματα φωτοστέφανου. Διαφορετικά εμφανίζονται με το χρώμα επισήμανσης ή επιλογής.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Χρήση φωτοστέφανων για επισήμανση και επιλογή</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Μέγεθος φωτοστέφανου (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Χρώμα φωτοστέφανου για επισήμανση:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Χρώμα φωτοστέφανου για επιλογή:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6387,6 +6427,11 @@ is already in the list.</source>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Εμφάνιση</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>Η προβολή γραφικών RHI χρησιμοποιεί πάντα την πλήρη ανάλυση της οθόνης</translation>
     </message>
 </context>
 <context>
@@ -10594,7 +10639,7 @@ is already in the list.</source>
         <translation>Εμφάνιση όλων των ακινήτων</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>Αυτόματο</translation>
     </message>
@@ -13973,7 +14018,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Επαναφορά προεπιλογών</translation>
     </message>
@@ -14435,7 +14480,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Αντικείμενα</translation>
     </message>
@@ -14822,6 +14867,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Πολυγωνικά πλέγματα</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Πολυγωνικό πλέγμα</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Καμπύλες</translation>
     </message>
@@ -14889,7 +14944,7 @@ is already in the list.</source>
         <translation>Άγνωστη οντότητα</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Όλα τα αρχεία CAD</translation>
     </message>
@@ -15004,30 +15059,144 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>simple_info</name>
+    <message>
+        <location filename="../scripts/simple_info.js" line="+157"/>
+        <source>ID does not refer to an entity:</source>
+        <translation>Το ID δεν αντιστοιχεί σε οντότητα:</translation>
+    </message>
+</context>
+<context>
     <name>simple_modify</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
-        <source>ID does not refer to an entity:</source>
-        <translation>Το ID δεν αναφέρεται σε μια οντότητα:</translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Η πρώτη οντότητα δεν μπορεί να κοπεί.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Η οντότητα δεν μπορεί να κοπεί.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Δεν είναι αναφορά οντότητας (ID, οντότητα, σχήμα ή θέση):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Η οντότητα δεν έχει σχήμα:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Απαιτούνται δύο οντότητες.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Η κοπή εντός της ίδιας πολυγραμμής απαιτεί κοπή και των δύο τμημάτων.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Η δεύτερη οντότητα δεν μπορεί να κοπεί.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Απαιτείται ποσότητα.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Η οντότητα δεν μπορεί να επιμηκυνθεί.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Δεν είναι δυνατός ο διαχωρισμός τμήματος από την οντότητα.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Απαιτείται θέση.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Η οντότητα δεν μπορεί να διαιρεθεί.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Απαιτείται ακτίνα.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Οι δύο οντότητες δεν μπορούν να στρογγυλοποιηθούν.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Απαιτείται απόσταση.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>Οι δύο οντότητες δεν μπορούν να λοξοτμηθούν.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Η ακτίνα έπεσε κάτω από 0.0 μετά από %n ομόκεντρο κύκλο.</numerusform>
+            <numerusform>Η ακτίνα έπεσε κάτω από 0.0 μετά από %n ομόκεντρους κύκλους.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Η ακτίνα έπεσε κάτω από 0.0 μετά από %n ομόκεντρο τόξο.</numerusform>
+            <numerusform>Η ακτίνα έπεσε κάτω από 0.0 μετά από %n ομόκεντρα τόξα.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>Η οντότητα δεν μπορεί να μετατοπιστεί.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Η οντότητα δεν μπορεί να αντιστραφεί.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Η οντότητα δεν μπορεί να διασπαστεί.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Η περιοχή πρέπει να είναι ένα πλαίσιο, μια πολυγραμμή ή δύο θέσεις γωνιών.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Απαιτείται μετατόπιση.</translation>
     </message>
 </context>
 </TS>

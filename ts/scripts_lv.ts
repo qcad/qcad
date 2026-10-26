@@ -9,7 +9,7 @@
         <translation>Par %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+59"/>
         <location line="+142"/>
         <source>Version:</source>
         <translation>Versija:</translation>
@@ -242,12 +242,12 @@
         <translation>QCAD lietojumprogrammas ikona</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Logotips &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>Par</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Zīmēšanas preferences</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Piemērot preferences</translation>
     </message>
@@ -427,7 +427,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Nederīgs rādiuss</translation>
     </message>
@@ -1372,13 +1372,13 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+786"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
         <source>Widgets</source>
         <translation>Logrīki</translation>
     </message>
     <message>
-        <location line="-730"/>
-        <location line="+730"/>
+        <location line="-731"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1395,7 +1395,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation>Iespējot pārmaiņus rindu krāsas</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-415"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
         <source>Current block</source>
         <translation>Pašreizējais bloks</translation>
     </message>
@@ -2202,7 +2202,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+0"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Komandrindas</translation>
     </message>
@@ -2232,7 +2232,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation>Komandu, opciju un ziņojumu vēsture</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Nederīga vērtība:</translation>
     </message>
@@ -2317,7 +2317,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation>Rādīt informāciju kā dialoglodziņu</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Rādīt virsraksta joslu</translation>
     </message>
@@ -5063,6 +5063,16 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6140,7 +6150,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Grafikas skats</translation>
     </message>
@@ -6198,6 +6208,36 @@ jau ir sarakstā.</translation>
         <location line="+36"/>
         <source>Meta grid:</source>
         <translation>Meta režģis:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Oreoli</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Izceltās un atlasītās vienības saglabā savu krāsu un tiek attēlotas ar izpludinātu oreolu zemāk norādītajās oreola krāsās. Pretējā gadījumā tās tiek attēlotas izcelšanas vai atlases krāsā.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Izmantot oreolus izcelšanai un atlasei</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Oreola izmērs (px):</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Oreola krāsa izcelšanai:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Oreola krāsa atlasei:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6392,6 +6432,11 @@ jau ir sarakstā.</translation>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Izskats</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>RHI grafiskais skats vienmēr izmanto pilnu displeja izšķirtspēju</translation>
     </message>
 </context>
 <context>
@@ -10601,7 +10646,7 @@ jau ir sarakstā.</translation>
         <translation>Rādīt visas īpašības</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+162"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -13983,7 +14028,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Atjaunot noklusējuma iestatījumus</translation>
     </message>
@@ -14445,7 +14490,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>
@@ -14832,6 +14877,16 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Daudzstūru tīkli</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Daudzstūru tīkls</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splīnijas</translation>
     </message>
@@ -14899,7 +14954,7 @@ jau ir sarakstā.</translation>
         <translation>Nezināms subjekts</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Visi CAD faili</translation>
     </message>
@@ -15014,30 +15069,146 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 <context>
+    <name>simple_info</name>
+    <message>
+        <location filename="../scripts/simple_info.js" line="+157"/>
+        <source>ID does not refer to an entity:</source>
+        <translation>ID neattiecas uz vienību:</translation>
+    </message>
+</context>
+<context>
     <name>simple_modify</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
-        <source>ID does not refer to an entity:</source>
-        <translation>ID neatsaucas uz vienību:</translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Pirmo vienību nevar apgriezt.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Vienību nevar apgriezt.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Nav vienības atsauce (ID, vienība, forma vai pozīcija):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>Vienībai nav formas:</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Nepieciešamas divas vienības.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>Apgriešanai vienas daudzlīnijas ietvaros jāapgriež abi segmenti.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Otro vienību nevar apgriezt.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Nepieciešams lielums.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>Vienību nevar pagarināt.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Vienībai nevar izdalīt segmentu.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Nepieciešama pozīcija.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>Vienību nevar dalīt.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Nepieciešams rādiuss.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Abas vienības nevar noapaļot.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Nepieciešams attālums.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>Abas vienības nevar nošķelt.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskā apļa.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem apļiem.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem apļiem.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskā loka.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem lokiem.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem lokiem.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>Vienību nevar nobīdīt.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>Vienības virzienu nevar apgriezt.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>Vienību nevar sadalīt.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>Apgabalam jābūt taisnstūrim, daudzlīnijai vai divām stūru pozīcijām.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Nepieciešama nobīde.</translation>
     </message>
 </context>
 </TS>

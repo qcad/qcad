@@ -984,5 +984,15 @@
         <source>Frame</source>
         <translation>Telaio</translation>
     </message>
+    <message>
+        <location filename="../src/entity/RPolyMeshEntity.cpp" line="+64"/>
+        <source>Vertices</source>
+        <translation>Vertici</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Faces</source>
+        <translation>Facce</translation>
+    </message>
 </context>
 </TS>

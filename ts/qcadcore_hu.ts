@@ -730,7 +730,7 @@
         <translation>Max. kiterjedés</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Körkörös (rekurzív) blokkreferencia észlelve:</translation>
     </message>
@@ -740,7 +740,7 @@
         <translation>Blokk neve:</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Stílus</translation>
     </message>

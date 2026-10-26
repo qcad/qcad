@@ -721,7 +721,7 @@
         <translation>最大扩展</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>检测到循环（递归）块引用：</translation>
     </message>
@@ -731,7 +731,7 @@
         <translation>块名称：</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>样式</translation>
     </message>

@@ -984,5 +984,15 @@
         <source>Frame</source>
         <translation>Rėmelis</translation>
     </message>
+    <message>
+        <location filename="../src/entity/RPolyMeshEntity.cpp" line="+64"/>
+        <source>Vertices</source>
+        <translation>Viršūnės</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Faces</source>
+        <translation>Paviršiai</translation>
+    </message>
 </context>
 </TS>

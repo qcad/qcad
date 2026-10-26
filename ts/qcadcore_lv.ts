@@ -325,7 +325,7 @@
         <translation>Ārējā atsauce</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Atklāta cirkulāra (rekursīva) bloka atsauce:</translation>
     </message>
@@ -393,7 +393,7 @@
         <translation>Atribūti</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Stils</translation>
     </message>

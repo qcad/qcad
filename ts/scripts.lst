@@ -982,6 +982,12 @@
 /Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/BreakOutGap.js
 /Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/BreakOutGapInit.js
 /Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/Tests/BreakOutGapTest01.js
+/Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/Tests/BreakOutGapTest02.js
+/Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/Tests/BreakOutGapTest03.js
+/Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/Tests/BreakOutGapTest04.js
+/Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/Tests/BreakOutGapTest05.js
+/Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/Tests/BreakOutGapTest06.js
+/Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutGap/Tests/BreakOutGapTest07.js
 /Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutManual/BreakOutManual.js
 /Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutManual/BreakOutManualInit.js
 /Users/andrew/data/QCAD4/qcad/scripts/Modify/BreakOutManual/Tests/BreakOutManualTest00.js
@@ -1219,6 +1225,7 @@
 /Users/andrew/data/QCAD4/qcad/scripts/Snap/SnapYManual/SnapYManual.js
 /Users/andrew/data/QCAD4/qcad/scripts/Snap/SnapYManual/SnapYManualInit.js
 /Users/andrew/data/QCAD4/qcad/scripts/sprintf.js
+/Users/andrew/data/QCAD4/qcad/scripts/TestsClaude/SimpleApiTest.js
 /Users/andrew/data/QCAD4/qcad/scripts/Tools/arguments.js
 /Users/andrew/data/QCAD4/qcad/scripts/Tools/ExTool/ExTool.js
 /Users/andrew/data/QCAD4/qcad/scripts/Tools/MergeDrawings/MergeDrawings.js

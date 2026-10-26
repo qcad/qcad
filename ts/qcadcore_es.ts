@@ -721,7 +721,7 @@
         <translation>Max extensión</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Se detectó una referencia de bloque circular (recursiva):</translation>
     </message>
@@ -731,7 +731,7 @@
         <translation>Nombre del bloque:</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Estilo</translation>
     </message>

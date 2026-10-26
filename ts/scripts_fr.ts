@@ -9,7 +9,7 @@
         <translation>À propos de %1</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+67"/>
         <source>Revision:</source>
         <translation>Révision :</translation>
     </message>
@@ -242,12 +242,12 @@
         <translation>Icône de l&apos;application QCAD</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
         <source>Built with Qt logo</source>
         <translation>Logo &quot;Built with Qt&quot;</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+28"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Préférences de dessin</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+407"/>
         <source>Apply preferences</source>
         <translation>Appliquer préférences</translation>
     </message>
@@ -427,7 +427,7 @@ pour appliquer les modifications.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2618"/>
+        <location filename="../scripts/Apollonius.js" line="+2420"/>
         <source>Invalid radius</source>
         <translation>Rayon invalide</translation>
     </message>
@@ -1371,7 +1371,7 @@ Voulez-vous le récupérer ?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+56"/>
-        <location line="+730"/>
+        <location line="+731"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1393,7 +1393,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Activer alternant couleurs des lignes</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-289"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-290"/>
         <source>Current block</source>
         <translation>Bloc courant</translation>
     </message>
@@ -2195,7 +2195,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <location line="+134"/>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>Ligne de commande</translation>
     </message>
@@ -2205,7 +2205,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Ligne de &amp;commande</translation>
     </message>
     <message>
-        <location line="+240"/>
+        <location line="+263"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Commande inconnue ou de coordonnées ou une valeur invalide: &quot;%1&quot;</translation>
     </message>
@@ -2230,7 +2230,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>La transaction a échoué. Veuillez vérifier les récursions de blocs ainsi que les calques ou blocs verrouillés ou invisibles.</translation>
     </message>
     <message>
-        <location line="-438"/>
+        <location line="-461"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2255,7 +2255,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Historique des commandes, options et messages</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+206"/>
         <source>Invalid value:</source>
         <translation>Valeur invalide :</translation>
     </message>
@@ -2315,7 +2315,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Afficher une boîte de dialogue pour les informations</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+108"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+114"/>
         <source>Show Title Bar</source>
         <translation>Afficher la barre de titre</translation>
     </message>
@@ -5059,6 +5059,16 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+5"/>
+        <source>1440x810</source>
+        <translation>1440x810</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1600x900</source>
+        <translation>1600x900</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
@@ -6135,7 +6145,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
         <translation>Vue graphique</translation>
     </message>
@@ -6178,6 +6188,36 @@ est déjà dans la liste.</translation>
         <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Métagrille :</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Halos</source>
+        <translation>Halos</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
+        <translation>Les entités en surbrillance et sélectionnées conservent leur couleur et sont affichées avec un halo flou dans les couleurs de halo ci-dessous. Sinon, elles sont affichées dans la couleur de surbrillance ou de sélection.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for highlighting and selection</source>
+        <translation>Utiliser des halos pour la surbrillance et la sélection</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Halo size (px):</source>
+        <translation>Taille du halo (px) :</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Halo color for highlighting:</source>
+        <translation>Couleur du halo pour la surbrillance :</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Halo color for selection:</source>
+        <translation>Couleur du halo pour la sélection :</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6290,7 +6330,7 @@ est déjà dans la liste.</translation>
         <translation>Bordure de la zone de sélection :</translation>
     </message>
     <message>
-        <location line="-838"/>
+        <location line="-964"/>
         <source>Crosshairs:</source>
         <translation>Réticule :</translation>
     </message>
@@ -6387,6 +6427,11 @@ est déjà dans la liste.</translation>
         <location line="+0"/>
         <source>Appearance</source>
         <translation>Apparence</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>The RHI graphics view always uses the full resolution of the display</source>
+        <translation>La vue graphique RHI utilise toujours la pleine résolution de l&apos;écran</translation>
     </message>
 </context>
 <context>
@@ -10519,7 +10564,7 @@ est déjà dans la liste.</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+842"/>
+        <location line="+843"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10529,7 +10574,7 @@ est déjà dans la liste.</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1781"/>
+        <location line="-1782"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10554,7 +10599,7 @@ est déjà dans la liste.</translation>
         <translation>Tous</translation>
     </message>
     <message>
-        <location line="+253"/>
+        <location line="+254"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -13973,7 +14018,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
@@ -14435,7 +14480,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1302"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>
@@ -14822,6 +14867,16 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Polygon Meshes</source>
+        <translation>Maillages polygonaux</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polygon Mesh</source>
+        <translation>Maillage polygonal</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
@@ -14889,7 +14944,7 @@ est déjà dans la liste.</translation>
         <translation>Entité inconnue</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+108"/>
         <source>All CAD Files</source>
         <translation>Tous les fichiers CAO</translation>
     </message>
@@ -15004,30 +15059,144 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 <context>
-    <name>simple_modify</name>
+    <name>simple_info</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+77"/>
-        <location line="+43"/>
-        <location line="+49"/>
-        <location line="+66"/>
-        <location line="+124"/>
+        <location filename="../scripts/simple_info.js" line="+157"/>
         <source>ID does not refer to an entity:</source>
         <translation>L&apos;ID ne fait pas référence à une entité :</translation>
     </message>
+</context>
+<context>
+    <name>simple_modify</name>
     <message>
-        <location line="-42"/>
+        <location filename="../scripts/simple_modify.js" line="+442"/>
+        <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Première entité ne peut pas être ajuster.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-429"/>
+        <location line="+22"/>
+        <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
         <translation>Entité ne peut pas être ajuster.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-477"/>
+        <source>Not an entity reference (ID, entity, shape or position):</source>
+        <translation>Ce n&apos;est pas une référence d&apos;entité (ID, entité, forme ou position) :</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Entity has no shape:</source>
+        <translation>L&apos;entité n&apos;a pas de forme :</translation>
+    </message>
+    <message>
+        <location line="+252"/>
+        <location line="+509"/>
+        <location line="+73"/>
+        <source>Two entities are required.</source>
+        <translation>Deux entités sont requises.</translation>
+    </message>
+    <message>
+        <location line="-565"/>
+        <source>Trimming within the same polyline requires trimming of both segments.</source>
+        <translation>L&apos;ajustement au sein d&apos;une même polyligne nécessite l&apos;ajustement des deux segments.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Deuxième entité ne peut pas être ajuster.</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Amount is required.</source>
+        <translation>Une quantité est requise.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Entity cannot be lengthened.</source>
+        <translation>L&apos;entité ne peut pas être allongée.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Entity cannot be broken out.</source>
+        <translation>Impossible de supprimer un segment de l&apos;entité.</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Position is required.</source>
+        <translation>Une position est requise.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Entity cannot be divided.</source>
+        <translation>L&apos;entité ne peut pas être divisée.</translation>
+    </message>
+    <message>
+        <location line="+171"/>
+        <source>Radius is required.</source>
+        <translation>Un rayon est requis.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The two entities cannot be rounded.</source>
+        <translation>Les deux entités ne peuvent pas être arrondies.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+76"/>
+        <source>Distance is required.</source>
+        <translation>Une distance est requise.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>The two entities cannot be bevelled.</source>
+        <translation>Les deux entités ne peuvent pas être biseautées.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+72"/>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Le rayon est passé sous zéro après %n cercle concentrique.</numerusform>
+            <numerusform>Le rayon est passé sous zéro après %n cercles concentriques.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Le rayon est passé sous zéro après %n arc concentrique.</numerusform>
+            <numerusform>Le rayon est passé sous zéro après %n arcs concentriques.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Entity cannot be offset.</source>
+        <translation>L&apos;entité ne peut pas être décalée.</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Entity cannot be reversed.</source>
+        <translation>L&apos;entité ne peut pas être inversée.</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Entity cannot be exploded.</source>
+        <translation>L&apos;entité ne peut pas être décomposée.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Area must be a box, a polyline or two corner positions.</source>
+        <translation>La zone doit être un rectangle, une polyligne ou deux positions d&apos;angle.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Offset is required.</source>
+        <translation>Un décalage est requis.</translation>
     </message>
 </context>
 </TS>

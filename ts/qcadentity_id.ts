@@ -984,5 +984,15 @@
         <source>Frame</source>
         <translation>Bingkai</translation>
     </message>
+    <message>
+        <location filename="../src/entity/RPolyMeshEntity.cpp" line="+64"/>
+        <source>Vertices</source>
+        <translation>Simpul</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Faces</source>
+        <translation>Bidang</translation>
+    </message>
 </context>
 </TS>
