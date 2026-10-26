@@ -78,6 +78,10 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 )
 
 if(APPLE)
+    # without this, CFBundleIconFile is empty and macOS may pick any other
+    # .icns in Resources (e.g. document.icns) as application icon:
+    set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_ICON_FILE qcad.icns)
+
     target_sources(${PROJECT_NAME} PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}/removemacmenus.h ${CMAKE_CURRENT_LIST_DIR}/removemacmenus.mm
     )
