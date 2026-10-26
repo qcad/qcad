@@ -108,6 +108,19 @@ QStringList RPluginLoader::getPluginFiles() {
 void RPluginLoader::loadPlugins(bool init) {
     QString theme = RSettings::getStringValue("Theme/ThemeName", "");
 
+    // first start of QCAD 27 after QCAD 3.x with a custom theme:
+    // switch to Default (Modern) theme, the user can switch back explicitly.
+    // RSettings::getPreviousVersion is not yet initialized at this point
+    // (autostart.js updates Application/Version after loading plugins):
+    if (!theme.isEmpty() && theme!="Default" && theme!="Modern") {
+        int previousVersion = RSettings::getStringValue("Application/Version", "").toInt();
+        if (previousVersion>0 && previousVersion<27000000) {
+            qDebug() << "switching from theme" << theme << "to Default theme after update from version" << previousVersion;
+            theme = "Default";
+            RSettings::setValue("Theme/ThemeName", theme);
+        }
+    }
+
     pluginFiles.clear();
     pluginsInfo.clear();
     plugins.clear();
@@ -155,6 +168,17 @@ void RPluginLoader::loadPlugins(bool init) {
                 continue;
             }
         }
+
+#ifndef Q_OS_MAC
+        if (baseName=="qcadmodern") {
+            // Modern theme / style is the default theme:
+            // don't load it if the user chose a different theme
+            // (no theme preferences under macOS, always use Modern):
+            if (!theme.isEmpty() && theme!="Default" && theme!="Modern") {
+                continue;
+            }
+        }
+#endif
 
         if (RSettings::getBoolValue("PluginLoader/" + baseName, true)!=true) {
             // plugin disabled in configuration file:
