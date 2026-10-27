@@ -471,6 +471,14 @@ endif() #OpenNURBS plus source files
 
 if (ANDROID OR LINUX)
   add_subdirectory(android_uuid)
+endif()
+
+# OPENNURBS_FREETYPE_SUPPORT is only defined for Android (opennurbs_system.h).
+# On Linux, linking the bundled FreeType 2.6.3 is not only unused, it ends up
+# exported from libqcadcore.so (pulled in to satisfy libQt6Gui's FT_*
+# references) and interposes the system / flatpak runtime libfreetype that Qt,
+# fontconfig and harfbuzz use, which leads to crashes.
+if (ANDROID)
   add_subdirectory(freetype263)
 endif()
 
@@ -599,8 +607,8 @@ target_link_libraries( OpenNURBS zlib opennurbs_public_freetype android_uuid and
 target_link_libraries( opennurbsStatic zlib opennurbs_public_freetype android_uuid android)
 endif()
 if (LINUX AND NOT ANDROID)
-target_link_libraries( OpenNURBS zlib opennurbs_public_freetype android_uuid)
-target_link_libraries( opennurbsStatic zlib opennurbs_public_freetype android_uuid)
+target_link_libraries( OpenNURBS zlib android_uuid)
+target_link_libraries( opennurbsStatic zlib android_uuid)
 endif()
 if (APPLE)
 target_link_libraries( OpenNURBS ${OPENNURBS_APPLE_DEPENDENCIES} zlib)
