@@ -37,6 +37,13 @@
 #include <CoreServices/CoreServices.h>
 #endif
 
+#ifdef Q_OS_LINUX
+#include <QMessageBox>
+#include <QProcess>
+#include <QStandardPaths>
+#include <QTextStream>
+#endif
+
 #include "RArcEntity.h"
 #include "RAttributeDefinitionEntity.h"
 #include "RAttributeEntity.h"
@@ -105,6 +112,165 @@
 #if defined(Q_OS_MACOS) || defined(Q_OS_LINUX)
 void catchSigPipe(int /*s*/){
     qDebug() << "SIGPIPE caught";
+}
+#endif
+
+#ifdef Q_OS_LINUX
+/**
+ * Desktop entry ID of QCAD under Linux (org.qcad.QCAD.desktop).
+ * Must match the name of the desktop file shipped with QCAD
+ * (support/deployment/linux/org.qcad.QCAD.desktop).
+ * Desktop environments associate the QCAD window with this desktop file
+ * (and its icon) through the window's application ID / WM_CLASS.
+ */
+static const QString linuxDesktopFileBaseName = "org.qcad.QCAD";
+
+/**
+ * Installs the QCAD application icon into the user's hicolor icon theme
+ * (used if no icon file is found next to the QCAD binary).
+ * \return True on success.
+ */
+static bool installLinuxDesktopIcon() {
+    QString dir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+    if (dir.isEmpty()) {
+        return false;
+    }
+    dir += "/icons/hicolor/256x256/apps";
+    if (!QDir().mkpath(dir)) {
+        return false;
+    }
+    QString target = dir + "/" + linuxDesktopFileBaseName + ".png";
+    QFile::remove(target);
+    return QFile::copy(":scripts/qcad_icon.png", target);
+}
+
+/**
+ * Checks if a desktop file for QCAD is installed (user or system wide) and
+ * offers to create one in the user's applications directory if it is not.
+ * Without a matching desktop file, the window of QCAD cannot be associated
+ * with the QCAD icon by the dock / task bar (e.g. when QCAD is started from
+ * a terminal or extracted from a tar.gz archive).
+ * The user can choose to not be asked again (Linux/OfferDesktopFile).
+ */
+static void offerLinuxDesktopFile() {
+    if (!qEnvironmentVariableIsEmpty("FLATPAK_ID") ||
+        !qEnvironmentVariableIsEmpty("SNAP") ||
+        !qEnvironmentVariableIsEmpty("APPIMAGE")) {
+        // sandboxed / bundled: desktop file is provided by the package
+        return;
+    }
+
+    if (!RSettings::getBoolValue("Linux/OfferDesktopFile", true)) {
+        // user chose not to be asked again
+        return;
+    }
+
+    QString desktopFileName = linuxDesktopFileBaseName + ".desktop";
+
+    if (!QStandardPaths::locate(QStandardPaths::ApplicationsLocation, desktopFileName).isEmpty()) {
+        // desktop file already installed (user or system wide)
+        return;
+    }
+
+    QString targetDir = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
+    if (targetDir.isEmpty()) {
+        return;
+    }
+
+    QString appPath = RSettings::getApplicationPath();
+
+    QMessageBox::StandardButton ret = QMessageBox::question(
+        NULL,
+        QObject::tr("Application Menu Entry"),
+        QObject::tr("QCAD has not been added to the application menu yet.\n\n"
+                    "Without an application menu entry, the QCAD icon "
+                    "cannot be shown in the dock or task bar.\n\n"
+                    "Add QCAD in\n%1\nto the application menu now?").arg(appPath),
+        QMessageBox::Yes | QMessageBox::No,
+        QMessageBox::Yes
+    );
+
+    if (ret!=QMessageBox::Yes) {
+        // don't ask again:
+        RSettings::setValue("Linux/OfferDesktopFile", false);
+        return;
+    }
+
+    // command to start QCAD (start script if available, binary otherwise):
+    QString exec = appPath + "/qcad";
+    if (!QFileInfo(exec).isExecutable()) {
+        exec = QCoreApplication::applicationFilePath();
+    }
+
+    // icon (shipped with QCAD or installed into user's icon theme):
+    QString icon = appPath + "/" + linuxDesktopFileBaseName + ".png";
+    if (!QFileInfo(icon).exists()) {
+        icon = appPath + "/qcad_icon.png";
+    }
+    if (!QFileInfo(icon).exists()) {
+        if (installLinuxDesktopIcon()) {
+            icon = linuxDesktopFileBaseName;
+        }
+        else {
+            icon = "";
+        }
+    }
+
+    // read desktop file template shipped with QCAD:
+    QStringList lines;
+    QFile templateFile(appPath + "/" + desktopFileName);
+    if (templateFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream ts(&templateFile);
+        while (!ts.atEnd()) {
+            lines.append(ts.readLine());
+        }
+        templateFile.close();
+    }
+    else {
+        // minimal fallback (e.g. development environment):
+        lines
+            << "[Desktop Entry]"
+            << "Type=Application"
+            << "Name=QCAD"
+            << "GenericName=CAD Software"
+            << "Comment=A 2D CAD System"
+            << "Exec="
+            << "Icon="
+            << "Terminal=false"
+            << "X-MultipleArgs=true"
+            << "StartupNotify=true"
+            << "StartupWMClass=qcad-bin"
+            << "Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;Science;"
+            << "MimeType=application/dxf;application/dwg;image/vnd.dxf;image/vnd.dwg;image/x-dwg;";
+    }
+
+    for (int i=0; i<lines.length(); i++) {
+        if (lines[i].startsWith("Exec=")) {
+            lines[i] = QString("Exec=\"%1\" %F").arg(exec);
+        }
+        else if (lines[i].startsWith("Icon=")) {
+            lines[i] = QString("Icon=%1").arg(icon);
+        }
+    }
+
+    if (!QDir().mkpath(targetDir)) {
+        qWarning() << "cannot create directory:" << targetDir;
+        return;
+    }
+
+    QFile desktopFile(targetDir + "/" + desktopFileName);
+    if (!desktopFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qWarning() << "cannot write desktop file:" << desktopFile.fileName();
+        return;
+    }
+    QTextStream ts(&desktopFile);
+    ts << lines.join("\n") << "\n";
+    desktopFile.close();
+
+    // update desktop database (mime type associations) if tool is available:
+    QProcess::startDetached("update-desktop-database", QStringList() << targetDir);
+
+    qDebug() << "desktop file created:" << desktopFile.fileName();
 }
 #endif
 
@@ -255,6 +421,13 @@ int main(int argc, char *argv[]) {
     // make sure arguments are correctly encoded:
     RSettings::setOriginalArguments(QCoreApplication::arguments());
 
+#if defined(Q_OS_LINUX) && QT_VERSION >= 0x050700
+    // desktop file name (without .desktop) used by desktop environments to
+    // associate the QCAD window with its application menu entry and icon
+    // (sets _GTK_APPLICATION_ID under X11 and app_id under Wayland):
+    QGuiApplication::setDesktopFileName(linuxDesktopFileBaseName);
+#endif
+
 #if defined(Q_OS_MACOS) || defined(Q_OS_LINUX)
     // note that SIGPIPE is only ignored in release mode, gdb catches SIGPIPE
     // by default. To disable that behavior in gdb, use:
@@ -313,6 +486,15 @@ int main(int argc, char *argv[]) {
 
     // set current working directory:
     QDir::setCurrent(RSettings::getApplicationPath());
+
+#ifdef Q_OS_LINUX
+    if (guiEnabled &&
+        !app->arguments().contains("-help") && !app->arguments().contains("-h") &&
+        !app->arguments().contains("-version") && !app->arguments().contains("-v")) {
+        // offer to create a desktop file (application menu entry, dock icon):
+        offerLinuxDesktopFile();
+    }
+#endif
 
 #ifdef Q_OS_WIN
 #if QT_VERSION >= 0x060000

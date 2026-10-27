@@ -425,6 +425,10 @@ function main() {
     }
 
     if (reset===true) {
+        // Linux: user chose to not be asked again about creating a desktop
+        // file (asked in main.cpp before the config file is versioned):
+        var offerDesktopFile = RSettings.getBoolValue("Linux/OfferDesktopFile", true);
+
         var configFile = RSettings.getFileName();
         RSettings.uninit();
         var fi = new QFileInfo(configFile);
@@ -434,6 +438,10 @@ function main() {
             qDebug("Renaming old unversioned config file from '" + configFile + "' to '"+ configBak + "'");
             QFile.remove(configBak);
             QFile.rename(configFile, configBak);
+        }
+
+        if (offerDesktopFile===false) {
+            RSettings.setValue("Linux/OfferDesktopFile", false);
         }
     }
 
