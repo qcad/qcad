@@ -303,9 +303,13 @@ function renderBitmapImage(doc, scene, properties, view) {
  * the frame cannot be rendered at all.
  *
  * Options which are implemented by the image based view only (paint
- * origin, alpha channel, text height threshold, number of threads) are
- * not available. Antialiasing is supported by 2D views only (3D views
- * are always anti-aliased). The color modes (monochrome, grayscale) are
+ * origin, text height threshold, number of threads) are not available.
+ * A background color with alpha is honored: the frame is cleared with
+ * it (see RGraphicsViewRhi3D::render) and read back with its alpha
+ * channel, so a transparent background color exports an image with a
+ * transparent background (like the image based view with alpha
+ * enabled). Antialiasing is supported by 2D views only (3D views are
+ * always anti-aliased). The color modes (monochrome, grayscale) are
  * applied to the rendered image.
  *
  * The grid and the decorations (origin, crosshair, reference points, snap
@@ -401,6 +405,17 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
     // it back from the GPU (QWidget.grab cannot be used: it renders the
     // color buffer into an image of the size of the widget):
     var buffer = rhiView.grabFramebuffer();
+
+    // the pipelines of the RHI based views render with premultiplied
+    // alpha (see the blend states in RGraphicsViewRhi3D), but
+    // QRhiWidget::grabFramebuffer tags the image as QImage.Format_RGBA8888
+    // (straight alpha): reinterpret the image so that the pixels on a
+    // translucent background (transparent background color) are
+    // converted and saved correctly. Opaque pixels are the same in both
+    // formats:
+    if (!isNull(buffer) && !buffer.isNull() && buffer.format()===QImage.Format_RGBA8888) {
+        buffer.reinterpretAsFormat(QImage.Format_RGBA8888_Premultiplied);
+    }
 
     // restore the state of the view:
     if (!isNull(view)) {

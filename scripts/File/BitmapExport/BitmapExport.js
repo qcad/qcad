@@ -207,7 +207,12 @@ BitmapExport.prototype.getProperties = function() {
         ret["backgroundColor"] = new QColor("black");
     }
     else {
-        ret["backgroundColor"] = new QColor("#000000ff");
+        // transparent background: a neutral gray with alpha 0 (Qt parses
+        // "#000000ff" as #AARRGGBB, i.e. transparent blue, which RHI based
+        // views rendered as an opaque blue background). The gray keeps the
+        // automatic color correction neutral: neither black nor white
+        // entities are corrected for a transparent background.
+        ret["backgroundColor"] = new QColor(128, 128, 128, 0);
     }
 
     ret["margin"] = RMath.eval(marginCombo.currentText);
