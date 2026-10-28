@@ -330,6 +330,10 @@ int main(int argc, char *argv[]) {
                 qDebug() << "absConfigFile:" << absConfigFile;
 
                 QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, absConfigFile);
+#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
+                // RSettings uses NativeFormat on Linux / Unix:
+                QSettings::setPath(QSettings::NativeFormat, QSettings::UserScope, absConfigFile);
+#endif
             }
         }
     }
