@@ -324,6 +324,13 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
 
     this.view.setBackgroundColor(Print.getBackgroundColor(this.document));
     this.view.setPrinting(true);
+    // line weights are scaled inversely by the drawing scale, so they
+    // are printed at their nominal width (the drawing scale of an image
+    // based view is otherwise only updated when its buffer is updated,
+    // never for an off-screen view used for printing):
+    if (isFunction(this.view.setDrawingScale)) {
+        this.view.setDrawingScale(scale);
+    }
     // 20191007: avoid invisible lines in prints and PDF output:
     var minLineweightSet = false;
     if (this.view.getMinimumLineweight()<RS.PointTolerance) {
