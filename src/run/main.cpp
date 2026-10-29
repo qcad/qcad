@@ -420,17 +420,19 @@ int main(int argc, char *argv[]) {
         }
     }
 
+#if defined(Q_OS_LINUX) && QT_VERSION >= 0x050700
+    // desktop file name (without .desktop) used by desktop environments to
+    // associate the QCAD window with its application menu entry and icon
+    // (sets _GTK_APPLICATION_ID under X11 and app_id under Wayland).
+    // set before the application is constructed, since Qt registers the
+    // app ID with the XDG desktop portal during construction:
+    QGuiApplication::setDesktopFileName(linuxDesktopFileBaseName);
+#endif
+
     RSingleApplication* app = new RSingleApplication(appId, argc, argv, guiEnabled);
 
     // make sure arguments are correctly encoded:
     RSettings::setOriginalArguments(QCoreApplication::arguments());
-
-#if defined(Q_OS_LINUX) && QT_VERSION >= 0x050700
-    // desktop file name (without .desktop) used by desktop environments to
-    // associate the QCAD window with its application menu entry and icon
-    // (sets _GTK_APPLICATION_ID under X11 and app_id under Wayland):
-    QGuiApplication::setDesktopFileName(linuxDesktopFileBaseName);
-#endif
 
 #if defined(Q_OS_MACOS) || defined(Q_OS_LINUX)
     // note that SIGPIPE is only ignored in release mode, gdb catches SIGPIPE
