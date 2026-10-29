@@ -122,6 +122,12 @@ void RGraphicsScene::registerView(RGraphicsView* view, bool regen) {
  */
 void RGraphicsScene::unregisterView(RGraphicsView* view) {
     views.removeOne(view);
+
+    // the view might be deleted after this, the document interface must not
+    // keep a pointer to it (e.g. viewport layout replaced):
+    if (view!=NULL && documentInterface.getLastKnownViewWithFocus()==view) {
+        documentInterface.setLastKnownViewWithFocus(NULL);
+    }
 }
 
 void RGraphicsScene::beginPreview() {

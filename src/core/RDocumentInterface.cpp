@@ -3070,7 +3070,8 @@ RGraphicsView* RDocumentInterface::getLastKnownViewWithFocus() {
 }
 
 void RDocumentInterface::setLastKnownViewWithFocus(RGraphicsView* view) {
-    if (view!=NULL && view->registerForFocus()) {
+    // NULL resets the view (e.g. when the view is deleted):
+    if (view==NULL || view->registerForFocus()) {
         lastKnownViewWithFocus = view;
     }
 }
