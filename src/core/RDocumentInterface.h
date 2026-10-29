@@ -26,6 +26,7 @@
 #include <QMap>
 #include <QStack>
 #include <QQueue>
+#include <QPointer>
 #include <QFileSystemWatcher>
 
 #include "RAction.h"
@@ -401,6 +402,7 @@ public:
 private:
     void handleClickEvent(RAction& action, RMouseEvent& event);
     void previewClickEvent(RAction& action, RMouseEvent& event);
+    QList<RBlockListener*> getBlockListeners();
 
 private:
     RDocument& document;
@@ -414,7 +416,14 @@ private:
 
     QList<RCoordinateListener*> coordinateListeners;
     QList<RLayerListener*> layerListeners;
-    QList<RBlockListener*> blockListeners;
+    // block listeners that are QObjects (e.g. script adapters owned by a
+    // widget) are guarded, they might be deleted without being removed:
+    struct BlockListenerEntry {
+        RBlockListener* listener;
+        bool isObject;
+        QPointer<QObject> object;
+    };
+    QList<BlockListenerEntry> blockListeners;
     QMap<int, RTransactionListener*> transactionListeners;
 
     RSnap* currentSnap;

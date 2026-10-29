@@ -274,24 +274,54 @@ void RDocumentInterface::notifyLayerListeners(QList<RLayer::Id>& layerIds) {
 }
 
 void RDocumentInterface::addBlockListener(RBlockListener* l) {
-    blockListeners.push_back(l);
+    if (l==NULL) {
+        return;
+    }
+    BlockListenerEntry entry;
+    entry.listener = l;
+    QObject* obj = dynamic_cast<QObject*>(l);
+    entry.isObject = obj!=NULL;
+    entry.object = obj;
+    blockListeners.push_back(entry);
 }
 
 void RDocumentInterface::removeBlockListener(RBlockListener* l) {
-    blockListeners.removeAll(l);
+    for (int i=blockListeners.length()-1; i>=0; i--) {
+        if (blockListeners[i].listener==l) {
+            blockListeners.removeAt(i);
+        }
+    }
+}
+
+/**
+ * \return Block listeners that are still alive. Listeners that are QObjects
+ * and have been deleted without being removed (e.g. the layout tab bar of
+ * a viewport layout that was replaced) are removed from the list.
+ */
+QList<RBlockListener*> RDocumentInterface::getBlockListeners() {
+    QList<RBlockListener*> ret;
+    for (int i=blockListeners.length()-1; i>=0; i--) {
+        if (blockListeners[i].isObject && blockListeners[i].object.isNull()) {
+            blockListeners.removeAt(i);
+        }
+    }
+    for (int i=0; i<blockListeners.length(); i++) {
+        ret.append(blockListeners[i].listener);
+    }
+    return ret;
 }
 
 void RDocumentInterface::notifyBlockListeners(RDocumentInterface* documentInterface) {
-    QList<RBlockListener*>::iterator it;
-    for (it = blockListeners.begin(); it != blockListeners.end(); ++it) {
-        (*it)->updateBlocks(documentInterface);
+    QList<RBlockListener*> listeners = getBlockListeners();
+    for (int i=0; i<listeners.length(); i++) {
+        listeners[i]->updateBlocks(documentInterface);
     }
 }
 
 void RDocumentInterface::notifyBlockListenersCurrentBlock(RDocumentInterface* documentInterface) {
-    QList<RBlockListener*>::iterator it;
-    for (it = blockListeners.begin(); it != blockListeners.end(); ++it) {
-        (*it)->setCurrentBlock(documentInterface);
+    QList<RBlockListener*> listeners = getBlockListeners();
+    for (int i=0; i<listeners.length(); i++) {
+        listeners[i]->setCurrentBlock(documentInterface);
     }
 }
 
