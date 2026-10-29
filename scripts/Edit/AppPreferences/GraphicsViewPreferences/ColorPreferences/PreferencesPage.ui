@@ -365,23 +365,33 @@
        <string>Halos</string>
       </property>
       <layout class="QFormLayout" name="formLayout_11">
-       <item row="0" column="0">
-        <widget class="QCheckBox" name="SelectionHalo">
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="HighlightHalo">
          <property name="toolTip">
-          <string>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</string>
+          <string>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</string>
          </property>
          <property name="text">
-          <string>Use halos for highlighting and selection</string>
+          <string>Use halos for highlighting</string>
          </property>
          <property name="checked">
           <bool>true</bool>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QWidget" name="widget_2" native="true"/>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="SelectionHalo">
+         <property name="toolTip">
+          <string>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</string>
+         </property>
+         <property name="text">
+          <string>Use halos for selection</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QLabel" name="SelectionHaloSizeLabel">
          <property name="minimumSize">
           <size>
@@ -397,7 +407,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="2" column="1">
         <widget class="QSpinBox" name="SelectionHaloSize">
          <property name="minimum">
           <number>1</number>
@@ -410,7 +420,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="3" column="0">
         <widget class="QLabel" name="HaloHighlightColorLabel">
          <property name="minimumSize">
           <size>
@@ -426,7 +436,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="3" column="1">
         <widget class="RColorCombo" name="HaloHighlightColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -446,7 +456,7 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
+       <item row="4" column="0">
         <widget class="QLabel" name="HaloSelectionColorLabel">
          <property name="minimumSize">
           <size>
@@ -462,7 +472,7 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
+       <item row="4" column="1">
         <widget class="RColorCombo" name="HaloSelectionColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -1183,39 +1193,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>SelectionHalo</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>SelectionHaloSizeLabel</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>SelectionHalo</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>SelectionHaloSize</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>SelectionHalo</sender>
+   <sender>HighlightHalo</sender>
    <signal>toggled(bool)</signal>
    <receiver>HaloHighlightColorLabel</receiver>
    <slot>setEnabled(bool)</slot>
@@ -1231,7 +1209,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>SelectionHalo</sender>
+   <sender>HighlightHalo</sender>
    <signal>toggled(bool)</signal>
    <receiver>HaloHighlightColor</receiver>
    <slot>setEnabled(bool)</slot>

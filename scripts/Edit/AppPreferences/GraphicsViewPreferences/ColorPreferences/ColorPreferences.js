@@ -67,7 +67,25 @@ ColorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docu
         if (!isNull(haloGroupBox)) {
             haloGroupBox.hide();
         }
+        return;
     }
+
+    // halos for highlighting default to the halos for selection (the
+    // selection halo preference used to switch both, the stored value
+    // is restored after this):
+    var highlightHalo = pageWidget.findChild("HighlightHalo");
+    var selectionHalo = pageWidget.findChild("SelectionHalo");
+    highlightHalo.checked = RSettings.getBoolValue("GraphicsViewColors/SelectionHalo", true);
+
+    // halo size: used by both kinds of halos:
+    var updateHaloSize = function() {
+        var on = highlightHalo.checked || selectionHalo.checked;
+        pageWidget.findChild("SelectionHaloSizeLabel").enabled = on;
+        pageWidget.findChild("SelectionHaloSize").enabled = on;
+    };
+    highlightHalo.toggled.connect(updateHaloSize);
+    selectionHalo.toggled.connect(updateHaloSize);
+    updateHaloSize();
 };
 
 /**
