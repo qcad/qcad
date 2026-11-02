@@ -736,7 +736,9 @@ void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool 
 
     // entity not on current block and allBlocks==false, break:
     if (!allBlocks && doc->getCurrentBlockId()!=entity->getBlockId()) {
-        qDebug() << "entity on block " << entity->getBlockId() << "[" << entity->getBlockName() << "]" << " (not on current block" << doc->getCurrentBlockId() << "[" << doc->getCurrentBlockName() <<  "])";
+        // no warning: editing smart objects can lead to this situation,
+        // e.g. editing a block reference in the model space while the current block is a block definition:
+        //qDebug() << "entity on block " << entity->getBlockId() << "[" << entity->getBlockName() << "]" << " (not on current block" << doc->getCurrentBlockId() << "[" << doc->getCurrentBlockName() <<  "])";
         //unexportEntity(entity.getId());
         return;
     }
