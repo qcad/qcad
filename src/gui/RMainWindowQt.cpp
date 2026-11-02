@@ -814,6 +814,14 @@ void RMainWindowQt::clearKeyLog() {
 /**
  * \return True if the given key event is a cursor key event which has to be
  * left to a screen reader (see RSettings::isScreenReaderActive).
+ *
+ * Only keys pressed while the keyboard focus is in a list, dock or other part
+ * of the user interface are reserved. With the focus in a drawing (or nowhere
+ * in particular), the cursor keys always move the selection: QAccessible
+ * reports active as soon as any assistive client is attached (window
+ * managers, launchers, password managers on macOS, the AT-SPI bus that most
+ * Linux desktops run by default), not only when a screen reader is used
+ * (FS#2766).
  */
 bool RMainWindowQt::isCursorKeyReservedForScreenReader(QKeyEvent* ke) {
     if (ke==NULL) {
@@ -825,7 +833,23 @@ bool RMainWindowQt::isCursorKeyReservedForScreenReader(QKeyEvent* ke) {
         return false;
     }
 
-    return RSettings::isScreenReaderActive();
+    if (!RSettings::isScreenReaderActive()) {
+        return false;
+    }
+
+    QWidget* w = QApplication::focusWidget();
+    if (w==NULL || dynamic_cast<RMainWindowQt*>(w)!=NULL) {
+        return false;
+    }
+
+    // focus in a drawing (any type of view inside the MDI area):
+    for (QWidget* p = w; p!=NULL; p = p->parentWidget()) {
+        if (qobject_cast<QMdiArea*>(p)!=NULL) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 bool RMainWindowQt::isStaleAutoRepeatKeyEvent(QKeyEvent* ke) {
