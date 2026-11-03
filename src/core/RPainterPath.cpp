@@ -628,24 +628,43 @@ void RPainterPath::transform(const QTransform& t) {
     }
 
     if (!originalShapes.isEmpty()) {
-//        bool hasArcs = false;
-//        for (int i=0; i<originalShapes.length(); i++) {
-//            if (originalShapes[i]->getShapeType()!=RShape::Line) {
-//                hasArcs = true;
-//                break;
-//            }
-//        }
+        // a transform which is not conformal (non-uniform scale, shear,
+        // e.g. the width factor of a text) maps arcs to ellipses, which
+        // RArc::getTransformed cannot represent: original shapes with
+        // arcs are lost (like in scale):
+        double lx = sqrt(t.m11()*t.m11() + t.m12()*t.m12());
+        double ly = sqrt(t.m21()*t.m21() + t.m22()*t.m22());
+        bool conformal = t.type() < QTransform::TxProject &&
+                         fabs(lx - ly) <= 1.0e-9 * qMax(lx, ly) &&
+                         fabs(t.m11()*t.m21() + t.m12()*t.m22()) <= 1.0e-9 * lx * ly;
 
-//        if (hasArcs) {
-//            originalShapes.clear();
-//        }
-//        else {
+        bool hasArcs = false;
+        if (!conformal) {
+            for (int i=0; i<originalShapes.length(); i++) {
+                QSharedPointer<RShape> s = originalShapes[i];
+                if (s->getShapeType()==RShape::Polyline) {
+                    QSharedPointer<RPolyline> pl = s.dynamicCast<RPolyline>();
+                    if (!pl.isNull() && !pl->hasArcSegments()) {
+                        continue;
+                    }
+                }
+                if (s->getShapeType()!=RShape::Line && s->getShapeType()!=RShape::Point) {
+                    hasArcs = true;
+                    break;
+                }
+            }
+        }
+
+        if (hasArcs) {
+            originalShapes.clear();
+        }
+        else {
             QList<QSharedPointer<RShape> > os;
             for (int i=0; i<originalShapes.length(); i++) {
                 os.append(originalShapes[i]->getTransformed(t));
             }
             originalShapes = os;
-//        }
+        }
     }
 }
 
