@@ -58,6 +58,13 @@
 #include "detectmacdarkmode.h"
 #endif
 
+#ifdef R_HAS_DBUS
+#  include <QDBusConnection>
+#  include <QDBusMessage>
+#  include <QDBusVariant>
+#  include <QElapsedTimer>
+#endif
+
 /**
  * \return Defaults which depend on the version of QCAD (used when the
  * setting has no stored value, see getValue): since QCAD 27, the
@@ -1869,9 +1876,51 @@ bool RSettings::getBoolValue(const QString& key, bool defaultValue) {
  * (on macOS, accessibility is activated the first time an assistive client
  * asks the window for an attribute), and it can be started and stopped at any
  * time.
+ *
+ * The setting Keyboard/ScreenReader overrides the detection: "On" or "Off"
+ * force the result, anything else ("Auto", default) detects it.
  */
 bool RSettings::isScreenReaderActive() {
-    return QAccessible::isActive();
+    QString mode = getStringValue("Keyboard/ScreenReader", "Auto");
+    if (mode=="On") {
+        return true;
+    }
+    if (mode=="Off") {
+        return false;
+    }
+
+    if (!QAccessible::isActive()) {
+        return false;
+    }
+
+#ifdef R_HAS_DBUS
+    // Linux (AT-SPI): QAccessible::isActive is true as soon as any assistive
+    // client sets org.a11y.Status.IsEnabled (on-screen keyboards, automation
+    // tools, ...), not only for screen readers. Screen readers (Orca) set
+    // org.a11y.Status.ScreenReaderEnabled. This is called for every cursor key
+    // press, so the D-Bus property is cached for a second:
+    static QElapsedTimer cacheAge;
+    static bool cached = false;
+    if (cacheAge.isValid() && cacheAge.elapsed()<1000) {
+        return cached;
+    }
+
+    QDBusMessage msg = QDBusMessage::createMethodCall(
+        "org.a11y.Bus", "/org/a11y/bus",
+        "org.freedesktop.DBus.Properties", "Get");
+    msg << QString("org.a11y.Status") << QString("ScreenReaderEnabled");
+    QDBusMessage reply = QDBusConnection::sessionBus().call(msg, QDBus::Block, 200);
+
+    // no answer: there is no AT-SPI bus a screen reader could talk to us over:
+    cached = false;
+    if (reply.type()==QDBusMessage::ReplyMessage && !reply.arguments().isEmpty()) {
+        cached = reply.arguments().first().value<QDBusVariant>().variant().toBool();
+    }
+    cacheAge.start();
+    return cached;
+#else
+    return true;
+#endif
 }
 
 /**

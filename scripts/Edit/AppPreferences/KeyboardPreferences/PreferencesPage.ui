@@ -73,6 +73,20 @@
      </property>
     </widget>
    </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="ScreenReaderLabel">
+     <property name="text">
+      <string>Screen reader:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="ScreenReader">
+     <property name="toolTip">
+      <string>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>

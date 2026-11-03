@@ -338,4 +338,10 @@ macx {
 linux-g++* {
     # this might or might not be needed under Linux:
     LIBS += -lX11
+
+    # AT-SPI screen reader detection (RSettings::isScreenReaderActive):
+    qtHaveModule(dbus) {
+        QT += dbus
+        DEFINES += R_HAS_DBUS
+    }
 }

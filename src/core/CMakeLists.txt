@@ -312,6 +312,15 @@ if(UNIX)
     )
 endif()
 
+# AT-SPI screen reader detection (RSettings::isScreenReaderActive):
+if(UNIX AND NOT APPLE)
+    find_package(${QT_VER} QUIET COMPONENTS DBus)
+    if(${QT_VER}DBus_FOUND)
+        target_link_libraries(qcadcore PUBLIC Qt::DBus)
+        target_compile_definitions(qcadcore PRIVATE R_HAS_DBUS)
+    endif()
+endif()
+
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     target_sources(qcadcore PRIVATE
         detectmacdarkmode.h detectmacdarkmode.mm

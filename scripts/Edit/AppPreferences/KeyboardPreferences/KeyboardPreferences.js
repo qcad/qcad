@@ -24,3 +24,11 @@ KeyboardPreferences.getPreferencesCategory = function() {
     return [qsTr("General"), qsTr("Keyboard")];
 };
 
+KeyboardPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    // values as expected by RSettings::isScreenReaderActive:
+    var combo = pageWidget.findChild("ScreenReader");
+    combo.addItem(qsTr("Detect automatically") + " " + qsTr("(Default)"), "Auto");
+    combo.addItem(qsTr("Always assume a screen reader"), "On");
+    combo.addItem(qsTr("Never assume a screen reader"), "Off");
+};
+
