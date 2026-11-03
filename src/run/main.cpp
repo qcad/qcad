@@ -275,7 +275,13 @@ static void offerLinuxDesktopFile() {
 #endif
 
 int main(int argc, char *argv[]) {
-    qDebug() << "QCAD version " << R_QCAD_VERSION_STRING;
+    qDebug().nospace()
+             << "QCAD version: "
+             << R_QCAD_VERSION_MAJOR << "."
+             << R_QCAD_VERSION_MINOR << "."
+             << R_QCAD_VERSION_REV << "."
+             << R_QCAD_VERSION_BUILD;
+
     // For correct Unicode translation, apply the current system locale:
     setlocale(LC_ALL, "");
     // But use usual conversion for scanf()/sprintf():
