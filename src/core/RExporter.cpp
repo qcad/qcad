@@ -778,19 +778,28 @@ void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool 
     if (!skip) {
         setEntityAttributes(forceSelected);
 
-        if ((forceSelected || (entity->isSelected() || entity->isSelectedWorkingSet())) && RSettings::getUseSecondarySelectionColor()) {
+        bool twoColorSelected =
+            (forceSelected || (entity->isSelected() || entity->isSelectedWorkingSet())) &&
+            RSettings::getUseSecondarySelectionColor();
+        if (twoColorSelected) {
             // first part of two color selection:
             twoColorSelectedMode = true;
         }
 
         startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefViewportStack.isEmpty());
+
+        // startEntity may switch off two color selection (exporters which
+        // display the selection differently, e.g. with a halo, see
+        // RGraphicsSceneRhi3D::startEntity). Nested entities exported below
+        // reset the flag, so the decision for the second pass is taken here:
+        bool secondarySelectionPass = twoColorSelected && twoColorSelectedMode;
+
         exportCurrentEntity(preview, forceSelected);
         endEntity(blockRefOrViewportSet || blockRefViewportStack.isEmpty());
 
         // export again, with secondary selection color:
         if (visualExporter) {
-            if ((forceSelected || (entity->isSelected() || entity->isSelectedWorkingSet())) &&
-                RSettings::getUseSecondarySelectionColor() &&
+            if (secondarySelectionPass &&
                 !entity->isOfType(RS::EntityBlockRef) &&
                 !entity->isOfType(RS::EntityText) &&
                 !entity->isOfType(RS::EntityAttribute) &&
