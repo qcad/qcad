@@ -39,8 +39,41 @@ CoordinateDisplay.lRelPol = undefined;
 
 CoordinateDisplay.counter = 0;
 
+/**
+ * Holder for the coordinate display widget without a layout.
+ *
+ * The coordinate labels change their text on every mouse move. Inside a
+ * layout, every text change propagates a geometry update up through the
+ * status bar splitter and status bar to the main window layout, which
+ * relayouts and repaints large parts of the main window for every mouse
+ * move. This is expensive, especially with RHI graphics views on high
+ * resolution displays (lagging cursor on Intel Macs with 5K displays).
+ *
+ * The holder has no layout, so geometry updates of the coordinate display
+ * widget stop here. The holder resizes the coordinate display widget to
+ * its own size when it is resized (e.g. through the status bar splitter).
+ */
+function CoordinateDisplayHolder(parent, child) {
+    QWidget.call(this, parent);
+    this.child = child;
+    child.setParent(this);
+    child.objectName = "CoordinateDisplayContent";
+    this.objectName = "CoordinateDisplay";
+    this.setSizePolicy(child.sizePolicy);
+    this.setMinimumSize(child.minimumSize);
+    this.setMaximumSize(child.maximumSize);
+}
+
+CoordinateDisplayHolder.prototype = new QWidget();
+
+CoordinateDisplayHolder.prototype.resizeEvent = function(event) {
+    QWidget.prototype.resizeEvent.call(this, event);
+    this.child.setGeometry(0, 0, this.width, this.height);
+};
+
 CoordinateDisplay.postInit = function(basePath) {
-    CoordinateDisplay.widget = WidgetFactory.createWidget(basePath, "CoordinateDisplay.ui");
+    var w = WidgetFactory.createWidget(basePath, "CoordinateDisplay.ui");
+    CoordinateDisplay.widget = new CoordinateDisplayHolder(null, w);
     StatusBar.addWidget(CoordinateDisplay.widget, 100, RSettings.getBoolValue("StatusBar/CoordinateDisplay", true));
     CoordinateDisplay.forcedUpdateInterval = RSettings.getIntValue("CoordinateDisplay/Interval", 8);
 

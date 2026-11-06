@@ -117,11 +117,19 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
             }
             else {
                 // no grid, no free positioning:
+                lastSnap = RVector::invalid;
                 return RVector::invalid;
             }
         }
+        // update the last snap too: it is displayed as the snap
+        // indicator, the returned position as the crosshair cursor.
+        // Not updating it here left the snap indicator behind at the
+        // last uninterrupted snap position while the mouse moved (on
+        // slower machines, most snaps during mouse moves are
+        // interrupted):
+        lastSnap = position;
         status = RSnap::Free;
-        return position;
+        return lastSnap;
     }
 
     // end points:
