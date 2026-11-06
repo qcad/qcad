@@ -43,6 +43,7 @@
 #endif
 
 #if QT_VERSION >= 0x060500
+#  include <QGuiApplication>
 #  include <QStyleHints>
 #endif
 
@@ -1263,10 +1264,74 @@ QString RSettings::getRelativeCoordinatePrefix() {
 }
 
 /**
- * \return True for macOS or Windows dark mode.
+ * \return User interface appearance chosen in the application preferences
+ * (Ui/Appearance): "Light" (always light), "Dark" (always dark) or "Auto"
+ * (follow the operating system, default).
+ */
+QString RSettings::getAppearance() {
+    QString appearance = getStringValue("Ui/Appearance", "Auto");
+    if (appearance.compare("Light", Qt::CaseInsensitive)==0) {
+        return "Light";
+    }
+    if (appearance.compare("Dark", Qt::CaseInsensitive)==0) {
+        return "Dark";
+    }
+    return "Auto";
+}
+
+/**
+ * Applies the appearance chosen in the preferences (see getAppearance()).
+ *
+ * Requests the light or dark color scheme from Qt (Qt >= 6.8), so native
+ * parts of the user interface (macOS window title bars, menus, native
+ * dialogs, Windows title bars) follow the preference. "Auto" reverts to the
+ * operating system setting. Widget styles that keep their own light and
+ * dark palettes (e.g. the Modern style plugin) query isDarkMode(), which
+ * honors the preference.
+ *
+ * Called at startup and when the application preferences are applied.
+ */
+void RSettings::applyAppearance() {
+    QString appearance = getAppearance();
+
+#if QT_VERSION >= 0x060800
+    if (qobject_cast<QGuiApplication*>(QCoreApplication::instance())!=NULL) {
+        QStyleHints* hints = QGuiApplication::styleHints();
+        if (hints!=NULL) {
+            Qt::ColorScheme scheme = Qt::ColorScheme::Unknown;
+            if (appearance=="Light") {
+                scheme = Qt::ColorScheme::Light;
+            }
+            else if (appearance=="Dark") {
+                scheme = Qt::ColorScheme::Dark;
+            }
+            hints->setColorScheme(scheme);
+        }
+    }
+#endif
+
+    // dark mode / dark GUI background are cached:
+    darkMode = -1;
+    darkGuiBackground = -1;
+}
+
+/**
+ * \return True for dark mode: always true / false if the user chose a dark /
+ * light appearance in the preferences, otherwise true for macOS or Windows
+ * dark mode.
  */
 bool RSettings::isDarkMode() {
     if (darkMode==-1) {
+        QString appearance = getAppearance();
+        if (appearance=="Light") {
+            darkMode = 0;
+            return false;
+        }
+        if (appearance=="Dark") {
+            darkMode = 1;
+            return true;
+        }
+
 #if defined(Q_OS_MACOS)
         darkMode = (isMacDarkMode() ? 1 : 0);
 #elif defined(Q_OS_WIN32)
@@ -1306,6 +1371,17 @@ bool RSettings::hasDarkGuiBackground() {
     }
     // detect explicitly light QCAD theme:
     if (qApp->styleSheet().contains("IconPostfix:none", Qt::CaseInsensitive)) {
+        darkGuiBackground = 0;
+        return false;
+    }
+
+    // appearance chosen in the preferences:
+    QString appearance = getAppearance();
+    if (appearance=="Dark") {
+        darkGuiBackground = 1;
+        return true;
+    }
+    if (appearance=="Light") {
         darkGuiBackground = 0;
         return false;
     }

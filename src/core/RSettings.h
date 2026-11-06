@@ -326,6 +326,8 @@ public:
 
     static bool isDarkMode();
     static bool hasDarkGuiBackground();
+    static QString getAppearance();
+    static void applyAppearance();
     static bool hasCustomStyleSheet();
 
     static QStringList getPrinterNames();

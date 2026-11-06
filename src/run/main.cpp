@@ -459,6 +459,12 @@ int main(int argc, char *argv[]) {
     }
 #endif
 
+    // light / dark appearance chosen in the preferences (or auto):
+    // before any window is created, so native title bars match:
+    if (guiEnabled) {
+        RSettings::applyAppearance();
+    }
+
     if (RSettings::getBoolValue("MenuBar/ShowIcons", true)==false) {
         QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus, true);
     }

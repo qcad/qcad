@@ -28,3 +28,15 @@ UiPreferences.prototype = new EAction();
 UiPreferences.getPreferencesCategory = function() {
     return [qsTr("General"), qsTr("User Interface")];
 };
+
+UiPreferences.applyPreferences = function(doc, mdiChild) {
+    if (!isNull(doc)) {
+        // called once per open drawing, appearance is global:
+        return;
+    }
+
+    // light / dark / auto appearance:
+    if (isFunction(RSettings.applyAppearance)) {
+        RSettings.applyAppearance();
+    }
+};

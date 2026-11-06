@@ -6,11 +6,51 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>391</width>
-    <height>286</height>
+    <width>661</width>
+    <height>549</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="Appearance">
+     <property name="title">
+      <string>Appearance</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayoutAppearance">
+      <item>
+       <widget class="QRadioButton" name="Auto">
+        <property name="text">
+         <string>Auto (follow system setting)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="Dark">
+        <property name="text">
+         <string>Dark</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="Light">
+        <property name="text">
+         <string>Light</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="lineAppearance">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
@@ -24,7 +64,7 @@
    <item>
     <widget class="Line" name="line">
      <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+      <enum>Qt::Orientation::Horizontal</enum>
      </property>
     </widget>
    </item>
@@ -110,7 +150,7 @@
    <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
