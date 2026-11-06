@@ -26,7 +26,9 @@
  *
  *  - properties["width"]: width of bitmap in pixels (ignored if resolution is present)
  *  - properties["height"]: height of bitmap in pixels (ignored if resolution is present)
- *  - properties["resolution"]: resolution in pixels / drawing unit
+ *  - properties["resolution"]: resolution in pixels / drawing unit (also
+ *    stored as physical resolution / DPI of the image, see
+ *    \ref setBitmapResolution)
  *  - properties["margin"]: margin at borders in pixels
  *  - properties["noWeightMargin"]: true to disable margin for lineweight, defaults to false
  *  - properties["backgroundColor"]: background color (RColor)
@@ -79,6 +81,8 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         qDebug("cannot render image");
         return [ false, qsTr("Cannot render image") ];
     }
+
+    setBitmapResolution(doc, buffer, properties);
 
     var iw = new QImageWriter(fileName);
     var ext = new QFileInfo(fileName).suffix().toLowerCase();
@@ -151,6 +155,45 @@ function initBitmapProperties(doc, properties) {
     if (!properties["height"]) {
         properties["height"] = 480;
     }
+}
+
+/**
+ * Stores the physical resolution of the exported image (dots per meter,
+ * written as DPI / pixels per meter into the header of PNG, JPEG, BMP and
+ * TIFF files) if the image is exported with a fixed resolution in pixels /
+ * drawing unit for a drawing with a physical unit. Without this, the
+ * image has the default resolution of Qt (96 DPI) and applications which
+ * print or place the image (word processors, image editors) scale it to
+ * that resolution instead of the resolution it was exported with: e.g. 600
+ * DPI for 23.622 pixels / millimeter (600 / 25.4).
+ *
+ * \param buffer QImage to export.
+ */
+function setBitmapResolution(doc, buffer, properties) {
+    if (!properties["resolution"]) {
+        return;
+    }
+
+    var unit = doc.getUnit();
+    if (unit===RS.None) {
+        // drawing unit has no physical size:
+        return;
+    }
+
+    // meters per drawing unit:
+    var meters = RUnit.convert(1.0, unit, RS.Meter);
+    if (!isNumber(meters) || !isFinite(meters) || meters<=0.0) {
+        return;
+    }
+
+    var dpm = Math.round(properties["resolution"] / meters);
+    // QImage stores dots per meter as int:
+    if (!isFinite(dpm) || dpm<1 || dpm>2147483647) {
+        return;
+    }
+
+    buffer.setDotsPerMeterX(dpm);
+    buffer.setDotsPerMeterY(dpm);
 }
 
 /**

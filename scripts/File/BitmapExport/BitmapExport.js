@@ -193,8 +193,13 @@ BitmapExport.prototype.getProperties = function() {
 
     var ret = [];
 
+    var resolution = NaN;
     if (resolutionRadio.checked) {
-        ret["resolution"] = parseFloat(resolutionCombo.currentText);
+        resolution = BitmapExport.parseResolution(resolutionCombo.currentText);
+    }
+
+    if (resolutionRadio.checked && !isNaN(resolution)) {
+        ret["resolution"] = resolution;
     }
     else {
         ret["width"] = Math.ceil(widthEdit.getValue());
@@ -261,8 +266,31 @@ BitmapExport.prototype.selectionChanged = function(value) {
     this.modeChanged();
 };
 
+/**
+ * \return Resolution in pixels / drawing unit entered as text or NaN if the
+ * text is not a valid, positive number. The text is evaluated as
+ * mathematical expression (RMath.eval): decimal commas are accepted
+ * (parseFloat("23,622") is 23) and the
+ * resolution can be entered as expression, e.g. "600/25.4" for 600 dpi in
+ * a drawing in millimeters.
+ */
+BitmapExport.parseResolution = function(str) {
+    if (isNull(str)) {
+        return NaN;
+    }
+    // decimal comma, independent of the configured decimal point (RMath.eval
+    // only accepts a decimal comma if the decimal point is configured as
+    // comma and would evaluate "23,622" as JS comma operator to 622):
+    var expr = String(str).replace(/(\d),(\d)/g, "$1.$2");
+    var res = RMath.eval(expr);
+    if (!isNumber(res) || !isFinite(res) || res<=0.0) {
+        return NaN;
+    }
+    return res;
+};
+
 BitmapExport.prototype.resolutionChanged = function(str) {
-    var res = parseFloat(str, 10);
+    var res = BitmapExport.parseResolution(str);
     if (isNaN(res)) {
         return;
     }
