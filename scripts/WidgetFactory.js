@@ -393,10 +393,14 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         }
 
         // widgets with dynamic property "RequiresRestart" trigger a
-        // restart application warning after changing preferences:
+        // restart application warning after changing preferences.
+        // all widgets of a changed page are saved, so only warn if the
+        // value of such a widget has actually changed:
         if (typeof(c.property("RequiresRestart")) != "undefined"
             && c.property("RequiresRestart") === true) {
-            WidgetFactory.requiresRestart = true;
+            if (WidgetFactory.hasValueChanged(c, key, value, document, map)) {
+                WidgetFactory.requiresRestart = true;
+            }
         }
 
         // widgets can be ignored by setting the dynamic property
@@ -432,6 +436,41 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             }
         }
     }
+};
+
+/**
+ * \return True if the given value differs from the value currently stored
+ * for the given key (or from the widget's default value if no value is
+ * stored yet). Used by saveState before storing the new value.
+ */
+WidgetFactory.hasValueChanged = function(widget, key, value, document, map) {
+    var previous = undefined;
+    if (!isNull(map)) {
+        previous = map.get(key);
+    }
+    else {
+        if (!isNull(document)) {
+            if (isObject(document)) {
+                previous = document.getCustomProperty("QCAD", key, undefined);
+            }
+            else {
+                previous = document.getVariable(key);
+            }
+        }
+        if (isNull(document) || isNull(previous)) {
+            previous = RSettings.getValue(key);
+        }
+    }
+
+    // nothing stored yet: compare with value from .ui file:
+    if (isNull(previous)) {
+        previous = widget.property("defaultValue");
+    }
+    if (isNull(previous)) {
+        return true;
+    }
+
+    return String(previous) !== String(value);
 };
 
 /**
