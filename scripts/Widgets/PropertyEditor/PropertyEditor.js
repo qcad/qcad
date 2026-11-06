@@ -1617,6 +1617,83 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
 };
 
 /**
+ * Registers a property whose value is a file name chosen from a list of
+ * choices or from a file on disk (e.g. the surface textures of the
+ * architecture smart objects: a texture from the textures directory or
+ * any image file). Such properties get a file chooser button next to
+ * their combo box (see initChoiceControls). Plugins register their
+ * properties at startup.
+ *
+ * \param group Property group title (untranslated, e.g. "Wall").
+ * \param title Property title (untranslated, e.g. "Inner Side Texture").
+ * \param filter File dialog filter (e.g. "Image Files (*.png *.jpg)").
+ * \param settingsKey Optional settings key the last directory is stored
+ *      under (default: "PropertyEditor/FileChoicePath").
+ */
+PropertyEditor.registerFileChoiceProperty = function(group, title, filter, settingsKey) {
+    if (isNull(PropertyEditor.fileChoiceProperties)) {
+        PropertyEditor.fileChoiceProperties = {};
+    }
+    PropertyEditor.fileChoiceProperties[group + "|" + title] = {
+        filter : isNull(filter) ? qsTr("All Files") + " (*)" : filter,
+        settingsKey : isNull(settingsKey) ? "PropertyEditor/FileChoicePath" : settingsKey
+    };
+};
+
+/**
+ * \return The registration of the given property (see
+ * registerFileChoiceProperty) or undefined if the property is not a file
+ * choice property.
+ * \internal
+ */
+PropertyEditorImpl.prototype.getFileChoiceRegistration = function(propertyTypeId) {
+    if (isNull(propertyTypeId) || isNull(PropertyEditor.fileChoiceProperties)) {
+        return undefined;
+    }
+    var key = propertyTypeId.getPropertyGroupTitle() + "|" + propertyTypeId.getPropertyTitle();
+    return PropertyEditor.fileChoiceProperties[key];
+};
+
+/**
+ * Creates the file chooser button of a file choice property (see
+ * registerFileChoiceProperty): opens a file dialog and sets the chosen
+ * file name as value of the property (the combo box lists the file name
+ * until another choice is made).
+ * \internal
+ */
+PropertyEditorImpl.prototype.createFileChoiceButton = function(objectName, propertyTypeId, control, registration) {
+    var button = new QToolButton(this.geometryGroup);
+    button.objectName = objectName + "_browse";
+    button.iconSize = new QSize(12,12);
+    var iconPath = autoIconPath("scripts/File/OpenFile/OpenFile.svg");
+    if (!isNull(iconPath)) {
+        button.icon = new QIcon(iconPath);
+    }
+    else {
+        button.text = "...";
+    }
+    button.toolTip = qsTr("Choose file...");
+    var pw = new PropertyWatcher(this, control, propertyTypeId);
+    var settingsKey = registration.settingsKey;
+    var filter = registration.filter;
+    button.clicked.connect(function() {
+        var lastDir = RSettings.getStringValue(settingsKey, RSettings.getDocumentsLocation());
+        var fileName = QFileDialog.getOpenFileName(
+            EAction.getMainWindow(), qsTr("Choose File"), lastDir, filter);
+        if (isNull(fileName) || fileName.length===0) {
+            return;
+        }
+        RSettings.setValue(settingsKey, new QFileInfo(fileName).absolutePath());
+        if (control.findText(fileName)===-1) {
+            control.addItem(fileName);
+        }
+        control.currentIndex = control.findText(fileName);
+        pw.propertyChanged(fileName);
+    });
+    return button;
+};
+
+/**
  * Initializes a choice control (combo box) for the given property.
  * \internal
  */
@@ -1675,6 +1752,16 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             }
         }
 
+    }
+
+    // file name from the choices or from disk: file chooser button next to
+    // the combo box (see registerFileChoiceProperty):
+    var fileButton = undefined;
+    if (!onlyChanges) {
+        var fileChoice = this.getFileChoiceRegistration(propertyTypeId);
+        if (!isNull(fileChoice)) {
+            fileButton = this.createFileChoiceButton(objectName, propertyTypeId, control, fileChoice);
+        }
     }
 
     //var signalsBlocked;
@@ -1763,7 +1850,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             control.insertItem(0, PropertyEditor.varies, PropertyEditor.varies);
             control.currentIndex = 0;
         }
-        return new Array(control);
+        return isNull(fileButton) ? [ control ] : [ control, fileButton ];
     }
 
     // not mixed anymore, remove mixed option:
@@ -1844,7 +1931,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         }
     }
 
-    return [ control ];
+    return isNull(fileButton) ? [ control ] : [ control, fileButton ];
 };
 
 PropertyEditorImpl.getControlObjectName = function(propertyTypeId) {

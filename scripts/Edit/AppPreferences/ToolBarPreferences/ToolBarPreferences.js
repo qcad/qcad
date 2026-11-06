@@ -30,6 +30,29 @@ ToolBarPreferences.getPreferencesCategory = function() {
     return [qsTr("Widgets"), qsTr("Toolbars")];
 };
 
+/**
+ * \return True if the current theme comes with its own application style
+ * plugin (e.g. Modern), which implements the button spacing preference.
+ */
+ToolBarPreferences.hasStylePlugin = function() {
+    var theme = RSettings.getValue("Theme/ThemeName", undefined);
+    return !isNull(theme) && RPluginLoader.hasPlugin(theme.toUpperCase() + "STYLE");
+};
+
+ToolBarPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    // button spacing (ToolBar/ButtonSpacing, percent) is implemented by the
+    // theme's style plugin, other styles use their fixed spacing:
+    if (!ToolBarPreferences.hasStylePlugin()) {
+        var widgets = ["labelButtonSpacing", "ButtonSpacing"];
+        for (var i=0; i<widgets.length; i++) {
+            var w = pageWidget.findChild(widgets[i]);
+            if (!isNull(w)) {
+                w.visible = false;
+            }
+        }
+    }
+};
+
 ToolBarPreferences.applyPreferences = function(doc) {
     var appWin = EAction.getMainWindow();
     var children = appWin.children();
