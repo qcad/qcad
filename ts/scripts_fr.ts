@@ -1269,7 +1269,7 @@ Voulez-vous le récupérer ?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+63"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+65"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Taille d&apos;image non valide (largeur x hauteur doit être inférieure à %1)</translation>
     </message>
@@ -6196,16 +6196,26 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
-        <translation>Les entités en surbrillance et sélectionnées conservent leur couleur et sont affichées avec un halo flou dans les couleurs de halo ci-dessous. Sinon, elles sont affichées dans la couleur de surbrillance ou de sélection.</translation>
+        <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Use halos for highlighting and selection</source>
-        <translation>Utiliser des halos pour la surbrillance et la sélection</translation>
+        <source>Use halos for highlighting</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+10"/>
+        <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Halo size (px):</source>
         <translation>Taille du halo (px) :</translation>
     </message>
@@ -6330,7 +6340,7 @@ est déjà dans la liste.</translation>
         <translation>Bordure de la zone de sélection :</translation>
     </message>
     <message>
-        <location line="-964"/>
+        <location line="-974"/>
         <source>Crosshairs:</source>
         <translation>Réticule :</translation>
     </message>
@@ -8128,6 +8138,16 @@ est déjà dans la liste.</translation>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>Activer la navigation au clavier dans les widgets de liste</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Screen reader:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>
@@ -8140,6 +8160,26 @@ est déjà dans la liste.</translation>
         <location line="+0"/>
         <source>Keyboard</source>
         <translation>Clavier</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Detect automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>(Default)</source>
+        <translation type="unfinished">(Par défaut)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always assume a screen reader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Never assume a screen reader</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10443,7 +10483,7 @@ est déjà dans la liste.</translation>
         <translation>Échelle du dessin</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+21"/>
         <source>Move Paper Position</source>
         <translation>Déplacer le papier</translation>
     </message>
@@ -10503,7 +10543,7 @@ est déjà dans la liste.</translation>
         <translation>Afficher plus d&apos;options</translation>
     </message>
     <message>
-        <location line="-294"/>
+        <location line="-297"/>
         <source>Print...</source>
         <translation>Imprimer...</translation>
     </message>
@@ -13700,6 +13740,26 @@ est déjà dans la liste.</translation>
     <name>Ui</name>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
+        <source>Appearance</source>
+        <translation type="unfinished">Apparence</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Auto (follow system setting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
         <translation>Ces paramètres affectent la résolution et la taille de l&apos;interface utilisateur QCAD. Ces préférences peuvent être ajustées en cas de problèmes avec l&apos;interface utilisateur de QCAD, tels que des icônes ou des étiquettes de texte très grandes ou très petites.</translation>
     </message>
@@ -14018,7 +14078,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1233"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>

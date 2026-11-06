@@ -1267,7 +1267,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+63"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+65"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>이미지 크기가 잘못되었습니다(너비 x 높이가 %1보다 작아야 함)</translation>
     </message>
@@ -6206,16 +6206,26 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+6"/>
-        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
-        <translation>강조 표시되거나 선택된 엔티티는 원래 색상을 유지하고 아래의 헤일로 색상으로 흐릿한 헤일로와 함께 표시됩니다. 그렇지 않으면 강조 표시 색상 또는 선택 색상으로 표시됩니다.</translation>
+        <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Use halos for highlighting and selection</source>
-        <translation>강조 표시 및 선택에 헤일로 사용</translation>
+        <source>Use halos for highlighting</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+10"/>
+        <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Halo size (px):</source>
         <translation>헤일로 크기 (px):</translation>
     </message>
@@ -8123,6 +8133,16 @@ is already in the list.</source>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>목록 위젯에서 키보드 탐색 사용</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Screen reader:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>
@@ -8135,6 +8155,26 @@ is already in the list.</source>
         <location line="+0"/>
         <source>Keyboard</source>
         <translation>키보드</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Detect automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>(Default)</source>
+        <translation type="unfinished">(기본값)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always assume a screen reader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Never assume a screen reader</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10431,7 +10471,7 @@ is already in the list.</source>
         <translation>그리기 배율</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+21"/>
         <source>Move Paper Position</source>
         <translation>용지 위치 이동</translation>
     </message>
@@ -13690,6 +13730,26 @@ is already in the list.</source>
     <name>Ui</name>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
+        <source>Appearance</source>
+        <translation type="unfinished">모양</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Auto (follow system setting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
         <translation>이러한 설정은 QCAD 사용자 인터페이스의 해상도 및 배율에 영향을 줍니다. 아이콘이나 텍스트 레이블이 너무 크거나 작은 등 QCAD의 사용자 인터페이스에 문제가 있는 경우 이러한 기본 설정을 조정할 수 있습니다.</translation>
     </message>
@@ -14008,7 +14068,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1233"/>
         <source>Restore defaults</source>
         <translation>기본값 복원</translation>
     </message>

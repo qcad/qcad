@@ -1269,7 +1269,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+63"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+65"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamanho de imagem inválido (largura x altura deve ser menor que %1)</translation>
     </message>
@@ -6201,16 +6201,26 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
-        <translation>As entidades realçadas e selecionadas mantêm a sua cor e são exibidas com um halo desfocado nas cores de halo abaixo. Caso contrário, são exibidas na cor de realce ou de seleção.</translation>
+        <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Use halos for highlighting and selection</source>
-        <translation>Usar halos para realce e seleção</translation>
+        <source>Use halos for highlighting</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+10"/>
+        <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Halo size (px):</source>
         <translation>Tamanho do halo (px):</translation>
     </message>
@@ -6335,7 +6345,7 @@ já se encontra na lista.</translation>
         <translation>Borda da caixa de zoom:</translation>
     </message>
     <message>
-        <location line="-883"/>
+        <location line="-893"/>
         <source>Origin:</source>
         <translation>Origem:</translation>
     </message>
@@ -8128,6 +8138,16 @@ já se encontra na lista.</translation>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>Ativar navegação por teclado em widgets de lista</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Screen reader:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>
@@ -8140,6 +8160,26 @@ já se encontra na lista.</translation>
         <location line="+0"/>
         <source>Keyboard</source>
         <translation>Teclado</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Detect automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>(Default)</source>
+        <translation type="unfinished">(Padrão)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always assume a screen reader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Never assume a screen reader</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10448,7 +10488,7 @@ já se encontra na lista.</translation>
         <translation>Escala de desenho</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+21"/>
         <source>Move Paper Position</source>
         <translation>Mover posição do papel</translation>
     </message>
@@ -13700,6 +13740,26 @@ já se encontra na lista.</translation>
     <name>Ui</name>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
+        <source>Appearance</source>
+        <translation type="unfinished">Aparência</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Auto (follow system setting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
         <translation>Estas configurações afetam a resolução e o tamanho da interface do usuário QCAD. Estas preferências podem ser ajustadas se houver problemas com a interface de usuário do QCAD, tais como ícones muito grandes ou muito pequenos ou etiquetas de texto.</translation>
     </message>
@@ -14018,7 +14078,7 @@ já se encontra na lista.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1233"/>
         <source>Restore defaults</source>
         <translation>Restaurar inadimplências</translation>
     </message>

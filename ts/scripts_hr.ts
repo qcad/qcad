@@ -1271,7 +1271,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+63"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+65"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nevažeća veličina slike (širina x visina mora biti manja od %1)</translation>
     </message>
@@ -6217,16 +6217,26 @@ večpostoji na popisu.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
-        <translation>Istaknuti i odabrani entiteti zadržavaju svoju boju i prikazuju se sa zamućenim sjajem u bojama sjaja navedenima u nastavku. U suprotnom se prikazuju u boji isticanja ili odabira.</translation>
+        <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Use halos for highlighting and selection</source>
-        <translation>Koristi sjaj za isticanje i odabir</translation>
+        <source>Use halos for highlighting</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+10"/>
+        <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Halo size (px):</source>
         <translation>Veličina sjaja (px):</translation>
     </message>
@@ -8134,6 +8144,16 @@ večpostoji na popisu.</translation>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>Omogući navigaciju tipkovnicom u widgetima popisa</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Screen reader:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>
@@ -8146,6 +8166,26 @@ večpostoji na popisu.</translation>
         <location line="+0"/>
         <source>Keyboard</source>
         <translation>Tipkovnica</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Detect automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>(Default)</source>
+        <translation type="unfinished">(Zadano)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always assume a screen reader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Never assume a screen reader</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10456,7 +10496,7 @@ večpostoji na popisu.</translation>
         <translation>Mjerilo crteža</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+21"/>
         <source>Move Paper Position</source>
         <translation>Premjesti položaj papira</translation>
     </message>
@@ -13711,6 +13751,26 @@ večpostoji na popisu.</translation>
     <name>Ui</name>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
+        <source>Appearance</source>
+        <translation type="unfinished">Izgled</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Auto (follow system setting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
         <translation>Ove postavke utječu na razlučivost i mjerilo QCAD korisničkog sučelja. Te se postavke mogu prilagoditi ako postoje problemi s korisničkim sučeljem QCAD-a, kao što su vrlo velike ili vrlo male ikone ili tekstualne oznake.</translation>
     </message>
@@ -14029,7 +14089,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1233"/>
         <source>Restore defaults</source>
         <translation>Vrati zadano</translation>
     </message>

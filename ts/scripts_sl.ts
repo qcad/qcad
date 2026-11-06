@@ -1269,7 +1269,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+63"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+65"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Neveljavna velikost slike (širina * višina mora biti manj kot %1)</translation>
     </message>
@@ -6207,16 +6207,26 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Highlighted and selected entities keep their color and are displayed with a blurred halo in the halo colors below. Otherwise they are displayed in the highlight or selection color.</source>
-        <translation>Označene in izbrane entitete ohranijo svojo barvo in so prikazane z zabrisanim sijem v spodnjih barvah sija. V nasprotnem primeru so prikazane v barvi označevanja ali izbora.</translation>
+        <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Use halos for highlighting and selection</source>
-        <translation>Uporabi sij za označevanje in izbor</translation>
+        <source>Use halos for highlighting</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+10"/>
+        <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use halos for selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Halo size (px):</source>
         <translation>Velikost sija (px):</translation>
     </message>
@@ -6341,7 +6351,7 @@ je že na seznamu.</translation>
         <translation>Okvir povečave:</translation>
     </message>
     <message>
-        <location line="-883"/>
+        <location line="-893"/>
         <source>Origin:</source>
         <translation>Izhodišče:</translation>
     </message>
@@ -8134,6 +8144,16 @@ je že na seznamu.</translation>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>Omogoči krmiljenje s tipkovnico po seznamu gradnikov</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Screen reader:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>
@@ -8146,6 +8166,26 @@ je že na seznamu.</translation>
         <location line="+0"/>
         <source>Keyboard</source>
         <translation>Tipkovnica</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Detect automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>(Default)</source>
+        <translation type="unfinished">(Privzeto)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always assume a screen reader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Never assume a screen reader</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10448,7 +10488,7 @@ je že na seznamu.</translation>
         <translation>Razmerje risbe</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+21"/>
         <source>Move Paper Position</source>
         <translation>Premakni pozicijo papirja</translation>
     </message>
@@ -13716,6 +13756,26 @@ je že na seznamu.</translation>
     <name>Ui</name>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
+        <source>Appearance</source>
+        <translation type="unfinished">Izgled</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Auto (follow system setting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
         <translation>Te nastavitve vplivajo na ločljivost in merilo uporabniškega vmesnika QCAD. Te nastavitve lahko prilagodite, če se pojavijo težave z uporabniškim vmesnikom QCAD, kot so zelo velike ali zelo majhne ikone ali besedilne oznake.</translation>
     </message>
@@ -14034,7 +14094,7 @@ je že na seznamu.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1194"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1233"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>
