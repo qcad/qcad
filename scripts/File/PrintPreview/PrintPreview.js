@@ -640,7 +640,7 @@ PrintPreviewImpl.prototype.hideUiOptions = function() {
  *
  * For image based views (RGraphicsViewQt) this is the view itself. The
  * RGraphicsView of an RHI based view is an adapter owned by the widget:
- * the decoration is added to the widget (RGraphicsViewRhi2D).
+ * the decoration is added to the widget (RGraphicsViewRhi3D).
  */
 PrintPreviewImpl.prototype.getBackgroundDecorationView = function() {
     if (isNull(this.view)) {
@@ -652,8 +652,8 @@ PrintPreviewImpl.prototype.getBackgroundDecorationView = function() {
         return this.view;
     }
 
-    if (typeof(RGraphicsViewRhi2D)!=="undefined") {
-        var rhiView = RGraphicsViewRhi2D.getViewOf(this.view);
+    if (typeof(RGraphicsViewRhi3D)!=="undefined") {
+        var rhiView = RGraphicsViewRhi3D.getViewOf(this.view);
         if (!isNull(rhiView)) {
             return rhiView;
         }

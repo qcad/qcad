@@ -361,7 +361,7 @@ function renderBitmapImage(doc, scene, properties, view) {
  * selected entities are rendered in the selection color (deselect before
  * exporting, as BitmapExport does).
  *
- * \param rhiView RGraphicsViewRhi2D or RGraphicsViewRhi3D.
+ * \param rhiView RGraphicsViewRhi3D (in 2D or 3D mode).
  *
  * \return QImage or undefined.
  */
@@ -379,9 +379,10 @@ function renderBitmapRhi(doc, scene, properties, rhiView) {
     }
 
     // the RGraphicsView interface of the view (navigation, zooming):
-    // owned by the view, 2D views only:
+    // owned by the view, views in 2D mode only (a view in 3D mode
+    // renders the drawing as seen by its camera):
     var view = undefined;
-    if (isFunction(rhiView.getRGraphicsView)) {
+    if (isFunction(rhiView.getRGraphicsView) && !rhiView.is3DView()) {
         view = rhiView.getRGraphicsView();
     }
 
@@ -545,7 +546,7 @@ function renderBitmapImageOffScreen(doc, scene, properties) {
 }
 
 /**
- * \return The RHI based view (RGraphicsViewRhi2D / RGraphicsViewRhi3D)
+ * \return The RHI based view (RGraphicsViewRhi3D)
  * which renders the given scene or undefined if the given scene is
  * rendered by an image based view (RGraphicsSceneQt / RGraphicsViewImage)
  * or if RHI based views are not available (RHI3D plugin not installed).
@@ -561,7 +562,7 @@ function renderBitmapImageOffScreen(doc, scene, properties) {
  * RGraphicsView adapter it owns.
  */
 function getRhiViewOfScene(scene, view) {
-    if (typeof(RGraphicsViewRhi2D)==="undefined") {
+    if (typeof(RGraphicsViewRhi3D)==="undefined") {
         // RHI3D plugin not available:
         return undefined;
     }
@@ -570,12 +571,12 @@ function getRhiViewOfScene(scene, view) {
 
     if (!isNull(view)) {
         // the given view is the RHI based view itself:
-        if (isOfType(view, RGraphicsViewRhi2D) || isOfType(view, RGraphicsViewRhi3D)) {
+        if (isOfType(view, RGraphicsViewRhi3D)) {
             return view;
         }
 
         // the given view is the adapter owned by an RHI based view:
-        rhiView = RGraphicsViewRhi2D.getViewOf(view);
+        rhiView = RGraphicsViewRhi3D.getViewOf(view);
         if (!isNull(rhiView)) {
             return rhiView;
         }
@@ -594,7 +595,7 @@ function getRhiViewOfScene(scene, view) {
     // based view:
     var views = scene.getGraphicsViews();
     for (var i=0; i<views.length; i++) {
-        rhiView = RGraphicsViewRhi2D.getViewOf(views[i]);
+        rhiView = RGraphicsViewRhi3D.getViewOf(views[i]);
         if (!isNull(rhiView)) {
             return rhiView;
         }

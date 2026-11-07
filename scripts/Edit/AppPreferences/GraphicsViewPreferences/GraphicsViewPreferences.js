@@ -50,7 +50,7 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
     }
 
     // RHI based graphics view is only available if the RHI3D plugin is loaded:
-    if (!hasPlugin("RHI3D") || typeof(RGraphicsViewRhi2D)==="undefined") {
+    if (!hasPlugin("RHI3D") || typeof(RGraphicsViewRhi3D)==="undefined") {
         widgets["UseRhiGraphicsView"].visible = false;
     }
     else {

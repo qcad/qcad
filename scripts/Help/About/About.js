@@ -536,10 +536,10 @@ About.prototype.initAboutSystem = function(textEdit) {
         text += "\nOpenGL:\n" + RSettings.getOpenGLMessages().join("\n");
     }
 
-    if (typeof(RGraphicsViewRhi2D)!=="undefined" && isFunction(RGraphicsViewRhi2D.getRhiInfo)) {
+    if (typeof(RGraphicsViewRhi3D)!=="undefined" && isFunction(RGraphicsViewRhi3D.getRhiInfo)) {
         text += "\n";
         text += "\nRHI";
-        text += "\n" + RGraphicsViewRhi2D.getRhiInfo();
+        text += "\n" + RGraphicsViewRhi3D.getRhiInfo();
     }
 
     var numPlugins = RPluginLoader.countPlugins();

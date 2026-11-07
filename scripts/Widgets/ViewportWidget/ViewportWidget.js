@@ -45,13 +45,13 @@ function ViewportWidget(vpNumber, vpWidget, documentInterface) {
 }
 
 /**
- * \return True if the RHI based graphics view (RGraphicsViewRhi2D) should be
+ * \return True if the RHI based graphics view (RGraphicsViewRhi3D (2D mode)) should be
  * used instead of the image based graphics view (RGraphicsViewImage). This is
  * the case if the RHI3D plugin is loaded and the preference
  * "Use RHI Graphicsview" is enabled.
  */
 ViewportWidget.useRhiGraphicsView = function() {
-    if (typeof(RGraphicsViewRhi2D)==="undefined") {
+    if (typeof(RGraphicsViewRhi3D)==="undefined") {
         // RHI3D plugin not loaded:
         return false;
     }
@@ -384,7 +384,7 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
 /**
  * Replaces the image based graphics view (RGraphicsViewQt with its
  * RGraphicsViewImage backend) in the viewport template with an RHI based
- * graphics view (RGraphicsViewRhi2D). Called from init if the RHI3D plugin
+ * graphics view (RGraphicsViewRhi3D (2D mode)). Called from init if the RHI3D plugin
  * is loaded and the preference "Use RHI Graphicsview" is enabled.
  *
  * The RHI view comes with its own viewport widget
@@ -499,7 +499,7 @@ EventHandler.prototype.drop = function(event) {
 
 /**
  * Handles drop into the drawing area of any graphics view type
- * (RGraphicsViewQt or RGraphicsViewRhi2D): dropped files are inserted
+ * (RGraphicsViewQt or RGraphicsViewRhi3D (2D mode)): dropped files are inserted
  * into the current drawing (script items as script blocks, bitmaps as
  * images, everything else as blocks from file).
  * \param event QDropEvent

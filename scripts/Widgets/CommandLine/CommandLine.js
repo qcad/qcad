@@ -605,8 +605,8 @@ CommandLine.init = function(basePath) {
                 .arg(platformName)
                 );
 
-    if (typeof(RGraphicsViewRhi2D)!=="undefined" && isFunction(RGraphicsViewRhi2D.getRhiInfo)) {
-        EAction.handleUserMessage(RGraphicsViewRhi2D.getRhiInfo());
+    if (typeof(RGraphicsViewRhi3D)!=="undefined" && isFunction(RGraphicsViewRhi3D.getRhiInfo)) {
+        EAction.handleUserMessage(RGraphicsViewRhi3D.getRhiInfo());
     }
 
     var pl = new RPaletteListenerAdapter();

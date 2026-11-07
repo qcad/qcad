@@ -81,8 +81,8 @@ QAccessibleInterface* raccessibleContainersFactory(const QString& classname, QOb
     }
 
     // graphics views are identified by their class name: RGraphicsViewQt
-    // lives in this library, the RHI based views (RGraphicsViewRhi2D,
-    // RGraphicsViewRhi3D) in the qcadrhi3d module. Not the viewport
+    // lives in this library, the RHI based view (RGraphicsViewRhi3D, 2D
+    // and 3D mode) in the qcadrhi3d module. Not the viewport
     // widgets around them (RGraphicsViewportRhi2D: view, scroll bars and
     // grid info label), those stay transparent:
     if (classname == "RGraphicsViewQt" || classname.startsWith("RGraphicsViewRhi")) {
