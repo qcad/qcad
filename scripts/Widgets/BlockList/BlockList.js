@@ -759,7 +759,7 @@ BlockList.initStyle = function(upd) {
         useAlternativeIcons = false;
     }
 
-    if (RSettings.getMajorVersion()<4 && !RSettings.getOriginalArguments().contains("-v4")) {
+    if (RSettings.getMajorVersion()<4) {
         // v4 uses visual cues instead of colors to identify states:
         useAlternativeIcons = false;
     }
