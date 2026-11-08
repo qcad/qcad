@@ -1631,13 +1631,23 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
  *      under (default: "PropertyEditor/FileChoicePath").
  */
 PropertyEditor.registerFileChoiceProperty = function(group, title, filter, settingsKey) {
-    if (isNull(PropertyEditor.fileChoiceProperties)) {
-        PropertyEditor.fileChoiceProperties = {};
-    }
-    PropertyEditor.fileChoiceProperties[group + "|" + title] = {
+    PropertyEditor.getFileChoiceProperties()[group + "|" + title] = {
         filter : isNull(filter) ? qsTr("All Files") + " (*)" : filter,
         settingsKey : isNull(settingsKey) ? "PropertyEditor/FileChoicePath" : settingsKey
     };
+};
+
+/**
+ * \return The registry of the file choice properties (key "group|title",
+ * see registerFileChoiceProperty). Kept in a global variable so that it
+ * survives this script being included again after a plugin registered
+ * its properties.
+ */
+PropertyEditor.getFileChoiceProperties = function() {
+    if (typeof(PropertyEditorFileChoiceProperties)==="undefined") {
+        PropertyEditorFileChoiceProperties = {};
+    }
+    return PropertyEditorFileChoiceProperties;
 };
 
 /**
@@ -1647,11 +1657,11 @@ PropertyEditor.registerFileChoiceProperty = function(group, title, filter, setti
  * \internal
  */
 PropertyEditorImpl.prototype.getFileChoiceRegistration = function(propertyTypeId) {
-    if (isNull(propertyTypeId) || isNull(PropertyEditor.fileChoiceProperties)) {
+    if (isNull(propertyTypeId)) {
         return undefined;
     }
     var key = propertyTypeId.getPropertyGroupTitle() + "|" + propertyTypeId.getPropertyTitle();
-    return PropertyEditor.fileChoiceProperties[key];
+    return PropertyEditor.getFileChoiceProperties()[key];
 };
 
 /**
