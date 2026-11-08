@@ -46,6 +46,7 @@ DuplicateTest00.prototype.test00 = function() {
     var p = new RVector(34.1, 10.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
+    this.selectAll();
     this.triggerCommand('duplicate');
     this.verifyDrawing('DuplicateTest00_000.dxf');
     this.tearDown();
