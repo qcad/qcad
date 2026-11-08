@@ -79,6 +79,8 @@ function RBlockListQt(parent, addListener, showHeader) {
         var appWin = EAction.getMainWindow();
         var adapter = new RBlockListenerAdapter();
         appWin.addBlockListener(adapter);
+        // keep listener accessible (removed again in BlockList.uninit):
+        this.listener = adapter;
         adapter.blocksUpdated.connect(function(di) { self.updateBlocks(di); });
         adapter.xRefUpdated.connect(function() { self.updateXRef(); });
         adapter.currentBlockSet.connect(function(di) { self.updateCurrentBlock(di); });
@@ -862,6 +864,28 @@ BlockList.initColumnWidths = function(blockList) {
 };
 
 /**
+ * Removes the block list widget (e.g. to replace it with the Pro version).
+ */
+BlockList.uninit = function() {
+    var action = RGuiAction.getByScriptFile("scripts/Widgets/BlockList/BlockList.js");
+    if (!isNull(action)) {
+        action.visible = false;
+    }
+    var appWin = RMainWindowQt.getMainWindow();
+    if (!isNull(BlockList.widget)) {
+        // stop updating the widget which is about to be destroyed:
+        if (!isNull(BlockList.widget.listener)) {
+            appWin.removeBlockListener(BlockList.widget.listener);
+        }
+        BlockList.widget = undefined;
+    }
+    var basicDock = appWin.findChild("BlockListDock");
+    if (!isNull(basicDock)) {
+        destr(basicDock);
+    }
+};
+
+/**
  * Initializes the block list widget.
  */
 BlockList.init = function(basePath) {
@@ -880,6 +904,7 @@ BlockList.init = function(basePath) {
     var layout = formWidget.findChild("verticalLayout");
     var blockList = new RBlockListQt(formWidget);
     blockList.objectName = "BlockList";
+    BlockList.widget = blockList;
     if (RSettings.getQtVersion()>0x060000) {
         layout.addWidget(blockList);
     }
