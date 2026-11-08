@@ -258,6 +258,11 @@ protected:
      */
     static bool isCursorKeyReservedForScreenReader(QKeyEvent* ke);
 
+    /**
+     * \nonscriptable
+     */
+    bool isGraphicsViewWidget(QWidget* w);
+
     void restoreClosedDockWidgets();
 
 public slots:

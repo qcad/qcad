@@ -39,6 +39,7 @@
 #include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"
+#include "RGraphicsScene.h"
 #include "RGraphicsViewImage.h"
 #include "RGraphicsViewQt.h"
 #include "RAccessibleToolTipFilter.h"
@@ -852,6 +853,42 @@ bool RMainWindowQt::isCursorKeyReservedForScreenReader(QKeyEvent* ke) {
     return true;
 }
 
+/**
+ * \return True if the given widget is the widget of a graphics view of
+ * the current document: the QPainter based view (RGraphicsViewQt) or any
+ * other view implementation (e.g. the RHI view of a plugin), which only
+ * registers itself as the widget of its RGraphicsView.
+ */
+bool RMainWindowQt::isGraphicsViewWidget(QWidget* w) {
+    if (w==NULL) {
+        return false;
+    }
+
+    if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL) {
+        return true;
+    }
+
+    RDocumentInterface* di = getDocumentInterface();
+    if (di==NULL) {
+        return false;
+    }
+
+    QList<RGraphicsScene*> scenes = di->getGraphicsScenes();
+    for (int i=0; i<scenes.size(); i++) {
+        if (scenes[i]==NULL) {
+            continue;
+        }
+        QList<RGraphicsView*> views = scenes[i]->getGraphicsViews();
+        for (int k=0; k<views.size(); k++) {
+            if (views[k]!=NULL && views[k]->getWidget()==w) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 bool RMainWindowQt::isStaleAutoRepeatKeyEvent(QKeyEvent* ke) {
     static QElapsedTimer wallClock;
     static qint64 baseOffset = 0;
@@ -980,7 +1017,7 @@ bool RMainWindowQt::event(QEvent* e) {
                 if (w!=NULL) {
                     // focus with view, main window or tool button:
                     // repeat last command:
-                    if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL ||
+                    if (isGraphicsViewWidget(w) ||
                         dynamic_cast<RMainWindowQt*>(w)!=NULL ||
                         dynamic_cast<QToolButton*>(w)!=NULL) {
 
