@@ -706,8 +706,11 @@ Explode.explodeEntity = function(entity, options) {
 
                     var explodedHatchData = undefined;
                     if (subEntity.isSolid()) {
-                        // solid hatch: create new solid hatch:
-                        explodedHatchData = new RHatchData();
+                        // solid hatch: create new solid hatch, keep transparency,
+                        // gradient settings, etc. of the original hatch:
+                        explodedHatchData = new RHatchData(subEntity.getData());
+                        explodedHatchData.setDocument(document);
+                        explodedHatchData.clearBoundary();
                         explodedHatchData.newLoop();
                     }
 
