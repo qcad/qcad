@@ -62,6 +62,9 @@ void RColorCombo::init() {
                     insertSeparator(count());
                 }
                 addItem(RColor::getIcon(p.second, iconSize()), p.first);
+                // mark the "Others..." item so it can be found later,
+                // independent of its position (user palette colors may follow):
+                setItemData(count()-1, true, OthersRole);
                 lastIsSeparator = false;
                 continue;
             }
@@ -161,7 +164,24 @@ void RColorCombo::setColor(const RColor& col) {
     if (i != -1) {
         removeItem(i);
     }
-    insertItem(count() - 1, RColor::getIcon(currentColor, iconSize()), custom, v);
-    setCurrentIndex(count() - 2);
+    // always insert the custom color item right before "Others...":
+    int idx = getOthersIndex();
+    if (idx==-1) {
+        idx = count();
+    }
+    insertItem(idx, RColor::getIcon(currentColor, iconSize()), custom, v);
+    setCurrentIndex(idx);
     blockSignals(false);
+}
+
+/**
+ * \return Index of the "Others..." item or -1.
+ */
+int RColorCombo::getOthersIndex() const {
+    for (int i = 0; i < count(); ++i) {
+        if (itemData(i, OthersRole).toBool()) {
+            return i;
+        }
+    }
+    return -1;
 }

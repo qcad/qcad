@@ -58,6 +58,11 @@ public slots:
     void colorChanged(int index);
 
 private:
+    int getOthersIndex() const;
+
+private:
+    static const int OthersRole = Qt::UserRole + 1;
+
     RColor currentColor;
     bool onlyFixed;
     bool showAlphaChannel;
