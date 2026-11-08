@@ -398,11 +398,14 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
     // non-uniform scaling of hatches:
     if (isHatchEntity(entity)) {
         var data = entity.getData();
-        var newHatchData = new RHatchData();
+        // full copy of the hatch data (keeps solid / pattern / scale / angle /
+        // origin, transparency, winding, gradient settings, custom pattern, ...):
+        var newHatchData = new RHatchData(data);
         newHatchData.setDocument(data.getDocument());
         newHatchData.copyAttributesFrom(data);
 
-        //newHatchData.clearBoundary();
+        // boundary is rebuilt with the scaled loops below:
+        newHatchData.clearBoundary();
 
         for (var i=0; i<entity.getLoopCount(); i++) {
             newHatchData.newLoop();
@@ -432,11 +435,8 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
                 }
             }
         }
-        newHatchData.setSolid(entity.isSolid());
-        newHatchData.setPatternName(entity.getPatternName());
-        newHatchData.setScale(entity.getScale());
-        newHatchData.setAngle(entity.getAngle());
-        newHatchData.setOriginPoint(entity.getOriginPoint());
+        // custom (per hatch) pattern geometry does not follow the new boundary:
+        newHatchData.clearCustomPattern();
 
         entity.setData(newHatchData);
         this.postTransform(entity);
