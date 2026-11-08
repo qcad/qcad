@@ -121,6 +121,15 @@ public:
     double getHeight() const;
     int getPixelWidth() const;
     int getPixelHeight() const;
+    /**
+     * Sets the pixel size of the image to be used if the image file cannot be
+     * loaded (e.g. the size stored in a DXF/DWG file). The size of the loaded
+     * image takes precedence if the image can be loaded.
+     */
+    void setPixelSize(int w, int h) {
+        pixelWidth = w;
+        pixelHeight = h;
+    }
     //RVector getScaleFactor() const {
     //    return scaleFactor;
     //}
@@ -165,6 +174,10 @@ private:
     int contrast;
     int fade;
     mutable QImage image;
+    // last known pixel size of the image (from the loaded image or from the imported file),
+    // used if the image file cannot be loaded (0: unknown):
+    mutable int pixelWidth;
+    mutable int pixelHeight;
 };
 
 Q_DECLARE_METATYPE(RImageData)

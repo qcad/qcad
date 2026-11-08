@@ -1417,6 +1417,8 @@ void RDxfImporter::addImage(const DL_ImageData& data) {
     RVector vv(data.vx, data.vy);
 
     RImageData d("", ip, uv, vv, data.brightness, data.contrast, data.fade);
+    // remember pixel size from file in case the image file is not available:
+    d.setPixelSize(data.width, data.height);
 
     QSharedPointer<RImageEntity> entity(new RImageEntity(document, d));
     importEntity(entity);

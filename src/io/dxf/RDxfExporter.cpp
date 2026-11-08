@@ -1587,6 +1587,9 @@ void RDxfExporter::writeHatch(const RHatchEntity& h) {
  * Writes the given image entity to the file.
  */
 void RDxfExporter::writeImage(const RImageEntity& img) {
+    // image size is written in pixels (DXF spec). if the image file is not
+    // available and the pixel size is unknown, 1x1 is written to retain
+    // position and pixel vectors:
     int handle = dxf.writeImage(
                      *dw,
                      DL_ImageData(std::string(""),
@@ -1599,8 +1602,8 @@ void RDxfExporter::writeImage(const RImageEntity& img) {
                                   img.getVVector().x,
                                   img.getVVector().y,
                                   0.0,
-                                  img.getWidth(),
-                                  img.getHeight(),
+                                  qMax(1, img.getPixelWidth()),
+                                  qMax(1, img.getPixelHeight()),
                                   img.getBrightness(),
                                   img.getContrast(),
                                   img.getFade()),
@@ -1670,8 +1673,8 @@ void RDxfExporter::writeImageDef(const RImageEntity& img) {
                      img.getVVector().x,
                      img.getVVector().y,
                      0.0,
-                     img.getWidth(),
-                     img.getHeight(),
+                     qMax(1, img.getPixelWidth()),
+                     qMax(1, img.getPixelHeight()),
                      img.getBrightness(),
                      img.getContrast(),
                      img.getFade()));

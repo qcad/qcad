@@ -31,7 +31,9 @@
 RImageData::RImageData() :
     brightness(50),
     contrast(50),
-    fade(0) {
+    fade(0),
+    pixelWidth(0),
+    pixelHeight(0) {
 }
 
 RImageData::RImageData(RDocument* document, const RImageData& data)
@@ -60,7 +62,9 @@ RImageData::RImageData(const QString& fileName,
         vVector(vVector),
         brightness(brightness),
         contrast(contrast),
-        fade(fade) {
+        fade(fade),
+        pixelWidth(0),
+        pixelHeight(0) {
 
 }
 
@@ -78,6 +82,8 @@ RImageData& RImageData::operator =(const RImageData& other) {
     brightness = other.brightness;
     contrast = other.contrast;
     fade = other.fade;
+    pixelWidth = other.pixelWidth;
+    pixelHeight = other.pixelHeight;
     image = other.image;
 
     return *this;
@@ -174,6 +180,12 @@ bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector
     // TODO: from center:
     //bool fromCenter = mod.testFlag(???);
     bool fromCenter = false;
+
+    load();
+    if (image.isNull()) {
+        // image file not available: cannot scale by reference point:
+        return false;
+    }
 
     QList<RVector> cornersPx = getCornersPx();
     RBox box(cornersPx[0], cornersPx[2]);
@@ -295,6 +307,11 @@ void RImageData::load() const {
 
     if (!image.load(fullFilePath)) {
         qWarning() << "RImageData::load: failed: " << fullFilePath;
+    }
+    else {
+        // remember pixel size in case the image file becomes unavailable later:
+        pixelWidth = image.width();
+        pixelHeight = image.height();
     }
 
     // 20221014: allow relative paths in DXF/DWG files:
@@ -421,10 +438,28 @@ double RImageData::getHeight() const {
     return m2 * imageHeight;
 }
 
+/**
+ * \return Width of the image in pixels. If the image file cannot be loaded,
+ * the last known pixel width (from a previously loaded image or from the
+ * imported file) is returned or 0 if unknown.
+ */
 int RImageData::getPixelWidth() const {
-    return getImage().width();
+    int w = getImage().width();
+    if (w>0) {
+        return w;
+    }
+    return pixelWidth;
 }
 
+/**
+ * \return Height of the image in pixels. If the image file cannot be loaded,
+ * the last known pixel height (from a previously loaded image or from the
+ * imported file) is returned or 0 if unknown.
+ */
 int RImageData::getPixelHeight() const {
-    return getImage().height();
+    int h = getImage().height();
+    if (h>0) {
+        return h;
+    }
+    return pixelHeight;
 }
