@@ -63,6 +63,7 @@
 #include "RWheelEvent.h"
 
 RDocumentInterface* RDocumentInterface::clipboard = NULL;
+QList<RDocumentInterface::EntityPicker> RDocumentInterface::entityPickers;
 
 
 RDocumentInterface::RDocumentInterface(RDocument& document)
@@ -1833,6 +1834,12 @@ REntity::Id RDocumentInterface::getClosestEntity(RInputEvent& event) {
  *   Zero to only return distances that are strictly orthogonal to the entity.
  * \param includeLockedLayers Return entities on locked layers.
  * \param selectedOnly Only return selected entities.
+ *
+ * If a registered entity picker recognizes the position as one picked
+ * in a view which displays the entities differently from their 2D
+ * shapes (e.g. a 3D view, see addEntityPicker), the entity in front
+ * under that position which passes the filters is returned instead of
+ * the entity closest to the position in 2D.
  */
 REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
         double range, double strictRange, bool includeLockedLayers, bool selectedOnly, bool snappable) {
@@ -1846,7 +1853,54 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
         }
     }
 
+    // the position was picked in a view which displays the entities
+    // differently from their 2D shapes (e.g. a 3D view): the entity
+    // under the position in that view (the closest to the camera which
+    // passes the same filters as RDocument::queryClosestXY):
+    QList<REntity::Id> pickedIds;
+    for (int i=0; i<entityPickers.size(); i++) {
+        pickedIds.clear();
+        if (!entityPickers[i](this, position, range, pickedIds)) {
+            continue;
+        }
+        RBlock::Id currentBlockId = document.getCurrentBlockId();
+        for (int k=0; k<pickedIds.size(); k++) {
+            QSharedPointer<REntity> e = document.queryVisibleEntityDirect(pickedIds[k]);
+            if (e.isNull() || e->isUndone() || e->getBlockId()!=currentBlockId) {
+                continue;
+            }
+            if (selectedOnly && !e->isSelected() && !e->isSelectedWorkingSet()) {
+                continue;
+            }
+            if (snappable && !document.isLayerSnappable(e->getLayerId())) {
+                continue;
+            }
+            if (!includeLockedLayers && document.isLayerLocked(e->getLayerId())) {
+                continue;
+            }
+            return pickedIds[k];
+        }
+        return REntity::INVALID_ID;
+    }
+
     return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers, selectedOnly, snappable);
+}
+
+/**
+ * Registers a function which picks the entities displayed by a view at
+ * a given position. \ref getClosestEntity uses the entities reported by
+ * the first function which recognizes the position instead of the
+ * entity closest to the position in 2D. Called by plugins with views
+ * which display the drawing in 3D (e.g. RHI3D).
+ */
+void RDocumentInterface::addEntityPicker(EntityPicker picker) {
+    if (picker!=NULL && !entityPickers.contains(picker)) {
+        entityPickers.append(picker);
+    }
+}
+
+void RDocumentInterface::removeEntityPicker(EntityPicker picker) {
+    entityPickers.removeAll(picker);
 }
 
 /**

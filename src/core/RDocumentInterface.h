@@ -273,6 +273,22 @@ public:
         bool includeLockedLayers = true,
         bool selectedOnly = false,
         bool snappable = false);
+
+    /**
+     * Function which reports the entities displayed by a view at the
+     * given position (e.g. a 3D view, in which the displayed geometry
+     * of an entity, such as an extruded wall, differs from its 2D
+     * shapes and the position under the cursor lies on that geometry).
+     * Fills \c entityIds with the IDs of the entities under the
+     * position, ordered front to back, and returns true if the
+     * position was picked in such a view, false otherwise.
+     *
+     * \see addEntityPicker, getClosestEntity
+     */
+    typedef bool (*EntityPicker)(RDocumentInterface* documentInterface,
+        const RVector& position, double range, QList<RObject::Id>& entityIds);
+    static void addEntityPicker(EntityPicker picker);
+    static void removeEntityPicker(EntityPicker picker);
     void highlightEntity(RObject::Id entityId);
     void highlightReferencePoint(const RRefPoint& position);
     int selectEntities(const QSet<RObject::Id>& entityIds, bool add = false);
@@ -463,6 +479,7 @@ private:
 //    QTransform inputTransform;
 
     static RDocumentInterface* clipboard;
+    static QList<EntityPicker> entityPickers;
 };
 
 Q_DECLARE_METATYPE(RDocumentInterface::IoErrorCode)
