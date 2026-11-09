@@ -60,12 +60,12 @@
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation>%1은 무료(오픈 소스) 소프트웨어인 QCAD를 기반으로 합니다.</translation>
+        <translation>%1은 자유(오픈 소스) 소프트웨어인 QCAD를 기반으로 합니다.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation>%1은 무료(오픈 소스) 소프트웨어입니다.</translation>
+        <translation>%1은 자유(오픈 소스) 소프트웨어입니다.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -193,7 +193,7 @@
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation>약...</translation>
+        <translation>정보...</translation>
     </message>
 </context>
 <context>
@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>그리기 기본 설정</translation>
+        <translation>도면 기본 설정</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -324,7 +324,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>현재 드로잉의 기본 설정은 &lt;br/&gt;&lt;i&gt;수정 gt; 드로잉 기본 설정&lt;/i&gt;에서 변경할 수 있습니다.</translation>
+        <translation>현재 도면의 기본 설정은 &lt;br/&gt;&lt;i&gt;편집 &amp;gt; 도면 기본 설정&lt;/i&gt;에서 변경할 수 있습니다.</translation>
     </message>
 </context>
 <context>
@@ -791,7 +791,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw concentric arc</source>
-        <translation>동심원 그리기</translation>
+        <translation>동심 호 그리기</translation>
     </message>
 </context>
 <context>
@@ -911,7 +911,7 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform>제목 없는 그림(들)에 대한 %n 자동 저장 백업 파일을 찾았습니다.
+            <numerusform>제목 없는 도면에 대한 %n 자동 저장 백업 파일을 찾았습니다.
 해당 파일을 복구하시겠습니까?</numerusform>
         </translation>
     </message>
@@ -1073,7 +1073,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation>행동</translation>
+        <translation>동작</translation>
     </message>
 </context>
 <context>
@@ -1241,12 +1241,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="-197"/>
         <source>Margin</source>
-        <translation>마진</translation>
+        <translation>여백</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation>마진:</translation>
+        <translation>여백:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -1256,7 +1256,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>선 무게를 보정하기 위해 추가 여백 추가하기</translation>
+        <translation>선 가중치를 보정하기 위해 추가 여백 추가하기</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1536,7 +1536,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>브레이크아웃 매뉴얼</translation>
+        <translation>수동 브레이크 아웃</translation>
     </message>
 </context>
 <context>
@@ -1770,12 +1770,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation>첫 번째 줄, 호 또는 원</translation>
+        <translation>첫 번째 선, 호 또는 원</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation>두 번째 줄, 호 또는 원</translation>
+        <translation>두 번째 선, 호 또는 원</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1809,12 +1809,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation>첫 번째 줄, 호 또는 원</translation>
+        <translation>첫 번째 선, 호 또는 원</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second line, arc or circle</source>
-        <translation>두 번째 줄, 호 또는 원</translation>
+        <translation>두 번째 선, 호 또는 원</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1875,12 +1875,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3T.js" line="+84"/>
         <source>First line, arc or circle</source>
-        <translation>첫 번째 줄, 호 또는 원</translation>
+        <translation>첫 번째 선, 호 또는 원</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line, arc or circle</source>
-        <translation>두 번째 줄, 호 또는 원</translation>
+        <translation>두 번째 선, 호 또는 원</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2331,7 +2331,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>명령줄에 집중하기</translation>
+        <translation>명령줄로 포커스 이동</translation>
     </message>
 </context>
 <context>
@@ -2377,7 +2377,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Convert Drawing Unit</source>
-        <translation>그리기 단위 변환</translation>
+        <translation>도면 단위 변환</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -2561,7 +2561,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>컷</translation>
+        <translation>잘라내기</translation>
     </message>
 </context>
 <context>
@@ -2577,7 +2577,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>법인 또는 지역 선택</translation>
+        <translation>엔티티 또는 영역 선택</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2622,7 +2622,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>블록 편집 중 &quot;%1&quot;&lt;br&gt;완료되면 &lt;i&gt;블록 &gt; 주 도면으로 돌아가기&gt;를 선택합니다</translation>
+        <translation>블록 편집 중 &quot;%1&quot;&lt;br&gt;완료되면 &lt;i&gt;블록 &gt; 메인 도면으로 돌아가기&lt;/i&gt;를 선택합니다</translation>
     </message>
 </context>
 <context>
@@ -2815,12 +2815,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.js" line="+80"/>
         <source>Arc or first of two lines</source>
-        <translation>호 또는 두 줄 중 첫 번째 줄</translation>
+        <translation>호 또는 두 선 중 첫 번째 선</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>두 번째 줄</translation>
+        <translation>두 번째 선</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2884,7 +2884,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>기능 위치</translation>
+        <translation>형상 위치</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2899,7 +2899,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw ordinate dimension</source>
-        <translation>좌표 차원 그리기</translation>
+        <translation>좌표 치수 그리기</translation>
     </message>
 </context>
 <context>
@@ -2930,13 +2930,13 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>사용자 지정 레이블 위치가 선택된 차원 엔티티가 없습니다.</translation>
+        <translation>사용자 지정 레이블 위치가 선택된 치수 엔티티가 없습니다.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>%n차원의 레이블 위치가 재설정되었습니다.</numerusform>
+            <numerusform>치수 %n개의 레이블 위치가 재설정되었습니다.</numerusform>
         </translation>
     </message>
     <message>
@@ -3051,7 +3051,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>차원</translation>
+        <translation>치수</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -3078,7 +3078,7 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>낮은 허용 오차</translation>
+        <translation>하한 허용 오차</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3088,7 +3088,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>그리기 배율</translation>
+        <translation>도면 배율</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3135,7 +3135,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+112"/>
         <source>point</source>
-        <translation>포인트</translation>
+        <translation>점</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3145,7 +3145,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>공간</translation>
+        <translation>공백</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3195,7 +3195,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation>내선 전화 연장:</translation>
+        <translation>연장선 연장:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -3275,7 +3275,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation>정확성:</translation>
+        <translation>정밀도:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3296,7 +3296,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation>정확성:</translation>
+        <translation>정밀도:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3327,7 +3327,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>디스플레이 거리/각도</translation>
+        <translation>거리/각도 표시</translation>
     </message>
 </context>
 <context>
@@ -3654,7 +3654,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>존재하지 않는 레이어를 고정할 수 없으며 무시됩니다. 텍스트 줄: %1%2 레이어: %3</translation>
+        <translation>존재하지 않는 레이어를 동결할 수 없으며 무시됩니다. 텍스트 줄: %1%2 레이어: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4000,7 +4000,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation>Horz. 정렬이 잘못되었습니다.</translation>
+        <translation>가로 정렬이 잘못되었습니다.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4100,7 +4100,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>올바른 선형 눈금이 아니므로 무시되었습니다. 텍스트 줄: %1%2 배율: %3</translation>
+        <translation>올바른 라인 타입 스케일이 아니므로 무시되었습니다. 텍스트 줄: %1%2 배율: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4249,7 +4249,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>그리기 기본 설정</translation>
+        <translation>도면 기본 설정</translation>
     </message>
 </context>
 <context>
@@ -4258,7 +4258,7 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform>중복된 엔티티 %n개</numerusform>
+            <numerusform>엔티티 %n개 복제됨</numerusform>
         </translation>
     </message>
     <message>
@@ -4580,7 +4580,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
-        <translation>타원의 주요 지점</translation>
+        <translation>타원의 장축 점</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4590,7 +4590,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation>타원의 마이너 포인트</translation>
+        <translation>타원의 단축 점</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4615,7 +4615,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation>주요 반경:</translation>
+        <translation>장축 반경:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -4625,7 +4625,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation>마이너 반경:</translation>
+        <translation>단축 반경:</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4836,7 +4836,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>&lt;&gt;수정 &gt; 실행 취소&gt;를 사용하여 줄 엔티티를 복원할 수 있습니다.</translation>
+        <translation>&lt;i&gt;편집 &gt; 실행 취소&lt;/i&gt;를 사용하여 선 엔티티를 복원할 수 있습니다.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5220,7 +5220,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>여러 줄의 텍스트를 여러 개의 간단한 텍스트 블록으로 압축하기</translation>
+        <translation>여러 줄 텍스트를 여러 개의 단순 텍스트 블록으로 분해</translation>
     </message>
     <message>
         <location line="+80"/>
@@ -5602,12 +5602,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Closed Forms shifting % :</source>
-        <translation>닫힌 양식 이동 % :</translation>
+        <translation>닫힌 형태 이동 % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>양식 크기 조정 옵션 열기</translation>
+        <translation>열린 형태 크기 조정 옵션</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5987,12 +5987,12 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>기본 선 무게:</translation>
+        <translation>기본 선 가중치:</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>선 무게에 따른 선형 패턴 스케일 조정</translation>
+        <translation>선 가중치에 따른 라인 타입 패턴 스케일 조정</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -6360,7 +6360,7 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>레이블 글꼴을 스냅합니다:</translation>
+        <translation>스냅 레이블 글꼴:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6533,7 +6533,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation>규모:</translation>
+        <translation>축척:</translation>
     </message>
 </context>
 <context>
@@ -6734,7 +6734,7 @@ is already in the list.</source>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation>규모:</translation>
+        <translation>축척:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -6848,12 +6848,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>첫 번째 줄 지정</translation>
+        <translation>첫 번째 선 지정</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>두 번째 줄 지정</translation>
+        <translation>두 번째 선 지정</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -6892,7 +6892,7 @@ is already in the list.</source>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation>원 영역:</translation>
+        <translation>원 면적:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6920,7 +6920,7 @@ is already in the list.</source>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>타원 호 영역:</translation>
+        <translation>타원 호 면적:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6949,13 +6949,13 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation>타원 영역:</translation>
+        <translation>타원 면적:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>호 영역:</translation>
+        <translation>호 면적:</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -7018,7 +7018,7 @@ is already in the list.</source>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation>다각형 영역:</translation>
+        <translation>다각형 면적:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7033,7 +7033,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation>닫기 도구.</translation>
+        <translation>도구 닫기.</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
@@ -7077,7 +7077,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation>밀폐된 공간:</translation>
+        <translation>둘러싸인 면적:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7087,22 +7087,22 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Approximated enclosed area:</source>
-        <translation>대략적인 밀폐 면적:</translation>
+        <translation>대략적인 둘러싸인 면적:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>해치 영역:</translation>
+        <translation>해치 면적:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation>총 부화 면적:</translation>
+        <translation>총 해치 면적:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>차동 해치 영역:</translation>
+        <translation>해치 면적 차이:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7282,7 +7282,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation>중심 청취자</translation>
+        <translation>중심 리스너</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7758,7 +7758,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>에서</translation>
+        <translation>골뱅이</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7900,7 +7900,7 @@ is already in the list.</source>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation>규모:</translation>
+        <translation>축척:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7981,7 +7981,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>반전 선택</translation>
+        <translation>선택 반전</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8340,12 +8340,12 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>선 무게:</translation>
+        <translation>선 가중치:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation>선형:</translation>
+        <translation>라인 타입:</translation>
     </message>
 </context>
 <context>
@@ -8436,12 +8436,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>금액:</translation>
+        <translation>양:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>길이를 늘리거나 줄일 금액(음수)</translation>
+        <translation>길이를 늘리거나 줄일 양(음수)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -8565,7 +8565,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>종료</translation>
+        <translation>끝</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -8608,12 +8608,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation>첫 번째 줄</translation>
+        <translation>첫 번째 선</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation>두 번째 줄</translation>
+        <translation>두 번째 선</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -8948,7 +8948,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>종료</translation>
+        <translation>끝</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -9082,7 +9082,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>글로벌 선형 스케일:</translation>
+        <translation>글로벌 라인 타입 스케일:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9444,7 +9444,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>설정 포인트</translation>
+        <translation>점 지정</translation>
     </message>
 </context>
 <context>
@@ -9823,7 +9823,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>맞습니다:</translation>
+        <translation>오른쪽:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9909,7 +9909,7 @@ is already in the list.</source>
     <message>
         <location line="+129"/>
         <source>Scale:</source>
-        <translation>규모:</translation>
+        <translation>축척:</translation>
     </message>
     <message>
         <location line="+91"/>
@@ -10463,12 +10463,12 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation>규모:</translation>
+        <translation>축척:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>그리기 배율</translation>
+        <translation>도면 배율</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10478,7 +10478,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>페이지에 그림 자동 맞춤</translation>
+        <translation>페이지에 도면 자동 맞춤</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -10599,7 +10599,7 @@ is already in the list.</source>
     <message>
         <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
-        <translation>고급 차원 스타일 재정의 표시</translation>
+        <translation>고급 치수 스타일 재정의 표시</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -10746,7 +10746,7 @@ is already in the list.</source>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>선형 스케일:</translation>
+        <translation>라인 타입 스케일:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -11053,7 +11053,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>2 회전</translation>
+        <translation>두 중심 회전</translation>
     </message>
 </context>
 <context>
@@ -11061,7 +11061,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>두 가지 옵션 회전</translation>
+        <translation>두 중심 회전 옵션</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11326,7 +11326,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation>시스템 파일 사용 대화 상자</translation>
+        <translation>시스템 파일 대화 상자 사용</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12211,7 +12211,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation>읽기 표시</translation>
+        <translation>Readme 표시</translation>
     </message>
 </context>
 <context>
@@ -12405,7 +12405,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>거리 매뉴얼</translation>
+        <translation>거리 (수동)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12418,7 +12418,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>종료</translation>
+        <translation>끝점</translation>
     </message>
 </context>
 <context>
@@ -12426,7 +12426,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>무료</translation>
+        <translation>자유</translation>
     </message>
 </context>
 <context>
@@ -12491,7 +12491,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>중간 매뉴얼</translation>
+        <translation>가운데 (수동)</translation>
     </message>
 </context>
 <context>
@@ -12583,7 +12583,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>도:</translation>
+        <translation>차수:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12639,7 +12639,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation>마우스 디스플레이</translation>
+        <translation>마우스 표시</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12708,7 +12708,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>스트레칭</translation>
+        <translation>신축</translation>
     </message>
 </context>
 <context>
@@ -12868,7 +12868,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>모두 확인</translation>
+        <translation>모두 선택</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -12918,7 +12918,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation>적합성</translation>
+        <translation>맞춤</translation>
     </message>
 </context>
 <context>
@@ -12989,7 +12989,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>컷</translation>
+        <translation>잘라내기</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13084,7 +13084,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation>신원</translation>
+        <translation>항등</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13109,12 +13109,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>큐브</translation>
+        <translation>세제곱</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>휴식 공간 없음</translation>
+        <translation>줄 바꿈 없는 공백</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13171,7 +13171,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>컷</translation>
+        <translation>잘라내기</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13286,17 +13286,17 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Base Left</source>
-        <translation>왼쪽 기본</translation>
+        <translation>기준선 왼쪽</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Center</source>
-        <translation>기본 센터</translation>
+        <translation>기준선 가운데</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation>기본 오른쪽</translation>
+        <translation>기준선 오른쪽</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13479,7 +13479,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>도구 매트릭스에 집중</translation>
+        <translation>도구 매트릭스로 포커스 이동</translation>
     </message>
 </context>
 <context>
@@ -13686,7 +13686,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>제한 법인 선택</translation>
+        <translation>제한 엔티티 선택</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13820,7 +13820,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>그리기 단위:</translation>
+        <translation>도면 단위:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13841,7 +13841,7 @@ is already in the list.</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>그리기 단위</translation>
+        <translation>도면 단위</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13977,7 +13977,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>도구 보기</translation>
+        <translation>보기 도구</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -14054,7 +14054,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+512"/>
         <source>Dropped data not supported</source>
-        <translation>삭제된 데이터는 지원되지 않습니다</translation>
+        <translation>끌어다 놓은 데이터는 지원되지 않습니다</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -14160,7 +14160,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation>신원</translation>
+        <translation>항등</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14210,12 +14210,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Property Line</source>
-        <translation>속성 라인</translation>
+        <translation>대지 경계선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>구독 2</translation>
+        <translation>아래 첨자 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14235,7 +14235,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>큐브</translation>
+        <translation>세제곱</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14276,7 +14276,7 @@ is already in the list.</source>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation>적합성</translation>
+        <translation>맞춤</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14382,12 +14382,12 @@ is already in the list.</source>
     <message>
         <location line="-12"/>
         <source>Decimal Degrees</source>
-        <translation>소수점 이하</translation>
+        <translation>십진 도</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>Deg/분/초</translation>
+        <translation>도/분/초</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14617,7 +14617,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation>조회수</translation>
+        <translation>보기</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14732,7 +14732,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation>정렬된 차원</translation>
+        <translation>정렬된 치수</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14747,12 +14747,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>각도 치수(2줄)</translation>
+        <translation>각도 치수(선 2개)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>각도 치수(2줄)</translation>
+        <translation>각도 치수(선 2개)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14798,7 +14798,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation>회전된 차원</translation>
+        <translation>회전된 치수</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14913,7 +14913,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>고체</translation>
+        <translation>솔리드</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14923,12 +14923,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>추적</translation>
+        <translation>트레이스</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>추적</translation>
+        <translation>트레이스</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14989,7 +14989,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation>삭제</translation>
+        <translation>와이프아웃</translation>
     </message>
     <message>
         <location line="+0"/>

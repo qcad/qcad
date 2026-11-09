@@ -911,7 +911,7 @@
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation>Vektorový Uzol</translation>
+        <translation>Uzlový vektor</translation>
     </message>
     <message>
         <location line="+0"/>

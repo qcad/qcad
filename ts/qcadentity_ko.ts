@@ -326,7 +326,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>1호선 시작</translation>
+        <translation>1번 라인 시작</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -340,7 +340,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>1줄 끝</translation>
+        <translation>1번 라인 끝</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -354,7 +354,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>차원 아크</translation>
+        <translation>치수 호</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
@@ -369,14 +369,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>코드 포인트</translation>
+        <translation>현 점</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>원거리 코드 포인트</translation>
+        <translation>먼 쪽 현 점</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -485,7 +485,7 @@
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation>고정 연장 회선</translation>
+        <translation>고정 연장선</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -517,7 +517,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>주요 포인트</translation>
+        <translation>장축 점</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -654,7 +654,7 @@
     <message>
         <location line="-8"/>
         <source>Scale</source>
-        <translation>규모</translation>
+        <translation>축척</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -831,7 +831,7 @@
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation>오리엔테이션</translation>
+        <translation>방향</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -905,12 +905,12 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation>정기 휴무</translation>
+        <translation>닫힘(주기적)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>도</translation>
+        <translation>차수</translation>
     </message>
     <message>
         <location line="+2"/>

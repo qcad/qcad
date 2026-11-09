@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Nastavenia Kreslenia</translation>
+        <translation>Nastavenia Výkresu</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -319,7 +319,7 @@ musíte znovu spustiť QCAD.</translation>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Nastavenia aktuálneho výkresu môžu byť zmenené pod&lt;br/&gt;&lt;i&gt;Upraviť &amp;gt; Nastavenia kreslenia&lt;/i&gt;.</translation>
+        <translation>Nastavenia aktuálneho výkresu môžu byť zmenené pod&lt;br/&gt;&lt;i&gt;Upraviť &amp;gt; Nastavenia Výkresu&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -1410,7 +1410,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>ID referencia bloku:</translation>
+        <translation>ID referencie bloku:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1456,7 +1456,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Zoznam odkazov na exportné bloky</translation>
+        <translation>&amp;Exportovať zoznam referencií blokov</translation>
     </message>
 </context>
 <context>
@@ -2371,7 +2371,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
-        <translation>Konvertovať dĺžkové jednotky na iné dĺžkové jednotky</translation>
+        <translation>Konvertovať výkres na inú jednotku výkresu</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
@@ -2391,7 +2391,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+7"/>
         <source>Convert Drawing Unit</source>
-        <translation>Previesť jednotku kreslenia</translation>
+        <translation>Previesť jednotku výkresu</translation>
     </message>
 </context>
 <context>
@@ -2626,7 +2626,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Úprava bloku &quot;%1&quot;&lt;br&gt;Vybrať &lt;i&gt;Blok &gt; Návrat ku kresleniu&lt;/i&gt; keď bude hotová</translation>
+        <translation>Úprava bloku &quot;%1&quot;&lt;br&gt;Po dokončení vyberte &lt;i&gt;Blok &gt; Vrátiť sa späť do hlavného výkresu&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -3094,7 +3094,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Mierka Kreslenia</translation>
+        <translation>Mierka Výkresu</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3107,7 +3107,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Rozmerová stupnica</translation>
+        <translation>Mierka kót</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3535,7 +3535,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segment Redo</translation>
+        <translation>Obnoviť segment</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3590,7 +3590,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Obsadenie CSV</translation>
+        <translation>Vykreslenie CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3620,7 +3620,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation>Nastavenie nového relatívneho pôvodu zlyhalo, ignorované. Textový riadok: %1</translation>
+        <translation>Nastavenie nového relatívneho počiatku zlyhalo, ignorované. Textový riadok: %1</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3826,7 +3826,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation>Angle1 Invalid.</translation>
+        <translation>Uhol1 Neplatný.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3907,7 +3907,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Zakrúžkujte Neplatné.</translation>
+        <translation>Kružnica neplatná.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -4046,12 +4046,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Obsadené položky: %1 z %2 textových riadkov</translation>
+        <translation>Vykreslené položky: %1 z %2 textových riadkov</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Nič nie je obsadené.</translation>
+        <translation>Nič nebolo vykreslené.</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -4076,17 +4076,17 @@ už existuje v zozname.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Nie je to správna riadková váha, ignoruje sa. Textový riadok: %1%2 Váha: %3</translation>
+        <translation>Nesprávna hrúbka čiary, ignoruje sa. Textový riadok: %1%2 Hrúbka: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>Nie je to správny typ linky, ignoruje sa. Textový riadok: %1%2 Typ: %3</translation>
+        <translation>Nesprávny typ čiary, ignoruje sa. Textový riadok: %1%2 Typ: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Nie je to správna stupnica typu Linetype, ignoruje sa. Textový riadok: %1%2 Mierka: %3</translation>
+        <translation>Nesprávna mierka typu čiary, ignoruje sa. Textový riadok: %1%2 Mierka: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4111,7 +4111,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Nie je to správna lineárna váha. Textový riadok: %1%2 Hmotnosť: %3</translation>
+        <translation>Nesprávna hrúbka čiary. Textový riadok: %1%2 Hrúbka: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4255,7 +4255,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Nastavenia &amp;Kreslenia</translation>
+        <translation>Nastavenia Vý&amp;kresu</translation>
     </message>
 </context>
 <context>
@@ -4342,7 +4342,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Prvok nie je blok.</translation>
+        <translation>Prvok nie je referencia bloku.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4539,7 +4539,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
-        <translation>&amp;Vrátiť sa späť do kreslenia</translation>
+        <translation>&amp;Vrátiť sa späť do hlavného výkresu</translation>
     </message>
 </context>
 <context>
@@ -5230,12 +5230,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Napísať(vykresliť) text pozdĺž prvku</translation>
+        <translation>Rozložiť viacriadkové texty na viacero jednoduchých textových blokov</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>Spline approximation tolerance:</source>
-        <translation>Spline - približná tolerancia:</translation>
+        <translation>Tolerancia aproximácie spline:</translation>
     </message>
 </context>
 <context>
@@ -5582,7 +5582,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Odstránená farba nad základnými subjektmi. (trvalé vypnutie)</translation>
+        <translation>Odstránené premaľované základné prvky. (trvalo vypnuté)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -6002,7 +6002,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+100"/>
         <source>Apply line weight to points</source>
-        <translation>Použitie váhy čiary na body</translation>
+        <translation>Použiť hrúbku čiary na body</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6113,7 +6113,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="-191"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Typy čiar a váhy čiar</translation>
+        <translation>Typy čiar a hrúbky čiar</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7149,7 +7149,7 @@ už existuje v zozname.</translation>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Narazil na nepodporovanú polylniu s vlastnými šírkami</translation>
+        <translation>Nájdená nepodporovaná krivka s vlastnými šírkami</translation>
     </message>
     <message>
         <location line="-488"/>
@@ -7160,7 +7160,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Neobslužný tvar zo slučky poklopu.</translation>
+        <translation>Nespracovaný tvar zo slučky šrafovania.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7635,7 +7635,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Narazil na nepodporovanú polylniu s vlastnými šírkami</translation>
+        <translation>Nájdená nepodporovaná krivka s vlastnými šírkami</translation>
     </message>
     <message>
         <location line="+105"/>
@@ -8233,7 +8233,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
-        <translation>Nástroje Vstvy</translation>
+        <translation>Nástroje Vrstvy</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -8590,7 +8590,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation>Dĺžka riadku</translation>
+        <translation>Dĺžka čiary</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9092,7 +9092,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>Globálna stupnica linetypu:</translation>
+        <translation>Globálna mierka typu čiary:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -10249,12 +10249,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Segment prestávky</translation>
+        <translation>Vyrezať segment</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>Odstránenie segmentu zalomenia riadku</translation>
+        <translation>Odstrániť segment čiary v mieste prerušenia</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10285,7 +10285,7 @@ už existuje v zozname.</translation>
         <location line="+17"/>
         <location line="+16"/>
         <source>Peak ratio</source>
-        <translation>Špičkový pomer</translation>
+        <translation>Pomer vrcholu</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10296,7 +10296,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="-13"/>
         <source>Peak Ratio:</source>
-        <translation>Špičkový pomer:</translation>
+        <translation>Pomer vrcholu:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -10321,12 +10321,12 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation>Symbol prerušenia polylnie z 2 bodov</translation>
+        <translation>Symbol prerušenia &amp;krivky z 2 bodov</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation>Nakreslite symbol prerušenia polylnie z 2 bodov</translation>
+        <translation>Nakreslite symbol prerušenia krivky z 2 bodov</translation>
     </message>
 </context>
 <context>
@@ -13846,7 +13846,7 @@ už existuje v zozname.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>Jednotka kreslenia</translation>
+        <translation>Jednotka výkresu</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13971,7 +13971,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>Kresliaca jednotka:</translation>
+        <translation>Jednotka výkresu:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -14677,22 +14677,22 @@ už existuje v zozname.</translation>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>Blok</translation>
+        <translation>Referencie bloku</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation>Blok</translation>
+        <translation>Referencia bloku</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Blok a Vlastnosti</translation>
+        <translation>Referencie bloku a Vlastnosti</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Blok a Vlastnosti</translation>
+        <translation>Referencia bloku a Vlastnosti</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14767,12 +14767,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>Uhlové rozmery (2 riadky)</translation>
+        <translation>Uhlové kóty (2 čiary)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Uhlový rozmer (2 riadky)</translation>
+        <translation>Uhlová kóta (2 čiary)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14999,7 +14999,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Rezy</translation>
+        <translation>Pohľady</translation>
     </message>
     <message>
         <location line="+0"/>

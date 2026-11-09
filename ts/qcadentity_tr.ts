@@ -932,7 +932,7 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation>Teğet Başlat&apos;ı Kullanın</translation>
+        <translation>Başlangıç Teğetini Kullan</translation>
     </message>
     <message>
         <location line="+1"/>

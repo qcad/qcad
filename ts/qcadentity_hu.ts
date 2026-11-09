@@ -559,7 +559,7 @@
         <location line="+1"/>
         <source>Winding</source>
         <translatorcomment>A fill mode in which double-filled areas are also filled, not empty.</translatorcomment>
-        <translation>Tekercselés</translation>
+        <translation>Körüljárási szabály</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -867,7 +867,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Fokozat</translation>
+        <translation>Fokszám</translation>
     </message>
     <message>
         <location line="+2"/>

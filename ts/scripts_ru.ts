@@ -1366,7 +1366,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>&amp;Фиксированные имена блоков</translation>
+        <translation>&amp;Исправить имена блоков</translation>
     </message>
 </context>
 <context>
@@ -1410,7 +1410,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Идентификатор привязки на блок:</translation>
+        <translation>Идентификатор ссылки на блок:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1420,7 +1420,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation>&amp;Атрибуты списка блоков</translation>
+        <translation>&amp;Список атрибутов блоков</translation>
     </message>
 </context>
 <context>
@@ -2753,7 +2753,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation>в линии, твёрдые тела и тексты</translation>
+        <translation>в линии, сплошные фигуры и тексты</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2791,12 +2791,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Первое продление размерной линии</translation>
+        <translation>Начало первой выносной линии</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Второе продление размерной линии</translation>
+        <translation>Начало второй выносной линии</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2956,12 +2956,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Первое продление размерной линии</translation>
+        <translation>Начало первой выносной линии</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Второе продление размерной линии</translation>
+        <translation>Начало второй выносной линии</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3078,13 +3078,13 @@ Do you wish to recover it?</source>
         <location line="+14"/>
         <location line="+50"/>
         <source>Upper tolerance</source>
-        <translation>Больше допуск</translation>
+        <translation>Верхний допуск</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Меньше допуск</translation>
+        <translation>Нижний допуск</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3094,7 +3094,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Масштаб черчения</translation>
+        <translation>Масштаб чертежа</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3221,7 +3221,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation>Величина коэффициента масштабирования:</translation>
+        <translation>Масштабный коэффициент размеров:</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -3981,12 +3981,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation>Сплайн с уклоном 3 градуса и узловыми точками, менее 3 привязок.</translation>
+        <translation>Сплайн 3-й степени с точками подгонки, менее 3 привязок.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation>Сплайн с уклоном 3 градуса и контрольными точками, менее 4 привязок.</translation>
+        <translation>Сплайн 3-й степени с контрольными точками, менее 4 привязок.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4427,7 +4427,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Объект не является сплайном с точками посадки.</translation>
+        <translation>Объект не является сплайном с точками подгонки.</translation>
     </message>
 </context>
 <context>
@@ -4865,7 +4865,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation>&amp;Цвета черчения</translation>
+        <translation>Начертить &amp;цвета</translation>
     </message>
 </context>
 <context>
@@ -4873,7 +4873,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>&amp;Шрифты черчения</translation>
+        <translation>Начертить &amp;шрифты</translation>
     </message>
 </context>
 <context>
@@ -4891,7 +4891,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation>&amp;Выходные вершины ломаной</translation>
+        <translation>&amp;Вывести вершины ломаной</translation>
     </message>
 </context>
 <context>
@@ -5670,7 +5670,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation>Отобразить по &amp;горизонтали</translation>
+        <translation>Отразить по &amp;горизонтали</translation>
     </message>
 </context>
 <context>
@@ -5678,7 +5678,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation>Отобразить &amp;по вертикали</translation>
+        <translation>Отразить &amp;по вертикали</translation>
     </message>
 </context>
 <context>
@@ -6078,7 +6078,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Шаблон масштаба для толщины линии в 0.00 мм:</translation>
+        <translation>Масштаб шаблона для веса линии 0.00 мм:</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -6277,12 +6277,12 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation>Заполнение выделенной рамки:</translation>
+        <translation>Заливка рамки выделения:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation>Рамка, заполненная крестовым выделением:</translation>
+        <translation>Заливка секущей рамки выделения:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -7082,27 +7082,27 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation>Замкнутая область:</translation>
+        <translation>Площадь замкнутой области:</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
-        <translation>Аппроксимированная замкнутая область:</translation>
+        <translation>Аппроксимированная площадь замкнутой области:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Заштрихованная область:</translation>
+        <translation>Заштрихованная площадь:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation>Общая заштрихованная область:</translation>
+        <translation>Общая заштрихованная площадь:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Разностная заштрихованная область:</translation>
+        <translation>Разностная заштрихованная площадь:</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7645,7 +7645,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation>&amp;Центроид провода</translation>
+        <translation>&amp;Центроид линии</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8059,7 +8059,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation>Изометрическая истинная шкала</translation>
+        <translation>Изометрия в истинном масштабе</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8080,7 +8080,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Кавалер</translation>
+        <translation>Кавалерная</translation>
     </message>
 </context>
 <context>
@@ -8296,12 +8296,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>Уровень 0 ведёт себя по-разному (лучшая совместимость)</translation>
+        <translation>Слой 0 ведёт себя по-особому (лучшая совместимость)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Объекты в блоках на слое 0 принимают атрибуты и видимость привязки на блок.</translation>
+        <translation>Объекты в блоках на слое 0 принимают атрибуты и видимость ссылки на блок.</translation>
     </message>
 </context>
 <context>
@@ -9121,7 +9121,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation>&amp;Вкл. относительный ноль</translation>
+        <translation>&amp;Заблокировать относительный ноль</translation>
     </message>
 </context>
 <context>
@@ -9566,7 +9566,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation>Моя правленная линия</translation>
+        <translation>Моё поле ввода</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9895,7 +9895,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>&amp;Масштаб панорамирования</translation>
+        <translation>&amp;Панорамирование и масштаб</translation>
     </message>
 </context>
 <context>
@@ -10583,7 +10583,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2114"/>
         <source>*VARIES*</source>
-        <translation>*ВАРЬИРОВАНИЕ*</translation>
+        <translation>*РАЗНЫЕ*</translation>
     </message>
     <message>
         <location line="-1879"/>
@@ -10715,7 +10715,7 @@ is already in the list.</source>
     <message>
         <location line="-146"/>
         <source>Handle:</source>
-        <translation>Обработчик:</translation>
+        <translation>Дескриптор:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
@@ -10966,7 +10966,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>&amp;Наоборот</translation>
+        <translation>&amp;Обратить направление</translation>
     </message>
 </context>
 <context>
@@ -11638,7 +11638,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>Обработчиком</translation>
+        <translation>По дескриптору</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
@@ -11656,12 +11656,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Выделение обработчиком</translation>
+        <translation>Выделение по дескриптору</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Обработчик (шестнадцатиричный):</translation>
+        <translation>Дескриптор (шестнадцатеричный):</translation>
     </message>
 </context>
 <context>
@@ -11866,7 +11866,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Крестовое выделение</translation>
+        <translation>Выделение секущей рамкой</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -12603,12 +12603,12 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>Градусы:</translation>
+        <translation>Степень:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>Выбрать градус сплайна</translation>
+        <translation>Выбрать степень сплайна</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -12908,7 +12908,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Letter spacing</source>
-        <translation>Межбувенный интервал</translation>
+        <translation>Межбуквенный интервал</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13296,7 +13296,7 @@ is already in the list.</source>
     <message>
         <location line="+116"/>
         <source>Base Left</source>
-        <translation>В основном слева</translation>
+        <translation>Базовая линия слева</translation>
     </message>
     <message>
         <location line="-177"/>
@@ -13306,12 +13306,12 @@ is already in the list.</source>
     <message>
         <location line="+206"/>
         <source>Base Center</source>
-        <translation>В основном по центру</translation>
+        <translation>Базовая линия по центру</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation>В основном справа</translation>
+        <translation>Базовая линия справа</translation>
     </message>
     <message>
         <location line="-116"/>
@@ -13339,7 +13339,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation>Чертёж</translation>
+        <translation>Черчение</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14260,7 +14260,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation>Вложенный текст</translation>
+        <translation>Дробный текст</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14473,7 +14473,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>Уве&amp;личение окна</translation>
+        <translation>Масштаб &amp;рамкой</translation>
     </message>
 </context>
 <context>
@@ -14481,12 +14481,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>&amp;Горизонтальная линия конструкции</translation>
+        <translation>&amp;Горизонтальная линия построения</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw horizontal construction line</source>
-        <translation>Начертить горизонтальную линию конструкции</translation>
+        <translation>Начертить горизонтальную линию построения</translation>
     </message>
 </context>
 <context>
@@ -14494,12 +14494,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>&amp;Вертикальная линия конструкции</translation>
+        <translation>&amp;Вертикальная линия построения</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw vertical construction line</source>
-        <translation>Начертить вертикальную линию конструкции</translation>
+        <translation>Начертить вертикальную линию построения</translation>
     </message>
 </context>
 <context>
@@ -14803,22 +14803,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Ординантные размеры</translation>
+        <translation>Ординатные размеры</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>Ординантный размер</translation>
+        <translation>Ординатный размер</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation>Размеры повёрнутого</translation>
+        <translation>Повёрнутые размеры</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation>Размер повёрнутого</translation>
+        <translation>Повёрнутый размер</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14933,22 +14933,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Твёрдые тела</translation>
+        <translation>Сплошные фигуры</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation>Твёрдое тело</translation>
+        <translation>Сплошная фигура</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>Чертежи на кальке</translation>
+        <translation>Полосы</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>Чертёж на кальке</translation>
+        <translation>Полоса</translation>
     </message>
     <message>
         <location line="+2"/>

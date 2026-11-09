@@ -369,7 +369,7 @@
     <message>
         <location line="-7"/>
         <source>From Entity</source>
-        <translation>Da entity</translation>
+        <translation>Da entità</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -421,7 +421,7 @@
     <message>
         <location line="+231"/>
         <source>Yes</source>
-        <translation>Si</translation>
+        <translation>Sì</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -476,7 +476,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Punto di maggiore</translation>
+        <translation>Punto dell&apos;asse maggiore</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -611,7 +611,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Gradi</translation>
+        <translation>Grado</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -732,7 +732,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Lontano punto di corda</translation>
+        <translation>Punto di corda lontano</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -760,7 +760,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Direttrice punto finale</translation>
+        <translation>Punto finale della direttrice</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -810,12 +810,12 @@
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation>Specchio la prima freccia</translation>
+        <translation>Capovolgi la prima freccia</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Specchio la seconda freccia</translation>
+        <translation>Capovolgi la seconda freccia</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -860,7 +860,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Freccia blocco</translation>
+        <translation>Blocco freccia</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -982,7 +982,7 @@
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+6"/>
         <source>Frame</source>
-        <translation>Telaio</translation>
+        <translation>Cornice</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolyMeshEntity.cpp" line="+64"/>

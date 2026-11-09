@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>Battal</translation>
+        <translation>Yalıtım Şiltesi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1053,7 +1053,7 @@
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>İzler</translation>
+        <translation>Raylar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1093,7 +1093,7 @@
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation>Drenaj Tersine Çevrildi</translation>
+        <translation>Ters Drenaj</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1123,12 +1123,12 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Faul</translation>
+        <translation>Pis Su</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Foul Rising</translation>
+        <translation>Pis Su Terfi Hattı</translation>
     </message>
 </context>
 <context>

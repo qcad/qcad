@@ -5363,7 +5363,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Festők öntési lehetőségek</translation>
+        <translation>Festők létrehozási beállításai</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5403,22 +5403,22 @@ már szerepel a listában.</translation>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Tükörfestők az alapvonal felett.</translation>
+        <translation>Festők tükrözése az alapvonalra.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Csoportosítsa az összes öntvényt egy művelethez.</translation>
+        <translation>Az összes létrehozott elem csoportosítása egyetlen műveletbe.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Kezdje a nyitott formáknál egy kezdőcsúcs öntésével.</translation>
+        <translation>Kezdés egy kezdőcsúcs létrehozásával nyitott alakzatoknál.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Végezze nyitott formáknál egy végcsúcs öntésével.</translation>
+        <translation>Befejezés egy záró csúcs létrehozásával nyitott alakzatoknál.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5518,7 +5518,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Az öntési beállítások illusztrációja</translation>
+        <translation>A létrehozási beállítások illusztrációja</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5563,7 +5563,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Alkalmazza az f 1,00-0,90 skálázást a teljes űrlaphoz.</translation>
+        <translation>Az f 1,00-0,90 skálázás igazítása, hogy a teljes alakzatra illeszkedjen.</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5573,7 +5573,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Törölték a festett alapegységek felett. (tartós ki)</translation>
+        <translation>A felülfestett alapelemek törlése. (mindig kikapcsolva indul)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5623,7 +5623,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Nyitott űrlapok méretezési lehetőségei</translation>
+        <translation>Nyitott alakzatok méretezési beállításai</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -5803,7 +5803,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation>Blokk megnyitása blokkon való dupla kattintással</translation>
+        <translation>Blokk megnyitása a blokk referenciára való dupla kattintással</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -7759,7 +7759,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>Hely</translation>
+        <translation>Kukac</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8292,7 +8292,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>A 0 rétegen lévő blokkok a blokk referencia attribútumait és láthatóságát használják.</translation>
+        <translation>A blokkok 0 rétegen lévő elemei a blokk referencia attribútumait és láthatóságát veszik fel.</translation>
     </message>
 </context>
 <context>
@@ -8740,7 +8740,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Fecskefarok/kötés arány:</translation>
+        <translation>Fecskefarok/csap arány:</translation>
     </message>
 </context>
 <context>
@@ -11034,7 +11034,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation>Az másodlagos forgatás középpontja</translation>
+        <translation>A másodlagos forgatás középpontja</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
@@ -11900,7 +11900,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation>be</translation>
+        <translation>összesen</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
@@ -11940,12 +11940,12 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation>Sokszög eszközök</translation>
+        <translation>Alakzat eszközök</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Shape</source>
-        <translation>&amp;Sokszög</translation>
+        <translation>&amp;Alakzat</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
@@ -13045,7 +13045,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+140"/>
         <source>Degree</source>
-        <translation>Szög</translation>
+        <translation>Fok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13105,7 +13105,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>Hatvány</translation>
+        <translation>Négyzet</translation>
     </message>
     <message>
         <location line="+1"/>

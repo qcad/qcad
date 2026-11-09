@@ -54,7 +54,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>Kokonaisuuteen</translation>
+        <translation>Kohteessa</translation>
     </message>
     <message>
         <location line="+3"/>

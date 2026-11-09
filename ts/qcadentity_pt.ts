@@ -396,7 +396,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation>Definindo o ponto</translation>
+        <translation>Ponto de definição</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -553,7 +553,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Textura</translation>
+        <translation>Padrão</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -714,7 +714,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Seta bloco</translation>
+        <translation>Bloco de seta</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>

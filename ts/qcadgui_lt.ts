@@ -54,7 +54,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>Apie subjektą</translation>
+        <translation>Ant objekto</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -74,17 +74,17 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Vidurio</translation>
+        <translation>Vidurys</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation>Sankryža</translation>
+        <translation>Sankirta</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation>Nuoroda</translation>
+        <translation>Atskaitos taškas</translation>
     </message>
     <message>
         <location line="+3"/>

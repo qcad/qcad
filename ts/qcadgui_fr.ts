@@ -28,7 +28,7 @@
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23"/>
         <location line="+63"/>
         <source>Back</source>
-        <translation>Dos</translation>
+        <translation>Retour</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>A l&apos;entité</translation>
+        <translation>Sur l&apos;entité</translation>
     </message>
     <message>
         <location line="+3"/>

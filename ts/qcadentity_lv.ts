@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -303,7 +303,7 @@
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+102"/>
         <source>Invisible</source>
-        <translation>Invisible</translation>
+        <translation>Neredzams</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -609,7 +609,7 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
         <source>Solid</source>
-        <translation>Solid</translation>
+        <translation>Vienlaidu aizpildījums</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -711,7 +711,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation>Vertex</translation>
+        <translation>Virsotne</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -726,7 +726,7 @@
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fails</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -778,7 +778,7 @@
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
         <source>Arrow</source>
-        <translation>Arrow</translation>
+        <translation>Bulta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -804,7 +804,7 @@
         <location line="+4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
-        <translation>Bulge</translation>
+        <translation>Izliekums</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -917,7 +917,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>Fit Point</translation>
+        <translation>Pielāgojuma punkts</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -726,12 +726,12 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation>Drážkování</translation>
+        <translation>Křivka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Šipka bloku</translation>
+        <translation>Blok šipky</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>

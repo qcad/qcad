@@ -704,7 +704,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation>Insatsbas</translation>
+        <translation>Infogningsbas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -748,7 +748,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Måtten för linjeavstånd</translation>
+        <translation>Måttlinjeavstånd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -758,12 +758,12 @@
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation>Förhöjning av dimensioner</translation>
+        <translation>Inkrement för måttlinje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Förlängning av linjeförlängning</translation>
+        <translation>Förlängning av förlängningslinjen</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -788,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Storlek på krysset</translation>
+        <translation>Snedstreckets storlek</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -813,22 +813,22 @@
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation>Angular-format</translation>
+        <translation>Vinkelformat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Vinkelformade decimaler</translation>
+        <translation>Decimaler för vinklar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Undertryckning av vinkelnollpunkt</translation>
+        <translation>Nollundertryckning för vinklar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Arkitektur tick</translation>
+        <translation>Arkitektoniskt snedstreck</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -953,7 +953,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation>Skugga</translation>
+        <translation>Fantom</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1118,17 +1118,17 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Kraft över huvudet</translation>
+        <translation>Luftledning (kraft)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Foul</translation>
+        <translation>Spillvatten</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Uppstigande av orättvisa</translation>
+        <translation>Spillvatten, tryckledning</translation>
     </message>
 </context>
 <context>

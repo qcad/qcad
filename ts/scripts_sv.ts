@@ -168,7 +168,7 @@
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation>Error:</translation>
+        <translation>Fel:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -1406,7 +1406,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Gruppreferens-ID:</translation>
+        <translation>Blockreferens-ID:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1470,7 +1470,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>Segment för utbrytning</translation>
+        <translation>&amp;Bryt ut segment</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
@@ -1531,7 +1531,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>Utbrytarhandbok</translation>
+        <translation>Bryt ut &amp;manuellt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
@@ -1590,7 +1590,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Kolla in alla</translation>
+        <translation>Fäll ihop alla</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1747,12 +1747,12 @@ Vill du återställa den?</translation>
     <message>
         <location line="+10"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation>Centrera vänster om linje P1 - P2</translation>
+        <translation>Centrum till vänster om linje P1 - P2</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation>Centrera höger om linje P1 - P2</translation>
+        <translation>Centrum till höger om linje P1 - P2</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -2280,7 +2280,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+3"/>
         <source>Coordinate</source>
-        <translation>Koordinera</translation>
+        <translation>Koordinat</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2300,7 +2300,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation>Historisk storlek:</translation>
+        <translation>Historikstorlek:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2441,7 +2441,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>Kopia med referens</translation>
+        <translation>&amp;Kopiera med referens</translation>
     </message>
 </context>
 <context>
@@ -2561,7 +2561,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>Skär</translation>
+        <translation>&amp;Klipp ut</translation>
     </message>
 </context>
 <context>
@@ -2759,7 +2759,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation>i rader</translation>
+        <translation>till linjer</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2830,12 +2830,12 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation>&amp;Vinkelformad</translation>
+        <translation>&amp;Vinkel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw angular dimension</source>
-        <translation>Rita vinkelformad dimension</translation>
+        <translation>Rita vinkelmått</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -2884,7 +2884,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Plats för funktionen</translation>
+        <translation>Elementets läge</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2936,8 +2936,8 @@ Vill du återställa den?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>Etikettpositionen för %1 dimension har återställts.</numerusform>
-            <numerusform>Etikettpositionen för %2 dimensioner har återställts.</numerusform>
+            <numerusform>Etikettpositionen för %n dimension har återställts.</numerusform>
+            <numerusform>Etikettpositionen för %n dimensioner har återställts.</numerusform>
         </translation>
     </message>
     <message>
@@ -3017,7 +3017,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Båge</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3146,7 +3146,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>utrymme</translation>
+        <translation>mellanslag</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3186,7 +3186,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+46"/>
         <source>Dimension line gap:</source>
-        <translation>Mätningslinjeavstånd:</translation>
+        <translation>Måttlinjeavstånd:</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -3196,7 +3196,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation>Förlängning av linjeförlängning:</translation>
+        <translation>Förlängning av förlängningslinjen:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -3211,7 +3211,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+24"/>
         <source>Dimension line increment:</source>
-        <translation>Förhöjning av dimensioner:</translation>
+        <translation>Inkrement för måttlinje:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3226,7 +3226,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation>Arrow</translation>
+        <translation>Pil</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3495,7 +3495,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation>Nästa topp</translation>
+        <translation>Nästa hörnpunkt</translation>
     </message>
     <message>
         <location line="+525"/>
@@ -3793,7 +3793,7 @@ finns redan i listan.</translation>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation>Jämställda positioner.</translation>
+        <translation>Lika positioner.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3841,7 +3841,7 @@ finns redan i listan.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation>Jämställda positioner 1-2.</translation>
+        <translation>Lika positioner 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3863,7 +3863,7 @@ finns redan i listan.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation>Jämställda positioner 1-3.</translation>
+        <translation>Lika positioner 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3873,7 +3873,7 @@ finns redan i listan.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation>Jämställda positioner 2-3.</translation>
+        <translation>Lika positioner 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3886,7 +3886,7 @@ finns redan i listan.</translation>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation>Arc Invalid.</translation>
+        <translation>Båge ogiltig.</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -3916,19 +3916,19 @@ finns redan i listan.</translation>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation>Jämställda positioner 1-4.</translation>
+        <translation>Lika positioner 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation>Jämställda positioner 2-4.</translation>
+        <translation>Lika positioner 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation>Jämställda positioner 3-4.</translation>
+        <translation>Lika positioner 3-4.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4182,7 +4182,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation>Nästa topp</translation>
+        <translation>Nästa hörnpunkt</translation>
     </message>
     <message>
         <location line="+469"/>
@@ -4266,7 +4266,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>Dubbla</translation>
+        <translation>&amp;Duplicera</translation>
     </message>
 </context>
 <context>
@@ -4421,7 +4421,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Enheten är inte en spline med passande punkter.</translation>
+        <translation>Enheten är inte en spline med anpassningspunkter.</translation>
     </message>
 </context>
 <context>
@@ -4627,7 +4627,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation>Inre radie:</translation>
+        <translation>Mindre radie:</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4771,13 +4771,13 @@ finns redan i listan.</translation>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRR.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
-        <translation>X Radius:</translation>
+        <translation>X-radie:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
-        <translation>Y Radius:</translation>
+        <translation>Y-radie:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -4796,7 +4796,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Flykt</translation>
+        <translation>&amp;Escape</translation>
     </message>
 </context>
 <context>
@@ -4833,7 +4833,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>Radad rad med ID %1</translation>
+        <translation>Tog bort linje med ID %1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4843,7 +4843,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation>Lägg till och ta bort en rad</translation>
+        <translation>Lägg till och ta bort en linje</translation>
     </message>
 </context>
 <context>
@@ -4916,12 +4916,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>Sågad svans</translation>
+        <translation>&amp;Laxstjärtsfog</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Rita en svartsvansförbindelse</translation>
+        <translation>Rita en laxstjärtsfog</translation>
     </message>
 </context>
 <context>
@@ -5170,7 +5170,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation>Exempel på manuskript</translation>
+        <translation>Skript&amp;exempel</translation>
     </message>
 </context>
 <context>
@@ -5260,7 +5260,7 @@ finns redan i listan.</translation>
     <message>
         <location line="-39"/>
         <source>Overwrite File?</source>
-        <translation>Skriva över en fil?</translation>
+        <translation>Skriva över filen?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5679,7 +5679,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation>Spola historiken för ångra ändringar</translation>
+        <translation>Töm ångra-historiken</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5689,12 +5689,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation>Detta kan inte göras ogjort.</translation>
+        <translation>Detta kan inte ångras.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>Spola historiken för ångra ändringar</translation>
+        <translation>Töm &amp;ångra-historiken</translation>
     </message>
 </context>
 <context>
@@ -5725,7 +5725,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Rita lim varv</translation>
+        <translation>Rita limflik</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
@@ -5756,7 +5756,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Fyra: Jämställd</translation>
+        <translation>Fyra: Lika</translation>
     </message>
 </context>
 <context>
@@ -5855,7 +5855,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+64"/>
         <source>Cursor range for snap:</source>
-        <translation>Cursorområde för snaps:</translation>
+        <translation>Cursorområde för snäpp:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6132,7 +6132,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Fasta rasterlinjer</translation>
+        <translation>Heldragna rasterlinjer</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6559,12 +6559,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Hatch från urvalet</translation>
+        <translation>&amp;Skraffering från urval</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Skapa skraffering eller fyllning med fasta material från den valda gränsen</translation>
+        <translation>Skapa skraffering eller fast fyllning från den valda gränsen</translation>
     </message>
 </context>
 <context>
@@ -6800,12 +6800,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Importpunkter</translation>
+        <translation>Importera punkter</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>Importpunkter</translation>
+        <translation>&amp;Importera punkter</translation>
     </message>
 </context>
 <context>
@@ -6851,12 +6851,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>Ange första raden</translation>
+        <translation>Ange första linjen</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>Ange den andra raden</translation>
+        <translation>Ange den andra linjen</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -6884,7 +6884,7 @@ finns redan i listan.</translation>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Area</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -6895,7 +6895,7 @@ finns redan i listan.</translation>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation>Cirkelområde:</translation>
+        <translation>Cirkelarea:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6923,7 +6923,7 @@ finns redan i listan.</translation>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>Ellipsens bågområde:</translation>
+        <translation>Ellipsbågens area:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6937,7 +6937,7 @@ finns redan i listan.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>ackord:</translation>
+        <translation>korda:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -6952,18 +6952,18 @@ finns redan i listan.</translation>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation>Ellipsområde:</translation>
+        <translation>Ellipsarea:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>Arc-område:</translation>
+        <translation>Bågarea:</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Radius</source>
-        <translation>Radius</translation>
+        <translation>Radie</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -6973,7 +6973,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Område för båge/cirkel/ellips</translation>
+        <translation>Area för båge/cirkel/ellips</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
@@ -7021,7 +7021,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation>Polygonområdet:</translation>
+        <translation>Polygonarea:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7031,7 +7031,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>Polygonalt område</translation>
+        <translation>Pol&amp;ygonarea</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
@@ -7059,22 +7059,22 @@ finns redan i listan.</translation>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation>Inte genomfört. Kommandot avslutas.</translation>
+        <translation>Inte implementerat. Kommandot avslutas.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Enclosed area:</source>
-        <translation>Inhägnat område:</translation>
+        <translation>Innesluten area:</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
-        <translation>Ungefärlig inhägnad yta:</translation>
+        <translation>Ungefärlig innesluten area:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Skrafferat område:</translation>
+        <translation>Skrafferad area:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7084,7 +7084,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Differentiellt skrafferat område:</translation>
+        <translation>Differentiell skrafferad area:</translation>
     </message>
     <message>
         <location line="-68"/>
@@ -7120,7 +7120,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+82"/>
         <source>2D area Centroid</source>
-        <translation>2D-område Centroid</translation>
+        <translation>2D-areacentroid</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -7131,7 +7131,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation>Närmare centroid:</translation>
+        <translation>Approximerad centroid:</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7163,12 +7163,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation>&amp;Område centroid</translation>
+        <translation>&amp;Areacentroid</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation>Skapa ett område 2D Centroid för en vald enhet</translation>
+        <translation>Skapa en 2D-areacentroid för en vald enhet</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7224,7 +7224,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Area</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7249,7 +7249,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation>Centrider i 2D</translation>
+        <translation>2D-&amp;centroider</translation>
     </message>
     <message>
         <location line="-431"/>
@@ -7523,7 +7523,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>område (information):</translation>
+        <translation>area (information):</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7618,7 +7618,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation>Närmare centroid:</translation>
+        <translation>Approximerad centroid:</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7761,7 +7761,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>På</translation>
+        <translation>Snabel-a</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7776,7 +7776,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation>Hasch</translation>
+        <translation>Nummertecken</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8449,7 +8449,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Belopp som ska förlängas eller förkortas (negativt)</translation>
+        <translation>Längd att förlänga eller förkorta med (negativ)</translation>
     </message>
 </context>
 <context>
@@ -8611,12 +8611,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation>Första raden</translation>
+        <translation>Första linjen</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation>Andra raden</translation>
+        <translation>Andra linjen</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -8659,12 +8659,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Box Joint från 2 punkter</translation>
+        <translation>Finger&amp;skarv från 2 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Dragboxens fingrar, springor och tennon</translation>
+        <translation>Rita fingerskarvens fingrar, spår och tappar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8694,7 +8694,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation>Slot först</translation>
+        <translation>Spår först</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8717,32 +8717,32 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>Sågad skarv från 2 punkter</translation>
+        <translation>&amp;Laxstjärtsfog från 2 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Rita en svartsvansförbindelse</translation>
+        <translation>Rita en laxstjärtsfog</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Antal skivstjärtar:</translation>
+        <translation>Antal laxstjärtar:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Height:</source>
-        <translation>Höjd för skivstång:</translation>
+        <translation>Laxstjärtens höjd:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Skarvstjärne Gradient:</translation>
+        <translation>Laxstjärtens lutning:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Förhållande mellan skruv och stift:</translation>
+        <translation>Förhållande laxstjärt/tapp:</translation>
     </message>
 </context>
 <context>
@@ -9174,7 +9174,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Spegel</translation>
+        <translation>Spegla</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9189,7 +9189,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>Spegel</translation>
+        <translation>&amp;Spegla</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
@@ -9268,7 +9268,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>Diverse verktyg för blockering</translation>
+        <translation>Diverse blockverktyg</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9447,7 +9447,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Inställningspunkt</translation>
+        <translation>Ange punkt</translation>
     </message>
 </context>
 <context>
@@ -9572,7 +9572,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Öppningsritning:</translation>
+        <translation>Öppnar ritning:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9730,7 +9730,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Öppen ritning</translation>
+        <translation>Öppna ritning</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10189,7 +10189,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Kraftcentrum i tre cirklar</translation>
+        <translation>Potenscentrum för tre cirklar</translation>
     </message>
 </context>
 <context>
@@ -10240,7 +10240,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Segment för utbrytning</translation>
+        <translation>Bryt ut segment</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
@@ -10342,7 +10342,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Kollapsande träd</translation>
+        <translation>Fäll ihop träd</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -10772,7 +10772,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>Sluta med</translation>
+        <translation>&amp;Avsluta</translation>
     </message>
 </context>
 <context>
@@ -10780,7 +10780,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation>Läs mer</translation>
+        <translation>Läs mig</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -10808,7 +10808,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Öppna Nyligen</translation>
+        <translation>Öppna &amp;senaste</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
@@ -11177,7 +11177,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>Runt</translation>
+        <translation>&amp;Avrunda</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -11225,7 +11225,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Körning av manuskriptet</translation>
+        <translation>Kör skript</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -11243,7 +11243,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
-        <translation>Skriva över en fil?</translation>
+        <translation>Skriva över filen?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11356,7 +11356,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation>Använd dialogrutan för systemfilen</translation>
+        <translation>Använd systemets fildialogruta</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -11723,7 +11723,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(Av-)välja genomsökta enheter</translation>
+        <translation>(Av-)välj s&amp;kurna enheter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11991,12 +11991,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation>Otillräckligt antal segment: %1.</translation>
+        <translation>Ogiltigt antal segment: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation>Ogiltig ellips major/moll: %1/ %2.</translation>
+        <translation>Ogiltig stor-/lillaxel för ellips: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -12279,12 +12279,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation>Gå in på</translation>
+        <translation>Enter</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation>Koordinera</translation>
+        <translation>&amp;Koordinat</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
@@ -12327,7 +12327,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
-        <translation>Radius (avstånd)</translation>
+        <translation>Radie (avstånd)</translation>
     </message>
     <message>
         <location line="-22"/>
@@ -12398,7 +12398,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation>Snapsavstånd mellan 2 punkter</translation>
+        <translation>Snäppavstånd mellan 2 punkter</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
@@ -12450,7 +12450,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>Korsning</translation>
+        <translation>&amp;Skärningspunkt</translation>
     </message>
 </context>
 <context>
@@ -12491,7 +12491,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>Mellanliggande</translation>
+        <translation>&amp;Mittpunkt</translation>
     </message>
 </context>
 <context>
@@ -12515,7 +12515,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation>Lodrätt</translation>
+        <translation>&amp;Vinkelrät</translation>
     </message>
 </context>
 <context>
@@ -12568,7 +12568,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>&amp;Kurva</translation>
+        <translation>&amp;Spline</translation>
     </message>
 </context>
 <context>
@@ -12668,12 +12668,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation>Val av display</translation>
+        <translation>Urvalsvisning</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation>Framstegsdisplay</translation>
+        <translation>Förloppsvisning</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12716,7 +12716,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>Stretch</translation>
+        <translation>&amp;Sträck</translation>
     </message>
 </context>
 <context>
@@ -12785,7 +12785,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation>Lösning:</translation>
+        <translation>Upplösning:</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -12876,7 +12876,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>Kontrollera alla</translation>
+        <translation>Markera alla</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -12926,7 +12926,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation>Passar</translation>
+        <translation>Anpassa</translation>
     </message>
 </context>
 <context>
@@ -12997,7 +12997,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Skär</translation>
+        <translation>Klipp u&amp;t</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13027,12 +13027,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>Index</translation>
+        <translation>&amp;Nedsänkt</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>Överskrift</translation>
+        <translation>&amp;Upphöjd</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -13122,7 +13122,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Utrymme utan avbrott</translation>
+        <translation>Hårt mellanslag</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13159,7 +13159,7 @@ finns redan i listan.</translation>
     <message>
         <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation>Texten får plats på en linje och har ingen formatering</translation>
+        <translation>Texten får plats på en rad och har ingen formatering</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -13169,7 +13169,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>Skär</translation>
+        <translation>Klipp ut</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13385,7 +13385,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Skicka till baksidan</translation>
+        <translation>Placera längst ba&amp;k</translation>
     </message>
 </context>
 <context>
@@ -13393,7 +13393,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>Ta fram den framsida</translation>
+        <translation>Placera längst &amp;fram</translation>
     </message>
 </context>
 <context>
@@ -13740,7 +13740,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation>Handledning i manuskript</translation>
+        <translation>Skript&amp;handledningar</translation>
     </message>
 </context>
 <context>
@@ -13985,7 +13985,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Visa verktyg</translation>
+        <translation>Vyverktyg</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -14062,7 +14062,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+512"/>
         <source>Dropped data not supported</source>
-        <translation>Uppgifter som tappats bort stöds inte</translation>
+        <translation>Släppta data stöds inte</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -14118,7 +14118,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+4"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Båge</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -14198,7 +14198,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation>Centrala linjen</translation>
+        <translation>Centrumlinje</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14228,7 +14228,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Index 2</translation>
+        <translation>Nedsänkt 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14284,7 +14284,7 @@ finns redan i listan.</translation>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation>Passar</translation>
+        <translation>Anpassa</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14469,7 +14469,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>Horisontell byggnadslinje</translation>
+        <translation>&amp;Horisontell konstruktionslinje</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14482,7 +14482,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>Vertikal byggnadslinje</translation>
+        <translation>&amp;Vertikal konstruktionslinje</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14690,7 +14690,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Båge</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14755,12 +14755,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>Vinkelmått (2 rader)</translation>
+        <translation>Vinkelmått (2 linjer)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Vinkeldimension (2 rader)</translation>
+        <translation>Vinkeldimension (2 linjer)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14891,12 +14891,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stråle</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rays</source>
-        <translation>Rays</translation>
+        <translation>Strålar</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14921,7 +14921,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Fastämnen</translation>
+        <translation>Solider</translation>
     </message>
     <message>
         <location line="+0"/>

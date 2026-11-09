@@ -317,7 +317,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Eies av Reference</translation>
+        <translation>Eies av referanse</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -400,7 +400,7 @@
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation>Samlet omfang</translation>
+        <translation>Samlet skala</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -450,7 +450,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Kryssstørrelse</translation>
+        <translation>Størrelse på skråstrek</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -480,7 +480,7 @@
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Kantede desimaler</translation>
+        <translation>Vinkeldesimaler</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -490,7 +490,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Arkitektur kryss</translation>
+        <translation>Arkitektonisk skråstrek</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -656,7 +656,7 @@
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
         <source>Tab Order</source>
-        <translation>Fanen rekkefølge</translation>
+        <translation>Fanerekkefølge</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -790,7 +790,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation>Tilpasning</translation>
+        <translation>Justering</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -826,14 +826,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Vis senter</translation>
+        <translation>Visningssenter</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Vis mål</translation>
+        <translation>Visningsmål</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -281,7 +281,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation>角を丸める</translation>
+        <translation>スイープ角度</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>エリア</translation>
+        <translation>面積</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -316,14 +316,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation>拡張点1</translation>
+        <translation>補助線の点1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation>拡張点2</translation>
+        <translation>補助線の点2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
@@ -488,7 +488,7 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Auto Label Position</translation>
+        <translation>自動ラベル位置</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
@@ -845,14 +845,14 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>角度</translation>
+        <translation>次数</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation>基準点</translation>
+        <translation>制御点</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -869,7 +869,7 @@
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation>結び目</translation>
+        <translation>ノット</translation>
     </message>
     <message>
         <location line="+6"/>

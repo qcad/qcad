@@ -36,7 +36,7 @@
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation>Meteran</translation>
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -56,7 +56,7 @@
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation>Halaman</translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -114,12 +114,12 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation>Dengan Lapisan</translation>
+        <translation>Berdasarkan Lapisan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Dengan Blok</translation>
+        <translation>Berdasarkan Blok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -430,7 +430,7 @@
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Perpanjangan saluran ekstensi</translation>
+        <translation>Perpanjangan garis ekstensi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -450,7 +450,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Ukuran centang</translation>
+        <translation>Ukuran tanda miring</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -490,7 +490,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Centang arsitektur</translation>
+        <translation>Tanda miring arsitektur</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -543,7 +543,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Berat jenis</translation>
+        <translation>Bobot garis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -559,12 +559,12 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Menggambar Pesanan</translation>
+        <translation>Urutan Gambar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Id Orang Tua</translation>
+        <translation>Id Induk</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -590,7 +590,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation>Benar</translation>
+        <translation>Kanan</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -616,7 +616,7 @@
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
-        <translation>Tinggi badan</translation>
+        <translation>Tinggi</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="-7"/>
@@ -636,7 +636,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Runtuh</translation>
+        <translation>Diciutkan</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -702,7 +702,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Menangani</translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -820,20 +820,20 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>Pada</translation>
+        <translation>Aktif</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Lihat Pusat</translation>
+        <translation>Pusat Tampilan</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Lihat Target</translation>
+        <translation>Target Tampilan</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -887,12 +887,12 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation>Dengan Lapisan</translation>
+        <translation>Berdasarkan Lapisan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Dengan Blok</translation>
+        <translation>Berdasarkan Blok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -958,17 +958,17 @@
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>Dasbor ISO</translation>
+        <translation>ISO garis putus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation>Ruang dasbor ISO</translation>
+        <translation>ISO garis putus spasi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>Titik putus-putus ISO</translation>
+        <translation>ISO garis panjang titik</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -978,7 +978,7 @@
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO titik-tiga dasbor panjang</translation>
+        <translation>ISO garis panjang tiga titik</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -998,17 +998,17 @@
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation>Titik dasbor ISO</translation>
+        <translation>ISO garis putus titik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation>Titik putus-putus ISO</translation>
+        <translation>ISO garis putus ganda titik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation>Titik ganda dasbor ISO</translation>
+        <translation>ISO garis putus titik ganda</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1018,7 +1018,7 @@
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation>Dasbor ISO tiga titik</translation>
+        <translation>ISO garis putus tiga titik</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>Memukul</translation>
+        <translation>Insulasi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1123,12 +1123,12 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Pelanggaran</translation>
+        <translation>Air Kotor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Peningkatan Pelanggaran</translation>
+        <translation>Air Kotor Bertekanan</translation>
     </message>
 </context>
 <context>
@@ -1136,12 +1136,12 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation>Dengan Lapisan</translation>
+        <translation>Berdasarkan Lapisan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Dengan Blok</translation>
+        <translation>Berdasarkan Blok</translation>
     </message>
     <message>
         <location line="+1"/>

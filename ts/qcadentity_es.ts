@@ -345,7 +345,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation>Bobinado</translation>
+        <translation>Enrollamiento</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -601,7 +601,7 @@
         <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
-        <translation>Bulto</translation>
+        <translation>Curvatura</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
@@ -611,7 +611,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Grados</translation>
+        <translation>Grado</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -725,14 +725,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Cuerda punto</translation>
+        <translation>Punto de cuerda</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Cuerda punto 2</translation>
+        <translation>Punto de cuerda lejano</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -760,7 +760,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Guia punto final</translation>
+        <translation>Punto final de la directriz</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -860,7 +860,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Flecha bloque</translation>
+        <translation>Bloque de flecha</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>

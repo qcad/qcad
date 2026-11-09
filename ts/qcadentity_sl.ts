@@ -308,7 +308,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation>Vprašaj</translation>
+        <translation>Poziv</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
@@ -494,7 +494,7 @@
     <message>
         <location line="+3"/>
         <source>Block Name</source>
-        <translation>Ime zbira</translation>
+        <translation>Ime bloka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -546,7 +546,7 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
         <source>Solid</source>
-        <translation>Telo</translation>
+        <translation>Polnilo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -725,7 +725,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Zbir puščice</translation>
+        <translation>Blok puščice</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
@@ -856,7 +856,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Stopinj</translation>
+        <translation>Stopnja</translation>
     </message>
     <message>
         <location line="+2"/>

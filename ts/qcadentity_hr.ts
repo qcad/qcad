@@ -614,7 +614,7 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
         <source>Solid</source>
-        <translation>Čvrst</translation>
+        <translation>Puna ispuna</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -726,7 +726,7 @@
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation>Dokument</translation>
+        <translation>Datoteka</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -793,7 +793,7 @@
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation>Višelinijski uzorak</translation>
+        <translation>Uzorak polilinije</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -887,7 +887,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation>Vektor smijera</translation>
+        <translation>Vektor smjera</translation>
     </message>
     <message>
         <location line="+3"/>

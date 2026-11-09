@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>การตั้งค่าการเขียนแบบ</translation>
+        <translation>การตั้งค่าแบบวาด</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -314,17 +314,17 @@ the preference changes to take effect.</source>
     <message>
         <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
-        <translation>นี่คือค่าเริ่มต้นสำหรับการเขียนแบบใหม่</translation>
+        <translation>นี่คือค่าเริ่มต้นสำหรับแบบวาดใหม่</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation>การเปลี่ยนแปลงจะมีผลต่อการเขียนแบบใหม่แต่ไม่มีผลต่อการเขียนแบบปัจจุบัน</translation>
+        <translation>การเปลี่ยนแปลงจะมีผลต่อแบบวาดใหม่แต่ไม่มีผลต่อแบบวาดปัจจุบัน</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>การตั้งค่าของการเขียนแบบปัจจุบันสามารถเปลี่ยนได้ที่&lt;br/&gt;&lt;i&gt;แก้ไข &amp;gt; การตั้งค่าการเขียนแบบ&lt;/i&gt;</translation>
+        <translation>การตั้งค่าของแบบวาดปัจจุบันสามารถเปลี่ยนได้ที่&lt;br/&gt;&lt;i&gt;แก้ไข &amp;gt; การตั้งค่าแบบวาด&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -2260,7 +2260,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>การทำธุรกรรมล้มเหลว กรุณาตรวจสอบการเรียกซ้ำบล็อกและชั้นหรือบล็อกที่ล็อคหรือมองไม่เห็น</translation>
+        <translation>ทรานแซกชันล้มเหลว กรุณาตรวจสอบการเรียกซ้ำบล็อกและชั้นหรือบล็อกที่ล็อคหรือมองไม่เห็น</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -3901,7 +3901,7 @@ is already in the list.</source>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Circleไม่ถูกต้อง</translation>
+        <translation>วงกลมไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3932,7 +3932,7 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation>Sizeไม่ถูกต้อง</translation>
+        <translation>ขนาดไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -3985,7 +3985,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation>Heightไม่ถูกต้อง</translation>
+        <translation>ความสูงไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4531,7 +4531,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
-        <translation>&amp;กลับไปยังการเขียนแบบหลัก</translation>
+        <translation>&amp;กลับไปยังแบบวาดหลัก</translation>
     </message>
 </context>
 <context>
@@ -4914,7 +4914,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>&amp;รอยต่อหางนกเขา</translation>
+        <translation>&amp;ข้อต่อหางเหยี่ยว</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5109,13 +5109,13 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform>ธุรกรรมส่งผลต่อ %n วัตถุ</numerusform>
+            <numerusform>ทรานแซกชันส่งผลต่อ %n วัตถุ</numerusform>
         </translation>
     </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>&amp;ตัวฟังการทำธุรกรรม</translation>
+        <translation>&amp;ตัวฟังทรานแซกชัน</translation>
     </message>
 </context>
 <context>
@@ -5681,7 +5681,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>คุณแน่ใจหรือไม่ว่าต้องการล้างประวัติธุรกรรมการเลิกทำ / ทำซ้ำ?</translation>
+        <translation>คุณแน่ใจหรือไม่ว่าต้องการล้างประวัติทรานแซกชันการเลิกทำ / ทำซ้ำ?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5862,7 +5862,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>เน้น (และยก) ลายฟักและการเติมทึบในช่วง</translation>
+        <translation>เน้น (และยก) แรเงาและการเติมทึบในช่วง</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6408,7 +6408,7 @@ is already in the list.</source>
     <message>
         <location line="+327"/>
         <source>Mouse wheel scroll factor:</source>
-        <translation>ปัจจัยการเลื่อนล้อเมาส์:</translation>
+        <translation>ตัวคูณการเลื่อนของล้อเมาส์:</translation>
     </message>
     <message>
         <location line="-14"/>
@@ -6709,7 +6709,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation>นำเข้าการเขียนแบบ</translation>
+        <translation>นำเข้าแบบวาด</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -6719,7 +6719,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation>As บล็อก:</translation>
+        <translation>เป็นบล็อก:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6990,7 +6990,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation>เพิ่มวัตถุไปยังการเขียนแบบ</translation>
+        <translation>เพิ่มวัตถุลงในแบบวาด</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7133,7 +7133,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation>จุดศูนย์กลาง:</translation>
+        <translation>เซนทรอยด์:</translation>
     </message>
     <message>
         <location line="+207"/>
@@ -7160,7 +7160,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation>&amp;จุดศูนย์กลางพื้นที่</translation>
+        <translation>&amp;เซนทรอยด์พื้นที่</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7264,12 +7264,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation>ตัวฟังธุรกรรมเซนทรอยด์ 2D ทำงานอยู่</translation>
+        <translation>ตัวฟังทรานแซกชันเซนทรอยด์ 2D ทำงานอยู่</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation>ปิดใช้งาน/ลบตัวรับฟังธุรกรรมเซนทรอยด์ 2D แล้ว</translation>
+        <translation>ปิดใช้งาน/ลบตัวฟังทรานแซกชันเซนทรอยด์ 2D แล้ว</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7287,12 +7287,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation>(ปิด-)เปิดใช้งานตัวฟังธุรกรรมสำหรับเซนทรอยด์ 2D</translation>
+        <translation>(ปิด-)เปิดใช้งานตัวฟังทรานแซกชันสำหรับเซนทรอยด์ 2D</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation>(ปิด-)เปิดใช้งานตัวฟังธุรกรรมสำหรับการผูกการเปลี่ยนแปลงกับเครื่องหมายเซนทรอยด์ 2D</translation>
+        <translation>(ปิด-)เปิดใช้งานตัวฟังทรานแซกชันสำหรับการผูกการเปลี่ยนแปลงกับเครื่องหมายเซนทรอยด์ 2D</translation>
     </message>
 </context>
 <context>
@@ -7620,7 +7620,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation>จุดศูนย์กลาง:</translation>
+        <translation>เซนทรอยด์:</translation>
     </message>
     <message>
         <location line="+125"/>
@@ -7663,7 +7663,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation>เพิ่มการวัดไปยังการเขียนแบบ</translation>
+        <translation>เพิ่มการวัดลงในแบบวาด</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8291,7 +8291,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>วัตถุในบล็อกที่อยู่บนเลเยอร์ 0 จะรับคุณสมบัติและการมองเห็นของการอ้างอิงบล็อก</translation>
+        <translation>วัตถุในบล็อกที่อยู่บนเลเยอร์ 0 จะรับคุณลักษณะและการมองเห็นของการอ้างอิงบล็อก</translation>
     </message>
 </context>
 <context>
@@ -8300,7 +8300,7 @@ is already in the list.</source>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation>layer</translation>
+        <translation>เลเยอร์</translation>
     </message>
     <message>
         <location line="+158"/>
@@ -8734,7 +8734,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>&amp;รอยต่อหางนกเขาจาก 2 จุด</translation>
+        <translation>&amp;ข้อต่อหางเหยี่ยวจาก 2 จุด</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9725,7 +9725,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>เปิดการเขียนแบบ</translation>
+        <translation>เปิดแบบวาด</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10371,7 +10371,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Print current drawing</source>
-        <translation>พิมพ์การเขียนแบบปัจจุบัน</translation>
+        <translation>พิมพ์แบบวาดปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -13201,7 +13201,7 @@ is already in the list.</source>
     <message>
         <location line="+40"/>
         <source>Source</source>
-        <translation>แหล่ง</translation>
+        <translation>ซอร์สโค้ด</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -14461,12 +14461,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>&amp;เส้นก่อสร้างแนวนอน</translation>
+        <translation>&amp;เส้นร่างแนวนอน</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw horizontal construction line</source>
-        <translation>วาดเส้นก่อสร้างแนวนอน</translation>
+        <translation>วาดเส้นร่างแนวนอน</translation>
     </message>
 </context>
 <context>
@@ -14474,12 +14474,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>&amp;เส้นก่อสร้างแนวตั้ง</translation>
+        <translation>&amp;เส้นร่างแนวตั้ง</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw vertical construction line</source>
-        <translation>วาดเส้นก่อสร้างแนวตั้ง</translation>
+        <translation>วาดเส้นร่างแนวตั้ง</translation>
     </message>
 </context>
 <context>
@@ -14923,12 +14923,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>ติดตาม</translation>
+        <translation>เทรซ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>ติดตาม</translation>
+        <translation>เทรซ</translation>
     </message>
     <message>
         <location line="+2"/>

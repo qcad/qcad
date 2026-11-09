@@ -154,7 +154,7 @@
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation>Orange</translation>
+        <translation>Oranžs</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -189,7 +189,7 @@
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation>Black</translation>
+        <translation>Melns</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -204,7 +204,7 @@
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation>White</translation>
+        <translation>Balts</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -222,12 +222,12 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Zīmēšanas vienība</translation>
+        <translation>Rasējuma vienība</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Linētiskā skala</translation>
+        <translation>Līnijas tipa mērogs</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -450,7 +450,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Zīmītes lielums</translation>
+        <translation>Svītras izmērs</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -490,7 +490,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architectur ērce</translation>
+        <translation>Arhitektūras svītra</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -537,13 +537,13 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Linētiskā skala</translation>
+        <translation>Līnijas tipa mērogs</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Lineweight</translation>
+        <translation>Līnijas biezums</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -564,7 +564,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Vecāka identitāte</translation>
+        <translation>Vecākobjekta ID</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -641,12 +641,12 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation>Plottable</translation>
+        <translation>Drukājams</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Snappable</translation>
+        <translation>Piesaistāms</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -826,14 +826,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Apskatīt centru</translation>
+        <translation>Skata centrs</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Skatīt mērķi</translation>
+        <translation>Skata mērķis</translation>
     </message>
     <message>
         <location line="+2"/>

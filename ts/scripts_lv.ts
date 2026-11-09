@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Zīmēšanas preferences</translation>
+        <translation>Rasējuma preferences</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -324,7 +324,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Pašreizējā zīmējuma iestatījumus var mainīt sadaļā&lt;br/&gt;&lt;i&gt;Edit gt; Zīmēšanas iestatījumi&lt;/i&gt;.</translation>
+        <translation>Pašreizējā rasējuma iestatījumus var mainīt sadaļā&lt;br/&gt;&lt;i&gt;Rediģēt &amp;gt; Rasējuma preferences&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -385,7 +385,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation>Pievienot pielāgotu īpašumu</translation>
+        <translation>Pievienot pielāgotu īpašību</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -884,7 +884,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fails</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -984,7 +984,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Auto Snap</translation>
+        <translation>Automātiskā piesaiste</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1163,7 +1163,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+33"/>
         <source>Pixels per drawing unit:</source>
-        <translation>Pikseļi uz zīmēšanas vienību:</translation>
+        <translation>Pikseļi uz rasējuma vienību:</translation>
     </message>
     <message>
         <location line="+280"/>
@@ -1260,7 +1260,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Pievienojiet papildu rezervi, lai kompensētu līnijas svaru</translation>
+        <translation>Pievienot papildu piemali, lai kompensētu līnijas biezumu</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1291,7 +1291,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+27"/>
         <source>&amp;Block</source>
-        <translation>Bloķēt</translation>
+        <translation>&amp;Bloks</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1358,7 +1358,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation>Bloķēt</translation>
+        <translation>&amp;Bloks</translation>
     </message>
 </context>
 <context>
@@ -1405,7 +1405,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation>Bloķēt:</translation>
+        <translation>Bloks:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1464,7 +1464,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>Izvēlieties līnijas, loka, apļa, elipses, spline vai daudzlīniju segmentu</translation>
+        <translation>Izvēlieties līnijas, loka, apļa, elipses, splaina vai daudzlīnijas segmentu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1510,7 +1510,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Izvēlieties līniju, loku, loku, apli, elipsi, spline vai polilīniju, lai sadalītu</translation>
+        <translation>Izvēlieties sadalāmo līniju, loku, apli, elipsi, splainu vai daudzlīniju</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2120,7 +2120,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Noslēguma zīmējums...</translation>
+        <translation>Aizver rasējumu...</translation>
     </message>
 </context>
 <context>
@@ -2264,7 +2264,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Darījums neizdevās. Lūdzu, pārbaudiet, vai nav bloka rekursiju un bloķētu vai neredzamu slāņu vai bloku.</translation>
+        <translation>Transakcija neizdevās. Lūdzu, pārbaudiet, vai nav bloka rekursiju un bloķētu vai neredzamu slāņu vai bloku.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2381,17 +2381,17 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+7"/>
         <source>Convert Drawing Unit</source>
-        <translation>Konvertēt zīmēšanas vienību</translation>
+        <translation>Konvertēt rasējuma vienību</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation>Konvertēt zīmēšanas vienība</translation>
+        <translation>Konvertēt rasējuma &amp;vienību</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
-        <translation>Konvertēt zīmējumu uz citu zīmēšanas vienību</translation>
+        <translation>Konvertēt rasējumu uz citu rasējuma vienību</translation>
     </message>
 </context>
 <context>
@@ -2404,7 +2404,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation>Koordinātu displejs</translation>
+        <translation>Koordinātu rādījums</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
@@ -2565,7 +2565,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>Nogrieziet</translation>
+        <translation>&amp;Izgriezt</translation>
     </message>
 </context>
 <context>
@@ -2621,7 +2621,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation>Pārvietot subjektu</translation>
+        <translation>Pārvietot objektu</translation>
     </message>
     <message>
         <location line="+127"/>
@@ -2743,7 +2743,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Splīnijas</translation>
+        <translation>Splaini</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3084,7 +3084,7 @@ Vai vēlaties to atjaunot?</translation>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Zemāka tolerance</translation>
+        <translation>Apakšējā pielaide</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3094,7 +3094,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Zīmēšanas mērogs</translation>
+        <translation>Rasējuma mērogs</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3236,7 +3236,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Arhitektūras ķeksītis</translation>
+        <translation>Arhitektūras svītra</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3333,7 +3333,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Displeja attālums/ leņķis</translation>
+        <translation>Rādīt &amp;attālumu/leņķi</translation>
     </message>
 </context>
 <context>
@@ -3341,7 +3341,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Izvēlieties līniju, loku, loku, apli, elipsi, spline vai daudzlīniju</translation>
+        <translation>Izvēlieties līniju, loku, apli, elipsi, splainu vai daudzlīniju</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3535,7 +3535,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Pārveidot segmentu</translation>
+        <translation>Atkārtot segmentu</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3981,12 +3981,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation>3. pakāpes piemērots punkts Spline, mazāk nekā 3 atsauces.</translation>
+        <translation>3. pakāpes pielāgojuma punktu splains, mazāk nekā 3 atsauces.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation>3. pakāpes kontrolpunkts Spline, mazāk nekā 4 atsauces.</translation>
+        <translation>3. pakāpes kontrolpunktu splains, mazāk nekā 4 atsauces.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4096,7 +4096,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Nav pareizs Lineweight, ignorēts. Teksta rinda: %1%2 Svars: %3</translation>
+        <translation>Nav pareizs līnijas biezums, ignorēts. Teksta rinda: %1%2 Biezums: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4106,7 +4106,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Nav pareiza līnijveidolu skala, ignorēta. Teksta rinda: %1%2 Mērogs: %3</translation>
+        <translation>Nav pareizs līnijas tipa mērogs, ignorēts. Teksta rinda: %1%2 Mērogs: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4131,7 +4131,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Nav pareizs Lineweight. Teksta rinda: %1%2 Svars: %3</translation>
+        <translation>Nav pareizs līnijas biezums. Teksta rinda: %1%2 Biezums: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4232,7 +4232,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Pārveidot segmentu</translation>
+        <translation>Atkārtot segmentu</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -4255,7 +4255,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Zīmēšanas preferences</translation>
+        <translation>Rasējuma &amp;preferences</translation>
     </message>
 </context>
 <context>
@@ -4264,9 +4264,9 @@ jau ir sarakstā.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform>%n subjekts dublēts</numerusform>
-            <numerusform>%n subjekti dublēti</numerusform>
-            <numerusform>%n subjektu dublēts</numerusform>
+            <numerusform>%n objekts dublēts</numerusform>
+            <numerusform>%n objekti dublēti</numerusform>
+            <numerusform>%n objektu dublēts</numerusform>
         </translation>
     </message>
     <message>
@@ -4377,7 +4377,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Vienība nav līnija, loks, spline, elipses loks vai polilīnija.</translation>
+        <translation>Vienība nav līnija, loks, splains, elipses loks vai polilīnija.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4397,22 +4397,22 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation>Vienība nav līnija, loks, aplis, elipse vai spline.</translation>
+        <translation>Vienība nav līnija, loks, aplis, elipse vai splains.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Vienība nav līnija, loks, aplis, spline vai polilīnija.</translation>
+        <translation>Vienība nav līnija, loks, aplis, splains vai polilīnija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Vienība nav līnija, loks, aplis, elipse, spline vai polilīnija.</translation>
+        <translation>Vienība nav līnija, loks, aplis, elipse, splains vai polilīnija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Vienība nav aplis, elipse, spline vai polilīnija.</translation>
+        <translation>Vienība nav aplis, elipse, splains vai polilīnija.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4427,7 +4427,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Vienība nav spline ar piemērotiem punktiem.</translation>
+        <translation>Vienība nav splains ar pielāgojuma punktiem.</translation>
     </message>
 </context>
 <context>
@@ -4487,7 +4487,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Block/EditBlock/EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
-        <translation>Rediģēšanas bloks</translation>
+        <translation>&amp;Rediģēt bloku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4899,12 +4899,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation>Slānim &quot;0&quot; pievienots pielāgotais īpašums &quot;MyCustomProperty&quot;.</translation>
+        <translation>Slānim &quot;0&quot; pievienota pielāgotā īpašība &quot;MyCustomProperty&quot;.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation>Pielāgota īpašuma pievienošana slānim</translation>
+        <translation>Pielāgotas īpašības pievienošana slānim</translation>
     </message>
 </context>
 <context>
@@ -5125,7 +5125,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>Darījumu klausītājs</translation>
+        <translation>&amp;Transakciju klausītājs</translation>
     </message>
 </context>
 <context>
@@ -5200,12 +5200,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Sadalīt spline uz daudzlīnijām ar līniju segmentiem</translation>
+        <translation>Sadalīt splainus daudzlīnijās ar līniju segmentiem</translation>
     </message>
     <message>
         <location line="+104"/>
         <source>Spline segments:</source>
-        <translation>Spline segmenti:</translation>
+        <translation>Splaina segmenti:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5215,12 +5215,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+7"/>
         <source>Spline approximation tolerance:</source>
-        <translation>Splīno aproksimācijas pielaide:</translation>
+        <translation>Splaina aproksimācijas pielaide:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation>Pārvērst spline no tekstiem uz lokiem vai līnijām, ja nepieciešams</translation>
+        <translation>Pārvērst tekstu splainus par lokiem vai līnijām, ja piemērots</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5256,7 +5256,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;File</source>
-        <translation>Faili</translation>
+        <translation>&amp;Fails</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -5272,7 +5272,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>Failiņš &quot;%1&quot; jau pastāv. Vai vēlaties to pārrakstīt?</translation>
+        <translation>Fails &quot;%1&quot; jau pastāv. Vai vēlaties to pārrakstīt?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5691,7 +5691,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Vai esat pārliecināts, ka vēlaties izskalot atcelto/atkārtoto darījumu vēsturi?</translation>
+        <translation>Vai tiešām vēlaties iztīrīt atsaukšanas / atkārtošanas transakciju vēsturi?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5862,7 +5862,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+64"/>
         <source>Cursor range for snap:</source>
-        <translation>Kursora diapazons snap:</translation>
+        <translation>Kursora diapazons piesaistei:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5872,7 +5872,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Izcelt (un paaugstināt) šķeltos un blīvos pildījumus diapazonā</translation>
+        <translation>Izcelt (un pacelt priekšplānā) šrafējumus un vienlaidu aizpildījumus diapazonā</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -5982,7 +5982,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+29"/>
         <source>Prevent white on white / black on black display</source>
-        <translation>Novērst balts uz balta / melns uz melna displeja</translation>
+        <translation>Novērst baltu uz balta / melnu uz melna attēlojumu</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5992,32 +5992,32 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Līniju tipi un lineārās masas</translation>
+        <translation>Līniju tipi un līniju biezumi</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Noklusējuma līnijas svars:</translation>
+        <translation>Noklusējuma līnijas biezums:</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Līnijtipu modeļu mērogošana pēc līnijas svara</translation>
+        <translation>Mērogot līniju tipu rakstus pēc līnijas biezuma</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Modeļa skala līniju svaram 0,00 mm:</translation>
+        <translation>Raksta mērogs līnijas biezumam 0,00 mm:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation>Piemērot līnijas svaru punktiem</translation>
+        <translation>Piemērot līnijas biezumu punktiem</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display and Performance</source>
-        <translation>Displejs un veiktspēja</translation>
+        <translation>Attēlošana un veiktspēja</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6072,7 +6072,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Lūkas atveidošanas laika ierobežojums:</translation>
+        <translation>Šrafējuma atveidošanas laika ierobežojums:</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6282,7 +6282,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+36"/>
         <source>Selection box border:</source>
-        <translation>Izvēles lodziņa robeža:</translation>
+        <translation>Atlases rāmja apmale:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6312,17 +6312,17 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+30"/>
         <source>Snap reference points:</source>
-        <translation>Snap atsauces punkti:</translation>
+        <translation>Piesaistes atsauces punkti:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Snap rīki</translation>
+        <translation>Piesaistes rīki</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Snap etiķete:</translation>
+        <translation>Piesaistes etiķete:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6352,7 +6352,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+78"/>
         <source>Zoom Tools</source>
-        <translation>Palielināšanas rīki</translation>
+        <translation>Tālummaiņas rīki</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6370,7 +6370,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Snap etiķetes fonts:</translation>
+        <translation>Piesaistes etiķetes fonts:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6561,7 +6561,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Katrai robežu vienībai jābūt līnijai, lokam, aplim, elipses lokam, elipsei, daudzlīnijai vai splinei. Atrasts:</translation>
+        <translation>Katrai robežas vienībai jābūt līnijai, lokam, aplim, elipses lokam, elipsei, daudzlīnijai vai splainam. Atrasts:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
@@ -6571,7 +6571,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Izvēlētās robežas aizpildījuma vai vienlaidu aizpildījuma izveide</translation>
+        <translation>Izveidot šrafējumu vai vienlaidu aizpildījumu no atlasītās robežas</translation>
     </message>
 </context>
 <context>
@@ -6729,7 +6729,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation>Kā bloķēt:</translation>
+        <translation>Kā bloku:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7005,7 +7005,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation>Subjekts</translation>
+        <translation>Objekts</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -7102,12 +7102,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Apzīmētais apgabals:</translation>
+        <translation>Šrafētais laukums:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation>Kopējā uzzīmētā platība:</translation>
+        <translation>Kopējais šrafētais laukums:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7160,7 +7160,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Neapstrādāta forma no lūkas cilpas.</translation>
+        <translation>Neapstrādāta forma no šrafējuma cilpas.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7274,7 +7274,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation>2D Centroids darījuma klausītājs ir aktīvs.</translation>
+        <translation>2D Centroids transakciju klausītājs ir aktīvs.</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -7297,12 +7297,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation>(De-)aktivizēt darījuma klausītāju 2D centroidiem</translation>
+        <translation>(De-)aktivizēt transakciju klausītāju 2D centroidiem</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation>(De-)Aktivizēt darījuma klausītāju saistošajām izmaiņām, kas tiek piemērotas 2D centroidu marķieriem</translation>
+        <translation>(De-)Aktivizēt transakciju klausītāju saistošajām izmaiņām, kas tiek piemērotas 2D centroidu marķieriem</translation>
     </message>
 </context>
 <context>
@@ -7968,7 +7968,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation>Faili nav atrasts konstruktors:</translation>
+        <translation>Failā nav atrasts konstruktors:</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8218,7 +8218,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Noklusējuma līnijas svars jauniem slāņiem:</translation>
+        <translation>Noklusējuma līnijas biezums jauniem slāņiem:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -8228,7 +8228,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>0 slāņa noklusējuma līnijas svars:</translation>
+        <translation>0 slāņa noklusējuma līnijas biezums:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
@@ -8350,7 +8350,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Līnijsvars:</translation>
+        <translation>Līnijas biezums:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -8474,7 +8474,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Tas pats subjekta veids kā sākotnējā</translation>
+        <translation>Tas pats objekta tips kā oriģinālam</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8517,7 +8517,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Pārveidot segmentu</translation>
+        <translation>Atkārtot segmentu</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8701,12 +8701,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Kaste savienojums no 2 punktiem</translation>
+        <translation>Kastes &amp;savienojums no 2 punktiem</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Zīmējuma kastes savienojumu pirksti, spraugas un tapas</translation>
+        <translation>Zīmēt kastes savienojuma pirkstus, rievas un tapas</translation>
     </message>
 </context>
 <context>
@@ -8744,7 +8744,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>Uzmavas savienojums no 2 punktiem</translation>
+        <translation>&amp;Bezdelīgastes savienojums no 2 punktiem</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9092,12 +9092,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>Globālā līnijtipa skala:</translation>
+        <translation>Globālais līnijas tipa mērogs:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>Linetipu mērogi atbilst katra skata skalas mērogam</translation>
+        <translation>Līniju tipu mērogs atbilst katra skatloga mērogam</translation>
     </message>
 </context>
 <context>
@@ -9280,7 +9280,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+21"/>
         <source>&amp;Block</source>
-        <translation>Bloķēt</translation>
+        <translation>&amp;Bloks</translation>
     </message>
 </context>
 <context>
@@ -9579,7 +9579,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Atklāšanas zīmējums:</translation>
+        <translation>Atver rasējumu:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9599,7 +9599,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation>Faili nav atrasti.</translation>
+        <translation>Fails nav atrasts.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9614,7 +9614,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation>Failiņš ir tukšs.</translation>
+        <translation>Fails ir tukšs.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -9895,7 +9895,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>Pan tālummaiņa</translation>
+        <translation>&amp;Skata pārvietošana un tālummaiņa</translation>
     </message>
 </context>
 <context>
@@ -10052,7 +10052,7 @@ jau ir sarakstā.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation>Punktu displejs</translation>
+        <translation>Punktu attēlojums</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10219,7 +10219,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Izvēlieties līniju, loku, loku, apli, elipsi, spline vai polilīniju, lai sadalītu</translation>
+        <translation>Izvēlieties sadalāmo līniju, loku, apli, elipsi, splainu vai daudzlīniju</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10269,7 +10269,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation>Būtnes īpašību mantošana</translation>
+        <translation>Mantot objekta īpašības</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10482,7 +10482,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Zīmēšanas mērogs</translation>
+        <translation>Rasējuma mērogs</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10598,7 +10598,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Maksimālā sarežģītība automātiskajam lūkas garuma aprēķinam:</translation>
+        <translation>Maksimālā sarežģītība automātiskajam šrafējuma garuma aprēķinam:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10648,7 +10648,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+22"/>
         <source>Dependent Entities</source>
-        <translation>Atkarīgie subjekti</translation>
+        <translation>Atkarīgie objekti</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -10673,7 +10673,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+25"/>
         <source>Add custom property to selected objects</source>
-        <translation>Pielāgotā īpašuma pievienošana atlasītajiem objektiem</translation>
+        <translation>Pievienot pielāgotu īpašību atlasītajiem objektiem</translation>
     </message>
     <message>
         <location line="+66"/>
@@ -10760,7 +10760,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>Linēšanas skala:</translation>
+        <translation>Līnijas tipa mērogs:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -10781,7 +10781,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>Pārtraukt</translation>
+        <translation>&amp;Iziet</translation>
     </message>
 </context>
 <context>
@@ -10807,7 +10807,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fails</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10822,7 +10822,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Atvērt Nesen</translation>
+        <translation>Atvērt &amp;nesenos</translation>
     </message>
 </context>
 <context>
@@ -11257,7 +11257,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>Failiņš &quot;%1&quot; jau pastāv. Vai vēlaties to pārrakstīt?</translation>
+        <translation>Fails &quot;%1&quot; jau pastāv. Vai vēlaties to pārrakstīt?</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -11312,7 +11312,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+6"/>
         <source>File %1 has not been saved.</source>
-        <translation>Faili %1 nav saglabāti.</translation>
+        <translation>Fails %1 nav saglabāts.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -11385,12 +11385,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fails</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation>Atvērt/izglabāt</translation>
+        <translation>Atvērt/saglabāt</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -11607,7 +11607,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Izvēlieties Bloka atsauces</translation>
+        <translation>&amp;Atlasīt bloku atsauces</translation>
     </message>
 </context>
 <context>
@@ -11643,7 +11643,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation>Objekts nav zīmēšanas vienība:</translation>
+        <translation>Objekts nav rasējuma elements:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
@@ -11661,7 +11661,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Rokturis (sešstūra):</translation>
+        <translation>Rokturis (heksadecimāli):</translation>
     </message>
 </context>
 <context>
@@ -11780,7 +11780,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>Izvēlieties slāņa vienības</translation>
+        <translation>&amp;Atlasīt slāņa vienības</translation>
     </message>
 </context>
 <context>
@@ -11788,7 +11788,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Izvēlēties subjektu slānī</translation>
+        <translation>Izvēlieties objektu slānī</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -11900,18 +11900,18 @@ jau ir sarakstā.</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform>%n subjekts slānī &quot;%1&quot;</numerusform>
-            <numerusform>%n subjekti slānī &quot;%1&quot;</numerusform>
-            <numerusform>%n subjektu slānī &quot;%1&quot;</numerusform>
+            <numerusform>%n objekts slānī &quot;%1&quot;</numerusform>
+            <numerusform>%n objekti slānī &quot;%1&quot;</numerusform>
+            <numerusform>%n objektu slānī &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform>%n subjekts</numerusform>
-            <numerusform>%n subjekti</numerusform>
-            <numerusform>%n subjektu</numerusform>
+            <numerusform>%n objekts</numerusform>
+            <numerusform>%n objekti</numerusform>
+            <numerusform>%n objektu</numerusform>
         </translation>
     </message>
     <message>
@@ -12247,12 +12247,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Snap rīki</translation>
+        <translation>Piesaistes rīki</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>Snap</translation>
+        <translation>&amp;Piesaiste</translation>
     </message>
 </context>
 <context>
@@ -12260,12 +12260,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Piesaiste</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Auto Snap</translation>
+        <translation>Automātiskā piesaiste</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
@@ -12316,7 +12316,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Relatīvo koordinātu ērce</translation>
+        <translation>Atzīme relatīvajai koordinātei</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12359,7 +12359,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Relatīvo koordinātu ērce</translation>
+        <translation>Atzīme relatīvajai koordinātei</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12387,7 +12387,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap distance:</translation>
+        <translation>Piesaistes attālums:</translation>
     </message>
 </context>
 <context>
@@ -12405,7 +12405,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap distance:</translation>
+        <translation>Piesaistes attālums:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12430,7 +12430,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation>Snap attālums starp 2 punktiem</translation>
+        <translation>Piesaistes attālums starp 2 punktiem</translation>
     </message>
 </context>
 <context>
@@ -12475,7 +12475,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Piesaiste</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12575,12 +12575,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>Spline darbarīki</translation>
+        <translation>Splainu rīki</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>Spline</translation>
+        <translation>&amp;Splains</translation>
     </message>
 </context>
 <context>
@@ -12608,12 +12608,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>Izvēlieties Spline pakāpi</translation>
+        <translation>Izvēlieties splaina pakāpi</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation>Aizvērtās rievsavienojuma rindas atzīmēšana</translation>
+        <translation>Atzīme slēgtam splainam</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12623,12 +12623,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>Spline (vadības punkti)</translation>
+        <translation>&amp;Splains (kontrolpunkti)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw spline from control points</source>
-        <translation>Zīmēt spline no kontrolpunktiem</translation>
+        <translation>Zīmēt splainu no kontrolpunktiem</translation>
     </message>
 </context>
 <context>
@@ -12636,7 +12636,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation>Pārvērst taisnas spraigas līnijas par līnijām</translation>
+        <translation>Pārvērst taisnus splainus par līnijām</translation>
     </message>
 </context>
 <context>
@@ -12654,22 +12654,22 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation>Koordinātu displejs</translation>
+        <translation>Koordinātu rādījums</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation>Peles displejs</translation>
+        <translation>Peles rādījums</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation>Atlases displejs</translation>
+        <translation>Atlases rādījums</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation>Progresa displejs</translation>
+        <translation>Progresa rādījums</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12736,12 +12736,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation>Splīnijas</translation>
+        <translation>Splaini</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation>Automātiska konversija spline uz līnijām / lokiem, ja nepieciešams</translation>
+        <translation>Automātiski pārvērst splainus par līnijām / lokiem, ja piemērots</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12766,7 +12766,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fails</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12970,7 +12970,7 @@ jau ir sarakstā.</translation>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation>Izvēlieties subjektu</translation>
+        <translation>Izvēlieties objektu</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13009,7 +13009,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Nogrieziet</translation>
+        <translation>Iz&amp;griezt</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13191,7 +13191,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>Nogrieziet</translation>
+        <translation>Izgriezt</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13840,7 +13840,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>Zīmēšanas vienība:</translation>
+        <translation>Rasējuma vienība:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13850,7 +13850,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation>Mērīšanas sistēma (līniju tipiem un lūkas modeļiem):</translation>
+        <translation>Mērīšanas sistēma (līniju tipiem un šrafējuma rakstiem):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -13861,7 +13861,7 @@ jau ir sarakstā.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>Zīmēšanas vienība</translation>
+        <translation>Rasējuma vienība</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13976,7 +13976,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation>Imperial</translation>
+        <translation>Imperiālais</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13997,17 +13997,17 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Pārskatīt rīkus</translation>
+        <translation>Skata rīki</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>View</source>
-        <translation>Skatīt</translation>
+        <translation>Skats</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>Skatīt</translation>
+        <translation>&amp;Skats</translation>
     </message>
 </context>
 <context>
@@ -14033,7 +14033,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Skatuves</translation>
+        <translation>Skatlogi</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -14066,7 +14066,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Skatuves</translation>
+        <translation>Skatlogi</translation>
     </message>
 </context>
 <context>
@@ -14507,17 +14507,17 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation>Palielināt</translation>
+        <translation>Tālummaiņa</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation>Palielināšanas rīki</translation>
+        <translation>Tālummaiņas rīki</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Zoom</source>
-        <translation>Palielināt</translation>
+        <translation>&amp;Tālummaiņa</translation>
     </message>
 </context>
 <context>
@@ -14533,7 +14533,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>Palielināt attālumu</translation>
+        <translation>&amp;Tālināt</translation>
     </message>
 </context>
 <context>
@@ -14546,7 +14546,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation>Izvēles tālummaiņa</translation>
+        <translation>Tālummaiņa uz &amp;atlasi</translation>
     </message>
 </context>
 <context>
@@ -14642,7 +14642,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Skatīt</translation>
+        <translation>Skats</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14657,12 +14657,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Entities</source>
-        <translation>Subjekti</translation>
+        <translation>Objekti</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entity</source>
-        <translation>Subjekts</translation>
+        <translation>Objekts</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14973,7 +14973,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation>Splīnijas</translation>
+        <translation>Splaini</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14999,12 +14999,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Skatuves</translation>
+        <translation>Skatlogi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Skatuve</translation>
+        <translation>Skatlogs</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15036,7 +15036,7 @@ jau ir sarakstā.</translation>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation>Nezināms subjekts</translation>
+        <translation>Nezināms objekts</translation>
     </message>
     <message>
         <location line="+108"/>
@@ -15079,7 +15079,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation>Skatuve 1</translation>
+        <translation>Skatlogs 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -15087,7 +15087,7 @@ jau ir sarakstā.</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation>Displeja režģis</translation>
+        <translation>Rādīt režģi</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -15140,17 +15140,17 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation>Skatuve 2</translation>
+        <translation>Skatlogs 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation>Skatuve 3</translation>
+        <translation>Skatlogs 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation>Skatuve 4</translation>
+        <translation>Skatlogs 4</translation>
     </message>
 </context>
 <context>

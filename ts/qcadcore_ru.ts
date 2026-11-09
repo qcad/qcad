@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Размер шрифта</translation>
+        <translation>Шрифт размеров</translation>
     </message>
 </context>
 <context>
@@ -314,7 +314,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation>Расположение</translation>
+        <translation>Макет</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -464,7 +464,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Обработчик</translation>
+        <translation>Дескриптор</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -608,14 +608,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Просмотр центра</translation>
+        <translation>Центр вида</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Просмотр цели</translation>
+        <translation>Цель вида</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -668,12 +668,12 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation>Начертаемый</translation>
+        <translation>Печатаемый</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Хватаемый</translation>
+        <translation>Доступен для привязки</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -683,7 +683,7 @@
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation>Порядок перехода</translation>
+        <translation>Порядок вкладок</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -788,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Размер галочки</translation>
+        <translation>Размер засечки</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Архитектурная галочка</translation>
+        <translation>Архитектурная засечка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -874,7 +874,7 @@
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation>Метрика</translation>
+        <translation>Метрический</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -946,7 +946,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Скрыт</translation>
+        <translation>Невидимая</translation>
     </message>
     <message>
         <location line="+2"/>

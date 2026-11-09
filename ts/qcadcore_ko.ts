@@ -222,12 +222,12 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>그리기 단위</translation>
+        <translation>도면 단위</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>선형 스케일</translation>
+        <translation>라인 타입 스케일</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -400,7 +400,7 @@
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation>전체 규모</translation>
+        <translation>전체 축척</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -430,7 +430,7 @@
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>내선 연장</translation>
+        <translation>연장선 연장</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -480,7 +480,7 @@
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>소수점 이하 각 소수점 자릿수</translation>
+        <translation>각도 소수점 이하 자릿수</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -537,13 +537,13 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>선형 스케일</translation>
+        <translation>라인 타입 스케일</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>선 무게</translation>
+        <translation>선 가중치</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -626,7 +626,7 @@
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation>냉동</translation>
+        <translation>동결됨</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -651,7 +651,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation>꺼짐은 정지</translation>
+        <translation>끄면 동결</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
@@ -826,14 +826,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>센터 보기</translation>
+        <translation>보기 중심</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>대상 보기</translation>
+        <translation>보기 대상</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -958,17 +958,17 @@
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>ISO 대시보드</translation>
+        <translation>ISO 대시</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation>ISO 대시보드 공간</translation>
+        <translation>ISO 대시 공백</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO 롱 대시보드</translation>
+        <translation>ISO 롱 대시 도트</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>타격</translation>
+        <translation>단열재</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1123,12 +1123,12 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>파울</translation>
+        <translation>오수</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>파울 상승</translation>
+        <translation>오수 압송</translation>
     </message>
 </context>
 <context>

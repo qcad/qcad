@@ -222,12 +222,12 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Jednotka kreslenia</translation>
+        <translation>Jednotka výkresu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Typ čiary Mierka</translation>
+        <translation>Mierka typu čiary</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -678,7 +678,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation>Zmrazenie vypnuté</translation>
+        <translation>Vypnutie znamená zmrazenie</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -738,7 +738,7 @@
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation>Celková stupnica</translation>
+        <translation>Celková mierka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -768,12 +768,12 @@
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Rozšírenie linky</translation>
+        <translation>Presah vynášacej čiary</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Posun predlžovacej linky</translation>
+        <translation>Odsadenie vynášacej čiary</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -788,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Veľkosť zaškrtnutia</translation>
+        <translation>Veľkosť značky</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architectur tick</translation>
+        <translation>Architektonická značka</translation>
     </message>
     <message>
         <location line="+1"/>

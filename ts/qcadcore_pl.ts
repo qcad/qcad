@@ -421,7 +421,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Rodzic Id</translation>
+        <translation>Identyfikator rodzica</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -608,14 +608,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Wyświetl środek</translation>
+        <translation>Środek widoku</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Wyświetl cel</translation>
+        <translation>Cel widoku</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -704,7 +704,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation>Podstawa wprowadzająca</translation>
+        <translation>Punkt bazowy wstawienia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -718,7 +718,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Maks. długość</translation>
+        <translation>Maks. zakresy</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architectur tick</translation>
+        <translation>Kreska architektoniczna</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>Gradzinowanie</translation>
+        <translation>Izolacja</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1053,7 +1053,7 @@
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>Ścieżki</translation>
+        <translation>Tory</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Moc napowietrzna</translation>
+        <translation>Napowietrzna linia energetyczna</translation>
     </message>
     <message>
         <location line="+2"/>

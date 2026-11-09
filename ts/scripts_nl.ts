@@ -3075,13 +3075,13 @@ Wilt u deze herstellen?</translation>
         <location line="+14"/>
         <location line="+50"/>
         <source>Upper tolerance</source>
-        <translation>Opper tolerantie</translation>
+        <translation>Bovenste tolerantie</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Lagere tolerantie</translation>
+        <translation>Onderste tolerantie</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3612,32 +3612,32 @@ is al in de lijst.</translation>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation>Niet-ondersteunde of ongeldige CSV-stijl, genegeerd. Tekstblok: %1</translation>
+        <translation>Niet-ondersteunde of ongeldige CSV-stijl, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation>Instellen nieuwe relatieve oorsprong mislukt, genegeerd. Tekstblok: %1</translation>
+        <translation>Instellen nieuwe relatieve oorsprong mislukt, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation>Instellen nieuwe afrondingsstraal mislukt, genegeerd. Tekstblok: %1</translation>
+        <translation>Instellen nieuwe afrondingsstraal mislukt, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation>Het afronden van polylijnen vereist QCAD Professional, genegeerd. Tekstblok: %1</translation>
+        <translation>Het afronden van polylijnen vereist QCAD Professional, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Kan niet overschakelen naar niet-bestaande lagen, genegeerd. Tekstblok: %1%2 Laag: %3</translation>
+        <translation>Kan niet overschakelen naar niet-bestaande lagen, genegeerd. Tekstregel: %1%2 Laag: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation>Geen correcte set actieve &apos;Layer&apos; schakelaar, genegeerd. Tekstblok: %1</translation>
+        <translation>Geen correcte set actieve &apos;Layer&apos; schakelaar, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3647,42 +3647,42 @@ is al in de lijst.</translation>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Kan niet bestaande lagen niet verbergen, genegeerd. Tekstblok: %1%2 Laag: %3</translation>
+        <translation>Kan niet-bestaande lagen niet verbergen, genegeerd. Tekstregel: %1%2 Laag: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation>Geen correcte &apos;HideLayer&apos; schakelaar, genegeerd. Tekstblok: %1</translation>
+        <translation>Geen correcte &apos;HideLayer&apos; schakelaar, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Kan niet-bestaande lagen niet bevriezen, genegeerd. Tekstblok: %1%2 Laag: %3</translation>
+        <translation>Kan niet-bestaande lagen niet bevriezen, genegeerd. Tekstregel: %1%2 Laag: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation>Geen correcte &apos;FreezeLayer&apos; schakelaar, genegeerd. Tekstblok: %1</translation>
+        <translation>Geen correcte &apos;FreezeLayer&apos; schakelaar, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Kan niet bestaande lagen niet vergrendelen, genegeerd. Tekstblok: %1%2 Laag: %3</translation>
+        <translation>Kan niet-bestaande lagen niet vergrendelen, genegeerd. Tekstregel: %1%2 Laag: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation>Geen correcte &apos;LockLayer&apos; schakelaar, genegeerd. Tekstblok: %1</translation>
+        <translation>Geen correcte &apos;LockLayer&apos; schakelaar, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Kan niet-bestaande lagen niet toestaan, genegeerd. Tekstblok: %1%2 Laag: %3</translation>
+        <translation>Kan niet-bestaande lagen niet toestaan, genegeerd. Tekstregel: %1%2 Laag: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation>Geen correcte &apos;AllowLayer&apos; schakelaar, genegeerd. Tekstblok: %1</translation>
+        <translation>Geen correcte &apos;AllowLayer&apos; schakelaar, genegeerd. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3978,7 +3978,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation>3de graad fit point Spline, minder dan 3 referenties.</translation>
+        <translation>Spline van de 3e graad met plaatsingspunten, minder dan 3 referenties.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4023,7 +4023,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation>Niet-ondersteunde methode. Tekstblok: %1</translation>
+        <translation>Niet-ondersteunde methode. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4038,12 +4038,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation>Geen correcte invoer, genegeerd. Tekstblok: %1 &gt; %2</translation>
+        <translation>Geen correcte invoer, genegeerd. Tekstregel: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Ingevoerde tekst: %1 van %2 tekstblokken</translation>
+        <translation>Verwerkte items: %1 van %2 tekstregels</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4053,67 +4053,67 @@ is al in de lijst.</translation>
     <message>
         <location line="+227"/>
         <source>Attributes empty. Text line: %1</source>
-        <translation>Attributen leeg. Tekstblok: %1</translation>
+        <translation>Attributen leeg. Tekstregel: %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation>Geen correcte laagnaam, genegeerd. Tekstblok: %1%2 Naam: %3</translation>
+        <translation>Geen correcte laagnaam, genegeerd. Tekstregel: %1%2 Naam: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Laag bestaat niet, genegeerd. Tekstblok: %1%2 Laag: %3</translation>
+        <translation>Laag bestaat niet, genegeerd. Tekstregel: %1%2 Laag: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation>Geen correcte kleur, genegeerd. Tekstblok: %1%2 Kleur: %3</translation>
+        <translation>Geen correcte kleur, genegeerd. Tekstregel: %1%2 Kleur: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Geen correct Lijngewicht, genegeerd. Tekstblok: %1%2 Gewicht: %3</translation>
+        <translation>Geen correcte lijndikte, genegeerd. Tekstregel: %1%2 Dikte: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>Geen correct Linetype, genegeerd. Tekstblok: %1%2 Type: %3</translation>
+        <translation>Geen correct Linetype, genegeerd. Tekstregel: %1%2 Type: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Geen correcte Linetype schaal, genegeerd. Tekstblok: %1%2 Schaal: %3</translation>
+        <translation>Geen correcte Linetype schaal, genegeerd. Tekstregel: %1%2 Schaal: %3</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation>Niet-ondersteund attribuut, genegeerd. Tekstblok: %1 &gt; %2</translation>
+        <translation>Niet-ondersteund attribuut, genegeerd. Tekstregel: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation>Geen correcte laagnaam. Tekstblok: %1%2 Naam: %3</translation>
+        <translation>Geen correcte laagnaam. Tekstregel: %1%2 Naam: %3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation>De hoofdlaag bestaat niet. Tekstblok: %1%2 Laag: %3</translation>
+        <translation>De hoofdlaag bestaat niet. Tekstregel: %1%2 Laag: %3</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation>Geen correcte kleur. Tekstblok: %1%2 Kleur: %3</translation>
+        <translation>Geen correcte kleur. Tekstregel: %1%2 Kleur: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Geen correct Lijngewicht. Tekstblok: %1%2 Gewicht: %3</translation>
+        <translation>Geen correcte lijndikte. Tekstregel: %1%2 Dikte: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation>Geen correct Linetype. Tekstblok: %1%2 Type: %3</translation>
+        <translation>Geen correct Linetype. Tekstregel: %1%2 Type: %3</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4338,7 +4338,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Object is niet een blok referentie.</translation>
+        <translation>Object is geen blokreferentie.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4496,7 +4496,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>Blok referentie kiezen</translation>
+        <translation>Blokreferentie kiezen</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
@@ -5822,12 +5822,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation>Blok referenties samen met hun attributen selecteren</translation>
+        <translation>Blokreferenties samen met hun attributen selecteren</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation>Verberg attributen als blok referenties verborgen zijn</translation>
+        <translation>Verberg attributen als blokreferenties verborgen zijn</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -6789,7 +6789,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Bestaande blokken&lt;br&gt;van detekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
+        <translation>Bestaande blokken&lt;br&gt;in de tekening met blokken&lt;br&gt;van het klembord overschrijven</translation>
     </message>
 </context>
 <context>
@@ -7940,7 +7940,7 @@ is al in de lijst.</translation>
     <message>
         <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Bestaande blokken&lt;br&gt;van detekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
+        <translation>Bestaande blokken&lt;br&gt;in de tekening met blokken&lt;br&gt;van het klembord overschrijven</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
@@ -8296,7 +8296,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Objecten in blokken op laag 0 nemen attributen en zichtbaarheid van blok referentie aan.</translation>
+        <translation>Objecten in blokken op laag 0 nemen attributen en zichtbaarheid van blokreferentie aan.</translation>
     </message>
 </context>
 <context>
@@ -9742,7 +9742,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>&amp;Open</translation>
+        <translation>&amp;Openen</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9956,7 +9956,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Bestaande blokken&lt;br&gt;van detekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
+        <translation>Bestaande blokken&lt;br&gt;in de tekening met blokken&lt;br&gt;van het klembord overschrijven</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
@@ -12989,7 +12989,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+275"/>
         <source>&amp;Undo</source>
-        <translation>&amp;Herstel</translation>
+        <translation>O&amp;ngedaan maken</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14023,7 +14023,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Weergaven</translation>
+        <translation>Viewports</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -14046,7 +14046,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Layout - Weergaven</translation>
+        <translation>Layout - Viewports</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14056,7 +14056,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Weergaven</translation>
+        <translation>Viewports</translation>
     </message>
 </context>
 <context>
@@ -14667,22 +14667,22 @@ is al in de lijst.</translation>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>Blok referenties</translation>
+        <translation>Blokreferenties</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation>Blok referentie</translation>
+        <translation>Blokreferentie</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Blok referenties en attributen</translation>
+        <translation>Blokreferenties en attributen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Blok referentie en attributen</translation>
+        <translation>Blokreferentie en attributen</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14989,12 +14989,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Weergaven</translation>
+        <translation>Viewports</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Weergave</translation>
+        <translation>Viewport</translation>
     </message>
     <message>
         <location line="+2"/>

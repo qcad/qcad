@@ -582,7 +582,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>ตัวจัดการ</translation>
+        <translation>แฮนเดิล</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -685,7 +685,7 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>ย้อนกลับ</translation>
+        <translation>กลับหลัง</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -953,7 +953,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation>ผี</translation>
+        <translation>แฟนทอม</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1123,12 +1123,12 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>สกปรก</translation>
+        <translation>น้ำเสีย</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>สกปรกขึ้น</translation>
+        <translation>น้ำเสียสูบส่ง</translation>
     </message>
 </context>
 <context>

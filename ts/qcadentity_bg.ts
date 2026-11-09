@@ -281,7 +281,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation>Ъгъл на зачистване</translation>
+        <translation>Ъгъл на обхват</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -340,14 +340,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>Край на ред 1</translation>
+        <translation>Край на линия 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>Край на ред 2</translation>
+        <translation>Край на линия 2</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -406,7 +406,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-19"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Произход</translation>
+        <translation>Начало</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -441,7 +441,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation>Толерантност</translation>
+        <translation>Толеранс</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -638,7 +638,7 @@
     <message>
         <location line="-7"/>
         <source>From Entity</source>
-        <translation>От субекта</translation>
+        <translation>От обекта</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -917,7 +917,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>Подходяща точка</translation>
+        <translation>Точка на напасване</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -939,19 +939,19 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Начало на тангентата</translation>
+        <translation>Начална тангента</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation>Използване на End Tangent</translation>
+        <translation>Използване на крайна тангента</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation>Край на тангентата</translation>
+        <translation>Крайна тангента</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>

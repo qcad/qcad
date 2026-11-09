@@ -24,7 +24,7 @@
     <message>
         <location line="-164"/>
         <source>Build Date:</source>
-        <translation>Data construcției:</translation>
+        <translation>Data compilării:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -163,7 +163,7 @@
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation>Dosar:</translation>
+        <translation>Fișier:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -226,7 +226,7 @@
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation>Icoane</translation>
+        <translation>Pictograme</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -372,7 +372,7 @@ modificările preferințelor să intre în vigoare.</translation>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation>Se resetează la &quot;nedefinit</translation>
+        <translation>Resetare la &apos;Nedefinit&apos;</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -647,7 +647,7 @@ modificările preferințelor să intre în vigoare.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -838,7 +838,7 @@ modificările preferințelor să intre în vigoare.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
@@ -866,7 +866,7 @@ modificările preferințelor să intre în vigoare.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -1064,7 +1064,7 @@ Doriți să îl recuperați?</translation>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation>Batch2Pdf blocuri de aspect vizibile Batch2Pdf</translation>
+        <translation>&amp;Batch2Pdf blocuri de layout vizibile</translation>
     </message>
 </context>
 <context>
@@ -1260,7 +1260,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Adăugați o marjă suplimentară pentru a compensa greutatea liniei</translation>
+        <translation>Adăugați o marjă suplimentară pentru a compensa grosimea liniei</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1366,7 +1366,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>Fix nume de blocuri</translation>
+        <translation>&amp;Corectați numele blocurilor</translation>
     </message>
 </context>
 <context>
@@ -1410,7 +1410,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>ID-ul de referință al blocului:</translation>
+        <translation>ID-ul referinței de bloc:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1428,7 +1428,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>Lista de blocuri de export (CSV)</translation>
+        <translation>Exportați lista de blocuri (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1438,7 +1438,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>Lista de blocuri de export</translation>
+        <translation>&amp;Exportați lista de blocuri</translation>
     </message>
 </context>
 <context>
@@ -1456,7 +1456,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Lista de referințe a blocurilor de export</translation>
+        <translation>&amp;Exportați lista de referințe de bloc</translation>
     </message>
 </context>
 <context>
@@ -1479,7 +1479,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>Segmentul Break out</translation>
+        <translation>&amp;Decupare segment</translation>
     </message>
 </context>
 <context>
@@ -1540,7 +1540,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>Break out Manual</translation>
+        <translation>Decupare &amp;manuală</translation>
     </message>
 </context>
 <context>
@@ -1741,7 +1741,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -1833,7 +1833,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -1972,7 +1972,7 @@ Doriți să îl recuperați?</translation>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -2086,7 +2086,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
@@ -2284,7 +2284,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+3"/>
         <source>Coordinate</source>
-        <translation>Coordonați</translation>
+        <translation>Coordonată</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2335,7 +2335,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>Concentrează-te pe linia de comandă</translation>
+        <translation>&amp;Focalizare pe linia de comandă</translation>
     </message>
 </context>
 <context>
@@ -2445,7 +2445,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>Copie cu referință</translation>
+        <translation>&amp;Copiere cu referință</translation>
     </message>
 </context>
 <context>
@@ -2458,7 +2458,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation>Începeți:</translation>
+        <translation>Început:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2573,7 +2573,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>Tăiat cu referință</translation>
+        <translation>&amp;Tăiere cu referință</translation>
     </message>
 </context>
 <context>
@@ -2829,7 +2829,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation>Dimensiune locația arcului</translation>
+        <translation>Poziția arcului de cotă</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
@@ -2888,7 +2888,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Locația funcției</translation>
+        <translation>Poziția elementului</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3084,7 +3084,7 @@ Doriți să îl recuperați?</translation>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Toleranță mai mică</translation>
+        <translation>Toleranță inferioară</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3107,7 +3107,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Dimensiunea Scalei</translation>
+        <translation>Scara dimensiunilor</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3166,7 +3166,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
         <source>Dimension Style</source>
-        <translation>Dimensiune Stil</translation>
+        <translation>Stil de dimensiune</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3226,7 +3226,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation>Săgeată stil</translation>
+        <translation>Stil de săgeată</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -3236,7 +3236,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Bifă arhitectură</translation>
+        <translation>Marcaj arhitectural</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3333,7 +3333,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Distanța/unghiul de afișare</translation>
+        <translation>Afișare &amp;distanță/unghi</translation>
     </message>
 </context>
 <context>
@@ -3369,7 +3369,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation>Modul Proiect</translation>
+        <translation>Mod &amp;schiță</translation>
     </message>
 </context>
 <context>
@@ -3535,7 +3535,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segmentul Redo</translation>
+        <translation>Refacerea segmentului</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3545,7 +3545,7 @@ este deja în listă.</translation>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Măturați</translation>
+        <translation>Baleiaj</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -4006,7 +4006,7 @@ este deja în listă.</translation>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation>Horz. aliniere Invalabil.</translation>
+        <translation>Aliniere orizontală invalidă.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4046,7 +4046,7 @@ este deja în listă.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Intrări turnate: %1 din %2 linii de text</translation>
+        <translation>Intrări procesate: %1 din %2 linii de text</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4056,12 +4056,12 @@ este deja în listă.</translation>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>Nimic turnat.</translation>
+        <translation>Nimic procesat.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Draw from CSV</source>
-        <translation>Extragere din CSV</translation>
+        <translation>Desenare din CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4096,17 +4096,17 @@ este deja în listă.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Nu este un Lineweight corect, ignorat. Linie de text: %1%2 Greutate: %3</translation>
+        <translation>Nu este o grosime de linie corectă, ignorată. Linie de text: %1%2 Grosime: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>Nu este un Linetype corect, ignorat. Linie de text: %1%2 Tip: %3</translation>
+        <translation>Nu este un tip de linie corect, ignorat. Linie de text: %1%2 Tip: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Nu este o scară Linetype corectă, ignorată. Linie de text: %1%2 Scară: %3</translation>
+        <translation>Nu este o scară corectă a tipului de linie, ignorată. Linie de text: %1%2 Scară: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4131,12 +4131,12 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Nu este un Lineweight corect. Linia de text: %1%2 Greutate: %3</translation>
+        <translation>Nu este o grosime de linie corectă. Linie de text: %1%2 Grosime: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation>Nu este un Linetype corect. Linie de text: %1%2 Tip: %3</translation>
+        <translation>Nu este un tip de linie corect. Linie de text: %1%2 Tip: %3</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4156,7 +4156,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Extragere din CSV</translation>
+        <translation>&amp;Desenare din CSV</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4222,7 +4222,7 @@ este deja în listă.</translation>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Mătură:</translation>
+        <translation>Baleiaj:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4232,7 +4232,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segmentul Redo</translation>
+        <translation>Refacerea segmentului</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -4272,7 +4272,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>Duplicat</translation>
+        <translation>&amp;Duplicare</translation>
     </message>
 </context>
 <context>
@@ -4891,7 +4891,7 @@ este deja în listă.</translation>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation>Verticile polilinii de ieșire</translation>
+        <translation>&amp;Afișează vârfurile poliliniei</translation>
     </message>
 </context>
 <context>
@@ -4977,7 +4977,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
 </context>
 <context>
@@ -5670,7 +5670,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation>Flip orizontal</translation>
+        <translation>Întoarcere ori&amp;zontală</translation>
     </message>
 </context>
 <context>
@@ -5678,7 +5678,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation>Flip Vertical</translation>
+        <translation>Întoarcere verti&amp;cală</translation>
     </message>
 </context>
 <context>
@@ -5787,7 +5787,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Right-Click</source>
-        <translation>Faceți clic dreapta pe</translation>
+        <translation>Clic dreapta</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5992,27 +5992,27 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Tipuri de linii și greutăți de linie</translation>
+        <translation>Tipuri de linie și grosimi de linie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Greutatea implicită a liniei:</translation>
+        <translation>Grosimea de linie implicită:</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Scala modelelor de tip linetype în funcție de greutatea liniei</translation>
+        <translation>Scalați modelele tipurilor de linie în funcție de grosimea liniei</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Scară de modelare pentru greutatea liniei 0,00 mm:</translation>
+        <translation>Scara modelului pentru grosimea de linie 0,00 mm:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation>Aplicarea ponderii liniei la puncte</translation>
+        <translation>Aplicați grosimea liniei la puncte</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6062,7 +6062,7 @@ este deja în listă.</translation>
     <message>
         <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation>Pasul unghiului minim pentru redarea arcurilor (grade):</translation>
+        <translation>Pasul unghiular minim pentru redarea arcelor (grade):</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -6112,12 +6112,12 @@ este deja în listă.</translation>
     <message>
         <location line="+9"/>
         <source>Screen-based lineweight scale factor:</source>
-        <translation>Factor de scară pentru greutățile de linie bazate pe ecran:</translation>
+        <translation>Factor de scară pentru grosimile de linie bazate pe ecran:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
-        <translation>Factor aplicat greutăților de linie când sunt afișate greutăți de linie bazate pe ecran (de ex. 2 afișează greutățile de linie bazate pe ecran de două ori mai late)</translation>
+        <translation>Factor aplicat grosimilor de linie când sunt afișate grosimi de linie bazate pe ecran (de ex. 2 afișează grosimile de linie bazate pe ecran de două ori mai late)</translation>
     </message>
     <message>
         <location line="+143"/>
@@ -6157,7 +6157,7 @@ este deja în listă.</translation>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation>Context:</translation>
+        <translation>Fundal:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6177,7 +6177,7 @@ este deja în listă.</translation>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation>Rețea de urmărire inactivă:</translation>
+        <translation>Rețea de ochire inactivă:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6729,7 +6729,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation>Ca Block:</translation>
+        <translation>Ca bloc:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6807,12 +6807,12 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Puncte de import</translation>
+        <translation>Importați puncte</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>Puncte de import</translation>
+        <translation>&amp;Importați puncte</translation>
     </message>
 </context>
 <context>
@@ -6891,7 +6891,7 @@ este deja în listă.</translation>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>Zona</translation>
+        <translation>Arie</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -6902,7 +6902,7 @@ este deja în listă.</translation>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation>Zona cercului:</translation>
+        <translation>Aria cercului:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6930,7 +6930,7 @@ este deja în listă.</translation>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>Zona arcului de elipsă:</translation>
+        <translation>Aria arcului de elipsă:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6959,13 +6959,13 @@ este deja în listă.</translation>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation>Zona elipsei:</translation>
+        <translation>Aria elipsei:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>Zona arcului:</translation>
+        <translation>Aria arcului:</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -7015,7 +7015,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Zona arcului/cercului/elipsei</translation>
+        <translation>Aria arcului/cercului/elipsei</translation>
     </message>
 </context>
 <context>
@@ -7028,7 +7028,7 @@ este deja în listă.</translation>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation>Zona poligonală:</translation>
+        <translation>Aria poligonului:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7048,7 +7048,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>Zona poligonală</translation>
+        <translation>Aria poli&amp;gonului</translation>
     </message>
 </context>
 <context>
@@ -7087,7 +7087,7 @@ este deja în listă.</translation>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation>Zona închisă:</translation>
+        <translation>Aria închisă:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7102,7 +7102,7 @@ este deja în listă.</translation>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Zona hașurată:</translation>
+        <translation>Aria hașurată:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7112,7 +7112,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Zona hașurată diferențială:</translation>
+        <translation>Aria hașurată diferențială:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7127,7 +7127,7 @@ este deja în listă.</translation>
     <message>
         <location line="+9"/>
         <source>2D area Centroid</source>
-        <translation>zona 2D Centroid</translation>
+        <translation>Centroid 2D al ariei</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -7160,7 +7160,7 @@ este deja în listă.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Formă netransmisă din bucla de hașură.</translation>
+        <translation>Formă netratată din bucla de hașură.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7170,12 +7170,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation>Zona Centroid</translation>
+        <translation>Centroidul &amp;ariei</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation>Crearea unei zone 2D Centroid pentru o entitate selectată</translation>
+        <translation>Creați un centroid 2D al ariei pentru o entitate selectată</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7231,7 +7231,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation>Zona</translation>
+        <translation>Arie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7530,7 +7530,7 @@ este deja în listă.</translation>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>zonă (informativ):</translation>
+        <translation>arie (informativ):</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7763,12 +7763,12 @@ este deja în listă.</translation>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation>Mai puțin de</translation>
+        <translation>Mai mic decât</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>La</translation>
+        <translation>Arond</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7836,12 +7836,12 @@ este deja în listă.</translation>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation>Flip bloc&lt;br&gt;horizontal</translation>
+        <translation>Întoarceți blocul&lt;br&gt;orizontal</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation>Blocul Flip&lt;br&gt;vertical</translation>
+        <translation>Întoarceți blocul&lt;br&gt;vertical</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7852,7 +7852,7 @@ este deja în listă.</translation>
         <location line="+17"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation>Array de blocuri</translation>
+        <translation>Matrice de blocuri</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
@@ -7877,7 +7877,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>Blocul de inserție</translation>
+        <translation>&amp;Inserare bloc</translation>
     </message>
 </context>
 <context>
@@ -7950,7 +7950,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>Blocul de inserție</translation>
+        <translation>&amp;Inserare bloc</translation>
     </message>
 </context>
 <context>
@@ -7991,7 +7991,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>Selecție inversă</translation>
+        <translation>&amp;Inversare selecție</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8096,7 +8096,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation>Grilă izometrică Off</translation>
+        <translation>Grilă izometrică &amp;dezactivată</translation>
     </message>
 </context>
 <context>
@@ -8218,7 +8218,7 @@ este deja în listă.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Greutatea implicită a liniei pentru straturile noi:</translation>
+        <translation>Grosimea de linie implicită pentru straturile noi:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -8228,7 +8228,7 @@ este deja în listă.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Greutatea implicită a liniei pentru stratul 0:</translation>
+        <translation>Grosimea de linie implicită pentru stratul 0:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
@@ -8258,7 +8258,7 @@ este deja în listă.</translation>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation>Congelarea tuturor straturilor</translation>
+        <translation>Înghețarea tuturor straturilor</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -8301,7 +8301,7 @@ este deja în listă.</translation>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Entitățile din blocurile de pe stratul 0 preiau atributele și vizibilitatea blocului de referință.</translation>
+        <translation>Entitățile din blocurile de pe stratul 0 preiau atributele și vizibilitatea referinței de bloc.</translation>
     </message>
 </context>
 <context>
@@ -8350,12 +8350,12 @@ este deja în listă.</translation>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Greutate în linie:</translation>
+        <translation>Grosime de linie:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation>Linetype:</translation>
+        <translation>Tip de linie:</translation>
     </message>
 </context>
 <context>
@@ -8446,12 +8446,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Suma:</translation>
+        <translation>Valoare:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Suma de prelungit sau de scurtat (negativ)</translation>
+        <translation>Valoarea de prelungire sau scurtare (negativă)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -8489,7 +8489,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Rază</translation>
+        <translation>Semidreaptă</translation>
     </message>
 </context>
 <context>
@@ -8507,7 +8507,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Secvență de închidere</translation>
+        <translation>Închide secvența</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8517,7 +8517,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segmentul Redo</translation>
+        <translation>Refacerea segmentului</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8701,12 +8701,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Box Joint de la 2 puncte</translation>
+        <translation>Îmbinare în dinți drepți din 2 &amp;puncte</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Degetele, fantele și tencuielile pentru articulații de tip &quot;Draw Box</translation>
+        <translation>Desenați degetele, fantele și cepurile unei îmbinări în dinți drepți</translation>
     </message>
 </context>
 <context>
@@ -8724,7 +8724,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Numărul de cozi de porumbel:</translation>
+        <translation>Numărul de cozi de rândunică:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8734,7 +8734,7 @@ este deja în listă.</translation>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Gradient Dovetail:</translation>
+        <translation>Înclinarea cozii de rândunică:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -9181,7 +9181,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Oglindă</translation>
+        <translation>Oglindire</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9206,7 +9206,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>Oglindă</translation>
+        <translation>&amp;Oglindire</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9219,7 +9219,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Opțiuni de oglinzi</translation>
+        <translation>Opțiuni de oglindire</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9454,7 +9454,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Punct de setare</translation>
+        <translation>Setați punctul</translation>
     </message>
 </context>
 <context>
@@ -9475,7 +9475,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>MOL Files</source>
-        <translation>Dosare MOL</translation>
+        <translation>Fișiere MOL</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9579,7 +9579,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Desene de deschidere:</translation>
+        <translation>Se deschide desenul:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9599,7 +9599,7 @@ este deja în listă.</translation>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation>Fișier nedescoperit.</translation>
+        <translation>Fișierul nu a fost găsit.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9739,7 +9739,7 @@ este deja în listă.</translation>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Deschis Desen</translation>
+        <translation>Deschidere desen</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9837,7 +9837,7 @@ este deja în listă.</translation>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Da:</translation>
+        <translation>Dreapta:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9882,7 +9882,7 @@ este deja în listă.</translation>
     <message>
         <location line="+16"/>
         <source>Point size (mm):</source>
-        <translation>Dimensiunea vârfului (mm):</translation>
+        <translation>Dimensiunea punctului (mm):</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -9895,7 +9895,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>Panoramă Zoom</translation>
+        <translation>&amp;Panoramare / Zoom</translation>
     </message>
 </context>
 <context>
@@ -9994,7 +9994,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation>Stilou</translation>
+        <translation>Peniță</translation>
     </message>
     <message>
         <location line="+73"/>
@@ -10249,7 +10249,7 @@ este deja în listă.</translation>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Segmentul Break Out</translation>
+        <translation>Decupare segment</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
@@ -10306,7 +10306,7 @@ este deja în listă.</translation>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation>Primul și ultimul segment al simbolului de pauză sunt înclinate</translation>
+        <translation>Primul și ultimul segment al simbolului de întrerupere sunt înclinate</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10346,7 +10346,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Expand Tree</source>
-        <translation>Extinde copacul</translation>
+        <translation>Extinde arborele</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10598,7 +10598,7 @@ este deja în listă.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Complexitatea maximă pentru calculul automat al lungimii trapei:</translation>
+        <translation>Complexitatea maximă pentru calculul automat al lungimii hașurii:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10723,7 +10723,7 @@ este deja în listă.</translation>
     <message>
         <location line="+422"/>
         <source>*VARIES*</source>
-        <translation>*VARIANTE*</translation>
+        <translation>*VARIAZĂ*</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10755,12 +10755,12 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Mâner:</translation>
+        <translation>Handle:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>Linetype Scale:</translation>
+        <translation>Scală tip linie:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -10942,7 +10942,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation>Restricții Off</translation>
+        <translation>Restricții &amp;dezactivate</translation>
     </message>
 </context>
 <context>
@@ -10966,7 +10966,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>Reverse</translation>
+        <translation>&amp;Inversare</translation>
     </message>
 </context>
 <context>
@@ -11067,7 +11067,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>Rotiți doi</translation>
+        <translation>Rotire d&amp;ublă</translation>
     </message>
 </context>
 <context>
@@ -11075,7 +11075,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Rotiți două opțiuni</translation>
+        <translation>Opțiuni de rotire dublă</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11191,12 +11191,12 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>Rotund</translation>
+        <translation>&amp;Rotunjire</translation>
     </message>
 </context>
 <context>
@@ -11229,7 +11229,7 @@ este deja în listă.</translation>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sunteți pe cale să rulați următorul(e) script(e):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Acest script ar putea să vă modifice desenele, să vă modifice sau să vă șteargă fișierele sau să vă acceseze conexiunea de rețea.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Se recomandă cu tărie să rulați numai scripturi din surse de încredere.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sunteți pe cale să rulați următorul(e) script(e):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Acest script ar putea să vă modifice desenele, să vă modifice sau să vă șteargă fișierele sau să vă acceseze conexiunea de rețea.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Se recomandă cu tărie să rulați numai scripturi din surse de încredere.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11335,12 +11335,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation>Dialogul File</translation>
+        <translation>Dialog de fișiere</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation>Folosiți dialogul cu fișierul de sistem</translation>
+        <translation>Utilizați dialogul de fișiere al sistemului</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -11489,7 +11489,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>Scară</translation>
+        <translation>&amp;Scalare</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
@@ -11502,7 +11502,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Opțiuni de scară</translation>
+        <translation>Opțiuni de scalare</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11625,7 +11625,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation>Prin culoare</translation>
+        <translation>După culoare</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11648,7 +11648,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>Prin mâner</translation>
+        <translation>După handle</translation>
     </message>
 </context>
 <context>
@@ -11656,12 +11656,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Selecție după mâner</translation>
+        <translation>Selecție după handle</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Mâner (hexagonal):</translation>
+        <translation>Handle (hex):</translation>
     </message>
 </context>
 <context>
@@ -11979,7 +11979,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Raza de acțiune:</translation>
+        <translation>Rază:</translation>
     </message>
 </context>
 <context>
@@ -12044,7 +12044,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
-        <translation>Prima parte</translation>
+        <translation>Prima latură</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12054,7 +12054,7 @@ este deja în listă.</translation>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation>A doua parte</translation>
+        <translation>A doua latură</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12074,7 +12074,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation>Poligon (Lateral, lateral)</translation>
+        <translation>Poligo&amp;n (latură, latură)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12326,7 +12326,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation>Coordonați</translation>
+        <translation>&amp;Coordonată</translation>
     </message>
 </context>
 <context>
@@ -12425,12 +12425,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>Manualul de distanță</translation>
+        <translation>&amp;Distanță manuală</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation>Distanța instantanee între 2 puncte</translation>
+        <translation>Ancorare la distanță între 2 puncte</translation>
     </message>
 </context>
 <context>
@@ -12446,7 +12446,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Gratuit</translation>
+        <translation>&amp;Liber</translation>
     </message>
 </context>
 <context>
@@ -12480,7 +12480,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Manual de intersecții</translation>
+        <translation>Intersecție manuală</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12495,7 +12495,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Manual de intersecții</translation>
+        <translation>&amp;Intersecție manuală</translation>
     </message>
 </context>
 <context>
@@ -12511,7 +12511,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>Manual de mijloc</translation>
+        <translation>&amp;Mijloc manual</translation>
     </message>
 </context>
 <context>
@@ -12741,7 +12741,7 @@ este deja în listă.</translation>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation>Conversia automată a spline-urilor în linii / arcuri, dacă este cazul</translation>
+        <translation>Conversia automată a spline-urilor în linii / arce, dacă este cazul</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12888,7 +12888,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>Verificați toate</translation>
+        <translation>Bifați toate</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -13039,12 +13039,12 @@ este deja în listă.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>Subscript</translation>
+        <translation>&amp;Indice</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>Superscript</translation>
+        <translation>&amp;Exponent</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -13059,7 +13059,7 @@ este deja în listă.</translation>
     <message>
         <location line="+349"/>
         <source>Others...</source>
-        <translation>Alții...</translation>
+        <translation>Altele...</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -13134,7 +13134,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Spațiu fără pauză</translation>
+        <translation>Spațiu neseparator</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13246,7 +13246,7 @@ este deja în listă.</translation>
     <message>
         <location line="+39"/>
         <source>Text Geometry</source>
-        <translation>Text Geometrie</translation>
+        <translation>Geometria textului</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13281,12 +13281,12 @@ este deja în listă.</translation>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation>Centrul de sus</translation>
+        <translation>Sus centru</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Right</source>
-        <translation>Mijlocul drept</translation>
+        <translation>Mijloc dreapta</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13296,27 +13296,27 @@ este deja în listă.</translation>
     <message>
         <location line="+29"/>
         <source>Middle Center</source>
-        <translation>Centrul Mijlociu</translation>
+        <translation>Mijloc centru</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Left</source>
-        <translation>Mijlocul Stângii</translation>
+        <translation>Mijloc stânga</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Left</source>
-        <translation>Baza Stânga</translation>
+        <translation>Bază stânga</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Center</source>
-        <translation>Centrul de bază</translation>
+        <translation>Bază centru</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation>Baza dreapta</translation>
+        <translation>Bază dreapta</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13326,7 +13326,7 @@ este deja în listă.</translation>
     <message>
         <location line="+29"/>
         <source>Bottom Center</source>
-        <translation>Centrul inferior</translation>
+        <translation>Jos centru</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13499,7 +13499,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>Concentrați-vă pe matricea de instrumente</translation>
+        <translation>&amp;Focalizare pe matricea de instrumente</translation>
     </message>
 </context>
 <context>
@@ -13635,7 +13635,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation>Mișcare/Rotare</translation>
+        <translation>Mutare/Rotire</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -13744,7 +13744,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Trim Ambele</translation>
+        <translation>Decupare am&amp;bele</translation>
     </message>
 </context>
 <context>
@@ -13752,7 +13752,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation>Script Tutoriale</translation>
+        <translation>&amp;Tutoriale de scripturi</translation>
     </message>
 </context>
 <context>
@@ -13997,17 +13997,17 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Vizualizați instrumentele</translation>
+        <translation>Instrumente de vizualizare</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>View</source>
-        <translation>Vezi</translation>
+        <translation>Vizualizare</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>Vezi</translation>
+        <translation>&amp;Vizualizare</translation>
     </message>
 </context>
 <context>
@@ -14074,7 +14074,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+512"/>
         <source>Dropped data not supported</source>
-        <translation>Nu se acceptă date abandonate</translation>
+        <translation>Datele plasate (drag and drop) nu sunt acceptate</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -14473,7 +14473,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>Fereastra Zoom</translation>
+        <translation>Zoom &amp;fereastră</translation>
     </message>
 </context>
 <context>
@@ -14642,7 +14642,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Vezi</translation>
+        <translation>Vizualizare</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14652,7 +14652,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation>Dimensiune Stil</translation>
+        <translation>Stil de dimensiune</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14682,22 +14682,22 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation>Blocul de referință</translation>
+        <translation>Referință de bloc</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Referințe și atribute ale blocurilor</translation>
+        <translation>Referințe de bloc și atribute</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Referință și atribute ale blocului</translation>
+        <translation>Referință de bloc și atribute</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation>Arcuri</translation>
+        <translation>Arce</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14803,12 +14803,12 @@ este deja în listă.</translation>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Dimensiuni ordonate</translation>
+        <translation>Dimensiuni de ordonată</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>Dimensiunea ordonată</translation>
+        <translation>Dimensiune de ordonată</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14903,12 +14903,12 @@ este deja în listă.</translation>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation>Raze</translation>
+        <translation>Semidrepte</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Rază</translation>
+        <translation>Semidreaptă</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14943,12 +14943,12 @@ este deja în listă.</translation>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>Urmează</translation>
+        <translation>Urme (Trace)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>Urmăriți</translation>
+        <translation>Urmă (Trace)</translation>
     </message>
     <message>
         <location line="+2"/>

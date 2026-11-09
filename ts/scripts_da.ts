@@ -24,7 +24,7 @@
     <message>
         <location line="-164"/>
         <source>Build Date:</source>
-        <translation>Bygningsdato:</translation>
+        <translation>Build-dato:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -183,7 +183,7 @@
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation>Kreditter</translation>
+        <translation>Bidragydere</translation>
     </message>
     <message>
         <location line="+176"/>
@@ -254,7 +254,7 @@
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation>Kreditter</translation>
+        <translation>Bidragydere</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -282,12 +282,12 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
-        <translation>Indstillinger for programmer</translation>
+        <translation>Programindstillinger</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Præferencer for tegning</translation>
+        <translation>Tegningsindstillinger</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -362,7 +362,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation>Stilling X:</translation>
+        <translation>Position X:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -442,7 +442,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation>Program &amp;præference</translation>
+        <translation>&amp;Programindstillinger</translation>
     </message>
 </context>
 <context>
@@ -503,7 +503,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation>&amp;2 punkter og vinkler</translation>
+        <translation>&amp;2 punkter og vinkel</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -710,7 +710,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>&amp;3 point</translation>
+        <translation>&amp;3 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -781,7 +781,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Nummer:</translation>
+        <translation>Antal:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -987,7 +987,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>Krydsninger</translation>
+        <translation>Skæringspunkter</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -997,7 +997,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation>Midterste punkter</translation>
+        <translation>Midtpunkter</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1022,7 +1022,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation>Netpunkter</translation>
+        <translation>Gitterpunkter</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1083,7 +1083,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>De to enheder kan ikke skråes.</translation>
+        <translation>De to enheder kan ikke affases.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -1318,7 +1318,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+51"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Foran eller bagud stående mellemrum.</translation>
+        <translation>Foranstillede eller efterstillede mellemrum.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1338,7 +1338,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
-        <translation>Der findes allerede en blok.</translation>
+        <translation>Blokken findes allerede.</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
@@ -1364,7 +1364,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>&amp;Fix Bloknavne</translation>
+        <translation>&amp;Ret bloknavne</translation>
     </message>
 </context>
 <context>
@@ -1436,7 +1436,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>&amp;Eksport af blokliste</translation>
+        <translation>&amp;Eksporter blokliste</translation>
     </message>
 </context>
 <context>
@@ -1444,7 +1444,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation>Eksport af liste over blokreferencer (CSV)</translation>
+        <translation>Eksporter liste over blokreferencer (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1454,7 +1454,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>&amp;Eksport af liste over blokreferencer</translation>
+        <translation>&amp;Eksporter liste over blokreferencer</translation>
     </message>
 </context>
 <context>
@@ -1518,12 +1518,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation>Første breakpoint</translation>
+        <translation>Første brudpunkt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Andet breakpoint</translation>
+        <translation>Andet brudpunkt</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1683,7 +1683,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+22"/>
         <source>&amp;Circle</source>
-        <translation>&amp;Circle</translation>
+        <translation>&amp;Cirkel</translation>
     </message>
 </context>
 <context>
@@ -1706,7 +1706,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>&amp;2 point</translation>
+        <translation>&amp;2 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1864,7 +1864,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>&amp;3 point</translation>
+        <translation>&amp;3 punkter</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2110,7 +2110,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation>&amp;Slut alle</translation>
+        <translation>&amp;Luk alle</translation>
     </message>
 </context>
 <context>
@@ -2126,7 +2126,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation>&amp;Slut</translation>
+        <translation>&amp;Luk</translation>
     </message>
 </context>
 <context>
@@ -2302,7 +2302,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation>Historiens størrelse:</translation>
+        <translation>Historikstørrelse:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2571,7 +2571,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>&amp;Skær med reference</translation>
+        <translation>&amp;Klip med reference</translation>
     </message>
 </context>
 <context>
@@ -2751,7 +2751,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation>i linjer, faste stoffer og tekster</translation>
+        <translation>i linjer, solider og tekster</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2804,12 +2804,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation>&amp;Tilpasset</translation>
+        <translation>&amp;Justeret</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw aligned dimension</source>
-        <translation>Tegn en tilpasset dimension</translation>
+        <translation>Tegn en justeret dimension</translation>
     </message>
 </context>
 <context>
@@ -2886,17 +2886,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Placering af funktionen</translation>
+        <translation>Placering af elementet</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Slutpunkt for lederen</translation>
+        <translation>Slutpunkt for henvisningslinje</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>&amp;Ordinate (X/Y)</translation>
+        <translation>&amp;Ordinat (X/Y)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2945,7 +2945,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation>&amp;Reset Label Position</translation>
+        <translation>&amp;Nulstil etiketposition</translation>
     </message>
 </context>
 <context>
@@ -3081,7 +3081,7 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Lavere tolerance</translation>
+        <translation>Nedre tolerance</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3091,7 +3091,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Tegning af skala</translation>
+        <translation>Tegningsskala</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3148,7 +3148,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>rum</translation>
+        <translation>mellemrum</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3198,7 +3198,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation>Forlængelse af linjeforlængelse:</translation>
+        <translation>Forlængelse af forlængelseslinje:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -3208,7 +3208,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation>Forlængerledningsforskydning:</translation>
+        <translation>Forskydning af forlængelseslinje:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -3228,7 +3228,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation>Pile</translation>
+        <translation>Pil</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3278,7 +3278,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation>P&amp;præcision:</translation>
+        <translation>P&amp;ræcision:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3330,7 +3330,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Visning &amp;afstand/vinkel</translation>
+        <translation>Vis &amp;afstand/vinkel</translation>
     </message>
 </context>
 <context>
@@ -3358,7 +3358,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>&amp;Divide</translation>
+        <translation>&amp;Opdel</translation>
     </message>
 </context>
 <context>
@@ -3552,7 +3552,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Tegning Fms Lanes</translation>
+        <translation>Tegn &amp;FMS-baner</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3795,7 +3795,7 @@ er allerede på listen.</translation>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation>Ligeværdige stillinger.</translation>
+        <translation>Identiske positioner.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3843,7 +3843,7 @@ er allerede på listen.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation>Ligeværdige stillinger 1-2.</translation>
+        <translation>Identiske positioner 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3865,7 +3865,7 @@ er allerede på listen.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation>Ligeværdige stillinger 1-3.</translation>
+        <translation>Identiske positioner 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3875,7 +3875,7 @@ er allerede på listen.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation>Ligeværdige stillinger 2-3.</translation>
+        <translation>Identiske positioner 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3883,18 +3883,18 @@ er allerede på listen.</translation>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation>I nærheden af co-lineære positioner.</translation>
+        <translation>Næsten kollineære positioner.</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation>Arc ugyldig.</translation>
+        <translation>Bue ugyldig.</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation>Center Ugyldig.</translation>
+        <translation>Centrum ugyldigt.</translation>
     </message>
     <message>
         <location line="-21"/>
@@ -3918,19 +3918,19 @@ er allerede på listen.</translation>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation>Ligeværdige stillinger 1-4.</translation>
+        <translation>Identiske positioner 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation>Ligeværdige stillinger 2-4.</translation>
+        <translation>Identiske positioner 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation>Ligeværdige stillinger 3-4.</translation>
+        <translation>Identiske positioner 3-4.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4252,7 +4252,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Tegning &amp;præferencer</translation>
+        <translation>Tegnings&amp;indstillinger</translation>
     </message>
 </context>
 <context>
@@ -4268,7 +4268,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>&amp;Duplikat</translation>
+        <translation>&amp;Dupliker</translation>
     </message>
 </context>
 <context>
@@ -4423,7 +4423,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Enheden er ikke en spline med pasningspunkter.</translation>
+        <translation>Enheden er ikke en spline med tilpasningspunkter.</translation>
     </message>
 </context>
 <context>
@@ -4470,7 +4470,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation>Rediger værktøjer</translation>
+        <translation>Redigeringsværktøjer</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4918,12 +4918,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>&amp;Savskægssamling</translation>
+        <translation>&amp;Svalehalesamling</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Tegn en skæreskifteforbindelse</translation>
+        <translation>Tegn en svalehalesamling</translation>
     </message>
 </context>
 <context>
@@ -5040,7 +5040,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation>&amp;Restørrelse af vindue</translation>
+        <translation>&amp;Tilpas vinduesstørrelse</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
@@ -5146,7 +5146,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation>&amp;Export XML</translation>
+        <translation>&amp;Eksporter XML</translation>
     </message>
 </context>
 <context>
@@ -5164,7 +5164,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation>&amp;Import XML</translation>
+        <translation>&amp;Importer XML</translation>
     </message>
 </context>
 <context>
@@ -5681,12 +5681,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation>Skyl historik for fortrydelser</translation>
+        <translation>Ryd fortrydelseshistorik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Er du sikker på, at du ønsker at skylle historikken over for fortrydede/genoprettede transaktioner?</translation>
+        <translation>Er du sikker på, at du vil rydde historikken for fortryd/gendan-transaktioner?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5696,7 +5696,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>Skyl &amp;Undo Historie</translation>
+        <translation>Ryd &amp;fortrydelseshistorik</translation>
     </message>
 </context>
 <context>
@@ -5727,7 +5727,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Tegn lim skødet</translation>
+        <translation>Tegn limflap</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
@@ -5782,7 +5782,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Right-Click</source>
-        <translation>Højreklik på</translation>
+        <translation>Højreklik</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5792,7 +5792,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+10"/>
         <source>Double-Click</source>
-        <translation>Dobbeltklik på</translation>
+        <translation>Dobbeltklik</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5892,7 +5892,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Ensartede gitterlinjer</translation>
+        <translation>Fuldt optrukne gitterlinjer</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5987,7 +5987,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Linjetyper og linjetyngder</translation>
+        <translation>Linjetyper og linjevægte</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6167,7 +6167,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation>Krydsfeltet:</translation>
+        <translation>Trådkors:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6197,7 +6197,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+12"/>
         <source>Grid:</source>
-        <translation>Net:</translation>
+        <translation>Gitter:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6287,7 +6287,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation>Udfyldning af krydsfeltet:</translation>
+        <translation>Udfyldning af krydsvalgfeltet:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6342,7 +6342,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation>Arbejdsindstillingens udvisningsfaktor:</translation>
+        <translation>Nedtoningsfaktor for arbejdssæt:</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -6360,7 +6360,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation>Skrifttype med lineal:</translation>
+        <translation>Skrifttype for lineal:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -6388,7 +6388,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+444"/>
         <source>Enable pan gesture</source>
-        <translation>Aktiver panorering af bevægelser</translation>
+        <translation>Aktiver panoreringsbevægelse</translation>
     </message>
     <message>
         <location line="-193"/>
@@ -6513,7 +6513,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Fast fyld</translation>
+        <translation>Massiv udfyldning</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6621,7 +6621,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Application Preferences</source>
-        <translation>Indstillinger for programmer</translation>
+        <translation>Programindstillinger</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6686,7 +6686,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation>&amp;Insæt Bitmap</translation>
+        <translation>&amp;Indsæt bitmap</translation>
     </message>
 </context>
 <context>
@@ -6724,7 +6724,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation>Som Block:</translation>
+        <translation>Som blok:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6802,12 +6802,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Importpunkter</translation>
+        <translation>Importer punkter</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>&amp;Import-point</translation>
+        <translation>&amp;Importer punkter</translation>
     </message>
 </context>
 <context>
@@ -6820,7 +6820,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Angiv stilling</translation>
+        <translation>Angiv position</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -6886,7 +6886,7 @@ er allerede på listen.</translation>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Areal</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -6897,7 +6897,7 @@ er allerede på listen.</translation>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation>Cirkelområde:</translation>
+        <translation>Cirkelareal:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6925,7 +6925,7 @@ er allerede på listen.</translation>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>Ellipsebuens område:</translation>
+        <translation>Ellipsebuens areal:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6939,7 +6939,7 @@ er allerede på listen.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>akkord:</translation>
+        <translation>korde:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -6954,13 +6954,13 @@ er allerede på listen.</translation>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation>Ellipse-område:</translation>
+        <translation>Ellipseareal:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>Arc-område:</translation>
+        <translation>Bueareal:</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -7010,7 +7010,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Område med bue/cirkel/ellipse</translation>
+        <translation>Areal af bue/cirkel/ellipse</translation>
     </message>
 </context>
 <context>
@@ -7023,7 +7023,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation>Polygonområde:</translation>
+        <translation>Polygonareal:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7043,7 +7043,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>Pol&amp;ygonalt område</translation>
+        <translation>Pol&amp;ygonareal</translation>
     </message>
 </context>
 <context>
@@ -7066,7 +7066,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+15"/>
         <source>Enclosed area:</source>
-        <translation>Lukket område:</translation>
+        <translation>Omsluttet areal:</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -7076,7 +7076,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Skraveret område:</translation>
+        <translation>Skraveret areal:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7086,7 +7086,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Differentielt skraveret område:</translation>
+        <translation>Differentielt skraveret areal:</translation>
     </message>
     <message>
         <location line="-68"/>
@@ -7226,7 +7226,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Areal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7418,7 +7418,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation>&amp;Relateret stilling</translation>
+        <translation>&amp;Relativ position</translation>
     </message>
 </context>
 <context>
@@ -7525,7 +7525,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>område (orienterende):</translation>
+        <translation>areal (til orientering):</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7763,7 +7763,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>På</translation>
+        <translation>Snabel-a</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7831,7 +7831,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation>Vend blokken horisontalt</translation>
+        <translation>Vend blokken&lt;br&gt;horisontalt</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -7872,7 +7872,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;Insæt blok</translation>
+        <translation>&amp;Indsæt blok</translation>
     </message>
 </context>
 <context>
@@ -7945,7 +7945,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;Insæt blok</translation>
+        <translation>&amp;Indsæt blok</translation>
     </message>
 </context>
 <context>
@@ -7986,7 +7986,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>&amp;Invert valg</translation>
+        <translation>&amp;Inverter valg</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8091,7 +8091,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation>Isometrisk gitter &amp;off</translation>
+        <translation>Isometrisk gitter &amp;fra</translation>
     </message>
 </context>
 <context>
@@ -8263,7 +8263,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation>Låsning af alle lag</translation>
+        <translation>Oplåsning af alle lag</translation>
     </message>
 </context>
 <context>
@@ -8310,7 +8310,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+158"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Foran eller bagud stående mellemrum.</translation>
+        <translation>Foranstillede eller efterstillede mellemrum.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8377,7 +8377,7 @@ er allerede på listen.</translation>
     <message>
         <location line="-54"/>
         <source>&amp;Layer List</source>
-        <translation>&amp;Layer-liste</translation>
+        <translation>&amp;Lagliste</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -8405,17 +8405,17 @@ er allerede på listen.</translation>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Pilehoved</translation>
+        <translation>Pilespids</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>&amp;Leder</translation>
+        <translation>&amp;Henvisningslinje</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Tegn lederen (linjesekvens med pil)</translation>
+        <translation>Tegn henvisningslinje (linjesekvens med pil)</translation>
     </message>
 </context>
 <context>
@@ -8423,12 +8423,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;Lederlinje fra markeret tekst</translation>
+        <translation>&amp;Henvisningslinje fra markeret tekst</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Lederlinje blev oprettet med succes</translation>
+        <translation>Henvisningslinjen blev oprettet</translation>
     </message>
 </context>
 <context>
@@ -8441,17 +8441,17 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Beløb:</translation>
+        <translation>Værdi:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Beløb, der skal forlænges eller forkortes (negativt)</translation>
+        <translation>Værdi, der skal forlænges eller forkortes med (negativ)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>&amp;Længere / kortere</translation>
+        <translation>&amp;Forlæng / forkort</translation>
     </message>
 </context>
 <context>
@@ -8464,7 +8464,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Line</source>
-        <translation>&amp;Line</translation>
+        <translation>&amp;Linje</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
@@ -8555,7 +8555,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Angiv stilling</translation>
+        <translation>Angiv position</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -8638,12 +8638,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation>&amp;Vinkelhalvdel</translation>
+        <translation>&amp;Vinkelhalveringslinje</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>Tegn vinkelbisektoren, trekantsisektoren, ...</translation>
+        <translation>Tegn vinkelhalveringslinje, vinkeltredelingslinje, ...</translation>
     </message>
 </context>
 <context>
@@ -8686,7 +8686,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation>Slot først</translation>
+        <translation>Slids først</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8696,12 +8696,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Box &amp;Joint fra 2 punkter</translation>
+        <translation>&amp;Fingersamling fra 2 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Trækboksforbindelse Fingre, slidser og spidser</translation>
+        <translation>Tegn fingersamling med fingre, slidser og tapper</translation>
     </message>
 </context>
 <context>
@@ -8719,32 +8719,32 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Antal skråstokke:</translation>
+        <translation>Antal svalehaler:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Height:</source>
-        <translation>Højde:</translation>
+        <translation>Svalehalehøjde:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Skråstreg Gradient:</translation>
+        <translation>Svalehalehældning:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Forholdet mellem skæresvans og stift:</translation>
+        <translation>Forhold mellem svalehale og tap:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>&amp;Savskægsskifte fra 2 punkter</translation>
+        <translation>&amp;Svalehalesamling fra 2 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Tegn en skæreskifteforbindelse</translation>
+        <translation>Tegn en svalehalesamling</translation>
     </message>
 </context>
 <context>
@@ -8752,12 +8752,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation>Tryk på for at starte tegning</translation>
+        <translation>Tryk for at begynde at tegne</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation>Slip for at stoppe tegningen</translation>
+        <translation>Slip for at stoppe med at tegne</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
@@ -9150,7 +9150,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation>Brug den oprindelige menulinje</translation>
+        <translation>Brug systemets egen menulinje</translation>
     </message>
 </context>
 <context>
@@ -9176,7 +9176,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Spejl</translation>
+        <translation>Spejlvend</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9201,7 +9201,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>&amp;Spejl</translation>
+        <translation>&amp;Spejlvend</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9214,7 +9214,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Spejl muligheder</translation>
+        <translation>Indstillinger for spejlvending</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9257,7 +9257,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation>&amp;Misc</translation>
+        <translation>&amp;Diverse</translation>
     </message>
 </context>
 <context>
@@ -9388,7 +9388,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Select</source>
-        <translation>&amp;Select</translation>
+        <translation>&amp;Vælg</translation>
     </message>
 </context>
 <context>
@@ -9449,7 +9449,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Indstillingspunkt</translation>
+        <translation>Angiv punkt</translation>
     </message>
 </context>
 <context>
@@ -9529,7 +9529,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation>Stilling X:</translation>
+        <translation>Position X:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9574,7 +9574,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Åbningstegning:</translation>
+        <translation>Åbner tegning:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9686,7 +9686,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Forskudt linje, bue, cirkel eller ellipse</translation>
+        <translation>Parallelforskyd linje, bue, cirkel eller ellipse</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
@@ -9732,7 +9732,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Åben tegning</translation>
+        <translation>Åbn tegning</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9742,7 +9742,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>&amp;Open</translation>
+        <translation>&amp;Åbn</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9785,12 +9785,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Portræt</translation>
+        <translation>Stående</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation>Landskab</translation>
+        <translation>Liggende</translation>
     </message>
     <message>
         <location line="-113"/>
@@ -9888,7 +9888,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>&amp;Panoramazoom</translation>
+        <translation>&amp;Panorering/zoom</translation>
     </message>
 </context>
 <context>
@@ -10178,7 +10178,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Linje og cirkel</translation>
+        <translation>Pol for linje og cirkel</translation>
     </message>
 </context>
 <context>
@@ -10191,7 +10191,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Power Center af tre cirkler</translation>
+        <translation>Potenscentrum for tre cirkler</translation>
     </message>
 </context>
 <context>
@@ -10204,7 +10204,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Polyline</source>
-        <translation>&amp;Polyline</translation>
+        <translation>&amp;Polylinje</translation>
     </message>
 </context>
 <context>
@@ -10227,7 +10227,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation>Vælg det første breakpoint</translation>
+        <translation>Vælg det første brudpunkt</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -10237,12 +10237,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation>Vælg det andet breakpoint</translation>
+        <translation>Vælg det andet brudpunkt</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Segment med opdeling</translation>
+        <translation>Bryd segment ud</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
@@ -10344,7 +10344,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Træ til sammenklapning</translation>
+        <translation>Fold træ sammen</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -10475,7 +10475,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Tegning af skala</translation>
+        <translation>Tegningsskala</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10495,12 +10495,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Portræt</translation>
+        <translation>Stående</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Landskab</translation>
+        <translation>Liggende</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10748,12 +10748,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Håndtag:</translation>
+        <translation>Handle:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>Linjetyper skala:</translation>
+        <translation>Linjetypeskala:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -10774,7 +10774,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Quit</translation>
+        <translation>&amp;Afslut</translation>
     </message>
 </context>
 <context>
@@ -10782,7 +10782,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation>Læs mere</translation>
+        <translation>Readme</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -10815,7 +10815,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Åbent &amp;nyere</translation>
+        <translation>Åbn &amp;seneste</translation>
     </message>
 </context>
 <context>
@@ -10876,7 +10876,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation>Rapport &amp;oversættelsesfejl</translation>
+        <translation>Rapportér &amp;oversættelsesfejl</translation>
     </message>
 </context>
 <context>
@@ -10889,7 +10889,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation>&amp;Reset / tomgang</translation>
+        <translation>&amp;Nulstil / inaktiv</translation>
     </message>
 </context>
 <context>
@@ -10935,7 +10935,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation>Begrænsninger &amp;off</translation>
+        <translation>Begrænsninger &amp;fra</translation>
     </message>
 </context>
 <context>
@@ -10959,7 +10959,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>&amp;Reverse</translation>
+        <translation>&amp;Vend retning</translation>
     </message>
 </context>
 <context>
@@ -11027,7 +11027,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation>&amp;Rotate</translation>
+        <translation>&amp;Roter</translation>
     </message>
 </context>
 <context>
@@ -11060,7 +11060,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>Drej T&amp;wo</translation>
+        <translation>Roter t&amp;o</translation>
     </message>
 </context>
 <context>
@@ -11068,7 +11068,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Rotere to muligheder</translation>
+        <translation>Indstillinger for Roter to</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11116,7 +11116,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation>Roter indstillinger</translation>
+        <translation>Indstillinger for rotation</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11189,7 +11189,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>&amp;Rund</translation>
+        <translation>&amp;Afrund</translation>
     </message>
 </context>
 <context>
@@ -11232,7 +11232,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation>R&amp;un-manuskript</translation>
+        <translation>&amp;Kør script</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -11328,12 +11328,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation>Dialog om filer</translation>
+        <translation>Fildialog</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation>Brug dialogboksen for systemfil</translation>
+        <translation>Brug systemets fildialog</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -11383,7 +11383,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation>Åbn/Save</translation>
+        <translation>Åbn/gem</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -11398,7 +11398,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation>Gem &amp;As...</translation>
+        <translation>Gem &amp;som...</translation>
     </message>
 </context>
 <context>
@@ -11482,7 +11482,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;Skala</translation>
+        <translation>&amp;Skaler</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
@@ -11495,7 +11495,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Indstillinger for skalaer</translation>
+        <translation>Indstillinger for skalering</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11587,7 +11587,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation>Vælg &amp;All</translation>
+        <translation>Vælg &amp;alle</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11641,7 +11641,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>Ved hjælp af håndtag</translation>
+        <translation>Efter handle</translation>
     </message>
 </context>
 <context>
@@ -11649,12 +11649,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Valg efter håndtag</translation>
+        <translation>Valg efter handle</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Håndtag (sekskant):</translation>
+        <translation>Handle (hex):</translation>
     </message>
 </context>
 <context>
@@ -11687,7 +11687,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Skærer det aktuelle valg</translation>
+        <translation>Fællesmængde med det aktuelle valg</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11702,12 +11702,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>(De-)Vælg &amp;Contour</translation>
+        <translation>(De-)Vælg &amp;kontur</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select connected entities</source>
-        <translation>(De-)vælge tilsluttede enheder</translation>
+        <translation>(De-)vælg forbundne enheder</translation>
     </message>
 </context>
 <context>
@@ -11745,12 +11745,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Skærer det aktuelle valg</translation>
+        <translation>Fællesmængde med det aktuelle valg</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(De-)Vælg ind&amp;skårne enheder</translation>
+        <translation>(De-)Vælg &amp;krydsede enheder</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11806,12 +11806,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Skærer det aktuelle valg</translation>
+        <translation>Fællesmængde med det aktuelle valg</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(De-)Vælg La&amp;yer</translation>
+        <translation>(De-)Vælg &amp;lag</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11854,12 +11854,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Skærer det aktuelle valg</translation>
+        <translation>Fællesmængde med det aktuelle valg</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Udvælgelse af kryds</translation>
+        <translation>Krydsvalg</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -12179,7 +12179,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>Rektangel med &amp;Size</translation>
+        <translation>Rektangel med &amp;størrelse</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12410,7 +12410,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation>Fraktion</translation>
+        <translation>Brøk</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
@@ -12428,7 +12428,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>&amp;End</translation>
+        <translation>&amp;Endepunkt</translation>
     </message>
 </context>
 <context>
@@ -12436,7 +12436,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>&amp;Ubegrænset</translation>
+        <translation>&amp;Fri</translation>
     </message>
 </context>
 <context>
@@ -12452,7 +12452,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>&amp;Intersektion</translation>
+        <translation>&amp;Skæringspunkt</translation>
     </message>
 </context>
 <context>
@@ -12485,7 +12485,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>&amp;Intersection Manual</translation>
+        <translation>&amp;Skæringspunkt manuelt</translation>
     </message>
 </context>
 <context>
@@ -12493,7 +12493,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>&amp;Middle</translation>
+        <translation>&amp;Midtpunkt</translation>
     </message>
 </context>
 <context>
@@ -12501,7 +12501,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>&amp;Mellem manuelt</translation>
+        <translation>&amp;Midtpunkt manuelt</translation>
     </message>
 </context>
 <context>
@@ -12509,7 +12509,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>&amp;On enhed</translation>
+        <translation>&amp;På enhed</translation>
     </message>
 </context>
 <context>
@@ -12808,7 +12808,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation>Vis fanebladet</translation>
+        <translation>Vis fanelinje</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
@@ -12818,7 +12818,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation>Fane Bar</translation>
+        <translation>Fanelinje</translation>
     </message>
 </context>
 <context>
@@ -12878,7 +12878,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>Tjek alle</translation>
+        <translation>Markér alle</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -12928,7 +12928,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation>Passer</translation>
+        <translation>Tilpas</translation>
     </message>
 </context>
 <context>
@@ -12946,12 +12946,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Lederlinje blev oprettet med succes</translation>
+        <translation>Henvisningslinjen blev oprettet</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>&amp;Tekst justeret lederlinje</translation>
+        <translation>&amp;Tekstjusteret henvisningslinje</translation>
     </message>
 </context>
 <context>
@@ -12971,7 +12971,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation>&amp;Text Langs Entitet</translation>
+        <translation>&amp;Tekst langs enhed</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12989,17 +12989,17 @@ er allerede på listen.</translation>
     <message>
         <location line="+275"/>
         <source>&amp;Undo</source>
-        <translation>&amp;Undo</translation>
+        <translation>&amp;Fortryd</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation>&amp;Redo</translation>
+        <translation>&amp;Gendan</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Cu&amp;t</translation>
+        <translation>&amp;Klip</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13029,12 +13029,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>&amp;Subscript</translation>
+        <translation>&amp;Sænket skrift</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>&amp;Superscript</translation>
+        <translation>&amp;Hævet skrift</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -13044,7 +13044,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation>&amp;Særlige karakterer...</translation>
+        <translation>&amp;Specialtegn...</translation>
     </message>
     <message>
         <location line="+349"/>
@@ -13069,7 +13069,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation>Næsten lige meget</translation>
+        <translation>Næsten lig med</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13099,7 +13099,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation>Ikke ligeværdig</translation>
+        <translation>Ikke lig med</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13114,17 +13114,17 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>Kvadratisk</translation>
+        <translation>I anden</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubed</translation>
+        <translation>I tredje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Plads uden afbrydelser</translation>
+        <translation>Hårdt mellemrum</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13176,12 +13176,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+20"/>
         <source>Rich Text</source>
-        <translation>Rig tekst</translation>
+        <translation>Formateret tekst</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>Skær</translation>
+        <translation>Klip</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13261,7 +13261,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation>Tilpasning</translation>
+        <translation>Justering</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -13271,7 +13271,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation>Top Center</translation>
+        <translation>Øverst i midten</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13286,7 +13286,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+29"/>
         <source>Middle Center</source>
-        <translation>Midterste center</translation>
+        <translation>Midt i midten</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13316,7 +13316,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+29"/>
         <source>Bottom Center</source>
-        <translation>Nederste center</translation>
+        <translation>Nederst i midten</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -14064,7 +14064,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+512"/>
         <source>Dropped data not supported</source>
-        <translation>Tabte data ikke understøttet</translation>
+        <translation>Slupne data understøttes ikke</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -14120,7 +14120,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Bue</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -14185,7 +14185,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation>Næsten lige meget</translation>
+        <translation>Næsten lig med</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14195,7 +14195,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation>Asymptotisk lige</translation>
+        <translation>Asymptotisk lig med</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14215,7 +14215,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation>Ikke ligeværdig</translation>
+        <translation>Ikke lig med</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14240,12 +14240,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation>Kvadratisk</translation>
+        <translation>I anden</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubed</translation>
+        <translation>I tredje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14275,7 +14275,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation>Tilpasset</translation>
+        <translation>Justeret</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14286,7 +14286,7 @@ er allerede på listen.</translation>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation>Passer</translation>
+        <translation>Tilpasset</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14316,7 +14316,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation>Ingeniørarbejde</translation>
+        <translation>Ingeniørformat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14326,7 +14326,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation>Fraktionel</translation>
+        <translation>Brøk</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14352,12 +14352,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradians</translation>
+        <translation>Nygrader</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation>Radians</translation>
+        <translation>Radianer</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14423,13 +14423,13 @@ er allerede på listen.</translation>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation>Undertrykker ledende nuller</translation>
+        <translation>Undertryk foranstillede nuller</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation>Undertrykkelse af ledende/afsluttende nuller</translation>
+        <translation>Undertryk foranstillede/efterstillede nuller</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -14471,12 +14471,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>&amp;Horisontal byggelinje</translation>
+        <translation>&amp;Horisontal konstruktionslinje</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw horizontal construction line</source>
-        <translation>Tegn en vandret byggelinje</translation>
+        <translation>Tegn en vandret konstruktionslinje</translation>
     </message>
 </context>
 <context>
@@ -14484,12 +14484,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>&amp;Vertikal byggelinje</translation>
+        <translation>&amp;Vertikal konstruktionslinje</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw vertical construction line</source>
-        <translation>Tegn en lodret byggelinje</translation>
+        <translation>Tegn en lodret konstruktionslinje</translation>
     </message>
 </context>
 <context>
@@ -14536,7 +14536,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation>Zoom til &amp;vælgelse</translation>
+        <translation>Zoom til &amp;valg</translation>
     </message>
 </context>
 <context>
@@ -14567,7 +14567,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
-        <translation>Genstande</translation>
+        <translation>Objekter</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14577,7 +14577,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation>Ukendte genstande</translation>
+        <translation>Ukendte objekter</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14607,7 +14607,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation>Opstillinger</translation>
+        <translation>Layouts</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14682,7 +14682,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Blokreference og egenskaber</translation>
+        <translation>Blokreference og attributter</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14692,7 +14692,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Bue</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14737,12 +14737,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation>Tilpassede dimensioner</translation>
+        <translation>Justerede dimensioner</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation>Tilpasset dimension</translation>
+        <translation>Justeret dimension</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14767,12 +14767,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Vinkeldimensioner (3 point)</translation>
+        <translation>Vinkeldimensioner (3 punkter)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Vinkeldimension (3 point)</translation>
+        <translation>Vinkeldimension (3 punkter)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14853,12 +14853,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Ledere</translation>
+        <translation>Henvisningslinjer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Leder</translation>
+        <translation>Henvisningslinje</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14923,7 +14923,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Faste stoffer</translation>
+        <translation>Solider</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14938,7 +14938,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>Trace</translation>
+        <translation>Spor</translation>
     </message>
     <message>
         <location line="+2"/>

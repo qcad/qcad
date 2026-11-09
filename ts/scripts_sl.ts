@@ -188,7 +188,7 @@
     <message>
         <location line="+176"/>
         <source>Licenses</source>
-        <translation>Dovoljenja</translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -274,7 +274,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation>Dovoljenja</translation>
+        <translation>Licence</translation>
     </message>
 </context>
 <context>
@@ -303,8 +303,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation>QCAD je potrebno ponovno zagnat,
-da bodo spremembe začele delovat.</translation>
+        <translation>QCAD je potrebno ponovno zagnati,
+da bodo spremembe začele delovati.</translation>
     </message>
     <message>
         <location line="+163"/>
@@ -546,12 +546,12 @@ da bodo spremembe začele delovat.</translation>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>V smeri urinega kazalca (Pozitivno)</translation>
+        <translation>Nasproti smeri urinega kazalca (pozitivno)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>V smeri obratno urinemu kazalcu (Negativno)</translation>
+        <translation>V smeri urinega kazalca (negativno)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -604,7 +604,7 @@ da bodo spremembe začele delovat.</translation>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>V smeri obrani urinega kazalca (Pozitivno)</translation>
+        <translation>Nasproti smeri urinega kazalca (pozitivno)</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -944,7 +944,7 @@ Ali jo želite obnoviti?</translation>
         <location line="+21"/>
         <location line="+7"/>
         <source>Cannot rename file:</source>
-        <translation>Ni mogoče preimenovat:</translation>
+        <translation>Datoteke ni mogoče preimenovati:</translation>
     </message>
     <message>
         <location line="-25"/>
@@ -959,7 +959,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation>Ni mogoče izbrisat:</translation>
+        <translation>Datoteke ni mogoče izbrisati:</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
@@ -1083,17 +1083,17 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Izbrani entiteti ne morem prirezat.</translation>
+        <translation>Obeh entitet ni mogoče posneti.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Prvo entiteto ni mogoče skrajšat.</translation>
+        <translation>Prve entitete ni mogoče skrajšati.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Drugo entiteto ni mogoče skrajšat.</translation>
+        <translation>Druge entitete ni mogoče skrajšati.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
@@ -1299,7 +1299,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation>Zbira iz zunanje reference ni mogoče urejati</translation>
+        <translation>Bloka iz zunanje reference ni mogoče urejati</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -1313,7 +1313,7 @@ Ali jo želite obnoviti?</translation>
         <location filename="../scripts/Block/BlockDialog.js" line="+79"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation>zbir</translation>
+        <translation>blok</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -1343,7 +1343,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation>Zbir</translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1395,7 +1395,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-290"/>
         <source>Current block</source>
-        <translation>Trenutni zbir</translation>
+        <translation>Trenutni blok</translation>
     </message>
 </context>
 <context>
@@ -1454,7 +1454,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Seznam referenc za izvozne bloke</translation>
+        <translation>&amp;Izvozi seznam blokovnih referenc</translation>
     </message>
 </context>
 <context>
@@ -1592,7 +1592,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Spni vse</translation>
+        <translation>Strni vse</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2349,12 +2349,12 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation>Nič ni za naredit.</translation>
+        <translation>Ni kaj storiti.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation>Izbrana enota &quot;%1&quot; - Nič ni za naredit</translation>
+        <translation>Izbrana enota &quot;%1&quot; - ni kaj storiti</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -2771,7 +2771,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation>V črte</translation>
+        <translation>V entitete</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -2938,8 +2938,8 @@ Ali jo želite obnoviti?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>Mesto napisa kote je bilo ponastavljeno.</numerusform>
-            <numerusform>Mesto napisa dveh kot je bilo ponastavljeno.</numerusform>
+            <numerusform>Mesto napisa %n kote je bilo ponastavljeno.</numerusform>
+            <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
             <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
             <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
         </translation>
@@ -3036,12 +3036,12 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation>Skoraj enako kot</translation>
+        <translation>Asimptotično enako</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation>Na kvadrat</translation>
+        <translation>Kvadrat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3106,7 +3106,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Lestvica dimenzij</translation>
+        <translation>Merilo kotiranja</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3235,7 +3235,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Arhitekturni kljukec</translation>
+        <translation>Arhitekturna poševnica</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3332,7 +3332,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Prikaži &amp;Dimenzijo/Kot</translation>
+        <translation>Prikaži &amp;razdaljo/kot</translation>
     </message>
 </context>
 <context>
@@ -3394,12 +3394,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
-        <translation>Prvi kot</translation>
+        <translation>Prvi vogal</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation>Drugi kot</translation>
+        <translation>Drugi vogal</translation>
     </message>
 </context>
 <context>
@@ -3534,12 +3534,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segment Ponovno narediti</translation>
+        <translation>Ponovi segment</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation>Oblok s polmerom:</translation>
+        <translation>Lok s polmerom:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -3629,7 +3629,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation>Za zaokroževanje poljskih črt je potreben program QCAD Professional, ki je prezrt. Besedilna vrstica: %1</translation>
+        <translation>Za zaokroževanje lomljenk je potreben QCAD Professional, prezrto. Besedilna vrstica: %1</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3890,7 +3890,7 @@ je že na seznamu.</translation>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation>Arc Invalid (Oblok ni veljaven).</translation>
+        <translation>Lok ni veljaven.</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -3965,7 +3965,7 @@ je že na seznamu.</translation>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation>Polinija, manj kot 2 referenci.</translation>
+        <translation>Lomljenka, manj kot 2 referenci.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3980,12 +3980,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation>točka prileganja 3. stopnje Spline, manj kot 3 reference.</translation>
+        <translation>Krivulja 3. stopnje s točkami prileganja, manj kot 3 reference.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation>3. stopnja kontrolne točke Spline, manj kot 4 reference.</translation>
+        <translation>Krivulja 3. stopnje s kontrolnimi točkami, manj kot 4 reference.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4075,7 +4075,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Ni pravilna vrstna utež, ni upoštevana. Vrstica besedila: %1%2 Teža: %3</translation>
+        <translation>Nepravilna debelina črte, prezrto. Besedilna vrstica: %1%2 Debelina: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4110,7 +4110,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Ni pravilna vrstna utež. Vrstica besedila: %1%2 Teža: %3</translation>
+        <translation>Nepravilna debelina črte. Besedilna vrstica: %1%2 Debelina: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4216,22 +4216,22 @@ je že na seznamu.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation>Oblok s polmerom:</translation>
+        <translation>Lok s polmerom:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Pometanje:</translation>
+        <translation>Razpon:</translation>
     </message>
     <message>
         <location line="-71"/>
         <source>Undo Previous Segment</source>
-        <translation>RAzveljavi prejšnji segment</translation>
+        <translation>Razveljavi prejšnji segment</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>razveljavi segment</translation>
+        <translation>Ponovi segment</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -4268,10 +4268,10 @@ je že na seznamu.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform>1 predmet podvojen</numerusform>
-            <numerusform>Predmeta podvojena</numerusform>
-            <numerusform>%n predmeti podvojeni</numerusform>
-            <numerusform>%n predmetov podvojenih</numerusform>
+            <numerusform>%n entiteta podvojena</numerusform>
+            <numerusform>%n entiteti podvojeni</numerusform>
+            <numerusform>%n entitete podvojene</numerusform>
+            <numerusform>%n entitet podvojenih</numerusform>
         </translation>
     </message>
 </context>
@@ -4377,7 +4377,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Entiteta ni črta, lok, spline, elipsa ali polilinija.</translation>
+        <translation>Entiteta ni črta, lok, krivulja, lok elipse ali lomljenka.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4427,7 +4427,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Entiteta ni spline z ustreznimi točkami.</translation>
+        <translation>Entiteta ni krivulja s točkami prileganja.</translation>
     </message>
 </context>
 <context>
@@ -4912,12 +4912,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation>Prvi kot</translation>
+        <translation>Prvi vogal</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation>Drugi kot</translation>
+        <translation>Drugi vogal</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
@@ -5117,8 +5117,8 @@ je že na seznamu.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform>Transakcija je vplivala na en predmet.</numerusform>
-            <numerusform>Transakcija je vplivala na dva predmeta.</numerusform>
+            <numerusform>Transakcija je vplivala na %n predmet.</numerusform>
+            <numerusform>Transakcija je vplivala na %n predmeta.</numerusform>
             <numerusform>Transakcija je vplivala na %n predmete.</numerusform>
             <numerusform>Transakcija je vplivala na %n predmetov.</numerusform>
         </translation>
@@ -5216,7 +5216,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation>Pretvori spline iz besedil v loke ali črte, če je to primerno</translation>
+        <translation>Pretvori krivulje iz besedil v loke ali črte, če je to primerno</translation>
     </message>
     <message>
         <location line="-125"/>
@@ -5226,7 +5226,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+135"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Eksplodiranje krogov v poljine z dvema polkrožnicama</translation>
+        <translation>Razbij kroge v lomljenke z dvema polkrogoma</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5273,7 +5273,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>Datoteka &quot;%1&quot; že obstaja. Jo želite prepisat?</translation>
+        <translation>Datoteka &quot;%1&quot; že obstaja. Jo želite prepisati?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5287,7 +5287,7 @@ je že na seznamu.</translation>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+244"/>
         <source>%1 First Start</source>
-        <translation>%1 prvi začetek</translation>
+        <translation>%1 prvi zagon</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -5360,7 +5360,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Barve na izbiro, ki posnemajo žig z valjčkom</translation>
+        <translation>Poslika izbor s posnemanjem valjčnega žiga</translation>
     </message>
 </context>
 <context>
@@ -5697,7 +5697,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation>To ni mogoče razveljavit.</translation>
+        <translation>Tega ni mogoče razveljaviti.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5843,12 +5843,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+64"/>
         <source>Highlight (and raise) images within range</source>
-        <translation>Izrazite (in povečajte) slike v območju</translation>
+        <translation>Označi (in dvigni) slike znotraj območja</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Izrazite (in povečajte) šrafure in trdne zapolnitve v območju</translation>
+        <translation>Označi (in dvigni) šrafure in polnila znotraj območja</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -5978,7 +5978,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
-        <translation>Prepreči belo na bel / črno na črn zaslon</translation>
+        <translation>Prepreči prikaz bele na beli / črne na črni</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -6013,7 +6013,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+100"/>
         <source>Apply line weight to points</source>
-        <translation>Uporabite utež črte za točke</translation>
+        <translation>Uporabi debelino črte za točke</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6038,7 +6038,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+426"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation>Največje izbrane entitete z referenčnimi točkami:</translation>
+        <translation>Največ izbranih entitet z referenčnimi točkami:</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -6099,12 +6099,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation>Prikaži entitete z več kot N pikami kot neprekinjene:</translation>
+        <translation>Prikaži entitete z več kot N črticami kot neprekinjene:</translation>
     </message>
     <message>
         <location line="-85"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation>Najmanjši kot koraka za izris krivulje (stopinje):</translation>
+        <translation>Najmanjši kotni korak za izris lokov (stopinje):</translation>
     </message>
     <message>
         <location line="-268"/>
@@ -6366,17 +6366,17 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation>Pisava za pravilo:</translation>
+        <translation>Pisava ravnila:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Pisava nalepke Snap:</translation>
+        <translation>Pisava napisa pripenjanja:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation>Pisava informativne nalepke:</translation>
+        <translation>Pisava informativnega napisa:</translation>
     </message>
 </context>
 <context>
@@ -6389,7 +6389,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+7"/>
         <source>Enable pan gesture</source>
-        <translation>Omogoči geste pisala</translation>
+        <translation>Omogoči potezo za premik pogleda</translation>
     </message>
     <message>
         <location line="-193"/>
@@ -6604,7 +6604,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation>&amp;Izvoz/Uvoz</translation>
+        <translation>&amp;Uvoz/Izvoz</translation>
     </message>
 </context>
 <context>
@@ -6795,7 +6795,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Prepiši obstoječe zbire&lt;br&gt; v risbi z&lt;br&gt;zbiri iz odložišča</translation>
+        <translation>Prepiši obstoječe bloke&lt;br&gt; v risbi z&lt;br&gt;bloki iz odložišča</translation>
     </message>
 </context>
 <context>
@@ -6899,7 +6899,7 @@ je že na seznamu.</translation>
         <location line="-37"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>Območje elipse:</translation>
+        <translation>Ploščina loka elipse:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -7016,7 +7016,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Lok/Krog/Eliptično območje</translation>
+        <translation>Ploščina loka/kroga/elipse</translation>
     </message>
 </context>
 <context>
@@ -7024,7 +7024,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation>Nastavi naslednji kot poligona</translation>
+        <translation>Nastavi naslednji vogal poligona</translation>
     </message>
     <message>
         <location line="+125"/>
@@ -7049,7 +7049,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>Območ&amp;je poligona</translation>
+        <translation>Ploščina poli&amp;gona</translation>
     </message>
 </context>
 <context>
@@ -7078,12 +7078,12 @@ je že na seznamu.</translation>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation>Način sektorja obloka</translation>
+        <translation>Način krožnega izseka</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation>Ograjeno območje:</translation>
+        <translation>Obdana ploščina:</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -7093,17 +7093,17 @@ je že na seznamu.</translation>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Šrafirano območje:</translation>
+        <translation>Šrafirana ploščina:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation>Skupno šrafirano območje:</translation>
+        <translation>Skupna šrafirana ploščina:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Diferencialno šrafirano območje:</translation>
+        <translation>Diferencialna šrafirana ploščina:</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7150,7 +7150,7 @@ je že na seznamu.</translation>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Srečal se je z nepodprto poljsko črto s širino po meri</translation>
+        <translation>Naletel na nepodprto lomljenko s širino po meri</translation>
     </message>
     <message>
         <location line="-488"/>
@@ -7161,7 +7161,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Neobdelana oblika iz zanke luftanja.</translation>
+        <translation>Neobdelana oblika iz zanke šrafure.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7531,7 +7531,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>območje (informativno):</translation>
+        <translation>ploščina (informativno):</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7636,7 +7636,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Srečal se je z nepodprto poljsko črto s širino po meri</translation>
+        <translation>Naletel na nepodprto lomljenko s širino po meri</translation>
     </message>
     <message>
         <location line="+105"/>
@@ -7886,7 +7886,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
-        <translation>Ne morem uvozit datoteke iz URL-ja: </translation>
+        <translation>Ne morem uvoziti datoteke iz URL-ja: </translation>
     </message>
     <message>
         <location line="+29"/>
@@ -8076,12 +8076,12 @@ je že na seznamu.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Kabinet</translation>
+        <translation>Kabinetna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Kavalir</translation>
+        <translation>Kavalirska</translation>
     </message>
 </context>
 <context>
@@ -8137,7 +8137,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>Bližnjica premora:</translation>
+        <translation>Časovna omejitev bližnjic:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -8302,7 +8302,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Entitete in bloki na plasti 0 prevzamejo atribute in vidnost blokovne reference.</translation>
+        <translation>Entitete v blokih na plasti 0 prevzamejo atribute in vidnost blokovne reference.</translation>
     </message>
 </context>
 <context>
@@ -8518,12 +8518,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Razveljavi segment</translation>
+        <translation>Ponovi segment</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation>Uporaba fiksne dolžine vrstice</translation>
+        <translation>Uporabi fiksno dolžino črte</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8707,7 +8707,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Nariši škatlast spoj, razpoke, tetive</translation>
+        <translation>Nariši prste, reže in čepe škatlastega spoja</translation>
     </message>
 </context>
 <context>
@@ -8911,7 +8911,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation>Korenska os dveh krogov</translation>
+        <translation>Potenčna premica dveh krogov</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
@@ -8977,7 +8977,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation>Simetralna os 3-eh krogov</translation>
+        <translation>Osi podobnosti treh krogov</translation>
     </message>
 </context>
 <context>
@@ -9000,7 +9000,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+25"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation>Ne morem narisat tangete iz točke znotraj kroga do kroga</translation>
+        <translation>Ne morem narisati tangente iz točke znotraj kroga na krog</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
@@ -9093,7 +9093,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>Globalna lestvica linij:</translation>
+        <translation>Globalno merilo tipov črt:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9590,7 +9590,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+6"/>
         <source>Cannot open file</source>
-        <translation>Ne morem odpret datoteke</translation>
+        <translation>Ne morem odpreti datoteke</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9835,7 +9835,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation>Na vrh:</translation>
+        <translation>Zgoraj:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9845,7 +9845,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation>Dno:</translation>
+        <translation>Spodaj:</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -9855,7 +9855,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation>Lestvica in položaj</translation>
+        <translation>Merilo in položaj</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -10055,7 +10055,7 @@ je že na seznamu.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation>Prikaz pike</translation>
+        <translation>Prikaz točk</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10188,7 +10188,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Tečaj črte in koga</translation>
+        <translation>Pol premice in kroga</translation>
     </message>
 </context>
 <context>
@@ -10201,7 +10201,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Radialno središče treh krogov</translation>
+        <translation>Potenčno središče treh krogov</translation>
     </message>
 </context>
 <context>
@@ -10252,12 +10252,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Segment razčlenitve</translation>
+        <translation>Odlomi segment</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>Odstranitev segmenta preloma vrstice</translation>
+        <translation>Odstrani segment črte na prelomu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10282,13 +10282,13 @@ je že na seznamu.</translation>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation>Dediči</translation>
+        <translation>Podeduj</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+16"/>
         <source>Peak ratio</source>
-        <translation>Največje razmerje</translation>
+        <translation>Razmerje vrha</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10324,12 +10324,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation>Simbol prekinitve poljske črte iz 2 točk</translation>
+        <translation>Simbol prekinitve &amp;lomljenke iz 2 točk</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation>Narišite simbol prekinitve poljske črte iz 2 točk</translation>
+        <translation>Nariši simbol prekinitve lomljenke iz 2 točk</translation>
     </message>
 </context>
 <context>
@@ -10354,7 +10354,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Združi drevo</translation>
+        <translation>Strni drevo</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -10797,7 +10797,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation>Prikaži to okno ob zagonu</translation>
+        <translation>Ne prikaži tega okna ob zagonu</translation>
     </message>
 </context>
 <context>
@@ -10894,12 +10894,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation>Ponovni zagon</translation>
+        <translation>Ponastavi</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation>&amp;Ponovni zagon / čakanje</translation>
+        <translation>&amp;Ponastavi / mirovanje</translation>
     </message>
 </context>
 <context>
@@ -11113,7 +11113,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation>Ko &amp;b:</translation>
+        <translation>Kot &amp;b:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -11174,17 +11174,17 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation>Izbrani eniteti ni mogoče zaokrožit.</translation>
+        <translation>Obeh entitet ni mogoče zaokrožiti.</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Prve entietete ni mogoče skrajšat.</translation>
+        <translation>Prve entitete ni mogoče skrajšati.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Druge entietete ni mogoče skrajšat.</translation>
+        <translation>Druge entitete ni mogoče skrajšati.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -11290,7 +11290,7 @@ je že na seznamu.</translation>
     <message>
         <location line="-45"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>Datoteka &quot;%1&quot; že obstaja. Jo želite prepisat?</translation>
+        <translation>Datoteka &quot;%1&quot; že obstaja. Jo želite prepisati?</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -11446,7 +11446,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;Razmerje</translation>
+        <translation>&amp;Skaliraj</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -11610,7 +11610,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>&amp;Izberi blokovno referenco</translation>
+        <translation>&amp;Izberi blokovne reference</translation>
     </message>
 </context>
 <context>
@@ -11834,12 +11834,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation>Prvi kot</translation>
+        <translation>Prvi vogal</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation>Drugi kot</translation>
+        <translation>Drugi vogal</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -11938,7 +11938,7 @@ je že na seznamu.</translation>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation>Izbrani subjekti:
+        <translation>Izbrane entitete:
 %1.</translation>
     </message>
     <message>
@@ -11975,7 +11975,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation>Ustvari mnogokotnik</translation>
+        <translation>Ustvari lomljenko</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12009,12 +12009,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation>%1 neveljavnih segmentov.</translation>
+        <translation>Neveljavno število segmentov: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation>Neveljavne elipse glavne / manjšinske: %1 / %2.</translation>
+        <translation>Neveljavna velika / mala os elipse: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -12042,7 +12042,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Koti:</translation>
+        <translation>Vogali:</translation>
     </message>
 </context>
 <context>
@@ -12055,7 +12055,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation>Prvi kot</translation>
+        <translation>Prvi vogal</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12065,7 +12065,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation>Drugi kot</translation>
+        <translation>Drugi vogal</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -12080,12 +12080,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Koti:</translation>
+        <translation>Vogali:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Corner to Corner</source>
-        <translation>Iz kota v kot</translation>
+        <translation>Od vogala do vogala</translation>
     </message>
 </context>
 <context>
@@ -12108,7 +12108,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>Mn&amp;ogokotnik (središče, kot)</translation>
+        <translation>Mn&amp;ogokotnik (središče, vogal)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12131,7 +12131,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Vogal:</translation>
+        <translation>Vogali:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
@@ -12154,7 +12154,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+4"/>
         <source>Draw rectangle from two corners</source>
-        <translation>Nariši pravokotnik iz dveh kotov</translation>
+        <translation>Nariši pravokotnik iz dveh vogalov</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
@@ -12200,7 +12200,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation>Ustvari mnogokotnik</translation>
+        <translation>Ustvari lomljenko</translation>
     </message>
 </context>
 <context>
@@ -12436,7 +12436,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation>Frakcija</translation>
+        <translation>Ulomek</translation>
     </message>
 </context>
 <context>
@@ -12609,7 +12609,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>Stopinje:</translation>
+        <translation>Stopnja:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12734,7 +12734,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>&amp;Razširi</translation>
+        <translation>&amp;Raztegni</translation>
     </message>
 </context>
 <context>
@@ -13135,12 +13135,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Kvadratasto</translation>
+        <translation>Na tretjo potenco</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Brez preloma presledka</translation>
+        <translation>Nedeljivi presledek</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13232,7 +13232,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Vprašaj:</translation>
+        <translation>Poziv:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -13272,7 +13272,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+305"/>
         <source>Bottom Left</source>
-        <translation>Desno spodaj</translation>
+        <translation>Spodaj levo</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13727,17 +13727,17 @@ je že na seznamu.</translation>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Prve entitete ni mogoče krajšat.</translation>
+        <translation>Prve entitete ni mogoče skrajšati.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Entitete ni mogoče krajšat.</translation>
+        <translation>Entitete ni mogoče skrajšati.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Druge entitete ni mogoče krajšat.</translation>
+        <translation>Druge entitete ni mogoče skrajšati.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
@@ -13812,7 +13812,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Omogočanje visokega skaliranja DPI</translation>
+        <translation>Omogoči skaliranje za visok DPI</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -13967,7 +13967,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation>Imperični</translation>
+        <translation>Imperialni</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14090,7 +14090,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation>Uvozna datoteka:</translation>
+        <translation>Uvažam datoteko:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -14151,17 +14151,17 @@ je že na seznamu.</translation>
     <message>
         <location line="-3"/>
         <source>Phi</source>
-        <translation>Pi</translation>
+        <translation>Fi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation>pi</translation>
+        <translation>fi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation>stari pi</translation>
+        <translation>Alt fi</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -14196,7 +14196,7 @@ je že na seznamu.</translation>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation>Stopnje</translation>
+        <translation>Stopinje</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14246,7 +14246,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Podnapis 2</translation>
+        <translation>Podpisano 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14261,12 +14261,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Kvadratasto</translation>
+        <translation>Na tretjo potenco</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation>Besedilo na skladu</translation>
+        <translation>Zloženo besedilo</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14342,7 +14342,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation>Frakcijski</translation>
+        <translation>Ulomki</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14773,12 +14773,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>Kotne dimenzije (2 vrstici)</translation>
+        <translation>Kotne dimenzije (2 črti)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Kotna dimenzija (2 vrstici)</translation>
+        <translation>Kotna dimenzija (2 črti)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14939,12 +14939,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Gruče</translation>
+        <translation>Polni liki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation>Gradnik</translation>
+        <translation>Polni lik</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15005,12 +15005,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Izzseki </translation>
+        <translation>Prikazna okna</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Izzsek</translation>
+        <translation>Prikazno okno</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15025,7 +15025,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation>Zunanji viri</translation>
+        <translation>Zunanje reference</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15173,14 +15173,14 @@ je že na seznamu.</translation>
         <location filename="../scripts/simple_modify.js" line="+442"/>
         <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Prve entitete ni mogoče porezat.</translation>
+        <translation>Prve entitete ni mogoče porezati.</translation>
     </message>
     <message>
         <location line="-429"/>
         <location line="+22"/>
         <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Entiteto ni mogoče porezat.</translation>
+        <translation>Entitete ni mogoče porezati.</translation>
     </message>
     <message>
         <location line="-477"/>
@@ -15208,7 +15208,7 @@ je že na seznamu.</translation>
         <location line="+35"/>
         <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Druge entitete ni mogoče porezat.</translation>
+        <translation>Druge entitete ni mogoče porezati.</translation>
     </message>
     <message>
         <location line="-346"/>

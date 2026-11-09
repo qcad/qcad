@@ -79,7 +79,7 @@
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation>Persimpangan</translation>
+        <translation>Perpotongan</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Pola Penetasan</translation>
+        <translation>Pola Arsir</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Preferensi Menggambar</translation>
+        <translation>Preferensi Gambar</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -324,7 +324,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Preferensi gambar saat ini dapat diubah di bawah&lt;br /&gt;&lt;i&gt;Edit gt; Preferensi Gambar&lt;/i&gt;.</translation>
+        <translation>Preferensi gambar saat ini dapat diubah di bawah&lt;br /&gt;&lt;i&gt;Sunting &amp;gt; Preferensi Gambar&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -478,12 +478,12 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kedua poin tersebut identik</translation>
+        <translation>Kedua titik tersebut identik</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -531,7 +531,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location line="+8"/>
         <source>The two points are identical</source>
-        <translation>Kedua poin tersebut identik</translation>
+        <translation>Kedua titik tersebut identik</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
@@ -584,7 +584,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kedua poin tersebut identik</translation>
+        <translation>Kedua titik tersebut identik</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -642,7 +642,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kedua poin tersebut identik</translation>
+        <translation>Kedua titik tersebut identik</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
@@ -710,7 +710,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 Poin</translation>
+        <translation>&amp;3 Titik</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -781,7 +781,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -799,7 +799,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
@@ -980,12 +980,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Jepret Otomatis</translation>
+        <translation>Snap Otomatis</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>Persimpangan</translation>
+        <translation>Perpotongan</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -995,12 +995,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation>Poin tengah</translation>
+        <translation>Titik tengah</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation>Titik tengah</translation>
+        <translation>Titik pusat</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1015,17 +1015,17 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation>Poin referensi</translation>
+        <translation>Titik referensi</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation>Poin kisi</translation>
+        <translation>Titik kisi</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Poin pada entitas</translation>
+        <translation>Titik pada entitas</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1111,7 +1111,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation>Talang / Kemiringan</translation>
+        <translation>&amp;Chamfer / Serong</translation>
     </message>
 </context>
 <context>
@@ -1416,7 +1416,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation>Atribut Blok Daftar</translation>
+        <translation>&amp;Daftar Atribut Blok</translation>
     </message>
 </context>
 <context>
@@ -1424,7 +1424,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>Daftar Blok Ekspor (CSV)</translation>
+        <translation>Ekspor Daftar Blok (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1434,7 +1434,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>Daftar Blok Ekspor</translation>
+        <translation>&amp;Ekspor Daftar Blok</translation>
     </message>
 </context>
 <context>
@@ -1452,7 +1452,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Daftar Referensi Blok Ekspor</translation>
+        <translation>&amp;Ekspor Daftar Referensi Blok</translation>
     </message>
 </context>
 <context>
@@ -1475,7 +1475,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>Segmen Keluar</translation>
+        <translation>&amp;Pisahkan Segmen</translation>
     </message>
 </context>
 <context>
@@ -1498,7 +1498,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>&amp;Putus Celah</translation>
+        <translation>&amp;Buat Celah</translation>
     </message>
 </context>
 <context>
@@ -1516,12 +1516,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation>Titik istirahat pertama</translation>
+        <translation>Titik putus pertama</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Titik istirahat kedua</translation>
+        <translation>Titik putus kedua</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1536,7 +1536,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>Manual Keluar</translation>
+        <translation>&amp;Pisahkan Manual</translation>
     </message>
 </context>
 <context>
@@ -1590,7 +1590,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Runtuh semua</translation>
+        <translation>Ciutkan semua</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1689,22 +1689,22 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2P.js" line="+58"/>
         <source>First point</source>
-        <translation>Poin pertama</translation>
+        <translation>Titik pertama</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Poin kedua</translation>
+        <translation>Titik kedua</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>The two points are identical</source>
-        <translation>Kedua poin tersebut identik</translation>
+        <translation>Kedua titik tersebut identik</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>2 Poin</translation>
+        <translation>&amp;2 Titik</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1717,12 +1717,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.js" line="+65"/>
         <source>First point</source>
-        <translation>Poin pertama</translation>
+        <translation>Titik pertama</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Poin kedua</translation>
+        <translation>Titik kedua</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -1732,7 +1732,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kedua poin tersebut identik</translation>
+        <translation>Kedua titik tersebut identik</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
@@ -1770,17 +1770,17 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation>Baris pertama, busur atau lingkaran</translation>
+        <translation>Garis pertama, busur atau lingkaran</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation>Baris kedua, busur atau lingkaran</translation>
+        <translation>Garis kedua, busur atau lingkaran</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on circle line</source>
-        <translation>Tunjuk pada garis lingkaran</translation>
+        <translation>Titik pada garis lingkaran</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1809,12 +1809,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation>Baris pertama, busur atau lingkaran</translation>
+        <translation>Garis pertama, busur atau lingkaran</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second line, arc or circle</source>
-        <translation>Baris kedua, busur atau lingkaran</translation>
+        <translation>Garis kedua, busur atau lingkaran</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1847,22 +1847,22 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3P.js" line="+63"/>
         <source>First point</source>
-        <translation>Poin pertama</translation>
+        <translation>Titik pertama</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second point</source>
-        <translation>Poin kedua</translation>
+        <translation>Titik kedua</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Third point</source>
-        <translation>Poin ketiga</translation>
+        <translation>Titik ketiga</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 Poin</translation>
+        <translation>&amp;3 Titik</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1875,12 +1875,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3T.js" line="+84"/>
         <source>First line, arc or circle</source>
-        <translation>Baris pertama, busur atau lingkaran</translation>
+        <translation>Garis pertama, busur atau lingkaran</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line, arc or circle</source>
-        <translation>Baris kedua, busur atau lingkaran</translation>
+        <translation>Garis kedua, busur atau lingkaran</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1921,7 +1921,7 @@ Apakah Anda ingin memulihkannya?</translation>
         <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -1959,7 +1959,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
-        <translation>Menggambar lingkaran dari tengah dan menunjuk pada lingkaran</translation>
+        <translation>Menggambar lingkaran dari pusat dan titik pada lingkaran</translation>
     </message>
 </context>
 <context>
@@ -1974,7 +1974,7 @@ Apakah Anda ingin memulihkannya?</translation>
         <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -2002,7 +2002,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
@@ -2020,7 +2020,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
@@ -2077,7 +2077,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.js" line="+39"/>
         <source>Point on circle</source>
-        <translation>Tunjuk pada lingkaran</translation>
+        <translation>Titik pada lingkaran</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
@@ -2367,7 +2367,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+56"/>
         <source>To:</source>
-        <translation>Untuk:</translation>
+        <translation>Ke:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -2553,7 +2553,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
 </context>
 <context>
@@ -2587,7 +2587,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation>Tikungan kedua</translation>
+        <translation>Sudut kedua</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2612,7 +2612,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation>Pilihan Pindah</translation>
+        <translation>Pindahkan Pilihan</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2774,7 +2774,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
         <source>OK</source>
-        <translation>BAIKLAH</translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2820,7 +2820,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>Baris kedua</translation>
+        <translation>Garis kedua</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2965,7 +2965,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
@@ -3145,7 +3145,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>ruang</translation>
+        <translation>spasi</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3195,7 +3195,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation>Perpanjangan saluran ekstensi:</translation>
+        <translation>Perpanjangan garis ekstensi:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -3230,7 +3230,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Centang arsitektur</translation>
+        <translation>Tanda miring arsitektur</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3327,7 +3327,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Jarak/Sudut Tampilan</translation>
+        <translation>Tampilkan &amp;Jarak/Sudut</translation>
     </message>
 </context>
 <context>
@@ -3350,7 +3350,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Specify second point</source>
-        <translation>Tentukan poin kedua</translation>
+        <translation>Tentukan titik kedua</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
@@ -3389,12 +3389,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
-        <translation>Tikungan pertama</translation>
+        <translation>Sudut pertama</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation>Tikungan kedua</translation>
+        <translation>Sudut kedua</translation>
     </message>
 </context>
 <context>
@@ -3427,7 +3427,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Benar</translation>
+        <translation>Kanan</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3529,7 +3529,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segmen Ulang</translation>
+        <translation>Ulangi Segmen</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3901,7 +3901,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Lingkari Tidak valid.</translation>
+        <translation>Lingkaran Tidak valid.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -4040,7 +4040,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Entri yang dicor: %1 dari %2 baris teks</translation>
+        <translation>Entri yang dibuat: %1 dari %2 baris teks</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4050,7 +4050,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>Tidak ada yang dicor.</translation>
+        <translation>Tidak ada yang dibuat.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -4090,12 +4090,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Bukan Bobot Baris yang benar, diabaikan. Baris teks: %1%2 Bobot: %3</translation>
+        <translation>Bukan Bobot Garis yang benar, diabaikan. Baris teks: %1%2 Bobot: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>Bukan tipe baris yang benar, diabaikan. Baris teks: %1%2 Ketik: %3</translation>
+        <translation>Bukan Jenis Garis yang benar, diabaikan. Baris teks: %1%2 Jenis: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4130,7 +4130,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation>Jenis Huruf yang digunakan bukan jenis huruf yang benar. Baris teks: %1%2 Ketik: %3</translation>
+        <translation>Bukan Jenis Garis yang benar. Baris teks: %1%2 Jenis: %3</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4226,7 +4226,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segmen Ulang</translation>
+        <translation>Ulangi Segmen</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -4249,7 +4249,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Preferensi Menggambar</translation>
+        <translation>&amp;Preferensi Gambar</translation>
     </message>
 </context>
 <context>
@@ -4562,7 +4562,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Ellipse</source>
-        <translation>Ellipse</translation>
+        <translation>&amp;Elips</translation>
     </message>
 </context>
 <context>
@@ -4620,7 +4620,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4694,7 +4694,7 @@ sudah ada dalam daftar.</translation>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -4722,7 +4722,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -4740,7 +4740,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -4771,7 +4771,7 @@ sudah ada dalam daftar.</translation>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -4831,17 +4831,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>Baris yang dihapus dengan ID %1</translation>
+        <translation>Garis dengan ID %1 dihapus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>Anda dapat menggunakan &lt;i&gt;Edit&gt; Urungkan&lt;/i&gt; untuk memulihkan entitas baris.</translation>
+        <translation>Anda dapat menggunakan &lt;i&gt;Sunting &gt; Urungkan&lt;/i&gt; untuk memulihkan entitas garis.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation>Menambah dan Menghapus Baris</translation>
+        <translation>Menambah dan Menghapus Garis</translation>
     </message>
 </context>
 <context>
@@ -4904,22 +4904,22 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation>Tikungan pertama</translation>
+        <translation>Sudut pertama</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation>Tikungan kedua</translation>
+        <translation>Sudut kedua</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>Sambungan Pas</translation>
+        <translation>&amp;Sambungan Ekor Burung</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Gambarlah sambungan pas</translation>
+        <translation>Gambarlah sambungan ekor burung</translation>
     </message>
 </context>
 <context>
@@ -5094,13 +5094,13 @@ sudah ada dalam daftar.</translation>
         <location line="+46"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
-        <translation>Tiga Poin</translation>
+        <translation>Tiga Titik</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Gambarlah tiga poin</translation>
+        <translation>Gambar tiga titik</translation>
     </message>
 </context>
 <context>
@@ -5167,7 +5167,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation>Contoh Naskah</translation>
+        <translation>&amp;Contoh Skrip</translation>
     </message>
 </context>
 <context>
@@ -5241,7 +5241,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/File/File.js" line="+65"/>
         <source>File Tools</source>
-        <translation>Alat Bantu Pengarsipan</translation>
+        <translation>Alat File</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5676,7 +5676,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation>Siram Batalkan Riwayat</translation>
+        <translation>Kosongkan Riwayat Urungkan</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5691,7 +5691,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>Siram Batalkan Riwayat</translation>
+        <translation>Kosongkan Riwayat &amp;Urungkan</translation>
     </message>
 </context>
 <context>
@@ -5797,7 +5797,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Klik dua kali untuk mengedit palka</translation>
+        <translation>Klik dua kali untuk mengedit arsiran</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5852,7 +5852,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+64"/>
         <source>Cursor range for snap:</source>
-        <translation>Rentang kursor untuk menjepret:</translation>
+        <translation>Rentang kursor untuk snap:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5912,7 +5912,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation>Tampilkan penguasa</translation>
+        <translation>Tampilkan penggaris</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5982,7 +5982,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Tipe baris dan bobot baris</translation>
+        <translation>Jenis garis dan bobot garis</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5997,7 +5997,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Skala pola untuk berat garis 0,00mm:</translation>
+        <translation>Skala pola untuk bobot garis 0,00mm:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -6062,7 +6062,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Batas waktu untuk rendering palka:</translation>
+        <translation>Batas waktu untuk rendering arsiran:</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6182,7 +6182,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+36"/>
         <source>Relative zero:</source>
-        <translation>Relatif nol:</translation>
+        <translation>Nol relatif:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6302,17 +6302,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Snap reference points:</source>
-        <translation>Titik referensi jepret:</translation>
+        <translation>Titik referensi snap:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Alat Jepret</translation>
+        <translation>Alat Snap</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Jepret label:</translation>
+        <translation>Label snap:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6360,7 +6360,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Font label jepret:</translation>
+        <translation>Font label snap:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6485,7 +6485,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Alat Penetasan</translation>
+        <translation>Alat Arsir</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -6513,7 +6513,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Pola Penetasan</translation>
+        <translation>Pola Arsir</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6528,7 +6528,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6561,7 +6561,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Membuat palka atau isian padat dari batas yang dipilih</translation>
+        <translation>Membuat arsiran atau isian padat dari batas yang dipilih</translation>
     </message>
 </context>
 <context>
@@ -6676,7 +6676,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -6797,12 +6797,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Poin Impor</translation>
+        <translation>Impor Titik</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>Poin Impor</translation>
+        <translation>&amp;Impor Titik</translation>
     </message>
 </context>
 <context>
@@ -6848,17 +6848,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>Tentukan baris pertama</translation>
+        <translation>Tentukan garis pertama</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>Tentukan baris kedua</translation>
+        <translation>Tentukan garis kedua</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
@@ -7097,12 +7097,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation>Total area yang ditetaskan:</translation>
+        <translation>Total area arsiran:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Area penetasan diferensial:</translation>
+        <translation>Area arsiran diferensial:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7150,7 +7150,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Bentuk yang tidak ditangani dari lingkaran palka.</translation>
+        <translation>Bentuk yang tidak ditangani dari loop arsiran.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7346,12 +7346,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePP.js" line="+59"/>
         <source>First point</source>
-        <translation>Poin pertama</translation>
+        <translation>Titik pertama</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Poin kedua</translation>
+        <translation>Titik kedua</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -7371,7 +7371,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
@@ -7758,7 +7758,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>Di</translation>
+        <translation>At</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8045,7 +8045,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation>Benar</translation>
+        <translation>Kanan</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8340,12 +8340,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Lineweight:</translation>
+        <translation>Bobot garis:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation>Jenis huruf:</translation>
+        <translation>Jenis garis:</translation>
     </message>
 </context>
 <context>
@@ -8469,7 +8469,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation>Segmen Jalur</translation>
+        <translation>Segmen Garis</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8487,17 +8487,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
-        <translation>Poin pertama</translation>
+        <translation>Titik pertama</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation>Poin berikutnya</translation>
+        <translation>Titik berikutnya</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Urutan Tutup</translation>
+        <translation>Tutup Urutan</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8507,7 +8507,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Segmen Ulang</translation>
+        <translation>Ulangi Segmen</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8527,7 +8527,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8595,7 +8595,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -8608,12 +8608,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation>Baris pertama</translation>
+        <translation>Garis pertama</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation>Baris kedua</translation>
+        <translation>Garis kedua</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -8628,7 +8628,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
@@ -8646,12 +8646,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation>Poin pertama</translation>
+        <translation>Titik pertama</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Poin kedua</translation>
+        <translation>Titik kedua</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8686,7 +8686,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation>Duri</translation>
+        <translation>Purus</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -8704,42 +8704,42 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation>Poin pertama</translation>
+        <translation>Titik pertama</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Poin kedua</translation>
+        <translation>Titik kedua</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Jumlah Pas:</translation>
+        <translation>Jumlah Ekor Burung:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Height:</source>
-        <translation>Tinggi Pas:</translation>
+        <translation>Tinggi Ekor Burung:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Gradien pas:</translation>
+        <translation>Gradien Ekor Burung:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Rasio Pas/Pin:</translation>
+        <translation>Rasio Ekor Burung/Pin:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>Sambungan Pas dari 2 Titik</translation>
+        <translation>&amp;Sambungan Ekor Burung dari 2 Titik</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Gambarlah sambungan pas</translation>
+        <translation>Gambarlah sambungan ekor burung</translation>
     </message>
 </context>
 <context>
@@ -8816,7 +8816,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
-        <translation>Pilih baris</translation>
+        <translation>Pilih garis</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8859,7 +8859,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
 </context>
 <context>
@@ -8867,7 +8867,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
@@ -9224,7 +9224,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>Tetap orisinal</translation>
+        <translation>&amp;Pertahankan yang asli</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -9569,7 +9569,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Gambar pembuka:</translation>
+        <translation>Membuka gambar:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9689,7 +9689,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
 </context>
 <context>
@@ -9702,7 +9702,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Nomor:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
@@ -9712,7 +9712,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Mengimbangi garis, busur, lingkaran, atau elips melalui titik</translation>
+        <translation>Offset garis, busur, lingkaran, atau elips melalui titik</translation>
     </message>
 </context>
 <context>
@@ -9823,7 +9823,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Benar:</translation>
+        <translation>Kanan:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10215,22 +10215,22 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation>Pilih poin pertama</translation>
+        <translation>Pilih titik pertama</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation>Pilih titik istirahat pertama</translation>
+        <translation>Pilih titik putus pertama</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation>Pilih poin kedua</translation>
+        <translation>Pilih titik kedua</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation>Pilih titik istirahat kedua</translation>
+        <translation>Pilih titik putus kedua</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -10584,7 +10584,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Kompleksitas maksimum untuk penghitungan panjang palka otomatis:</translation>
+        <translation>Kompleksitas maksimum untuk penghitungan panjang arsiran otomatis:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10741,7 +10741,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Menangani:</translation>
+        <translation>Handle:</translation>
     </message>
     <message>
         <location line="+94"/>
@@ -10767,7 +10767,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>Berhenti</translation>
+        <translation>&amp;Keluar</translation>
     </message>
 </context>
 <context>
@@ -10824,7 +10824,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation>Muat Ulang Definisi Tipe Baris</translation>
+        <translation>Muat Ulang Definisi Jenis Garis</translation>
     </message>
 </context>
 <context>
@@ -10890,13 +10890,13 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="-40"/>
         <location line="+66"/>
         <source>Base:</source>
-        <translation>Pangkalan:</translation>
+        <translation>Dasar:</translation>
     </message>
     <message>
         <location line="-40"/>
@@ -11010,7 +11010,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -11182,7 +11182,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>Bulat</translation>
+        <translation>&amp;Bulatkan</translation>
     </message>
 </context>
 <context>
@@ -11708,12 +11708,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
-        <translation>Poin pertama</translation>
+        <translation>Titik pertama</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Poin kedua</translation>
+        <translation>Titik kedua</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -11817,12 +11817,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation>Tikungan pertama</translation>
+        <translation>Sudut pertama</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation>Tikungan kedua</translation>
+        <translation>Sudut kedua</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -11968,7 +11968,7 @@ sudah ada dalam daftar.</translation>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1649"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation>Paling tidak, ada dua poin yang identik.</translation>
+        <translation>Setidaknya dua titik identik.</translation>
     </message>
     <message>
         <location line="-22"/>
@@ -12001,7 +12001,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation>Bagian Tengah Samping</translation>
+        <translation>Tengah Sisi</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -12011,7 +12011,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>Poligon (Tengah, Samping)</translation>
+        <translation>Pol&amp;igon (Pusat, Sisi)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12054,7 +12054,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation>Poligon (Sisi, Samping)</translation>
+        <translation>Poligo&amp;n (Sisi, Sisi)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12095,7 +12095,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
-        <translation>Tikungan pertama</translation>
+        <translation>Sudut pertama</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12133,7 +12133,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
 </context>
 <context>
@@ -12154,7 +12154,7 @@ sudah ada dalam daftar.</translation>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -12227,12 +12227,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Alat Jepret</translation>
+        <translation>Alat Snap</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>Jepret</translation>
+        <translation>&amp;Snap</translation>
     </message>
 </context>
 <context>
@@ -12240,12 +12240,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Jepret</translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Jepret Otomatis</translation>
+        <translation>Snap Otomatis</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
@@ -12367,7 +12367,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Jarak Jepret:</translation>
+        <translation>Jarak Snap:</translation>
     </message>
 </context>
 <context>
@@ -12380,12 +12380,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+32"/>
         <source>Second point</source>
-        <translation>Poin kedua</translation>
+        <translation>Titik kedua</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Jarak Jepret:</translation>
+        <translation>Jarak Snap:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12410,7 +12410,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation>Jarak jepret antara 2 titik</translation>
+        <translation>Jarak snap antara 2 titik</translation>
     </message>
 </context>
 <context>
@@ -12442,7 +12442,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>Persimpangan</translation>
+        <translation>&amp;Perpotongan</translation>
     </message>
 </context>
 <context>
@@ -12450,17 +12450,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation>Hentikan alat persimpangan manual setelah satu kali penggunaan</translation>
+        <translation>Hentikan alat perpotongan manual setelah satu kali penggunaan</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Jepret</translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Manual Persimpangan</translation>
+        <translation>Perpotongan Manual</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12475,7 +12475,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Manual Persimpangan</translation>
+        <translation>&amp;Perpotongan Manual</translation>
     </message>
 </context>
 <context>
@@ -12539,7 +12539,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation>X/Y dari Poin</translation>
+        <translation>&amp;X/Y dari Titik</translation>
     </message>
 </context>
 <context>
@@ -12547,7 +12547,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation>Y/X dari Poin</translation>
+        <translation>&amp;Y/X dari Titik</translation>
     </message>
 </context>
 <context>
@@ -12678,12 +12678,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation>Tikungan pertama</translation>
+        <translation>Sudut pertama</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation>Tikungan kedua</translation>
+        <translation>Sudut kedua</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12708,7 +12708,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>Peregangan</translation>
+        <translation>&amp;Regangkan</translation>
     </message>
 </context>
 <context>
@@ -12741,7 +12741,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation>Impor berat garis jalur</translation>
+        <translation>Impor bobot garis jalur</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
@@ -12833,7 +12833,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
@@ -12868,7 +12868,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>Periksa semua</translation>
+        <translation>Centang semua</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -12903,7 +12903,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise</source>
-        <translation>Penghitung Searah Jarum Jam</translation>
+        <translation>Berlawanan Arah Jarum Jam</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12979,7 +12979,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+275"/>
         <source>&amp;Undo</source>
-        <translation>Membatalkan</translation>
+        <translation>&amp;Urungkan</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13114,7 +13114,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Ruang tanpa istirahat</translation>
+        <translation>Spasi tanpa putus</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13216,7 +13216,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Cepat:</translation>
+        <translation>Prompt:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -13241,7 +13241,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13377,7 +13377,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Kirim ke Kembali</translation>
+        <translation>Kirim ke Bela&amp;kang</translation>
     </message>
 </context>
 <context>
@@ -13600,7 +13600,7 @@ sudah ada dalam daftar.</translation>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>Angle:</translation>
+        <translation>Sudut:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
@@ -13812,7 +13812,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation>Membatalkan</translation>
+        <translation>&amp;Urungkan</translation>
     </message>
 </context>
 <context>
@@ -13830,7 +13830,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation>Sistem pengukuran (untuk jenis garis dan pola palka):</translation>
+        <translation>Sistem pengukuran (untuk jenis garis dan pola arsir):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -13881,7 +13881,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>Meteran</translation>
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13901,7 +13901,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation>Halaman</translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13977,17 +13977,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Lihat Alat</translation>
+        <translation>Alat Tampilan</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>View</source>
-        <translation>Melihat</translation>
+        <translation>Tampilan</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>Melihat</translation>
+        <translation>&amp;Tampilan</translation>
     </message>
 </context>
 <context>
@@ -14260,7 +14260,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Benar</translation>
+        <translation>Kanan</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14487,7 +14487,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation>Memperbesar</translation>
+        <translation>Zoom</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -14497,7 +14497,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+27"/>
         <source>&amp;Zoom</source>
-        <translation>Memperbesar</translation>
+        <translation>&amp;Zoom</translation>
     </message>
 </context>
 <context>
@@ -14526,7 +14526,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation>Memperbesar ke Pilihan</translation>
+        <translation>Zoom ke &amp;Pilihan</translation>
     </message>
 </context>
 <context>
@@ -14622,7 +14622,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Melihat</translation>
+        <translation>Tampilan</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14647,7 +14647,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation>3dWajah</translation>
+        <translation>3dFace</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14893,7 +14893,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation>Poin</translation>
+        <translation>Titik</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14928,7 +14928,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>Melacak</translation>
+        <translation>Jejak</translation>
     </message>
     <message>
         <location line="+2"/>

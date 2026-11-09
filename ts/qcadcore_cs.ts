@@ -526,7 +526,7 @@
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
         <source>Tab Order</source>
-        <translation>Pořadí tabulátoru</translation>
+        <translation>Pořadí karty</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -696,14 +696,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Vystředit pohled</translation>
+        <translation>Střed pohledu</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Zobrazit cíl</translation>
+        <translation>Cíl pohledu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -753,7 +753,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Mezera mezi rozměry</translation>
+        <translation>Odsazení kótovacího textu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -768,12 +768,12 @@
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Prodloužení linky</translation>
+        <translation>Přesah vynášecí čáry</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Posunutí prodlužovacího vedení</translation>
+        <translation>Odsazení vynášecí čáry</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Areal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -354,7 +354,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Dimension Arc</translation>
+        <translation>Dimensionsbue</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
@@ -369,21 +369,21 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Akkordpunkt</translation>
+        <translation>Kordepunkt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Langtliggende akkordpunkt</translation>
+        <translation>Fjernt kordepunkt</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation>Dimension Line</translation>
+        <translation>Dimensionslinje</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -425,7 +425,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Leader slutpunkt</translation>
+        <translation>Henvisningslinjens slutpunkt</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -485,12 +485,12 @@
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation>Fast forlængelse af linje</translation>
+        <translation>Fast forlængelseslinje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation>Længde af forlængerledning</translation>
+        <translation>Længde af forlængelseslinje</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -522,7 +522,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Vigtigste punkt</translation>
+        <translation>Hovedpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -778,7 +778,7 @@
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
         <source>Arrow</source>
-        <translation>Pile</translation>
+        <translation>Pil</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -867,7 +867,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation>Base Point</translation>
+        <translation>Basispunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -917,7 +917,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>Pasformspunkt</translation>
+        <translation>Tilpasningspunkt</translation>
     </message>
     <message>
         <location line="+1"/>

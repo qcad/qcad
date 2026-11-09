@@ -326,28 +326,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>Rea 1 algus</translation>
+        <translation>Joone 1 algus</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>Rea 2 algus</translation>
+        <translation>Joone 2 algus</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>Rida 1 Lõpp</translation>
+        <translation>Joone 1 lõpp</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>Rida 2 lõpp</translation>
+        <translation>Joone 2 lõpp</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -383,7 +383,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation>Dimensiooni rida</translation>
+        <translation>Mõõtjoon</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -441,7 +441,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation>Sallivus</translation>
+        <translation>Tolerants</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -485,12 +485,12 @@
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation>Fikseeritud pikendusliin</translation>
+        <translation>Fikseeritud pikendusjoon</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation>Pikendusliini pikkus</translation>
+        <translation>Pikendusjoone pikkus</translation>
     </message>
     <message>
         <location line="+8"/>

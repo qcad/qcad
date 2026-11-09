@@ -9155,7 +9155,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation>Використовуйте рідний рядок меню</translation>
+        <translation>Використовувати системний рядок меню</translation>
     </message>
 </context>
 <context>
@@ -10364,7 +10364,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation>Попередній перегляд</translation>
+        <translation>&amp;Попередній вид</translation>
     </message>
 </context>
 <context>
@@ -10723,7 +10723,7 @@ is already in the list.</source>
     <message>
         <location line="+422"/>
         <source>*VARIES*</source>
-        <translation>*ВАРІАНТИ*</translation>
+        <translation>*РІЗНІ*</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12703,7 +12703,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation>Перший кут</translation>
+        <translation>Другий кут</translation>
     </message>
     <message>
         <location line="+9"/>

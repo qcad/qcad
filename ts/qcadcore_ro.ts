@@ -209,7 +209,7 @@
     <message>
         <location line="+2"/>
         <source>Others...</source>
-        <translation>Alții...</translation>
+        <translation>Altele...</translation>
     </message>
 </context>
 <context>
@@ -490,7 +490,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Bifă arhitectură</translation>
+        <translation>Marcaj arhitectural</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -543,7 +543,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Greutate în linie</translation>
+        <translation>Grosime de linie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -626,7 +626,7 @@
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation>Congelat</translation>
+        <translation>Înghețat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -702,7 +702,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Mâner</translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -820,7 +820,7 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>Pe</translation>
+        <translation>Activat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -838,7 +838,7 @@
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation>În general</translation>
+        <translation>Global</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -904,7 +904,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation>Frontieră</translation>
+        <translation>Chenar</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -918,7 +918,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>Punct liniuță</translation>
+        <translation>Linie-punct</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -988,12 +988,12 @@
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO liniuța lungă liniuța scurtă liniuța lungă</translation>
+        <translation>ISO liniuță lungă, liniuță scurtă</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO liniuță lungă-rasă lungă dublă-rasă scurtă-rasă scurtă</translation>
+        <translation>ISO liniuță lungă, două liniuțe scurte</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1013,7 +1013,7 @@
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation>ISO dublă liniuță dublu-punct dublu-punct</translation>
+        <translation>ISO liniuță dublă, două puncte</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1053,17 +1053,17 @@
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>Piese</translation>
+        <translation>Șine</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>Linia de gardă 1</translation>
+        <translation>Linie de gard 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation>Fenceline 2</translation>
+        <translation>Linie de gard 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Putere aeriană</translation>
+        <translation>Linie electrică aeriană</translation>
     </message>
     <message>
         <location line="+2"/>

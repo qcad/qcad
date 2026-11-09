@@ -46,12 +46,12 @@
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation>Polegada milimesimal</translation>
+        <translation>Micropolegada</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation>Milha</translation>
+        <translation>Mil (milésimo de polegada)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Fonte de dimensão</translation>
+        <translation>Fonte de cota</translation>
     </message>
 </context>
 <context>
@@ -260,7 +260,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+75"/>
         <source>Pixel Unit</source>
-        <translation>Pixel unidade</translation>
+        <translation>Unidade de pixel</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -464,7 +464,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Manipulador</translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -608,14 +608,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Ver centro</translation>
+        <translation>Centro da vista</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Ver alvo</translation>
+        <translation>Alvo da vista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -663,7 +663,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Guardada</translation>
+        <translation>Recolhida</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -763,12 +763,12 @@
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Extensão da linha de extensionamento</translation>
+        <translation>Extensão da linha de extensão</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Extensão da linha de deslocamento</translation>
+        <translation>Deslocamento da linha de extensão</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -879,7 +879,7 @@
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Textura</translation>
+        <translation>Padrão</translation>
     </message>
 </context>
 <context>
@@ -953,7 +953,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation>Espectro</translation>
+        <translation>Fantasma</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1118,17 +1118,17 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Potência aérea</translation>
+        <translation>Rede elétrica aérea</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Impuro</translation>
+        <translation>Esgoto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Ascensão impura</translation>
+        <translation>Esgoto por recalque</translation>
     </message>
 </context>
 <context>

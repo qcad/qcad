@@ -119,7 +119,7 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Po zbiru</translation>
+        <translation>Po bloku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -240,7 +240,7 @@
     <message>
         <location filename="../src/core/REntity.cpp" line="+97"/>
         <source>Block</source>
-        <translation>Zbir</translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+102"/>
@@ -592,7 +592,7 @@
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation>Od zgoraj navzdol</translation>
+        <translation>Na glavo</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -615,7 +615,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Središe cilja</translation>
+        <translation>Cilj pogleda</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -711,24 +711,24 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Najm. podaljšanja</translation>
+        <translation>Najm. obseg</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Najv. podaljšanja</translation>
+        <translation>Najv. obseg</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation>Zaznano krožno (rekurzivno) sklicevanje zbirov:</translation>
+        <translation>Zaznano krožno (rekurzivno) sklicevanje blokov:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation>Zbirovo ime:</translation>
+        <translation>Ime bloka:</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
@@ -788,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Velikost kljukice</translation>
+        <translation>Velikost poševnice</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Arhitekturna kljukica</translation>
+        <translation>Arhitekturna poševnica</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -838,17 +838,17 @@
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation>Zbir puščice</translation>
+        <translation>Blok puščice</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation>Zbir puščice 1</translation>
+        <translation>Blok puščice 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation>Zbir puščice 2</translation>
+        <translation>Blok puščice 2</translation>
     </message>
 </context>
 <context>
@@ -892,7 +892,7 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Po zbiru</translation>
+        <translation>Po bloku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1141,7 +1141,7 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Po zbiru</translation>
+        <translation>Po bloku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1236,7 +1236,7 @@
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation>1.00mm (ISO</translation>
+        <translation>1.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>

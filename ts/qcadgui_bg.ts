@@ -84,7 +84,7 @@
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation>Справка</translation>
+        <translation>Референтна точка</translation>
     </message>
     <message>
         <location line="+3"/>

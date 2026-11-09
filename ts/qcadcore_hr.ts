@@ -222,12 +222,12 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Crtaća jedinica</translation>
+        <translation>Jedinica crteža</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Mjerilo linije</translation>
+        <translation>Mjerilo vrste crte</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -417,7 +417,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Mjerilo crte</translation>
+        <translation>Mjerilo vrste crte</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -664,7 +664,7 @@
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation>Razmak između linija</translation>
+        <translation>Razmak redaka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -706,14 +706,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Vidi središte</translation>
+        <translation>Središte pogleda</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Vidi cilj</translation>
+        <translation>Cilj pogleda</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -856,7 +856,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+210"/>
         <source>Requires selection</source>
-        <translation>Zahtjeva odabir</translation>
+        <translation>Zahtijeva odabir</translation>
     </message>
 </context>
 <context>
@@ -887,12 +887,12 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation>Putem sloja</translation>
+        <translation>Prema sloju</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Putem Bloka</translation>
+        <translation>Prema bloku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -968,7 +968,7 @@
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO duga crta praznina</translation>
+        <translation>ISO duga crta točka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1146,7 +1146,7 @@
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation>Općenito</translation>
+        <translation>Zadano</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -222,12 +222,12 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>绘图单元</translation>
+        <translation>绘图单位</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>线性比例</translation>
+        <translation>线型比例</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -678,12 +678,12 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation>冻结</translation>
+        <translation>关闭即冻结</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation>跳格</translation>
+        <translation>选项卡顺序</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -711,14 +711,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>最小扩展</translation>
+        <translation>最小范围</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>最大扩展</translation>
+        <translation>最大范围</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>拍打</translation>
+        <translation>保温棉</translation>
     </message>
     <message>
         <location line="+1"/>

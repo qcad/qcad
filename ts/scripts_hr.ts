@@ -1375,7 +1375,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
-        <translation>Dodatci</translation>
+        <translation>Widgeti</translation>
     </message>
     <message>
         <location line="-733"/>
@@ -1475,7 +1475,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>&amp;Prekinuto segmentom</translation>
+        <translation>&amp;Izdvoji segment</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
@@ -1536,7 +1536,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>&amp;Ručno prekinuto</translation>
+        <translation>&amp;Izdvoji ručno</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
@@ -1814,7 +1814,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation>Prva linije, luk ili kružnica</translation>
+        <translation>Prva linija, luk ili kružnica</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -2017,7 +2017,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle</source>
-        <translation>Nacrtaj koncentričnu kružnice</translation>
+        <translation>Nacrtaj koncentričnu kružnicu</translation>
     </message>
 </context>
 <context>
@@ -2392,7 +2392,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Convert Drawing Unit</source>
-        <translation>Pretvori crtaću jedinicu</translation>
+        <translation>Pretvori jedinicu crteža</translation>
     </message>
 </context>
 <context>
@@ -2679,7 +2679,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>&amp;Poništi odabir Referenci Bloka</translation>
+        <translation>&amp;Poništi odabir referenci blokova</translation>
     </message>
 </context>
 <context>
@@ -2744,7 +2744,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Krivulje</translation>
+        <translation>Splajnovi</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2825,7 +2825,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>Druga linije</translation>
+        <translation>Druga linija</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2889,12 +2889,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Položaj svojstva</translation>
+        <translation>Položaj značajke</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Krajnja točka oznake</translation>
+        <translation>Krajnja točka pokazivača</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -3108,7 +3108,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Mjera kote</translation>
+        <translation>Mjerilo kota</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3342,7 +3342,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Odaberite liniju, luk, krug, elipsu, krivulju ili poliliniju</translation>
+        <translation>Odaberite liniju, luk, krug, elipsu, splajn ili poliliniju</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3496,7 +3496,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation>Prva vrhova</translation>
+        <translation>Prvi vrh</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -3939,17 +3939,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation>Size nevažeći.</translation>
+        <translation>Veličina nevažeća.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation>Size in X nevažeći.</translation>
+        <translation>Veličina u X nevažeća.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation>Size in Y nevažeći.</translation>
+        <translation>Veličina u Y nevažeća.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3997,12 +3997,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation>Width nevažeći.</translation>
+        <translation>Širina nevažeća.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation>Vert. alignment nevažeći.</translation>
+        <translation>Okomito poravnanje nevažeće.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4501,7 +4501,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>Izaberi Referencu Bloka</translation>
+        <translation>Odaberi referencu bloka</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
@@ -4614,7 +4614,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
-        <translation>Krajni parametar</translation>
+        <translation>Krajnji parametar</translation>
     </message>
     <message>
         <location line="+249"/>
@@ -4713,7 +4713,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation>Elispa s &amp;Osima</translation>
+        <translation>Elipsa s &amp;Osima</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4923,12 +4923,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>&amp;Čepasti spoj</translation>
+        <translation>&amp;Spoj na lastin rep</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Nacrtaj lastino pero zglob</translation>
+        <translation>Nacrtaj spoj na lastin rep</translation>
     </message>
 </context>
 <context>
@@ -5191,7 +5191,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Rasprši</translation>
+        <translation>Razgradi</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -8378,7 +8378,7 @@ večpostoji na popisu.</translation>
         <location line="+0"/>
         <location line="+124"/>
         <source>Layer List</source>
-        <translation>Sloj popis</translation>
+        <translation>Popis slojeva</translation>
     </message>
     <message>
         <location line="-54"/>
@@ -8401,7 +8401,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation>Sljedeći vertex</translation>
+        <translation>Sljedeći vrh</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -8421,7 +8421,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Nacrtaj oznaku (linija sa strelicom)</translation>
+        <translation>Nacrtaj pokazivač (niz linija sa strelicom)</translation>
     </message>
 </context>
 <context>
@@ -8644,12 +8644,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation>Kut &amp;Sredine</translation>
+        <translation>&amp;Simetrala kuta</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>Nacrtaj kut bisektor, trisektor, ...</translation>
+        <translation>Nacrtaj simetralu kuta, trisektrisu, ...</translation>
     </message>
 </context>
 <context>
@@ -8725,12 +8725,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>&amp;Čepasti spoj od 2 točke</translation>
+        <translation>&amp;Spoj na lastin rep od 2 točke</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Nacrtaj lastino pero zglob</translation>
+        <translation>Nacrtaj spoj na lastin rep</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
@@ -9182,7 +9182,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Ogledalo</translation>
+        <translation>Zrcaljenje</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9197,7 +9197,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>&amp;Ogledalo</translation>
+        <translation>&amp;Zrcaljenje</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
@@ -10674,7 +10674,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+422"/>
         <source>*VARIES*</source>
-        <translation>*VARIJABLE*</translation>
+        <translation>*RAZLIČITO*</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10967,7 +10967,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>&amp;Obrnuto</translation>
+        <translation>&amp;Obrni</translation>
     </message>
 </context>
 <context>
@@ -11187,7 +11187,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>&amp;Zaokruži</translation>
+        <translation>&amp;Zaobli</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -11419,7 +11419,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation>Mjerilo</translation>
+        <translation>Skaliranje</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -11444,7 +11444,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;Mjerilo</translation>
+        <translation>&amp;Skaliranje</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -11503,7 +11503,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Opcije mjerila</translation>
+        <translation>Opcije skaliranja</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11608,7 +11608,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>&amp;Odabir Reference Bloka</translation>
+        <translation>&amp;Odaberi reference blokova</translation>
     </message>
 </context>
 <context>
@@ -12512,7 +12512,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>&amp;Srednji priručnik</translation>
+        <translation>&amp;Ručna sredina</translation>
     </message>
 </context>
 <context>
@@ -12581,7 +12581,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>&amp;Krivulja</translation>
+        <translation>&amp;Splajn</translation>
     </message>
 </context>
 <context>
@@ -12768,7 +12768,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation>Krivulje</translation>
+        <translation>Splajnovi</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12962,7 +12962,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>&amp;Tekst poravnata vodilica</translation>
+        <translation>&amp;Pokazivač poravnat s tekstom</translation>
     </message>
 </context>
 <context>
@@ -13847,7 +13847,7 @@ večpostoji na popisu.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>Crtaća jedinica</translation>
+        <translation>Jedinica crteža</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14482,7 +14482,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>&amp;Vodoravna konstrukijska linija</translation>
+        <translation>&amp;Vodoravna konstrukcijska linija</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14495,7 +14495,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>&amp;Okomita konstrukijska linija</translation>
+        <translation>&amp;Okomita konstrukcijska linija</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14924,7 +14924,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation>Polilinija</translation>
+        <translation>Polilinije</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14974,12 +14974,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation>Krivulje</translation>
+        <translation>Splajnovi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation>Krivulja</translation>
+        <translation>Splajn</translation>
     </message>
     <message>
         <location line="+2"/>

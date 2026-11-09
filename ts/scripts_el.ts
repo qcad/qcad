@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Προτιμήσεις σχεδίασης</translation>
+        <translation>Προτιμήσεις σχεδίου</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -324,7 +324,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Οι προτιμήσεις του τρέχοντος σχεδίου μπορούν να αλλάξουν στην επιλογή&lt;br/&gt;&lt;i&gt;Επεξεργασία &amp;gt; Προτιμήσεις σχεδίασης&lt;/i&gt;.</translation>
+        <translation>Οι προτιμήσεις του τρέχοντος σχεδίου μπορούν να αλλάξουν στην επιλογή&lt;br/&gt;&lt;i&gt;Επεξεργασία &amp;gt; Προτιμήσεις σχεδίου&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -987,7 +987,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>Διασταυρώσεις</translation>
+        <translation>Τομές</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1294,7 +1294,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+82"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation>Δεν είναι δυνατή η επεξεργασία μπλοκ κατά την επεξεργασία ενός μπλοκ in-place</translation>
+        <translation>Δεν είναι δυνατή η επεξεργασία μπλοκ κατά την επί τόπου επεξεργασία ενός μπλοκ</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1408,7 +1408,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Αναφορά μπλοκ ID:</translation>
+        <translation>ID αναφοράς μπλοκ:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1508,7 +1508,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Επιλέξτε γραμμή, τόξο, κύκλο, έλλειψη, καμπύλη ή πολυγραμμή για διάσπαση</translation>
+        <translation>Επιλέξτε γραμμή, τόξο, κύκλο, έλλειψη, spline ή πολυγραμμή για διάσπαση</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1546,7 +1546,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Help/BrowseUserManual/BrowseUserManualInit.js" line="+2"/>
         <source>Browse User Manual</source>
-        <translation>Αναζήτηση εγχειριδίου χρήσης</translation>
+        <translation>Περιήγηση στο εγχειρίδιο χρήσης</translation>
     </message>
 </context>
 <context>
@@ -1798,7 +1798,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 Γωνίες και σημείο</translation>
+        <translation>2 Εφαπτόμενες και σημείο</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1836,7 +1836,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2 Γωνίες και ακτίνες</translation>
+        <translation>2 Εφαπτόμενες και ακτίνα</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2302,7 +2302,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation>Μέγεθος ιστορίας:</translation>
+        <translation>Μέγεθος ιστορικού:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2349,7 +2349,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation>Τίποτα δεν πρέπει να γίνει.</translation>
+        <translation>Δεν υπάρχει τίποτα να γίνει.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2402,7 +2402,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation>Οθόνη συντεταγμένων</translation>
+        <translation>Ένδειξη συντεταγμένων</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
@@ -2443,7 +2443,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>Αντίγραφο με αναφορά</translation>
+        <translation>Αντιγραφή με αναφορά</translation>
     </message>
 </context>
 <context>
@@ -2741,7 +2741,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Καμπύλες</translation>
+        <translation>Splines</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2896,7 +2896,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>Διατεταγμένη (X/Y)</translation>
+        <translation>Τεταγμένη (X/Y)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2973,7 +2973,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation>Περιστρεφόμενο (γραμμικό)</translation>
+        <translation>Περιστραμμένη (γραμμική)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3075,13 +3075,13 @@ Do you wish to recover it?</source>
         <location line="+14"/>
         <location line="+50"/>
         <source>Upper tolerance</source>
-        <translation>Ανώτερη ανοχή</translation>
+        <translation>Άνω ανοχή</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Χαμηλότερη ανοχή</translation>
+        <translation>Κάτω ανοχή</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3338,7 +3338,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Επιλέξτε γραμμή, τόξο, κύκλο, έλλειψη, spline ή polyline</translation>
+        <translation>Επιλέξτε γραμμή, τόξο, κύκλο, έλλειψη, spline ή πολυγραμμή</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3358,7 +3358,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>Διαχωρίστε το</translation>
+        <translation>Διαίρεση</translation>
     </message>
 </context>
 <context>
@@ -3602,12 +3602,12 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation>Αλλαγή σε στυλ άνω τελεία/σημείο CSV.</translation>
+        <translation>Αλλαγή σε στυλ CSV με ερωτηματικό (;)/τελεία.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation>Αλλαγή σε στυλ CSV με άνω τελεία/κόμμα.</translation>
+        <translation>Αλλαγή σε στυλ CSV με ερωτηματικό (;)/κόμμα.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3617,7 +3617,7 @@ is already in the list.</source>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation>Ορισμός νέας σχετικής προέλευσης απέτυχε, αγνοήθηκε. Γραμμή κειμένου: %1</translation>
+        <translation>Ορισμός νέας σχετικής αρχής απέτυχε, αγνοήθηκε. Γραμμή κειμένου: %1</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3795,7 +3795,7 @@ is already in the list.</source>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation>Ισότιμες θέσεις.</translation>
+        <translation>Ίσες θέσεις.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3843,7 +3843,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation>Ισότιμες θέσεις 1-2.</translation>
+        <translation>Ίσες θέσεις 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3865,7 +3865,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation>Ισότιμες θέσεις 1-3.</translation>
+        <translation>Ίσες θέσεις 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3875,7 +3875,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation>Ισότιμες θέσεις 2-3.</translation>
+        <translation>Ίσες θέσεις 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3918,13 +3918,13 @@ is already in the list.</source>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation>Ισότιμες θέσεις 1-4.</translation>
+        <translation>Ίσες θέσεις 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation>Ισότιμες θέσεις 2-4.</translation>
+        <translation>Ίσες θέσεις 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
@@ -4093,7 +4093,7 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Δεν είναι σωστό πάχος γραμμής, αγνοείται. Γραμμή κειμένου: %1%2 Βάρος: %3</translation>
+        <translation>Δεν είναι σωστό πάχος γραμμής, αγνοείται. Γραμμή κειμένου: %1%2 Πάχος: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4128,7 +4128,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Δεν είναι σωστό πάχος γραμμής. Γραμμή κειμένου: %1%2 Βάρος: %3</translation>
+        <translation>Δεν είναι σωστό πάχος γραμμής. Γραμμή κειμένου: %1%2 Πάχος: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4252,7 +4252,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Προτιμήσεις σχεδίασης</translation>
+        <translation>Προτιμήσεις σχεδίου</translation>
     </message>
 </context>
 <context>
@@ -4268,7 +4268,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>Διπλό</translation>
+        <translation>Διπλασιασμός</translation>
     </message>
 </context>
 <context>
@@ -4373,7 +4373,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Η οντότητα δεν είναι γραμμή, τόξο, spline, ελλειψοειδές τόξο ή πολυγραμμή.</translation>
+        <translation>Η οντότητα δεν είναι γραμμή, τόξο, spline, ελλειπτικό τόξο ή πολυγραμμή.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4398,17 +4398,17 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Η οντότητα δεν είναι γραμμή, τόξο, κύκλος, spline ή polyline.</translation>
+        <translation>Η οντότητα δεν είναι γραμμή, τόξο, κύκλος, spline ή πολυγραμμή.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Η οντότητα δεν είναι γραμμή, τόξο, κύκλος, έλλειψη, spline ή polyline.</translation>
+        <translation>Η οντότητα δεν είναι γραμμή, τόξο, κύκλος, έλλειψη, spline ή πολυγραμμή.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Η οντότητα δεν είναι κύκλος, έλλειψη, spline ή polyline.</translation>
+        <translation>Η οντότητα δεν είναι κύκλος, έλλειψη, spline ή πολυγραμμή.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4589,12 +4589,12 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation>Μικρό σημείο της έλλειψης ή μικρή ακτίνα</translation>
+        <translation>Δευτερεύον σημείο της έλλειψης ή μικρή ακτίνα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation>Μικρό σημείο της έλλειψης</translation>
+        <translation>Δευτερεύον σημείο της έλλειψης</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4659,7 +4659,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation>Ελλειψοειδές τόξο</translation>
+        <translation>Ελλειπτικό τόξο</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4853,7 +4853,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation>Κατάλογος καταλόγου</translation>
+        <translation>Λίστα καταλόγου</translation>
     </message>
 </context>
 <context>
@@ -4918,7 +4918,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>Κοινή άρθρωση χελιδονοουράς</translation>
+        <translation>Σύνδεση χελιδονοουράς</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4981,7 +4981,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation>Διαδικασία εκτέλεσης</translation>
+        <translation>Εκτέλεση διεργασίας</translation>
     </message>
 </context>
 <context>
@@ -5417,7 +5417,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation>Προσθέστε παρεμβολές ενδιάμεσα π.χ. αποστάτες, κόμπους. (Δεν εφαρμόζεται)</translation>
+        <translation>Προσθέστε παρεμβολές ενδιάμεσα π.χ. αποστάτες, κόμπους. (Δεν έχει υλοποιηθεί)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5665,7 +5665,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation>Αναδίπλωση οριζόντια</translation>
+        <translation>Αναστροφή οριζόντια</translation>
     </message>
 </context>
 <context>
@@ -5727,7 +5727,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Σχεδιάστε γύρο κόλλας</translation>
+        <translation>Σχεδίαση πτερυγίου κόλλησης</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
@@ -5812,7 +5812,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation>Επεξεργασία αναφοράς μπλοκ in-place</translation>
+        <translation>Επί τόπου επεξεργασία αναφοράς μπλοκ</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5872,7 +5872,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation>Escape διαγράφει την επιλογή</translation>
+        <translation>Το Escape καταργεί την επιλογή</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -5892,7 +5892,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Στερεές γραμμές πλέγματος</translation>
+        <translation>Συνεχείς γραμμές πλέγματος</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5907,7 +5907,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Εμφάνιση μεγάλου άξονα προέλευσης</translation>
+        <translation>Εμφάνιση μεγάλου άξονα αρχής</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5932,12 +5932,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation>Εμφάνιση στόχου</translation>
+        <translation>Εμφάνιση σταυρονήματος</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation>Εμφάνιση μεγάλου στόχου</translation>
+        <translation>Εμφάνιση μεγάλου σταυρονήματος</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5987,12 +5987,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Τύποι γραμμών και βάρη γραμμών</translation>
+        <translation>Τύποι γραμμών και πάχη γραμμών</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Προεπιλεγμένο βάρος γραμμής:</translation>
+        <translation>Προεπιλεγμένο πάχος γραμμής:</translation>
     </message>
     <message>
         <location line="+91"/>
@@ -6002,17 +6002,17 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Κλίμακα μοτίβου για βάρος γραμμής 0.00mm:</translation>
+        <translation>Κλίμακα μοτίβου για πάχος γραμμής 0.00mm:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation>Εφαρμογή βάρους γραμμής σε σημεία</translation>
+        <translation>Εφαρμογή πάχους γραμμής σε σημεία</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display and Performance</source>
-        <translation>Οθόνη και επιδόσεις</translation>
+        <translation>Απεικόνιση και επιδόσεις</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6107,12 +6107,12 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Screen-based lineweight scale factor:</source>
-        <translation>Συντελεστής κλίμακας βαρών γραμμών με βάση την οθόνη:</translation>
+        <translation>Συντελεστής κλίμακας παχών γραμμών με βάση την οθόνη:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
-        <translation>Συντελεστής που εφαρμόζεται στα βάρη γραμμών όταν εμφανίζονται βάρη γραμμών με βάση την οθόνη (π.χ. 2 εμφανίζει τα βάρη γραμμών με βάση την οθόνη με διπλάσιο πλάτος)</translation>
+        <translation>Συντελεστής που εφαρμόζεται στα πάχη γραμμών όταν εμφανίζονται πάχη γραμμών με βάση την οθόνη (π.χ. 2 εμφανίζει τα πάχη γραμμών με βάση την οθόνη με διπλάσιο πλάτος)</translation>
     </message>
     <message>
         <location line="+143"/>
@@ -6167,7 +6167,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation>Στο στόχαστρο:</translation>
+        <translation>Σταυρόνημα:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6182,7 +6182,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation>Προέλευση:</translation>
+        <translation>Αρχή:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6317,7 +6317,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Ετικέτα Snap:</translation>
+        <translation>Ετικέτα πιασίματος:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6365,7 +6365,7 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Γραμματοσειρά ετικέτας Snap:</translation>
+        <translation>Γραμματοσειρά ετικέτας πιασίματος:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6388,7 +6388,7 @@ is already in the list.</source>
     <message>
         <location line="+444"/>
         <source>Enable pan gesture</source>
-        <translation>Ενεργοποίηση της χειρονομίας pan</translation>
+        <translation>Ενεργοποίηση της χειρονομίας μετατόπισης</translation>
     </message>
     <message>
         <location line="-193"/>
@@ -6403,12 +6403,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Touch panning speed:</source>
-        <translation>Ταχύτητα περιστροφής με αφή:</translation>
+        <translation>Ταχύτητα μετατόπισης με αφή:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Panning threshold (px):</source>
-        <translation>Κατώφλι σάρωσης (px):</translation>
+        <translation>Κατώφλι μετατόπισης (px):</translation>
     </message>
     <message>
         <location line="+327"/>
@@ -6513,7 +6513,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Στερεό γέμισμα</translation>
+        <translation>Συμπαγές γέμισμα</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6802,12 +6802,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Σημεία εισαγωγής</translation>
+        <translation>Εισαγωγή σημείων</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>Σημεία εισαγωγής</translation>
+        <translation>Εισαγωγή σημείων</translation>
     </message>
 </context>
 <context>
@@ -6897,7 +6897,7 @@ is already in the list.</source>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation>Περιοχή κύκλου:</translation>
+        <translation>Εμβαδόν κύκλου:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6925,7 +6925,7 @@ is already in the list.</source>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>Περιοχή τόξου έλλειψης:</translation>
+        <translation>Εμβαδόν τόξου έλλειψης:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6954,13 +6954,13 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation>Περιοχή έλλειψης:</translation>
+        <translation>Εμβαδόν έλλειψης:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>Περιοχή τόξου:</translation>
+        <translation>Εμβαδόν τόξου:</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -7010,7 +7010,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Περιοχή τόξου/κύκλου/έκλειψης</translation>
+        <translation>Εμβαδόν τόξου/κύκλου/έλλειψης</translation>
     </message>
 </context>
 <context>
@@ -7023,7 +7023,7 @@ is already in the list.</source>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation>Περιοχή πολυγώνου:</translation>
+        <translation>Εμβαδόν πολυγώνου:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7043,7 +7043,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>Πολυγωνική περιοχή</translation>
+        <translation>Εμβαδόν πολυγώνου</translation>
     </message>
 </context>
 <context>
@@ -7066,7 +7066,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Not implemented. Command terminated.</source>
-        <translation>Δεν εφαρμόζεται. Η εντολή τερματίστηκε.</translation>
+        <translation>Δεν έχει υλοποιηθεί. Η εντολή τερματίστηκε.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7082,7 +7082,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation>Κλειστός χώρος:</translation>
+        <translation>Περικλειόμενο εμβαδόν:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7097,7 +7097,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Περιοχή με διαγράμμιση:</translation>
+        <translation>Εμβαδόν διαγράμμισης:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7107,7 +7107,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Διαφορική περιοχή με διαγράμμιση:</translation>
+        <translation>Διαφορικό εμβαδόν διαγράμμισης:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7160,12 +7160,12 @@ is already in the list.</source>
     <message>
         <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation>Αυτοτελές σχήμα κοντά στο (%1). Δεν υπάρχουν αποτελέσματα.</translation>
+        <translation>Αυτοτεμνόμενο σχήμα κοντά στο (%1). Δεν υπάρχουν αποτελέσματα.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation>Εμβαδόν κεντροειδές</translation>
+        <translation>Κεντροειδές εμβαδού</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7198,7 +7198,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Αζιμούθιο:</translation>
+        <translation>Διόπτευση:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7371,7 +7371,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation>Delta Y:</translation>
+        <translation>Δέλτα Y:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7753,7 +7753,7 @@ is already in the list.</source>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation>Τελεία και παύλα</translation>
+        <translation>Ερωτηματικό</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7763,7 +7763,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>Στο</translation>
+        <translation>Παπάκι</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7778,7 +7778,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation>Κατακερματισμός</translation>
+        <translation>Δίεση</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7867,7 +7867,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation>Απόσταση γραμμής:</translation>
+        <translation>Απόσταση σειρών:</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
@@ -8091,7 +8091,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation>Ισομετρικό πλέγμα Off</translation>
+        <translation>Απενεργοποίηση ισομετρικού πλέγματος</translation>
     </message>
 </context>
 <context>
@@ -8107,7 +8107,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation>Κορυφαία προβολή</translation>
+        <translation>Άνω προβολή</translation>
     </message>
 </context>
 <context>
@@ -8123,7 +8123,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation>Ισομετρική άποψη</translation>
+        <translation>Ισομετρική όψη</translation>
     </message>
 </context>
 <context>
@@ -8213,7 +8213,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Προεπιλεγμένο βάρος γραμμής για νέα στρώματα:</translation>
+        <translation>Προεπιλεγμένο πάχος γραμμής για νέα στρώματα:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -8223,7 +8223,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Προεπιλεγμένο βάρος γραμμής για το στρώμα 0:</translation>
+        <translation>Προεπιλεγμένο πάχος γραμμής για το στρώμα 0:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
@@ -8248,12 +8248,12 @@ is already in the list.</source>
     <message>
         <location line="+53"/>
         <source>Thawing all layers</source>
-        <translation>Απόψυξη όλων των στρωμάτων</translation>
+        <translation>Ξεπάγωμα όλων των στρωμάτων</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation>Κατάψυξη όλων των στρωμάτων</translation>
+        <translation>Πάγωμα όλων των στρωμάτων</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -8484,7 +8484,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ακτίνα</translation>
+        <translation>Ημιευθεία</translation>
     </message>
 </context>
 <context>
@@ -8691,7 +8691,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation>Τενόντες</translation>
+        <translation>Μόρσα</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -8701,7 +8701,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Σχεδιάστε δάχτυλα, αυλακώσεις και τένονες Box Joint</translation>
+        <translation>Σχεδιάστε δάχτυλα, εγκοπές και μόρσα Box Joint</translation>
     </message>
 </context>
 <context>
@@ -8734,7 +8734,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Αναλογία χωνευτής/καρφίτσας:</translation>
+        <translation>Αναλογία χελιδονοουράς/πείρου:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -8752,12 +8752,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation>Πατήστε για να ξεκινήσετε το σχέδιο</translation>
+        <translation>Πατήστε για να ξεκινήσετε τη σχεδίαση</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation>Απελευθερώστε για να σταματήσετε το σχέδιο</translation>
+        <translation>Αφήστε για να σταματήσετε τη σχεδίαση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
@@ -9087,7 +9087,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>Παγκόσμια κλίμακα γραμμής:</translation>
+        <translation>Γενική κλίμακα τύπου γραμμής:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9176,7 +9176,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Καθρέφτης</translation>
+        <translation>Κατοπτρισμός</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9201,7 +9201,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>Καθρέφτης</translation>
+        <translation>Κατοπτρισμός</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9214,7 +9214,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Επιλογές καθρέφτη</translation>
+        <translation>Επιλογές κατοπτρισμού</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9449,7 +9449,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Σημείο ρύθμισης</translation>
+        <translation>Ορισμός σημείου</translation>
     </message>
 </context>
 <context>
@@ -9880,7 +9880,7 @@ is already in the list.</source>
     <message>
         <location line="-10"/>
         <source>Show paper borders</source>
-        <translation>Εμφάνιση περιθωρίων χαρτιού</translation>
+        <translation>Εμφάνιση ορίων χαρτιού</translation>
     </message>
 </context>
 <context>
@@ -9888,7 +9888,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>Παν Ζουμ</translation>
+        <translation>Μετατόπιση και ζουμ</translation>
     </message>
 </context>
 <context>
@@ -10026,7 +10026,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation>Ενιαίο σημείο</translation>
+        <translation>Μεμονωμένο σημείο</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10045,7 +10045,7 @@ is already in the list.</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation>Οθόνη σημείου</translation>
+        <translation>Εμφάνιση σημείων</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10212,7 +10212,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Επιλέξτε γραμμή, τόξο, κύκλο, έλλειψη, καμπύλη ή πολυγραμμή για διάσπαση</translation>
+        <translation>Επιλέξτε γραμμή, τόξο, κύκλο, έλλειψη, spline ή πολυγραμμή για διάσπαση</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10227,7 +10227,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation>Διαλέξτε το πρώτο σημείο διάλειμμα</translation>
+        <translation>Διαλέξτε το πρώτο σημείο σπασίματος</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -10242,7 +10242,7 @@ is already in the list.</source>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Τμήμα διάσπασης</translation>
+        <translation>Διαχωρισμός τμήματος</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
@@ -10455,7 +10455,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation>Κλείσιμο Προεπισκόπηση εκτύπωσης</translation>
+        <translation>Κλείσιμο προεπισκόπησης εκτύπωσης</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10525,7 +10525,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation>Εμφάνιση περιθωρίων χαρτιού</translation>
+        <translation>Εμφάνιση ορίων χαρτιού</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -10651,7 +10651,7 @@ is already in the list.</source>
     <message>
         <location line="+182"/>
         <source>Index</source>
-        <translation>Ευρετήριο</translation>
+        <translation>Δείκτης</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -10676,7 +10676,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>Εμφάνιση όλων των ακινήτων</translation>
+        <translation>Εμφάνιση όλων των ιδιοτήτων</translation>
     </message>
     <message>
         <location line="+162"/>
@@ -10753,7 +10753,7 @@ is already in the list.</source>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>Κλίμακα γραμμής:</translation>
+        <translation>Κλίμακα τύπου γραμμής:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -11255,7 +11255,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>File Format Version Not Recommended</source>
-        <translation>Έκδοση μορφής αρχείου Δεν συνιστάται</translation>
+        <translation>Μη συνιστώμενη έκδοση μορφής αρχείου</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11280,7 +11280,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Proceed?</source>
-        <translation>Προχωρήστε</translation>
+        <translation>Συνέχεια;</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -11587,7 +11587,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation>Επιλέξτε όλα</translation>
+        <translation>Επιλογή όλων</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11654,7 +11654,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Χειρολαβή (εξαγωνική):</translation>
+        <translation>Λαβή (δεκαεξαδική):</translation>
     </message>
 </context>
 <context>
@@ -11750,7 +11750,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(Απο)επιλογή διασταυρούμενων οντοτήτων</translation>
+        <translation>(Απο)επιλογή τεμνόμενων οντοτήτων</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11859,7 +11859,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Επιλογή σταυρού</translation>
+        <translation>Διασταυρούμενη επιλογή</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -11964,7 +11964,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Fill</source>
-        <translation>Συμπλήρωση</translation>
+        <translation>Γέμισμα</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
@@ -12452,7 +12452,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>Διασταύρωση</translation>
+        <translation>Τομή</translation>
     </message>
 </context>
 <context>
@@ -12470,7 +12470,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Χειροκίνητη διασταύρωση</translation>
+        <translation>Χειροκίνητη τομή</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12485,7 +12485,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Χειροκίνητη διασταύρωση</translation>
+        <translation>Χειροκίνητη τομή</translation>
     </message>
 </context>
 <context>
@@ -12598,12 +12598,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>Επιλέξτε Spline Degree</translation>
+        <translation>Επιλέξτε βαθμό spline</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation>Κουτάκι για κλειστό Spline</translation>
+        <translation>Επιλέξτε για κλειστό spline</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12649,17 +12649,17 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation>Οθόνη ποντικιού</translation>
+        <translation>Ένδειξη ποντικιού</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation>Οθόνη επιλογής</translation>
+        <translation>Ένδειξη επιλογής</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation>Οθόνη προόδου</translation>
+        <translation>Ένδειξη προόδου</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12726,7 +12726,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation>Καμπύλες</translation>
+        <translation>Splines</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13059,7 +13059,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation>Plus-Minus</translation>
+        <translation>Συν-Πλην</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13124,7 +13124,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Χώρος χωρίς διάλειμμα</translation>
+        <translation>Αδιάσπαστο διάστημα</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13176,7 +13176,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Rich Text</source>
-        <translation>Πλούσιο κείμενο</translation>
+        <translation>Εμπλουτισμένο κείμενο</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -13271,7 +13271,7 @@ is already in the list.</source>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation>Top Κέντρο</translation>
+        <translation>Πάνω κέντρο</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13387,7 +13387,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Στείλτε στην Πίσω</translation>
+        <translation>Αποστολή στο πίσω μέρος</translation>
     </message>
 </context>
 <context>
@@ -13528,7 +13528,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation>Μετακίνηση/Αντίγραφο</translation>
+        <translation>Μετακίνηση/Αντιγραφή</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13742,7 +13742,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation>Σεμινάρια σεναρίου</translation>
+        <translation>Οδηγοί εκμάθησης σεναρίων</translation>
     </message>
 </context>
 <context>
@@ -13796,7 +13796,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Ενεργοποίηση υψηλής κλιμάκωσης DPI</translation>
+        <translation>Ενεργοποίηση κλιμάκωσης υψηλού DPI</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -13987,7 +13987,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Προβολή εργαλείων</translation>
+        <translation>Εργαλεία προβολής</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -14064,7 +14064,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+512"/>
         <source>Dropped data not supported</source>
-        <translation>Δεν υποστηρίζεται η απόρριψη δεδομένων</translation>
+        <translation>Τα δεδομένα που αποθέσατε δεν υποστηρίζονται</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -14180,7 +14180,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Not Equal</source>
-        <translation>Δεν είναι ισότιμο</translation>
+        <translation>Όχι ίσο</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14364,30 +14364,30 @@ is already in the list.</source>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation>Συμπεριλάβετε 0&apos;, καταστείλετε 0&quot;</translation>
+        <translation>Συμπερίληψη 0&apos;, απόκρυψη 0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation>Συμπερίληψη 0&quot;, καταστολή 0&apos;</translation>
+        <translation>Συμπερίληψη 0&quot;, απόκρυψη 0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation>Καταστέλλει τα κορυφαία μηδενικά</translation>
+        <translation>Απόκρυψη αρχικών μηδενικών</translation>
     </message>
     <message>
         <location line="-34"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation>Καταστολή των μηδενικών που ακολουθούν</translation>
+        <translation>Απόκρυψη τελικών μηδενικών</translation>
     </message>
     <message>
         <location line="-34"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation>Καταστολή των μηδενικών που προηγούνται / ακολουθούν</translation>
+        <translation>Απόκρυψη αρχικών / τελικών μηδενικών</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -14893,12 +14893,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation>Ακτίνες</translation>
+        <translation>Ημιευθείες</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ακτίνα</translation>
+        <translation>Ημιευθεία</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14923,7 +14923,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Στερεά</translation>
+        <translation>Συμπαγή</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14963,12 +14963,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation>Καμπύλες</translation>
+        <translation>Splines</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation>Καμπύλη</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+2"/>

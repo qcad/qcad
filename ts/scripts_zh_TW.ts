@@ -303,8 +303,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation>请重新启动QCAD以便
-的偏好变化生效。</translation>
+        <translation>請重新啟動QCAD，
+偏好設定的變更才會生效。</translation>
     </message>
     <message>
         <location line="+163"/>
@@ -395,7 +395,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation>價值：</translation>
+        <translation>值：</translation>
     </message>
 </context>
 <context>
@@ -408,12 +408,12 @@ the preference changes to take effect.</source>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation>新增層</translation>
+        <translation>新增圖層</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation>新增層</translation>
+        <translation>新增圖層(&amp;A)</translation>
     </message>
 </context>
 <context>
@@ -710,7 +710,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3分</translation>
+        <translation>&amp;3點</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -791,7 +791,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -809,7 +809,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -934,8 +934,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation>存在一个&quot;%1&quot;的自动保存备份文件。
-你想恢复它吗？</translation>
+        <translation>存在一個&quot;%1&quot;的自動儲存備份檔案。
+你想恢復它嗎？</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -1038,7 +1038,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>自動飾件</translation>
+        <translation>自動修剪(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -1261,7 +1261,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>增加額外的邊距以補償線重</translation>
+        <translation>增加額外的邊距以補償線寬</translation>
     </message>
 </context>
 <context>
@@ -1282,7 +1282,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
-        <translation>塊狀工具</translation>
+        <translation>區塊工具</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -1378,7 +1378,7 @@ Do you wish to recover it?</source>
         <location line="+105"/>
         <location line="+44"/>
         <source>Block List</source>
-        <translation>塊狀列表</translation>
+        <translation>區塊列表</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
@@ -1531,7 +1531,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>突圍手冊</translation>
+        <translation>手動打斷(&amp;B)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
@@ -1704,7 +1704,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>2分</translation>
+        <translation>&amp;2點</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1862,7 +1862,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3分</translation>
+        <translation>&amp;3點</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2012,7 +2012,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -2030,7 +2030,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -2577,7 +2577,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>選擇實體或地區</translation>
+        <translation>選擇實體或區域</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2764,7 +2764,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation>塊狀物</translation>
+        <translation>區塊</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3101,7 +3101,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>尺寸表</translation>
+        <translation>尺寸比例</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3312,9 +3312,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation>该文件夹
+        <translation>該資料夾
 &quot;%1&quot;
-已经在列表中。</translation>
+已經在列表中。</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3704,7 +3704,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation>場地數量少。</translation>
+        <translation>欄位數量過少。</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3733,7 +3733,7 @@ is already in the list.</source>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation>奇數場數。</translation>
+        <translation>欄位數量為奇數。</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -4070,7 +4070,7 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>不是一個正確的線重，忽略不計。文字行: %1%2 重量: %3</translation>
+        <translation>不是一個正確的線寬，忽略不計。文字行: %1%2 線寬: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4105,7 +4105,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>不是一個正確的線重。文字行: %1%2 重量: %3</translation>
+        <translation>不是一個正確的線寬。文字行: %1%2 線寬: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4120,12 +4120,12 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation>更新的層: %1</translation>
+        <translation>更新的圖層: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation>添加了新層：%1</translation>
+        <translation>添加了新圖層：%1</translation>
     </message>
     <message>
         <location line="-447"/>
@@ -4523,7 +4523,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation>編輯層</translation>
+        <translation>編輯圖層(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -4732,7 +4732,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -4750,7 +4750,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -4815,7 +4815,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation>新增層</translation>
+        <translation>新增圖層</translation>
     </message>
 </context>
 <context>
@@ -4977,7 +4977,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation>執行過程</translation>
+        <translation>執行處理程序(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -5339,7 +5339,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation>FP增加了一層：</translation>
+        <translation>FP增加了圖層：</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
@@ -5477,7 +5477,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>魷魚</translation>
+        <translation>方波</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5827,7 +5827,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation>塊狀物</translation>
+        <translation>區塊</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5982,27 +5982,27 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>線型和線重</translation>
+        <translation>線型和線寬</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>預設線重：</translation>
+        <translation>預設線寬：</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>按線重比例劃分線型圖案</translation>
+        <translation>按線寬縮放線型圖案</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>線重0.00mm的圖案刻度：</translation>
+        <translation>線寬0.00mm的圖案比例：</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation>將線權重應用於點</translation>
+        <translation>將線寬套用於點</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6073,12 +6073,12 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Screen-based lineweight scale factor:</source>
-        <translation>基於螢幕的線重比例係數：</translation>
+        <translation>基於螢幕的線寬比例係數：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
-        <translation>顯示基於螢幕的線重時套用於線重的係數（例如 2 表示基於螢幕的線重顯示為兩倍寬）</translation>
+        <translation>顯示基於螢幕的線寬時套用於線寬的係數（例如 2 表示基於螢幕的線寬顯示為兩倍寬）</translation>
     </message>
     <message>
         <location line="+325"/>
@@ -6098,7 +6098,7 @@ is already in the list.</source>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>孵化器渲染的超時：</translation>
+        <translation>圖案填充渲染的逾時：</translation>
     </message>
     <message>
         <location line="-361"/>
@@ -6729,7 +6729,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Rotation:</source>
-        <translation>輪換：</translation>
+        <translation>旋轉：</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7150,7 +7150,7 @@ is already in the list.</source>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>未處理的形狀來自孵化迴圈。</translation>
+        <translation>來自圖案填充環路的未處理形狀。</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7520,7 +7520,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>地區（資訊）：</translation>
+        <translation>面積（資訊）：</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7796,7 +7796,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>輪換：</translation>
+        <translation>旋轉：</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7862,12 +7862,12 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation>柱子間距：</translation>
+        <translation>欄間距：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation>行距：</translation>
+        <translation>列間距：</translation>
     </message>
 </context>
 <context>
@@ -7895,7 +7895,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>輪換：</translation>
+        <translation>旋轉：</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -8102,7 +8102,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation>頂部投射</translation>
+        <translation>頂部投影(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -8243,7 +8243,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
-        <translation>新圖層的預設線重：</translation>
+        <translation>新圖層的預設線寬：</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -8253,7 +8253,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>0層的預設線重：</translation>
+        <translation>圖層0的預設線寬：</translation>
     </message>
     <message>
         <location line="-48"/>
@@ -8276,7 +8276,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation>第0層</translation>
+        <translation>圖層0</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8310,12 +8310,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation>層名是空的。</translation>
+        <translation>圖層名稱是空的。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation>層已經存在。</translation>
+        <translation>圖層已經存在。</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
@@ -8325,7 +8325,7 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Layer name:</source>
-        <translation>層名：</translation>
+        <translation>圖層名稱：</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -8340,7 +8340,7 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>線重：</translation>
+        <translation>線寬：</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -8400,7 +8400,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>繪製領導者（帶箭頭的線序）。</translation>
+        <translation>繪製引線（帶箭頭的線序列）</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -8638,7 +8638,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -8859,7 +8859,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -8877,7 +8877,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -9265,7 +9265,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>雜項塊狀工具</translation>
+        <translation>雜項區塊工具</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9689,7 +9689,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -9712,7 +9712,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>號碼：</translation>
+        <translation>數量：</translation>
     </message>
 </context>
 <context>
@@ -9909,7 +9909,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>輪換：</translation>
+        <translation>旋轉：</translation>
     </message>
     <message>
         <location line="+129"/>
@@ -10366,7 +10366,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Print/PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
-        <translation>印刷品</translation>
+        <translation>列印(&amp;P)</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10798,7 +10798,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>清單</translation>
+        <translation>清除列表(&amp;C)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10832,7 +10832,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/RemoveBlock/RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
-        <translation>移除塊狀物</translation>
+        <translation>移除區塊(&amp;R)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11634,7 +11634,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>按處理方式</translation>
+        <translation>依識別碼</translation>
     </message>
 </context>
 <context>
@@ -11642,7 +11642,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>按手柄選擇</translation>
+        <translation>依識別碼選擇</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11700,7 +11700,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Same Layer</source>
-        <translation>同一層</translation>
+        <translation>同一圖層</translation>
     </message>
 </context>
 <context>
@@ -11912,7 +11912,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation>选定的实体：
+        <translation>選定的實體：
 %1.</translation>
     </message>
     <message>
@@ -12426,7 +12426,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>免費</translation>
+        <translation>自由(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -12941,7 +12941,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>文字對齊的領導者</translation>
+        <translation>文字對齊引線(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -13114,7 +13114,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>無斷層空間</translation>
+        <translation>不換行空格</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13221,7 +13221,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation>價值：</translation>
+        <translation>值：</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -13385,7 +13385,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>帶到前面來</translation>
+        <translation>移到最前(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -14577,7 +14577,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation>塊狀物</translation>
+        <translation>區塊</translation>
     </message>
     <message>
         <location line="+0"/>

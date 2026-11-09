@@ -587,7 +587,7 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>後方</translation>
+        <translation>左右反転</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -608,14 +608,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>中央に表示</translation>
+        <translation>ビューの中心</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>対象を表示</translation>
+        <translation>ビューのターゲット</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -704,7 +704,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation>挿入基部</translation>
+        <translation>挿入基点</translation>
     </message>
     <message>
         <location line="+1"/>

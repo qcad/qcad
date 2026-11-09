@@ -49,7 +49,7 @@
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation>종료</translation>
+        <translation>끝점</translation>
     </message>
     <message>
         <location line="+3"/>

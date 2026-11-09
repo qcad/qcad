@@ -29,7 +29,7 @@
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation>Peržiūra:</translation>
+        <translation>Revizija:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -183,7 +183,7 @@
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation>Kreditai</translation>
+        <translation>Padėkos</translation>
     </message>
     <message>
         <location line="+176"/>
@@ -254,7 +254,7 @@
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation>Kreditai</translation>
+        <translation>Padėkos</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Piešimo nuostatos</translation>
+        <translation>Brėžinio nuostatos</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -390,7 +390,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
     <message>
         <location line="+8"/>
         <source>Name:</source>
-        <translation>Vardas ir pavardė:</translation>
+        <translation>Pavadinimas:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -450,12 +450,12 @@ nuostatos pakeitimai įsigaliotų.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation>Įrankiai &quot;Arc Tools</translation>
+        <translation>Lanko įrankiai</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Arc</source>
-        <translation>Arc</translation>
+        <translation>&amp;Lankas</translation>
     </message>
 </context>
 <context>
@@ -791,7 +791,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -809,7 +809,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -838,12 +838,12 @@ nuostatos pakeitimai įsigaliotų.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>Tangentas, taškas, spindulys</translation>
+        <translation>&amp;Liestinė, taškas, spindulys</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Nubraižykite lanką, liečiantį subjektą ir einantį per tašką, kurio spindulys</translation>
+        <translation>Nubraižykite nurodyto spindulio lanką, liečiantį objektą ir einantį per tašką</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
@@ -871,7 +871,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
     <message>
         <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
-        <translation>Nubraižykite lanką, liečiantį pagrindinę esybę</translation>
+        <translation>Nubraižykite lanką, liečiantį bazinį objektą</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
@@ -989,7 +989,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>Sankryžos</translation>
+        <translation>Sankirtos</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1029,7 +1029,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Subjekto taškai</translation>
+        <translation>Objekto taškai</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1085,17 +1085,17 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Šie du vienetai negali būti siaurinami.</translation>
+        <translation>Šių dviejų objektų negalima nuožulninti.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Pirmasis subjektas negali būti apkarpytas.</translation>
+        <translation>Pirmasis objektas negali būti apkarpytas.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Antrojo subjekto negalima apkarpyti.</translation>
+        <translation>Antrojo objekto negalima apkarpyti.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1173,7 +1173,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+280"/>
         <source>Selection</source>
-        <translation>Atranka</translation>
+        <translation>Pasirinkimas</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1183,7 +1183,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="-107"/>
         <source>Background</source>
-        <translation>Pagrindinė informacija</translation>
+        <translation>Fonas</translation>
     </message>
     <message>
         <location line="-245"/>
@@ -1193,7 +1193,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+56"/>
         <source>Specify resolution:</source>
-        <translation>Nurodykite rezoliuciją:</translation>
+        <translation>Nurodykite skyrą:</translation>
     </message>
     <message>
         <location line="+195"/>
@@ -1245,7 +1245,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation>Naudokite &quot;anti-aliasing</translation>
+        <translation>Naudoti kraštų glotninimą</translation>
     </message>
     <message>
         <location line="-197"/>
@@ -1255,7 +1255,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation>Marginalas:</translation>
+        <translation>Paraštė:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -1265,7 +1265,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Pridėkite papildomą maržą, kad kompensuotumėte eilutės svorį</translation>
+        <translation>Pridėti papildomą paraštę linijos storiui kompensuoti</translation>
     </message>
 </context>
 <context>
@@ -1366,7 +1366,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>Fiksuoti blokų pavadinimus</translation>
+        <translation>&amp;Taisyti blokų pavadinimus</translation>
     </message>
 </context>
 <context>
@@ -1464,7 +1464,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>Pasirinkite linijos, lanko, apskritimo, elipsės, splainerio arba daugialinijinio segmento variantą</translation>
+        <translation>Pasirinkite liniją, lanką, apskritimą, elipsę, splainą arba polilinijos segmentą</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1474,7 +1474,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>Segmentas</translation>
+        <translation>&amp;Išimti segmentą</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
@@ -1510,7 +1510,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Pasirinkite liniją, lanką, apskritimą, elipsę, liniją arba daugialinijinę liniją, kad išskaidytumėte</translation>
+        <translation>Pasirinkite liniją, lanką, apskritimą, elipsę, splainą arba poliliniją, kad išskaidytumėte</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1525,7 +1525,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Antrasis break point&apos;as</translation>
+        <translation>Antrasis lūžio taškas</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1535,7 +1535,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>Pertraukos vadovas</translation>
+        <translation>&amp;Išimti rankiniu būdu</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
@@ -1594,7 +1594,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Sugriauti viską</translation>
+        <translation>Sutraukti viską</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1643,7 +1643,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation>Nustatyti Šriftas Arial</translation>
+        <translation>Nustatyti šriftą Arial</translation>
     </message>
 </context>
 <context>
@@ -1693,12 +1693,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2P.js" line="+58"/>
         <source>First point</source>
-        <translation>Pirmas punktas</translation>
+        <translation>Pirmasis taškas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -1721,12 +1721,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.js" line="+65"/>
         <source>First point</source>
-        <translation>Pirmas punktas</translation>
+        <translation>Pirmasis taškas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -1800,12 +1800,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 Tangentai ir taškas</translation>
+        <translation>&amp;2 liestinės ir taškas</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Nubraižykite apskritimą, liečiantį dvi esybes, per tašką</translation>
+        <translation>Nubraižykite apskritimą, liečiantį du objektus, per tašką</translation>
     </message>
 </context>
 <context>
@@ -1833,12 +1833,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2 Tangentai ir spindulys</translation>
+        <translation>&amp;2 liestinės ir spindulys</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation>Nubrėžti apskritimą, liečiantį du subjektus, kurių spindulys nurodytas</translation>
+        <translation>Nubrėžti nurodyto spindulio apskritimą, liečiantį du objektus</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
@@ -1851,17 +1851,17 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3P.js" line="+63"/>
         <source>First point</source>
-        <translation>Pirmas punktas</translation>
+        <translation>Pirmasis taškas</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Third point</source>
-        <translation>Trečias punktas</translation>
+        <translation>Trečiasis taškas</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
@@ -1910,7 +1910,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
-        <translation>Nubrėžti apskritimą, liečiantį tris subjektus</translation>
+        <translation>Nubrėžti apskritimą, liečiantį tris objektus</translation>
     </message>
 </context>
 <context>
@@ -2006,7 +2006,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle</source>
-        <translation>Nubraižykite koncentrinį ratą</translation>
+        <translation>Nubraižyti koncentrinį apskritimą</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
@@ -2016,7 +2016,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -2034,7 +2034,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -2068,12 +2068,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation>Tangentas ir 2 taškai</translation>
+        <translation>&amp;Liestinė ir 2 taškai</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation>Nubrėžti apskritimą per du taškus ir liestinę prie vieno subjekto</translation>
+        <translation>Nubrėžti apskritimą per du taškus, liečiantį vieną objektą</translation>
     </message>
 </context>
 <context>
@@ -2086,12 +2086,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>Tangentas, taškas, spindulys</translation>
+        <translation>&amp;Liestinė, taškas, spindulys</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>Nubraižykite apskritimą, liečiantį subjektą ir einantį per tašką, kurio spindulys</translation>
+        <translation>Nubraižykite nurodyto spindulio apskritimą, liečiantį objektą ir einantį per tašką</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
@@ -2120,7 +2120,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Baigiamasis brėžinys...</translation>
+        <translation>Brėžinys uždaromas...</translation>
     </message>
 </context>
 <context>
@@ -2381,7 +2381,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+56"/>
         <source>To:</source>
-        <translation>Kam:</translation>
+        <translation>Į:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -2391,7 +2391,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+7"/>
         <source>Convert Drawing Unit</source>
-        <translation>Konvertuoti piešimo vienetą</translation>
+        <translation>Konvertuoti brėžinio vienetą</translation>
     </message>
 </context>
 <context>
@@ -2581,12 +2581,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>Pasirinkite subjektą arba regioną</translation>
+        <translation>Pasirinkite objektą arba regioną</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation>Perkelti subjektą arba nuorodą</translation>
+        <translation>Perkelti objektą arba nuorodą</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2601,12 +2601,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation>Tikslinis atrankos taškas</translation>
+        <translation>Pasirinkimo tikslinis taškas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation>Perkelti subjektą į norimą vietą</translation>
+        <translation>Perkelti objektą į norimą vietą</translation>
     </message>
     <message>
         <location line="+416"/>
@@ -2621,7 +2621,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation>Perkelti subjektą</translation>
+        <translation>Perkelti objektą</translation>
     </message>
     <message>
         <location line="+127"/>
@@ -2665,12 +2665,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation>Atšaukti visus</translation>
+        <translation>&amp;Panaikinti pasirinkimą</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Deselect all entities</source>
-        <translation>Panaikinkite visų subjektų pasirinkimą</translation>
+        <translation>Panaikinkite visų objektų pasirinkimą</translation>
     </message>
 </context>
 <context>
@@ -2678,7 +2678,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>Panaikinkite bloko nuorodų pasirinkimą</translation>
+        <translation>&amp;Panaikinti bloko nuorodų pasirinkimą</translation>
     </message>
 </context>
 <context>
@@ -2686,7 +2686,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>Panaikinkite sluoksnio elementų pasirinkimą</translation>
+        <translation>&amp;Panaikinti sluoksnio objektų pasirinkimą</translation>
     </message>
 </context>
 <context>
@@ -2743,7 +2743,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Splinai</translation>
+        <translation>Splainai</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2763,7 +2763,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation>į eilutes</translation>
+        <translation>į linijas</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2773,12 +2773,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation>į subjektus</translation>
+        <translation>į objektus</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
         <source>OK</source>
-        <translation>GERAI</translation>
+        <translation>Gerai</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2819,12 +2819,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.js" line="+80"/>
         <source>Arc or first of two lines</source>
-        <translation>Lanko arba pirmosios iš dviejų eilučių</translation>
+        <translation>Lankas arba pirmoji iš dviejų linijų</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>Antroji eilutė</translation>
+        <translation>Antroji linija</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2852,7 +2852,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>Pasirinkite lanko arba apskritimo subjektą</translation>
+        <translation>Pasirinkite lanko arba apskritimo objektą</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2888,7 +2888,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Funkcijos vieta</translation>
+        <translation>Elemento vieta</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2898,7 +2898,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>Ordinatas (X/Y)</translation>
+        <translation>&amp;Ordinatė (X/Y)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2911,7 +2911,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>Pasirinkite lanko arba apskritimo subjektą</translation>
+        <translation>Pasirinkite lanko arba apskritimo objektą</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2934,7 +2934,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>Nėra matmenų subjektų su pasirinktomis etiketės pozicijomis.</translation>
+        <translation>Nėra matmenų objektų su pasirinktomis etiketės pozicijomis.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
@@ -3022,12 +3022,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Lankas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation>Pliusai / minusai</translation>
+        <translation>Plius / minus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3078,23 +3078,23 @@ Ar norite jį atkurti?</translation>
         <location line="+14"/>
         <location line="+50"/>
         <source>Upper tolerance</source>
-        <translation>Didžiausia leistina paklaida</translation>
+        <translation>Viršutinis nuokrypis</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Mažesnė tolerancija</translation>
+        <translation>Apatinis nuokrypis</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation>Skalė</translation>
+        <translation>Mastelis</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Piešimo mastelis</translation>
+        <translation>Brėžinio mastelis</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3107,7 +3107,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Matmenų skalė</translation>
+        <translation>Matmenų mastelis</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3151,7 +3151,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>erdvė</translation>
+        <translation>tarpas</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3196,7 +3196,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation>Strėlės dydis:</translation>
+        <translation>Rodyklės dydis:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3226,12 +3226,12 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation>Strėlės stilius</translation>
+        <translation>Rodyklės stilius</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation>Strėlė</translation>
+        <translation>Rodyklė</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3361,7 +3361,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>Padalykite</translation>
+        <translation>&amp;Padalyti</translation>
     </message>
 </context>
 <context>
@@ -3377,17 +3377,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation>Piešinys</translation>
+        <translation>Braižyti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Piešinys</translation>
+        <translation>&amp;Braižyti</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation>Piešimo įrankiai</translation>
+        <translation>Braižymo įrankiai</translation>
     </message>
 </context>
 <context>
@@ -3428,7 +3428,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Vidurio</translation>
+        <translation>Vidurys</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3443,7 +3443,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Dugnas</translation>
+        <translation>Apačia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3487,7 +3487,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>Piešinys</translation>
+        <translation>&amp;Braižyti</translation>
     </message>
 </context>
 <context>
@@ -3535,7 +3535,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>&quot;Redo&quot; segmentas</translation>
+        <translation>Pakartoti segmentą</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3545,7 +3545,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Nuvalyti</translation>
+        <translation>Lanko kampas</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -3620,7 +3620,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation>Naujos santykinės kilmės nustatymas nepavyko, ignoruojama. Teksto eilutė: %1</translation>
+        <translation>Nepavyko nustatyti naujo santykinio pradžios taško, ignoruojama. Teksto eilutė: %1</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3826,7 +3826,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation>Angle1 Invalid.</translation>
+        <translation>Kampas1 negalioja.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3981,12 +3981,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation>3 laipsnio tinkamumo taškas Spline, mažiau nei 3 nuorodos.</translation>
+        <translation>3 laipsnio priderinimo taškų splainas, mažiau nei 3 nuorodos.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation>3 laipsnio kontrolinis taškas Spline, mažiau nei 4 nuorodos.</translation>
+        <translation>3 laipsnio valdymo taškų splainas, mažiau nei 4 nuorodos.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4001,7 +4001,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation>Vert. alignment Invalid.</translation>
+        <translation>Vert. lygiuotė negalioja.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4076,7 +4076,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Netinkamas linijinis svoris, ignoruojamas. Teksto eilutė: %1%2 Svoris: %3</translation>
+        <translation>Netinkamas linijos storis, ignoruojamas. Teksto eilutė: %1%2 Storis: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4086,7 +4086,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Netinkama Linetype skalė, ignoruojama. Teksto eilutė: %1%2 Mastelis: %3</translation>
+        <translation>Netinkamas linijos tipo mastelis, ignoruojama. Teksto eilutė: %1%2 Mastelis: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4111,7 +4111,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Netinkamas linijinis svoris. Teksto eilutė: %1%2 Svoris: %3</translation>
+        <translation>Netinkamas linijos storis. Teksto eilutė: %1%2 Storis: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4141,7 +4141,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation>Piešimas iš CSV</translation>
+        <translation>Braižyti iš CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4156,12 +4156,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Piešimas iš CSV</translation>
+        <translation>&amp;Braižyti iš CSV</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation>Piešia subjektus pagal tekstinius įrašus CSV faile</translation>
+        <translation>Braižo objektus pagal tekstinius įrašus CSV faile</translation>
     </message>
 </context>
 <context>
@@ -4232,7 +4232,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Nuvalyti:</translation>
+        <translation>Lanko kampas:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4242,7 +4242,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>&quot;Redo&quot; segmentas</translation>
+        <translation>Pakartoti segmentą</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -4255,7 +4255,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Piešimo nuostatos</translation>
+        <translation>&amp;Brėžinio nuostatos</translation>
     </message>
 </context>
 <context>
@@ -4264,15 +4264,15 @@ jau yra sąraše.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform>%n subjektas dubliuotas</numerusform>
-            <numerusform>%n subjektai dubliuoti</numerusform>
-            <numerusform>%n subjektų dubliuota</numerusform>
+            <numerusform>%n objektas dubliuotas</numerusform>
+            <numerusform>%n objektai dubliuoti</numerusform>
+            <numerusform>%n objektų dubliuota</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>Dublikatas</translation>
+        <translation>&amp;Dubliuoti</translation>
     </message>
 </context>
 <context>
@@ -4327,12 +4327,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Subjekto nėra darbiniame rinkinyje.</translation>
+        <translation>Objekto nėra darbiniame rinkinyje.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>Subjektas yra užrakintame sluoksnyje.</translation>
+        <translation>Objektas yra užrakintame sluoksnyje.</translation>
     </message>
     <message>
         <location line="+254"/>
@@ -4342,37 +4342,37 @@ jau yra sąraše.</translation>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Subjektas nėra bloko nuoroda.</translation>
+        <translation>Objektas nėra bloko nuoroda.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation>Subjektas nėra linija ar lankas.</translation>
+        <translation>Objektas nėra linija ar lankas.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Subjektas nėra linija, lankas ar polilinija.</translation>
+        <translation>Objektas nėra linija, lankas ar polilinija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation>Subjektas nėra linija.</translation>
+        <translation>Objektas nėra linija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation>Subjektas nėra lankas.</translation>
+        <translation>Objektas nėra lankas.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation>Subjektas nėra lankas ar apskritimas.</translation>
+        <translation>Objektas nėra lankas ar apskritimas.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation>Subjektas nėra linija, lankas ar apskritimas.</translation>
+        <translation>Objektas nėra linija, lankas ar apskritimas.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4382,17 +4382,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation>Subjektas nėra lankas, apskritimas ar elipsė.</translation>
+        <translation>Objektas nėra lankas, apskritimas ar elipsė.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation>Subjektas nėra linija, lankas, apskritimas ar elipsė.</translation>
+        <translation>Objektas nėra linija, lankas, apskritimas ar elipsė.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Subjektas nėra linija, lankas, apskritimas, elipsė ar polilinija.</translation>
+        <translation>Objektas nėra linija, lankas, apskritimas, elipsė ar polilinija.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4402,32 +4402,32 @@ jau yra sąraše.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Elementas nėra linija, lankas, apskritimas, splaineris ar polilinija.</translation>
+        <translation>Elementas nėra linija, lankas, apskritimas, splainas ar polilinija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Elementas nėra linija, lankas, apskritimas, elipsė, splaineris ar polilinija.</translation>
+        <translation>Elementas nėra linija, lankas, apskritimas, elipsė, splainas ar polilinija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Elementas nėra apskritimas, elipsė, splaineris ar polilinija.</translation>
+        <translation>Elementas nėra apskritimas, elipsė, splainas ar polilinija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Subjektas nėra polilinija.</translation>
+        <translation>Objektas nėra polilinija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation>Subjektas nėra uždara daugiakampė linija.</translation>
+        <translation>Objektas nėra uždara polilinija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Subjektas nėra splainas su tinkamais taškais.</translation>
+        <translation>Objektas nėra splainas su priderinimo taškais.</translation>
     </message>
 </context>
 <context>
@@ -4435,7 +4435,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+61"/>
         <source>Show ECMAScript Shell</source>
-        <translation>Rodyti &quot;ECMAScript Shell</translation>
+        <translation>Rodyti ECMAScript apvalkalą</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -4451,7 +4451,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation>&quot;ECMAScript Shell</translation>
+        <translation>ECMAScript apvalkalas</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -4740,7 +4740,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -4758,7 +4758,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -4839,17 +4839,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>Ištrinta eilutė su ID %1</translation>
+        <translation>Ištrinta linija su ID %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>Galite naudoti &lt;i&gt;Edit &gt; Undo&lt;/i&gt;, kad atkurtumėte eilutės vienetą.</translation>
+        <translation>Galite naudoti &lt;i&gt;Redaguoti &gt; Atšaukti&lt;/i&gt;, kad atkurtumėte linijos objektą.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation>Pridėti ir ištrinti eilutę</translation>
+        <translation>Pridėti ir ištrinti liniją</translation>
     </message>
 </context>
 <context>
@@ -4873,7 +4873,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>Piešti šriftai</translation>
+        <translation>&amp;Braižyti šriftus</translation>
     </message>
 </context>
 <context>
@@ -4922,12 +4922,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>&quot;Dovetail&quot; jungtis</translation>
+        <translation>&amp;Kregždės uodegos jungtis</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Nubraižykite balandžių uodegos jungtį</translation>
+        <translation>Nubraižyti kregždės uodegos jungtį</translation>
     </message>
 </context>
 <context>
@@ -5125,7 +5125,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>Sandorių klausytojas</translation>
+        <translation>&amp;Operacijų klausytojas</translation>
     </message>
 </context>
 <context>
@@ -5235,7 +5235,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-41"/>
         <source>Spline segments:</source>
-        <translation>Spline segmentai:</translation>
+        <translation>Splaino segmentai:</translation>
     </message>
 </context>
 <context>
@@ -5392,12 +5392,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Pridėti Pradėti &quot;Apex</translation>
+        <translation>Pridėti pradžios viršūnę</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Pridėti &quot;End Apex</translation>
+        <translation>Pridėti pabaigos viršūnę</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5582,7 +5582,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Ištrinti dažyti ant bazinių subjektų. (nuolatinis išjungtas)</translation>
+        <translation>Uždažyti baziniai objektai ištrinti. (nuolatinis režimas išjungtas)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5642,7 +5642,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Suderinti su pradėti</translation>
+        <translation>Lygiuoti pagal pradžią</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5686,12 +5686,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation>Išplauti atšaukimo istoriją</translation>
+        <translation>Išvalyti atšaukimo istoriją</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Ar esate tikri, kad norite išplauti atšaukimo ir (arba) pakartotinio atšaukimo operacijų istoriją?</translation>
+        <translation>Ar tikrai norite išvalyti atšaukimo / pakartojimo operacijų istoriją?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5701,7 +5701,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>Išplauti atšaukimo istoriją</translation>
+        <translation>&amp;Išvalyti atšaukimo istoriją</translation>
     </message>
 </context>
 <context>
@@ -5732,12 +5732,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Piešti klijų ratą</translation>
+        <translation>Braižyti klijavimo užlaidą</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation>Trys: Teisė</translation>
+        <translation>Trys: dešinėje</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
@@ -5779,7 +5779,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Keturi: Teisė</translation>
+        <translation>Keturi: dešinėje</translation>
     </message>
 </context>
 <context>
@@ -5792,7 +5792,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation>Dešiniuoju pelės mygtuku spustelėkite , kad panaikintumėte subjektų pasirinkimą</translation>
+        <translation>Dešiniuoju pelės mygtuku spustelėkite, kad panaikintumėte objektų pasirinkimą</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5857,7 +5857,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+55"/>
         <source>Cursor range for picking entities:</source>
-        <translation>Kursoriaus diapazonas subjektams parinkti:</translation>
+        <translation>Kursoriaus diapazonas objektams parinkti:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -5872,7 +5872,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Išryškinkite (ir pakelkite) šrafavimą ir kietas užpildas diapazone</translation>
+        <translation>Išryškinti (ir iškelti) brūkšniavimus ir vientisus užpildus diapazone</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -5912,12 +5912,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Rodyti didelę kilmės ašį</translation>
+        <translation>Rodyti dideles pradžios taško ašis</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation>Valdovės ir slinkties juostos</translation>
+        <translation>Liniuotės ir slinkties juostos</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5962,7 +5962,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation>Margin (px):</translation>
+        <translation>Paraštė (px):</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -5987,37 +5987,37 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Disable for printing</source>
-        <translation>Išjungti spausdinimą</translation>
+        <translation>Išjungti spausdinant</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Linijų tipai ir svoriai</translation>
+        <translation>Linijų tipai ir storiai</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Numatytasis linijų svoris:</translation>
+        <translation>Numatytasis linijos storis:</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Linijų šablonų mastelio modeliai pagal linijos svorį</translation>
+        <translation>Keisti linijos tipo šablonų mastelį pagal linijos storį</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Modelio linijų svorio skalė 0,00 mm:</translation>
+        <translation>Šablono mastelis, kai linijos storis 0.00mm:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation>Taikyti taškams linijos svorį</translation>
+        <translation>Taikyti taškams linijos storį</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display and Performance</source>
-        <translation>Ekranas ir veikimas</translation>
+        <translation>Rodymas ir našumas</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6058,12 +6058,12 @@ jau yra sąraše.</translation>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
-        <translation>Nuolatinė atranka</translation>
+        <translation>Nuolatinis pasirinkimas</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-766"/>
         <source>Number of preview entities:</source>
-        <translation>Peržiūros subjektų skaičius:</translation>
+        <translation>Peržiūros objektų skaičius:</translation>
     </message>
     <message>
         <location line="-121"/>
@@ -6103,12 +6103,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation>Rodyti subjektus, turinčius daugiau nei N brūkšnelių, kaip ištisinius:</translation>
+        <translation>Rodyti objektus, turinčius daugiau nei N brūkšnelių, kaip ištisinius:</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Liuko atvaizdavimo laikas:</translation>
+        <translation>Brūkšniavimo atvaizdavimo laiko limitas:</translation>
     </message>
     <message>
         <location line="-361"/>
@@ -6118,12 +6118,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="-11"/>
         <source>Number of threads:</source>
-        <translation>Siūlų skaičius:</translation>
+        <translation>Gijų skaičius:</translation>
     </message>
     <message>
         <location line="+437"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation>Maksimaliai atrinktų subjektų su atskaitos taškais:</translation>
+        <translation>Didžiausias pasirinktų objektų skaičius su atskaitos taškais:</translation>
     </message>
     <message>
         <location line="+217"/>
@@ -6133,7 +6133,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation>Didžiausias pasirinktų subjektų skaičius su rodomais atskaitos taškais:</translation>
+        <translation>Didžiausias pasirinktų objektų skaičius su rodomais atskaitos taškais:</translation>
     </message>
     <message>
         <location line="+219"/>
@@ -6144,7 +6144,7 @@ jau yra sąraše.</translation>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+143"/>
         <source>Selection</source>
-        <translation>Atranka</translation>
+        <translation>Pasirinkimas</translation>
     </message>
 </context>
 <context>
@@ -6157,7 +6157,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation>Pagrindinės aplinkybės:</translation>
+        <translation>Fonas:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6187,7 +6187,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation>Kilmė:</translation>
+        <translation>Pradžios taškas:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6252,7 +6252,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation>Atranka</translation>
+        <translation>Pasirinkimas</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6312,17 +6312,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+30"/>
         <source>Snap reference points:</source>
-        <translation>Snap atskaitos taškai:</translation>
+        <translation>Prikabinimo atskaitos taškai:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>&quot;Snap&quot; įrankiai</translation>
+        <translation>Prikabinimo įrankiai</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Snap etiketė:</translation>
+        <translation>Prikabinimo etiketė:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6337,7 +6337,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation>Piešimo įrankiai</translation>
+        <translation>Braižymo įrankiai</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6352,7 +6352,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+78"/>
         <source>Zoom Tools</source>
-        <translation>Padidinimo įrankiai</translation>
+        <translation>Mastelio keitimo įrankiai</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6370,7 +6370,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Snap etiketės šriftas:</translation>
+        <translation>Prikabinimo etiketės šriftas:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6393,7 +6393,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+444"/>
         <source>Enable pan gesture</source>
-        <translation>Įjungti pasukimo gestą</translation>
+        <translation>Įjungti vaizdo slinkimo gestą</translation>
     </message>
     <message>
         <location line="-193"/>
@@ -6518,12 +6518,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Tvirtas užpildas</translation>
+        <translation>Vientisas užpildas</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Brūkšniavimo modelis</translation>
+        <translation>Brūkšniavimo šablonas</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6533,7 +6533,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation>Modelis</translation>
+        <translation>Šablonas</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -6561,17 +6561,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Kiekvienas ribos elementas turi būti linija, lankas, apskritimas, elipsės lankas, elipsė, polilinija arba splaineris. Rasta:</translation>
+        <translation>Kiekvienas ribos elementas turi būti linija, lankas, apskritimas, elipsės lankas, elipsė, polilinija arba splainas. Rasta:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Brūkšniavimas iš atrankos</translation>
+        <translation>&amp;Brūkšniavimas iš pasirinkimo</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Sukurti lizdinį arba vientisą užpildą iš pasirinktos ribos</translation>
+        <translation>Sukurti brūkšniavimą arba vientisą užpildą iš pasirinktos ribos</translation>
     </message>
 </context>
 <context>
@@ -6739,12 +6739,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+18"/>
         <source>Rotation:</source>
-        <translation>Rotacija:</translation>
+        <translation>Pasukimas:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Pasukti įklijuotus subjektus&lt;br&gt;šiu kampu</translation>
+        <translation>Pasukti įklijuotus objektus&lt;br&gt;šiuo kampu</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -6754,22 +6754,22 @@ jau yra sąraše.</translation>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Įkeltų subjektų mastelio keitimas&lt;br&gt;pagal šį koeficientą</translation>
+        <translation>Įklijuotų objektų mastelio keitimas&lt;br&gt;pagal šį koeficientą</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Apversti įklijuotus subjektus&lt;br&gt;horizontaliai</translation>
+        <translation>Apversti įklijuotus objektus&lt;br&gt;horizontaliai</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Apversti įklijuotus subjektus&lt;br&gt;vertikaliai</translation>
+        <translation>Apversti įklijuotus objektus&lt;br&gt;vertikaliai</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Įklijuoti visus subjektus&lt;br&gt;į dabartinį sluoksnį&lt;br&gt;nuo pradinio sluoksnio</translation>
+        <translation>Įklijuoti visus objektus&lt;br&gt;į dabartinį sluoksnį&lt;br&gt;vietoj pradinio sluoksnio</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6807,12 +6807,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Importo taškai</translation>
+        <translation>Importuoti taškus</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>Importo taškai</translation>
+        <translation>&amp;Importuoti taškus</translation>
     </message>
 </context>
 <context>
@@ -6830,7 +6830,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation>2D taško masė Centroidas</translation>
+        <translation>2D taškinės masės centroidas</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -6858,12 +6858,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>Nurodykite pirmąją eilutę</translation>
+        <translation>Nurodykite pirmąją liniją</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>Nurodykite antrąją eilutę</translation>
+        <translation>Nurodykite antrąją liniją</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -6897,18 +6897,18 @@ jau yra sąraše.</translation>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation>Apskritimas</translation>
+        <translation>Perimetras</translation>
     </message>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation>Apskritimo sritis:</translation>
+        <translation>Apskritimo plotas:</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+67"/>
         <source>circumference:</source>
-        <translation>apimtį:</translation>
+        <translation>perimetras:</translation>
     </message>
     <message>
         <location line="-54"/>
@@ -7005,12 +7005,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation>Įtraukti subjektus į brėžinį</translation>
+        <translation>Įtraukti objektus į brėžinį</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation>Subjektas</translation>
+        <translation>Objektas</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -7033,7 +7033,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation>apimtį:</translation>
+        <translation>perimetras:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
@@ -7107,22 +7107,22 @@ jau yra sąraše.</translation>
     <message>
         <location line="+21"/>
         <source>2D area Centroid</source>
-        <translation>2D plotas Centroidas</translation>
+        <translation>2D ploto centroidas</translation>
     </message>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation>Pasirinkti keli subjektai.</translation>
+        <translation>Pasirinkti keli objektai.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation>Centroido žymeklių apskritimas atrankoje. Rezultatų nėra.</translation>
+        <translation>Centroido žymeklių apskritimas pasirinkime. Rezultatų nėra.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Unsupported entity type. No results.</source>
-        <translation>Nepalaikomas subjekto tipas. Nėra rezultatų.</translation>
+        <translation>Nepalaikomas objekto tipas. Nėra rezultatų.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7160,7 +7160,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Neapdorota forma iš liuko kilpos.</translation>
+        <translation>Neapdorota forma iš brūkšniavimo kontūro.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7170,12 +7170,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation>Plotas Centroidas</translation>
+        <translation>&amp;Ploto centroidas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation>Sukurti pasirinktos srities 2D centroidą</translation>
+        <translation>Sukurti pasirinkto objekto ploto 2D centroidą</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7297,12 +7297,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation>Suaktyvinti sandorio klausytoją, skirtą 2D centroidams</translation>
+        <translation>Įjungti / išjungti operacijų klausytoją, skirtą 2D centroidams</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation>Suaktyvinti sandorio klausytoją, skirtą 2D centroidų žymekliams taikomiems privalomiesiems pakeitimams</translation>
+        <translation>Įjungti / išjungti operacijų klausytoją, skirtą 2D centroidų žymeklių susiejimo pakeitimams</translation>
     </message>
 </context>
 <context>
@@ -7310,12 +7310,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation>Nurodykite pirmąjį subjektą</translation>
+        <translation>Nurodykite pirmąjį objektą</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation>Nurodykite antrąjį subjektą</translation>
+        <translation>Nurodykite antrąjį objektą</translation>
     </message>
     <message>
         <location line="+95"/>
@@ -7325,7 +7325,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation>Atstumas nuo subjekto iki subjekto</translation>
+        <translation>&amp;Atstumas nuo objekto iki objekto</translation>
     </message>
 </context>
 <context>
@@ -7333,7 +7333,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation>Nurodykite subjektą</translation>
+        <translation>Nurodykite objektą</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7348,7 +7348,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Atstumas Nuo subjekto iki taško</translation>
+        <translation>&amp;Atstumas nuo objekto iki taško</translation>
     </message>
 </context>
 <context>
@@ -7356,12 +7356,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePP.js" line="+59"/>
         <source>First point</source>
-        <translation>Pirmas punktas</translation>
+        <translation>Pirmasis taškas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -7480,7 +7480,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation>Atrankoje nerasta 2D centroidų žymeklių.</translation>
+        <translation>Pasirinkime nerasta 2D centroidų žymeklių.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7530,7 +7530,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>sritis (informacinio pobūdžio):</translation>
+        <translation>plotas (informacinis):</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7584,7 +7584,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation>Nepalaikomas subjekto tipas. Nėra rezultatų.</translation>
+        <translation>Nepalaikomas objekto tipas. Nėra rezultatų.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -7655,7 +7655,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation>Sukuriamas naujas vienodo linijinio tankio 2D centroido žymeklis ir reikšmių etiketės pasirinktoms esybėms</translation>
+        <translation>Sukuriamas naujas vienodo linijinio tankio 2D centroido žymeklis ir reikšmių etiketės pasirinktiems objektams</translation>
     </message>
 </context>
 <context>
@@ -7768,7 +7768,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>Svetainėje</translation>
+        <translation>Eta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7783,7 +7783,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation>Hash</translation>
+        <translation>Grotelės</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7801,12 +7801,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>Įterpimo blokas</translation>
+        <translation>&amp;Įterpti bloką</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Rotacija:</translation>
+        <translation>Pasukimas:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7816,7 +7816,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+110"/>
         <source>Scale X:</source>
-        <translation>Skalė X:</translation>
+        <translation>Mastelis X:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7900,17 +7900,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>Įterpimo blokas</translation>
+        <translation>&amp;Įterpti bloką</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Rotacija:</translation>
+        <translation>Pasukimas:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Pasukti įklijuotus subjektus&lt;br&gt;šiu kampu</translation>
+        <translation>Pasukti įklijuotus objektus&lt;br&gt;šiuo kampu</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -7920,17 +7920,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Įkeltų subjektų mastelio keitimas&lt;br&gt;pagal šį koeficientą</translation>
+        <translation>Įklijuotų objektų mastelio keitimas&lt;br&gt;pagal šį koeficientą</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Apversti įklijuotus subjektus&lt;br&gt;horizontaliai</translation>
+        <translation>Apversti įklijuotus objektus&lt;br&gt;horizontaliai</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Apversti įklijuotus subjektus&lt;br&gt;vertikaliai</translation>
+        <translation>Apversti įklijuotus objektus&lt;br&gt;vertikaliai</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -8025,12 +8025,12 @@ jau yra sąraše.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Kabinetas</translation>
+        <translation>Kabinetinė</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Cavalier</translation>
+        <translation>Kavalierinė</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8045,7 +8045,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation>Dugnas</translation>
+        <translation>Apačia</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8136,7 +8136,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>Trumpojo ryšio laiko limitas:</translation>
+        <translation>Sparčiųjų klavišų laiko limitas:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -8253,7 +8253,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Numatytasis linijų svoris naujiems sluoksniams:</translation>
+        <translation>Numatytasis linijos storis naujiems sluoksniams:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -8263,7 +8263,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Numatytasis 0 sluoksnio linijų svoris:</translation>
+        <translation>Numatytasis 0 sluoksnio linijos storis:</translation>
     </message>
     <message>
         <location line="-48"/>
@@ -8350,7 +8350,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Linijinis svoris:</translation>
+        <translation>Linijos storis:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -8395,7 +8395,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
         <source>Arrow position</source>
-        <translation>Strėlės padėtis</translation>
+        <translation>Rodyklės padėtis</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8420,7 +8420,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Strėlės galvutė</translation>
+        <translation>Rodyklės antgalis</translation>
     </message>
 </context>
 <context>
@@ -8451,7 +8451,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Suma:</translation>
+        <translation>Dydis:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8474,7 +8474,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Tas pats subjekto tipas kaip ir originalus</translation>
+        <translation>Tas pats objekto tipas kaip ir originalus</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8497,12 +8497,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
-        <translation>Pirmas punktas</translation>
+        <translation>Pirmasis taškas</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation>Kitas punktas</translation>
+        <translation>Kitas taškas</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8527,7 +8527,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>&quot;Redo&quot; segmentas</translation>
+        <translation>Pakartoti segmentą</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8565,7 +8565,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation>Linija nuo kampo</translation>
+        <translation>&amp;Linija pagal kampą</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8580,7 +8580,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Vidurio</translation>
+        <translation>Vidurys</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8618,12 +8618,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation>Pirmoji eilutė</translation>
+        <translation>Pirmoji linija</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation>Antroji eilutė</translation>
+        <translation>Antroji linija</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -8648,7 +8648,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -8656,17 +8656,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation>Pirmas punktas</translation>
+        <translation>Pirmasis taškas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Dėžutės sąnarys iš 2 taškų</translation>
+        <translation>&amp;Dėžinė jungtis iš 2 taškų</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8706,7 +8706,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation>Tenonai</translation>
+        <translation>Dygiai</translation>
     </message>
 </context>
 <context>
@@ -8714,12 +8714,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation>Pirmas punktas</translation>
+        <translation>Pirmasis taškas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -8729,22 +8729,22 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Nubraižykite balandžių uodegos jungtį</translation>
+        <translation>Nubraižyti kregždės uodegos jungtį</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Dantračių skaičius:</translation>
+        <translation>Kregždės uodegų skaičius:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Height:</source>
-        <translation>Dantytosios uodegos aukštis:</translation>
+        <translation>Kregždės uodegos aukštis:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Dovetail Gradientas:</translation>
+        <translation>Kregždės uodegos nuolydis:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8808,7 +8808,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation>Nubrėžti liniją, statmeną baziniam subjektui</translation>
+        <translation>Nubrėžti liniją, statmeną baziniam objektui</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui" line="+17"/>
@@ -8841,7 +8841,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation>Ortogonalus / Tangentas</translation>
+        <translation>&amp;Ortogonali / liestinė</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8869,7 +8869,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -8887,7 +8887,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -8938,7 +8938,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation>Nubrėžkite liniją, kurios santykinis kampas su pagrindine esybe</translation>
+        <translation>Nubrėžkite liniją santykiniu kampu į bazinį objektą</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
@@ -8963,7 +8963,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Vidurio</translation>
+        <translation>Vidurys</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9004,7 +9004,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation>Tangentas (Taškas, apskritimas)</translation>
+        <translation>&amp;Liestinė (taškas, apskritimas)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9022,7 +9022,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+13"/>
         <source>Choose second circle or arc</source>
-        <translation>Pasirinkite antrąjį ratą arba lanką</translation>
+        <translation>Pasirinkite antrąjį apskritimą arba lanką</translation>
     </message>
     <message>
         <location line="+142"/>
@@ -9032,7 +9032,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>Tangentas (du apskritimai)</translation>
+        <translation>&amp;Liestinė (du apskritimai)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9092,7 +9092,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>Pasaulinė linijų mastelio skalė:</translation>
+        <translation>Bendrasis linijos tipo mastelis:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9155,7 +9155,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation>Naudokite gimtąją meniu juostą</translation>
+        <translation>Naudoti sistemos meniu juostą</translation>
     </message>
 </context>
 <context>
@@ -9181,7 +9181,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Veidrodis</translation>
+        <translation>Atspindėti</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9196,7 +9196,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>Veidrodis</translation>
+        <translation>&amp;Atspindėti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
@@ -9219,7 +9219,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Veidrodžio parinktys</translation>
+        <translation>Atspindėjimo parinktys</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9311,17 +9311,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation>Įvairūs piešimo įrankiai</translation>
+        <translation>Įvairūs braižymo įrankiai</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Įvairūs piešiniai</translation>
+        <translation>Įvairus braižymas</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Piešinys</translation>
+        <translation>&amp;Braižyti</translation>
     </message>
 </context>
 <context>
@@ -9388,12 +9388,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation>Įvairūs atrankos įrankiai</translation>
+        <translation>Įvairūs pasirinkimo įrankiai</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Select</source>
-        <translation>Pasirinkite</translation>
+        <translation>&amp;Pasirinkti</translation>
     </message>
 </context>
 <context>
@@ -9444,17 +9444,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation>Pasirinkite pirmąjį subjektą</translation>
+        <translation>Pasirinkite pirmąjį objektą</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation>Pasirinkite antrąjį subjektą</translation>
+        <translation>Pasirinkite antrąjį objektą</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Nustatytas taškas</translation>
+        <translation>Nustatykite tašką</translation>
     </message>
 </context>
 <context>
@@ -9498,7 +9498,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation>Abort</translation>
+        <translation>Nutraukti</translation>
     </message>
 </context>
 <context>
@@ -9579,7 +9579,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Atidarymo piešinys:</translation>
+        <translation>Atidaromas brėžinys:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9619,7 +9619,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+16"/>
         <source>Drawing loaded successfully:</source>
-        <translation>Piešinys įkeltas sėkmingai:</translation>
+        <translation>Brėžinys įkeltas sėkmingai:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9703,7 +9703,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -9726,7 +9726,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numeris:</translation>
+        <translation>Skaičius:</translation>
     </message>
 </context>
 <context>
@@ -9739,7 +9739,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Atviras brėžinys</translation>
+        <translation>Atidaryti brėžinį</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9749,7 +9749,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>Atviras</translation>
+        <translation>&amp;Atidaryti</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9792,12 +9792,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Portretas</translation>
+        <translation>Stačias</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation>Kraštovaizdis</translation>
+        <translation>Gulsčias</translation>
     </message>
     <message>
         <location line="-113"/>
@@ -9822,7 +9822,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation>Maržos</translation>
+        <translation>Paraštės</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9832,12 +9832,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation>Į viršų:</translation>
+        <translation>Viršuje:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Teisė:</translation>
+        <translation>Dešinėje:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9895,7 +9895,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>&quot;Pan Zoom</translation>
+        <translation>&amp;Slinkti ir keisti mastelį</translation>
     </message>
 </context>
 <context>
@@ -9923,7 +9923,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Rotacija:</translation>
+        <translation>Pasukimas:</translation>
     </message>
     <message>
         <location line="+129"/>
@@ -9933,17 +9933,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Apversti įklijuotus subjektus&lt;br&gt;horizontaliai</translation>
+        <translation>Apversti įklijuotus objektus&lt;br&gt;horizontaliai</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Apversti įklijuotus subjektus&lt;br&gt;vertikaliai</translation>
+        <translation>Apversti įklijuotus objektus&lt;br&gt;vertikaliai</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Įklijuoti visus subjektus&lt;br&gt;į dabartinį sluoksnį&lt;br&gt;nuo pradinio sluoksnio</translation>
+        <translation>Įklijuoti visus objektus&lt;br&gt;į dabartinį sluoksnį&lt;br&gt;vietoj pradinio sluoksnio</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10015,7 +10015,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation>Taškiniai įrankiai</translation>
+        <translation>Taško įrankiai</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -10211,7 +10211,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Polyline</source>
-        <translation>Polinija</translation>
+        <translation>&amp;Polilinija</translation>
     </message>
 </context>
 <context>
@@ -10219,7 +10219,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Pasirinkite liniją, lanką, apskritimą, elipsę, liniją arba daugialinijinę liniją, kad išskaidytumėte</translation>
+        <translation>Pasirinkite liniją, lanką, apskritimą, elipsę, splainą arba poliliniją, kad išskaidytumėte</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10254,7 +10254,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>Pašalinti eilutės pertraukos segmentą</translation>
+        <translation>Pašalinti linijos pertrūkio segmentą</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10269,12 +10269,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation>Paveldėti subjekto savybes</translation>
+        <translation>Paveldėti objekto savybes</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation>Paveldėkite visas pasirinktos esybės savybes</translation>
+        <translation>Paveldėti visas pasirinkto objekto savybes</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10285,7 +10285,7 @@ jau yra sąraše.</translation>
         <location line="+17"/>
         <location line="+16"/>
         <source>Peak ratio</source>
-        <translation>Didžiausias santykis</translation>
+        <translation>Smailės santykis</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10296,7 +10296,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-13"/>
         <source>Peak Ratio:</source>
-        <translation>Didžiausias santykis:</translation>
+        <translation>Smailės santykis:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -10364,7 +10364,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation>Ankstesnis Peržiūrėti</translation>
+        <translation>&amp;Ankstesnis vaizdas</translation>
     </message>
 </context>
 <context>
@@ -10416,7 +10416,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+40"/>
         <source>Auto fit</source>
-        <translation>Automatinis montavimas</translation>
+        <translation>Automatinis pritaikymas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10462,7 +10462,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>Spausdinti peržiūrą</translation>
+        <translation>&amp;Spausdinimo peržiūra</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10472,7 +10472,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation>Uždaryti Spausdinimo peržiūra</translation>
+        <translation>Uždaryti spausdinimo peržiūrą</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10492,7 +10492,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Piešimo mastelis</translation>
+        <translation>Brėžinio mastelis</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10502,7 +10502,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>Automatinis piešinio pritaikymas prie puslapio (-ių)</translation>
+        <translation>Automatinis brėžinio pritaikymas prie puslapio (-ių)</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -10512,12 +10512,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Portretas</translation>
+        <translation>Stačias</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Kraštovaizdis</translation>
+        <translation>Gulsčias</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10588,7 +10588,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+455"/>
         <source>No Selection</source>
-        <translation>Nėra atrankos</translation>
+        <translation>Nėra pasirinkimo</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10598,7 +10598,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+22"/>
         <source>Dependent Entities</source>
-        <translation>Priklausomi subjektai</translation>
+        <translation>Priklausomi objektai</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -10673,7 +10673,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+422"/>
         <source>*VARIES*</source>
-        <translation>*VARIES*</translation>
+        <translation>*SKIRIASI*</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10715,7 +10715,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation>Visada rodyti visas savybes (tai gali sulėtinti subjektų pasirinkimą)</translation>
+        <translation>Visada rodyti visas savybes (tai gali sulėtinti objektų pasirinkimą)</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10740,7 +10740,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation>Atranka:</translation>
+        <translation>Pasirinkimas:</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -10755,12 +10755,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Rankena:</translation>
+        <translation>Identifikatorius:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>Linijinis mastelis:</translation>
+        <translation>Linijos tipo mastelis:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -10812,12 +10812,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Aiškus sąrašas</translation>
+        <translation>&amp;Išvalyti sąrašą</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Atidaryti Neseniai</translation>
+        <translation>&amp;Atidaryti naujausius</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
@@ -10830,7 +10830,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation>Redo</translation>
+        <translation>&amp;Pakartoti</translation>
     </message>
 </context>
 <context>
@@ -10966,7 +10966,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>Atvirkštinis</translation>
+        <translation>&amp;Apversti kryptį</translation>
     </message>
 </context>
 <context>
@@ -10979,7 +10979,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation>Pasukite</translation>
+        <translation>Pasukti</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11004,7 +11004,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation>Pasukite</translation>
+        <translation>&amp;Pasukti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
@@ -11052,7 +11052,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>Pasukite du</translation>
+        <translation>&amp;Pasukti dukart</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
@@ -11075,7 +11075,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Pasukite dvi parinktis</translation>
+        <translation>Dvigubo pasukimo parinktys</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11171,22 +11171,22 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation>Šie du subjektai negali būti suapvalinti.</translation>
+        <translation>Šie du objektai negali būti suapvalinti.</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Pirmasis subjektas negali būti apkarpytas.</translation>
+        <translation>Pirmasis objektas negali būti apkarpytas.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Antrojo subjekto negalima apkarpyti.</translation>
+        <translation>Antrojo objekto negalima apkarpyti.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>Apvalus</translation>
+        <translation>&amp;Suapvalinti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -11277,7 +11277,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation>Visi juodi subjektai ir sluoksniai bus išsaugoti kaip balti.</translation>
+        <translation>Visi juodi objektai ir sluoksniai bus išsaugoti kaip balti.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11302,7 +11302,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Juodi subjektai ir sluoksniai išsaugomi kaip balti.</translation>
+        <translation>Juodi objektai ir sluoksniai išsaugomi kaip balti.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11418,7 +11418,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation>Skalė</translation>
+        <translation>Keisti mastelį</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -11443,7 +11443,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>Skalė</translation>
+        <translation>&amp;Keisti mastelį</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -11468,7 +11468,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>X veiksnys:</translation>
+        <translation>Koeficientas x:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11479,7 +11479,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-10"/>
         <source>Factor y:</source>
-        <translation>Y veiksnys:</translation>
+        <translation>Koeficientas y:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11502,7 +11502,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Masto parinktys</translation>
+        <translation>Mastelio keitimo parinktys</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11532,12 +11532,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+59"/>
         <source>Factor x:</source>
-        <translation>X veiksnys:</translation>
+        <translation>Koeficientas x:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation>Y veiksnys:</translation>
+        <translation>Koeficientas y:</translation>
     </message>
     <message>
         <location line="-26"/>
@@ -11576,17 +11576,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation>Atrankos įrankiai</translation>
+        <translation>Pasirinkimo įrankiai</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Selection Tools Panel</source>
-        <translation>Atrankos įrankių skydelis</translation>
+        <translation>Pasirinkimo įrankių skydelis</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation>Pasirinkite</translation>
+        <translation>&amp;Pasirinkti</translation>
     </message>
 </context>
 <context>
@@ -11594,12 +11594,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation>Pasirinkite visus</translation>
+        <translation>&amp;Pasirinkti viską</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Select all visible entities</source>
-        <translation>Pasirinkite visus matomus subjektus</translation>
+        <translation>Pasirinkite visus matomus objektus</translation>
     </message>
 </context>
 <context>
@@ -11607,7 +11607,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Pasirinkite bloko nuorodas</translation>
+        <translation>&amp;Pasirinkti bloko nuorodas</translation>
     </message>
 </context>
 <context>
@@ -11620,7 +11620,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation>Pasirinkti visi matomi %1 spalvos subjektai</translation>
+        <translation>Pasirinkti visi matomi %1 spalvos objektai</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
@@ -11643,12 +11643,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation>Objektas nėra brėžinio vienetas:</translation>
+        <translation>Objektas nėra brėžinio elementas:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>Iki rankenos</translation>
+        <translation>Pagal identifikatorių</translation>
     </message>
 </context>
 <context>
@@ -11656,12 +11656,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Pasirinkimas pagal rankeną</translation>
+        <translation>Pasirinkimas pagal identifikatorių</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Rankena (šešiakampė):</translation>
+        <translation>Identifikatorius (šešioliktainis):</translation>
     </message>
 </context>
 <context>
@@ -11669,17 +11669,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation>Pasirinkite kontūro subjektą</translation>
+        <translation>Pasirinkite kontūro objektą</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>Pasirinkite kontūrą</translation>
+        <translation>&amp;Pasirinkti kontūrą</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select connected entities</source>
-        <translation>Pasirinkite sujungtus subjektus</translation>
+        <translation>Pasirinkite sujungtus objektus</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -11722,22 +11722,22 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
-        <translation>Pirmas punktas</translation>
+        <translation>Pirmasis taškas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>Pasirinkite susikertančius subjektus</translation>
+        <translation>&amp;Pasirinkti kertamus objektus</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation>Pasirinkite visus subjektus, kuriuos kerta linija</translation>
+        <translation>Pasirinkite visus objektus, kuriuos kerta linija</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -11770,17 +11770,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation>%1 subjektų įtraukta į atranką.</translation>
+        <translation>%1 objektų įtraukta į pasirinkimą.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation>%1 subjektų pašalinta iš atrankos.</translation>
+        <translation>%1 objektų pašalinta iš pasirinkimo.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>Pasirinkite sluoksnio subjektus</translation>
+        <translation>&amp;Pasirinkti sluoksnio objektus</translation>
     </message>
 </context>
 <context>
@@ -11788,7 +11788,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Pasirinkite subjektą sluoksnyje</translation>
+        <translation>Pasirinkite objektą sluoksnyje</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -11798,7 +11798,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>Pasirinkite visus to paties sluoksnio subjektus</translation>
+        <translation>Pasirinkite visus to paties sluoksnio objektus</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -11846,7 +11846,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation>Pasirinkite visus stačiakampio viduje esančius subjektus</translation>
+        <translation>Pasirinkite visus stačiakampio viduje esančius objektus</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -11876,7 +11876,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Kryžiaus atranka</translation>
+        <translation>Kryžminis pasirinkimas</translation>
     </message>
 </context>
 <context>
@@ -11884,7 +11884,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation>Subjektų nepasirinkta.</translation>
+        <translation>Objektų nepasirinkta.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -11900,24 +11900,24 @@ jau yra sąraše.</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform>%n subjektas sluoksnyje &quot;%1&quot;</numerusform>
-            <numerusform>%n subjektai sluoksnyje &quot;%1&quot;</numerusform>
-            <numerusform>%n subjektų sluoksnyje &quot;%1&quot;</numerusform>
+            <numerusform>%n objektas sluoksnyje &quot;%1&quot;</numerusform>
+            <numerusform>%n objektai sluoksnyje &quot;%1&quot;</numerusform>
+            <numerusform>%n objektų sluoksnyje &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform>%n subjektas</numerusform>
-            <numerusform>%n subjektai</numerusform>
-            <numerusform>%n subjektų</numerusform>
+            <numerusform>%n objektas</numerusform>
+            <numerusform>%n objektai</numerusform>
+            <numerusform>%n objektų</numerusform>
         </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation>įjungta</translation>
+        <translation>–</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
@@ -11932,7 +11932,7 @@ jau yra sąraše.</translation>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation>Pasirinkti subjektai:
+        <translation>Pasirinkti objektai:
 %1.</translation>
     </message>
     <message>
@@ -11974,7 +11974,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Fill</source>
-        <translation>Užpildykite</translation>
+        <translation>Užpildyti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
@@ -12021,12 +12021,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation>Šono vidurys</translation>
+        <translation>Kraštinės vidurys</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>Daugiakampiai (Centras, Šonas)</translation>
+        <translation>&amp;Daugiakampis (centras, kraštinė)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12044,7 +12044,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
-        <translation>Pirmoji pusė</translation>
+        <translation>Pirmoji kraštinė</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12054,7 +12054,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation>Antroji pusė</translation>
+        <translation>Antroji kraštinė</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12064,7 +12064,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation>Daugiakampiai (Šalis, Šalis)</translation>
+        <translation>&amp;Daugiakampis (kraštinė, kraštinė)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12247,12 +12247,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>&quot;Snap&quot; įrankiai</translation>
+        <translation>Prikabinimo įrankiai</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>Snap</translation>
+        <translation>&amp;Prikabinimas</translation>
     </message>
 </context>
 <context>
@@ -12260,12 +12260,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Prikabinimas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>&quot;Auto Snap</translation>
+        <translation>Automatinis prikabinimas</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
@@ -12387,7 +12387,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>&quot;Snap&quot; atstumas:</translation>
+        <translation>Prikabinimo atstumas:</translation>
     </message>
 </context>
 <context>
@@ -12400,12 +12400,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+32"/>
         <source>Second point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>Atstumo vadovas</translation>
+        <translation>&amp;Atstumas rankiniu būdu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12415,7 +12415,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>&quot;Snap&quot; atstumas:</translation>
+        <translation>Prikabinimo atstumas:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12430,7 +12430,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation>Frakcija</translation>
+        <translation>Trupmena</translation>
     </message>
 </context>
 <context>
@@ -12462,7 +12462,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>Sankryža</translation>
+        <translation>&amp;Sankirta</translation>
     </message>
 </context>
 <context>
@@ -12470,32 +12470,32 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Prikabinimas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Sankryžos vadovas</translation>
+        <translation>Sankirta rankiniu būdu</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation>Pirmasis subjektas</translation>
+        <translation>Pirmasis objektas</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation>Antrasis subjektas</translation>
+        <translation>Antrasis objektas</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Sankryžų vadovas</translation>
+        <translation>&amp;Sankirta rankiniu būdu</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation>Po vieno naudojimo nutraukti rankinio sankryžos įrankio veikimą</translation>
+        <translation>Po vieno naudojimo nutraukti rankinio sankirtos įrankio veikimą</translation>
     </message>
 </context>
 <context>
@@ -12503,7 +12503,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>Vidurio</translation>
+        <translation>&amp;Vidurys</translation>
     </message>
 </context>
 <context>
@@ -12511,7 +12511,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>Vidurio vadovas</translation>
+        <translation>&amp;Vidurys rankiniu būdu</translation>
     </message>
 </context>
 <context>
@@ -12519,7 +12519,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>Apie subjektą</translation>
+        <translation>&amp;Ant objekto</translation>
     </message>
 </context>
 <context>
@@ -12535,7 +12535,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation>Nuoroda</translation>
+        <translation>&amp;Atskaitos taškas</translation>
     </message>
 </context>
 <context>
@@ -12543,7 +12543,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
         <source>&amp;Selection Reference Points</source>
-        <translation>&amp;Atrankos atskaitos taškai</translation>
+        <translation>&amp;Pasirinkimo atskaitos taškai</translation>
     </message>
 </context>
 <context>
@@ -12575,12 +12575,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>Įrankiai Spline</translation>
+        <translation>Splaino įrankiai</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>Spline</translation>
+        <translation>&amp;Splainas</translation>
     </message>
 </context>
 <context>
@@ -12598,7 +12598,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>Spline (valdymo taškai)</translation>
+        <translation>&amp;Splainas (valdymo taškai)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12618,7 +12618,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>Pasirinkite Spline laipsnį</translation>
+        <translation>Pasirinkite splaino laipsnį</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -12675,12 +12675,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation>Pelės ekranas</translation>
+        <translation>Pelės rodymas</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation>Pasirinkimo ekranas</translation>
+        <translation>Pasirinkimo rodymas</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12718,17 +12718,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation>Nė vieno pasirinkto subjekto nurodytame intervale</translation>
+        <translation>Nė vieno pasirinkto objekto nurodytame intervale</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation>Nė vieno subjekto nurodytame intervale</translation>
+        <translation>Nė vieno objekto nurodytame intervale</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>Ištempkite</translation>
+        <translation>&amp;Ištempti</translation>
     </message>
 </context>
 <context>
@@ -12767,7 +12767,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation>Splinai</translation>
+        <translation>Splainai</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12797,7 +12797,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation>Rezoliucija:</translation>
+        <translation>Skyra:</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -12883,12 +12883,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Uncheck all</source>
-        <translation>Panaikinkite visų</translation>
+        <translation>Atžymėti visus</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>Patikrinkite visus</translation>
+        <translation>Pažymėti visus</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -12946,7 +12946,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
         <source>Arrow position</source>
-        <translation>Strėlės padėtis</translation>
+        <translation>Rodyklės padėtis</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12970,7 +12970,7 @@ jau yra sąraše.</translation>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation>Pasirinkite subjektą</translation>
+        <translation>Pasirinkite objektą</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12981,7 +12981,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation>Tekstas išilgai subjekto</translation>
+        <translation>&amp;Tekstas išilgai objekto</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12999,12 +12999,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+275"/>
         <source>&amp;Undo</source>
-        <translation>Panaikinti</translation>
+        <translation>&amp;Atšaukti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation>Redo</translation>
+        <translation>&amp;Pakartoti</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13039,12 +13039,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>Indeksas</translation>
+        <translation>&amp;Apatinis indeksas</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>Viršutiniai indeksai</translation>
+        <translation>&amp;Viršutinis indeksas</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -13114,7 +13114,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation>Ohm</translation>
+        <translation>Omas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13134,7 +13134,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Erdvė be pertraukų</translation>
+        <translation>Jungiamasis tarpas</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13186,7 +13186,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+20"/>
         <source>Rich Text</source>
-        <translation>Turtingas tekstas</translation>
+        <translation>Raiškusis tekstas</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -13236,7 +13236,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Paraginimas:</translation>
+        <translation>Užklausa:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -13339,7 +13339,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation>Piešinys</translation>
+        <translation>Braižyti</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13397,7 +13397,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Siųsti atgal</translation>
+        <translation>Perkelti į &amp;galą</translation>
     </message>
 </context>
 <context>
@@ -13405,7 +13405,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>Atnešti į priekį</translation>
+        <translation>&amp;Perkelti į priekį</translation>
     </message>
 </context>
 <context>
@@ -13553,7 +13553,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
-        <translation>Vieną ar kelis kartus perkelkite arba kopijuokite subjektus</translation>
+        <translation>Vieną ar kelis kartus perkelkite arba kopijuokite objektus</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
@@ -13706,37 +13706,37 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>Pasirinkite ribojantį subjektą</translation>
+        <translation>Pasirinkite ribojantį objektą</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation>Pasirinkite subjektą, kurį norite apkarpyti</translation>
+        <translation>Pasirinkite objektą, kurį norite apkarpyti</translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation>Šios dvi esybės nesikerta arba šiuo metu nėra palaikomos, kad būtų galima jas apkarpyti.</translation>
+        <translation>Šie du objektai nesikerta arba šiuo metu jų apkarpymas nepalaikomas.</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Pirmasis subjektas negali būti apkarpytas.</translation>
+        <translation>Pirmasis objektas negali būti apkarpytas.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Subjekto negalima apkarpyti.</translation>
+        <translation>Objekto negalima apkarpyti.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Antrojo subjekto negalima apkarpyti.</translation>
+        <translation>Antrojo objekto negalima apkarpyti.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>Trim</translation>
+        <translation>&amp;Apkirpti</translation>
     </message>
 </context>
 <context>
@@ -13768,7 +13768,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>Antras: vertikaliai</translation>
+        <translation>Du: vertikaliai</translation>
     </message>
 </context>
 <context>
@@ -13811,7 +13811,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation>Masto koeficientas:</translation>
+        <translation>Mastelio koeficientas:</translation>
     </message>
 </context>
 <context>
@@ -13832,7 +13832,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation>Panaikinti</translation>
+        <translation>&amp;Atšaukti</translation>
     </message>
 </context>
 <context>
@@ -13846,7 +13846,7 @@ jau yra sąraše.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>Piešimo vienetas</translation>
+        <translation>Brėžinio vienetas</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13896,7 +13896,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation>Microinch</translation>
+        <translation>Mikrocolis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13921,7 +13921,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation>&quot;Micron&quot;</translation>
+        <translation>Mikronas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13951,7 +13951,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation>Šviesmečiai</translation>
+        <translation>Šviesmetis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13971,7 +13971,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>Piešimo vienetas:</translation>
+        <translation>Brėžinio vienetas:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13997,17 +13997,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Peržiūrėti įrankius</translation>
+        <translation>Vaizdo įrankiai</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>View</source>
-        <translation>Peržiūrėti</translation>
+        <translation>Rodymas</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>Peržiūrėti</translation>
+        <translation>&amp;Rodymas</translation>
     </message>
 </context>
 <context>
@@ -14033,7 +14033,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Vaizdiniai portalai</translation>
+        <translation>Rodiniai</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -14061,12 +14061,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation>Maketavimas</translation>
+        <translation>Maketas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Vaizdiniai portalai</translation>
+        <translation>Rodiniai</translation>
     </message>
 </context>
 <context>
@@ -14074,7 +14074,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+512"/>
         <source>Dropped data not supported</source>
-        <translation>Nepalaikomi nutolę duomenys</translation>
+        <translation>Nutempti duomenys nepalaikomi</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -14130,12 +14130,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+4"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Lankas</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Plus/Minus</source>
-        <translation>Pliusai / minusai</translation>
+        <translation>Plius / minus</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -14160,7 +14160,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-5"/>
         <source>Ohm</source>
-        <translation>Ohm</translation>
+        <translation>Omas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14235,7 +14235,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation>Nuosavybės linija</translation>
+        <translation>Sklypo riba</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14291,7 +14291,7 @@ jau yra sąraše.</translation>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation>Vidurio</translation>
+        <translation>Vidurys</translation>
     </message>
     <message>
         <location line="-6"/>
@@ -14311,7 +14311,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Dugnas</translation>
+        <translation>Apačia</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14326,17 +14326,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation>Inžinerija</translation>
+        <translation>Inžinerinis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation>Architektūra</translation>
+        <translation>Architektūrinis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation>Dalinis</translation>
+        <translation>Trupmeninis</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14347,7 +14347,7 @@ jau yra sąraše.</translation>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation>Rodyti užpakalinius nulius</translation>
+        <translation>Rodyti galinius nulius</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -14362,7 +14362,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradians</translation>
+        <translation>Gradai</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14378,7 +14378,7 @@ jau yra sąraše.</translation>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation>Išspausdinti užpakalinius nulius</translation>
+        <translation>Slėpti galinius nulius</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -14433,7 +14433,7 @@ jau yra sąraše.</translation>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation>Išspausdinti pirmuosius nulius</translation>
+        <translation>Slėpti pradinius nulius</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -14507,17 +14507,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation>Padidinti</translation>
+        <translation>Mastelis</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation>Padidinimo įrankiai</translation>
+        <translation>Mastelio keitimo įrankiai</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Zoom</source>
-        <translation>Padidinti</translation>
+        <translation>&amp;Mastelis</translation>
     </message>
 </context>
 <context>
@@ -14533,7 +14533,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>Padidinti mastelį</translation>
+        <translation>&amp;Nutolinti vaizdą</translation>
     </message>
 </context>
 <context>
@@ -14622,7 +14622,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation>Maketavimas</translation>
+        <translation>Maketas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14637,12 +14637,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation>Peržiūros</translation>
+        <translation>Vaizdai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Peržiūrėti</translation>
+        <translation>Vaizdas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14657,12 +14657,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>Entities</source>
-        <translation>Subjektai</translation>
+        <translation>Objektai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entity</source>
-        <translation>Subjektas</translation>
+        <translation>Objektas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14697,12 +14697,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation>Arkos</translation>
+        <translation>Lankai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation>Arc</translation>
+        <translation>Lankas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14803,7 +14803,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Ordinuoti matmenys</translation>
+        <translation>Ordinatiniai matmenys</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14883,7 +14883,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation>Eilutės</translation>
+        <translation>Linijos</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14928,12 +14928,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation>Polinija</translation>
+        <translation>Polilinija</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Kietosios medžiagos</translation>
+        <translation>Užpildytos figūros</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14948,7 +14948,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>Trace</translation>
+        <translation>Pėdsakas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14973,12 +14973,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation>Splinai</translation>
+        <translation>Splainai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation>Spline</translation>
+        <translation>Splainas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14999,7 +14999,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Vaizdiniai portalai</translation>
+        <translation>Rodiniai</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15030,13 +15030,13 @@ jau yra sąraše.</translation>
         <location line="+2"/>
         <location line="+9"/>
         <source>Unknown Entities</source>
-        <translation>Nežinomi subjektai</translation>
+        <translation>Nežinomi objektai</translation>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation>Nežinomas subjektas</translation>
+        <translation>Nežinomas objektas</translation>
     </message>
     <message>
         <location line="+108"/>
@@ -15079,7 +15079,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation>Viewportas 1</translation>
+        <translation>Rodinys 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -15158,7 +15158,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/simple_info.js" line="+157"/>
         <source>ID does not refer to an entity:</source>
-        <translation>ID nenurodo subjekto:</translation>
+        <translation>ID nenurodo objekto:</translation>
     </message>
 </context>
 <context>
@@ -15167,31 +15167,31 @@ jau yra sąraše.</translation>
         <location filename="../scripts/simple_modify.js" line="+442"/>
         <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Pirmasis subjektas negali būti apkarpytas.</translation>
+        <translation>Pirmasis objektas negali būti apkarpytas.</translation>
     </message>
     <message>
         <location line="-429"/>
         <location line="+22"/>
         <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Subjekto negalima apkarpyti.</translation>
+        <translation>Objekto negalima apkarpyti.</translation>
     </message>
     <message>
         <location line="-477"/>
         <source>Not an entity reference (ID, entity, shape or position):</source>
-        <translation>Tai ne subjekto nuoroda (ID, subjektas, forma ar padėtis):</translation>
+        <translation>Tai ne objekto nuoroda (ID, objektas, forma ar padėtis):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Entity has no shape:</source>
-        <translation>Subjektas neturi formos:</translation>
+        <translation>Objektas neturi formos:</translation>
     </message>
     <message>
         <location line="+252"/>
         <location line="+509"/>
         <location line="+73"/>
         <source>Two entities are required.</source>
-        <translation>Reikalingi du subjektai.</translation>
+        <translation>Reikalingi du objektai.</translation>
     </message>
     <message>
         <location line="-565"/>
@@ -15202,7 +15202,7 @@ jau yra sąraše.</translation>
         <location line="+35"/>
         <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Antrojo subjekto negalima apkarpyti.</translation>
+        <translation>Antrojo objekto negalima apkarpyti.</translation>
     </message>
     <message>
         <location line="-346"/>
@@ -15214,12 +15214,12 @@ jau yra sąraše.</translation>
         <location line="+7"/>
         <location line="+7"/>
         <source>Entity cannot be lengthened.</source>
-        <translation>Subjekto negalima pailginti.</translation>
+        <translation>Objekto negalima pailginti.</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Entity cannot be broken out.</source>
-        <translation>Subjekto negalima išskirti.</translation>
+        <translation>Objekto negalima išskirti.</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -15229,7 +15229,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+16"/>
         <source>Entity cannot be divided.</source>
-        <translation>Subjekto negalima padalyti.</translation>
+        <translation>Objekto negalima padalyti.</translation>
     </message>
     <message>
         <location line="+171"/>
@@ -15239,7 +15239,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+29"/>
         <source>The two entities cannot be rounded.</source>
-        <translation>Šių dviejų subjektų negalima suapvalinti.</translation>
+        <translation>Šių dviejų objektų negalima suapvalinti.</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -15250,7 +15250,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-44"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Šių dviejų subjektų negalima nuožulninti.</translation>
+        <translation>Šių dviejų objektų negalima nuožulninti.</translation>
     </message>
     <message numerus="yes">
         <location line="+72"/>
@@ -15273,17 +15273,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+21"/>
         <source>Entity cannot be offset.</source>
-        <translation>Subjekto negalima paslinkti lygiagrečiai.</translation>
+        <translation>Objekto negalima paslinkti lygiagrečiai.</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Entity cannot be reversed.</source>
-        <translation>Subjekto krypties negalima apversti.</translation>
+        <translation>Objekto krypties negalima apversti.</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>Entity cannot be exploded.</source>
-        <translation>Subjekto negalima išskaidyti.</translation>
+        <translation>Objekto negalima išskaidyti.</translation>
     </message>
     <message>
         <location line="+107"/>

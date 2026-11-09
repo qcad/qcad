@@ -783,7 +783,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation>Καμπύλη</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+1"/>

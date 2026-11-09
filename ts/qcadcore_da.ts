@@ -114,12 +114,12 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation>Af lag</translation>
+        <translation>Efter lag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Af blok</translation>
+        <translation>Efter blok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -227,12 +227,12 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Linetype-skala</translation>
+        <translation>Linjetype-skala</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Dimension Font</translation>
+        <translation>Dimensionsskrifttype</translation>
     </message>
 </context>
 <context>
@@ -342,7 +342,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation>Blok, der er referencer</translation>
+        <translation>Refereret blok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -412,12 +412,12 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation>Linetype</translation>
+        <translation>Linjetype</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Linetype-skala</translation>
+        <translation>Linjetype-skala</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -444,7 +444,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Forældre Id</translation>
+        <translation>Overordnet ID</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -501,7 +501,7 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="-7"/>
         <source>Off</source>
-        <translation>Off</translation>
+        <translation>Slået fra</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -516,7 +516,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Sammenstyrtet</translation>
+        <translation>Sammenfoldet</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -550,7 +550,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation>Grænseværdier</translation>
+        <translation>Maks. grænser</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -582,7 +582,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Håndtag</translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -592,7 +592,7 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation>Udvalgte</translation>
+        <translation>Valgt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -670,7 +670,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation>Tilpasning</translation>
+        <translation>Justering</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -690,7 +690,7 @@
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation>Omvendt nedad</translation>
+        <translation>På hovedet</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -706,14 +706,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Se center</translation>
+        <translation>Visningscentrum</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Se mål</translation>
+        <translation>Visningsmål</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -748,7 +748,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Dimension line gap</translation>
+        <translation>Dimensionslinjeafstand</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -763,7 +763,7 @@
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Udvidelse af linjeforlængelse</translation>
+        <translation>Forlængelse af forlængelseslinje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -788,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Krydsningsstørrelse</translation>
+        <translation>Krydsstørrelse</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -813,12 +813,12 @@
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation>Angular-format</translation>
+        <translation>Vinkelformat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Angulære decimaler</translation>
+        <translation>Vinkeldecimaler</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architectur tick</translation>
+        <translation>Arkitektonisk kryds</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -887,12 +887,12 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation>Af lag</translation>
+        <translation>Efter lag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Af blok</translation>
+        <translation>Efter blok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>Batting</translation>
+        <translation>Isolering</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1058,12 +1058,12 @@
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>Fennelinie 1</translation>
+        <translation>Hegnslinje 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation>Fenceline 2</translation>
+        <translation>Hegnslinje 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,17 +1118,17 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Overhead Power</translation>
+        <translation>Luftledning</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Foul</translation>
+        <translation>Spildevand</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Foul Rising</translation>
+        <translation>Spildevand, trykledning</translation>
     </message>
 </context>
 <context>
@@ -1136,12 +1136,12 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation>Af lag</translation>
+        <translation>Efter lag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Af blok</translation>
+        <translation>Efter blok</translation>
     </message>
     <message>
         <location line="+1"/>

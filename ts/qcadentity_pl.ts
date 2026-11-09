@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Punkt środkowy</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>Obszar</translation>
+        <translation>Pole powierzchni</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -358,7 +358,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Wymiar Łuk</translation>
+        <translation>Łuk wymiarowy</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -384,7 +384,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-19"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Pochodzenie</translation>
+        <translation>Początek</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -408,7 +408,7 @@
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation>Wymiar Kąt</translation>
+        <translation>Kąt wymiaru</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
@@ -436,7 +436,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation>Definicja Punkt</translation>
+        <translation>Punkt definiujący</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -468,7 +468,7 @@
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation>Długość przewodu przedłużającego</translation>
+        <translation>Długość linii przedłużającej</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -709,7 +709,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation>Spline</translation>
+        <translation>Splajn</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -730,7 +730,7 @@
         <location line="+4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
-        <translation>Bulge</translation>
+        <translation>Wypukłość</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -845,7 +845,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Liczba stopni</translation>
+        <translation>Stopień</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -859,7 +859,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>Fit Point</translation>
+        <translation>Punkt dopasowania</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -881,7 +881,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Początek stycznej</translation>
+        <translation>Styczna początkowa</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -970,19 +970,19 @@
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
         <source>Arc Symbol Type</source>
-        <translation>Symbol łuku Typ</translation>
+        <translation>Typ symbolu łuku</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation>Middle Point</translation>
+        <translation>Punkt środkowy</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation>Rama</translation>
+        <translation>Ramka</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolyMeshEntity.cpp" line="+64"/>

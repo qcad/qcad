@@ -222,7 +222,7 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Единица за рисуване</translation>
+        <translation>Чертожна единица</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -260,7 +260,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Произход</translation>
+        <translation>Начало</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -400,7 +400,7 @@
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation>Обща скала</translation>
+        <translation>Общ мащаб</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -584,7 +584,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
-        <translation>Дъно</translation>
+        <translation>Долу</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -596,7 +596,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
-        <translation>Топ</translation>
+        <translation>Горе</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -636,7 +636,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Сринат</translation>
+        <translation>Свит</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -826,14 +826,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Изглед на центъра</translation>
+        <translation>Център на изгледа</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Преглед на целта</translation>
+        <translation>Цел на изгледа</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1058,7 +1058,7 @@
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>Фенселин 1</translation>
+        <translation>Ограда 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1123,12 +1123,12 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Фаул</translation>
+        <translation>Отпадни води</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Фаул нарастващ</translation>
+        <translation>Отпадни води, напорна</translation>
     </message>
 </context>
 <context>

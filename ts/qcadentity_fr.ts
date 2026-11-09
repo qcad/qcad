@@ -340,7 +340,7 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-28"/>
         <source>Solid</source>
-        <translation>Trait continu</translation>
+        <translation>Remplissage uni</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -369,7 +369,7 @@
     <message>
         <location line="-7"/>
         <source>From Entity</source>
-        <translation>De entité</translation>
+        <translation>De l&apos;entité</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -469,7 +469,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+20"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+12"/>
         <source>Area</source>
-        <translation>Zone</translation>
+        <translation>Aire</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
@@ -486,7 +486,7 @@
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation>Paramètre de démarrage</translation>
+        <translation>Paramètre de départ</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -732,7 +732,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Point de corde loin</translation>
+        <translation>Point de corde éloigné</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -760,7 +760,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Repère point final</translation>
+        <translation>Point final de la ligne de repère</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -770,7 +770,7 @@
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation>Etiquette</translation>
+        <translation>Étiquette</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -810,12 +810,12 @@
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation>Miroir la première flèche</translation>
+        <translation>Inverser la première flèche</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Miroir la deuxième flèche</translation>
+        <translation>Inverser la deuxième flèche</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -830,7 +830,7 @@
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>Auto etiquette</translation>
+        <translation>Étiquette automatique</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -845,7 +845,7 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Auto Label Position</translation>
+        <translation>Position automatique de l&apos;étiquette</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
@@ -855,12 +855,12 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation>Courbe</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Flèche bloc</translation>
+        <translation>Bloc flèche</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>

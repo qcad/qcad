@@ -281,7 +281,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation>Unghiul de măturare</translation>
+        <translation>Unghi de baleiaj</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>Zona</translation>
+        <translation>Arie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -326,28 +326,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>Linia 1 Start</translation>
+        <translation>Începutul liniei 1</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>Linia 2 Start</translation>
+        <translation>Începutul liniei 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>Linia 1 End</translation>
+        <translation>Sfârșitul liniei 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>Linia 2 End</translation>
+        <translation>Sfârșitul liniei 2</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -475,12 +475,12 @@
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation>Flip prima săgeată</translation>
+        <translation>Întoarce prima săgeată</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Flip a doua săgeată</translation>
+        <translation>Întoarce a doua săgeată</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -939,7 +939,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Începeți Tangenta</translation>
+        <translation>Tangentă de început</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -951,7 +951,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation>End Tangent</translation>
+        <translation>Tangentă de sfârșit</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>

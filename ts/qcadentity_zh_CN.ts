@@ -564,7 +564,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>模式</translation>
+        <translation>图案</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -804,7 +804,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation>基本点</translation>
+        <translation>基点</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -892,7 +892,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>度</translation>
+        <translation>阶数</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -906,7 +906,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>适配点</translation>
+        <translation>拟合点</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -982,7 +982,7 @@
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation>框架</translation>
+        <translation>边框</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolyMeshEntity.cpp" line="+64"/>

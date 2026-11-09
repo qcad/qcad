@@ -485,7 +485,7 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation>Láthatatlan tárgy</translation>
+        <translation>Láthatatlan objektum</translation>
     </message>
     <message>
         <location line="+1"/>

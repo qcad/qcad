@@ -74,7 +74,7 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+3"/>

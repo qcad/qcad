@@ -314,7 +314,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation>Spør</translation>
+        <translation>Ledetekst</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
@@ -354,7 +354,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Dimensjon Arc</translation>
+        <translation>Dimensjonsbue</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
@@ -369,7 +369,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Akkordpunkt</translation>
+        <translation>Kordepunkt</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -805,7 +805,7 @@
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation>Avsluttet</translation>
+        <translation>Lukket</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -905,7 +905,7 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation>Avsluttet Periodisk</translation>
+        <translation>Lukket periodisk</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -951,7 +951,7 @@
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation>Bruk End Tangent</translation>
+        <translation>Bruk slutt-tangent</translation>
     </message>
     <message>
         <location line="+1"/>

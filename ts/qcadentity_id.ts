@@ -314,7 +314,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation>Cepat</translation>
+        <translation>Prompt</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
@@ -326,28 +326,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>Baris 1 Mulai</translation>
+        <translation>Garis 1 Awal</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>Baris 2 Mulai</translation>
+        <translation>Garis 2 Awal</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>Baris 1 Akhir</translation>
+        <translation>Garis 1 Akhir</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>Baris 2 Akhir</translation>
+        <translation>Garis 2 Akhir</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -369,14 +369,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Titik Akor</translation>
+        <translation>Titik Tali Busur</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Titik Akor Jauh</translation>
+        <translation>Titik Tali Busur Jauh</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -411,7 +411,7 @@
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation>Menahbiskan</translation>
+        <translation>Ordinat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -485,12 +485,12 @@
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation>Saluran Ekstensi Tetap</translation>
+        <translation>Garis Ekstensi Tetap</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation>Panjang Saluran Ekstensi</translation>
+        <translation>Panjang Garis Ekstensi</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -591,7 +591,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation>Poin 3</translation>
+        <translation>Titik 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -604,7 +604,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation>Poin 4</translation>
+        <translation>Titik 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
@@ -758,7 +758,7 @@
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation>Faktor Tinggi Badan</translation>
+        <translation>Faktor Tinggi</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -768,7 +768,7 @@
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation>Tinggi badan</translation>
+        <translation>Tinggi</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -877,7 +877,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation>Poin Kedua</translation>
+        <translation>Titik Kedua</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -932,14 +932,14 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation>Gunakan Mulai Tangen</translation>
+        <translation>Gunakan Garis Singgung Awal</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Mulai Tangen</translation>
+        <translation>Garis Singgung Awal</translation>
     </message>
     <message>
         <location line="+1"/>

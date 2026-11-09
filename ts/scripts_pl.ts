@@ -211,7 +211,7 @@
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation>Tematy</translation>
+        <translation>Motywy</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Preferencje rysowania</translation>
+        <translation>Preferencje rysunku</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -319,7 +319,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Preferencje aktualnego rysunku można zmienić w &lt;br/&gt;&lt;i&gt;Edycja &amp;gt; Preferencje rysowania&lt;/i&gt;.</translation>
+        <translation>Preferencje aktualnego rysunku można zmienić w &lt;br/&gt;&lt;i&gt;Edycja &amp;gt; Preferencje rysunku&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -579,7 +579,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="+85"/>
         <source>Invalid length</source>
-        <translation>Nieprawidłowa wysokość</translation>
+        <translation>Nieprawidłowa długość</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -776,7 +776,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -971,7 +971,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation>Autosave Interval:</translation>
+        <translation>Interwał autozapisu:</translation>
     </message>
     <message>
         <location line="+54"/>
@@ -1042,7 +1042,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Auto Trim</translation>
+        <translation>Automatyczne &amp;przycinanie</translation>
     </message>
 </context>
 <context>
@@ -1235,7 +1235,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation>Marża:</translation>
+        <translation>Margines:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -1410,7 +1410,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Identyfikator referencyjny bloku:</translation>
+        <translation>Identyfikator odniesienia do bloku:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1479,7 +1479,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>Podział na segmenty</translation>
+        <translation>&amp;Wytnij segment</translation>
     </message>
 </context>
 <context>
@@ -2001,7 +2001,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -2335,7 +2335,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>Koncentracja na wierszu poleceń</translation>
+        <translation>&amp;Uaktywnij wiersz poleceń</translation>
     </message>
 </context>
 <context>
@@ -2514,12 +2514,12 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation>Linia środkowa Krzyż</translation>
+        <translation>Krzyż osi symetrii</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation>Rysuj linię środkową w postaci łuków, okręgów lub elips</translation>
+        <translation>Rysuje krzyż osi symetrii w łukach, okręgach lub elipsach</translation>
     </message>
 </context>
 <context>
@@ -2743,7 +2743,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Spliny</translation>
+        <translation>Splajny</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2763,7 +2763,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation>do wierszy</translation>
+        <translation>na linie</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2791,7 +2791,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Pochodzenie pierwszej linii przedłużającej</translation>
+        <translation>Początek pierwszej linii przedłużającej</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2806,7 +2806,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation>Dostosowane</translation>
+        <translation>&amp;Wyrównany</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2829,12 +2829,12 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation>Wymiar położenie łuku</translation>
+        <translation>Położenie łuku wymiarowego</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation>Angular</translation>
+        <translation>&amp;Kątowy</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2862,7 +2862,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation>Diametralna</translation>
+        <translation>Śre&amp;dnicowy</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2888,7 +2888,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Lokalizacja funkcji</translation>
+        <translation>Położenie elementu</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2956,7 +2956,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Pochodzenie pierwszej linii przedłużającej</translation>
+        <translation>Początek pierwszej linii przedłużającej</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3084,7 +3084,7 @@ Czy chcesz go odzyskać?</translation>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>Niższa tolerancja</translation>
+        <translation>Dolna tolerancja</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3107,7 +3107,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Wymiar Skala</translation>
+        <translation>Skala wymiaru</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3191,7 +3191,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="-145"/>
         <source>Dimension Style</source>
-        <translation>Wymiar Styl</translation>
+        <translation>Styl wymiarowania</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3361,7 +3361,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>Podzielić</translation>
+        <translation>&amp;Podziel</translation>
     </message>
 </context>
 <context>
@@ -3620,7 +3620,7 @@ jest już na liście.</translation>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation>Ustawienie nowego pochodzenia względnego nie powiodło się, zignorowano. Linia tekstu: %1</translation>
+        <translation>Ustawienie nowego względnego początku układu nie powiodło się, zignorowano. Linia tekstu: %1</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3953,7 +3953,7 @@ jest już na liście.</translation>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation>Wielokąt: mniej niż 5 odnośników.</translation>
+        <translation>Wielokąt: mniej niż 5 odniesień.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3986,7 +3986,7 @@ jest już na liście.</translation>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation>spline z punktem kontrolnym 3 stopnia, mniej niż 4 referencje.</translation>
+        <translation>Splajn z punktów kontrolnych 3. stopnia, mniej niż 4 odniesienia.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4076,7 +4076,7 @@ jest już na liście.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Nie jest to prawidłowy Lineweight, ignorowane. Linia tekstu: %1%2 Waga: %3</translation>
+        <translation>Nieprawidłowa szerokość linii, zignorowano. Linia tekstu: %1%2 Szerokość: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4086,7 +4086,7 @@ jest już na liście.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Nie jest to poprawna skala Linetype, ignorowane. Linia tekstu: %1%2 Skala: %3</translation>
+        <translation>Nieprawidłowa skala rodzaju linii, zignorowano. Linia tekstu: %1%2 Skala: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4111,7 +4111,7 @@ jest już na liście.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Nieprawidłowy Lineweight. Linia tekstu: %1%2 Waga: %3</translation>
+        <translation>Nieprawidłowa szerokość linii. Linia tekstu: %1%2 Szerokość: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4222,7 +4222,7 @@ jest już na liście.</translation>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Sweep:</translation>
+        <translation>Rozwarcie:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4255,7 +4255,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Preferencje rysowania</translation>
+        <translation>&amp;Preferencje rysunku</translation>
     </message>
 </context>
 <context>
@@ -4269,9 +4269,9 @@ jest już na liście.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform>plural form 0</numerusform>
-            <numerusform>plural form 1</numerusform>
-            <numerusform>plural form 2</numerusform>
+            <numerusform>Powielono %n obiekt</numerusform>
+            <numerusform>Powielono %n obiekty</numerusform>
+            <numerusform>Powielono %n obiektów</numerusform>
         </translation>
     </message>
 </context>
@@ -4440,13 +4440,13 @@ jest już na liście.</translation>
     <message>
         <location line="+67"/>
         <source>&amp;Script Shell</source>
-        <translation>Skrypt Shell</translation>
+        <translation>Powłoka &amp;skryptów</translation>
     </message>
     <message>
         <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation>Skrypt Shell</translation>
+        <translation>Powłoka skryptów</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
@@ -4479,7 +4479,7 @@ jest już na liście.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Edit</source>
-        <translation>Edytuj</translation>
+        <translation>&amp;Edycja</translation>
     </message>
 </context>
 <context>
@@ -4505,12 +4505,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>Edytuj blok z odnośnika</translation>
+        <translation>E&amp;dytuj blok z odniesienia</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation>Edycja bloku na podstawie wybranego odnośnika do bloku</translation>
+        <translation>Edycja bloku na podstawie wybranego odniesienia do bloku</translation>
     </message>
 </context>
 <context>
@@ -4633,7 +4633,7 @@ jest już na liście.</translation>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation>Niewielki promień:</translation>
+        <translation>Mały promień:</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4725,7 +4725,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -4844,7 +4844,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>Możesz użyć &lt;i&gt;Edycja &gt; Cofnij&lt;/i&gt;, aby przywrócić encję linii.</translation>
+        <translation>Możesz użyć &lt;i&gt;Edycja &gt; Cofnij&lt;/i&gt;, aby przywrócić obiekt linii.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4857,7 +4857,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation>Spis treści</translation>
+        <translation>Lista zawartości &amp;katalogu</translation>
     </message>
 </context>
 <context>
@@ -4891,7 +4891,7 @@ jest już na liście.</translation>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation>Wyjście Wierzchołki polilinii</translation>
+        <translation>&amp;Wypisz wierzchołki polilinii</translation>
     </message>
 </context>
 <context>
@@ -5008,7 +5008,7 @@ jest już na liście.</translation>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Exporter</source>
-        <translation>Eksporter plików rejestrowych</translation>
+        <translation>Za&amp;rejestruj eksporter plików</translation>
     </message>
 </context>
 <context>
@@ -5036,7 +5036,7 @@ jest już na liście.</translation>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Importer</source>
-        <translation>Importer plików rejestrowych</translation>
+        <translation>Za&amp;rejestruj importer plików</translation>
     </message>
 </context>
 <context>
@@ -5117,9 +5117,9 @@ jest już na liście.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform>Transakcja dotknęła %n obiektów.</numerusform>
-            <numerusform>Transakcja dotknęła %n obiektów.</numerusform>
-            <numerusform>Transakcja dotknęła %n obiektów.</numerusform>
+            <numerusform>Transakcja objęła %n obiekt.</numerusform>
+            <numerusform>Transakcja objęła %n obiekty.</numerusform>
+            <numerusform>Transakcja objęła %n obiektów.</numerusform>
         </translation>
     </message>
     <message>
@@ -5190,12 +5190,12 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Eksploduj</translation>
+        <translation>Rozbij</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Eksploduj</translation>
+        <translation>&amp;Rozbij</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
@@ -5662,7 +5662,7 @@ jest już na liście.</translation>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>Usuń bazowe encje *</translation>
+        <translation>Usuń obiekty bazowe *</translation>
     </message>
 </context>
 <context>
@@ -5747,7 +5747,7 @@ jest już na liście.</translation>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Narysuj okrążenie klejem</translation>
+        <translation>Rysuj zakładkę do klejenia</translation>
     </message>
 </context>
 <context>
@@ -5907,7 +5907,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
-        <translation>Rulery i paski przewijania</translation>
+        <translation>Linijki i paski przewijania</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5932,7 +5932,7 @@ jest już na liście.</translation>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation>Pokaż duży krzyż kresek</translation>
+        <translation>Pokaż duży celownik</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -6002,7 +6002,7 @@ jest już na liście.</translation>
     <message>
         <location line="+100"/>
         <source>Apply line weight to points</source>
-        <translation>Zastosuj wagę linii do punktów</translation>
+        <translation>Zastosuj szerokość linii do punktów</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6058,7 +6058,7 @@ jest już na liście.</translation>
     <message>
         <location line="+39"/>
         <source>Disable for printing</source>
-        <translation>Wyłączenie drukowania</translation>
+        <translation>Wyłącz przy drukowaniu</translation>
     </message>
     <message>
         <location line="+109"/>
@@ -6093,12 +6093,12 @@ jest już na liście.</translation>
     <message>
         <location line="-459"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Rodzaje linii i wagi linii</translation>
+        <translation>Rodzaje i szerokości linii</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Domyślny lineweight:</translation>
+        <translation>Domyślna szerokość linii:</translation>
     </message>
     <message>
         <location line="+183"/>
@@ -6108,7 +6108,7 @@ jest już na liście.</translation>
     <message>
         <location line="+398"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Czas renderowania kreskowania:</translation>
+        <translation>Limit czasu renderowania kreskowania:</translation>
     </message>
     <message>
         <location line="-263"/>
@@ -6177,7 +6177,7 @@ jest już na liście.</translation>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation>Nieaktywne krzyżyki:</translation>
+        <translation>Nieaktywny celownik:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6297,7 +6297,7 @@ jest już na liście.</translation>
     <message>
         <location line="+50"/>
         <source>Tertiary reference points:</source>
-        <translation>Drugorzędny punkt odniesienia:</translation>
+        <translation>Trzeciorzędne punkty odniesienia:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6352,7 +6352,7 @@ jest już na liście.</translation>
     <message>
         <location line="-893"/>
         <source>Origin:</source>
-        <translation>Pochodzenie:</translation>
+        <translation>Początek układu współrzędnych:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -6571,7 +6571,7 @@ jest już na liście.</translation>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Utwórz kreskowanie lub wypełnienie bryłą z wybranej granicy</translation>
+        <translation>Utwórz kreskowanie lub wypełnienie stałe z wybranej granicy</translation>
     </message>
 </context>
 <context>
@@ -6734,7 +6734,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation>As Block:</translation>
+        <translation>Jako blok:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6769,7 +6769,7 @@ jest już na liście.</translation>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Wklej wszystkie encje&lt;br&gt;do bieżącej warstwy&lt;br&gt;zamiast oryginalnej warstwy</translation>
+        <translation>Wklej wszystkie obiekty&lt;br&gt;do bieżącej warstwy&lt;br&gt;zamiast oryginalnej warstwy</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6807,12 +6807,12 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Punkty importowe</translation>
+        <translation>Importuj punkty</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>Punkty importowe</translation>
+        <translation>&amp;Importuj punkty</translation>
     </message>
 </context>
 <context>
@@ -6825,7 +6825,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Określić stanowisko</translation>
+        <translation>Określ położenie</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -6858,12 +6858,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>Określ pierwszy wiersz</translation>
+        <translation>Wskaż pierwszą linię</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>Określ drugi wiersz</translation>
+        <translation>Wskaż drugą linię</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -7028,7 +7028,7 @@ jest już na liście.</translation>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation>Obszar wielokąta:</translation>
+        <translation>Pole powierzchni wielokąta:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7160,7 +7160,7 @@ jest już na liście.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Nieobsługiwany kształt z pętli hatch.</translation>
+        <translation>Nieobsługiwany kształt z pętli kreskowania.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7188,7 +7188,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation>Odnośnik</translation>
+        <translation>Odniesienie</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7198,7 +7198,7 @@ jest już na liście.</translation>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -7231,7 +7231,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation>Obszar</translation>
+        <translation>Pole powierzchni</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7320,7 +7320,7 @@ jest już na liście.</translation>
     <message>
         <location line="+95"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
@@ -7343,7 +7343,7 @@ jest już na liście.</translation>
     <message>
         <location line="+81"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
@@ -7366,7 +7366,7 @@ jest już na liście.</translation>
     <message>
         <location line="+53"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7958,7 +7958,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation>Skrypt wstawiania</translation>
+        <translation>Wstaw &amp;skrypt</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
@@ -7991,7 +7991,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>Odwrócenie Wybór</translation>
+        <translation>&amp;Odwróć zaznaczenie</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8034,12 +8034,12 @@ jest już na liście.</translation>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation>Przed projekcją obrócić wybór w kierunku przeciwnym do ruchu wskazówek zegara</translation>
+        <translation>Przed rzutowaniem obróć zaznaczenie przeciwnie do ruchu wskazówek zegara</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation>Przed projekcją obrócić wybór w prawo</translation>
+        <translation>Przed rzutowaniem obróć zaznaczenie zgodnie z ruchem wskazówek zegara</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8088,7 +8088,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
-        <translation>Projekcja w lewo</translation>
+        <translation>Rzut &amp;lewy</translation>
     </message>
 </context>
 <context>
@@ -8104,7 +8104,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>Projekcja w prawo</translation>
+        <translation>Rzut &amp;prawy</translation>
     </message>
 </context>
 <context>
@@ -8112,7 +8112,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation>Projekcja górna</translation>
+        <translation>Rzut &amp;górny</translation>
     </message>
 </context>
 <context>
@@ -8218,7 +8218,7 @@ jest już na liście.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Domyślna wartość lineweight dla warstwy 0:</translation>
+        <translation>Domyślna szerokość linii dla warstwy 0:</translation>
     </message>
     <message>
         <location line="-48"/>
@@ -8560,7 +8560,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Określić stanowisko</translation>
+        <translation>Określ położenie</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -8648,7 +8648,7 @@ jest już na liście.</translation>
     <message>
         <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>Narysuj dwusieczną kąta, trójkąt, ...</translation>
+        <translation>Narysuj dwusieczną kąta, trójsieczną, ...</translation>
     </message>
 </context>
 <context>
@@ -8666,7 +8666,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Box Joint z 2 punktów</translation>
+        <translation>Złącze s&amp;krzynkowe z 2 punktów</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8739,7 +8739,7 @@ jest już na liście.</translation>
     <message>
         <location line="+30"/>
         <source>Dovetail Height:</source>
-        <translation>Wysokość dovetail:</translation>
+        <translation>Wysokość jaskółczego ogona:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8749,7 +8749,7 @@ jest już na liście.</translation>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Współczynnik dovetail/Pin:</translation>
+        <translation>Stosunek jaskółczy ogon/czop:</translation>
     </message>
 </context>
 <context>
@@ -8864,7 +8864,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -9032,12 +9032,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>Tangens (dwa okręgi)</translation>
+        <translation>St&amp;yczna (dwa okręgi)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation>Rysuj styczną (okrąg, koło)</translation>
+        <translation>Rysuj styczną (okrąg, okrąg)</translation>
     </message>
 </context>
 <context>
@@ -9092,7 +9092,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>Globalna skala linetype:</translation>
+        <translation>Globalna skala rodzaju linii:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9181,7 +9181,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Lustro</translation>
+        <translation>Odbicie lustrzane</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9196,7 +9196,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>Lustro</translation>
+        <translation>Odbicie &amp;lustrzane</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
@@ -9219,7 +9219,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Opcje lustra</translation>
+        <translation>Opcje odbicia lustrzanego</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9698,7 +9698,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9739,7 +9739,7 @@ jest już na liście.</translation>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Rysunek otwarty</translation>
+        <translation>Otwórz rysunek</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9827,12 +9827,12 @@ jest już na liście.</translation>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation>W lewo:</translation>
+        <translation>Lewo:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation>Top:</translation>
+        <translation>Góra:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9938,7 +9938,7 @@ jest już na liście.</translation>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Wklej wszystkie encje&lt;br&gt;do bieżącej warstwy&lt;br&gt;zamiast oryginalnej warstwy</translation>
+        <translation>Wklej wszystkie obiekty&lt;br&gt;do bieżącej warstwy&lt;br&gt;zamiast oryginalnej warstwy</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10249,7 +10249,7 @@ jest już na liście.</translation>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Podział na segmenty</translation>
+        <translation>Wytnij segment</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
@@ -10269,12 +10269,12 @@ jest już na liście.</translation>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation>Dziedziczenie właściwości encji</translation>
+        <translation>Dziedziczenie właściwości obiektu</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation>Odziedziczenie wszystkich właściwości po wybranej encji</translation>
+        <translation>Odziedziczenie wszystkich właściwości po wybranym obiekcie</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10560,12 +10560,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
-        <translation>Narzędzia projekcyjne</translation>
+        <translation>Narzędzia rzutowania</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Projection</source>
-        <translation>Projekcja</translation>
+        <translation>&amp;Rzutowanie</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -10745,7 +10745,7 @@ jest już na liście.</translation>
     <message>
         <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation>Zawsze pokazuj wszystkie właściwości (może to spowolnić wybór encji)</translation>
+        <translation>Zawsze pokazuj wszystkie właściwości (może to spowolnić zaznaczanie obiektów)</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10812,7 +10812,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Czysta lista</translation>
+        <translation>&amp;Wyczyść listę</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10921,7 +10921,7 @@ jest już na liście.</translation>
     <message>
         <location line="-115"/>
         <source>Distance:</source>
-        <translation>Długość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
@@ -10966,7 +10966,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>Odwrócona</translation>
+        <translation>&amp;Odwróć</translation>
     </message>
 </context>
 <context>
@@ -11052,7 +11052,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>Rotate Two</translation>
+        <translation>Obróć wokół d&amp;wóch środków</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
@@ -11075,7 +11075,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Obróć dwie opcje</translation>
+        <translation>Opcje obracania wokół dwóch środków</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11196,7 +11196,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>Okrągła</translation>
+        <translation>&amp;Zaokrąglij</translation>
     </message>
 </context>
 <context>
@@ -11234,7 +11234,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Skrypt uruchomieniowy</translation>
+        <translation>Uruchamianie skryptu</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -11257,7 +11257,7 @@ jest już na liście.</translation>
     <message>
         <location line="+22"/>
         <source>File Format Version Not Recommended</source>
-        <translation>Format pliku Wersja niezalecana</translation>
+        <translation>Niezalecana wersja formatu pliku</translation>
     </message>
     <message>
         <location line="-21"/>
@@ -11423,7 +11423,7 @@ jest już na liście.</translation>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation>Punkt ostrości</translation>
+        <translation>Środek skalowania</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11443,7 +11443,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>Skala</translation>
+        <translation>&amp;Skaluj</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -11568,7 +11568,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation>Scripting</translation>
+        <translation>Skrypty</translation>
     </message>
 </context>
 <context>
@@ -11625,7 +11625,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation>Przez kolor</translation>
+        <translation>Według koloru</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11648,7 +11648,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>Przez uchwyt</translation>
+        <translation>Według uchwytu</translation>
     </message>
 </context>
 <context>
@@ -11661,7 +11661,7 @@ jest już na liście.</translation>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Uchwyt (sześciokątny):</translation>
+        <translation>Uchwyt (szesnastkowo):</translation>
     </message>
 </context>
 <context>
@@ -11866,7 +11866,7 @@ jest już na liście.</translation>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Wybór krzyża</translation>
+        <translation>Zaznaczanie krzyżowe</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -11926,7 +11926,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation>włączona</translation>
+        <translation>na</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12296,7 +12296,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
-        <translation>X Współrzędna</translation>
+        <translation>Współrzędna X</translation>
     </message>
     <message>
         <location line="-19"/>
@@ -12535,7 +12535,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation>Odnośnik</translation>
+        <translation>Punkt &amp;odniesienia</translation>
     </message>
 </context>
 <context>
@@ -12580,7 +12580,7 @@ jest już na liście.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>Spline</translation>
+        <translation>&amp;Splajn</translation>
     </message>
 </context>
 <context>
@@ -12623,7 +12623,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>Spline (punkty kontrolne)</translation>
+        <translation>&amp;Splajn (punkty kontrolne)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12728,7 +12728,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>Stretch</translation>
+        <translation>&amp;Rozciągnij</translation>
     </message>
 </context>
 <context>
@@ -12938,7 +12938,7 @@ jest już na liście.</translation>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation>Fit</translation>
+        <translation>Dopasuj</translation>
     </message>
 </context>
 <context>
@@ -13024,7 +13024,7 @@ jest już na liście.</translation>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>Bold</translation>
+        <translation>Pogru&amp;bienie</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -13044,7 +13044,7 @@ jest już na liście.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>Superskrypt</translation>
+        <translation>Indeks &amp;górny</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -13059,7 +13059,7 @@ jest już na liście.</translation>
     <message>
         <location line="+349"/>
         <source>Others...</source>
-        <translation>Inni...</translation>
+        <translation>Inne...</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -13114,7 +13114,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation>Ohm</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13124,12 +13124,12 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>Squared</translation>
+        <translation>Do kwadratu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubed</translation>
+        <translation>Do sześcianu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13160,7 +13160,7 @@ jest już na liście.</translation>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation>Bold</translation>
+        <translation>Pogrubienie</translation>
     </message>
     <message>
         <location line="-267"/>
@@ -13352,7 +13352,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation>Temat interfejsu użytkownika:</translation>
+        <translation>Motyw interfejsu użytkownika:</translation>
     </message>
 </context>
 <context>
@@ -13499,7 +13499,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>Skup się na matrycy narzędziowej</translation>
+        <translation>&amp;Uaktywnij tabelę narzędzi</translation>
     </message>
 </context>
 <context>
@@ -13896,7 +13896,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation>Microinch</translation>
+        <translation>Mikrocal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13906,7 +13906,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation>Podwórko</translation>
+        <translation>Jard</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13921,7 +13921,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation>Micron</translation>
+        <translation>Mikron</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13951,12 +13951,12 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation>Lightyear</translation>
+        <translation>Rok świetlny</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation>Parsec</translation>
+        <translation>Parsek</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14007,7 +14007,7 @@ jest już na liście.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>Zobacz</translation>
+        <translation>&amp;Widok</translation>
     </message>
 </context>
 <context>
@@ -14250,12 +14250,12 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation>Squared</translation>
+        <translation>Do kwadratu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubed</translation>
+        <translation>Do sześcianu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14326,7 +14326,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation>Inżynieria</translation>
+        <translation>Inżynierska</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14362,7 +14362,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradians</translation>
+        <translation>Grady</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14406,7 +14406,7 @@ jest już na liście.</translation>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation>Include 0&apos;0&quot;</translation>
+        <translation>Uwzględnij 0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14422,12 +14422,12 @@ jest już na liście.</translation>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation>Uwzględnić 0&quot;, stłumić 0&quot;.</translation>
+        <translation>Uwzględnij 0&apos;, pomiń 0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation>Dołączyć 0&quot;, stłumić 0&quot;.</translation>
+        <translation>Uwzględnij 0&quot;, pomiń 0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14642,7 +14642,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Zobacz</translation>
+        <translation>Widok</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14652,7 +14652,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation>Wymiar Styl</translation>
+        <translation>Styl wymiarowania</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14687,7 +14687,7 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Odniesienia i atrybuty bloku</translation>
+        <translation>Odniesienia do bloków i atrybuty</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14727,12 +14727,12 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation>Kręgi</translation>
+        <translation>Okręgi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation>Koło</translation>
+        <translation>Okrąg</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14798,7 +14798,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation>Średnica</translation>
+        <translation>Wymiar średnicy</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14848,12 +14848,12 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Kreskuj</translation>
+        <translation>Kreskowanie</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation>Zdjęcia</translation>
+        <translation>Obrazy</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14933,12 +14933,12 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Ciała stałe</translation>
+        <translation>Wypełnione obszary</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation>Solid</translation>
+        <translation>Wypełniony obszar</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14973,12 +14973,12 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation>Spliny</translation>
+        <translation>Splajny</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation>Spline</translation>
+        <translation>Splajn</translation>
     </message>
     <message>
         <location line="+2"/>

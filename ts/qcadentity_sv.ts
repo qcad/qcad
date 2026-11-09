@@ -281,7 +281,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation>Pilvinkel</translation>
+        <translation>Svepvinkel</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -379,14 +379,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Knytpunkt</translation>
+        <translation>Kordapunkt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Bortre knytpunkt</translation>
+        <translation>Bortre kordapunkt</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -887,7 +887,7 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation>Stängd form</translation>
+        <translation>Sluten periodisk</translation>
     </message>
     <message>
         <location line="+1"/>

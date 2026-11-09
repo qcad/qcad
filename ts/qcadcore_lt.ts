@@ -46,7 +46,7 @@
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation>Microinch</translation>
+        <translation>Mikrocolis</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -71,7 +71,7 @@
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation>&quot;Micron&quot;</translation>
+        <translation>Mikronas</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -101,7 +101,7 @@
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation>Šviesmečiai</translation>
+        <translation>Šviesmetis</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -129,7 +129,7 @@
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation>Žalioji</translation>
+        <translation>Žalia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -179,7 +179,7 @@
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation>Tamsiai purpurinės spalvos</translation>
+        <translation>Tamsiai rausva</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -222,12 +222,12 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Piešimo vienetas</translation>
+        <translation>Brėžinio vienetas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Linijinio tipo skalė</translation>
+        <translation>Linijos tipo mastelis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -260,7 +260,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Kilmė</translation>
+        <translation>Pradžios taškas</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -312,12 +312,12 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation>Maketavimas</translation>
+        <translation>Maketas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Nuosavybės teise priklausanti nuoroda</translation>
+        <translation>Priklauso nuorodai</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -355,7 +355,7 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
-        <translation>Skalė</translation>
+        <translation>Mastelis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -407,13 +407,13 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Linijinio tipo skalė</translation>
+        <translation>Linijos tipo mastelis</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Linijinis svoris</translation>
+        <translation>Linijos storis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -434,7 +434,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Tėvų ID</translation>
+        <translation>Tėvinio objekto ID</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -454,7 +454,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
-        <translation>Dugnas</translation>
+        <translation>Apačia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -506,12 +506,12 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Sugriuvęs</translation>
+        <translation>Sutrauktas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation>Plotai</translation>
+        <translation>Spausdinamas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -561,7 +561,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Maksimalūs ištraukos</translation>
+        <translation>Maksimalūs matmenys</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
@@ -572,7 +572,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Rankena</translation>
+        <translation>Identifikatorius</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -639,7 +639,7 @@
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation>X skalė</translation>
+        <translation>X mastelis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -703,7 +703,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Peržiūrėti taikinį</translation>
+        <translation>Vaizdo taikinys</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -738,7 +738,7 @@
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation>Bendra skalė</translation>
+        <translation>Bendras mastelis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -758,7 +758,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation>Strėlės dydis</translation>
+        <translation>Rodyklės dydis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -818,7 +818,7 @@
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Kampinis skaičius po kablelio</translation>
+        <translation>Kampo dešimtainės vietos</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -838,7 +838,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation>Strėlių blokas</translation>
+        <translation>Rodyklės blokas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -848,7 +848,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation>2 rodyklių blokas</translation>
+        <translation>2 rodyklės blokas</translation>
     </message>
 </context>
 <context>
@@ -879,7 +879,7 @@
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Modelis</translation>
+        <translation>Šablonas</translation>
     </message>
 </context>
 <context>
@@ -897,14 +897,14 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation>Nuolatinis</translation>
+        <translation>Ištisinė</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation>Pasienis</translation>
+        <translation>Rėmelis</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -932,7 +932,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Padalykite</translation>
+        <translation>Skiriamoji</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>Batsiuvystė</translation>
+        <translation>Izoliacija</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1058,12 +1058,12 @@
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>Fenceline 1</translation>
+        <translation>Tvoros linija 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation>&quot;Fenceline 2</translation>
+        <translation>Tvoros linija 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1098,7 +1098,7 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation>Bendravimas</translation>
+        <translation>Ryšiai</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Viršutinė galia</translation>
+        <translation>Oro elektros linija</translation>
     </message>
     <message>
         <location line="+2"/>

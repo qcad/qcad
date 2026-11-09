@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>Область</translation>
+        <translation>Площадь</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -327,14 +327,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation>Точка расширения 1</translation>
+        <translation>Точка выносной линии 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation>Точка расширения 2</translation>
+        <translation>Точка выносной линии 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
@@ -851,12 +851,12 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation>Закрытая периодичность</translation>
+        <translation>Замкнутый периодический</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Градусы</translation>
+        <translation>Степень</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -870,41 +870,41 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>Узловая точка</translation>
+        <translation>Точка подгонки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation>Вектор кельтского узла</translation>
+        <translation>Вектор узлов</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation>Кельтский узел</translation>
+        <translation>Узел</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation>Использовать начальный тангенс</translation>
+        <translation>Использовать начальную касательную</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Начальный тангенс</translation>
+        <translation>Начальная касательная</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation>Использовать конечный тангенс</translation>
+        <translation>Использовать конечную касательную</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation>Конечный тангенс</translation>
+        <translation>Конечная касательная</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -934,7 +934,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation>Направление вектора</translation>
+        <translation>Вектор направления</translation>
     </message>
     <message>
         <location line="+3"/>

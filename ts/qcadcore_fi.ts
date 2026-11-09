@@ -625,12 +625,12 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation>Jäädytetyt kerrokset</translation>
+        <translation>Jäädytetyt tasot</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation>Kerroksen tunnus</translation>
+        <translation>Tason tunnus</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-8"/>

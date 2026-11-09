@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Fuente acotada</translation>
+        <translation>Fuente de acotación</translation>
     </message>
 </context>
 <context>
@@ -245,7 +245,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+100"/>
         <source>Referenced Block</source>
-        <translation>Bloqueo referido</translation>
+        <translation>Bloque referenciado</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+76"/>
@@ -342,7 +342,7 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
-        <translation>Escalar</translation>
+        <translation>Escala</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -411,7 +411,7 @@
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation>Color muestra</translation>
+        <translation>Color mostrado</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -421,7 +421,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Parent Id</translation>
+        <translation>ID del padre</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -561,7 +561,7 @@
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation>Cursivo</translation>
+        <translation>Cursiva</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -608,19 +608,19 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Vista centro</translation>
+        <translation>Centro de la vista</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Vista objetivo</translation>
+        <translation>Objetivo de la vista</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation>Overall</translation>
+        <translation>General</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -643,7 +643,7 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Líneas ocultas</translation>
+        <translation>Oculto</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
@@ -663,7 +663,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Doblado</translation>
+        <translation>Contraído</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -678,7 +678,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation>Apagado es congelarse</translation>
+        <translation>Desactivar equivale a congelar</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -1118,17 +1118,17 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Energía eléctrica en el aire</translation>
+        <translation>Línea eléctrica aérea</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Impuro</translation>
+        <translation>Aguas residuales</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>El ascenso impuro</translation>
+        <translation>Impulsión de aguas residuales</translation>
     </message>
 </context>
 <context>

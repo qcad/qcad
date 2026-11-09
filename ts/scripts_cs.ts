@@ -100,7 +100,7 @@
     <message>
         <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation>Program je poskytován jako IS bez ŽÁDNÉ ZÁRUKY JAKÉHOKOLIV DRUHU, VČETNĚ ZÁRUKY DESIGNU, OBCHODOVATELNOSTI A VHODNOSTI PRO URČITÝ ÚČEL.</translation>
+        <translation>Program je poskytován TAK, JAK JE, BEZ JAKÉKOLIV ZÁRUKY, VČETNĚ ZÁRUKY NÁVRHU, PRODEJNOSTI A VHODNOSTI PRO URČITÝ ÚČEL.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Předvolby kreslení</translation>
+        <translation>Předvolby výkresu</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -303,7 +303,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation>Restartujte QCAD pro
+        <translation>Restartujte prosím QCAD,
 aby se změny předvoleb projevily.</translation>
     </message>
     <message>
@@ -1413,12 +1413,12 @@ Přejete si ho obnovit?</translation>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation>Vlastnost bloku:</translation>
+        <translation>Atribut bloku:</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation>&amp;Seznam vlastností bloku</translation>
+        <translation>&amp;Seznam atributů bloku</translation>
     </message>
 </context>
 <context>
@@ -1454,7 +1454,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Seznam odkazů na exportní bloky</translation>
+        <translation>&amp;Exportovat seznam referencí bloků</translation>
     </message>
 </context>
 <context>
@@ -3189,7 +3189,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location line="-145"/>
         <source>Dimension Style</source>
-        <translation>Rozměr Styl</translation>
+        <translation>Kótovací styl</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3618,17 +3618,17 @@ již v seznamu je.</translation>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation>Nastavení nového relativního původu se nezdařilo, ignorováno. Textový řádek: %1</translation>
+        <translation>Nastavení nového relativního počátku se nezdařilo, ignorováno. Textový řádek: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation>Nastavení nového poloměru zaokrouhlení se nezdařilo, ignorováno. Textový řádek: %1</translation>
+        <translation>Nastavení nového poloměru zaoblení se nezdařilo, ignorováno. Textový řádek: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation>Zaokrouhlování polylinií vyžaduje QCAD Professional, ignorováno. Textový řádek: %1</translation>
+        <translation>Zaoblování polylinií vyžaduje QCAD Professional, ignorováno. Textový řádek: %1</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3884,7 +3884,7 @@ již v seznamu je.</translation>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation>Blízké souřadnicové polohy.</translation>
+        <translation>Téměř kolineární polohy.</translation>
     </message>
     <message>
         <location line="-168"/>
@@ -4074,7 +4074,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Není to správná váha čáry, ignorováno. Řádek textu: %1%2 Váha: %3</translation>
+        <translation>Není to správná tloušťka čáry, ignorováno. Řádek textu: %1%2 Tloušťka: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4084,7 +4084,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Není to správná stupnice typu Linetype, ignorováno. Řádek textu: %1%2 Měřítko: %3</translation>
+        <translation>Není to správné měřítko typu čáry, ignorováno. Řádek textu: %1%2 Měřítko: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4109,7 +4109,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Není to správná váha na řádku. Řádek textu: %1%2 Hmotnost: %3</translation>
+        <translation>Není to správná tloušťka čáry. Řádek textu: %1%2 Tloušťka: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4498,7 +4498,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>Vyberte vlastnosti bloku</translation>
+        <translation>Vyberte referenci bloku</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
@@ -4508,7 +4508,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation>Editace bloku dle vybraných referncí</translation>
+        <translation>Editace bloku dle vybrané reference bloku</translation>
     </message>
 </context>
 <context>
@@ -4847,7 +4847,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation>Přidat smazanou čáru</translation>
+        <translation>Přidat a smazat čáru</translation>
     </message>
 </context>
 <context>
@@ -5208,7 +5208,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+14"/>
         <source>Spline approximation tolerance:</source>
-        <translation>Aproximovaná tolerance křivky</translation>
+        <translation>Tolerance aproximace křivky:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5218,7 +5218,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Exploze kružnic do polylinií se dvěma půlkruhy</translation>
+        <translation>Rozložit kružnice na lomené čáry se dvěma půlkružnicemi</translation>
     </message>
     <message>
         <location line="+90"/>
@@ -5420,12 +5420,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Začněte odléváním vrcholu začátku na otevřených formulářích.</translation>
+        <translation>Začít vykreslením počátečního vrcholu u otevřených tvarů.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Ukončete odléváním koncového vrcholu na otevřených formulářích.</translation>
+        <translation>Ukončit vykreslením koncového vrcholu u otevřených tvarů.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5570,7 +5570,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Upravte škálování f 1,00-0,90 tak, aby odpovídalo celému formuláři.</translation>
+        <translation>Upravte škálování f 1,00-0,90 tak, aby odpovídalo celému tvaru.</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5630,7 +5630,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Možnosti škálování otevřených formulářů</translation>
+        <translation>Možnosti škálování otevřených tvarů</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -5840,12 +5840,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation>Vybrat reference bloku společně s vlastnostmi</translation>
+        <translation>Vybrat reference bloku společně s atributy</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation>Skrýt vlastnosti, pokud když jsou reference bloků skryté</translation>
+        <translation>Skrýt atributy, pokud jsou reference bloků skryté</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5895,7 +5895,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Zobrazit mřížku pevnými čarami</translation>
+        <translation>Zobrazit mřížku plnými čarami</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6000,7 +6000,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+100"/>
         <source>Apply line weight to points</source>
-        <translation>Použití váhy čáry na body</translation>
+        <translation>Použít tloušťku čáry na body</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6056,7 +6056,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
         <source>Color lightness threshold:</source>
-        <translation>Prahová hodnota světla barvy:</translation>
+        <translation>Prahová hodnota světlosti barvy:</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -6111,7 +6111,7 @@ již v seznamu je.</translation>
     <message>
         <location line="-191"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Typy a váhy čar</translation>
+        <translation>Typy a tloušťky čar</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6516,7 +6516,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Pevná výplň</translation>
+        <translation>Plná výplň</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6787,12 +6787,12 @@ již v seznamu je.</translation>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Překreslit existující vrstvy&lt;br&gt;ve výkresu&lt;br&gt;vrstvami ze schránky</translation>
+        <translation>Přepsat existující vrstvy&lt;br&gt;ve výkresu&lt;br&gt;vrstvami ze schránky</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Překreslit existující bloky&lt;br&gt;ve výkresu&lt;br&gt;bloky ze schránky</translation>
+        <translation>Přepsat existující bloky&lt;br&gt;ve výkresu&lt;br&gt;bloky ze schránky</translation>
     </message>
 </context>
 <context>
@@ -7064,7 +7064,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation>Nebylo provedeno. Příkaz ukončen.</translation>
+        <translation>Není implementováno. Příkaz ukončen.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7158,7 +7158,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Neobslužný tvar ze smyčky poklopu.</translation>
+        <translation>Neošetřený tvar ze smyčky šrafování.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7186,7 +7186,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation>Odkaz</translation>
+        <translation>Reference</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7928,7 +7928,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Překreslit existující vrstvy&lt;br&gt;ve výkresu&lt;br&gt;vrstvami ze schránky</translation>
+        <translation>Přepsat existující vrstvy&lt;br&gt;ve výkresu&lt;br&gt;vrstvami ze schránky</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7943,7 +7943,7 @@ již v seznamu je.</translation>
     <message>
         <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Překreslit existující bloky&lt;br&gt;ve výkresu&lt;br&gt;bloky ze schránky</translation>
+        <translation>Přepsat existující bloky&lt;br&gt;ve výkresu&lt;br&gt;bloky ze schránky</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
@@ -8299,7 +8299,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Prvky v blocích na úrovni 0 přebírají vlastnosti a viditelnost z reference bloku.</translation>
+        <translation>Prvky v blocích na vrstvě 0 přebírají vlastnosti a viditelnost z reference bloku.</translation>
     </message>
 </context>
 <context>
@@ -8520,7 +8520,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation>Použití pevné délky pro řádek</translation>
+        <translation>Použití pevné délky pro čáru</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8588,7 +8588,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation>Délka řádku</translation>
+        <translation>Délka čáry</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8732,7 +8732,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Počet závitů:</translation>
+        <translation>Počet rybin:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8742,12 +8742,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Dovetail Gradient:</translation>
+        <translation>Sklon rybiny:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Poměr závitnice a čepu:</translation>
+        <translation>Poměr rybiny a čepu:</translation>
     </message>
 </context>
 <context>
@@ -10247,12 +10247,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Segment rozdělení</translation>
+        <translation>Vyříznout segment</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>Odstranění segmentu přerušení řádku</translation>
+        <translation>Odstranit segment čáry v místě přerušení</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13214,7 +13214,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation>Podrobnosti vlastností</translation>
+        <translation>Podrobnosti atributu</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -14233,7 +14233,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation>Linie nemovitosti</translation>
+        <translation>Hranice pozemku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14650,7 +14650,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation>Rozměr Styl</translation>
+        <translation>Kótovací styl</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14685,12 +14685,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Reference a vlastnosti bloku</translation>
+        <translation>Reference a atributy bloku</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Reference a vlastnosti bloku</translation>
+        <translation>Reference a atributy bloku</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14705,22 +14705,22 @@ již v seznamu je.</translation>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation>Vlastnosti</translation>
+        <translation>Atributy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation>Vlastnost</translation>
+        <translation>Atribut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation>Definice vlastností</translation>
+        <translation>Definice atributů</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation>Definice vlastností</translation>
+        <translation>Definice atributu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14765,22 +14765,22 @@ již v seznamu je.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>Úhlové rozměry (2 řádky)</translation>
+        <translation>Úhlových kót (2 čáry)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Úhlový rozměr (2 řádky)</translation>
+        <translation>Úhlová kóta (2 čáry)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Úhlové rozměry (3 body)</translation>
+        <translation>Úhlových kót (3 body)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Úhlový rozměr (3 body)</translation>
+        <translation>Úhlová kóta (3 body)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14861,7 +14861,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Odkazových kót</translation>
+        <translation>Odkazových čar</translation>
     </message>
     <message>
         <location line="+0"/>

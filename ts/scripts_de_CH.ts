@@ -1408,7 +1408,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Block Referenz ID:</translation>
+        <translation>Blockreferenz-ID:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2676,7 +2676,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>Block Referenzen &amp;deselektieren</translation>
+        <translation>Blockreferenzen &amp;deselektieren</translation>
     </message>
 </context>
 <context>
@@ -4073,7 +4073,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Keine korrekte Linienstärke, wird ignoriert. Textzeile: %1%2 Gewicht: %3</translation>
+        <translation>Keine korrekte Linienstärke, wird ignoriert. Textzeile: %1%2 Stärke: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4108,7 +4108,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Keine korrekte Linienstärke. Textzeile: %1%2 Gewicht: %3</translation>
+        <translation>Keine korrekte Linienstärke. Textzeile: %1%2 Stärke: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4338,7 +4338,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Element ist keine Block Referenz.</translation>
+        <translation>Element ist keine Blockreferenz.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4373,7 +4373,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Element ist keine Linie, kein Bogen, keine Spline, kein Ellipsenbogen und keine Polyline.</translation>
+        <translation>Element ist keine Linie, kein Bogen, keine Spline, kein Ellipsenbogen und keine Polylinie.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4423,7 +4423,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Element ist keine Spline mit Anpassungepunkten.</translation>
+        <translation>Element ist keine Spline mit Anpassungspunkten.</translation>
     </message>
 </context>
 <context>
@@ -4496,12 +4496,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>Block Referenz wählen</translation>
+        <translation>Blockreferenz wählen</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+3"/>
         <source>Edit block based on chosen block reference</source>
-        <translation>Block basierend auf Block Referenz bearbeiten</translation>
+        <translation>Block basierend auf gewählter Blockreferenz bearbeiten</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -4840,7 +4840,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>Mit &lt;i&gt;Bearbeiten &gt; Rückgangig&lt;/i&gt; können Sie die Linie wiederherstellen.</translation>
+        <translation>Mit &lt;i&gt;Bearbeiten &gt; Rückgängig&lt;/i&gt; können Sie die Linie wiederherstellen.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5417,12 +5417,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Start with casting a begin apex on open forms.</translation>
+        <translation>Bei offenen Formen mit einer Anfangsspitze beginnen.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>End with casting an end apex on open forms.</translation>
+        <translation>Bei offenen Formen mit einer Endspitze enden.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5432,12 +5432,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Preview of painters.</translation>
+        <translation>Vorschau der Painter.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Select painter set.</translation>
+        <translation>Muster wählen.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5517,7 +5517,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Select Insertion or Enter void space. (Not implemented)</translation>
+        <translation>Einfügung wählen oder Leerraum eingeben. (Nicht implementiert)</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -5542,22 +5542,22 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Malerbreite eingeben. (+0)</translation>
+        <translation>Painter-Breite eingeben. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Schrittweite des Hauptmalers eingeben. (+0)</translation>
+        <translation>Schrittweite des Haupt-Painters eingeben. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Geben Sie die Hauptlackierlänge ein. (+)</translation>
+        <translation>Länge des Haupt-Painters eingeben. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Halten Sie Maler proportional.</translation>
+        <translation>Painter proportional halten.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5577,7 +5577,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Gelöschte übermalte Basisentitäten. (persistent aus)</translation>
+        <translation>Gelöschte übermalte Basisobjekte. (persistent aus)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -6378,7 +6378,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+456"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation>Mausrad / Zwei Finger Swipe:</translation>
+        <translation>Mausrad / Zwei-Finger-Wischen:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6436,7 +6436,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation>Erscheinung</translation>
+        <translation>Erscheinungsbild</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -6631,7 +6631,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>Appearance</source>
-        <translation>Erscheinung</translation>
+        <translation>Erscheinungsbild</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -7091,12 +7091,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="-68"/>
         <source>Multiple entities in selection.</source>
-        <translation>Mehrere Entitäten in der Auswahl.</translation>
+        <translation>Mehrere Objekte in der Auswahl.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation>Schwerpunktmarkierungen kreisen in der Auswahl. Keine Ergebnisse.</translation>
+        <translation>Kreis einer Schwerpunktmarkierung in der Auswahl. Keine Ergebnisse.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -11600,7 +11600,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Block Referenzen &amp;selektieren</translation>
+        <translation>Blockreferenzen &amp;selektieren</translation>
     </message>
 </context>
 <context>
@@ -14667,22 +14667,22 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>Block Referenzen</translation>
+        <translation>Blockreferenzen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation>Block Referenz</translation>
+        <translation>Blockreferenz</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Block Referenzen und Attribute</translation>
+        <translation>Blockreferenzen und Attribute</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Block Referenz und Attribute</translation>
+        <translation>Blockreferenz und Attribute</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15246,7 +15246,7 @@ ist bereits in der Liste.</translation>
         <location line="+72"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform>Radius kleiner als 0.0 nach %n konzentrischen Kreis.</numerusform>
+            <numerusform>Radius kleiner als 0.0 nach %n konzentrischem Kreis.</numerusform>
             <numerusform>Radius kleiner als 0.0 nach %n konzentrischen Kreisen.</numerusform>
         </translation>
     </message>

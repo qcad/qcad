@@ -183,7 +183,7 @@
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation>Кредити</translation>
+        <translation>Благодарности</translation>
     </message>
     <message>
         <location line="+176"/>
@@ -254,7 +254,7 @@
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation>Кредити</translation>
+        <translation>Благодарности</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -287,7 +287,7 @@
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Предпочитания за рисуване</translation>
+        <translation>Предпочитания за чертежа</translation>
     </message>
     <message>
         <location line="+407"/>
@@ -1070,7 +1070,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Изглед на графиките</translation>
+        <translation>Графичен изглед</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1088,12 +1088,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Първата единица не може да бъде подрязана.</translation>
+        <translation>Първият обект не може да бъде подрязан.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Втората единица не може да бъде подрязана.</translation>
+        <translation>Вторият обект не може да бъде подрязан.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
@@ -1161,7 +1161,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+33"/>
         <source>Pixels per drawing unit:</source>
-        <translation>Пиксели за единица чертеж:</translation>
+        <translation>Пиксели на чертожна единица:</translation>
     </message>
     <message>
         <location line="+280"/>
@@ -1248,7 +1248,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation>Марж:</translation>
+        <translation>Поле:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -1258,7 +1258,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Добавяне на допълнително поле за компенсиране на теглото на линията</translation>
+        <translation>Добавяне на допълнително поле за компенсиране на дебелината на линията</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1408,7 +1408,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Референтен номер на блока:</translation>
+        <translation>ID на препратката към блок:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1454,7 +1454,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Списък с референции за експортиране на блокове</translation>
+        <translation>&amp;Експортиране на списък с препратки към блокове</translation>
     </message>
 </context>
 <context>
@@ -1597,12 +1597,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation>Преглед на списъка</translation>
+        <translation>Изглед на списък</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation>Преглед на иконата</translation>
+        <translation>Изглед с икони</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -2134,7 +2134,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Изглед на графиките</translation>
+        <translation>Графичен изглед</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2277,7 +2277,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+22"/>
         <source>Expression</source>
-        <translation>Изразяване</translation>
+        <translation>Израз</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2379,7 +2379,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Convert Drawing Unit</source>
-        <translation>Преобразуване на единицата за рисуване</translation>
+        <translation>Преобразуване на чертожната единица</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -2389,7 +2389,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
-        <translation>Конвертиране на чертеж в друга единица за рисуване</translation>
+        <translation>Преобразуване на чертежа в друга чертожна единица</translation>
     </message>
 </context>
 <context>
@@ -2435,7 +2435,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation>Копие</translation>
+        <translation>&amp;Копиране</translation>
     </message>
 </context>
 <context>
@@ -2456,7 +2456,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation>Започнете:</translation>
+        <translation>Начало:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2579,7 +2579,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>Изберете субект или регион</translation>
+        <translation>Изберете обект или област</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2619,7 +2619,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation>Преместване на субекта</translation>
+        <translation>Преместване на обект</translation>
     </message>
     <message>
         <location line="+127"/>
@@ -2632,7 +2632,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
-        <translation>Изглед на графиките</translation>
+        <translation>Графичен изглед</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2655,7 +2655,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Delete/DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation>Изтриване на</translation>
+        <translation>&amp;Изтриване</translation>
     </message>
 </context>
 <context>
@@ -2771,7 +2771,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation>в единици</translation>
+        <translation>в обекти</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -2822,7 +2822,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>Втори ред</translation>
+        <translation>Втора линия</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2932,7 +2932,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>Няма размерни единици с избрани персонализирани позиции на етикетите.</translation>
+        <translation>Няма избрани размерни обекти с потребителски позиции на етикетите.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
@@ -3049,7 +3049,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation>Инструменти за измерване</translation>
+        <translation>Инструменти за оразмеряване</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -3081,7 +3081,7 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <location line="+50"/>
         <source>Lower tolerance</source>
-        <translation>По-нисък толеранс</translation>
+        <translation>Долен толеранс</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3104,7 +3104,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Скала на размерите</translation>
+        <translation>Мащаб на размерите</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3148,7 +3148,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>пространство</translation>
+        <translation>интервал</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3374,17 +3374,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation>Начертайте</translation>
+        <translation>Чертане</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Начертайте</translation>
+        <translation>&amp;Чертане</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation>Инструменти за рисуване</translation>
+        <translation>Инструменти за чертане</translation>
     </message>
 </context>
 <context>
@@ -3410,7 +3410,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Топ</translation>
+        <translation>Горе</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3440,7 +3440,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Дъно</translation>
+        <translation>Долу</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3484,7 +3484,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>Начертайте</translation>
+        <translation>&amp;Чертане</translation>
     </message>
 </context>
 <context>
@@ -3542,7 +3542,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Измиване</translation>
+        <translation>Обхват</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -3557,7 +3557,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>Рисуване на ленти за FMS (ребра)</translation>
+        <translation>Чертане на ленти за FMS (ребра)</translation>
     </message>
 </context>
 <context>
@@ -4008,7 +4008,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation>Невалидна посока на рисуване.</translation>
+        <translation>Невалидна посока на чертане.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4093,7 +4093,7 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Не е правилно линейно тегло, игнорирано. Текстов ред: %1%2 Тегло: %3</translation>
+        <translation>Невалидна дебелина на линията, игнорирана. Текстов ред: %1%2 Дебелина: %3</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4128,7 +4128,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Не е правилно линейно тегло. Текстов ред: %1%2 Тегло: %3</translation>
+        <translation>Невалидна дебелина на линията. Текстов ред: %1%2 Дебелина: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4219,7 +4219,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Премахване:</translation>
+        <translation>Обхват:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4252,7 +4252,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Предпочитания за рисуване</translation>
+        <translation>&amp;Предпочитания за чертежа</translation>
     </message>
 </context>
 <context>
@@ -4268,7 +4268,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>Дублиране на</translation>
+        <translation>&amp;Дублиране</translation>
     </message>
 </context>
 <context>
@@ -4323,12 +4323,12 @@ is already in the list.</source>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Субектът не е в работния набор.</translation>
+        <translation>Обектът не е в работния набор.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>Субектът е в заключен слой.</translation>
+        <translation>Обектът е в заключен слой.</translation>
     </message>
     <message>
         <location line="+254"/>
@@ -4338,17 +4338,17 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Субектът не е препратка към блок.</translation>
+        <translation>Обектът не е препратка към блок.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation>Субектът не е линия или дъга.</translation>
+        <translation>Обектът не е линия или дъга.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Субектът не е линия, дъга или полилиния.</translation>
+        <translation>Обектът не е линия, дъга или полилиния.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4358,72 +4358,72 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation>Субектът не е дъга.</translation>
+        <translation>Обектът не е дъга.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation>Субектът не е дъга или кръг.</translation>
+        <translation>Обектът не е дъга или окръжност.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation>Субектът не е линия, дъга или окръжност.</translation>
+        <translation>Обектът не е линия, дъга или окръжност.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Субектът не е линия, дъга, сплайн, елипса, дъга или полилиния.</translation>
+        <translation>Обектът не е линия, дъга, сплайн, елиптична дъга или полилиния.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation>Субектът не е дъга, кръг или елипса.</translation>
+        <translation>Обектът не е дъга, окръжност или елипса.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation>Субектът не е линия, дъга, кръг или елипса.</translation>
+        <translation>Обектът не е линия, дъга, окръжност или елипса.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Субектът не е линия, дъга, кръг, елипса или полилиния.</translation>
+        <translation>Обектът не е линия, дъга, окръжност, елипса или полилиния.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation>Субектът не е линия, дъга, окръжност, елипса или сплайн.</translation>
+        <translation>Обектът не е линия, дъга, окръжност, елипса или сплайн.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Субектът не е линия, дъга, окръжност, сплайн или полилиния.</translation>
+        <translation>Обектът не е линия, дъга, окръжност, сплайн или полилиния.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Субектът не е линия, дъга, кръг, елипса, сплайн или полилиния.</translation>
+        <translation>Обектът не е линия, дъга, окръжност, елипса, сплайн или полилиния.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Субектът не е окръжност, елипса, сплайн или полилиния.</translation>
+        <translation>Обектът не е окръжност, елипса, сплайн или полилиния.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Субектът не е полилиния.</translation>
+        <translation>Обектът не е полилиния.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation>Субектът не е затворена полилиния.</translation>
+        <translation>Обектът не е затворена полилиния.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Субектът не е сплайн с подходящи точки.</translation>
+        <translation>Обектът не е сплайн с точки на напасване.</translation>
     </message>
 </context>
 <context>
@@ -4496,7 +4496,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>Изберете референтен блок</translation>
+        <translation>Изберете препратка към блок</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
@@ -4798,7 +4798,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Бягство</translation>
+        <translation>&amp;Escape</translation>
     </message>
 </context>
 <context>
@@ -4861,7 +4861,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation>Рисуване на цветове</translation>
+        <translation>Чертане на &amp;цветове</translation>
     </message>
 </context>
 <context>
@@ -4869,7 +4869,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>Чертежни шрифтове</translation>
+        <translation>Чертане на &amp;шрифтове</translation>
     </message>
 </context>
 <context>
@@ -4918,7 +4918,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>Съединение на опашка</translation>
+        <translation>&amp;Сглобка „лястовича опашка“</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5004,7 +5004,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Exporter</source>
-        <translation>Регистрирайте износителя на файлове</translation>
+        <translation>&amp;Регистриране на файлов експортер</translation>
     </message>
 </context>
 <context>
@@ -5027,12 +5027,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation>Регистриран е файлов вносител за тип файл &quot;.example&quot;. Използвайте Файл &gt; Отвори, за да видите филтъра в действие.</translation>
+        <translation>Регистриран е файлов импортер за тип файл &quot;.example&quot;. Използвайте Файл &gt; Отваряне, за да видите филтъра в действие.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Importer</source>
-        <translation>Регистрирайте файл вносител</translation>
+        <translation>&amp;Регистриране на файлов импортер</translation>
     </message>
 </context>
 <context>
@@ -5083,7 +5083,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation>Рисуване на текст</translation>
+        <translation>Чертане на текст</translation>
     </message>
 </context>
 <context>
@@ -5185,12 +5185,12 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Експлодирайте</translation>
+        <translation>Разбиване</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Експлодирайте</translation>
+        <translation>&amp;Разбиване</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
@@ -5321,7 +5321,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation>Десетична запетая:</translation>
+        <translation>Десетичен разделител:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5704,7 +5704,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Изглед на графиките</translation>
+        <translation>Графичен изглед</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -5758,7 +5758,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Четири: Равнопоставеност</translation>
+        <translation>Четири: Равни</translation>
     </message>
 </context>
 <context>
@@ -5807,12 +5807,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation>Двойно щракване върху референтния блок отваря блока</translation>
+        <translation>Двойно щракване върху препратка към блок отваря блока</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation>Редактиране на референтния блок на място</translation>
+        <translation>Редактиране на препратката към блок на място</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5822,7 +5822,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation>Толерантност:</translation>
+        <translation>Толеранс:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5862,12 +5862,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-        <translation>Подчертаване (и повдигане) на изображения в обхвата</translation>
+        <translation>Открояване (и повдигане) на изображения в обхвата</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Подчертаване (и повдигане) на щриховки и запълвания в обхвата</translation>
+        <translation>Открояване (и повдигане) на щриховки и плътни запълвания в обхвата</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -5877,7 +5877,7 @@ is already in the list.</source>
     <message>
         <location line="-109"/>
         <source>Highlight entity within range</source>
-        <translation>Подчертаване на обект в обхвата</translation>
+        <translation>Открояване на обект в обхвата</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
@@ -5957,7 +5957,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation>Марж (px):</translation>
+        <translation>Поле (px):</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -5992,22 +5992,22 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Тегло на линията по подразбиране:</translation>
+        <translation>Дебелина на линията по подразбиране:</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Мащабиране на шаблоните на линейни типове според теглото на линията</translation>
+        <translation>Мащабиране на шаблоните на типовете линии според дебелината на линията</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Скала на модела за линейно тегло 0,00 мм:</translation>
+        <translation>Мащаб на шаблона за дебелина на линията 0,00 мм:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation>Прилагане на линейно тегло към точките</translation>
+        <translation>Прилагане на дебелината на линията към точките</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6047,7 +6047,7 @@ is already in the list.</source>
     <message>
         <location line="+98"/>
         <source>Number of preview entities:</source>
-        <translation>Брой единици за преглед:</translation>
+        <translation>Брой обекти за предварителен преглед:</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -6067,7 +6067,7 @@ is already in the list.</source>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Време за рендиране на люка:</translation>
+        <translation>Време за изчакване при изчертаване на щриховка:</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6147,12 +6147,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+35"/>
         <source>Graphics View</source>
-        <translation>Изглед на графиките</translation>
+        <translation>Графичен изглед</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation>Предистория:</translation>
+        <translation>Фон:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6182,7 +6182,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation>Произход:</translation>
+        <translation>Начало:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6312,12 +6312,12 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Инструменти Snap</translation>
+        <translation>Инструменти за прихващане</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Етикет Snap:</translation>
+        <translation>Етикет за прихващане:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6332,7 +6332,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation>Инструменти за рисуване</translation>
+        <translation>Инструменти за чертане</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6365,7 +6365,7 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Шрифт на етикета Snap:</translation>
+        <translation>Шрифт на етикета за прихващане:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6431,7 +6431,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Изглед на графиките</translation>
+        <translation>Графичен изглед</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6449,7 +6449,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Изглед на графиките</translation>
+        <translation>Графичен изглед</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6473,7 +6473,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Обща информация</translation>
+        <translation>Общи</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -6495,7 +6495,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>Щрихоране</translation>
+        <translation>&amp;Щриховка</translation>
     </message>
 </context>
 <context>
@@ -6503,7 +6503,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Щрихоране</translation>
+        <translation>Щриховка</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6513,7 +6513,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Твърдо запълване</translation>
+        <translation>Плътно запълване</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6626,7 +6626,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Graphics View</source>
-        <translation>Изглед на графиките</translation>
+        <translation>Графичен изглед</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6704,7 +6704,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>Не са намерени филтри за внос. Прекъсвам...</translation>
+        <translation>Не са намерени филтри за импортиране. Прекъсване...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6897,7 +6897,7 @@ is already in the list.</source>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation>Кръгова зона:</translation>
+        <translation>Площ на кръга:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6960,7 +6960,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>Област на дъгата:</translation>
+        <translation>Площ на дъгата:</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -7000,7 +7000,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation>Субект</translation>
+        <translation>Обект</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -7082,7 +7082,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation>Затворена зона:</translation>
+        <translation>Оградена площ:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7097,7 +7097,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Защрихована зона:</translation>
+        <translation>Защрихована площ:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7155,7 +7155,7 @@ is already in the list.</source>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Необработена форма от цикъл на люка.</translation>
+        <translation>Необработена форма от контур на щриховка.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7305,12 +7305,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation>Посочете първия субект</translation>
+        <translation>Посочете първия обект</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation>Посочете втория субект</translation>
+        <translation>Посочете втория обект</translation>
     </message>
     <message>
         <location line="+95"/>
@@ -7320,7 +7320,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation>Разстояние от субект до субект</translation>
+        <translation>Разстояние от &amp;обект до обект</translation>
     </message>
 </context>
 <context>
@@ -7328,7 +7328,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation>Посочете субекта</translation>
+        <translation>Посочете обект</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7343,7 +7343,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Разстояние от единица до точка</translation>
+        <translation>Разстояние от &amp;обект до точка</translation>
     </message>
 </context>
 <context>
@@ -7681,7 +7681,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation>Десетична запетая:</translation>
+        <translation>Десетичен разделител:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -7729,7 +7729,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
-        <translation>Обща информация</translation>
+        <translation>Общи</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7806,7 +7806,7 @@ is already in the list.</source>
     <message>
         <location line="+110"/>
         <source>Scale X:</source>
-        <translation>Скала X:</translation>
+        <translation>Мащаб X:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -8030,12 +8030,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation>Топ</translation>
+        <translation>Отгоре</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation>Дъно</translation>
+        <translation>Отдолу</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8131,7 +8131,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>Прекъсване на времето за бърз достъп:</translation>
+        <translation>Време за изчакване на клавишна комбинация:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -8154,7 +8154,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation>Обща информация</translation>
+        <translation>Общи</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8213,7 +8213,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Тежест на линията по подразбиране за новите слоеве:</translation>
+        <translation>Дебелина на линията по подразбиране за новите слоеве:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -8223,7 +8223,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Тегло на линията по подразбиране за слой 0:</translation>
+        <translation>Дебелина на линията по подразбиране за слой 0:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
@@ -8296,7 +8296,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Обектите в блоковете на слой 0 придобиват атрибутите и видимостта на референтния блок.</translation>
+        <translation>Обектите в блоковете на слой 0 придобиват атрибутите и видимостта на препратката към блока.</translation>
     </message>
 </context>
 <context>
@@ -8345,7 +8345,7 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Линейно тегло:</translation>
+        <translation>Дебелина на линията:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -8441,12 +8441,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Сума:</translation>
+        <translation>Стойност:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Сума за удължаване или скъсяване (отрицателна)</translation>
+        <translation>Стойност за удължаване или скъсяване (отрицателна)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -8469,7 +8469,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Същият тип субект като оригиналния</translation>
+        <translation>Същият тип обект като оригиналния</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8613,12 +8613,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation>Първи ред</translation>
+        <translation>Първа линия</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation>Втори ред</translation>
+        <translation>Втора линия</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -8666,12 +8666,12 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Finger Width:</source>
-        <translation>Ширина на пръстите:</translation>
+        <translation>Ширина на шипа:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
-        <translation>Съотношение пръст/слот:</translation>
+        <translation>Съотношение шип/гнездо:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8681,27 +8681,27 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation>Първо пръст</translation>
+        <translation>Първо шип</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation>Първи слот</translation>
+        <translation>Първо гнездо</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation>Ченгели</translation>
+        <translation>Чепове</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Кутия съвместно от 2 точки</translation>
+        <translation>&amp;Шипова сглобка от 2 точки</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Пръсти, прорези и тенекии на шарнирната кутия</translation>
+        <translation>Чертане на шипове, гнезда и чепове на шипова сглобка</translation>
     </message>
 </context>
 <context>
@@ -8719,7 +8719,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Брой на ребрата:</translation>
+        <translation>Брой лястовичи опашки:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8739,7 +8739,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>Щифт от 2 точки</translation>
+        <translation>&amp;Сглобка „лястовича опашка“ от 2 точки</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8752,7 +8752,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation>Натиснете , за да започнете да рисувате</translation>
+        <translation>Натиснете, за да започнете да чертаете</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9082,7 +9082,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Обща информация</translation>
+        <translation>Общи</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
@@ -9201,7 +9201,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>Огледало</translation>
+        <translation>&amp;Огледално отражение</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9214,7 +9214,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Опции за огледало</translation>
+        <translation>Опции за огледално отражение</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9306,17 +9306,17 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation>Различни инструменти за рисуване</translation>
+        <translation>Различни инструменти за чертане</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Различни рисунки</translation>
+        <translation>Разни – чертане</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Начертайте</translation>
+        <translation>&amp;Чертане</translation>
     </message>
 </context>
 <context>
@@ -9439,17 +9439,17 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation>Изберете първия субект</translation>
+        <translation>Изберете първия обект</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation>Избор на втори субект</translation>
+        <translation>Изберете втория обект</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Зададена точка</translation>
+        <translation>Задаване на точка</translation>
     </message>
 </context>
 <context>
@@ -9589,7 +9589,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation>Не е намерен подходящ вносител. Моля, проверете формата и разширението на файла.</translation>
+        <translation>Не е намерен подходящ импортер. Моля, проверете формата и разширението на файла.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9727,7 +9727,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>Не са намерени филтри за внос. Прекъсвам...</translation>
+        <translation>Не са намерени филтри за импортиране. Прекъсване...</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9742,7 +9742,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>Отворете</translation>
+        <translation>&amp;Отваряне</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9825,17 +9825,17 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation>Нагоре:</translation>
+        <translation>Горе:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Правилно:</translation>
+        <translation>Вдясно:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation>Дъно:</translation>
+        <translation>Долу:</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -9855,7 +9855,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>Офсет X:</translation>
+        <translation>Отместване X:</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -9888,7 +9888,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>Панорамно увеличение</translation>
+        <translation>&amp;Панорамиране / мащабиране</translation>
     </message>
 </context>
 <context>
@@ -10050,7 +10050,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Обща информация</translation>
+        <translation>Общи</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
@@ -10490,7 +10490,7 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Автоцентър</translation>
+        <translation>Автоматично центриране</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10558,7 +10558,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>&amp;Projection</source>
-        <translation>Прожектиране</translation>
+        <translation>&amp;Проекция</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -10641,7 +10641,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>Dependent Entities</source>
-        <translation>Зависими субекти</translation>
+        <translation>Зависими обекти</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -10676,7 +10676,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>Покажи всички имоти</translation>
+        <translation>Показване на всички свойства</translation>
     </message>
     <message>
         <location line="+162"/>
@@ -10716,7 +10716,7 @@ is already in the list.</source>
     <message>
         <location line="+422"/>
         <source>*VARIES*</source>
-        <translation>*РАЗНООБРАЗИЕ*</translation>
+        <translation>*РАЗЛИЧНИ*</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10733,7 +10733,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation>Подбор:</translation>
+        <translation>Избор:</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -10774,7 +10774,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>Напуснете</translation>
+        <translation>&amp;Изход</translation>
     </message>
 </context>
 <context>
@@ -10810,12 +10810,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Изчистен списък</translation>
+        <translation>&amp;Изчистване на списъка</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Отворени скорошни</translation>
+        <translation>Отваряне на &amp;последни</translation>
     </message>
 </context>
 <context>
@@ -10823,7 +10823,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation>Redo</translation>
+        <translation>&amp;Повторение</translation>
     </message>
 </context>
 <context>
@@ -10884,7 +10884,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation>Нулиране на</translation>
+        <translation>Нулиране</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -10959,7 +10959,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>Обратен</translation>
+        <translation>&amp;Обръщане</translation>
     </message>
 </context>
 <context>
@@ -11169,12 +11169,12 @@ is already in the list.</source>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Първата единица не може да бъде подрязана.</translation>
+        <translation>Първият обект не може да бъде подрязан.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Втората единица не може да бъде подрязана.</translation>
+        <translation>Вторият обект не може да бъде подрязан.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -11189,7 +11189,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>Кръгла</translation>
+        <translation>&amp;Закръгляване</translation>
     </message>
 </context>
 <context>
@@ -11285,7 +11285,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Спестяване...</translation>
+        <translation>Запазване...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11353,7 +11353,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Спестяване на</translation>
+        <translation>Запазване</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11482,7 +11482,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>Скала</translation>
+        <translation>&amp;Мащабиране</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
@@ -11641,7 +11641,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>С дръжка</translation>
+        <translation>По идентификатор</translation>
     </message>
 </context>
 <context>
@@ -11649,7 +11649,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Избор по дръжка</translation>
+        <translation>Избор по идентификатор</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11662,7 +11662,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation>Изберете единица на контура</translation>
+        <translation>Изберете обект от контура</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -11692,7 +11692,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation>Толерантност:</translation>
+        <translation>Толеранс:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11763,12 +11763,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation>%1 субекта са добавени към селекцията.</translation>
+        <translation>%1 обекта са добавени към селекцията.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation>%1 субекти са премахнати от селекцията.</translation>
+        <translation>%1 обекта са премахнати от селекцията.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
@@ -11859,7 +11859,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Избор на кръст</translation>
+        <translation>Пресичащ избор</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -11877,7 +11877,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation>Няма избрани субекти.</translation>
+        <translation>Няма избрани обекти.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -11949,7 +11949,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation>Инструменти за формиране</translation>
+        <translation>Инструменти за форми</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -11964,7 +11964,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Fill</source>
-        <translation>Напълнете</translation>
+        <translation>Запълване</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
@@ -12237,12 +12237,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Инструменти Snap</translation>
+        <translation>Инструменти за прихващане</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>Snap</translation>
+        <translation>&amp;Прихващане</translation>
     </message>
 </context>
 <context>
@@ -12250,7 +12250,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Прихващане</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12286,7 +12286,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
-        <translation>Координат X</translation>
+        <translation>Координата X</translation>
     </message>
     <message>
         <location line="-19"/>
@@ -12377,7 +12377,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Разстояние на заснемане:</translation>
+        <translation>Разстояние на прихващане:</translation>
     </message>
 </context>
 <context>
@@ -12395,7 +12395,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Разстояние на заснемане:</translation>
+        <translation>Разстояние на прихващане:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12410,7 +12410,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation>Фракция</translation>
+        <translation>Дроб</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
@@ -12436,7 +12436,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Безплатно</translation>
+        <translation>&amp;Свободно</translation>
     </message>
 </context>
 <context>
@@ -12465,7 +12465,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Прихващане</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12475,12 +12475,12 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation>Първа единица</translation>
+        <translation>Първи обект</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation>Второ лице</translation>
+        <translation>Втори обект</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
@@ -12525,7 +12525,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation>Справка</translation>
+        <translation>&amp;Референтна точка</translation>
     </message>
 </context>
 <context>
@@ -12565,7 +12565,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>Инструменти за шлиц</translation>
+        <translation>Инструменти за сплайн</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -12598,12 +12598,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>Изберете степен на шлица</translation>
+        <translation>Изберете степен на сплайна</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation>Отметка за затворен шлиц</translation>
+        <translation>Отметка за затворен сплайн</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12713,12 +12713,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation>Няма субекти в дадения диапазон</translation>
+        <translation>Няма обекти в дадената област</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>Стреч</translation>
+        <translation>&amp;Разтягане</translation>
     </message>
 </context>
 <context>
@@ -12792,7 +12792,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation>Внос на SVG...</translation>
+        <translation>&amp;Импортиране на SVG...</translation>
     </message>
 </context>
 <context>
@@ -12818,7 +12818,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation>Бар с раздели</translation>
+        <translation>Лента с раздели</translation>
     </message>
 </context>
 <context>
@@ -12853,7 +12853,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation>Рисуване на текст</translation>
+        <translation>Чертане на текст</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
@@ -12878,7 +12878,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>Проверете всички</translation>
+        <translation>Отметнете всички</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -12960,7 +12960,7 @@ is already in the list.</source>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation>Избор на субект</translation>
+        <translation>Избор на обект</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12971,12 +12971,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation>Текст покрай субекта</translation>
+        <translation>&amp;Текст покрай обект</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text along an entity</source>
-        <translation>Рисуване на текст по протежение на обект</translation>
+        <translation>Чертане на текст по протежение на обект</translation>
     </message>
 </context>
 <context>
@@ -12989,12 +12989,12 @@ is already in the list.</source>
     <message>
         <location line="+275"/>
         <source>&amp;Undo</source>
-        <translation>Отмяна на</translation>
+        <translation>&amp;Отмяна</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation>Redo</translation>
+        <translation>&amp;Повторение</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13029,7 +13029,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>Subscript</translation>
+        <translation>&amp;Долен индекс</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13054,7 +13054,7 @@ is already in the list.</source>
     <message>
         <location line="+140"/>
         <source>Degree</source>
-        <translation>Степен</translation>
+        <translation>Градус</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13114,17 +13114,17 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>Квадрат</translation>
+        <translation>На квадрат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Кубчета</translation>
+        <translation>На куб</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Пространство без прекъсване</translation>
+        <translation>Непрекъсваем интервал</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13271,7 +13271,7 @@ is already in the list.</source>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation>Топ център</translation>
+        <translation>Горе в центъра</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13329,7 +13329,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation>Начертайте</translation>
+        <translation>Чертане</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13350,7 +13350,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
-        <translation>Обща информация</translation>
+        <translation>Общи</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13696,7 +13696,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>Изберете ограничаващ субект</translation>
+        <translation>Изберете ограничаващ обект</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13711,22 +13711,22 @@ is already in the list.</source>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Първата единица не може да бъде подрязана.</translation>
+        <translation>Първият обект не може да бъде подрязан.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Субектът не може да бъде подрязан.</translation>
+        <translation>Обектът не може да бъде подрязан.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Втората единица не може да бъде подрязана.</translation>
+        <translation>Вторият обект не може да бъде подрязан.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>Трим</translation>
+        <translation>&amp;Подрязване</translation>
     </message>
 </context>
 <context>
@@ -13734,7 +13734,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Трим и двете</translation>
+        <translation>Подрязване на &amp;двата</translation>
     </message>
 </context>
 <context>
@@ -13758,7 +13758,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>Второ: Вертикално</translation>
+        <translation>Две: Вертикално</translation>
     </message>
 </context>
 <context>
@@ -13809,7 +13809,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation>Обща информация</translation>
+        <translation>Общи</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13822,7 +13822,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation>Отмяна на</translation>
+        <translation>&amp;Отмяна</translation>
     </message>
 </context>
 <context>
@@ -13830,7 +13830,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>Единица за рисуване:</translation>
+        <translation>Чертожна единица:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13851,12 +13851,12 @@ is already in the list.</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>Единица за рисуване</translation>
+        <translation>Чертожна единица</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Обща информация</translation>
+        <translation>Общи</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -13987,17 +13987,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Преглед на инструменти</translation>
+        <translation>Инструменти за изглед</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>View</source>
-        <translation>Вижте</translation>
+        <translation>Изглед</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>Вижте</translation>
+        <translation>&amp;Изглед</translation>
     </message>
 </context>
 <context>
@@ -14115,7 +14115,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Degrees</source>
-        <translation>Степени</translation>
+        <translation>Градуси</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14135,7 +14135,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Almost Equal</source>
-        <translation>Почти равностойни</translation>
+        <translation>Приблизително равно</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14180,7 +14180,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Not Equal</source>
-        <translation>Не е равностойно</translation>
+        <translation>Не е равно</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14220,12 +14220,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Property Line</source>
-        <translation>Линия на собственост</translation>
+        <translation>Имотна граница</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Подпис 2</translation>
+        <translation>Долен индекс 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14240,12 +14240,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>Квадрат</translation>
+        <translation>На квадрат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Кубчета</translation>
+        <translation>На куб</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14291,7 +14291,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation>Топ</translation>
+        <translation>Горе</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14301,7 +14301,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Дъно</translation>
+        <translation>Долу</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14311,12 +14311,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation>Десетична система</translation>
+        <translation>Десетичен</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation>Инженеринг</translation>
+        <translation>Инженерен</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14402,7 +14402,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradians</translation>
+        <translation>Гради</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14523,7 +14523,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>Увеличаване на мащаба</translation>
+        <translation>&amp;Намаляване на мащаба</translation>
     </message>
 </context>
 <context>
@@ -14577,7 +14577,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation>Неизвестни предмети</translation>
+        <translation>Неизвестни обекти</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14627,12 +14627,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation>Прегледи</translation>
+        <translation>Изгледи</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Вижте</translation>
+        <translation>Изглед</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14647,12 +14647,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Entities</source>
-        <translation>Субекти</translation>
+        <translation>Обекти</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entity</source>
-        <translation>Субект</translation>
+        <translation>Обект</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14672,7 +14672,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation>Референтен блок</translation>
+        <translation>Препратка към блок</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14838,7 +14838,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Щрихоране</translation>
+        <translation>Щриховка</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14868,12 +14868,12 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation>Толерантност</translation>
+        <translation>Толеранс</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation>Редове</translation>
+        <translation>Линии</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14923,7 +14923,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Твърди вещества</translation>
+        <translation>Плътни фигури</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14989,12 +14989,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Портове за изглед</translation>
+        <translation>Изгледни прозорци</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Viewport</translation>
+        <translation>Изгледен прозорец</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15020,13 +15020,13 @@ is already in the list.</source>
         <location line="+2"/>
         <location line="+9"/>
         <source>Unknown Entities</source>
-        <translation>Неизвестни субекти</translation>
+        <translation>Неизвестни обекти</translation>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation>Неизвестен субект</translation>
+        <translation>Неизвестен обект</translation>
     </message>
     <message>
         <location line="+108"/>
@@ -15069,7 +15069,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation>Преден план 1</translation>
+        <translation>Изглед 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -15130,17 +15130,17 @@ is already in the list.</source>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation>Преден план 2</translation>
+        <translation>Изглед 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation>Преден план 3</translation>
+        <translation>Изглед 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation>Преден план 4</translation>
+        <translation>Изглед 4</translation>
     </message>
 </context>
 <context>
@@ -15157,14 +15157,14 @@ is already in the list.</source>
         <location filename="../scripts/simple_modify.js" line="+442"/>
         <location line="+410"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Първата единица не може да бъде подрязана.</translation>
+        <translation>Първият обект не може да бъде подрязан.</translation>
     </message>
     <message>
         <location line="-429"/>
         <location line="+22"/>
         <location line="+174"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Субектът не може да бъде подрязан.</translation>
+        <translation>Обектът не може да бъде подрязан.</translation>
     </message>
     <message>
         <location line="-477"/>
@@ -15192,7 +15192,7 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+411"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Втората единица не може да бъде подрязана.</translation>
+        <translation>Вторият обект не може да бъде подрязан.</translation>
     </message>
     <message>
         <location line="-346"/>

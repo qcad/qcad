@@ -1261,7 +1261,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>增加额外的边距以补偿线重</translation>
+        <translation>增加额外的边距以补偿线宽</translation>
     </message>
 </context>
 <context>
@@ -1406,7 +1406,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>区块参考ID：</translation>
+        <translation>块引用 ID：</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1416,7 +1416,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation>列表块属性</translation>
+        <translation>列出块属性(&amp;L)</translation>
     </message>
 </context>
 <context>
@@ -1442,7 +1442,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation>导出区块参考列表（CSV）</translation>
+        <translation>导出块引用列表（CSV）</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1452,7 +1452,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>输出区块参考列表(&amp;E)</translation>
+        <translation>导出块引用列表(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -1460,7 +1460,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>选择线、弧、圆、椭圆、花线或多线段</translation>
+        <translation>选择线、弧、圆、椭圆、样条曲线或多段线的线段</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1506,7 +1506,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>选择直线、弧线、圆、椭圆、花线或折线来分解</translation>
+        <translation>选择直线、弧线、圆、椭圆、样条曲线或折线来分割</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1595,7 +1595,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation>列表查看</translation>
+        <translation>列表视图</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1631,7 +1631,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation>列表查看</translation>
+        <translation>列表视图</translation>
     </message>
 </context>
 <context>
@@ -2155,7 +2155,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>打印中</translation>
+        <translation>打印</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2260,7 +2260,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>交易失败。请检查区块递归和锁定或不可见的层或区块。</translation>
+        <translation>事务失败。请检查块递归以及锁定或不可见的图层或块。</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2331,7 +2331,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>专注于命令行</translation>
+        <translation>聚焦到命令行(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -2528,7 +2528,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+42"/>
         <source>Y:</source>
-        <translation>Y 方向比例：</translation>
+        <translation>Y：</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -2577,7 +2577,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>选择实体或地区</translation>
+        <translation>选择实体或区域</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2587,7 +2587,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation>第二个角落</translation>
+        <translation>第二个角点</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2622,7 +2622,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>编辑区块&quot;%1&quot;&lt;br&gt;完成后选择&lt;i&gt;区块&gt;返回主图&lt;/i&gt;。</translation>
+        <translation>编辑块&quot;%1&quot;&lt;br&gt;完成后选择&lt;i&gt;块 &gt; 返回主图&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -2674,7 +2674,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>反向选择块引用(&amp;D)</translation>
+        <translation>取消选择块引用(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -2749,7 +2749,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation>变成线条、实体和文字</translation>
+        <translation>变成直线、二维填充和文字</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2759,12 +2759,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation>成行</translation>
+        <translation>变成直线</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation>块状物</translation>
+        <translation>块</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3088,7 +3088,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>字体为绘图的显示比例</translation>
+        <translation>绘图比例</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3101,7 +3101,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>尺寸表</translation>
+        <translation>标注比例</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3145,7 +3145,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>空间</translation>
+        <translation>空格</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3195,7 +3195,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation>延长线延长：</translation>
+        <translation>尺寸界线延伸：</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -3205,7 +3205,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation>延长线偏移：</translation>
+        <translation>尺寸界线偏移：</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -3255,7 +3255,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation>小数点分离器：</translation>
+        <translation>小数分隔符：</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -3281,7 +3281,7 @@ Do you wish to recover it?</source>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation>显示尾部零点</translation>
+        <translation>显示尾随零</translation>
     </message>
     <message>
         <location line="-50"/>
@@ -3335,7 +3335,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>选择直线、弧线、圆、椭圆、花线或折线</translation>
+        <translation>选择直线、弧线、圆、椭圆、样条曲线或折线</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3363,7 +3363,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation>草案模式</translation>
+        <translation>草稿模式(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -3389,12 +3389,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
-        <translation>第一个角落</translation>
+        <translation>第一个角点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation>第二个角落</translation>
+        <translation>第二个角点</translation>
     </message>
 </context>
 <context>
@@ -3519,12 +3519,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>关闭多线条</translation>
+        <translation>闭合多段线</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Undo Previous Segment</source>
-        <translation>恢复前一段</translation>
+        <translation>撤销上一段</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -3539,7 +3539,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>扫描</translation>
+        <translation>扫掠角</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -3564,7 +3564,7 @@ is already in the list.</source>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation>指挥结束。</translation>
+        <translation>命令结束。</translation>
     </message>
     <message>
         <location line="-1293"/>
@@ -3584,7 +3584,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>铸造CSV</translation>
+        <translation>转换 CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3619,7 +3619,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation>设置新的四舍五入半径失败，忽略不计。文本行：%1</translation>
+        <translation>设置新的圆角半径失败，忽略不计。文本行：%1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3704,7 +3704,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation>场地数量少。</translation>
+        <translation>字段数过少。</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3733,7 +3733,7 @@ is already in the list.</source>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation>奇数场数。</translation>
+        <translation>字段数为奇数。</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -4040,12 +4040,12 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>铸造的条目：%1在%2的文本行中</translation>
+        <translation>已转换条目：%2 个文本行中的 %1 个</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>没有投下任何东西。</translation>
+        <translation>未转换任何内容。</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -4070,17 +4070,17 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>不是一个正确的线重，忽略不计。文本行: %1%2 重量: %3</translation>
+        <translation>不是一个正确的线宽，忽略不计。文本行: %1%2 线宽: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>不是一个正确的Linetype，被忽略。文本行: %1%2 类型：%3</translation>
+        <translation>不是一个正确的线型，被忽略。文本行: %1%2 类型：%3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>不是正确的Linetype比例，忽略不计。文本行: %1%2 比例: %3</translation>
+        <translation>不是正确的线型比例，忽略不计。文本行: %1%2 比例: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4105,12 +4105,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>不是一个正确的线重。文本行: %1%2 重量: %3</translation>
+        <translation>不是一个正确的线宽。文本行: %1%2 线宽: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation>不是正确的Linetype。文本行: %1%2 类型：%3</translation>
+        <translation>不是正确的线型。文本行: %1%2 类型：%3</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4135,7 +4135,7 @@ is already in the list.</source>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation>从CSV中提取</translation>
+        <translation>从 CSV 绘制</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4216,7 +4216,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>关闭多线条</translation>
+        <translation>闭合多段线</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -4226,12 +4226,12 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>清扫：</translation>
+        <translation>扫掠角：</translation>
     </message>
     <message>
         <location line="-71"/>
         <source>Undo Previous Segment</source>
-        <translation>恢复前一段</translation>
+        <translation>撤销上一段</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -4258,13 +4258,13 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform>%n 个实体重复</numerusform>
+            <numerusform>已创建 %n 个实体的副本</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>重复(&amp;D)</translation>
+        <translation>创建副本(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -4334,7 +4334,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>实体不是一个块参考。</translation>
+        <translation>实体不是块引用。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4394,12 +4394,12 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>实体不是直线、弧线、圆、花线或多线。</translation>
+        <translation>实体不是直线、弧线、圆、样条曲线或多段线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>实体不是直线、弧线、圆、椭圆、花线或多线。</translation>
+        <translation>实体不是直线、弧线、圆、椭圆、样条曲线或多段线。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4904,12 +4904,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation>第一个角落</translation>
+        <translation>第一个角点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation>第二个角落</translation>
+        <translation>第二个角点</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
@@ -4977,7 +4977,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation>运行过程</translation>
+        <translation>运行进程(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -5109,13 +5109,13 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform>交易影响了 %n 个对象。</numerusform>
+            <numerusform>事务影响了 %n 个对象。</numerusform>
         </translation>
     </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>交易监听器</translation>
+        <translation>事务监听器(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -5180,7 +5180,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>爆炸</translation>
+        <translation>分解</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -5190,12 +5190,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
         <source>Spline approximation tolerance:</source>
-        <translation>样条近似的容忍度：</translation>
+        <translation>样条近似公差：</translation>
     </message>
     <message>
         <location line="-118"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>用线段将花样滑移到多段线上</translation>
+        <translation>将样条曲线分解为由线段组成的多段线</translation>
     </message>
     <message>
         <location line="+111"/>
@@ -5210,12 +5210,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>用两个半圆将圆爆发成多段线</translation>
+        <translation>将圆分解为由两个半圆组成的多段线</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>将文字的字形扩展为多段线</translation>
+        <translation>将文字字形分解为多段线</translation>
     </message>
     <message>
         <location line="-80"/>
@@ -5477,7 +5477,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>鱿鱼</translation>
+        <translation>方波</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5722,7 +5722,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>绘制胶合板</translation>
+        <translation>绘制粘贴边</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
@@ -5802,12 +5802,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation>双击区块参考，打开区块</translation>
+        <translation>双击块引用打开块</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation>原地编辑区块参考</translation>
+        <translation>原地编辑块引用</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5817,7 +5817,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation>容忍：</translation>
+        <translation>公差：</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5827,7 +5827,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation>块状物</translation>
+        <translation>块</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5957,7 +5957,7 @@ is already in the list.</source>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation>负载时自动变焦</translation>
+        <translation>加载时自动缩放</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5982,27 +5982,27 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>线型和线重</translation>
+        <translation>线型和线宽</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>默认线重：</translation>
+        <translation>默认线宽：</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>按线重比例划分线型图案</translation>
+        <translation>按线宽缩放线型图案</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>线重0.00mm的图案刻度：</translation>
+        <translation>线宽 0.00mm 的图案比例：</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation>将线权重应用于点</translation>
+        <translation>将线宽应用于点</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6073,12 +6073,12 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Screen-based lineweight scale factor:</source>
-        <translation>基于屏幕的线重比例系数：</translation>
+        <translation>基于屏幕的线宽比例系数：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
-        <translation>显示基于屏幕的线重时应用于线重的系数（例如 2 表示基于屏幕的线重显示为两倍宽）</translation>
+        <translation>显示基于屏幕的线宽时应用于线宽的系数（例如 2 表示基于屏幕的线宽显示为两倍宽）</translation>
     </message>
     <message>
         <location line="+325"/>
@@ -6088,17 +6088,17 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation>渲染弧线的最小角度步骤（度）：</translation>
+        <translation>渲染弧线的最小角度步长（度）：</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation>将有N个以上破折号的实体显示为连续：</translation>
+        <translation>将超过 N 个短划的实体显示为连续线：</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>孵化器渲染的超时：</translation>
+        <translation>图案填充渲染超时：</translation>
     </message>
     <message>
         <location line="-361"/>
@@ -6128,7 +6128,7 @@ is already in the list.</source>
     <message>
         <location line="+219"/>
         <source>Maximum complexity for solid fills at high quality:</source>
-        <translation>最复杂的高质量固体填充：</translation>
+        <translation>高质量实心填充的最大复杂度：</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
@@ -6182,7 +6182,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Relative zero:</source>
-        <translation>相对零度：</translation>
+        <translation>相对零点：</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6192,7 +6192,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Grid:</source>
-        <translation>格：</translation>
+        <translation>栅格：</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6561,7 +6561,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>从选定的边界创建图案填充或实体填充</translation>
+        <translation>从选定的边界创建图案填充或实心填充</translation>
     </message>
 </context>
 <context>
@@ -6724,7 +6724,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation>如 Block：</translation>
+        <translation>作为块：</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6848,12 +6848,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>指定第一行</translation>
+        <translation>指定第一条直线</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>指定第二行</translation>
+        <translation>指定第二条直线</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -6955,7 +6955,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>弧形区域：</translation>
+        <translation>弧面积：</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -6970,7 +6970,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>弧形/圆形/椭圆区域</translation>
+        <translation>圆弧/圆/椭圆面积</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
@@ -7028,7 +7028,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>多角形区域</translation>
+        <translation>多边形面积(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
@@ -7056,7 +7056,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation>未执行。命令被终止。</translation>
+        <translation>未实现。命令已终止。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7072,7 +7072,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation>封闭的区域：</translation>
+        <translation>封闭面积：</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -7082,17 +7082,17 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>填充区域：</translation>
+        <translation>填充面积：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation>总的来说，帽子的面积：</translation>
+        <translation>总填充面积：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>差异性加盖的区域：</translation>
+        <translation>填充面积差：</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7150,7 +7150,7 @@ is already in the list.</source>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>未处理的形状来自孵化循环。</translation>
+        <translation>图案填充环中存在未处理的形状。</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7264,12 +7264,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation>二维中心点交易监听器激活。</translation>
+        <translation>二维中心点事务监听器激活。</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation>停用/删除了2D Centroids交易监听器。</translation>
+        <translation>停用/删除了2D Centroids事务监听器。</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7287,7 +7287,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation>(取消)激活2D中心点的交易监听器</translation>
+        <translation>(取消)激活2D中心点的事务监听器</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7361,7 +7361,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation>德尔塔X：</translation>
+        <translation>增量 X：</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7520,12 +7520,12 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>地区（信息）：</translation>
+        <translation>面积（仅供参考）：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation>线长 (Informational)：</translation>
+        <translation>导线长度（仅供参考）：</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7681,12 +7681,12 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation>笛卡尔坐标分离器：</translation>
+        <translation>笛卡尔坐标分隔符：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation>极坐标分离器：</translation>
+        <translation>极坐标分隔符：</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -7753,12 +7753,12 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation>少于</translation>
+        <translation>小于号</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>在</translation>
+        <translation>@ 符号</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8126,7 +8126,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>捷径超时：</translation>
+        <translation>快捷键超时：</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -8223,12 +8223,12 @@ is already in the list.</source>
     <message>
         <location line="+53"/>
         <source>Thawing all layers</source>
-        <translation>解冻所有层面</translation>
+        <translation>正在解冻所有图层</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation>冻结所有层数</translation>
+        <translation>正在冻结所有图层</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -8238,12 +8238,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation>解锁所有层级</translation>
+        <translation>正在解锁所有图层</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
-        <translation>新图层的默认线重：</translation>
+        <translation>新图层的默认线宽：</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -8253,7 +8253,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>0 层的默认线重：</translation>
+        <translation>0 层的默认线宽：</translation>
     </message>
     <message>
         <location line="-48"/>
@@ -8291,7 +8291,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>第 0 层块中的实体具有块参考的属性和可见性。</translation>
+        <translation>图层 0 上的块中的实体采用块引用的属性和可见性。</translation>
     </message>
 </context>
 <context>
@@ -8340,7 +8340,7 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>线重：</translation>
+        <translation>线宽：</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -8497,12 +8497,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>关闭序列</translation>
+        <translation>闭合序列</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Undo Previous Segment</source>
-        <translation>恢复前一段</translation>
+        <translation>撤销上一段</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8512,7 +8512,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation>线路使用固定长度</translation>
+        <translation>直线使用固定长度</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8661,7 +8661,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>抽屉式箱形接头的指、槽和天窗</translation>
+        <translation>绘制箱形接头的指、槽和榫头</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8808,7 +8808,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation>绘制与基地实体正交的线</translation>
+        <translation>绘制与基准实体正交的线</translation>
     </message>
 </context>
 <context>
@@ -8928,7 +8928,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation>绘制与基地实体相对角度的直线</translation>
+        <translation>绘制与基准实体成相对角度的直线</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
@@ -8984,7 +8984,7 @@ is already in the list.</source>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
-        <translation>不可能有切入点。</translation>
+        <translation>无法作切线。</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -9219,12 +9219,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>删除原文</translation>
+        <translation>删除原对象(&amp;D)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>保持原样</translation>
+        <translation>保留原对象(&amp;K)</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -9265,7 +9265,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>其他块状工具</translation>
+        <translation>其他块工具</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9429,7 +9429,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation>选择角落</translation>
+        <translation>选择角点</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9668,7 +9668,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
+            <numerusform>生成 %n 个同心圆弧后半径降到 0.0 以下。</numerusform>
         </translation>
     </message>
     <message>
@@ -9753,17 +9753,17 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation>打印 - 页码</translation>
+        <translation>打印 - 页面</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>打印中</translation>
+        <translation>打印</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Page</source>
-        <translation>页码</translation>
+        <translation>页面</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9773,7 +9773,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
-        <translation>页面定位</translation>
+        <translation>页面方向</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9881,7 +9881,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>平移变焦</translation>
+        <translation>平移缩放(&amp;P)</translation>
     </message>
 </context>
 <context>
@@ -10205,7 +10205,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>选择直线、弧线、圆、椭圆、花线或折线来分解</translation>
+        <translation>选择直线、弧线、圆、椭圆、样条曲线或折线来分割</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10220,7 +10220,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation>选择第一个破发点</translation>
+        <translation>选择第一个断点</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -10230,7 +10230,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation>选择第二个破发点</translation>
+        <translation>选择第二个断点</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -10240,7 +10240,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>删除换行段</translation>
+        <translation>删除断开处的线段</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10350,7 +10350,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation>上一个查看(&amp;P)</translation>
+        <translation>上一个视图(&amp;P)</translation>
     </message>
 </context>
 <context>
@@ -10402,12 +10402,12 @@ is already in the list.</source>
     <message>
         <location line="+40"/>
         <source>Auto fit</source>
-        <translation>自动配合</translation>
+        <translation>自动适应</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation>自动将图画贴在纸上？</translation>
+        <translation>自动使图纸适应纸张大小？</translation>
     </message>
     <message>
         <location line="+206"/>
@@ -11038,7 +11038,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>旋转二</translation>
+        <translation>双重旋转(&amp;W)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
@@ -11053,7 +11053,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Copies:</source>
-        <translation>复制：</translation>
+        <translation>复制数量：</translation>
     </message>
 </context>
 <context>
@@ -11061,7 +11061,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>转动两个选项</translation>
+        <translation>双重旋转选项</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11071,12 +11071,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>删除原文</translation>
+        <translation>删除原对象(&amp;D)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>保持原样</translation>
+        <translation>保留原对象(&amp;K)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11119,12 +11119,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>删除原文</translation>
+        <translation>删除原对象(&amp;D)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>保持原样</translation>
+        <translation>保留原对象(&amp;K)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11157,7 +11157,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation>这两个实体不能取整。</translation>
+        <translation>这两个实体无法倒圆角。</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -11409,7 +11409,7 @@ is already in the list.</source>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation>关注点</translation>
+        <translation>焦点</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11454,7 +11454,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>因素十：</translation>
+        <translation>系数 x：</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11465,7 +11465,7 @@ is already in the list.</source>
     <message>
         <location line="-10"/>
         <source>Factor y:</source>
-        <translation>因素y：</translation>
+        <translation>系数 y：</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11488,7 +11488,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>缩放选择</translation>
+        <translation>缩放选项</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11518,12 +11518,12 @@ is already in the list.</source>
     <message>
         <location line="+59"/>
         <source>Factor x:</source>
-        <translation>因素 x：</translation>
+        <translation>系数 x：</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation>因素 y：</translation>
+        <translation>系数 y：</translation>
     </message>
     <message>
         <location line="-26"/>
@@ -11634,7 +11634,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>按处理方式</translation>
+        <translation>按句柄</translation>
     </message>
 </context>
 <context>
@@ -11642,7 +11642,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>按手柄选择</translation>
+        <translation>按句柄选择</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11695,7 +11695,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation>容忍：</translation>
+        <translation>公差：</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11817,12 +11817,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation>第一个角落</translation>
+        <translation>第一个角点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation>第二个角落</translation>
+        <translation>第二个角点</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -11886,7 +11886,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform>%n 层的实体&quot;%1&quot;</numerusform>
+            <numerusform>图层&quot;%1&quot;上的 %n 个实体</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -11899,7 +11899,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation>开</translation>
+        <translation>位于</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
@@ -11939,7 +11939,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation>塑形工具</translation>
+        <translation>形状工具</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -11973,12 +11973,12 @@ is already in the list.</source>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation>不可能有圆圈。</translation>
+        <translation>无法生成圆。</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation>不可能有电弧。</translation>
+        <translation>无法生成圆弧。</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -11988,7 +11988,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation>无效的椭圆主要/次要： %1 / %2。</translation>
+        <translation>无效的椭圆长轴/短轴：%1 / %2。</translation>
     </message>
 </context>
 <context>
@@ -12001,12 +12001,12 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation>侧面中间</translation>
+        <translation>边中点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>多边形（中心，侧面）</translation>
+        <translation>多边形（中心，边）(&amp;Y)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12016,7 +12016,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>角落：</translation>
+        <translation>角数：</translation>
     </message>
 </context>
 <context>
@@ -12024,7 +12024,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
-        <translation>第一面</translation>
+        <translation>第一条边</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12034,17 +12034,17 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation>第二面</translation>
+        <translation>第二条边</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation>第二个角落</translation>
+        <translation>第二个角点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation>多边形（侧面，侧面）</translation>
+        <translation>多边形（边，边）(&amp;N)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12054,12 +12054,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>角落：</translation>
+        <translation>角数：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Corner to Corner</source>
-        <translation>角落到角落</translation>
+        <translation>角点到角点</translation>
     </message>
 </context>
 <context>
@@ -12072,12 +12072,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation>角落点</translation>
+        <translation>角点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>多边形（中心，角落）</translation>
+        <translation>多边形（中心，角点）(&amp;Y)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12087,7 +12087,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>角落：</translation>
+        <translation>角数：</translation>
     </message>
 </context>
 <context>
@@ -12095,27 +12095,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
-        <translation>第一个角落</translation>
+        <translation>第一个角点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation>角落点</translation>
+        <translation>角点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>多边形 (2个点的侧面)</translation>
+        <translation>多边形（边的 2 个端点）(&amp;N)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation>从一侧的端点画出规则的多边形</translation>
+        <translation>根据一条边的两个端点绘制正多边形</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>角落：</translation>
+        <translation>角数：</translation>
     </message>
 </context>
 <context>
@@ -12141,7 +12141,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>长方形与尺寸</translation>
+        <translation>指定尺寸的矩形(&amp;S)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12182,7 +12182,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation>只显示活跃</translation>
+        <translation>仅显示当前图层(&amp;O)</translation>
     </message>
 </context>
 <context>
@@ -12367,7 +12367,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>快照距离</translation>
+        <translation>捕捉距离：</translation>
     </message>
 </context>
 <context>
@@ -12390,12 +12390,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation>2个点之间的卡口距离</translation>
+        <translation>2 个点之间的捕捉距离</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>快照距离</translation>
+        <translation>捕捉距离：</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12455,7 +12455,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>交叉口手动</translation>
+        <translation>交点（手动）</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12593,12 +12593,12 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>度：</translation>
+        <translation>阶数：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>选择样条度</translation>
+        <translation>选择样条阶数</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -12608,7 +12608,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Closed</source>
-        <translation>关闭</translation>
+        <translation>闭合</translation>
     </message>
 </context>
 <context>
@@ -12678,12 +12678,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Stretch/Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation>第一个角落</translation>
+        <translation>第一个角点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation>第二个角落</translation>
+        <translation>第二个角点</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12832,7 +12832,7 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation>正文</translation>
+        <translation>文本：</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -12868,7 +12868,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>检查所有</translation>
+        <translation>全部勾选</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -13104,7 +13104,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>方形</translation>
+        <translation>平方</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13114,7 +13114,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>无断层空间</translation>
+        <translation>不换行空格</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -13166,7 +13166,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Rich Text</source>
-        <translation>丰富的文本</translation>
+        <translation>富文本</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -13226,7 +13226,7 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Text Geometry</source>
-        <translation>文本几何学</translation>
+        <translation>文本几何</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13377,7 +13377,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>送到后面</translation>
+        <translation>置于底层(&amp;K)</translation>
     </message>
 </context>
 <context>
@@ -13385,7 +13385,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>带到前面来</translation>
+        <translation>置于顶层(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -13479,7 +13479,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>关注工具矩阵</translation>
+        <translation>聚焦到工具矩阵(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -13571,12 +13571,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>删除原文</translation>
+        <translation>删除原对象(&amp;D)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>保持原样</translation>
+        <translation>保留原对象(&amp;K)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13653,12 +13653,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>删除原文</translation>
+        <translation>删除原对象(&amp;D)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>保持原样</translation>
+        <translation>保留原对象(&amp;K)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13826,7 +13826,7 @@ is already in the list.</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>绘图单元</translation>
+        <translation>绘图单位</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13851,7 +13851,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation>一英里</translation>
+        <translation>英里</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13881,7 +13881,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation>米尔</translation>
+        <translation>密耳</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13891,12 +13891,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation>安斯通</translation>
+        <translation>埃</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation>纳米级</translation>
+        <translation>纳米</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13977,7 +13977,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>查看工具</translation>
+        <translation>视图工具</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -14054,7 +14054,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+512"/>
         <source>Dropped data not supported</source>
-        <translation>不支持掉线数据</translation>
+        <translation>不支持拖放的数据</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -14230,7 +14230,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation>方形</translation>
+        <translation>平方</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14381,7 +14381,7 @@ is already in the list.</source>
         <location line="-86"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation>以上</translation>
+        <translation>上方</translation>
     </message>
     <message>
         <location line="-74"/>
@@ -14461,12 +14461,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>水平施工线</translation>
+        <translation>水平构造线(&amp;H)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw horizontal construction line</source>
-        <translation>绘制水平施工线</translation>
+        <translation>绘制水平构造线</translation>
     </message>
 </context>
 <context>
@@ -14474,12 +14474,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>垂直施工线</translation>
+        <translation>垂直构造线(&amp;V)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw vertical construction line</source>
-        <translation>绘制垂直施工线</translation>
+        <translation>绘制垂直构造线</translation>
     </message>
 </context>
 <context>
@@ -14577,7 +14577,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation>块状物</translation>
+        <translation>块</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14657,22 +14657,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>区块参考</translation>
+        <translation>块引用</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation>区块参考</translation>
+        <translation>块引用</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>块参考和属性</translation>
+        <translation>块引用和属性</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>块参考和属性</translation>
+        <translation>块引用和属性</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14747,22 +14747,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>角度尺寸（2 行）</translation>
+        <translation>角度尺寸（2 条直线）</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>角度尺寸（2 行）</translation>
+        <translation>角度尺寸（2 条直线）</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>角度尺寸（3 分）</translation>
+        <translation>角度尺寸（3 点）</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>角度尺寸（3 分）</translation>
+        <translation>角度尺寸（3 点）</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14913,22 +14913,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>固体</translation>
+        <translation>二维填充</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation>固体</translation>
+        <translation>二维填充</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>痕迹</translation>
+        <translation>宽线</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>追踪</translation>
+        <translation>宽线</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14999,12 +14999,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation>外部参考资料</translation>
+        <translation>外部参照</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation>外部参考</translation>
+        <translation>外部参照</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15095,7 +15095,7 @@ is already in the list.</source>
         <location line="+116"/>
         <location line="+30"/>
         <source>Y:</source>
-        <translation>Y 方向比例：</translation>
+        <translation>Y：</translation>
     </message>
     <message>
         <location line="-512"/>

@@ -726,7 +726,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation>曲線</translation>
+        <translation>雲形線</translation>
     </message>
     <message>
         <location line="+1"/>

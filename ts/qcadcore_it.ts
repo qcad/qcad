@@ -276,7 +276,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="-1"/>
         <source>Pixel Unit</source>
-        <translation>Pixel unità</translation>
+        <translation>Unità pixel</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -608,19 +608,19 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Visualizza centro</translation>
+        <translation>Centro vista</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Visualizza obiettivo</translation>
+        <translation>Obiettivo vista</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation>Overall</translation>
+        <translation>Complessivo</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -663,7 +663,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Piegato</translation>
+        <translation>Compresso</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -673,17 +673,17 @@
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Scattante</translation>
+        <translation>Agganciabile</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation>Inattivo è congelare</translation>
+        <translation>Disattivato equivale a congelato</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation>Ordine di tabulazione</translation>
+        <translation>Ordine scheda</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -704,7 +704,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation>Inserimento base</translation>
+        <translation>Base di inserimento</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -748,7 +748,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Spazio tra le linee di dimensione</translation>
+        <translation>Spazio linea di quota</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -758,7 +758,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation>Incremento della linea di dimensione</translation>
+        <translation>Incremento della linea di quota</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -778,7 +778,7 @@
     <message>
         <location line="-8"/>
         <source>Overall scale</source>
-        <translation>Scala globali</translation>
+        <translation>Scala globale</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -788,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Dimensione del segno di spunta</translation>
+        <translation>Dimensione del contrassegno</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Potenza aerea</translation>
+        <translation>Linea elettrica aerea</translation>
     </message>
     <message>
         <location line="+2"/>

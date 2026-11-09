@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Vidurio</translation>
+        <translation>Vidurys</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -281,7 +281,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation>Nuvalymo kampas</translation>
+        <translation>Lanko kampas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -319,7 +319,7 @@
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
-        <translation>Apskritimas</translation>
+        <translation>Perimetras</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -347,28 +347,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>1 eilutės pradžia</translation>
+        <translation>1 linijos pradžia</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>1 eilutės pabaiga</translation>
+        <translation>1 linijos pabaiga</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>2 eilutės pradžia</translation>
+        <translation>2 linijos pradžia</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>2 eilutės pabaiga</translation>
+        <translation>2 linijos pabaiga</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,7 +392,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Tolimojo akordo taškas</translation>
+        <translation>Tolimasis stygos taškas</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -401,12 +401,12 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-19"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Kilmė</translation>
+        <translation>Pradžios taškas</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation>Ordinatas</translation>
+        <translation>Ordinatė</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -420,12 +420,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>&quot;Leader&quot; pabaigos taškas</translation>
+        <translation>Nuorodos linijos galinis taškas</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation>Matmuo Kampas</translation>
+        <translation>Matmens kampas</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
@@ -470,12 +470,12 @@
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation>Apverskite pirmąją rodyklę</translation>
+        <translation>Apversti pirmąją rodyklę</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Apverskite antrąją strėlę</translation>
+        <translation>Apversti antrąją rodyklę</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
         <source>Scale</source>
-        <translation>Skalė</translation>
+        <translation>Mastelis</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+3"/>
@@ -517,7 +517,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Pagrindinis punktas</translation>
+        <translation>Pagrindinis taškas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -565,7 +565,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation>1 punktas</translation>
+        <translation>1 taškas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -578,7 +578,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation>2 punktas</translation>
+        <translation>2 taškas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -591,7 +591,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation>3 punktas</translation>
+        <translation>3 taškas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -604,7 +604,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation>4 punktas</translation>
+        <translation>4 taškas</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
@@ -627,7 +627,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Modelis</translation>
+        <translation>Šablonas</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -638,7 +638,7 @@
     <message>
         <location line="-7"/>
         <source>From Entity</source>
-        <translation>Iš subjekto</translation>
+        <translation>Iš objekto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -685,7 +685,7 @@
     <message>
         <location line="+1"/>
         <source>Tint</source>
-        <translation>Šešėlis / Atspalvis</translation>
+        <translation>Atspalvis</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -748,7 +748,7 @@
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation>Plotį lemiantis veiksnys</translation>
+        <translation>Pločio koeficientas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -773,22 +773,22 @@
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
         <source>Arrow</source>
-        <translation>Strėlė</translation>
+        <translation>Rodyklė</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation>Spline</translation>
+        <translation>Splainas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Strėlių blokas</translation>
+        <translation>Rodyklės blokas</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation>Daugiakampio šablonas</translation>
+        <translation>Polilinijos šablonas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -814,12 +814,12 @@
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation>Pasaulinis plotis</translation>
+        <translation>Bendrasis plotis</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation>Orientavimasis</translation>
+        <translation>Orientacija</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -872,7 +872,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation>Antrasis punktas</translation>
+        <translation>Antrasis taškas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -893,7 +893,7 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation>Uždaryta Periodiškai</translation>
+        <translation>Uždaras periodinis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -912,7 +912,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>&quot;Fit Point</translation>
+        <translation>Priderinimo taškas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -927,14 +927,14 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation>Naudoti Start Tangent</translation>
+        <translation>Naudoti pradžios liestinę</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Pradėti liestinę</translation>
+        <translation>Pradžios liestinė</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -946,7 +946,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation>Pabaigos tangentė</translation>
+        <translation>Pabaigos liestinė</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>

@@ -114,7 +114,7 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation>Kihtide kaupa</translation>
+        <translation>Kihi järgi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -222,17 +222,17 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Joonistusüksus</translation>
+        <translation>Joonise ühik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Linetüübi skaala</translation>
+        <translation>Joonetüübi skaala</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Dimension Font</translation>
+        <translation>Mõõdu font</translation>
     </message>
 </context>
 <context>
@@ -253,7 +253,7 @@
     <message>
         <location line="+1"/>
         <source>Pixel Unit</source>
-        <translation>Piksli üksus</translation>
+        <translation>Piksliühik</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -430,12 +430,12 @@
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Pikendusliini pikendus</translation>
+        <translation>Pikendusjoone pikendus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Pikendusliini nihutamine</translation>
+        <translation>Pikendusjoone nihe</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -532,18 +532,18 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation>Linetüüp</translation>
+        <translation>Joonetüüp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Linetüübi skaala</translation>
+        <translation>Joonetüübi skaala</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Lineweight</translation>
+        <translation>Joone jämedus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -702,7 +702,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Käepide</translation>
+        <translation>Pide</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -887,7 +887,7 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation>Kihtide kaupa</translation>
+        <translation>Kihi järgi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1136,7 +1136,7 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation>Kihtide kaupa</translation>
+        <translation>Kihi järgi</translation>
     </message>
     <message>
         <location line="+1"/>

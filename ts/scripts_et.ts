@@ -332,7 +332,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Block/AddBlock/AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>&amp;amp;Lisa tühi plokk</translation>
+        <translation>&amp;Lisa tühi plokk</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -413,7 +413,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation>&amp;amp;Lisa kiht</translation>
+        <translation>&amp;Lisa kiht</translation>
     </message>
 </context>
 <context>
@@ -421,7 +421,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>&amp;amp;Anti-aliasing</translation>
+        <translation>&amp;Anti-aliasing</translation>
     </message>
 </context>
 <context>
@@ -442,7 +442,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation>&amp;amp;Rakenduse eelistused</translation>
+        <translation>&amp;Rakenduse eelistused</translation>
     </message>
 </context>
 <context>
@@ -450,12 +450,12 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation>Arc Tools</translation>
+        <translation>Kaare tööriistad</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Arc</source>
-        <translation>&amp;amp;Arc</translation>
+        <translation>&amp;Arc</translation>
     </message>
 </context>
 <context>
@@ -503,7 +503,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation>2 &amp;amp;punkti ja nurk</translation>
+        <translation>2 &amp;punkti ja nurk</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -556,7 +556,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation>2 &amp;amp;punkti ja kõrgus</translation>
+        <translation>2 &amp;punkti ja kõrgus</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -614,7 +614,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation>2 &amp;amp;punktid ja pikkus</translation>
+        <translation>2 &amp;punktid ja pikkus</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -682,7 +682,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>2 &amp;amp;punktid ja raadius</translation>
+        <translation>2 &amp;punktid ja raadius</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -710,7 +710,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 &amp;amp;punkti</translation>
+        <translation>3 &amp;punkti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -763,7 +763,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation>&amp;amp;Keskpunkt, punkt, nurgad</translation>
+        <translation>&amp;Keskpunkt, punkt, nurgad</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -786,7 +786,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;amp;Keskne (koos kaugusega)</translation>
+        <translation>&amp;Keskne (koos kaugusega)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -804,7 +804,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>&amp;amp;Keskne (läbi punkti)</translation>
+        <translation>&amp;Keskne (läbi punkti)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -843,7 +843,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;amp;Tangent, punkt, raadius</translation>
+        <translation>&amp;Tangent, punkt, raadius</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -871,7 +871,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>&amp;amp;Tangentsiaalselt seotud</translation>
+        <translation>&amp;Tangentsiaalselt seotud</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1040,7 +1040,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>&amp;amp;Auto Trim</translation>
+        <translation>&amp;Auto Trim</translation>
     </message>
 </context>
 <context>
@@ -1048,7 +1048,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation>&amp;amp;Automaatne suumimine</translation>
+        <translation>&amp;Automaatne suumimine</translation>
     </message>
 </context>
 <context>
@@ -1062,7 +1062,7 @@ Kas soovite seda taastada?</translation>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation>&amp;amp;Batch2Pdf nähtavad kujundusplokid</translation>
+        <translation>&amp;Batch2Pdf nähtavad kujundusplokid</translation>
     </message>
 </context>
 <context>
@@ -1113,7 +1113,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation>&amp;amp;Viilud / kaldkalded</translation>
+        <translation>&amp;Viilud / kaldkalded</translation>
     </message>
 </context>
 <context>
@@ -1258,12 +1258,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Lisage lisamarginaal, et kompenseerida rea kaalu</translation>
+        <translation>Lisa lisaveeris joone jämeduse kompenseerimiseks</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation>&amp;amp;Bitaarkava eksport...</translation>
+        <translation>&amp;Bitaarkava eksport...</translation>
     </message>
 </context>
 <context>
@@ -1284,12 +1284,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
-        <translation>Blokeerimisvahendid</translation>
+        <translation>Ploki tööriistad</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Block</source>
-        <translation>&amp;amp;Plokk</translation>
+        <translation>&amp;Plokk</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1333,7 +1333,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Blokk &quot;%1&quot; on juba olemas&lt;br&gt;ja see kirjutatakse üle.</translation>
+        <translation>Plokk &quot;%1&quot; on juba olemas&lt;br&gt;ja see kirjutatakse üle.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1356,7 +1356,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation>&amp;amp;Plokk</translation>
+        <translation>&amp;Plokk</translation>
     </message>
 </context>
 <context>
@@ -1364,7 +1364,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>&amp;amp;Fix Blocki nimed</translation>
+        <translation>&amp;Fix Blocki nimed</translation>
     </message>
 </context>
 <context>
@@ -1418,7 +1418,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation>&amp;amp;Bloki atribuutide loend</translation>
+        <translation>P&amp;loki atribuutide loend</translation>
     </message>
 </context>
 <context>
@@ -1436,7 +1436,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>&amp;amp;Ekspordi plokkide nimekiri</translation>
+        <translation>&amp;Ekspordi plokkide nimekiri</translation>
     </message>
 </context>
 <context>
@@ -1454,7 +1454,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>&amp;amp;Ekspordi plokkviidete nimekiri</translation>
+        <translation>&amp;Ekspordi plokkviidete nimekiri</translation>
     </message>
 </context>
 <context>
@@ -1462,7 +1462,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>Valige joon, kaar, ring, ellips, spline või polüliinisegment</translation>
+        <translation>Valige joon, kaar, ring, ellips, spline või polüjoone segment</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1477,7 +1477,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>&amp;amp;Break out Segment</translation>
+        <translation>&amp;Lõika segment välja</translation>
     </message>
 </context>
 <context>
@@ -1508,7 +1508,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Valige joon, kaar, ring, ellips, spline või polügoon, et jagada ülespoole</translation>
+        <translation>Valige tükeldatav joon, kaar, ring, ellips, spline või polüjoon</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1538,7 +1538,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>&amp;amp;Break out Käsikiri</translation>
+        <translation>&amp;Break out Käsikiri</translation>
     </message>
 </context>
 <context>
@@ -1670,7 +1670,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation>&amp;amp;Kontrollige uuendusi...</translation>
+        <translation>&amp;Kontrollige uuendusi...</translation>
     </message>
 </context>
 <context>
@@ -1678,12 +1678,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation>Circle Tools</translation>
+        <translation>Ringi tööriistad</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Circle</source>
-        <translation>&amp;amp;Ring</translation>
+        <translation>&amp;Ring</translation>
     </message>
 </context>
 <context>
@@ -1706,7 +1706,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>2 &amp;amp;punkti</translation>
+        <translation>2 &amp;punkti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1749,7 +1749,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+10"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation>Keskmine vasakpoolne rida P1 - P2</translation>
+        <translation>Keskpunkt joonest P1 - P2 vasakul</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1759,7 +1759,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>2 &amp;amp;punktid ja raadius</translation>
+        <translation>2 &amp;punktid ja raadius</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1798,7 +1798,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 &amp;amp;Tangendid ja punkt</translation>
+        <translation>2 &amp;Tangendid ja punkt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1836,7 +1836,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2 &amp;amp;Tangentsid ja raadius</translation>
+        <translation>2 &amp;Tangentsid ja raadius</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1864,7 +1864,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 &amp;amp;punkti</translation>
+        <translation>3 &amp;punkti</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1903,7 +1903,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation>3 &amp;amp;Tangenti</translation>
+        <translation>3 &amp;Tangenti</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1933,7 +1933,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation>&amp;amp;Keskus, läbimõõt</translation>
+        <translation>&amp;Keskus, läbimõõt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1956,7 +1956,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation>&amp;amp;Keskus, punkt</translation>
+        <translation>&amp;Keskus, punkt</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1986,7 +1986,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation>&amp;amp;Keskpunkt, raadius</translation>
+        <translation>&amp;Keskpunkt, raadius</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2009,7 +2009,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;amp;Keskne (koos kaugusega)</translation>
+        <translation>&amp;Keskne (koos kaugusega)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2027,7 +2027,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>&amp;amp;Keskne (läbi punkti)</translation>
+        <translation>&amp;Keskne (läbi punkti)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2066,7 +2066,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation>&amp;amp;Tangent ja 2 punkti</translation>
+        <translation>&amp;Tangent ja 2 punkti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2089,7 +2089,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;amp;Tangent, punkt, raadius</translation>
+        <translation>&amp;Tangent, punkt, raadius</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2110,7 +2110,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation>&amp;amp;Sulge kõik</translation>
+        <translation>&amp;Sulge kõik</translation>
     </message>
 </context>
 <context>
@@ -2126,7 +2126,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation>&amp;amp;Sulge</translation>
+        <translation>&amp;Sulge</translation>
     </message>
 </context>
 <context>
@@ -2207,7 +2207,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="-26"/>
         <source>&amp;Command Line</source>
-        <translation>&amp;amp;Käsurea</translation>
+        <translation>&amp;Käsurea</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -2325,7 +2325,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation>&amp;amp;Käsurea</translation>
+        <translation>&amp;Käsurea</translation>
     </message>
 </context>
 <context>
@@ -2333,7 +2333,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>&amp;amp;Keskendumine käsureale</translation>
+        <translation>&amp;Keskendumine käsureale</translation>
     </message>
 </context>
 <context>
@@ -2341,7 +2341,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation>&amp;amp;Käsurea tööriistad</translation>
+        <translation>&amp;Käsurea tööriistad</translation>
     </message>
 </context>
 <context>
@@ -2354,7 +2354,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation>Valitud üksus &quot;%1&quot;. Midagi ei ole vaja teha</translation>
+        <translation>Valitud on ühik &quot;%1&quot;. Midagi ei ole vaja teha</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -2379,12 +2379,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+7"/>
         <source>Convert Drawing Unit</source>
-        <translation>Teisenda joonistusüksus</translation>
+        <translation>Teisenda joonise ühik</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation>&amp;amp;Teisenda joonistusühik</translation>
+        <translation>&amp;Teisenda joonistusühik</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2435,7 +2435,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation>&amp;amp;Koopia</translation>
+        <translation>&amp;Koopia</translation>
     </message>
 </context>
 <context>
@@ -2443,7 +2443,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>&amp;amp;Koopia koos viitega</translation>
+        <translation>&amp;Koopia koos viitega</translation>
     </message>
 </context>
 <context>
@@ -2481,7 +2481,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation>&amp;amp;Counter</translation>
+        <translation>&amp;Loendur</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2499,7 +2499,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>&amp;amp;Bloki loomine valikust</translation>
+        <translation>&amp;Ploki loomine valikust</translation>
     </message>
 </context>
 <context>
@@ -2563,7 +2563,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>&amp;amp;Lõika</translation>
+        <translation>&amp;Lõika</translation>
     </message>
 </context>
 <context>
@@ -2571,7 +2571,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>&amp;amp;Lõika koos viitega</translation>
+        <translation>&amp;Lõika koos viitega</translation>
     </message>
 </context>
 <context>
@@ -2624,7 +2624,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Bloki &quot;%1&quot;&lt;br&gt;Valige &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt;, kui olete lõpetanud</translation>
+        <translation>Ploki &quot;%1&quot; redigeerimine&lt;br&gt;Kui olete lõpetanud, valige &lt;i&gt;Plokk &gt; Tagasi põhijoonisele&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -2655,7 +2655,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Edit/Delete/DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation>&amp;amp;Kustuta</translation>
+        <translation>&amp;Kustuta</translation>
     </message>
 </context>
 <context>
@@ -2663,7 +2663,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation>&amp;amp;Tühista valik kõik</translation>
+        <translation>&amp;Tühista valik kõik</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2676,7 +2676,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>&amp;amp;Tühista valik Blocki viited</translation>
+        <translation>&amp;Tühista valik Blocki viited</translation>
     </message>
 </context>
 <context>
@@ -2684,7 +2684,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>&amp;amp;Valiku eemaldamine kihi üksused</translation>
+        <translation>&amp;Valiku eemaldamine kihi üksused</translation>
     </message>
 </context>
 <context>
@@ -2692,7 +2692,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation>&amp;amp;Debugimisrežiim</translation>
+        <translation>&amp;Debugimisrežiim</translation>
     </message>
 </context>
 <context>
@@ -2730,13 +2730,13 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation>polügooniks koos kaarsegmentidega</translation>
+        <translation>polüjooneks koos kaarsegmentidega</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation>joonsegmendiga polügooniks</translation>
+        <translation>joonsegmentidega polüjooneks</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -2761,12 +2761,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation>liinidesse</translation>
+        <translation>joonteks</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation>Blokid</translation>
+        <translation>Plokid</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2789,12 +2789,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Esimese pikendusliini päritolu</translation>
+        <translation>Esimese pikendusjoone alguspunkt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Teise pikendusliini päritolu</translation>
+        <translation>Teise pikendusjoone alguspunkt</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2804,7 +2804,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation>&amp;amp;Kohandatud</translation>
+        <translation>&amp;Kohandatud</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2822,7 +2822,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>Teine rida</translation>
+        <translation>Teine joon</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2832,7 +2832,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation>&amp;amp;Nurgakujuline</translation>
+        <translation>&amp;Nurgakujuline</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2860,7 +2860,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation>&amp;amp;Diameetriline</translation>
+        <translation>&amp;Diameetriline</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2873,7 +2873,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
-        <translation>&amp;amp;Horisontaalne</translation>
+        <translation>&amp;Horisontaalne</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2896,7 +2896,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>&amp;amp;Ordinaat (X/Y)</translation>
+        <translation>&amp;Ordinaat (X/Y)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2919,7 +2919,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation>&amp;amp;Radiaalne</translation>
+        <translation>&amp;Radiaalne</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2945,7 +2945,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation>&amp;amp;Etiketi positsiooni lähtestamine</translation>
+        <translation>&amp;Etiketi positsiooni lähtestamine</translation>
     </message>
 </context>
 <context>
@@ -2953,12 +2953,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Esimese pikendusliini päritolu</translation>
+        <translation>Esimese pikendusjoone alguspunkt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Teise pikendusliini päritolu</translation>
+        <translation>Teise pikendusjoone alguspunkt</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2973,7 +2973,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation>&amp;amp;Pööratud (lineaarne)</translation>
+        <translation>&amp;Pööratud (lineaarne)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2986,7 +2986,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimVertical/DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation>&amp;amp;Vertikaalne</translation>
+        <translation>&amp;Vertikaalne</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3054,7 +3054,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>&amp;amp;Mõõde</translation>
+        <translation>&amp;Mõõde</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -3091,7 +3091,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Joonistamise skaala</translation>
+        <translation>Joonise mõõtkava</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3198,7 +3198,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation>Pikendusliini pikendus:</translation>
+        <translation>Pikendusjoone pikendus:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -3208,7 +3208,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation>Pikendusliini nihutamine:</translation>
+        <translation>Pikendusjoone nihe:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -3273,12 +3273,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation>&amp;amp;Formaat:</translation>
+        <translation>&amp;Formaat:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation>&amp;amp;Täpsus:</translation>
+        <translation>&amp;Täpsus:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3294,12 +3294,12 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation>&amp;amp;Formaat:</translation>
+        <translation>&amp;Formaat:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation>&amp;amp;Täpsus:</translation>
+        <translation>&amp;Täpsus:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3330,7 +3330,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>&amp;amp;Näidiku kaugus/nurk</translation>
+        <translation>&amp;Näidiku kaugus/nurk</translation>
     </message>
 </context>
 <context>
@@ -3338,7 +3338,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Valige joon, kaar, ring, ellips, spline või polügoon</translation>
+        <translation>Valige joon, kaar, ring, ellips, spline või polüjoon</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3358,7 +3358,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>&amp;amp;Jagage</translation>
+        <translation>&amp;Jagage</translation>
     </message>
 </context>
 <context>
@@ -3366,7 +3366,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation>&amp;amp;Eelnõu režiim</translation>
+        <translation>&amp;Eelnõu režiim</translation>
     </message>
 </context>
 <context>
@@ -3379,7 +3379,7 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;amp;Joonista</translation>
+        <translation>&amp;Joonista</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3415,7 +3415,7 @@ on juba loendis.</translation>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation>Top Right</translation>
+        <translation>Ülemine parempoolne</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3476,7 +3476,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation>&amp;amp;Joonista piiritlev kast</translation>
+        <translation>&amp;Joonista piiritlev kast</translation>
     </message>
 </context>
 <context>
@@ -3484,7 +3484,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>&amp;amp;Joonista</translation>
+        <translation>&amp;Joonista</translation>
     </message>
 </context>
 <context>
@@ -3522,7 +3522,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Sulge polügoon</translation>
+        <translation>Sulge polüjoon</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3532,7 +3532,7 @@ on juba loendis.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Redo segment</translation>
+        <translation>Segmendi taastamine</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3552,7 +3552,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>&amp;amp;Joonistus Fms sõidurajad</translation>
+        <translation>Joonista &amp;Fms sõidurajad</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3963,7 +3963,7 @@ on juba loendis.</translation>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation>Polüline, vähem kui 2 viidet.</translation>
+        <translation>Polüjoon, vähem kui 2 viidet.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4093,17 +4093,17 @@ on juba loendis.</translation>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Ei ole õige Lineweight, ignoreeritakse. Tekstirida: %1%2 Kaal: %3</translation>
+        <translation>Ei ole õige joone jämedus, ignoreeritakse. Tekstirida: %1%2 Jämedus: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>Ei ole õige linetüüp, ignoreeritakse. Tekstirida: %1%2 Type: %3</translation>
+        <translation>Ei ole õige joonetüüp, ignoreeritakse. Tekstirida: %1%2 Tüüp: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Ei ole õige Linetype skaala, ignoreeritakse. Tekstirida: %1%2 Skaala: %3</translation>
+        <translation>Ei ole õige joonetüübi skaala, ignoreeritakse. Tekstirida: %1%2 Skaala: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4128,12 +4128,12 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Ei ole korrektne liinikaal. Tekstirida: %1%2 Kaal: %3</translation>
+        <translation>Ei ole õige joone jämedus. Tekstirida: %1%2 Jämedus: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation>Ei ole õige linatüüp. Tekstirida: %1%2 Type: %3</translation>
+        <translation>Ei ole õige joonetüüp. Tekstirida: %1%2 Tüüp: %3</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4153,7 +4153,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>&amp;amp;Joonistus CSV-st</translation>
+        <translation>&amp;Joonista CSV-st</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4166,7 +4166,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>&amp;amp;Joonistamise järjekord</translation>
+        <translation>&amp;Joonistamise järjekord</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -4209,7 +4209,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Sulge polügoon</translation>
+        <translation>Sulge polüjoon</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -4229,7 +4229,7 @@ on juba loendis.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Redo segment</translation>
+        <translation>Segmendi taastamine</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -4239,12 +4239,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation>&amp;amp;Joonista polügoon</translation>
+        <translation>&amp;Joonista polüjoon</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation>Joonistage joone- ja kaarsegmentidega polügoon</translation>
+        <translation>Joonistage joone- ja kaarsegmentidega polüjoon</translation>
     </message>
 </context>
 <context>
@@ -4252,7 +4252,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>&amp;amp;Joonistamise eelistused</translation>
+        <translation>&amp;Joonistamise eelistused</translation>
     </message>
 </context>
 <context>
@@ -4268,7 +4268,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>&amp;amp;Duplikaat</translation>
+        <translation>&amp;Duplikaat</translation>
     </message>
 </context>
 <context>
@@ -4348,7 +4348,7 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Entiteet ei ole joon, kaar või polügoon.</translation>
+        <translation>Entiteet ei ole joon, kaar või polüjoon.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4373,7 +4373,7 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Entiteet ei ole joon, kaar, spliin, ellipskaar või polügoon.</translation>
+        <translation>Entiteet ei ole joon, kaar, spliin, ellipskaar või polüjoon.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4388,7 +4388,7 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Entiteet ei ole joon, kaar, ring, ellips või polügoon.</translation>
+        <translation>Entiteet ei ole joon, kaar, ring, ellips või polüjoon.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4398,27 +4398,27 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Entiteet ei ole joon, kaar, ring, spliin või polügoon.</translation>
+        <translation>Entiteet ei ole joon, kaar, ring, spliin või polüjoon.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Entiteet ei ole joon, kaar, ring, ellips, spliin või polügoon.</translation>
+        <translation>Entiteet ei ole joon, kaar, ring, ellips, spliin või polüjoon.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Entiteet ei ole ring, ellips, spliin või polügoon.</translation>
+        <translation>Entiteet ei ole ring, ellips, spliin või polüjoon.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Entiteet ei ole polügoon.</translation>
+        <translation>Entiteet ei ole polüjoon.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation>Entiteet ei ole suletud polügoon.</translation>
+        <translation>Entiteet ei ole suletud polüjoon.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4436,7 +4436,7 @@ on juba loendis.</translation>
     <message>
         <location line="+67"/>
         <source>&amp;Script Shell</source>
-        <translation>&amp;amp;Skripti kest</translation>
+        <translation>&amp;Skripti kest</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -4470,12 +4470,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation>Tööriistade redigeerimine</translation>
+        <translation>Redigeerimise tööriistad</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Edit</source>
-        <translation>&amp;amp;Muuda</translation>
+        <translation>&amp;Muuda</translation>
     </message>
 </context>
 <context>
@@ -4483,7 +4483,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/EditBlock/EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
-        <translation>&amp;amp;Bloki redigeerimine</translation>
+        <translation>Ploki &amp;redigeerimine</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4501,7 +4501,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>&amp;amp;Edit Block from Reference</translation>
+        <translation>Re&amp;digeeri plokki viite kaudu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4519,7 +4519,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>&amp;amp;Redigeeri luuke</translation>
+        <translation>Redigeeri &amp;viirutust</translation>
     </message>
 </context>
 <context>
@@ -4527,7 +4527,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation>&amp;amp;Kihi redigeerimine</translation>
+        <translation>&amp;Kihi redigeerimine</translation>
     </message>
 </context>
 <context>
@@ -4535,7 +4535,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
-        <translation>&amp;amp;Tagasi põhijoonisele</translation>
+        <translation>&amp;Tagasi põhijoonisele</translation>
     </message>
 </context>
 <context>
@@ -4548,7 +4548,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation>&amp;amp;Teksti redigeerimine</translation>
+        <translation>&amp;Teksti redigeerimine</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4566,7 +4566,7 @@ on juba loendis.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Ellipse</source>
-        <translation>&amp;amp;Ellips</translation>
+        <translation>&amp;Ellips</translation>
     </message>
 </context>
 <context>
@@ -4659,7 +4659,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation>&amp;amp;Ellipse Arc</translation>
+        <translation>&amp;Ellipse Arc</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4672,7 +4672,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation>&amp;amp;Ellips (keskpunkt, punkt, suhe)</translation>
+        <translation>&amp;Ellips (keskpunkt, punkt, suhe)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4708,7 +4708,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation>&amp;amp;Läbimõõduga ellips</translation>
+        <translation>&amp;Läbimõõduga ellips</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4731,7 +4731,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>&amp;amp;Paralleelne kõver (koos kaugusega)</translation>
+        <translation>&amp;Paralleelne kõver (koos kaugusega)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4749,7 +4749,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>&amp;amp;Paralleelne kõver (läbi punkti)</translation>
+        <translation>&amp;Paralleelne kõver (läbi punkti)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4785,7 +4785,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation>&amp;amp;Ellips koos raadiustega</translation>
+        <translation>&amp;Ellips koos raadiustega</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4798,7 +4798,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>&amp;amp;Katkesta</translation>
+        <translation>&amp;Katkesta</translation>
     </message>
 </context>
 <context>
@@ -4806,7 +4806,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation>&amp;amp;Loo plokk</translation>
+        <translation>&amp;Loo plokk</translation>
     </message>
 </context>
 <context>
@@ -4827,7 +4827,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation>&amp;amp;CSV eksportimine</translation>
+        <translation>&amp;CSV eksportimine</translation>
     </message>
 </context>
 <context>
@@ -4835,7 +4835,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>Kustutatud rida ID-ga %1</translation>
+        <translation>Kustutatud joon ID-ga %1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4845,7 +4845,7 @@ on juba loendis.</translation>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation>Lisa ja kustuta rida</translation>
+        <translation>Lisa ja kustuta joon</translation>
     </message>
 </context>
 <context>
@@ -4853,7 +4853,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation>&amp;amp;Kataloogi loetelu</translation>
+        <translation>&amp;Kataloogi loetelu</translation>
     </message>
 </context>
 <context>
@@ -4861,7 +4861,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation>&amp;amp;Joonista värvid</translation>
+        <translation>&amp;Joonista värvid</translation>
     </message>
 </context>
 <context>
@@ -4869,7 +4869,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>&amp;amp;Joonista kirjatüübid</translation>
+        <translation>&amp;Joonista kirjatüübid</translation>
     </message>
 </context>
 <context>
@@ -4877,17 +4877,17 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation>Polügoon päripäeva:</translation>
+        <translation>Polüjoon päripäeva:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation>Vastupidine polügoon:</translation>
+        <translation>Vastupäeva polüjoon:</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation>&amp;amp;Väljundi polügooni tipud</translation>
+        <translation>&amp;Väljasta polüjoone tipud</translation>
     </message>
 </context>
 <context>
@@ -4918,7 +4918,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>&amp;amp;Dovetail Joint</translation>
+        <translation>&amp;Dovetail Joint</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4931,7 +4931,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
-        <translation>&amp;amp;Põhiaken</translation>
+        <translation>&amp;Põhiaken</translation>
     </message>
 </context>
 <context>
@@ -4939,7 +4939,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation>&amp;amp;Mandelbrot&apos;i näide</translation>
+        <translation>&amp;Mandelbrot&apos;i näide</translation>
     </message>
 </context>
 <context>
@@ -4947,7 +4947,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
-        <translation>&amp;amp;Spiraal</translation>
+        <translation>&amp;Spiraal</translation>
     </message>
 </context>
 <context>
@@ -4960,7 +4960,7 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation>&amp;amp;Minimaalne näide</translation>
+        <translation>&amp;Minimaalne näide</translation>
     </message>
 </context>
 <context>
@@ -4968,7 +4968,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation>&amp;amp;Minimaalne näide 2</translation>
+        <translation>&amp;Minimaalne näide 2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
@@ -4981,7 +4981,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation>&amp;amp;Protsessi käivitamine</translation>
+        <translation>&amp;Protsessi käivitamine</translation>
     </message>
 </context>
 <context>
@@ -5004,7 +5004,7 @@ on juba loendis.</translation>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Exporter</source>
-        <translation>&amp;amp;Registreeri faili eksportija</translation>
+        <translation>&amp;Registreeri faili eksportija</translation>
     </message>
 </context>
 <context>
@@ -5032,7 +5032,7 @@ on juba loendis.</translation>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Importer</source>
-        <translation>&amp;amp;Registreeri faili importija</translation>
+        <translation>&amp;Registreeri faili importija</translation>
     </message>
 </context>
 <context>
@@ -5040,7 +5040,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation>&amp;amp;Akna suuruse muutmine</translation>
+        <translation>&amp;Akna suuruse muutmine</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
@@ -5104,7 +5104,7 @@ on juba loendis.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Kolme punktiga viik</translation>
+        <translation>Joonista kolm punkti</translation>
     </message>
 </context>
 <context>
@@ -5120,7 +5120,7 @@ on juba loendis.</translation>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>&amp;amp;Tehingu kuulaja</translation>
+        <translation>&amp;Tehingu kuulaja</translation>
     </message>
 </context>
 <context>
@@ -5128,7 +5128,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation>&amp;amp;Vidinad</translation>
+        <translation>&amp;Vidinad</translation>
     </message>
 </context>
 <context>
@@ -5146,7 +5146,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation>&amp;amp;XML eksportimine</translation>
+        <translation>&amp;XML eksportimine</translation>
     </message>
 </context>
 <context>
@@ -5164,7 +5164,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation>&amp;amp;XML importimine</translation>
+        <translation>&amp;XML importimine</translation>
     </message>
 </context>
 <context>
@@ -5172,7 +5172,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation>&amp;amp;Stsenaariumi näited</translation>
+        <translation>&amp;Stsenaariumi näited</translation>
     </message>
 </context>
 <context>
@@ -5190,7 +5190,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>&amp;amp;Explodeeri</translation>
+        <translation>&amp;Explodeeri</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
@@ -5220,7 +5220,7 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Plahvatada ringid kahe poolringiga polügoonideks</translation>
+        <translation>Lõhu ringid kahe poolringiga polüjoonteks</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5230,7 +5230,7 @@ on juba loendis.</translation>
     <message>
         <location line="+80"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Teksti tähemärkide plahvatamine polügoonideks</translation>
+        <translation>Teksti tähemärkide lõhkumine polüjoonteks</translation>
     </message>
 </context>
 <context>
@@ -5238,7 +5238,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
-        <translation>&amp;amp;KKK (online)</translation>
+        <translation>&amp;KKK (online)</translation>
     </message>
 </context>
 <context>
@@ -5251,7 +5251,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;File</source>
-        <translation>&amp;amp;Faili</translation>
+        <translation>&amp;Faili</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -5311,7 +5311,7 @@ on juba loendis.</translation>
     <message>
         <location line="+15"/>
         <source>Unit:</source>
-        <translation>Üksus:</translation>
+        <translation>Ühik:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5665,7 +5665,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation>&amp;amp;Flip Horisontaalne</translation>
+        <translation>&amp;Flip Horisontaalne</translation>
     </message>
 </context>
 <context>
@@ -5673,7 +5673,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation>&amp;amp;Flip vertikaalne</translation>
+        <translation>&amp;Flip vertikaalne</translation>
     </message>
 </context>
 <context>
@@ -5696,7 +5696,7 @@ on juba loendis.</translation>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>&amp;amp;Flush Undo ajalugu</translation>
+        <translation>&amp;Flush Undo ajalugu</translation>
     </message>
 </context>
 <context>
@@ -5750,7 +5750,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation>&amp;amp;Foorum</translation>
+        <translation>&amp;Foorum</translation>
     </message>
 </context>
 <context>
@@ -5822,7 +5822,7 @@ on juba loendis.</translation>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation>Sallivus:</translation>
+        <translation>Tolerants:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5832,7 +5832,7 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation>Blokid</translation>
+        <translation>Plokid</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5987,27 +5987,27 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Liinitüübid ja liinide kaalud</translation>
+        <translation>Joonetüübid ja joone jämedused</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Vaikimisi rea kaal:</translation>
+        <translation>Vaikimisi joone jämedus:</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Joonetüübi mustrite skaleerimine joone kaalu järgi</translation>
+        <translation>Joonetüübi mustrite skaleerimine joone jämeduse järgi</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Mustriskaala joonkaalu jaoks 0.00mm:</translation>
+        <translation>Mustri skaala joone jämeduse 0.00mm jaoks:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation>Rakendada punktide suhtes joonte kaalu</translation>
+        <translation>Rakenda joone jämedust punktidele</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6067,7 +6067,7 @@ on juba loendis.</translation>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Luugi renderdamise aeg on lõppenud:</translation>
+        <translation>Viirutuse renderdamise ajalimiit:</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6107,12 +6107,12 @@ on juba loendis.</translation>
     <message>
         <location line="+9"/>
         <source>Screen-based lineweight scale factor:</source>
-        <translation>Ekraanipõhiste joonkaalude mõõtkava tegur:</translation>
+        <translation>Ekraanipõhise joone jämeduse skaalategur:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
-        <translation>Tegur, mida rakendatakse joonkaaludele, kui kuvatakse ekraanipõhiseid joonkaale (nt 2 kuvab ekraanipõhised joonkaalud kaks korda laiemana)</translation>
+        <translation>Tegur, mida rakendatakse joone jämedustele, kui kuvatakse ekraanipõhiseid joone jämedusi (nt 2 kuvab ekraanipõhised jooned kaks korda laiemana)</translation>
     </message>
     <message>
         <location line="+143"/>
@@ -6347,7 +6347,7 @@ on juba loendis.</translation>
     <message>
         <location line="+78"/>
         <source>Zoom Tools</source>
-        <translation>Zoom tööriistad</translation>
+        <translation>Suumi tööriistad</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6360,7 +6360,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation>Ruler font:</translation>
+        <translation>Joonlaua font:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -6495,7 +6495,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;amp;Viirutus</translation>
+        <translation>&amp;Viirutus</translation>
     </message>
 </context>
 <context>
@@ -6556,12 +6556,12 @@ on juba loendis.</translation>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Iga piiriobjekt peab olema joon, kaar, ring, ellipskaar, ellips, polügoon või spliin. Leitud:</translation>
+        <translation>Iga piiriobjekt peab olema joon, kaar, ring, ellipskaar, ellips, polüjoon või spliin. Leitud:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&amp;amp;Viirutus valikust</translation>
+        <translation>&amp;Viirutus valikust</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6574,7 +6574,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Help/Help.js" line="+60"/>
         <source>&amp;Help</source>
-        <translation>&amp;amp;Abi</translation>
+        <translation>&amp;Abi</translation>
     </message>
 </context>
 <context>
@@ -6582,7 +6582,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/HideAllBlocks/HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
-        <translation>&amp;amp;Peida kõik plokid</translation>
+        <translation>&amp;Peida kõik plokid</translation>
     </message>
 </context>
 <context>
@@ -6590,7 +6590,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation>&amp;amp;Peida kõik kihid</translation>
+        <translation>&amp;Peida kõik kihid</translation>
     </message>
 </context>
 <context>
@@ -6598,7 +6598,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation>&amp;amp;Import/eksport</translation>
+        <translation>&amp;Import/eksport</translation>
     </message>
 </context>
 <context>
@@ -6686,7 +6686,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation>&amp;amp;Sisesta baitkaart</translation>
+        <translation>&amp;Sisesta baitkaart</translation>
     </message>
 </context>
 <context>
@@ -6774,22 +6774,22 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Blokkide ülekirjutamine</translation>
+        <translation>Plokkide ülekirjutamine</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Olemasolevate kihtide&lt;br&gt;ülekirjutamine&lt;br&gt;joonisel koos&lt;br&gt;klippkaardilt pärit kihtidega</translation>
+        <translation>Olemasolevate kihtide&lt;br&gt;ülekirjutamine joonisel&lt;br&gt;lõikelaua kihtidega</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Olemasolevate plokkide&lt;br&gt;ülekirjutamine&lt;br&gt;joonistuses&lt;br&gt;blokkidega lõikelauast</translation>
+        <translation>Olemasolevate plokkide&lt;br&gt;ülekirjutamine joonisel&lt;br&gt;lõikelaua plokkidega</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
-        <translation>&amp;amp;Import</translation>
+        <translation>&amp;Impordi</translation>
     </message>
 </context>
 <context>
@@ -6807,7 +6807,7 @@ on juba loendis.</translation>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>&amp;amp;Impordipunktid</translation>
+        <translation>&amp;Impordipunktid</translation>
     </message>
 </context>
 <context>
@@ -6835,7 +6835,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation>&amp;amp;Lisa kohandatud 2D tsentroid</translation>
+        <translation>&amp;Lisa kohandatud 2D tsentroid</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6853,12 +6853,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>Määrake esimene rida</translation>
+        <translation>Määrake esimene joon</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>Määrake teine rida</translation>
+        <translation>Määrake teine joon</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -6868,7 +6868,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation>&amp;amp;Nurk</translation>
+        <translation>&amp;Nurk</translation>
     </message>
 </context>
 <context>
@@ -7043,7 +7043,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>&amp;amp;Polügooniline ala</translation>
+        <translation>&amp;Polügooniline ala</translation>
     </message>
 </context>
 <context>
@@ -7097,17 +7097,17 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Lahtine ala:</translation>
+        <translation>Viirutatud pindala:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation>Šabloonitud pindala kokku:</translation>
+        <translation>Viirutatud pindala kokku:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Erinevuselt šifreeritud ala:</translation>
+        <translation>Viirutatud pindala vahe:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7144,7 +7144,7 @@ on juba loendis.</translation>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Kohtas kohandatud laiusega mittetoetavat polügooni</translation>
+        <translation>Leiti toetamata kohandatud laiusega polüjoon</translation>
     </message>
     <message>
         <location line="-488"/>
@@ -7155,7 +7155,7 @@ on juba loendis.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Käsitlemata kuju luugisilmusest.</translation>
+        <translation>Käsitlemata kuju viirutuse kontuuris.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7165,7 +7165,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation>&amp;amp;Pindala tsentroid</translation>
+        <translation>&amp;Pindala tsentroid</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7208,7 +7208,7 @@ on juba loendis.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>&amp;amp;Suund / asimuut</translation>
+        <translation>&amp;Suund / asimuut</translation>
     </message>
 </context>
 <context>
@@ -7261,7 +7261,7 @@ on juba loendis.</translation>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation>2&amp;amp;D keskpunktid</translation>
+        <translation>2&amp;D keskpunktid</translation>
     </message>
 </context>
 <context>
@@ -7287,7 +7287,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation>&amp;amp;Centroid Kuulaja</translation>
+        <translation>&amp;Centroid Kuulaja</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7320,7 +7320,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation>&amp;amp;Kaugus üksusest üksuseni</translation>
+        <translation>&amp;Kaugus üksusest üksuseni</translation>
     </message>
 </context>
 <context>
@@ -7343,7 +7343,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>&amp;amp;Kaugus Üksus punktist</translation>
+        <translation>&amp;Kaugus Üksus punktist</translation>
     </message>
 </context>
 <context>
@@ -7381,7 +7381,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation>&amp;amp;Kaugus punktist punkti</translation>
+        <translation>&amp;Kaugus punktist punkti</translation>
     </message>
 </context>
 <context>
@@ -7394,7 +7394,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation>&amp;amp;Positsioon</translation>
+        <translation>&amp;Positsioon</translation>
     </message>
 </context>
 <context>
@@ -7402,7 +7402,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPol/InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation>&amp;amp;Polaarpositsioon</translation>
+        <translation>&amp;Polaarpositsioon</translation>
     </message>
 </context>
 <context>
@@ -7410,7 +7410,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation>&amp;amp;Suhteline polaarne asend</translation>
+        <translation>&amp;Suhteline polaarne asend</translation>
     </message>
 </context>
 <context>
@@ -7418,7 +7418,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation>&amp;amp;Suhteline asukoht</translation>
+        <translation>&amp;Suhteline asukoht</translation>
     </message>
 </context>
 <context>
@@ -7540,7 +7540,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation>&amp;amp;Summa 2D keskpunktide kaalutud</translation>
+        <translation>&amp;Summa 2D keskpunktide kaalutud</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7630,7 +7630,7 @@ on juba loendis.</translation>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Kohtas kohandatud laiusega mittetoetavat polügooni</translation>
+        <translation>Leiti toetamata kohandatud laiusega polüjoon</translation>
     </message>
     <message>
         <location line="+105"/>
@@ -7640,7 +7640,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation>&amp;amp;Traadi tsentroid</translation>
+        <translation>&amp;Traadi tsentroid</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7663,7 +7663,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Info</source>
-        <translation>&amp;amp;Info</translation>
+        <translation>&amp;Info</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
@@ -7872,7 +7872,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;amp;Sisesta plokk</translation>
+        <translation>&amp;Sisesta plokk</translation>
     </message>
 </context>
 <context>
@@ -7925,7 +7925,7 @@ on juba loendis.</translation>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Olemasolevate kihtide&lt;br&gt;ülekirjutamine&lt;br&gt;joonisel koos&lt;br&gt;klippkaardilt pärit kihtidega</translation>
+        <translation>Olemasolevate kihtide&lt;br&gt;ülekirjutamine joonisel&lt;br&gt;lõikelaua kihtidega</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7935,17 +7935,17 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Blokkide ülekirjutamine</translation>
+        <translation>Plokkide ülekirjutamine</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Olemasolevate plokkide&lt;br&gt;ülekirjutamine&lt;br&gt;joonistuses&lt;br&gt;blokkidega lõikelauast</translation>
+        <translation>Olemasolevate plokkide&lt;br&gt;ülekirjutamine joonisel&lt;br&gt;lõikelaua plokkidega</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;amp;Sisesta plokk</translation>
+        <translation>&amp;Sisesta plokk</translation>
     </message>
 </context>
 <context>
@@ -7953,7 +7953,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation>&amp;amp;Insert Script</translation>
+        <translation>&amp;Insert Script</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
@@ -7986,7 +7986,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>&amp;amp;Valiku inverteerimine</translation>
+        <translation>&amp;Valiku inverteerimine</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8075,7 +8075,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translation>&amp;amp;Isomeetriline projektsioon</translation>
+        <translation>&amp;Isomeetriline projektsioon</translation>
     </message>
 </context>
 <context>
@@ -8083,7 +8083,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
-        <translation>&amp;amp;Vasakpoolne projektsioon</translation>
+        <translation>&amp;Vasakpoolne projektsioon</translation>
     </message>
 </context>
 <context>
@@ -8091,7 +8091,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation>&amp;amp;Isomeetriline ruudustik välja lülitatud</translation>
+        <translation>&amp;Isomeetriline ruudustik välja lülitatud</translation>
     </message>
 </context>
 <context>
@@ -8099,7 +8099,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>&amp;amp;Parempoolne projektsioon</translation>
+        <translation>&amp;Parempoolne projektsioon</translation>
     </message>
 </context>
 <context>
@@ -8107,7 +8107,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation>&amp;amp;Ülemine projektsioon</translation>
+        <translation>&amp;Ülemine projektsioon</translation>
     </message>
 </context>
 <context>
@@ -8115,7 +8115,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsometricProjection.js" line="+49"/>
         <source>&amp;Isometric Projection</source>
-        <translation>&amp;amp;Isomeetriline projektsioon</translation>
+        <translation>&amp;Isomeetriline projektsioon</translation>
     </message>
 </context>
 <context>
@@ -8123,7 +8123,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation>&amp;amp;Isomeetriline vaade</translation>
+        <translation>&amp;Isomeetriline vaade</translation>
     </message>
 </context>
 <context>
@@ -8213,7 +8213,7 @@ on juba loendis.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Uute kihtide vaikimisi joonte kaal:</translation>
+        <translation>Uute kihtide vaikimisi joone jämedus:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -8223,7 +8223,7 @@ on juba loendis.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Vaikimisi joonte kaal kihi 0 jaoks:</translation>
+        <translation>Kihi 0 vaikimisi joone jämedus:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
@@ -8233,7 +8233,7 @@ on juba loendis.</translation>
     <message>
         <location line="+27"/>
         <source>&amp;Layer</source>
-        <translation>&amp;amp;Kiht</translation>
+        <translation>&amp;Kiht</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -8345,12 +8345,12 @@ on juba loendis.</translation>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Joonkaal:</translation>
+        <translation>Joone jämedus:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation>Linatüüp:</translation>
+        <translation>Joonetüüp:</translation>
     </message>
 </context>
 <context>
@@ -8358,7 +8358,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation>&amp;amp;Kiht</translation>
+        <translation>&amp;Kiht</translation>
     </message>
 </context>
 <context>
@@ -8377,7 +8377,7 @@ on juba loendis.</translation>
     <message>
         <location line="-54"/>
         <source>&amp;Layer List</source>
-        <translation>&amp;amp;Kihtide nimekiri</translation>
+        <translation>&amp;Kihtide nimekiri</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -8410,7 +8410,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>&amp;amp;Viitejoon</translation>
+        <translation>&amp;Viitejoon</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8428,7 +8428,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;amp;Viitejoon valitud tekstist</translation>
+        <translation>&amp;Viitejoon valitud tekstist</translation>
     </message>
 </context>
 <context>
@@ -8451,7 +8451,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>&amp;amp;Pikendada / lühendada</translation>
+        <translation>&amp;Pikendada / lühendada</translation>
     </message>
 </context>
 <context>
@@ -8459,12 +8459,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.js" line="+83"/>
         <source>Line Tools</source>
-        <translation>Line Tools (liinitööriistad)</translation>
+        <translation>Joone tööriistad</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Line</source>
-        <translation>&amp;amp;Rida</translation>
+        <translation>&amp;Joon</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
@@ -8474,12 +8474,12 @@ on juba loendis.</translation>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation>Liinisegment</translation>
+        <translation>Joonesegment</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation>Lõpmatu rida</translation>
+        <translation>Lõpmatu joon</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8512,12 +8512,12 @@ on juba loendis.</translation>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Redo segment</translation>
+        <translation>Segmendi taastamine</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation>Kasutage rea fikseeritud pikkust</translation>
+        <translation>Kasuta joone fikseeritud pikkust</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8537,7 +8537,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation>&amp;amp;Joon 2 punktist</translation>
+        <translation>&amp;Joon 2 punktist</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8575,7 +8575,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation>&amp;amp;Joon nurga alt</translation>
+        <translation>&amp;Joon nurga alt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8585,7 +8585,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation>Rea pikkus</translation>
+        <translation>Joone pikkus</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8613,12 +8613,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation>Esimene rida</translation>
+        <translation>Esimene joon</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation>Teine rida</translation>
+        <translation>Teine joon</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -8638,7 +8638,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation>&amp;amp;Nurga poolitaja</translation>
+        <translation>&amp;Nurga poolitaja</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8696,7 +8696,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>&amp;amp;Box Joint alates 2 punktist</translation>
+        <translation>&amp;Box Joint alates 2 punktist</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8739,7 +8739,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>2 &amp;amp;punktist lähtuv labajalgliigend</translation>
+        <translation>2 &amp;punktist lähtuv labajalgliigend</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8762,7 +8762,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation>&amp;amp;Vabakäeline joon</translation>
+        <translation>&amp;Vabakäeline joon</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8775,7 +8775,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Line</source>
-        <translation>&amp;amp;Horisontaalne joon</translation>
+        <translation>&amp;Horisontaalne joon</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8808,7 +8808,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation>&amp;amp;Ortogonaalne</translation>
+        <translation>&amp;Ortogonaalne</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8821,7 +8821,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
-        <translation>Valige rida</translation>
+        <translation>Valige joon</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8836,7 +8836,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation>&amp;amp;Ortogonaalne / Tangent</translation>
+        <translation>&amp;Ortogonaalne / Tangent</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8849,7 +8849,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation>&amp;amp;Paralleelne (koos kaugusega)</translation>
+        <translation>&amp;Paralleelne (koos kaugusega)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8877,7 +8877,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>&amp;amp;Paralleelne (läbi punkti)</translation>
+        <translation>&amp;Paralleelne (läbi punkti)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8918,7 +8918,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+77"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation>Valige alusjoon, kaar, ring, ellips või polügoon</translation>
+        <translation>Valige alusjoon, kaar, ring, ellips või polüjoon</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8958,7 +8958,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation>&amp;amp;Suhteline nurk</translation>
+        <translation>&amp;Suhteline nurk</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8999,7 +8999,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation>&amp;amp;Tangent (punkt, ring)</translation>
+        <translation>&amp;Tangent (punkt, ring)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9027,7 +9027,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>&amp;amp;Tangent (kaks ringi)</translation>
+        <translation>&amp;Tangent (kaks ringi)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9040,7 +9040,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineVertical/LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
-        <translation>&amp;amp;Vertikaalne joon</translation>
+        <translation>&amp;Vertikaalne joon</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9063,7 +9063,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation>&amp;amp;Ekraanipõhised liini tüübid</translation>
+        <translation>Ekraanipõhised joone&amp;tüübid</translation>
     </message>
 </context>
 <context>
@@ -9077,7 +9077,7 @@ on juba loendis.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation>Linetüüp</translation>
+        <translation>Joonetüüp</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9092,7 +9092,7 @@ on juba loendis.</translation>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>Liinitüüpide skaala vastab iga vaateakna skaalale</translation>
+        <translation>Joonetüüpide skaala vastab iga vaateakna skaalale</translation>
     </message>
 </context>
 <context>
@@ -9100,7 +9100,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation>&amp;amp;Kuulajad</translation>
+        <translation>&amp;Kuulajad</translation>
     </message>
 </context>
 <context>
@@ -9108,7 +9108,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation>&amp;amp;Lukusta kõik kihid</translation>
+        <translation>&amp;Lukusta kõik kihid</translation>
     </message>
 </context>
 <context>
@@ -9116,7 +9116,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation>&amp;amp;Lukusta suhteline nullpunkt</translation>
+        <translation>&amp;Lukusta suhteline nullpunkt</translation>
     </message>
 </context>
 <context>
@@ -9124,7 +9124,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/MathExamples.js" line="+51"/>
         <source>&amp;Mathematics</source>
-        <translation>&amp;amp;Matemaatika</translation>
+        <translation>&amp;Matemaatika</translation>
     </message>
 </context>
 <context>
@@ -9132,7 +9132,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation>Untitled</translation>
+        <translation>Ilma pealkirjata</translation>
     </message>
 </context>
 <context>
@@ -9163,7 +9163,7 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation>&amp;amp;Menüüd ja tööriistaribad</translation>
+        <translation>&amp;Menüüd ja tööriistaribad</translation>
     </message>
 </context>
 <context>
@@ -9201,7 +9201,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>&amp;amp;Peegel</translation>
+        <translation>&amp;Peegel</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9224,12 +9224,12 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;amp;Kustuta originaal</translation>
+        <translation>&amp;Kustuta originaal</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;amp;Hoidke originaal</translation>
+        <translation>&amp;Hoidke originaal</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -9239,7 +9239,7 @@ on juba loendis.</translation>
     <message>
         <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>&amp;amp;Kasutage praegust kihti ja atribuute</translation>
+        <translation>&amp;Kasutage praegust kihti ja atribuute</translation>
     </message>
 </context>
 <context>
@@ -9257,7 +9257,7 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation>&amp;amp;Muu</translation>
+        <translation>&amp;Muu</translation>
     </message>
 </context>
 <context>
@@ -9275,7 +9275,7 @@ on juba loendis.</translation>
     <message>
         <location line="+21"/>
         <source>&amp;Block</source>
-        <translation>&amp;amp;Plokk</translation>
+        <translation>&amp;Plokk</translation>
     </message>
 </context>
 <context>
@@ -9293,7 +9293,7 @@ on juba loendis.</translation>
     <message>
         <location line="+22"/>
         <source>De&amp;velopment</source>
-        <translation>&amp;amp;Arendus</translation>
+        <translation>&amp;Arendus</translation>
     </message>
 </context>
 <context>
@@ -9316,7 +9316,7 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;amp;Joonista</translation>
+        <translation>&amp;Joonista</translation>
     </message>
 </context>
 <context>
@@ -9334,7 +9334,7 @@ on juba loendis.</translation>
     <message>
         <location line="+21"/>
         <source>&amp;Import/Export</source>
-        <translation>&amp;amp;Import/eksport</translation>
+        <translation>&amp;Import/eksport</translation>
     </message>
 </context>
 <context>
@@ -9352,7 +9352,7 @@ on juba loendis.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Information</source>
-        <translation>&amp;amp;Teave</translation>
+        <translation>&amp;Teave</translation>
     </message>
 </context>
 <context>
@@ -9370,7 +9370,7 @@ on juba loendis.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Modify</source>
-        <translation>&amp;amp;Muuda</translation>
+        <translation>&amp;Muuda</translation>
     </message>
 </context>
 <context>
@@ -9388,7 +9388,7 @@ on juba loendis.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Select</source>
-        <translation>&amp;amp;Valige</translation>
+        <translation>&amp;Valige</translation>
     </message>
 </context>
 <context>
@@ -9401,7 +9401,7 @@ on juba loendis.</translation>
     <message>
         <location line="+14"/>
         <source>&amp;Offset</source>
-        <translation>&amp;Offset</translation>
+        <translation>&amp;Nihe</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -9426,7 +9426,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Modify</source>
-        <translation>&amp;amp;Muuda</translation>
+        <translation>&amp;Muuda</translation>
     </message>
 </context>
 <context>
@@ -9457,7 +9457,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation>&amp;amp;Muuda</translation>
+        <translation>&amp;Muuda</translation>
     </message>
 </context>
 <context>
@@ -9574,7 +9574,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Avatav joonistus:</translation>
+        <translation>Joonise avamine:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9644,7 +9644,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation>&amp;amp;Uus</translation>
+        <translation>&amp;Uus</translation>
     </message>
 </context>
 <context>
@@ -9652,7 +9652,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Window/NextWindow/NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
-        <translation>&amp;amp;Järgmine</translation>
+        <translation>&amp;Järgmine</translation>
     </message>
 </context>
 <context>
@@ -9681,7 +9681,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Offset (koos distantsiga)</translation>
+        <translation>Nihe (kaugusega)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9714,7 +9714,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Offset (läbi punkti)</translation>
+        <translation>Nihe (läbi punkti)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9732,7 +9732,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Avatud joonistus</translation>
+        <translation>Joonise avamine</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9742,7 +9742,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>&amp;amp;Avatud</translation>
+        <translation>&amp;Ava</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9850,17 +9850,17 @@ on juba loendis.</translation>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation>&amp;amp;Skaala:</translation>
+        <translation>&amp;Skaala:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>Offset X:</translation>
+        <translation>Nihe X:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Offset Y:</source>
-        <translation>Offset Y:</translation>
+        <translation>Nihe Y:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -9888,7 +9888,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>&amp;amp;Pan Zoom</translation>
+        <translation>&amp;Pan Zoom</translation>
     </message>
 </context>
 <context>
@@ -9901,7 +9901,7 @@ on juba loendis.</translation>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Kleebi</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9946,22 +9946,22 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Blokkide ülekirjutamine</translation>
+        <translation>Plokkide ülekirjutamine</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Olemasolevate kihtide&lt;br&gt;ülekirjutamine&lt;br&gt;joonisel koos&lt;br&gt;klippkaardilt pärit kihtidega</translation>
+        <translation>Olemasolevate kihtide&lt;br&gt;ülekirjutamine joonisel&lt;br&gt;lõikelaua kihtidega</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Olemasolevate plokkide&lt;br&gt;ülekirjutamine&lt;br&gt;joonistuses&lt;br&gt;blokkidega lõikelauast</translation>
+        <translation>Olemasolevate plokkide&lt;br&gt;ülekirjutamine joonisel&lt;br&gt;lõikelaua plokkidega</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>&amp;amp;Kleebi</translation>
+        <translation>&amp;Kleebi</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9974,7 +9974,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation>&amp;amp;PDF-eksport</translation>
+        <translation>&amp;PDF-eksport</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10000,7 +10000,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation>&amp;amp;Püsivad vidinad</translation>
+        <translation>&amp;Püsivad vidinad</translation>
     </message>
 </context>
 <context>
@@ -10013,7 +10013,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Point</source>
-        <translation>&amp;amp;Punkt</translation>
+        <translation>&amp;Punkt</translation>
     </message>
 </context>
 <context>
@@ -10026,7 +10026,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation>&amp;amp;Üks punkt</translation>
+        <translation>&amp;Üks punkt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10173,7 +10173,7 @@ on juba loendis.</translation>
     <message>
         <location line="+9"/>
         <source>Line</source>
-        <translation>Rida</translation>
+        <translation>Joon</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
@@ -10204,7 +10204,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Polyline</source>
-        <translation>&amp;amp;Polyline</translation>
+        <translation>&amp;Polüjoon</translation>
     </message>
 </context>
 <context>
@@ -10212,7 +10212,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Valige joon, kaar, ring, ellips, spline või polügoon, et jagada ülespoole</translation>
+        <translation>Valige tükeldatav joon, kaar, ring, ellips, spline või polüjoon</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10242,7 +10242,7 @@ on juba loendis.</translation>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Break Out Segment</translation>
+        <translation>Lõika segment välja</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
@@ -10314,12 +10314,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation>&amp;amp;Polüjoone murdmise sümbol 2 punktist</translation>
+        <translation>&amp;Polüjoone murdmise sümbol 2 punktist</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation>Joonistage 2 punktist polügooni murdesümbol</translation>
+        <translation>Joonistage 2 punktist polüjoone murdesümbol</translation>
     </message>
 </context>
 <context>
@@ -10357,7 +10357,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation>&amp;amp;Eelmine vaade</translation>
+        <translation>&amp;Eelmine vaade</translation>
     </message>
 </context>
 <context>
@@ -10365,7 +10365,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Window/PreviousWindow/PreviousWindowInit.js" line="+2"/>
         <source>&amp;Previous</source>
-        <translation>&amp;amp;Eelmine</translation>
+        <translation>&amp;Eelmine</translation>
     </message>
 </context>
 <context>
@@ -10373,7 +10373,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/Print/PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
-        <translation>&amp;amp;Prindi</translation>
+        <translation>&amp;Prindi</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10386,7 +10386,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation>&amp;amp;Prindi praegune vaade</translation>
+        <translation>&amp;Prindi praegune vaade</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10475,7 +10475,7 @@ on juba loendis.</translation>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation>Joonistamise skaala</translation>
+        <translation>Joonise mõõtkava</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10540,7 +10540,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>&amp;amp;Prindi eelvaade</translation>
+        <translation>&amp;Prindi eelvaade</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10558,7 +10558,7 @@ on juba loendis.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Projection</source>
-        <translation>&amp;amp;Projektsioon</translation>
+        <translation>&amp;Projektsioon</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -10748,12 +10748,12 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Käepide:</translation>
+        <translation>Pide:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>Liinitüübi skaala:</translation>
+        <translation>Joonetüübi skaala:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -10766,7 +10766,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation>&amp;amp;Qt</translation>
+        <translation>&amp;Qt</translation>
     </message>
 </context>
 <context>
@@ -10774,7 +10774,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>&amp;amp;Lõpeta</translation>
+        <translation>&amp;Lõpeta</translation>
     </message>
 </context>
 <context>
@@ -10810,12 +10810,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>&amp;amp;Tühjenda nimekiri</translation>
+        <translation>&amp;Tühjenda nimekiri</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>&amp;amp;Avatud Hiljutised</translation>
+        <translation>Ava &amp;hiljutised</translation>
     </message>
 </context>
 <context>
@@ -10823,7 +10823,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation>&amp;amp;Redo</translation>
+        <translation>&amp;Tee uuesti</translation>
     </message>
 </context>
 <context>
@@ -10831,7 +10831,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation>Liinitüübi määratluste uuesti laadimine</translation>
+        <translation>Joonetüüpide määratluste uuesti laadimine</translation>
     </message>
 </context>
 <context>
@@ -10839,7 +10839,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/RemoveBlock/RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
-        <translation>&amp;amp;Eemalda plokk</translation>
+        <translation>&amp;Eemalda plokk</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10852,7 +10852,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation>&amp;amp;Kustuta kiht</translation>
+        <translation>&amp;Kustuta kiht</translation>
     </message>
 </context>
 <context>
@@ -10860,7 +10860,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/RenameBlock/RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
-        <translation>&amp;amp;Bloki ümbernimetamine</translation>
+        <translation>Ploki ümber&amp;nimetamine</translation>
     </message>
 </context>
 <context>
@@ -10868,7 +10868,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation>&amp;amp;Vea teatamine</translation>
+        <translation>&amp;Vea teatamine</translation>
     </message>
 </context>
 <context>
@@ -10876,7 +10876,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation>&amp;amp;Tõlkevea teatamine</translation>
+        <translation>&amp;Tõlkevea teatamine</translation>
     </message>
 </context>
 <context>
@@ -10884,12 +10884,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation>Reset</translation>
+        <translation>Lähtesta</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation>&amp;amp;Reset / tühikäik</translation>
+        <translation>&amp;Lähtesta / jõudeolek</translation>
     </message>
 </context>
 <context>
@@ -10919,7 +10919,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation>&amp;amp;Piirake nurka või pikkust</translation>
+        <translation>&amp;Piirake nurka või pikkust</translation>
     </message>
 </context>
 <context>
@@ -10927,7 +10927,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation>&amp;amp;Piirangud horisontaalselt</translation>
+        <translation>&amp;Piirangud horisontaalselt</translation>
     </message>
 </context>
 <context>
@@ -10935,7 +10935,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation>&amp;amp;Piirangud välja lülitatud</translation>
+        <translation>&amp;Piirangud välja lülitatud</translation>
     </message>
 </context>
 <context>
@@ -10943,7 +10943,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation>&amp;amp;Piirata ortogonaalselt</translation>
+        <translation>&amp;Piirata ortogonaalselt</translation>
     </message>
 </context>
 <context>
@@ -10951,7 +10951,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation>&amp;amp;Vertikaalselt piirata</translation>
+        <translation>&amp;Vertikaalselt piirata</translation>
     </message>
 </context>
 <context>
@@ -10959,7 +10959,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>&amp;amp;Tagasi</translation>
+        <translation>&amp;Tagasi</translation>
     </message>
 </context>
 <context>
@@ -11027,7 +11027,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation>&amp;amp;Pöörake</translation>
+        <translation>&amp;Pöörake</translation>
     </message>
 </context>
 <context>
@@ -11060,7 +11060,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>&amp;amp;Pöörake kaks</translation>
+        <translation>&amp;Pöörake kaks</translation>
     </message>
 </context>
 <context>
@@ -11078,17 +11078,17 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;amp;Kustuta originaal</translation>
+        <translation>&amp;Kustuta originaal</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;amp;Hoidke originaal</translation>
+        <translation>&amp;Hoidke originaal</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;amp;Mitu koopiat</translation>
+        <translation>&amp;Mitu koopiat</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -11098,17 +11098,17 @@ on juba loendis.</translation>
     <message>
         <location line="+41"/>
         <source>Angle &amp;a:</source>
-        <translation>&amp;amp;Nurk a:</translation>
+        <translation>&amp;Nurk a:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation>&amp;amp;Nurk b:</translation>
+        <translation>&amp;Nurk b:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>&amp;amp;Kasutage praegust kihti ja atribuute</translation>
+        <translation>&amp;Kasutage praegust kihti ja atribuute</translation>
     </message>
 </context>
 <context>
@@ -11126,17 +11126,17 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;amp;Kustuta originaal</translation>
+        <translation>&amp;Kustuta originaal</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;amp;Hoidke originaal</translation>
+        <translation>&amp;Hoidke originaal</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;amp;Mitu koopiat</translation>
+        <translation>&amp;Mitu koopiat</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -11146,7 +11146,7 @@ on juba loendis.</translation>
     <message>
         <location line="+41"/>
         <source>&amp;Angle (a):</source>
-        <translation>&amp;amp;Nurk (a):</translation>
+        <translation>&amp;Nurk (a):</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11156,7 +11156,7 @@ on juba loendis.</translation>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>&amp;amp;Kasutage praegust kihti ja atribuute</translation>
+        <translation>&amp;Kasutage praegust kihti ja atribuute</translation>
     </message>
 </context>
 <context>
@@ -11189,7 +11189,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>&amp;amp;Ümmargune</translation>
+        <translation>&amp;Ümmargune</translation>
     </message>
 </context>
 <context>
@@ -11197,7 +11197,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation>Avatud skriptifail</translation>
+        <translation>Skriptifaili avamine</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11232,7 +11232,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation>&amp;amp;Skripti käivitamine</translation>
+        <translation>&amp;Skripti käivitamine</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -11320,7 +11320,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
-        <translation>&amp;amp;Salvesta</translation>
+        <translation>&amp;Salvesta</translation>
     </message>
 </context>
 <context>
@@ -11398,7 +11398,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation>&amp;amp;Salvesta kui...</translation>
+        <translation>&amp;Salvesta kui...</translation>
     </message>
 </context>
 <context>
@@ -11482,7 +11482,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;amp;Skaala</translation>
+        <translation>&amp;Skaala</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
@@ -11505,17 +11505,17 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;amp;Kustuta originaal</translation>
+        <translation>&amp;Kustuta originaal</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;amp;Hoidke originaal</translation>
+        <translation>&amp;Hoidke originaal</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;amp;Mitu koopiat</translation>
+        <translation>&amp;Mitu koopiat</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -11545,7 +11545,7 @@ on juba loendis.</translation>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>&amp;amp;Kasutage praegust kihti ja atribuute</translation>
+        <translation>&amp;Kasutage praegust kihti ja atribuute</translation>
     </message>
 </context>
 <context>
@@ -11579,7 +11579,7 @@ on juba loendis.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation>&amp;amp;Valige</translation>
+        <translation>&amp;Valige</translation>
     </message>
 </context>
 <context>
@@ -11587,7 +11587,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation>&amp;amp;Valige kõik</translation>
+        <translation>&amp;Valige kõik</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11600,7 +11600,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>&amp;amp;Valige plokkviited</translation>
+        <translation>&amp;Valige plokkviited</translation>
     </message>
 </context>
 <context>
@@ -11641,7 +11641,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>Käepidemega</translation>
+        <translation>Pideme järgi</translation>
     </message>
 </context>
 <context>
@@ -11649,12 +11649,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Valik käepideme järgi</translation>
+        <translation>Valik pideme järgi</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Käepide (kuuskant):</translation>
+        <translation>Pide (kuueteistkümnendarv):</translation>
     </message>
 </context>
 <context>
@@ -11692,7 +11692,7 @@ on juba loendis.</translation>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation>Sallivus:</translation>
+        <translation>Tolerants:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11702,7 +11702,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>(&amp;amp;De-)valige kontuur</translation>
+        <translation>(&amp;De-)valige kontuur</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11750,7 +11750,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(&amp;amp;De-)valige ristuvad üksused</translation>
+        <translation>(&amp;De-)valige ristuvad üksused</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11773,7 +11773,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>&amp;amp;Valige kihi üksused</translation>
+        <translation>&amp;Valige kihi üksused</translation>
     </message>
 </context>
 <context>
@@ -11811,7 +11811,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(&amp;amp;De-)valige kiht</translation>
+        <translation>(&amp;De-)valige kiht</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11864,7 +11864,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>(&amp;amp;De-)valige ristkülikukujuline ala</translation>
+        <translation>(&amp;De-)valige ristkülikukujuline ala</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11941,7 +11941,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation>&amp;amp;Suhtelise nulli määramine</translation>
+        <translation>&amp;Suhtelise nulli määramine</translation>
     </message>
 </context>
 <context>
@@ -11954,12 +11954,12 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Shape</source>
-        <translation>&amp;amp;Kuju</translation>
+        <translation>&amp;Kuju</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation>Loo polügoon</translation>
+        <translation>Loo polüjoon</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12021,7 +12021,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>&amp;amp;Polügoon (keskus, külg)</translation>
+        <translation>&amp;Polügoon (keskus, külg)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12064,7 +12064,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation>&amp;amp;Polügoon (külg, külg)</translation>
+        <translation>&amp;Polügoon (külg, külg)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12092,7 +12092,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>&amp;amp;Polügoon (keskus, nurk)</translation>
+        <translation>&amp;Polügoon (keskus, nurk)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12120,7 +12120,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>&amp;amp;Polügoon (2 külgpunkti)</translation>
+        <translation>&amp;Polügoon (2 külgpunkti)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12133,7 +12133,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation>&amp;amp;Ristkülik</translation>
+        <translation>&amp;Ristkülik</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12174,12 +12174,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation>Loo polügoon</translation>
+        <translation>Loo polüjoon</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>&amp;amp;Ristkülik koos suurusega</translation>
+        <translation>&amp;Ristkülik koos suurusega</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12192,7 +12192,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation>&amp;amp;Näita ainult aktiivset</translation>
+        <translation>&amp;Näita ainult aktiivset</translation>
     </message>
 </context>
 <context>
@@ -12200,7 +12200,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
-        <translation>&amp;amp;Näita kõiki plokke</translation>
+        <translation>&amp;Näita kõiki plokke</translation>
     </message>
 </context>
 <context>
@@ -12208,7 +12208,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>&amp;amp;Näita kõiki kihte</translation>
+        <translation>&amp;Näita kõiki kihte</translation>
     </message>
 </context>
 <context>
@@ -12221,7 +12221,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation>&amp;amp;Näita Readme</translation>
+        <translation>&amp;Näita Readme</translation>
     </message>
 </context>
 <context>
@@ -12242,7 +12242,7 @@ on juba loendis.</translation>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>&amp;amp;Snap</translation>
+        <translation>&amp;Snap</translation>
     </message>
 </context>
 <context>
@@ -12260,7 +12260,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation>&amp;amp;Auto</translation>
+        <translation>&amp;Auto</translation>
     </message>
 </context>
 <context>
@@ -12268,7 +12268,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation>&amp;amp;Keskus</translation>
+        <translation>&amp;Keskus</translation>
     </message>
 </context>
 <context>
@@ -12316,7 +12316,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation>&amp;amp;Koordinaat</translation>
+        <translation>&amp;Koordinaat</translation>
     </message>
 </context>
 <context>
@@ -12364,7 +12364,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
-        <translation>&amp;amp;Polaarkoordinaat</translation>
+        <translation>&amp;Polaarkoordinaat</translation>
     </message>
 </context>
 <context>
@@ -12372,7 +12372,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translation>&amp;amp;Kaugus</translation>
+        <translation>&amp;Kaugus</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
@@ -12415,7 +12415,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>&amp;amp;Distance Manual</translation>
+        <translation>&amp;Distance Manual</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12428,7 +12428,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>&amp;amp;End</translation>
+        <translation>&amp;End</translation>
     </message>
 </context>
 <context>
@@ -12436,7 +12436,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>&amp;amp;Vaba</translation>
+        <translation>&amp;Vaba</translation>
     </message>
 </context>
 <context>
@@ -12444,7 +12444,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation>&amp;amp;Võrk</translation>
+        <translation>&amp;Võrk</translation>
     </message>
 </context>
 <context>
@@ -12452,7 +12452,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>&amp;amp;Ristmik</translation>
+        <translation>&amp;Ristmik</translation>
     </message>
 </context>
 <context>
@@ -12485,7 +12485,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>&amp;amp;Ristmiku käsiraamat</translation>
+        <translation>&amp;Ristmiku käsiraamat</translation>
     </message>
 </context>
 <context>
@@ -12493,7 +12493,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>&amp;amp;Keskmine</translation>
+        <translation>&amp;Keskmine</translation>
     </message>
 </context>
 <context>
@@ -12501,7 +12501,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>&amp;amp;Keskmine käsiraamat</translation>
+        <translation>&amp;Keskmine käsiraamat</translation>
     </message>
 </context>
 <context>
@@ -12509,7 +12509,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>&amp;amp;Üksuse kohta</translation>
+        <translation>&amp;Üksuse kohta</translation>
     </message>
 </context>
 <context>
@@ -12525,7 +12525,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation>&amp;amp;Viide</translation>
+        <translation>&amp;Viide</translation>
     </message>
 </context>
 <context>
@@ -12541,7 +12541,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation>&amp;amp;Tangentsiaalne</translation>
+        <translation>&amp;Tangentsiaalne</translation>
     </message>
 </context>
 <context>
@@ -12549,7 +12549,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation>&amp;amp;X/Y punktidest</translation>
+        <translation>&amp;X/Y punktidest</translation>
     </message>
 </context>
 <context>
@@ -12557,7 +12557,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation>&amp;amp;Y/X punktidest</translation>
+        <translation>&amp;Y/X punktidest</translation>
     </message>
 </context>
 <context>
@@ -12570,7 +12570,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>&amp;amp;Spline</translation>
+        <translation>&amp;Spline</translation>
     </message>
 </context>
 <context>
@@ -12603,7 +12603,7 @@ on juba loendis.</translation>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation>Tick suletud spliini jaoks Tick for Closed Spline</translation>
+        <translation>Märkige suletud spline&apos;i jaoks</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12613,7 +12613,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>&amp;amp;Spline (kontrollpunktid)</translation>
+        <translation>&amp;Spline (kontrollpunktid)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12626,7 +12626,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation>Convert Straight Splines to Lines</translation>
+        <translation>Teisenda sirged spline&apos;id joonteks</translation>
     </message>
 </context>
 <context>
@@ -12680,7 +12680,7 @@ on juba loendis.</translation>
     <message>
         <location line="-12"/>
         <source>&amp;Status Bar</source>
-        <translation>&amp;amp;Staatuse riba</translation>
+        <translation>&amp;Staatuse riba</translation>
     </message>
 </context>
 <context>
@@ -12718,7 +12718,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>&amp;amp;Stretch</translation>
+        <translation>&amp;Venita</translation>
     </message>
 </context>
 <context>
@@ -12792,7 +12792,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation>&amp;amp;SVG import...</translation>
+        <translation>&amp;SVG import...</translation>
     </message>
 </context>
 <context>
@@ -12848,7 +12848,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation>&amp;amp;Tekst</translation>
+        <translation>&amp;Tekst</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12951,7 +12951,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>&amp;amp;Tekstiga joondatud viitejoon</translation>
+        <translation>&amp;Tekstiga joondatud viitejoon</translation>
     </message>
 </context>
 <context>
@@ -12971,7 +12971,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation>&amp;amp;Tekst mööda üksust</translation>
+        <translation>&amp;Tekst mööda üksust</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12989,62 +12989,62 @@ on juba loendis.</translation>
     <message>
         <location line="+275"/>
         <source>&amp;Undo</source>
-        <translation>&amp;amp;Undo</translation>
+        <translation>&amp;Võta tagasi</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation>&amp;amp;Redo</translation>
+        <translation>&amp;Tee uuesti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>&amp;amp;Lõika</translation>
+        <translation>&amp;Lõika</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation>&amp;amp;Koopia</translation>
+        <translation>&amp;Koopia</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>&amp;amp;Kleebi</translation>
+        <translation>&amp;Kleebi</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>&amp;amp;Paks</translation>
+        <translation>&amp;Paks</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation>&amp;amp;Kursiivne</translation>
+        <translation>&amp;Kursiivne</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation>&amp;amp;Rõhutage</translation>
+        <translation>&amp;Rõhutage</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>&amp;amp;Alaindeks</translation>
+        <translation>&amp;Alaindeks</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>&amp;amp;Ülaindeks</translation>
+        <translation>&amp;Ülaindeks</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation>&amp;amp;Värv...</translation>
+        <translation>&amp;Värv...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation>&amp;amp;Erimärgid...</translation>
+        <translation>&amp;Erimärgid...</translation>
     </message>
     <message>
         <location line="+349"/>
@@ -13191,7 +13191,7 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Kleebi</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -13281,7 +13281,7 @@ on juba loendis.</translation>
     <message>
         <location line="+29"/>
         <source>Top Right</source>
-        <translation>Top Right</translation>
+        <translation>Ülemine parempoolne</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13387,7 +13387,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>&amp;amp;Saada tagasi</translation>
+        <translation>&amp;Saada tagasi</translation>
     </message>
 </context>
 <context>
@@ -13395,7 +13395,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>&amp;amp;Tooge ettepoole</translation>
+        <translation>&amp;Tooge ettepoole</translation>
     </message>
 </context>
 <context>
@@ -13403,7 +13403,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Block/ToggleBlockVisibility/ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation>&amp;amp;Näkivus ümberlülitamine</translation>
+        <translation>&amp;Näkivus ümberlülitamine</translation>
     </message>
 </context>
 <context>
@@ -13411,7 +13411,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation>&amp;amp;Võrk</translation>
+        <translation>&amp;Võrk</translation>
     </message>
 </context>
 <context>
@@ -13419,7 +13419,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation>&amp;amp;Lukustuse staatuse muutmine</translation>
+        <translation>&amp;Lukustuse staatuse muutmine</translation>
     </message>
 </context>
 <context>
@@ -13427,7 +13427,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation>&amp;amp;Näkivus ümberlülitamine</translation>
+        <translation>&amp;Näkivus ümberlülitamine</translation>
     </message>
 </context>
 <context>
@@ -13489,7 +13489,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>&amp;amp;Fookus tööriistade maatriksil</translation>
+        <translation>&amp;Fookus tööriistade maatriksil</translation>
     </message>
 </context>
 <context>
@@ -13558,7 +13558,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
-        <translation>&amp;amp;Liikumine / kopeerimine</translation>
+        <translation>&amp;Liikumine / kopeerimine</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -13581,17 +13581,17 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;amp;Kustuta originaal</translation>
+        <translation>&amp;Kustuta originaal</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;amp;Hoidke originaal</translation>
+        <translation>&amp;Hoidke originaal</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;amp;Mitu koopiat</translation>
+        <translation>&amp;Mitu koopiat</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -13601,7 +13601,7 @@ on juba loendis.</translation>
     <message>
         <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>&amp;amp;Kasutage praegust kihti ja atribuute</translation>
+        <translation>&amp;Kasutage praegust kihti ja atribuute</translation>
     </message>
 </context>
 <context>
@@ -13615,7 +13615,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation>&amp;amp;Liikumine ja pööramine</translation>
+        <translation>&amp;Liikumine ja pööramine</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
@@ -13663,17 +13663,17 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;amp;Kustuta originaal</translation>
+        <translation>&amp;Kustuta originaal</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;amp;Hoidke originaal</translation>
+        <translation>&amp;Hoidke originaal</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;amp;Mitu koopiat</translation>
+        <translation>&amp;Mitu koopiat</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -13683,12 +13683,12 @@ on juba loendis.</translation>
     <message>
         <location line="+41"/>
         <source>&amp;Angle (a):</source>
-        <translation>&amp;amp;Nurk (a):</translation>
+        <translation>&amp;Nurk (a):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>&amp;amp;Kasutage praegust kihti ja atribuute</translation>
+        <translation>&amp;Kasutage praegust kihti ja atribuute</translation>
     </message>
 </context>
 <context>
@@ -13726,7 +13726,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>&amp;amp;Kärbi</translation>
+        <translation>&amp;Kärbi</translation>
     </message>
 </context>
 <context>
@@ -13734,7 +13734,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>&amp;amp;Trimmi mõlemad</translation>
+        <translation>&amp;Trimmi mõlemad</translation>
     </message>
 </context>
 <context>
@@ -13742,7 +13742,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation>&amp;amp;Stsenaariumi õpetused</translation>
+        <translation>&amp;Stsenaariumi õpetused</translation>
     </message>
 </context>
 <context>
@@ -13822,7 +13822,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation>&amp;amp;Undo</translation>
+        <translation>&amp;Võta tagasi</translation>
     </message>
 </context>
 <context>
@@ -13830,7 +13830,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>Joonistusüksus:</translation>
+        <translation>Joonise ühik:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13851,7 +13851,7 @@ on juba loendis.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>Joonistusüksus</translation>
+        <translation>Joonise ühik</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13979,7 +13979,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation>&amp;amp;Ava kõik kihid</translation>
+        <translation>&amp;Ava kõik kihid</translation>
     </message>
 </context>
 <context>
@@ -13987,7 +13987,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Tööriistade vaatamine</translation>
+        <translation>Vaate tööriistad</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13997,7 +13997,7 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>&amp;amp;Vaata</translation>
+        <translation>&amp;Vaata</translation>
     </message>
 </context>
 <context>
@@ -14005,7 +14005,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation>&amp;amp;Tööriistaribad ja vidinad</translation>
+        <translation>&amp;Tööriistaribad ja vidinad</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14097,7 +14097,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Help/Website/WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
-        <translation>&amp;amp;Külasta veebisaiti</translation>
+        <translation>&amp;Külasta veebisaiti</translation>
     </message>
 </context>
 <context>
@@ -14442,7 +14442,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Widgets/Widgets.js" line="+56"/>
         <source>&amp;Widgets</source>
-        <translation>&amp;amp;Vidinad</translation>
+        <translation>&amp;Vidinad</translation>
     </message>
 </context>
 <context>
@@ -14450,7 +14450,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
-        <translation>&amp;amp;Aken</translation>
+        <translation>&amp;Aken</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14463,7 +14463,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>&amp;amp;Akna suurendamine</translation>
+        <translation>&amp;Akna suurendamine</translation>
     </message>
 </context>
 <context>
@@ -14471,7 +14471,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>&amp;amp;Horisontaalne ehitusliin</translation>
+        <translation>&amp;Horisontaalne abijoon</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14484,7 +14484,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>&amp;amp;Vertikaalne ehitusliin</translation>
+        <translation>&amp;Vertikaalne abijoon</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14497,17 +14497,17 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation>Zoom</translation>
+        <translation>Suum</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation>Zoom tööriistad</translation>
+        <translation>Suumi tööriistad</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Zoom</source>
-        <translation>&amp;amp;Zoom</translation>
+        <translation>&amp;Suum</translation>
     </message>
 </context>
 <context>
@@ -14515,7 +14515,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation>&amp;amp;Suurendage</translation>
+        <translation>&amp;Suurendage</translation>
     </message>
 </context>
 <context>
@@ -14523,7 +14523,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>&amp;amp;Suurendage välja</translation>
+        <translation>&amp;Vähenda</translation>
     </message>
 </context>
 <context>
@@ -14536,7 +14536,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation>&amp;amp;Suurendage valiku juurde</translation>
+        <translation>&amp;Suurendage valiku juurde</translation>
     </message>
 </context>
 <context>
@@ -14587,7 +14587,7 @@ on juba loendis.</translation>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation>Blokid</translation>
+        <translation>Plokid</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14617,12 +14617,12 @@ on juba loendis.</translation>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation>Linetüübid</translation>
+        <translation>Joonetüübid</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation>Linetüüp</translation>
+        <translation>Joonetüüp</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14757,12 +14757,12 @@ on juba loendis.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>Nurgamõõtmed (2 rida)</translation>
+        <translation>Nurgamõõdud (2 joont)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Nurgamõõtmed (2 rida)</translation>
+        <translation>Nurgamõõt (2 joont)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14868,17 +14868,17 @@ on juba loendis.</translation>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation>Sallivus</translation>
+        <translation>Tolerants</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation>Rida</translation>
+        <translation>Jooned</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation>Rida</translation>
+        <translation>Joon</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14888,7 +14888,7 @@ on juba loendis.</translation>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation>Lõpmatu rida</translation>
+        <translation>Lõpmatu joon</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14918,7 +14918,7 @@ on juba loendis.</translation>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation>Polyline</translation>
+        <translation>Polüjoon</translation>
     </message>
     <message>
         <location line="+2"/>

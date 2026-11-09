@@ -276,7 +276,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="-1"/>
         <source>Pixel Unit</source>
-        <translation>Pixel unité</translation>
+        <translation>Unité pixel</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -421,7 +421,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Parent Id</translation>
+        <translation>ID parent</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -464,7 +464,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Poignée</translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -608,14 +608,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Affichage centre</translation>
+        <translation>Centre de la vue</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Affichage cible</translation>
+        <translation>Cible de la vue</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -625,7 +625,7 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation>Calques glacés</translation>
+        <translation>Calques gelés</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -678,7 +678,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation>Éteint est gelé</translation>
+        <translation>Désactivé signifie gelé</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -711,14 +711,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Min extents</translation>
+        <translation>Étendue min</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Max extents</translation>
+        <translation>Étendue max</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
@@ -748,7 +748,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Écart entre les lignes de dimension</translation>
+        <translation>Écart de la ligne de cote</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -758,7 +758,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation>Incrément de la ligne de dimension</translation>
+        <translation>Incrément de la ligne de cote</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -783,7 +783,7 @@
     <message>
         <location line="+9"/>
         <source>Text horizontal</source>
-        <translation>Texte horizontale</translation>
+        <translation>Texte horizontal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -813,7 +813,7 @@
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation>Format angular</translation>
+        <translation>Format angulaire</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,17 +1118,17 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Puissance aérienne</translation>
+        <translation>Ligne électrique aérienne</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Impureté</translation>
+        <translation>Eaux usées</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Levée impure</translation>
+        <translation>Refoulement eaux usées</translation>
     </message>
 </context>
 <context>
@@ -1146,7 +1146,7 @@
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation>Défaut</translation>
+        <translation>Par défaut</translation>
     </message>
     <message>
         <location line="+1"/>

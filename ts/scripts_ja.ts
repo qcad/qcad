@@ -86,7 +86,7 @@
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation>Qtは、&lt;a href=&apos;%1&apos;&gt;LGPL Open Source License&lt;/a&gt;のもとでQCADとともに出荷され、ユーザーとしてQtライブラリをあなたのプラットフォーム用に再コンパイルする権利を含むさまざまな権利を与えています。これを行うには、Qt ウェブサイト&lt;/a&gt;に示されている &lt;a href=&apos;%2&apos;&gt;documentation に従います。</translation>
+        <translation>Qtは、&lt;a href=&apos;%1&apos;&gt;LGPL オープンソースライセンス&lt;/a&gt;のもとでQCADとともに出荷されており、Qtライブラリをお使いのプラットフォーム用に再コンパイルする権利を含むさまざまな権利をユーザーであるあなたに与えています。これを行うには、&lt;a href=&apos;%2&apos;&gt;Qt ウェブサイトに掲載されているドキュメント&lt;/a&gt;に従ってください。</translation>
     </message>
     <message>
         <location line="+108"/>
@@ -123,7 +123,7 @@
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation>%1 は、 コンピュータ支援設計computer-aided design (CAD)のアプリケーションです。</translation>
+        <translation>%1 は、コンピュータ支援設計 (CAD) のアプリケーションです。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -637,7 +637,7 @@ QCADを再起動してください。</translation>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>無効な角度</translation>
+        <translation>無効な半径</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -667,7 +667,7 @@ QCADを再起動してください。</translation>
     <message>
         <location line="+24"/>
         <source>Solution:</source>
-        <translation>ソリューション:</translation>
+        <translation>解:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -827,7 +827,7 @@ QCADを再起動してください。</translation>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>ソリューション</translation>
+        <translation>解を選択</translation>
     </message>
     <message>
         <location line="+128"/>
@@ -843,7 +843,7 @@ QCADを再起動してください。</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>正接,点,半径</translation>
+        <translation>接線、点、半径(&amp;T)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -957,7 +957,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation>ファイルを移動できません:</translation>
+        <translation>ファイルを削除できません:</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
@@ -1316,7 +1316,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+51"/>
         <source>Leading or trailing spaces.</source>
-        <translation>上部または下部の余白。</translation>
+        <translation>先頭または末尾のスペース。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1383,7 +1383,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
-        <translation>内側のブロックを非表示</translation>
+        <translation>内部ブロックを非表示</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1429,7 +1429,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation>シーエスブイ</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1447,7 +1447,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation>シーエスブイ</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1727,7 +1727,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+107"/>
         <source>Invalid radius</source>
-        <translation>無効な角度</translation>
+        <translation>無効な半径</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1742,7 +1742,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+30"/>
         <source>Solution:</source>
-        <translation>ソリューション:</translation>
+        <translation>解:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1785,7 +1785,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>ソリューション</translation>
+        <translation>解を選択</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -1819,7 +1819,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation>ソリューション</translation>
+        <translation>解を選択</translation>
     </message>
     <message>
         <location line="+103"/>
@@ -1890,7 +1890,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation>ソリューション</translation>
+        <translation>解を選択</translation>
     </message>
     <message>
         <location line="+126"/>
@@ -1949,7 +1949,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Point on circle or radius</source>
-        <translation>円城の点または半径</translation>
+        <translation>円上の点または半径</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCPInit.js" line="+2"/>
@@ -1989,7 +1989,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw circle from center and radius</source>
-        <translation>中心及び半径半径から円を描画</translation>
+        <translation>中心及び半径から円を描画</translation>
     </message>
 </context>
 <context>
@@ -2053,7 +2053,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>ソリューション</translation>
+        <translation>解を選択</translation>
     </message>
     <message>
         <location line="+138"/>
@@ -2082,7 +2082,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>正接,点,半径</translation>
+        <translation>接線、点、半径(&amp;T)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2352,7 +2352,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation>ユニット &quot;%1&quot; が選択されました。何もしていない</translation>
+        <translation>単位 &quot;%1&quot; が選択されています。何もする必要はありません</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -2372,7 +2372,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation>開始:</translation>
+        <translation>変換元:</translation>
     </message>
     <message>
         <location line="+56"/>
@@ -2464,12 +2464,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation>開始します</translation>
+        <translation>開始:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Increment:</source>
-        <translation>増量</translation>
+        <translation>増分:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2553,7 +2553,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation>アングル</translation>
+        <translation>角度:</translation>
     </message>
 </context>
 <context>
@@ -2622,7 +2622,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>ブロック &quot;%1&quot; を編集中&lt;br&gt;終了したら &lt;i&gt;Block &gt; [Return to Main Drawing&lt;/i&gt; を選択。</translation>
+        <translation>ブロック &quot;%1&quot; を編集中&lt;br&gt;終了したら &lt;i&gt;ブロック &gt; メイン図面に戻る&lt;/i&gt; を選択</translation>
     </message>
 </context>
 <context>
@@ -2713,12 +2713,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation>線分情報（長さ固定）</translation>
+        <translation>線分に変換（長さ固定）</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation>線分情報（角度固定）</translation>
+        <translation>線分に変換（角度固定）</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2728,13 +2728,13 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation>弧のポリライン情報</translation>
+        <translation>弧セグメントのポリラインに変換</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation>線分のポリライン情報</translation>
+        <translation>線分セグメントのポリラインに変換</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -2749,7 +2749,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation>線分、ソリッド及びテキスト情報</translation>
+        <translation>線分、ソリッド及びテキストに変換</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2759,7 +2759,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation>線分情報</translation>
+        <translation>線分に変換</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2769,7 +2769,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation>エンティティ情報</translation>
+        <translation>エンティティに変換</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -3150,7 +3150,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+309"/>
         <source>Unit / Format</source>
-        <translation>ユニット/フォーマット</translation>
+        <translation>単位/フォーマット</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3381,7 +3381,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation>ドローイングツール</translation>
+        <translation>描画ツール</translation>
     </message>
 </context>
 <context>
@@ -3481,7 +3481,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>ドロー</translation>
+        <translation>描画(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -3549,12 +3549,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>ドローFmsレインズ</translation>
+        <translation>FMSレーンを描画(&amp;F)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>ドローFMSレーン(リブ)</translation>
+        <translation>FMSレーン（リブ）を描画</translation>
     </message>
 </context>
 <context>
@@ -3947,7 +3947,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation>ポリゴン：参照数5以下。</translation>
+        <translation>ポリゴン：参照数が5未満。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3960,7 +3960,7 @@ is already in the list.</source>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation>ポリライン、参照数2以下。</translation>
+        <translation>ポリライン、参照数が2未満。</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4045,7 +4045,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>何も鋳造していない。</translation>
+        <translation>何も描画されませんでした。</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -4140,7 +4140,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>CSV</source>
-        <translation>シーエスブイ</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -4168,7 +4168,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>ドローオーダー</translation>
+        <translation>描画順序</translation>
     </message>
 </context>
 <context>
@@ -4492,7 +4492,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>参照からブロックを選択</translation>
+        <translation>ブロック参照を選択</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
@@ -4831,12 +4831,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>ID %1 を持つ行が削除されました。</translation>
+        <translation>ID %1 の線分を削除しました</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>&lt;i&gt;Edit &gt; Undo&lt;/i&gt; で行の実体を復元することができます。</translation>
+        <translation>&lt;i&gt;編集 &gt; アンドゥ&lt;/i&gt; で線分エンティティを復元できます。</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4857,7 +4857,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation>ドローカラーズ</translation>
+        <translation>色を描画(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -4865,7 +4865,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>ドローフォント</translation>
+        <translation>フォントを描画(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -4977,7 +4977,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation>実行プロセス</translation>
+        <translation>プロセスを実行(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -5000,7 +5000,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Exporter</source>
-        <translation>レジスターファイルエクスポーター</translation>
+        <translation>ファイルエクスポーターを登録(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -5154,12 +5154,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation>インポートXML</translation>
+        <translation>XMLをインポート</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation>インポートXML</translation>
+        <translation>XMLをインポート(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -5387,7 +5387,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Add End Apex</translation>
+        <translation>End Apexの追加</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5402,12 +5402,12 @@ is already in the list.</source>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>ベースラインを超える鏡面塗装。</translation>
+        <translation>ベースラインを軸にペインターをミラーします。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>すべての鋳物を1つの操作にまとめる。</translation>
+        <translation>すべての描画を1つの操作にまとめます。</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5417,7 +5417,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>オープンフォルムにエンド・エイペックスを鋳造して終了。</translation>
+        <translation>オープンフォームでは End Apex を描画して終了します。</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5432,7 +5432,7 @@ is already in the list.</source>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>画家セットを選択します。</translation>
+        <translation>ペインターセットを選択します。</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5737,7 +5737,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>ドローグルーラップ</translation>
+        <translation>のりしろを描画</translation>
     </message>
 </context>
 <context>
@@ -5802,7 +5802,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Tolerance:</source>
-        <translation>公差がある</translation>
+        <translation>許容誤差:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6431,7 +6431,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation>外見</translation>
+        <translation>外観</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -6626,7 +6626,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Appearance</source>
-        <translation>外見</translation>
+        <translation>外観</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -6709,7 +6709,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation>インポート図面</translation>
+        <translation>図面をインポート</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -6729,7 +6729,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Rotation:</source>
-        <translation>回転させる</translation>
+        <translation>回転:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -6797,12 +6797,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>インポートポイント</translation>
+        <translation>点をインポート</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>インポートポイント</translation>
+        <translation>点をインポート(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -6876,7 +6876,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>エリア</translation>
+        <translation>面積</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -7046,7 +7046,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
-        <translation>選択しない。</translation>
+        <translation>選択されていません。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7183,7 +7183,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation>方向性</translation>
+        <translation>方向</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -7221,7 +7221,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation>エリア</translation>
+        <translation>面積</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7282,7 +7282,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation>セントロイドリストナー</translation>
+        <translation>セントロイドリスナー(&amp;L)</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7421,7 +7421,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation>選択しない。</translation>
+        <translation>選択されていません。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7485,7 +7485,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation>結果はゼロで除算されます。</translation>
+        <translation>結果はゼロ除算になります。</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -7553,7 +7553,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation>選択しない。</translation>
+        <translation>選択されていません。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7594,7 +7594,7 @@ is already in the list.</source>
     <message>
         <location line="+55"/>
         <source>Results in a division by zero.</source>
-        <translation>結果はゼロで除算されます。</translation>
+        <translation>結果はゼロ除算になります。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -7676,7 +7676,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation>小数点以下</translation>
+        <translation>小数点:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8086,7 +8086,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation>&amp;O 等間隔グリッド</translation>
+        <translation>&amp;O 等角グリッドをオフ</translation>
     </message>
 </context>
 <context>
@@ -8300,7 +8300,7 @@ is already in the list.</source>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation>層</translation>
+        <translation>画層</translation>
     </message>
     <message>
         <location line="+158"/>
@@ -8479,7 +8479,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>光線</translation>
+        <translation>放射線</translation>
     </message>
 </context>
 <context>
@@ -8661,7 +8661,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>ドローボックスジョイントのフィンガー、スロット、テノン</translation>
+        <translation>ボックスジョイントのフィンガー、スロット、テノンを描画</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8671,7 +8671,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Finger Width:</source>
-        <translation>指の幅</translation>
+        <translation>フィンガー幅:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8714,7 +8714,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>2点支持のダブテールジョイント</translation>
+        <translation>2点からのダブテールジョイント(&amp;D)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8734,7 +8734,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Dovetail グラデーション</translation>
+        <translation>ダブテールの勾配:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -9265,7 +9265,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>ブロック用工具</translation>
+        <translation>その他のブロックツール</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9311,7 +9311,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>ドロー</translation>
+        <translation>描画(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -9460,7 +9460,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation>インポートMOL</translation>
+        <translation>MOLをインポート</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9569,7 +9569,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>オープンされた図面:</translation>
+        <translation>図面を開いています:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9889,7 +9889,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>回転させる</translation>
+        <translation>回転:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
@@ -10240,7 +10240,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>改行セグメントを削除する</translation>
+        <translation>線のブレーク部分のセグメントを削除する</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10599,7 +10599,7 @@ is already in the list.</source>
     <message>
         <location line="+182"/>
         <source>Index</source>
-        <translation>目次</translation>
+        <translation>インデックス</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -11005,7 +11005,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>コピー枚数</translation>
+        <translation>コピーの数:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -11015,7 +11015,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation>アングル</translation>
+        <translation>角度:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -11091,12 +11091,12 @@ is already in the list.</source>
     <message>
         <location line="+41"/>
         <source>Angle &amp;a:</source>
-        <translation>アングルa</translation>
+        <translation>角度 a(&amp;A):</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation>アングルb</translation>
+        <translation>角度 b(&amp;B):</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -11205,12 +11205,12 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation>実行スクリプト</translation>
+        <translation>スクリプトを実行</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation>実行スクリプト</translation>
+        <translation>スクリプトを実行(&amp;U)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -11220,12 +11220,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>ランニングスクリプト</translation>
+        <translation>スクリプトを実行中</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; 次のスクリプトを実行しようとしています:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt; このスクリプトは、あなたの描画を変更したり、ファイルを変更または削除したり、あなたのネットワーク接続にアクセスしたりする可能性があります。&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt; 信頼できるソースからのスクリプトのみを実行することを強くお勧めします。&lt;/span&gt;&lt;/p&gt;&lt;/b&gt;&lt;/html&gt;。</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; 次のスクリプトを実行しようとしています:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt; このスクリプトは、あなたの図面を変更したり、ファイルを変更または削除したり、あなたのネットワーク接続にアクセスしたりする可能性があります。&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt; 信頼できるソースからのスクリプトのみを実行することを強くお勧めします。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11429,7 +11429,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;S 縮尺</translation>
+        <translation>&amp;S 拡大縮小</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -11444,7 +11444,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>コピー枚数</translation>
+        <translation>コピーの数:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -11488,7 +11488,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>縮尺オプション</translation>
+        <translation>拡大縮小オプション</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11939,12 +11939,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation>成形ツール</translation>
+        <translation>図形ツール</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Shape</source>
-        <translation>&amp;S 成形</translation>
+        <translation>&amp;S 図形</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
@@ -12531,7 +12531,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation>正接</translation>
+        <translation>接線(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -12898,7 +12898,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation>方向性</translation>
+        <translation>方向:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12918,7 +12918,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation>フィット感</translation>
+        <translation>フィット</translation>
     </message>
 </context>
 <context>
@@ -13044,7 +13044,7 @@ is already in the list.</source>
     <message>
         <location line="+140"/>
         <source>Degree</source>
-        <translation>角度</translation>
+        <translation>度</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13134,7 +13134,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation>ユニットのテキスト高さ</translation>
+        <translation>図面単位でのテキストの高さ</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -13385,7 +13385,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>&amp;F 全面に移動</translation>
+        <translation>&amp;F 前面に移動</translation>
     </message>
 </context>
 <context>
@@ -13409,7 +13409,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation>トグルロックステータス</translation>
+        <translation>ロック状態を切り替え(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -13479,7 +13479,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>フォーカス・オン・ツール・マトリックス</translation>
+        <translation>ツールマトリクスにフォーカス(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -13625,7 +13625,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>部数</translation>
+        <translation>コピーの数:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13951,12 +13951,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>描画ユニット</translation>
+        <translation>図面単位:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper unit:</source>
-        <translation>ペーパーユニット</translation>
+        <translation>用紙単位:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -14170,17 +14170,17 @@ is already in the list.</source>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation>ディグリー</translation>
+        <translation>度</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation>ほぼ均等</translation>
+        <translation>ほぼ等しい</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation>アングル</translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14200,7 +14200,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation>アイデンティティ</translation>
+        <translation>合同</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14215,7 +14215,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation>プロパティーライン</translation>
+        <translation>敷地境界線</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14235,7 +14235,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>立方体</translation>
+        <translation>3乗</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14337,7 +14337,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>デグ/分/秒</translation>
+        <translation>度/分/秒</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14352,7 +14352,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation>サーベイヤーユニット</translation>
+        <translation>測量単位</translation>
     </message>
     <message>
         <location line="-28"/>
@@ -14386,7 +14386,7 @@ is already in the list.</source>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation>インクルード 0&apos;0&quot;</translation>
+        <translation>0&apos;0&quot; を含める</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14402,12 +14402,12 @@ is already in the list.</source>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation>インクルード0&apos;、サプレス0&quot;</translation>
+        <translation>0&apos; を含め、0&quot; を省略</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation>インクルード0&quot;、サプレス0&apos;</translation>
+        <translation>0&quot; を含め、0&apos; を省略</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14445,7 +14445,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation>ウィンドウズ・ツール</translation>
+        <translation>ウィンドウツール</translation>
     </message>
 </context>
 <context>
@@ -14479,7 +14479,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw vertical construction line</source>
-        <translation>垂直方向の工事線を引く</translation>
+        <translation>垂直方向のコンストラクションラインを引く</translation>
     </message>
 </context>
 <context>
@@ -14747,12 +14747,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>角度寸法（2行）</translation>
+        <translation>角度寸法（2線）</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>角度寸法（2行）</translation>
+        <translation>角度寸法（2線）</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14883,12 +14883,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation>光線</translation>
+        <translation>放射線</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>光線</translation>
+        <translation>放射線</translation>
     </message>
     <message>
         <location line="+2"/>
