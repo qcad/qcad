@@ -1370,15 +1370,15 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>Widgety</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Seznam bloků</translation>
     </message>
@@ -1393,7 +1393,7 @@ Přejete si ho obnovit?</translation>
         <translation>Povolit střídavé barvy řádků</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>Aktuální blok</translation>
     </message>
@@ -6215,22 +6215,22 @@ již v seznamu je.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvýrazněné prvky si zachovají svou barvu a zobrazí se s rozmazanou září v barvě záře pro zvýraznění uvedené níže. Jinak se zobrazí v barvě zvýraznění.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít záře pro zvýraznění</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrané prvky si zachovají svou barvu a zobrazí se s rozmazanou září v barvě záře pro výběr uvedené níže. Jinak se zobrazí v barvě výběru.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít záře pro výběr</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8144,12 +8144,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Čtečka obrazovky:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokud se používá čtečka obrazovky, slouží klávesy se šipkami k procházení uživatelského rozhraní místo k posouvání výběru</translation>
     </message>
 </context>
 <context>
@@ -8167,22 +8167,22 @@ již v seznamu je.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Zjistit automaticky</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Výchozí)</translation>
+        <translation>(Výchozí)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Vždy předpokládat čtečku obrazovky</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikdy nepředpokládat čtečku obrazovky</translation>
     </message>
 </context>
 <context>
@@ -10704,7 +10704,22 @@ již v seznamu je.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Všechny soubory</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Vybrat soubor...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Vybrat soubor</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*RŮZNÉ*</translation>
     </message>
@@ -13440,6 +13455,16 @@ již v seznamu je.</translation>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Rozestup tlačítek:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Mezera mezi tlačítky panelu nástrojů vzhledem k výchozímu rozestupu (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13749,22 +13774,22 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Vzhled</translation>
+        <translation>Vzhled</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaticky (podle nastavení systému)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Tmavý</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Světlý</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -1369,14 +1369,14 @@ Do you wish to recover it?</source>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+56"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>ブロックリスト</translation>
     </message>
     <message>
-        <location line="-126"/>
+        <location line="-149"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -6197,22 +6197,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>ハイライト表示されたエンティティは元の色を保ち、下記のハイライト表示のハロー色によるぼかしたハローとともに表示されます。それ以外の場合は、ハイライト色で表示されます。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>ハイライト表示にハローを使用</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>選択したエンティティは元の色を保ち、下記の選択のハロー色によるぼかしたハローとともに表示されます。それ以外の場合は、選択色で表示されます。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>選択にハローを使用</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8136,12 +8136,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>スクリーンリーダー:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>スクリーンリーダーの使用中は、矢印キーは選択したエンティティを移動する代わりにユーザーインターフェースの操作に使われます</translation>
     </message>
 </context>
 <context>
@@ -8159,22 +8159,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>自動的に検出</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">（デフォルト）</translation>
+        <translation>（デフォルト）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>常にスクリーンリーダーがあるものとみなす</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>スクリーンリーダーがあるものとみなさない</translation>
     </message>
 </context>
 <context>
@@ -10567,12 +10567,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2114"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1782"/>
+        <location line="-1879"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10622,12 +10622,27 @@ is already in the list.</source>
         <translation>すべてのプロパティを表示する</translation>
     </message>
     <message>
-        <location line="+843"/>
+        <location line="+458"/>
+        <source>All Files</source>
+        <translation>すべてのファイル</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>ファイルを選択...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>ファイルを選択</translation>
+    </message>
+    <message>
+        <location line="+425"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="-910"/>
+        <location line="-1007"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -10652,7 +10667,7 @@ is already in the list.</source>
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="+432"/>
+        <location line="+529"/>
         <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13422,6 +13437,16 @@ is already in the list.</source>
         <source>px</source>
         <translation>ピクセル</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>ボタンの間隔:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>ツールバーのボタン同士の間隔。デフォルトの間隔 (100%) に対する割合</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13731,22 +13756,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">外見</translation>
+        <translation>外観</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>自動 (システム設定に従う)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>ダーク</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>ライト</translation>
     </message>
     <message>
         <location line="+17"/>

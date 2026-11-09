@@ -1368,15 +1368,15 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>Widget</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Daftar Blok</translation>
     </message>
@@ -1391,7 +1391,7 @@ Apakah Anda ingin memulihkannya?</translation>
         <translation>Mengaktifkan warna baris bergantian</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>Blok saat ini</translation>
     </message>
@@ -6207,22 +6207,22 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entitas yang disorot mempertahankan warnanya dan ditampilkan dengan halo kabur dalam warna halo sorotan di bawah ini. Jika tidak, entitas ditampilkan dalam warna sorotan.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Gunakan halo untuk sorotan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entitas yang dipilih mempertahankan warnanya dan ditampilkan dengan halo kabur dalam warna halo seleksi di bawah ini. Jika tidak, entitas ditampilkan dalam warna seleksi.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Gunakan halo untuk seleksi</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8136,12 +8136,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pembaca layar:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selama pembaca layar digunakan, tombol panah menavigasi antarmuka pengguna, bukan memindahkan seleksi</translation>
     </message>
 </context>
 <context>
@@ -8159,22 +8159,22 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Deteksi secara otomatis</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Default)</translation>
+        <translation>(Default)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Selalu anggap ada pembaca layar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Jangan pernah anggap ada pembaca layar</translation>
     </message>
 </context>
 <context>
@@ -10692,7 +10692,22 @@ sudah ada dalam daftar.</translation>
         <translation>Tidak</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Semua File</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Pilih file...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Pilih File</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*VARIASI*</translation>
     </message>
@@ -13422,6 +13437,16 @@ sudah ada dalam daftar.</translation>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Jarak antartombol:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Jarak antara tombol-tombol pada bilah alat, relatif terhadap jarak default (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13731,22 +13756,22 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Penampilan</translation>
+        <translation>Penampilan</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Otomatis (ikuti pengaturan sistem)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Gelap</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Terang</translation>
     </message>
     <message>
         <location line="+17"/>

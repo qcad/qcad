@@ -1370,15 +1370,15 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>Εργαλεία</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Λίστα μπλοκ</translation>
     </message>
@@ -1393,7 +1393,7 @@ Do you wish to recover it?</source>
         <translation>Ενεργοποίηση εναλλασσόμενων χρωμάτων σειρών</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>Τρέχον μπλοκ</translation>
     </message>
@@ -6207,42 +6207,42 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Halos</source>
-        <translation>Φωτοστέφανα</translation>
+        <translation>Λάμψη</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Οι επισημασμένες οντότητες διατηρούν το χρώμα τους και εμφανίζονται με μια θολή λάμψη στο χρώμα λάμψης επισήμανσης που ορίζεται παρακάτω. Διαφορετικά εμφανίζονται στο χρώμα επισήμανσης.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση λάμψης για την επισήμανση</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Οι επιλεγμένες οντότητες διατηρούν το χρώμα τους και εμφανίζονται με μια θολή λάμψη στο χρώμα λάμψης επιλογής που ορίζεται παρακάτω. Διαφορετικά εμφανίζονται στο χρώμα επιλογής.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση λάμψης για την επιλογή</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Halo size (px):</source>
-        <translation>Μέγεθος φωτοστέφανου (px):</translation>
+        <translation>Μέγεθος λάμψης (px):</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Halo color for highlighting:</source>
-        <translation>Χρώμα φωτοστέφανου για επισήμανση:</translation>
+        <translation>Χρώμα λάμψης για επισήμανση:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Halo color for selection:</source>
-        <translation>Χρώμα φωτοστέφανου για επιλογή:</translation>
+        <translation>Χρώμα λάμψης για επιλογή:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -8141,12 +8141,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Πρόγραμμα ανάγνωσης οθόνης:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Όσο χρησιμοποιείται πρόγραμμα ανάγνωσης οθόνης, τα πλήκτρα βέλους χρησιμεύουν για την πλοήγηση στη διεπαφή χρήστη αντί για τη μετακίνηση της επιλογής</translation>
     </message>
 </context>
 <context>
@@ -8164,22 +8164,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτόματος εντοπισμός</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Προεπιλογή)</translation>
+        <translation>(Προεπιλογή)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Να θεωρείται πάντα ότι υπάρχει πρόγραμμα ανάγνωσης οθόνης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Να μη θεωρείται ποτέ ότι υπάρχει πρόγραμμα ανάγνωσης οθόνης</translation>
     </message>
 </context>
 <context>
@@ -10699,7 +10699,22 @@ is already in the list.</source>
         <translation>Όχι</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Όλα τα αρχεία</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Επιλογή αρχείου...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Επιλογή αρχείου</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*ΔΙΑΦΟΡΕΣ*</translation>
     </message>
@@ -13432,6 +13447,16 @@ is already in the list.</source>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Απόσταση κουμπιών:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Απόσταση μεταξύ των κουμπιών μιας γραμμής εργαλείων, σε σχέση με την προεπιλεγμένη απόσταση (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13741,22 +13766,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Εμφάνιση</translation>
+        <translation>Εμφάνιση</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτόματη (ακολουθεί τη ρύθμιση του συστήματος)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Σκούρα</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανοιχτόχρωμη</translation>
     </message>
     <message>
         <location line="+17"/>

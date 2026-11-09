@@ -1368,15 +1368,15 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>小工具</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>塊狀列表</translation>
     </message>
@@ -1391,7 +1391,7 @@ Do you wish to recover it?</source>
         <translation>啟用交替的行色</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>目前圖塊</translation>
     </message>
@@ -6207,22 +6207,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>醒目提示的實體會保留其顏色，並以下方的醒目提示光暈顏色顯示模糊的光暈。否則會以醒目提示顏色顯示。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>使用光暈進行醒目提示</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>已選取的實體會保留其顏色，並以下方的選取光暈顏色顯示模糊的光暈。否則會以選取顏色顯示。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>使用光暈顯示選取</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8136,12 +8136,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>螢幕閱讀器：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>使用螢幕閱讀器時，方向鍵用於在使用者介面中導覽，而不是移動選取的實體</translation>
     </message>
 </context>
 <context>
@@ -8159,22 +8159,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>自動偵測</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(預設)</translation>
+        <translation>(預設)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>一律視為有螢幕閱讀器</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>一律視為沒有螢幕閱讀器</translation>
     </message>
 </context>
 <context>
@@ -10642,7 +10642,22 @@ is already in the list.</source>
         <translation>沒有</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>所有檔案</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>選擇檔案...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>選擇檔案</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*差異*</translation>
     </message>
@@ -13422,6 +13437,16 @@ is already in the list.</source>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>按鈕間距：</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>工具列按鈕之間的間距，相對於預設間距 (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13731,22 +13756,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">外觀</translation>
+        <translation>外觀</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>自動（依照系統設定）</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>深色</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>淺色</translation>
     </message>
     <message>
         <location line="+17"/>

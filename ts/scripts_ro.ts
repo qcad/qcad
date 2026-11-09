@@ -1372,15 +1372,15 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>Widgeturi</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Lista de blocuri</translation>
     </message>
@@ -1395,7 +1395,7 @@ Doriți să îl recuperați?</translation>
         <translation>Activați culorile alternante ale rândurilor</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>Blocul curent</translation>
     </message>
@@ -6217,22 +6217,22 @@ este deja în listă.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entitățile evidențiate își păstrează culoarea și sunt afișate cu un halou estompat în culoarea haloului pentru evidențiere de mai jos. În caz contrar, sunt afișate în culoarea de evidențiere.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizați halouri pentru evidențiere</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entitățile selectate își păstrează culoarea și sunt afișate cu un halou estompat în culoarea haloului pentru selecție de mai jos. În caz contrar, sunt afișate în culoarea de selecție.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizați halouri pentru selecție</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8146,12 +8146,12 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cititor de ecran:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Cât timp este utilizat un cititor de ecran, tastele săgeată navighează prin interfața cu utilizatorul în loc să deplaseze selecția</translation>
     </message>
 </context>
 <context>
@@ -8169,22 +8169,22 @@ este deja în listă.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Detectare automată</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(implicit)</translation>
+        <translation>(implicit)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Presupuneți întotdeauna un cititor de ecran</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Nu presupuneți niciodată un cititor de ecran</translation>
     </message>
 </context>
 <context>
@@ -10706,7 +10706,22 @@ este deja în listă.</translation>
         <translation>Nu</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Toate fișierele</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Alegeți fișierul...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Alegeți fișierul</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*VARIANTE*</translation>
     </message>
@@ -13442,6 +13457,16 @@ este deja în listă.</translation>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Spațierea butoanelor:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Spațiul dintre butoanele unei bare de instrumente, raportat la spațierea implicită (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13751,22 +13776,22 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Aspect</translation>
+        <translation>Aspect</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Automat (conform setării sistemului)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Întunecat</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminos</translation>
     </message>
     <message>
         <location line="+17"/>

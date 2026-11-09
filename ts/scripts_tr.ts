@@ -1368,15 +1368,15 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>Widgetler</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Blok Listesi</translation>
     </message>
@@ -1391,7 +1391,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Alternatif satır renklerini etkinleştir</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>Geçerli blok</translation>
     </message>
@@ -6207,22 +6207,22 @@ zaten listede.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vurgulanan varlıklar renklerini korur ve aşağıdaki vurgulama hale renginde bulanık bir hale ile görüntülenir. Aksi takdirde vurgulama renginde görüntülenirler.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Vurgulama için hale kullan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçili varlıklar renklerini korur ve aşağıdaki seçim hale renginde bulanık bir hale ile görüntülenir. Aksi takdirde seçim renginde görüntülenirler.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçim için hale kullan</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8136,12 +8136,12 @@ zaten listede.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran okuyucu:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir ekran okuyucu kullanılırken ok tuşları seçimi taşımak yerine kullanıcı arayüzünde gezinir</translation>
     </message>
 </context>
 <context>
@@ -8159,22 +8159,22 @@ zaten listede.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik algıla</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Varsayılan)</translation>
+        <translation>(Varsayılan)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Her zaman ekran okuyucu olduğunu varsay</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiçbir zaman ekran okuyucu olduğunu varsayma</translation>
     </message>
 </context>
 <context>
@@ -10692,7 +10692,22 @@ zaten listede.</translation>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Tüm Dosyalar</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Dosya seç...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Dosya Seç</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*DEĞİŞKENLER*</translation>
     </message>
@@ -13422,6 +13437,16 @@ zaten listede.</translation>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Düğme aralığı:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Bir araç çubuğunun düğmeleri arasındaki boşluk, varsayılan aralığa (%100) göre</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13731,22 +13756,22 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Görünüş</translation>
+        <translation>Görünüş</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik (sistem ayarına uy)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Koyu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Açık</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -1370,15 +1370,15 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Lohkoluettelo</translation>
     </message>
@@ -1393,7 +1393,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Salli vaihtelevat rivien värit</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>Nykyinen lohko</translation>
     </message>
@@ -6202,22 +6202,22 @@ on jo luettelossa.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Korostetut kohteet säilyttävät värinsä ja ne näytetään sumennetulla halolla, jonka väri on alla oleva korostuksen halon väri. Muuten ne näytetään korostusvärillä.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä haloja korostukseen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitut kohteet säilyttävät värinsä ja ne näytetään sumennetulla halolla, jonka väri on alla oleva valinnan halon väri. Muuten ne näytetään valintavärillä.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä haloja valintaan</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8141,12 +8141,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytönlukija:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kun näytönlukija on käytössä, nuolinäppäimillä siirrytään käyttöliittymässä valinnan siirtämisen sijaan</translation>
     </message>
 </context>
 <context>
@@ -8164,22 +8164,22 @@ on jo luettelossa.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunnista automaattisesti</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Oletus)</translation>
+        <translation>(Oletus)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Oleta aina, että näytönlukija on käytössä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Älä koskaan oleta, että näytönlukija on käytössä</translation>
     </message>
 </context>
 <context>
@@ -10624,12 +10624,12 @@ on jo luettelossa.</translation>
         <translation>Näytä mittatyylin lisäohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2114"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1782"/>
+        <location line="-1879"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10704,7 +10704,22 @@ on jo luettelossa.</translation>
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+432"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Kaikki tiedostot</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Valitse tiedosto...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Valitse tiedosto</translation>
+    </message>
+    <message>
+        <location line="+425"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -13432,6 +13447,16 @@ on jo luettelossa.</translation>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Painikkeiden väli:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Työkalurivin painikkeiden välinen tila suhteessa oletusväliin (100 %)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13741,22 +13766,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Ulkoasu</translation>
+        <translation>Ulkoasu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaattinen (seuraa järjestelmän asetusta)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Tumma</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaalea</translation>
     </message>
     <message>
         <location line="+17"/>

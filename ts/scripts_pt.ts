@@ -1371,14 +1371,14 @@ Você deseja recuperá-lo?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+56"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Lista de blocos</translation>
     </message>
     <message>
-        <location line="-126"/>
+        <location line="-149"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -6202,22 +6202,22 @@ já se encontra na lista.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>As entidades realçadas mantêm a sua cor e são exibidas com um halo desfocado na cor do halo de realce abaixo. Caso contrário, são exibidas na cor de realce.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar halos para realce</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>As entidades selecionadas mantêm a sua cor e são exibidas com um halo desfocado na cor do halo de seleção abaixo. Caso contrário, são exibidas na cor de seleção.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar halos para seleção</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8141,12 +8141,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Leitor de tela:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Enquanto um leitor de tela está em uso, as teclas de seta navegam pela interface de usuário em vez de mover a seleção</translation>
     </message>
 </context>
 <context>
@@ -8164,22 +8164,22 @@ já se encontra na lista.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Detectar automaticamente</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Padrão)</translation>
+        <translation>(Padrão)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Sempre presumir um leitor de tela</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Nunca presumir um leitor de tela</translation>
     </message>
 </context>
 <context>
@@ -10574,12 +10574,12 @@ já se encontra na lista.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2114"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1782"/>
+        <location line="-1879"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10629,12 +10629,27 @@ já se encontra na lista.</translation>
         <translation>Mostrar todas as propriedades</translation>
     </message>
     <message>
-        <location line="+843"/>
+        <location line="+458"/>
+        <source>All Files</source>
+        <translation>Todos os arquivos</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Escolher arquivo...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Escolher arquivo</translation>
+    </message>
+    <message>
+        <location line="+425"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-910"/>
+        <location line="-1007"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -10659,7 +10674,7 @@ já se encontra na lista.</translation>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+432"/>
+        <location line="+529"/>
         <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13432,6 +13447,16 @@ já se encontra na lista.</translation>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Espaçamento dos botões:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Espaço entre os botões de uma barra de ferramentas, em relação ao espaçamento padrão (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13741,22 +13766,22 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Aparência</translation>
+        <translation>Aparência</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Automático (seguir a configuração do sistema)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Escuro</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Claro</translation>
     </message>
     <message>
         <location line="+17"/>

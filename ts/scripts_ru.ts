@@ -1373,14 +1373,14 @@ Do you wish to recover it?</source>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+56"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Список блоков</translation>
     </message>
     <message>
-        <location line="-126"/>
+        <location line="-149"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -6207,22 +6207,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсвеченные объекты сохраняют свой цвет и отображаются с размытым ореолом заданного ниже цвета ореола для подсветки. В противном случае они отображаются цветом подсветки.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать ореолы для подсветки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выделенные объекты сохраняют свой цвет и отображаются с размытым ореолом заданного ниже цвета ореола для выделения. В противном случае они отображаются цветом выделения.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать ореолы для выделения</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8146,12 +8146,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Программа чтения с экрана:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Пока используется программа чтения с экрана, клавиши со стрелками служат для навигации по интерфейсу пользователя, а не для перемещения выделенных объектов</translation>
     </message>
 </context>
 <context>
@@ -8169,22 +8169,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Определять автоматически</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(По умолчанию)</translation>
+        <translation>(По умолчанию)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Всегда считать, что программа чтения с экрана используется</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Никогда не считать, что программа чтения с экрана используется</translation>
     </message>
 </context>
 <context>
@@ -10581,12 +10581,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2114"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1782"/>
+        <location line="-1879"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10661,7 +10661,22 @@ is already in the list.</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+432"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Все файлы</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Выбрать файл...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Выбор файла</translation>
+    </message>
+    <message>
+        <location line="+425"/>
         <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13442,6 +13457,16 @@ is already in the list.</source>
         <source>px</source>
         <translation>пикс.</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Расстояние между кнопками:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Промежуток между кнопками панели инструментов относительно промежутка по умолчанию (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13751,22 +13776,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Внешний вид</translation>
+        <translation>Внешний вид</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Авто (согласно системной настройке)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Тёмный</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Светлый</translation>
     </message>
     <message>
         <location line="+17"/>

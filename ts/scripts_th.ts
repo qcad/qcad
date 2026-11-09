@@ -1368,15 +1368,15 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>วิดเจ็ต</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>รายการบล็อก</translation>
     </message>
@@ -1391,7 +1391,7 @@ Do you wish to recover it?</source>
         <translation>เปิดใช้สีแถวสลับกัน</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>บล็อกปัจจุบัน</translation>
     </message>
@@ -6207,22 +6207,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>วัตถุที่ไฮไลต์จะคงสีเดิมไว้และแสดงพร้อมฮาโลแบบเบลอในสีฮาโลสำหรับการไฮไลต์ด้านล่าง มิฉะนั้นจะแสดงด้วยสีไฮไลต์</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ฮาโลสำหรับการไฮไลต์</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>วัตถุที่เลือกจะคงสีเดิมไว้และแสดงพร้อมฮาโลแบบเบลอในสีฮาโลสำหรับการเลือกด้านล่าง มิฉะนั้นจะแสดงด้วยสีการเลือก</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ฮาโลสำหรับการเลือก</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8136,12 +8136,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>โปรแกรมอ่านหน้าจอ:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>ขณะใช้งานโปรแกรมอ่านหน้าจอ ปุ่มลูกศรจะใช้นำทางในส่วนติดต่อผู้ใช้แทนการย้ายวัตถุที่เลือก</translation>
     </message>
 </context>
 <context>
@@ -8159,22 +8159,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>ตรวจหาโดยอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(ค่าเริ่มต้น)</translation>
+        <translation>(ค่าเริ่มต้น)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>ถือว่ามีโปรแกรมอ่านหน้าจอเสมอ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>ไม่ถือว่ามีโปรแกรมอ่านหน้าจอเลย</translation>
     </message>
 </context>
 <context>
@@ -10692,7 +10692,22 @@ is already in the list.</source>
         <translation>ไม่ใช่</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>ไฟล์ทั้งหมด</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>เลือกไฟล์...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>เลือกไฟล์</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*แตกต่างกัน*</translation>
     </message>
@@ -13422,6 +13437,16 @@ is already in the list.</source>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>ระยะห่างระหว่างปุ่ม:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>ระยะห่างระหว่างปุ่มของแถบเครื่องมือ เทียบกับระยะห่างเริ่มต้น (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13731,22 +13756,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">การแสดงผล</translation>
+        <translation>การแสดงผล</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>อัตโนมัติ (ตามการตั้งค่าระบบ)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>มืด</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>สว่าง</translation>
     </message>
     <message>
         <location line="+17"/>

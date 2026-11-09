@@ -1371,14 +1371,14 @@ Wilt u deze herstellen?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+56"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Blokkenlijst</translation>
     </message>
     <message>
-        <location line="-126"/>
+        <location line="-149"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -6202,22 +6202,22 @@ is al in de lijst.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemarkeerde objecten behouden hun kleur en worden weergegeven met een vervaagde halo in de onderstaande halokleur voor markering. Anders worden ze weergegeven in de markeringskleur.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Halo&apos;s gebruiken voor markering</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geselecteerde objecten behouden hun kleur en worden weergegeven met een vervaagde halo in de onderstaande halokleur voor selectie. Anders worden ze weergegeven in de selectiekleur.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Halo&apos;s gebruiken voor selectie</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8141,12 +8141,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Schermlezer:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Zolang een schermlezer in gebruik is, navigeren de pijltoetsen door de gebruikersinterface in plaats van de selectie te verplaatsen</translation>
     </message>
 </context>
 <context>
@@ -8164,22 +8164,22 @@ is al in de lijst.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch detecteren</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Standaard)</translation>
+        <translation>(Standaard)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Altijd uitgaan van een schermlezer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Nooit uitgaan van een schermlezer</translation>
     </message>
 </context>
 <context>
@@ -10574,12 +10574,12 @@ is al in de lijst.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2017"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+2114"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1782"/>
+        <location line="-1879"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10654,7 +10654,22 @@ is al in de lijst.</translation>
         <translation>Nee</translation>
     </message>
     <message>
-        <location line="+432"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Alle bestanden</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Bestand kiezen...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Bestand kiezen</translation>
+    </message>
+    <message>
+        <location line="+425"/>
         <location line="+98"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13432,6 +13447,16 @@ is al in de lijst.</translation>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Knopafstand:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Ruimte tussen de knoppen van een werkbalk, ten opzichte van de standaardafstand (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13741,22 +13766,22 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Weergave</translation>
+        <translation>Weergave</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch (systeeminstelling volgen)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Donker</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Licht</translation>
     </message>
     <message>
         <location line="+17"/>

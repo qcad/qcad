@@ -1368,15 +1368,15 @@ Szeretné helyreállítani?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>Ablakpanelek</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Blokklista</translation>
     </message>
@@ -1391,7 +1391,7 @@ Szeretné helyreállítani?</translation>
         <translation>Váltakozó sorszínek használata</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>Aktuális blokk</translation>
     </message>
@@ -6208,22 +6208,22 @@ már szerepel a listában.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>A kiemelt elemek megtartják a színüket, és elmosódott fényudvarral jelennek meg az alább megadott kiemelési fényudvarszínben. Egyébként a kiemelés színében jelennek meg.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Fényudvar használata kiemeléshez</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>A kijelölt elemek megtartják a színüket, és elmosódott fényudvarral jelennek meg az alább megadott kijelölési fényudvarszínben. Egyébként a kijelölés színében jelennek meg.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Fényudvar használata kijelöléshez</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8137,12 +8137,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Képernyőolvasó:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Képernyőolvasó használata közben a nyílbillentyűk a felhasználói felületen navigálnak a kijelölés mozgatása helyett</translation>
     </message>
 </context>
 <context>
@@ -8160,22 +8160,22 @@ már szerepel a listában.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatikus észlelés</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Alapérték)</translation>
+        <translation>(Alapértelmezett)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Mindig feltételezzen képernyőolvasót</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Soha ne feltételezzen képernyőolvasót</translation>
     </message>
 </context>
 <context>
@@ -10643,7 +10643,22 @@ már szerepel a listában.</translation>
         <translation>Nem</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Minden fájl</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Fájl kiválasztása...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Fájl kiválasztása</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*KÜLÖNBÖZŐ*</translation>
     </message>
@@ -13423,6 +13438,16 @@ már szerepel a listában.</translation>
         <source>px</source>
         <translation>képpont</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Gombok távolsága:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Az eszköztár gombjai közötti távolság az alapértelmezett távolsághoz (100%) viszonyítva</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13733,22 +13758,22 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Megjelenés</translation>
+        <translation>Megjelenés</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatikus (a rendszerbeállítást követi)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Sötét</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Világos</translation>
     </message>
     <message>
         <location line="+17"/>

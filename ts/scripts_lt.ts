@@ -1372,15 +1372,15 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+787"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
         <translation>Valdikliai</translation>
     </message>
     <message>
-        <location line="-731"/>
-        <location line="+731"/>
-        <location line="+83"/>
-        <location line="+43"/>
+        <location line="-733"/>
+        <location line="+733"/>
+        <location line="+105"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Blokų sąrašas</translation>
     </message>
@@ -1395,7 +1395,7 @@ Ar norite jį atkurti?</translation>
         <translation>Įjungti kintančias eilučių spalvas</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-416"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="-439"/>
         <source>Current block</source>
         <translation>Esamas blokas</translation>
     </message>
@@ -6217,22 +6217,22 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>Highlighted entities keep their color and are displayed with a blurred halo in the highlight halo color below. Otherwise they are displayed in the highlight color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Paryškinti objektai išlaiko savo spalvą ir rodomi su išlietu švytėjimu, kurio spalva – žemiau nurodyta paryškinimo švytėjimo spalva. Kitu atveju jie rodomi paryškinimo spalva.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Paryškinimui naudoti švytėjimą</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selected entities keep their color and are displayed with a blurred halo in the selection halo color below. Otherwise they are displayed in the selection color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti objektai išlaiko savo spalvą ir rodomi su išlietu švytėjimu, kurio spalva – žemiau nurodyta pasirinkimo švytėjimo spalva. Kitu atveju jie rodomi pasirinkimo spalva.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use halos for selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkimui naudoti švytėjimą</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8146,12 +8146,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Screen reader:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekrano skaitytuvas:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>While a screen reader is in use, the cursor keys navigate the user interface instead of moving the selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kol naudojamas ekrano skaitytuvas, rodyklių klavišais naršoma naudotojo sąsajoje, o ne perkeliami pasirinkti objektai</translation>
     </message>
 </context>
 <context>
@@ -8169,22 +8169,22 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>Detect automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Aptikti automatiškai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>(Default)</source>
-        <translation type="unfinished">(Numatytoji reikšmė)</translation>
+        <translation>(Numatytoji reikšmė)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Always assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Visada laikyti, kad ekrano skaitytuvas naudojamas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Never assume a screen reader</source>
-        <translation type="unfinished"></translation>
+        <translation>Niekada nelaikyti, kad ekrano skaitytuvas naudojamas</translation>
     </message>
 </context>
 <context>
@@ -10656,7 +10656,22 @@ jau yra sąraše.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+429"/>
+        <location line="+47"/>
+        <source>All Files</source>
+        <translation>Visi failai</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Choose file...</source>
+        <translation>Pasirinkti failą...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Choose File</source>
+        <translation>Pasirinkti failą</translation>
+    </message>
+    <message>
+        <location line="+422"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
@@ -13442,6 +13457,16 @@ jau yra sąraše.</translation>
         <source>px</source>
         <translation>px</translation>
     </message>
+    <message>
+        <location line="+24"/>
+        <source>Button spacing:</source>
+        <translation>Tarpas tarp mygtukų:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Space between the buttons of a tool bar, relative to the default spacing (100%)</source>
+        <translation>Tarpas tarp įrankių juostos mygtukų, palyginti su numatytuoju tarpu (100%)</translation>
+    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13751,22 +13776,22 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>Appearance</source>
-        <translation type="unfinished">Išvaizda</translation>
+        <translation>Išvaizda</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Auto (follow system setting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatinė (pagal sistemos nuostatą)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamsi</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Šviesi</translation>
     </message>
     <message>
         <location line="+17"/>
