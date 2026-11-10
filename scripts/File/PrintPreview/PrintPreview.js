@@ -935,6 +935,10 @@ PrintPreviewImpl.printWith = function(printClass, pdfFile, pdfVersion) {
         var viewImage = new RGraphicsViewImage();
         viewImage.setNumThreads(1);
         viewImage.setScene(scene, false);
+        // the off-screen view does not inherit the color mode of the
+        // print preview view: without this, black / white is printed in
+        // gray (the printer is set to gray scale, the view paints colors):
+        viewImage.setColorMode(Print.getColorMode(EAction.getDocument()));
         var printOffScreen = new printClass(undefined, EAction.getDocument(), viewImage);
         var ret = printOffScreen.print(pdfFile, undefined, pdfVersion);
         // the image based view is owned by its creator
