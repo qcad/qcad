@@ -751,6 +751,21 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths, doub
 
         path.setZLevel(0);
 
+        // the pixel size hint of a path from a painter path source (e.g.
+        // the boundary of a solid fill) is the hint the path was generated
+        // for: the pixel size in the context of the current block reference
+        // or viewport (see RExporter::getCurrentPixelSizeHint), possibly
+        // coarsened by the source (complex hatches). The view compares the
+        // hint of the drawables to its own pixel size to decide if an
+        // entity has to be regenerated (see
+        // RGraphicsViewImage::paintEntitiesMulti): store the hint of this
+        // scene, like for all other paths. Otherwise, block references
+        // with a scale factor below 0.2 or above 5 which contain such a
+        // path would be regenerated for every single repaint:
+        if (path.getPixelSizeHint()>RS::PointTolerance) {
+            path.setPixelSizeHint(getPixelSizeHint());
+        }
+
         path.setBrush(getBrush(path));
         if (path.getInheritPen()) {
             path.setPen(currentPainterPath.getPen());
