@@ -329,7 +329,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation>引用块</translation>
+        <translation>参照块</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -521,7 +521,7 @@
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation>文字</translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -723,7 +723,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation>检测到循环（递归）块引用：</translation>
+        <translation>检测到循环（递归）块参照：</translation>
     </message>
     <message>
         <location line="+2"/>
