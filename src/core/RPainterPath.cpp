@@ -738,7 +738,9 @@ void RPainterPath::rotateList(QList<RPainterPath>& pps, double angle) {
 
 void RPainterPath::translateList(QList<RPainterPath>& pps, const RVector& offset) {
     for (int i=0; i<pps.length(); i++) {
-        pps[i].translate(offset.x, offset.y);
+        // move also moves the points and the original shapes of the path
+        // (QPainterPath::translate would leave them behind):
+        pps[i].move(offset);
     }
 }
 

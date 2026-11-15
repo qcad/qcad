@@ -793,7 +793,8 @@ void RLinetypePattern::updateShapes() {
                     //qDebug() << "rotate: " << rotation;
                     pp.rotate(rotation);
                     //qDebug() << "offset: " << offset;
-                    pp.translate(offset.x, offset.y);
+                    // move also moves the original shapes of the path:
+                    pp.move(offset);
                     //qDebug() << "pp: " << pp;
                     shapes.insert(i, QList<RPainterPath>() << pp);
                 }
