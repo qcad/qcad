@@ -96,6 +96,10 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
 
     // keep accessible descriptions (screen readers) free of HTML tool tip markup:
     qApp->installEventFilter(new RAccessibleToolTipFilter(this));
+
+    // get notified when floating tool bars are closed (see eventFilter):
+    qApp->installEventFilter(this);
+
     // alternative accessibility implementation for opted in tree widgets:
     RAccessibleFlatTree::install();
     // tool buttons of tools are buttons, not check boxes (screen readers):
@@ -328,7 +332,8 @@ void RMainWindowQt::updateScenes(QMdiSubWindow* mdiChild) {
  * dock widget closes if user cancels close dialog
  *
  * Called by RDockWidget whenever a dock widget receives a close event,
- * i.e. before the dock widget is hidden by Qt.
+ * i.e. before the dock widget is hidden by Qt. Also called for floating
+ * tool bars which receive a close event (see eventFilter).
  *
  * When the application is terminated, Qt closes all top level widgets
  * (QApplicationPrivate::tryCloseAllWidgetWindows). Floating dock widgets are
@@ -406,6 +411,24 @@ void RMainWindowQt::restoreClosedDockWidgets() {
 #endif
     }
     forgetDockWidgetState();
+}
+
+/**
+ * Floating tool bars are top level widgets, just like floating dock widgets.
+ * When the application is terminated, they may be closed (and hidden) by Qt
+ * before the main window is closed and saveState() would store them as
+ * hidden for the next session. Tool bars are plain QToolBar objects, so we
+ * catch their close events here (application wide event filter) to remember
+ * the state from before they are hidden (see notifyDockWidgetClosed).
+ */
+bool RMainWindowQt::eventFilter(QObject* obj, QEvent* e) {
+    if (e->type()==QEvent::Close) {
+        QToolBar* toolBar = qobject_cast<QToolBar*>(obj);
+        if (toolBar!=NULL && toolBar->parentWidget()==this && toolBar->isWindow()) {
+            notifyDockWidgetClosed(toolBar);
+        }
+    }
+    return QMainWindow::eventFilter(obj, e);
 }
 
 void RMainWindowQt::closeEvent(QCloseEvent* e) {

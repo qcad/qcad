@@ -247,6 +247,7 @@ protected:
     virtual void dragEnterEvent(QDragEnterEvent* event);
 
     virtual bool event(QEvent* e);
+    virtual bool eventFilter(QObject* obj, QEvent* e);
 
     /**
      * \nonscriptable
@@ -281,7 +282,8 @@ protected:
     QElapsedTimer keyTimeOut;
 
     // State of all dock widgets and tool bars as it was before the first
-    // dock widget of the current close operation was closed by Qt.
+    // floating dock widget or tool bar of the current close operation was
+    // closed by Qt.
     // Only valid if dockWidgetStateValid is true.
     // See notifyDockWidgetClosed().
     QByteArray dockWidgetState;
@@ -290,8 +292,9 @@ protected:
     // true while the main window is handling its close event:
     bool closingDown;
 
-    // Dock widgets that were visible and have been closed by Qt as part of
-    // the current close operation, together with their X position:
+    // Dock widgets and floating tool bars that were visible and have been
+    // closed by Qt as part of the current close operation, together with
+    // their X position:
     QList<QPointer<QWidget> > closedDockWidgets;
     QList<int> closedDockWidgetPositionsX;
 
