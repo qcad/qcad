@@ -479,7 +479,7 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation>Näkymätön esine</translation>
+        <translation>Näkymätön objekti</translation>
     </message>
     <message>
         <location line="+1"/>

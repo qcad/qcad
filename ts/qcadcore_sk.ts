@@ -504,7 +504,7 @@
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation>Pracovná súprava</translation>
+        <translation>Pracovná sada</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>

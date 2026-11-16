@@ -5362,27 +5362,27 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Painteroptionen</translation>
+        <translation>Musteroptionen</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Painter-Casting Optionen</translation>
+        <translation>Optionen zum Auftragen der Muster</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Painter umdrehen</translation>
+        <translation>Muster umdrehen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>In Gruppe casten</translation>
+        <translation>In Gruppe auftragen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Casten auf Sublayer</translation>
+        <translation>Auf Unterlayer auftragen</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5402,17 +5402,17 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Muster</translation>
+        <translation>Mustersatz</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Painter über die Grundlinie spiegeln.</translation>
+        <translation>Muster an der Grundlinie spiegeln.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Gruppieren zu einer Operation.</translation>
+        <translation>Alle aufgetragenen Muster zu einer Operation gruppieren.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5432,12 +5432,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Vorschau der Painter.</translation>
+        <translation>Vorschau der Muster.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Muster wählen.</translation>
+        <translation>Mustersatz wählen.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5522,7 +5522,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Illustration der Painter-Casting Optionen</translation>
+        <translation>Darstellung der Optionen zum Auftragen</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5542,22 +5542,22 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Painter-Breite eingeben. (+0)</translation>
+        <translation>Musterbreite eingeben. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Schrittweite des Haupt-Painters eingeben. (+0)</translation>
+        <translation>Schrittweite des Hauptmusters eingeben. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Länge des Haupt-Painters eingeben. (+)</translation>
+        <translation>Länge des Hauptmusters eingeben. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Painter proportional halten.</translation>
+        <translation>Muster proportional halten.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5607,7 +5607,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Optionen für repetitive Painter</translation>
+        <translation>Optionen für sich wiederholende Muster</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6327,7 +6327,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation>Ausblendungsfaktor des Arbeitssatzes:</translation>
+        <translation>Ausblendungsfaktor des Bearbeitungssatzes:</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -8762,7 +8762,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation>Loslassen um aufhören zu zeichnen</translation>
+        <translation>Loslassen, um das Zeichnen zu beenden</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+3"/>

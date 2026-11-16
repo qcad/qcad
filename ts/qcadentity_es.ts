@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="+82"/>
         <source>File</source>
-        <translation>Fichero</translation>
+        <translation>Archivo</translation>
     </message>
     <message>
         <location line="+2"/>

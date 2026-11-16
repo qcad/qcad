@@ -97,7 +97,7 @@
     <message>
         <location filename="../src/gui/RGraphicsViewQt.cpp" line="+51"/>
         <source>Drawing View</source>
-        <translation>Zīmējuma skats</translation>
+        <translation>Rasējuma skats</translation>
     </message>
 </context>
 <context>

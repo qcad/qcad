@@ -118,7 +118,7 @@
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation>ライセンスキー</translation>
+        <translation>ライセンスキー:</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3584,7 +3584,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>キャストCSV</translation>
+        <translation>CSV を描画</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4040,7 +4040,7 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>キャストされたエントリ: %2 テキスト行のうち %1 が表示されます。</translation>
+        <translation>描画されたエントリ: テキスト行 %2 行中 %1 件</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4319,7 +4319,7 @@ is already in the list.</source>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>エンティティがワーキングセットに含まれていない。</translation>
+        <translation>エンティティが作業セットに含まれていません。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5357,22 +5357,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>ペインターのオプション</translation>
+        <translation>パターンのオプション</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>ペインターのキャスティングオプション</translation>
+        <translation>パターンの描画オプション</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>フリップペインターズ</translation>
+        <translation>パターンを反転</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>グループ内キャスト</translation>
+        <translation>グループとして描画</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -5397,12 +5397,12 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>ペインターセット</translation>
+        <translation>パターンセット</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>ベースラインを軸にペインターをミラーします。</translation>
+        <translation>ベースラインを軸にパターンをミラーします。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5412,7 +5412,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>まず、オープンフォームにビギナーエイペックスをキャストすることから始めます。</translation>
+        <translation>オープンフォームでは Begin Apex を描画して開始します。</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5427,27 +5427,27 @@ is already in the list.</source>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>ペインターのプレビューです。</translation>
+        <translation>パターンのプレビューです。</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>ペインターセットを選択します。</translation>
+        <translation>パターンセットを選択します。</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>カーテンロープ</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>直交バー</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>直交座標系（OrthogonalPointsGlobal</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5462,17 +5462,17 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation>3PhaseWaveGlobal（スリーフェイズウェーブグローバル</translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>トライアングルウェーブ</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>鋸歯状波</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5482,17 +5482,17 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>ステップウェーブ</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>スクエアードシェイプ</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>スクエアードシェイプフレキシング</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5517,7 +5517,7 @@ is already in the list.</source>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>キャスティングオプションの図解</translation>
+        <translation>描画オプションの図解</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5537,22 +5537,22 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>ペインターの幅を入力します。(+0)</translation>
+        <translation>パターンの幅を入力します。(+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>メインペインターステップサイズを入力します。(+0)</translation>
+        <translation>メインパターンのステップサイズを入力します。(+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>メインペインターの長さを入力します。(+)</translation>
+        <translation>メインパターンの長さを入力します。(+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>ペインタープロポーションを維持する。</translation>
+        <translation>パターンの縦横比を維持します。</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5577,7 +5577,7 @@ is already in the list.</source>
     <message>
         <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;スペースサイズを入力してください&gt;。</translation>
+        <translation>&lt;スペースサイズを入力してください&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5602,7 +5602,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Repetitive Painterのオプション</translation>
+        <translation>繰り返しパターンのオプション</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6327,7 +6327,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation>ワーキングセットのフェージングファクター</translation>
+        <translation>作業セットのフェード係数:</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -6749,7 +6749,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>貼り付けられたエンティティを水平方向に反転させる&lt;br&gt;。</translation>
+        <translation>貼り付けられたエンティティを反転させる&lt;br&gt;水平方向へ</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11303,7 +11303,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation>保存されたファイル</translation>
+        <translation>保存されたファイル:</translation>
     </message>
     <message>
         <location line="+2"/>

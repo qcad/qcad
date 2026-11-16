@@ -359,7 +359,7 @@
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
         <source>Arc Symbol Type</source>
-        <translation>Simbol de arc Tip</translation>
+        <translation>Tip simbol de arc</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>

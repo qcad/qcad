@@ -337,7 +337,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+5"/>
         <source>Add new empty block</source>
-        <translation>Lägg till ny tomt block</translation>
+        <translation>Lägg till nytt tomt block</translation>
     </message>
 </context>
 <context>
@@ -1383,7 +1383,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
-        <translation>Dölja interna block</translation>
+        <translation>Dölj interna block</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2682,7 +2682,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>Avmarkera skiktenheter</translation>
+        <translation>Avmarkera lagerenheter</translation>
     </message>
 </context>
 <context>
@@ -4041,12 +4041,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Casted poster: %1 av %2 textrader</translation>
+        <translation>Ritade poster: %1 av %2 textrader</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Inget kastat.</translation>
+        <translation>Inget ritat.</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -4898,7 +4898,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation>Lägga till anpassad egenskap till ett lager</translation>
+        <translation>Lägg till anpassad egenskap till ett lager</translation>
     </message>
 </context>
 <context>
@@ -5360,87 +5360,87 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Alternativ för målare</translation>
+        <translation>Mönsteralternativ</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Målare gjutningsalternativ</translation>
+        <translation>Placeringsalternativ för mönster</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Vänd mönster</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Gjutning i grupp</translation>
+        <translation>Placera i grupp</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Gjutning på underlag</translation>
+        <translation>Placera på underlager</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Lägg till Begin Apex</translation>
+        <translation>Lägg till startspets</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Lägg till slut Apex</translation>
+        <translation>Lägg till slutspets</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add Insertions</source>
-        <translation>Lägga till inlagor</translation>
+        <translation>Lägg till infogningar</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Målare uppsättning</translation>
+        <translation>Mönsteruppsättning</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Spegelmålare över baslinjen.</translation>
+        <translation>Spegla mönster över baslinjen.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Gruppera alla gjutningar till en operation.</translation>
+        <translation>Gruppera alla placeringar till en operation.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Börja med att gjuta en början av en spets på öppna former.</translation>
+        <translation>Börja med att placera en startspets på öppna former.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Avsluta med att gjuta en ändspets på öppna former.</translation>
+        <translation>Avsluta med att placera en slutspets på öppna former.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation>Lägg till mellanliggande insatser, t.ex. distanser, knutar. (Ej genomfört)</translation>
+        <translation>Lägg till infogningar emellan, t.ex. distanser, knutar. (Ej implementerat)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Förhandsgranskning av målare.</translation>
+        <translation>Förhandsgranskning av mönster.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Välj målaruppsättning.</translation>
+        <translation>Välj mönsteruppsättning.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>GardinerRope</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5500,7 +5500,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation>Alla målardatatyper</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5520,7 +5520,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Illustration av gjutningsalternativen</translation>
+        <translation>Illustration av placeringsalternativen</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5540,22 +5540,22 @@ finns redan i listan.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Ange målarbredd. (+0)</translation>
+        <translation>Ange mönsterbredd. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Ange huvudmålarens stegstorlek. (+0)</translation>
+        <translation>Ange huvudmönstrets stegstorlek. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Ange huvudmålarens längd. (+)</translation>
+        <translation>Ange huvudmönstrets längd. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Håll målarna proportionella.</translation>
+        <translation>Håll mönstren proportionella.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5565,17 +5565,17 @@ finns redan i listan.</translation>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Anpassa skalan f 1,00-0,90 så att den passar hela formuläret.</translation>
+        <translation>Anpassa skalningen f 1,00-0,90 så att den passar hela formen.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Utförlig information. (ihållande på)</translation>
+        <translation>Utförlig information. (permanent på)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Borttagen målad över basenheter. (bestående av)</translation>
+        <translation>Tar bort övermålade basenheter. (permanent av)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5585,7 +5585,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation>Gardin rep knut</translation>
+        <translation>Gardinrepsknut</translation>
     </message>
     <message>
         <location line="+546"/>
@@ -5605,7 +5605,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Alternativ för Repetitive Painter</translation>
+        <translation>Alternativ för upprepat mönster</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5620,22 +5620,22 @@ finns redan i listan.</translation>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation>Slutna former som skiftar % :</translation>
+        <translation>Förskjutning av slutna former % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Alternativ för skalning av öppna formulär</translation>
+        <translation>Skalningsalternativ för öppna former</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation>Dynamiskt skalbar för att passa</translation>
+        <translation>Skala dynamiskt för att passa</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Anpassa sig till början</translation>
+        <translation>Justera mot början</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5645,12 +5645,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation>Anpassa till ändan</translation>
+        <translation>Justera mot slutet</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Förtydligande *</translation>
+        <translation>Utförlig *</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5840,7 +5840,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation>Dölja attribut när blockreferenser är dolda</translation>
+        <translation>Dölj attribut när blockreferenser är dolda</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6588,7 +6588,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation>Dölja alla lager</translation>
+        <translation>Dölj alla lager</translation>
     </message>
 </context>
 <context>
@@ -8211,7 +8211,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+27"/>
         <source>&amp;Layer</source>
-        <translation>Skikt</translation>
+        <translation>Lager</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -8221,7 +8221,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation>Dölja alla lager</translation>
+        <translation>Döljer alla lager</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -8269,7 +8269,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation>Skikt</translation>
+        <translation>Lager</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8279,7 +8279,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation>Skikt 0</translation>
+        <translation>Lager 0</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8303,7 +8303,7 @@ finns redan i listan.</translation>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation>skikt</translation>
+        <translation>lager</translation>
     </message>
     <message>
         <location line="+158"/>
@@ -8323,7 +8323,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation>Skikt</translation>
+        <translation>Lager</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -8356,7 +8356,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation>Skikt</translation>
+        <translation>Lager</translation>
     </message>
 </context>
 <context>
@@ -8977,7 +8977,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
-        <translation>Välja startpunkt av tangering</translation>
+        <translation>Välj tangentens startpunkt</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -10347,7 +10347,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+75"/>
         <source>Restore to Default Values</source>
-        <translation>Återställa till standardvärden</translation>
+        <translation>Återställ till standardvärden</translation>
     </message>
 </context>
 <context>
@@ -11220,7 +11220,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+5"/>
         <source>Open and run a script file</source>
-        <translation>Öppna och köra en skriptfil</translation>
+        <translation>Öppna och kör en skriptfil</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
@@ -11705,7 +11705,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+30"/>
         <source>Same Layer</source>
-        <translation>Samma skikt</translation>
+        <translation>Samma lager</translation>
     </message>
 </context>
 <context>
@@ -11771,7 +11771,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>Välj skiktenheter</translation>
+        <translation>Välj lagerenheter</translation>
     </message>
 </context>
 <context>
@@ -12765,7 +12765,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+13"/>
         <source>Layers</source>
-        <translation>Skikt</translation>
+        <translation>Lager</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14103,7 +14103,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1233"/>
         <source>Restore defaults</source>
-        <translation>Återställa standardvärden</translation>
+        <translation>Återställ standardvärden</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -14595,12 +14595,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation>Skikt</translation>
+        <translation>Lager</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation>Skikt</translation>
+        <translation>Lager</translation>
     </message>
     <message>
         <location line="+2"/>

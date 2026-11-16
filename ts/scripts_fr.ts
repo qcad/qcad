@@ -5339,7 +5339,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation>Ajouter une sous-calque active</translation>
+        <translation>Ajouter un sous-calque actif</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5362,27 +5362,27 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Options pour les peintres</translation>
+        <translation>Options des motifs</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Options de casting des peintres</translation>
+        <translation>Options d&apos;application des motifs</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Renversez les peintres</translation>
+        <translation>Retourner les motifs</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Casting en groupe</translation>
+        <translation>Appliquer en groupe</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Casting sur sous-calque</translation>
+        <translation>Appliquer sur un sous-calque</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5402,17 +5402,17 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Motif</translation>
+        <translation>Jeu de motifs</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Miroir painters sur la ligne de base.</translation>
+        <translation>Appliquer la symétrie aux motifs par rapport à la ligne de base.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Regroupez tous en une seule opération.</translation>
+        <translation>Regroupez tous les motifs appliqués en une seule opération.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5432,12 +5432,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Aperçu des peintres.</translation>
+        <translation>Aperçu des motifs.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Sélectionnez l&apos;ensemble de peintre.</translation>
+        <translation>Sélectionnez le jeu de motifs.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5447,7 +5447,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>Barre orthogonale</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5457,12 +5457,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>Onde sinusoïdale</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>Onde sinusoïdale globale</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5517,12 +5517,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Sélectionnez Insertion ou Saisir un espace vide. (Non implémenté)</translation>
+        <translation>Sélectionnez une insertion ou saisissez un espace vide. (Non implémenté)</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Illustration des options de casting</translation>
+        <translation>Illustration des options d&apos;application</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5542,22 +5542,22 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Entrez la largeur du peintre. (+0)</translation>
+        <translation>Entrez la largeur du motif. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Entrez la taille de pas du peintre principal. (+0)</translation>
+        <translation>Entrez le pas du motif principal. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Entrez la longueur du peintre principal. (+)</translation>
+        <translation>Entrez la longueur du motif principal. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Gardez les peintres proportionnels.</translation>
+        <translation>Gardez les motifs proportionnels.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5567,7 +5567,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Adapter l&apos;échelle f 1.00-0.90 à l&apos;ensemble du formulaire.</translation>
+        <translation>Adapter l&apos;échelle f 1.00-0.90 pour couvrir toute la forme.</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5577,7 +5577,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Supprimé peint sur les entités de base. (désactivation persistante)</translation>
+        <translation>Supprimer les entités de base recouvertes. (désactivé en permanence)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5607,12 +5607,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Options de peinture répétitive</translation>
+        <translation>Options du motif répétitif</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Stepsize :</source>
-        <translation>Stepsize :</translation>
+        <translation>Pas :</translation>
     </message>
     <message>
         <location line="+16"/>

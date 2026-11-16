@@ -3584,7 +3584,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Đổ CSV</translation>
+        <translation>Vẽ từ CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4040,7 +4040,7 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Số mục đã đổ: %1 trên %2 dòng văn bản</translation>
+        <translation>Số mục đã vẽ: %1 trên %2 dòng văn bản</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4050,7 +4050,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>Không có gì được đổ.</translation>
+        <translation>Không có gì được vẽ.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -5362,7 +5362,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Tùy chọn đổ cọ</translation>
+        <translation>Tùy chọn vẽ bằng cọ</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -5377,22 +5377,22 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Gộp tất cả phép đổ vào một thao tác.</translation>
+        <translation>Gộp tất cả các lần vẽ vào một thao tác.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Đổ vào nhóm</translation>
+        <translation>Vẽ thành một nhóm</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Đổ trên lớp con</translation>
+        <translation>Vẽ trên lớp con</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Bắt đầu bằng cách đổ một đỉnh bắt đầu trên các hình hở.</translation>
+        <translation>Bắt đầu bằng cách vẽ một đỉnh bắt đầu trên các hình hở.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5402,7 +5402,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Kết thúc bằng cách đổ một đỉnh kết thúc trên các hình hở.</translation>
+        <translation>Kết thúc bằng cách vẽ một đỉnh kết thúc trên các hình hở.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5422,7 +5422,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Đã đặt cọ</translation>
+        <translation>Bộ cọ</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -5527,7 +5527,7 @@ is already in the list.</source>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Minh họa các tùy chọn đổ cọ</translation>
+        <translation>Minh họa các tùy chọn vẽ bằng cọ</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5612,7 +5612,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Điều chỉnh tỷ lệ f 1.00-0.90 để vừa toàn bộ biểu mẫu.</translation>
+        <translation>Điều chỉnh tỷ lệ f 1.00-0.90 để vừa toàn bộ hình.</translation>
     </message>
     <message>
         <location line="+3"/>

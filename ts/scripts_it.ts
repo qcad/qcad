@@ -5344,7 +5344,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation>FP aggiunto layer:</translation>
+        <translation>FP ha aggiunto il livello:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
@@ -5362,27 +5362,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Opzioni del pittore</translation>
+        <translation>Opzioni del motivo</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Opzioni di casting dei pittori</translation>
+        <translation>Opzioni di applicazione dei motivi</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Invertire i pittori</translation>
+        <translation>Capovolgi i motivi</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Casting in gruppo</translation>
+        <translation>Applica in gruppo</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Casting su sotto livello</translation>
+        <translation>Applica su livello subordinato</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5402,17 +5402,17 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Modello</translation>
+        <translation>Set di motivi</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Specchiate i painters sulla linea di base.</translation>
+        <translation>Specchia i motivi rispetto alla linea di base.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Raggruppa tutte in un&apos;unica operazione.</translation>
+        <translation>Raggruppa tutte le applicazioni in un&apos;unica operazione.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5432,12 +5432,12 @@ is already in the list.</source>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Anteprima dei pittori.</translation>
+        <translation>Anteprima dei motivi.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Seleziona il set di pittori.</translation>
+        <translation>Seleziona il set di motivi.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5517,12 +5517,12 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Selezionare Inserisci o Inserisci spazio vuoto. (Non implementato)</translation>
+        <translation>Selezionare un inserimento o inserire uno spazio vuoto. (Non implementato)</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Illustrazione delle opzioni di casting</translation>
+        <translation>Illustrazione delle opzioni di applicazione</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5537,27 +5537,27 @@ is already in the list.</source>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation>Unità di documenti.</translation>
+        <translation>Unità del documento.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Inserisci la larghezza del pittore. (+0)</translation>
+        <translation>Inserire la larghezza del motivo. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Inserire la dimensione del passo del pittore principale. (+0)</translation>
+        <translation>Inserire il passo del motivo principale. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Inserire la lunghezza del pittore principale. (+)</translation>
+        <translation>Inserire la lunghezza del motivo principale. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Mantenere le proporzioni dei pittori.</translation>
+        <translation>Mantenere le proporzioni dei motivi.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5572,22 +5572,22 @@ is already in the list.</source>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Informazioni verbose. (persistente su)</translation>
+        <translation>Informazioni dettagliate. (sempre attivo)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Cancellato dipinto sulle entità di base. (persistente spento)</translation>
+        <translation>Elimina le entità di base ricoperte. (sempre disattivo)</translation>
     </message>
     <message>
         <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Invio dimensione dello spazio&gt;</translation>
+        <translation>&lt;Inserire la dimensione dello spazio&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation>Tenda corda nodo di corda</translation>
+        <translation>Nodo di corda per tende</translation>
     </message>
     <message>
         <location line="+546"/>
@@ -5607,7 +5607,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Opzioni ripetitive del pittore</translation>
+        <translation>Opzioni del motivo ripetitivo</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5632,7 +5632,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation>Dinamicamente scala per adattarsi</translation>
+        <translation>Scala dinamicamente per adattare</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -8757,7 +8757,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation>Lasciate andare per smettere di disegnare</translation>
+        <translation>Rilasciare per terminare il disegno</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
@@ -10723,7 +10723,7 @@ is already in the list.</source>
     <message>
         <location line="-37"/>
         <source>Allow adding custom properties</source>
-        <translation>Consente l&apos; aggiunta di proprietà personalizzate</translation>
+        <translation>Consenti l&apos;aggiunta di proprietà personalizzate</translation>
     </message>
     <message>
         <location line="-17"/>
@@ -13191,7 +13191,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Incolla </translation>
+        <translation>Incolla</translation>
     </message>
     <message>
         <location line="+170"/>

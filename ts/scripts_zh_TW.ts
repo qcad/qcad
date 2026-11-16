@@ -50,7 +50,7 @@
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation>許可證金鑰：</translation>
+        <translation>授權金鑰：</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -80,7 +80,7 @@
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation>外掛和指令碼外掛受其各自許可證的約束（見 &quot;外掛 &quot;標籤）。</translation>
+        <translation>外掛和指令碼附加元件受其各自授權條款的約束（見「外掛」分頁）。</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -95,7 +95,7 @@
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation>Qt在&lt;a href=&apos;%1&apos;&gt;LGPL開源許可&lt;/a&gt;下與QCAD一起出廠，它賦予了使用者各種權利，包括為您的平臺重新編譯Qt庫的權利。要做到這一點，請遵循Qt網站上顯示的&lt;a href=&apos;%2&apos;&gt;檔案說明&lt;/a&gt;。</translation>
+        <translation>Qt 依 &lt;a href=&apos;%1&apos;&gt;LGPL 開源授權&lt;/a&gt;隨 QCAD 一併提供，賦予您作為使用者的各項權利，包括為您的平台重新編譯 Qt 函式庫的權利。若要這麼做，請依照 &lt;a href=&apos;%2&apos;&gt;Qt 網站上的說明文件&lt;/a&gt;操作。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -143,7 +143,7 @@
     <message>
         <location line="+1"/>
         <source>License:</source>
-        <translation>許可證：</translation>
+        <translation>授權：</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -188,7 +188,7 @@
     <message>
         <location line="+176"/>
         <source>Licenses</source>
-        <translation>許可證</translation>
+        <translation>授權</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -274,7 +274,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation>許可證</translation>
+        <translation>授權</translation>
     </message>
 </context>
 <context>
@@ -332,12 +332,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Block/AddBlock/AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>新增空塊</translation>
+        <translation>新增空區塊</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Add new empty block</source>
-        <translation>新增新的空塊</translation>
+        <translation>新增空的區塊</translation>
     </message>
 </context>
 <context>
@@ -385,7 +385,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation>新增自定義屬性</translation>
+        <translation>新增自訂屬性</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1557,7 +1557,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation>CAD工具條</translation>
+        <translation>CAD工具列</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
@@ -2290,7 +2290,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation>指揮：</translation>
+        <translation>命令：</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2635,7 +2635,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation>導航</translation>
+        <translation>導覽</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2930,7 +2930,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>沒有選擇自定義標籤位置的尺寸實體。</translation>
+        <translation>沒有選擇自訂標籤位置的尺寸實體。</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
@@ -3106,7 +3106,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation>新尺寸的比例不是1:1。尺寸標籤將顯示與圖紙中的測量值不同的值。你可以在頂部的選項工具欄中糾正比例係數。</translation>
+        <translation>新尺寸的比例不是1:1。尺寸標籤將顯示與圖紙中的測量值不同的值。你可以在頂部的選項工具列中糾正比例係數。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3564,7 +3564,7 @@ is already in the list.</source>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation>指揮結束。</translation>
+        <translation>命令結束。</translation>
     </message>
     <message>
         <location line="-1293"/>
@@ -3584,7 +3584,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>鑄造CSV</translation>
+        <translation>繪製CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4040,12 +4040,12 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>鑄造的條目：%1在%2的文字行中</translation>
+        <translation>已繪製的項目：%1（共 %2 行文字）</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>沒有投下任何東西。</translation>
+        <translation>沒有繪製任何內容。</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -4891,12 +4891,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation>為圖層 &quot;0 &quot;添加了自定義屬性 &quot;MyCustomProperty&quot;。</translation>
+        <translation>已為圖層 &quot;0&quot; 新增自訂屬性 &quot;MyCustomProperty&quot;。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation>為圖層新增自定義屬性</translation>
+        <translation>為圖層新增自訂屬性</translation>
     </message>
 </context>
 <context>
@@ -5349,7 +5349,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>模仿滾筒印章的方式在選區上塗抹。</translation>
+        <translation>以模仿滾筒印章的方式在選取的實體上繪製圖樣</translation>
     </message>
 </context>
 <context>
@@ -5357,37 +5357,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>畫家選項</translation>
+        <translation>圖樣選項</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>畫家的鑄造選擇</translation>
+        <translation>圖樣套用選項</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>翻轉畫師</translation>
+        <translation>翻轉圖樣</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>在小組中投票</translation>
+        <translation>群組套用</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>投在子層上</translation>
+        <translation>套用到子圖層</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>新增Begin Apex</translation>
+        <translation>新增起始端頭</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>新增終點Apex</translation>
+        <translation>新增結尾端頭</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5397,27 +5397,27 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>畫家集</translation>
+        <translation>圖樣組</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>鏡子畫家超過基線。</translation>
+        <translation>以基線鏡射圖樣。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>將所有鑄件歸入一個操作。</translation>
+        <translation>將所有套用的圖樣合併為單一操作。</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>從在開放的形式上鑄造一個開始的頂點開始。</translation>
+        <translation>在開放形狀上先套用起始端頭。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>以在開放的形式上鑄造一個端部的頂點結束。</translation>
+        <translation>在開放形狀上最後套用結尾端頭。</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5427,37 +5427,37 @@ is already in the list.</source>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>畫家的預覽。</translation>
+        <translation>圖樣預覽。</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>選擇油漆工組。</translation>
+        <translation>選擇圖樣組。</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>窗簾繩</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>正交條</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>正交點全球（OrthogonalPointsGlobal</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>正弦波</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>正弦波全球</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5467,37 +5467,37 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>三角波</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>鋸齒波</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>方波</translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>階梯波</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>正方形的形狀</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>方形彎曲的形狀</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation>所有畫師資料型別</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5517,7 +5517,7 @@ is already in the list.</source>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>鑄造選項圖解</translation>
+        <translation>套用選項圖解</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5537,22 +5537,22 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>輸入油漆工的寬度。(+0)</translation>
+        <translation>輸入圖樣寬度。(+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>輸入主畫師的步長。(+0)</translation>
+        <translation>輸入主圖樣的步距。(+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>輸入主畫師的長度。(+)</translation>
+        <translation>輸入主圖樣的長度。(+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>保持油漆工的比例。</translation>
+        <translation>保持圖樣比例。</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5562,22 +5562,22 @@ is already in the list.</source>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>調整縮放比例f 1.00-0.90，以適應整個表格。</translation>
+        <translation>調整縮放比例 f 1.00-0.90，以適應整個形狀。</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>粗略的資訊。(持續開啟)</translation>
+        <translation>詳細資訊。(持續開啟)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>刪除了塗在基礎實體上的。(永續性關閉)</translation>
+        <translation>刪除已繪製圖樣的基礎實體。(持續關閉)</translation>
     </message>
     <message>
         <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;輸入空間大小&gt;。</translation>
+        <translation>&lt;輸入間距大小&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5602,7 +5602,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>重複畫圖器選項</translation>
+        <translation>重複圖樣選項</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5617,12 +5617,12 @@ is already in the list.</source>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation>封閉式移位%：</translation>
+        <translation>封閉形狀偏移 %：</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>開放式表格的縮放選項</translation>
+        <translation>開放形狀的縮放選項</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -5637,7 +5637,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation>中心化</translation>
+        <translation>置中</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5647,7 +5647,7 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>冗長的 *</translation>
+        <translation>詳細資訊 *</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6749,12 +6749,12 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>橫向翻轉貼上的實體&lt;br&gt;。</translation>
+        <translation>水平翻轉&lt;br&gt;貼上的實體</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>翻轉貼上的實體&lt;br&gt;垂直翻轉</translation>
+        <translation>垂直翻轉&lt;br&gt;貼上的實體</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -6830,7 +6830,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation>新增自定義2D中心點</translation>
+        <translation>新增自訂2D中心點</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6840,7 +6840,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation>建立一個新的點狀質量的二維中心點標記，可透過對話方塊自定義。</translation>
+        <translation>建立一個新的點狀質量的二維中心點標記，可透過對話方塊自訂</translation>
     </message>
 </context>
 <context>
@@ -7139,13 +7139,13 @@ is already in the list.</source>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>遇到一個不支援自定義寬度的折線</translation>
+        <translation>遇到一個不支援自訂寬度的折線</translation>
     </message>
     <message>
         <location line="-488"/>
         <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation>遇到一個不支援自定義寬度的多邊形</translation>
+        <translation>遇到一個不支援自訂寬度的多邊形</translation>
     </message>
     <message>
         <location line="+686"/>
@@ -7625,12 +7625,12 @@ is already in the list.</source>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>遇到一個不支援自定義寬度的折線</translation>
+        <translation>遇到一個不支援自訂寬度的折線</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation>遇到一個不支援自定義寬度的多邊形</translation>
+        <translation>遇到一個不支援自訂寬度的多邊形</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
@@ -7915,12 +7915,12 @@ is already in the list.</source>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>橫向翻轉貼上的實體&lt;br&gt;。</translation>
+        <translation>水平翻轉&lt;br&gt;貼上的實體</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>翻轉貼上的實體&lt;br&gt;垂直翻轉</translation>
+        <translation>垂直翻轉&lt;br&gt;貼上的實體</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -8126,12 +8126,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>捷徑超時：</translation>
+        <translation>快速鍵逾時：</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation>在列表部件中啟用鍵盤導航</translation>
+        <translation>在清單小工具中啟用鍵盤導覽</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9158,7 +9158,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation>選單和工具條</translation>
+        <translation>選單和工具列</translation>
     </message>
 </context>
 <context>
@@ -9639,7 +9639,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation>新的</translation>
+        <translation>新增</translation>
     </message>
 </context>
 <context>
@@ -9919,12 +9919,12 @@ is already in the list.</source>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>橫向翻轉貼上的實體&lt;br&gt;。</translation>
+        <translation>水平翻轉&lt;br&gt;貼上的實體</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>翻轉貼上的實體&lt;br&gt;垂直翻轉</translation>
+        <translation>垂直翻轉&lt;br&gt;貼上的實體</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10397,7 +10397,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation>紙張尺寸被設定為自定義尺寸（%1x%2mm）。你想把它改成你的印表機的預設紙張尺寸（%3）嗎？</translation>
+        <translation>紙張尺寸被設定為自訂尺寸（%1x%2mm）。你想把它改成你的印表機的預設紙張尺寸（%3）嗎？</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -10609,7 +10609,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Add custom property to selected objects</source>
-        <translation>為選定的物件新增自定義屬性</translation>
+        <translation>為選定的物件新增自訂屬性</translation>
     </message>
     <message>
         <location line="+66"/>
@@ -10686,7 +10686,7 @@ is already in the list.</source>
     <message>
         <location line="-37"/>
         <source>Allow adding custom properties</source>
-        <translation>允許新增自定義屬性</translation>
+        <translation>允許新增自訂屬性</translation>
     </message>
     <message>
         <location line="-17"/>
@@ -11258,7 +11258,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation>自定義屬性將不會被儲存。</translation>
+        <translation>自訂屬性將不會被儲存。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11293,7 +11293,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation>自定義顏色被調整為最接近的固定顏色。</translation>
+        <translation>自訂顏色被調整為最接近的固定顏色。</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12803,12 +12803,12 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation>標籤欄</translation>
+        <translation>分頁列</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation>顯示標籤欄</translation>
+        <translation>顯示分頁列</translation>
     </message>
 </context>
 <context>
@@ -13458,7 +13458,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation>工具欄</translation>
+        <translation>工具列</translation>
     </message>
 </context>
 <context>
@@ -13471,7 +13471,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation>工具欄</translation>
+        <translation>工具列</translation>
     </message>
 </context>
 <context>
@@ -13995,7 +13995,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation>工具欄和小工具</translation>
+        <translation>工具列和小工具</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14005,7 +14005,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation>工具欄</translation>
+        <translation>工具列</translation>
     </message>
 </context>
 <context>

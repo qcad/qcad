@@ -3567,7 +3567,7 @@ is al in de lijst.</translation>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation>Commando beëindigd.</translation>
+        <translation>Opdracht beëindigd.</translation>
     </message>
     <message>
         <location line="-1293"/>
@@ -4048,7 +4048,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Niets gegoten.</translation>
+        <translation>Niets getekend.</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -4133,7 +4133,7 @@ is al in de lijst.</translation>
     <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation>Importeren CSV voltooid. Commando beëindigd.</translation>
+        <translation>Importeren CSV voltooid. Opdracht beëindigd.</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -4323,7 +4323,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Entiteit zit niet in de werkset.</translation>
+        <translation>Object zit niet in de werkset.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4348,7 +4348,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Entiteit is niet een lijn, boog of polylijn.</translation>
+        <translation>Object is geen lijn, boog of polylijn.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -5354,7 +5354,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Verven over de selectie, nabootsen van een rolstempel</translation>
+        <translation>Beschildert de selectie zoals een rolstempel</translation>
     </message>
 </context>
 <context>
@@ -5362,27 +5362,27 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Painter opties</translation>
+        <translation>Patroonopties</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Painter-casting opties</translation>
+        <translation>Plaatsingsopties voor patronen</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Keer de painters om</translation>
+        <translation>Patronen spiegelen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Casting in groep</translation>
+        <translation>In groep plaatsen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Casting op onderlaag</translation>
+        <translation>Op sublaag plaatsen</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5402,27 +5402,27 @@ is al in de lijst.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Patroon</translation>
+        <translation>Patroonset</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Spiegel painters door de basislijn.</translation>
+        <translation>Spiegel patronen over de basislijn.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Groepeer alles in één operatie.</translation>
+        <translation>Groepeer alle plaatsingen in één bewerking.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Begin met het gieten van een begin apex op open vormen.</translation>
+        <translation>Begin met het plaatsen van een begin apex op open vormen.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Eindig met het gieten van een eindpunt op open vormen.</translation>
+        <translation>Eindig met het plaatsen van een eind apex op open vormen.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5432,12 +5432,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Voorproefje van schilders.</translation>
+        <translation>Voorbeeld van patronen.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Selecteer schilder set.</translation>
+        <translation>Selecteer patroonset.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5512,7 +5512,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation>Voorproefje van invoeging.</translation>
+        <translation>Voorbeeld van invoeging.</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -5522,7 +5522,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Illustratie van de painter-casting opties</translation>
+        <translation>Illustratie van de plaatsingsopties</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5542,22 +5542,22 @@ is al in de lijst.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Voer schilderbreedte in. (+0)</translation>
+        <translation>Voer patroonbreedte in. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Voer de hoofd schilder stapgrootte in. (+0)</translation>
+        <translation>Voer de stapgrootte van het hoofdpatroon in. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Voer de lengte van de hoofdschilder in. (+)</translation>
+        <translation>Voer de lengte van het hoofdpatroon in. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Hou de schilders evenredig.</translation>
+        <translation>Houd de patronen proportioneel.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5567,7 +5567,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Pas de schaling f 1,00-0,90 aan om het hele formulier te passen.</translation>
+        <translation>Pas de schaling f 1,00-0,90 aan zodat de hele vorm past.</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5577,7 +5577,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Verwijderd geschilderd over basis objecten. (persistent uit)</translation>
+        <translation>Verwijder de beschilderde basisobjecten. (persistent uit)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5607,7 +5607,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Repetitieve painter opties</translation>
+        <translation>Opties voor herhalend patroon</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -7061,7 +7061,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation>Niet geïmplementeerd. Commando beëindigd.</translation>
+        <translation>Niet geïmplementeerd. Opdracht beëindigd.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -10262,7 +10262,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation>Entiteitseigenschappen overerven</translation>
+        <translation>Objecteigenschappen overerven</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14582,7 +14582,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation>Onbekende object</translation>
+        <translation>Onbekend object</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15026,7 +15026,7 @@ is al in de lijst.</translation>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation>Onbekende object</translation>
+        <translation>Onbekend object</translation>
     </message>
     <message>
         <location line="+108"/>

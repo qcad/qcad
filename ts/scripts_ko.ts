@@ -3584,7 +3584,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>CSV 전송</translation>
+        <translation>CSV 그리기</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4040,7 +4040,7 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>캐스팅된 항목: %2 텍스트 줄 중 %1개</translation>
+        <translation>그려진 항목: 텍스트 줄 %2개 중 %1개</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4050,7 +4050,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>캐스팅된 것이 없습니다.</translation>
+        <translation>그려진 항목이 없습니다.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -5349,7 +5349,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>롤러 스탬프를 모방한 선택 항목 위에 페인트 칠하기</translation>
+        <translation>롤러 스탬프처럼 선택 항목 위에 패턴을 그립니다</translation>
     </message>
 </context>
 <context>
@@ -5357,42 +5357,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>페인터 옵션</translation>
+        <translation>패턴 옵션</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>페인터 캐스팅 옵션</translation>
+        <translation>패턴 배치 옵션</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>기준선 위에 페인터를 미러링합니다.</translation>
+        <translation>기준선을 기준으로 패턴을 대칭 이동합니다.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>플립 페인터</translation>
+        <translation>패턴 뒤집기</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>모든 캐스팅을 하나의 작업으로 그룹화합니다.</translation>
+        <translation>배치된 모든 패턴을 하나의 작업으로 그룹화합니다.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>그룹으로 캐스팅</translation>
+        <translation>그룹으로 배치</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>하위 레이어에 캐스트</translation>
+        <translation>하위 레이어에 배치</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>열린 양식에 시작 정점을 캐스팅하는 것으로 시작하세요.</translation>
+        <translation>열린 형태에서 시작 정점을 먼저 배치합니다.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5402,12 +5402,12 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>열린 양식에 끝 정점을 캐스팅하여 끝냅니다.</translation>
+        <translation>열린 형태에서 끝 정점을 마지막에 배치합니다.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>엔드 정점 추가</translation>
+        <translation>끝 정점 추가</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5422,82 +5422,82 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>페인터 세트</translation>
+        <translation>패턴 세트</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>화가 미리보기.</translation>
+        <translation>패턴 미리보기.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>페인터 세트를 선택합니다.</translation>
+        <translation>패턴 세트를 선택합니다.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>커튼로프</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>직교 막대</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>직교 포인트 글로벌</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>사인파</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>시누소이드 웨이브 글로벌</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation>3상파동</translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>트라이앵글웨이브</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>쏘우투스웨이브</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>스퀘어웨이브</translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>스텝웨이브</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>사각형</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>유연한사각형</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation>모든 페인터 데이터 유형</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5527,7 +5527,7 @@ is already in the list.</source>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>캐스팅 옵션 그림</translation>
+        <translation>배치 옵션 그림</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5552,7 +5552,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>페인터 너비를 입력합니다. (+0)</translation>
+        <translation>패턴 너비를 입력합니다. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5567,12 +5567,12 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>반복 페인터 옵션</translation>
+        <translation>반복 패턴 옵션</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>메인 페인터 단계 크기를 입력합니다. (+0)</translation>
+        <translation>메인 패턴 단계 크기를 입력합니다. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5582,7 +5582,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>메인 페인터 길이를 입력합니다. (+)</translation>
+        <translation>메인 패턴 길이를 입력합니다. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5592,7 +5592,7 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>페인터의 비례를 유지하세요.</translation>
+        <translation>패턴의 비율을 유지합니다.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5612,7 +5612,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>전체 양식에 맞게 배율 f 1.00-0.90을 조정합니다.</translation>
+        <translation>전체 형태에 맞게 배율 f 1.00-0.90을 조정합니다.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8126,7 +8126,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>바로 가기 시간 초과:</translation>
+        <translation>단축키 시간 초과:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -11278,7 +11278,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>저장...</translation>
+        <translation>저장 중...</translation>
     </message>
     <message>
         <location line="+3"/>

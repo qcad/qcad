@@ -543,7 +543,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation>Min Grænser</translation>
+        <translation>Min. grænser</translation>
     </message>
     <message>
         <location line="+1"/>

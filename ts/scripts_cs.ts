@@ -1597,12 +1597,12 @@ Přejete si ho obnovit?</translation>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation>Zobrazit seznam</translation>
+        <translation>Zobrazení seznamu</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation>Zobrazit ikony</translation>
+        <translation>Zobrazení ikon</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -1633,7 +1633,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation>Zobrazit seznam</translation>
+        <translation>Zobrazení seznamu</translation>
     </message>
 </context>
 <context>
@@ -3588,7 +3588,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Obsazení CSV</translation>
+        <translation>Vykreslit CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4044,12 +4044,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Obsazené položky: %1 z %2 textových řádků</translation>
+        <translation>Vykreslené položky: %1 z %2 textových řádků</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Nic není obsazeno.</translation>
+        <translation>Nic nebylo vykresleno.</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -5357,7 +5357,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Barvy na výběr napodobující razítko válečku</translation>
+        <translation>Maluje přes výběr podobně jako vzorovací váleček</translation>
     </message>
 </context>
 <context>
@@ -5365,37 +5365,37 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Možnosti malíře</translation>
+        <translation>Možnosti vzoru</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Možnosti odlévání malířů</translation>
+        <translation>Možnosti vykreslování vzorů</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Překlopit vzory</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Obsazení ve skupině</translation>
+        <translation>Vykreslit ve skupině</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Odlitek na dílčí vrstvě</translation>
+        <translation>Vykreslit na podvrstvu</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Přidat Začít Apex</translation>
+        <translation>Přidat počáteční vrchol</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Přidání koncového vrcholu</translation>
+        <translation>Přidat koncový vrchol</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5405,17 +5405,17 @@ již v seznamu je.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Sada Painter</translation>
+        <translation>Sada vzorů</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Malíři zrcadel nad základní linií.</translation>
+        <translation>Zrcadlit vzory přes základní čáru.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Seskupte všechny odlitky do jedné operace.</translation>
+        <translation>Seskupit všechna vykreslení do jedné operace.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5435,12 +5435,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Náhled na malíře.</translation>
+        <translation>Náhled vzorů.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Vyberte sadu malířů.</translation>
+        <translation>Vyberte sadu vzorů.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5525,7 +5525,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Ilustrace možností odlévání</translation>
+        <translation>Ilustrace možností vykreslování</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5545,22 +5545,22 @@ již v seznamu je.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Zadejte šířku malíře. (+0)</translation>
+        <translation>Zadejte šířku vzoru. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Zadejte velikost kroku hlavního malíře. (+0)</translation>
+        <translation>Zadejte velikost kroku hlavního vzoru. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Zadejte délku hlavního malíře. (+)</translation>
+        <translation>Zadejte délku hlavního vzoru. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Udržujte proporcionální malíře.</translation>
+        <translation>Zachovat proporce vzorů.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5575,12 +5575,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Verbose info. (trvalé zapnutí)</translation>
+        <translation>Podrobné informace. (trvalé zapnutí)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Odstraněno malované přes základní entity. (trvalé vypnutí)</translation>
+        <translation>Odstranit přemalované základní entity. (trvalé vypnutí)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5600,7 +5600,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation>Šířka</translation>
+        <translation>Šířka : </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5610,7 +5610,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Možnosti opakovaného malování</translation>
+        <translation>Možnosti opakovaného vzoru</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5655,7 +5655,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose *</translation>
+        <translation>Podrobný výpis *</translation>
     </message>
     <message>
         <location line="+16"/>

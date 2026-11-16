@@ -5360,7 +5360,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Boja preko odabira oponašajući valjkasti pečat</translation>
+        <translation>Oslikava odabir oponašajući valjkasti pečat</translation>
     </message>
 </context>
 <context>
@@ -5368,17 +5368,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Opcije bojača</translation>
+        <translation>Opcije uzorka</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Opcije postavljanja bojača</translation>
+        <translation>Opcije postavljanja uzoraka</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Preokreni bojače</translation>
+        <translation>Preokreni uzorke</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5408,12 +5408,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Skup bojača</translation>
+        <translation>Skup uzoraka</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Zrcali bojače preko osnovne linije.</translation>
+        <translation>Zrcali uzorke preko osnovne linije.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5438,12 +5438,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Pregled bojača.</translation>
+        <translation>Pregled uzoraka.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Odaberi skup bojača.</translation>
+        <translation>Odaberi skup uzoraka.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5548,22 +5548,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Unesi širinu bojača. (+0)</translation>
+        <translation>Unesi širinu uzorka. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Unesi veličinu koraka glavnog bojača. (+0)</translation>
+        <translation>Unesi veličinu koraka glavnog uzorka. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Unesi duljinu glavnog bojača. (+)</translation>
+        <translation>Unesi duljinu glavnog uzorka. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Zadrži bojače proporcionalnima.</translation>
+        <translation>Zadrži uzorke proporcionalnima.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5613,7 +5613,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Opcije ponavljajućeg bojača</translation>
+        <translation>Opcije ponavljajućeg uzorka</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6588,7 +6588,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Block/HideAllBlocks/HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
-        <translation>&amp;Sakrij Sve Blokove</translation>
+        <translation>&amp;Sakrij sve blokove</translation>
     </message>
 </context>
 <context>
@@ -12211,7 +12211,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
-        <translation>&amp;Prikaži Sve Blokove</translation>
+        <translation>&amp;Prikaži sve blokove</translation>
     </message>
 </context>
 <context>

@@ -5349,7 +5349,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>模仿滚筒印章的方式在选区上涂抹。</translation>
+        <translation>以模仿滚筒印章的方式在所选对象上绘制</translation>
     </message>
 </context>
 <context>
@@ -5362,7 +5362,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>画笔投射选项</translation>
+        <translation>画笔绘制选项</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5372,12 +5372,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>在小组中投票</translation>
+        <translation>成组绘制</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>投在子图层上</translation>
+        <translation>绘制到子图层</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5407,17 +5407,17 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>将所有铸件归入一个操作。</translation>
+        <translation>将所有绘制结果合并为一个操作。</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>从在开放的形式上铸造一个开始的顶点开始。</translation>
+        <translation>在开放图形上先绘制开始顶点。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>以在开放的形式上铸造一个端部的顶点结束。</translation>
+        <translation>在开放图形上最后绘制结束顶点。</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5437,27 +5437,27 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>窗帘绳</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>正交条</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>正交点全球（OrthogonalPointsGlobal</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>正弦波</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>正弦波全球</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5467,37 +5467,37 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>三角波</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>锯齿波</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>方波</translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>阶梯波</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>正方形的形状</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>方形弯曲的形状</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation>所有画师数据类型</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5517,7 +5517,7 @@ is already in the list.</source>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>铸造选项图示</translation>
+        <translation>绘制选项图示</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5562,22 +5562,22 @@ is already in the list.</source>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>调整缩放比例f 1.00-0.90，以适应整个表格。</translation>
+        <translation>调整缩放比例 f 1.00-0.90，以适应整个图形。</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>粗略的信息。(持续开启)</translation>
+        <translation>详细信息。(持续开启)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>删除了涂在基础实体上的。(持久性关闭)</translation>
+        <translation>删除被绘制覆盖的基础实体。(持续关闭)</translation>
     </message>
     <message>
         <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;输入空间大小&gt;。</translation>
+        <translation>&lt;输入间距大小&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5617,12 +5617,12 @@ is already in the list.</source>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation>封闭式移位%：</translation>
+        <translation>闭合图形偏移 %：</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>打开表单缩放选项</translation>
+        <translation>开放图形缩放选项</translation>
     </message>
     <message>
         <location line="+24"/>

@@ -5354,7 +5354,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Maling over valg som etterligner et rullestempel</translation>
+        <translation>Maler over utvalget som et rullestempel</translation>
     </message>
 </context>
 <context>
@@ -5362,57 +5362,57 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Maleralternativer</translation>
+        <translation>Mønsteralternativer</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Malere avstøpningsmuligheter</translation>
+        <translation>Alternativer for plassering av mønstre</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Speilmalere over baseline.</translation>
+        <translation>Speil mønstrene om grunnlinjen.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Flip Malere</translation>
+        <translation>Vend mønstre</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Grupper alle støpegods til én operasjon.</translation>
+        <translation>Grupper alle plasseringer til én operasjon.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Støpt i gruppe</translation>
+        <translation>Plasser i gruppe</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Støpt på underlaget</translation>
+        <translation>Plasser på underlag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Begynn med å støpe en begynnende topp på åpne former.</translation>
+        <translation>Start med å plassere en startspiss på åpne former.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation>Legg til Begin Apex</translation>
+        <translation>Legg til startspiss</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Avslutt med å støpe en endespiss på åpne former.</translation>
+        <translation>Avslutt med å plassere en endespiss på åpne former.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>Legg til End Apex</translation>
+        <translation>Legg til endespiss</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5427,17 +5427,17 @@ er allerede i listen.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Malersett</translation>
+        <translation>Mønstersett</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>Forhåndsvisning av malere.</translation>
+        <translation>Forhåndsvisning av mønstre.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Velg malersett.</translation>
+        <translation>Velg mønstersett.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5452,7 +5452,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>OrthogonalPointsGlobal (OrthogonalPointsGlobal)</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5532,7 +5532,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Illustrasjon av avstøpningsalternativene</translation>
+        <translation>Illustrasjon av plasseringsalternativene</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5557,7 +5557,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Angi malerbredde. (+0)</translation>
+        <translation>Angi mønsterbredde. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5572,12 +5572,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Repeterende Painter-alternativer</translation>
+        <translation>Alternativer for repeterende mønster</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Angi hovedmalerens trinnstørrelse. (+0)</translation>
+        <translation>Angi trinnstørrelse for hovedmønsteret. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5587,7 +5587,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Angi hovedmalerens lengde. (+)</translation>
+        <translation>Angi lengde for hovedmønsteret. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5597,7 +5597,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>Hold malere proporsjonale.</translation>
+        <translation>Hold mønstrene proporsjonale.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5607,7 +5607,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+3"/>
         <source>Closed Forms shifting % :</source>
-        <translation>Lukket Skjemaer som skifter % :</translation>
+        <translation>Forskyvning for lukkede former % :</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -10810,7 +10810,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Fjern liste</translation>
+        <translation>Tøm liste</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -15026,7 +15026,7 @@ er allerede i listen.</translation>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation>Ukjent entitet</translation>
+        <translation>Ukjent enhet</translation>
     </message>
     <message>
         <location line="+108"/>

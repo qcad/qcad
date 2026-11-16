@@ -450,7 +450,7 @@ da bodo spremembe začele delovati.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation>Orodjarna lokov</translation>
+        <translation>Orodja loka</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5368,27 +5368,27 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Možnosti slikarja</translation>
+        <translation>Možnosti vzorca</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Možnosti odlivanja slikarja</translation>
+        <translation>Možnosti nanosa vzorcev</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Zrcali slikarja</translation>
+        <translation>Zrcali vzorce</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Združi odlitke</translation>
+        <translation>Nanesi kot skupino</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Odlitek na nižjo plast</translation>
+        <translation>Nanesi na podplast</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5408,27 +5408,27 @@ je že na seznamu.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Vzorec valjarja</translation>
+        <translation>Nabor vzorcev</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Slikarji z ogledali nad osnovno črto.</translation>
+        <translation>Zrcalite vzorce čez osnovno črto.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Združite vse ulitke v eno operacijo.</translation>
+        <translation>Združite vse nanose v eno operacijo.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Začnite z odlivanjem začetnega vrha na odprtih obrazcih.</translation>
+        <translation>Začnite z nanosom začetnega temena na odprtih oblikah.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Končajte z vlivanjem končnega vrha na odprtih obrazcih.</translation>
+        <translation>Končajte z nanosom končnega temena na odprtih oblikah.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5438,77 +5438,77 @@ je že na seznamu.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Predogled slikarjev.</translation>
+        <translation>Predogled vzorcev.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Izberite nabor slikarjev.</translation>
+        <translation>Izberite nabor vzorcev.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>Vrv zavese</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>Ortogonalni drog</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>Ortogonalne globalne točke</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>Sinusna krivulja</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>Globalni sinosoidni val</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation>Globalni 3 fazni val</translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>Trikotno valovanje</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>Žagasto valovanje</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>Kvadratno valovanje</translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>Stopničasto valovanje</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>Kvadratasto</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>Zvijajoča pravokotna oblika</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation>Vse oblike valjarja</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5528,7 +5528,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Ilustracija možnosti odlivanja</translation>
+        <translation>Ilustracija možnosti nanosa</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5548,22 +5548,22 @@ je že na seznamu.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Vnesite širino slikarja. (+0)</translation>
+        <translation>Vnesite širino vzorca. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Vnesite velikost koraka glavnega slikarja. (+0)</translation>
+        <translation>Vnesite velikost koraka glavnega vzorca. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Vnesite dolžino glavnega pleskarja. (+)</translation>
+        <translation>Vnesite dolžino glavnega vzorca. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Slikarji naj bodo sorazmerni.</translation>
+        <translation>Vzorci naj ostanejo sorazmerni.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5583,7 +5583,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Izbrisano pobarvano nad osnovnimi entitetami. (trajno izklopljeno)</translation>
+        <translation>Izbriši poslikane osnovne entitete. (trajno izklopljeno)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5613,7 +5613,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Možnosti ponavljujočega slikarja</translation>
+        <translation>Možnosti ponavljajočega se vzorca</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6338,7 +6338,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation>Faktor bledenja delovnega sklopa:</translation>
+        <translation>Faktor bledenja delovnega nabora:</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -6760,12 +6760,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Zrcali prilepljene predmete&lt;br&gt;skozi vodoravnico</translation>
+        <translation>Zrcali prilepljene entitete&lt;br&gt;po vodoravni osi</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Zrcali prilepljene predmete&lt;br&gt;čez navpičnico</translation>
+        <translation>Zrcali prilepljene entitete&lt;br&gt;po navpični osi</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -15072,7 +15072,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation>PDF Datoteke</translation>
+        <translation>Datoteka PDF</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -3570,7 +3570,7 @@ jest już na liście.</translation>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation>Komenda zakończona.</translation>
+        <translation>Polecenie zakończone.</translation>
     </message>
     <message>
         <location line="-1293"/>
@@ -3590,7 +3590,7 @@ jest już na liście.</translation>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Cast CSV</translation>
+        <translation>Rysuj z CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3751,7 +3751,7 @@ jest już na liście.</translation>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation>Rv Nieważne.</translation>
+        <translation>Nieprawidłowe Rv.</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -3767,7 +3767,7 @@ jest już na liście.</translation>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation>Rv1 Nieważne.</translation>
+        <translation>Nieprawidłowe Rv1.</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -3897,7 +3897,7 @@ jest już na liście.</translation>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation>Centrum nieważne.</translation>
+        <translation>Nieprawidłowy środek.</translation>
     </message>
     <message>
         <location line="-21"/>
@@ -3907,7 +3907,7 @@ jest już na liście.</translation>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Kółko nieważne.</translation>
+        <translation>Nieprawidłowy okrąg.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3943,12 +3943,12 @@ jest już na liście.</translation>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation>Wielkość w X Nieważne.</translation>
+        <translation>Nieprawidłowy rozmiar w X.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation>Wielkość w Y Nieważne.</translation>
+        <translation>Nieprawidłowy rozmiar w Y.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4001,12 +4001,12 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation>Pionowe wyrównanie Nieważne.</translation>
+        <translation>Nieprawidłowe wyrównanie pionowe.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation>Horz. wyrównanie Nieważne.</translation>
+        <translation>Nieprawidłowe wyrównanie poziome.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4046,12 +4046,12 @@ jest już na liście.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Zrzucone wpisy: %1 z %2 linii tekstu</translation>
+        <translation>Narysowane wpisy: %1 z %2 linii tekstu</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Nic nie zostało rzucone.</translation>
+        <translation>Nic nie narysowano.</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -5367,37 +5367,37 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Opcje malarza</translation>
+        <translation>Opcje wzoru</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Opcje odlewów dla malarzy</translation>
+        <translation>Opcje nanoszenia wzorów</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Odwróć wzory</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Obsada w grupie</translation>
+        <translation>Nanieś w grupie</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Odlew na podkładzie</translation>
+        <translation>Nanieś na podwarstwę</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Dodaj początek Apex</translation>
+        <translation>Dodaj wierzchołek początkowy</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Dodaj koniec Apex</translation>
+        <translation>Dodaj wierzchołek końcowy</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5407,27 +5407,27 @@ jest już na liście.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Zestaw malarski</translation>
+        <translation>Zestaw wzorów</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Malarze luster nad bazą.</translation>
+        <translation>Odbij wzory lustrzanie względem linii bazowej.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Grupuj wszystkie odlewy do jednej operacji.</translation>
+        <translation>Grupuj wszystkie naniesione wzory w jedną operację.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Zacznij od rzucania początku wierzchołka na otwartych formach.</translation>
+        <translation>Zacznij od naniesienia wierzchołka początkowego na formach otwartych.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Zakończyć odlewaniem wierzchołka końcowego na formach otwartych.</translation>
+        <translation>Zakończ naniesieniem wierzchołka końcowego na formach otwartych.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5437,12 +5437,12 @@ jest już na liście.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Przegląd malarzy.</translation>
+        <translation>Podgląd wzorów.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Wybierz zestaw malarski.</translation>
+        <translation>Wybierz zestaw wzorów.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5462,17 +5462,17 @@ jest już na liście.</translation>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>SinusoidaWave</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>SinusoidaWaveGlobal</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation>3FazoweFaleGlobal</translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5512,22 +5512,22 @@ jest już na liście.</translation>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation>Typ wkładki</translation>
+        <translation>Typ wstawki</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation>Podgląd wstawienia.</translation>
+        <translation>Podgląd wstawki.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Wybierz opcję Wstaw lub Wprowadź pustą przestrzeń. (Nie zaimplementowano)</translation>
+        <translation>Wybierz wstawkę lub wprowadź pusty odstęp. (Nie zaimplementowano)</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Ilustracja opcji odlewania</translation>
+        <translation>Ilustracja opcji nanoszenia</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5547,27 +5547,27 @@ jest już na liście.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Wprowadź szerokość malowania. (+0)</translation>
+        <translation>Wprowadź szerokość wzoru. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Wprowadź wielkość kroku głównego malarza. (+0)</translation>
+        <translation>Wprowadź wielkość kroku głównego wzoru. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Wprowadź długość głównego malarza. (+)</translation>
+        <translation>Wprowadź długość głównego wzoru. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Zachowaj proporcje malarzy.</translation>
+        <translation>Zachowaj proporcje wzorów.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Wybierz wartość procentową Stepsize.</translation>
+        <translation>Wybierz wartość procentową wielkości kroku.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -5577,17 +5577,17 @@ jest już na liście.</translation>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Szczegółowe informacje. (persistent on)</translation>
+        <translation>Szczegółowe informacje. (trwale włączone)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Usunięto zamalowane obiekty bazowe. (trwałe wyłączone)</translation>
+        <translation>Usuwa zamalowane obiekty bazowe. (trwale wyłączone)</translation>
     </message>
     <message>
         <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Wprowadź wielkość przestrzeni&gt;.</translation>
+        <translation>&lt;Wprowadź wielkość odstępu&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5612,7 +5612,7 @@ jest już na liście.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Opcje powtarzającego się malarza</translation>
+        <translation>Opcje powtarzanego wzoru</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5627,12 +5627,12 @@ jest już na liście.</translation>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation>Formy zamknięte przesuwające się % :</translation>
+        <translation>Przesunięcie na formach zamkniętych % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Opcje skalowania formularzy otwartych</translation>
+        <translation>Opcje skalowania form otwartych</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -5642,7 +5642,7 @@ jest już na liście.</translation>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Wyrównać z początkiem</translation>
+        <translation>Wyrównaj do początku</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5652,12 +5652,12 @@ jest już na liście.</translation>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation>Wyrównać do końca</translation>
+        <translation>Wyrównaj do końca</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose *</translation>
+        <translation>Tryb szczegółowy *</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -7274,12 +7274,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation>aktywna lista transakcji centroidów 2D.</translation>
+        <translation>Słuchacz transakcji centroidów 2D aktywny.</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation>Dezaktywacja/usunięcie listenera transakcji centroidów 2D.</translation>
+        <translation>Dezaktywowano/usunięto słuchacza transakcji centroidów 2D.</translation>
     </message>
     <message>
         <location line="+25"/>

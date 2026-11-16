@@ -121,7 +121,7 @@
         <location line="+1"/>
         <location line="+457"/>
         <source>Plugin:</source>
-        <translation>Plugin:</translation>
+        <translation>Πρόσθετο:</translation>
     </message>
     <message>
         <location line="-432"/>
@@ -138,7 +138,7 @@
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation>Άγνωστος</translation>
+        <translation>Άγνωστο</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5354,7 +5354,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Χρωματίζει πάνω από την επιλογή μιμούμενη μια σφραγίδα με ρολό</translation>
+        <translation>Σχεδιάζει πάνω στην επιλογή, όπως μια κυλινδρική σφραγίδα</translation>
     </message>
 </context>
 <context>
@@ -5362,57 +5362,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Επιλογές ζωγράφου</translation>
+        <translation>Επιλογές μοτίβου</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Επιλογές χύτευσης ζωγράφων</translation>
+        <translation>Επιλογές εφαρμογής μοτίβων</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Ζωγράφοι καθρέφτη πάνω από τη γραμμή βάσης.</translation>
+        <translation>Κατοπτρισμός των μοτίβων ως προς τη γραμμή βάσης.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Αναστροφή ζωγράφων</translation>
+        <translation>Αναστροφή μοτίβων</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Ομαδοποιήστε όλα τα χυτά σε μία εργασία.</translation>
+        <translation>Ομαδοποιήστε όλες τις εφαρμογές σε μία ενέργεια.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Εκτέλεση σε ομάδα</translation>
+        <translation>Εφαρμογή σε ομάδα</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Εκτύπωση σε υπο-στρώμα</translation>
+        <translation>Εφαρμογή σε υπο-στρώμα</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Ξεκινήστε με τη χύτευση μιας αρχικής κορυφής σε ανοιχτές φόρμες.</translation>
+        <translation>Ξεκινήστε εφαρμόζοντας μια αρχική κορυφή σε ανοιχτές μορφές.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation>Προσθέστε Begin Apex</translation>
+        <translation>Προσθήκη αρχικής κορυφής</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Τελειώστε με τη χύτευση μιας ακραίας κορυφής σε ανοικτές φόρμες.</translation>
+        <translation>Τελειώστε εφαρμόζοντας μια τελική κορυφή σε ανοιχτές μορφές.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>Προσθήκη άκρου Apex</translation>
+        <translation>Προσθήκη τελικής κορυφής</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5427,17 +5427,17 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Σετ ζωγράφου</translation>
+        <translation>Σετ μοτίβων</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>Προεπισκόπηση ζωγράφων.</translation>
+        <translation>Προεπισκόπηση μοτίβων.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Επιλέξτε σετ ζωγράφων.</translation>
+        <translation>Επιλέξτε σετ μοτίβων.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5517,7 +5517,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Επιλέξτε Insertion ή Enter void space. (Δεν εφαρμόζεται)</translation>
+        <translation>Επιλέξτε εισαγωγή ή ορίστε κενό διάστημα. (Δεν έχει υλοποιηθεί)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5532,7 +5532,7 @@ is already in the list.</source>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Απεικόνιση των επιλογών χύτευσης</translation>
+        <translation>Απεικόνιση των επιλογών εφαρμογής</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5557,7 +5557,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Εισάγετε το πλάτος του ζωγράφου. (+0)</translation>
+        <translation>Εισάγετε το πλάτος του μοτίβου. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5572,12 +5572,12 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Επαναλαμβανόμενες επιλογές Painter</translation>
+        <translation>Επιλογές επαναλαμβανόμενου μοτίβου</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Εισάγετε το μέγεθος βήματος του κύριου ζωγράφου. (+0)</translation>
+        <translation>Εισάγετε το μέγεθος βήματος του κύριου μοτίβου. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5587,7 +5587,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Εισάγετε το μήκος του κύριου ζωγράφου. (+)</translation>
+        <translation>Εισάγετε το μήκος του κύριου μοτίβου. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5597,12 +5597,12 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>Κρατήστε τους ζωγράφους αναλογικά.</translation>
+        <translation>Διατηρήστε τις αναλογίες των μοτίβων.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Επιλέξτε το ποσοστό του Stepsize.</translation>
+        <translation>Επιλέξτε το ποσοστό του μεγέθους βήματος.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5627,7 +5627,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Ευθυγράμμιση με begin</translation>
+        <translation>Ευθυγράμμιση με την αρχή</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5637,12 +5637,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation>Ευθυγράμμιση με το άκρο</translation>
+        <translation>Ευθυγράμμιση με το τέλος</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Λεπτομερείς πληροφορίες. (επίμονη ενεργοποιημένη)</translation>
+        <translation>Λεπτομερείς πληροφορίες. (μόνιμα ενεργό)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5652,7 +5652,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Διαγράφεται βαμμένο πάνω από τις οντότητες βάσης. (persistent off)</translation>
+        <translation>Διαγραφή των οντοτήτων βάσης που επικαλύφθηκαν. (μόνιμα ανενεργό)</translation>
     </message>
     <message>
         <location line="+3"/>

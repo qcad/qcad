@@ -26,7 +26,7 @@
     <message>
         <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation>Los plugins y los complementos de guión están sujetos a sus respectivas licencias (ver ficha &quot;Plugins&quot;).</translation>
+        <translation>Los plugins y los complementos de script están sujetos a sus respectivas licencias (ver ficha &quot;Plugins&quot;).</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -168,7 +168,7 @@
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation>Fichero:</translation>
+        <translation>Archivo:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -178,12 +178,12 @@
     <message>
         <location line="+22"/>
         <source>Script Add-Ons</source>
-        <translation>Complementos de guión</translation>
+        <translation>Complementos de script</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation>No se han encontrado complementos de guión.</translation>
+        <translation>No se han encontrado complementos de script.</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -259,7 +259,7 @@
     <message>
         <location line="+67"/>
         <source>Scripts</source>
-        <translation>Guiones</translation>
+        <translation>Scripts</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -904,7 +904,7 @@ para aplicar los cambios.</translation>
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation>Fichero</translation>
+        <translation>Archivo</translation>
     </message>
     <message>
         <location line="+123"/>
@@ -5172,7 +5172,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation>&amp;Ejemplos de guión</translation>
+        <translation>&amp;Ejemplos de scripts</translation>
     </message>
 </context>
 <context>
@@ -5251,7 +5251,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;File</source>
-        <translation>&amp;Fichero</translation>
+        <translation>A&amp;rchivo</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -5362,27 +5362,27 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Opciones de pintor</translation>
+        <translation>Opciones de patrón</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Opciones de casting para pintores</translation>
+        <translation>Opciones de aplicación de patrones</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Invierte a los pintores</translation>
+        <translation>Voltear patrones</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Casting en grupo</translation>
+        <translation>Aplicar en grupo</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Casting sobre subcapa</translation>
+        <translation>Aplicar en subcapa</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5402,27 +5402,27 @@ ya está en la lista.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Patrón</translation>
+        <translation>Conjunto de patrones</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Refleja a los painters sobre la línea de base.</translation>
+        <translation>Reflejar los patrones respecto a la línea base.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Agrupe todas en una sola operación.</translation>
+        <translation>Agrupar todas las aplicaciones en una sola operación.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Comenzar con la fundición de un vértice inicial en formas abiertas.</translation>
+        <translation>Comenzar aplicando un ápice inicial en formas abiertas.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Terminar con la fundición de un vértice final en formas abiertas.</translation>
+        <translation>Terminar aplicando un ápice final en formas abiertas.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5432,12 +5432,12 @@ ya está en la lista.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Vista previa de los pintores.</translation>
+        <translation>Vista previa de los patrones.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Seleccione el conjunto de pintores.</translation>
+        <translation>Seleccione el conjunto de patrones.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5522,7 +5522,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Ilustración de las opciones de casting</translation>
+        <translation>Ilustración de las opciones de aplicación</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5542,32 +5542,32 @@ ya está en la lista.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Introduzca el ancho del pintor. (+0)</translation>
+        <translation>Introduzca el ancho del patrón. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Introduzca el tamaño de paso del pintor principal. (+0)</translation>
+        <translation>Introduzca el tamaño de paso del patrón principal. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Introduzca la longitud del pintor principal. (+)</translation>
+        <translation>Introduzca la longitud del patrón principal. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Mantener la proporción de pintores.</translation>
+        <translation>Mantener la proporción de los patrones.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Seleccione el porcentaje de Stepsize.</translation>
+        <translation>Seleccione el porcentaje del tamaño del paso.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Adaptar la escala f 1,00-0,90 para que se ajuste a todo el formulario.</translation>
+        <translation>Adaptar la escala f 1,00-0,90 para que se ajuste a toda la forma.</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5607,7 +5607,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Opciones de repetitive pintores</translation>
+        <translation>Opciones de patrón repetitivo</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5637,7 +5637,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Alinear con begin</translation>
+        <translation>Alinear con el inicio</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6754,12 +6754,12 @@ ya está en la lista.</translation>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Voltear las entidades&lt;br&gt;pegado horizontal</translation>
+        <translation>Voltear las entidades&lt;br&gt;pegadas horizontalmente</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Voltear las entidades&lt;br&gt;pegado verticalmente</translation>
+        <translation>Voltear las entidades&lt;br&gt;pegadas verticalmente</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7900,12 +7900,12 @@ ya está en la lista.</translation>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Voltear las entidades&lt;br&gt;pegado horizontal</translation>
+        <translation>Voltear las entidades&lt;br&gt;pegadas horizontalmente</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Voltear las entidades&lt;br&gt;pegado verticalmente</translation>
+        <translation>Voltear las entidades&lt;br&gt;pegadas verticalmente</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7953,7 +7953,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation>Insertar &amp;guión</translation>
+        <translation>Insertar &amp;script</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
@@ -9548,7 +9548,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation>Mis guiones</translation>
+        <translation>Mis scripts</translation>
     </message>
 </context>
 <context>
@@ -9906,12 +9906,12 @@ ya está en la lista.</translation>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Voltear las entidades&lt;br&gt;pegado horizontal</translation>
+        <translation>Voltear las entidades&lt;br&gt;pegadas horizontalmente</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Voltear las entidades&lt;br&gt;pegado verticalmente</translation>
+        <translation>Voltear las entidades&lt;br&gt;pegadas verticalmente</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10805,7 +10805,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation>Fichero</translation>
+        <translation>Archivo</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+10"/>
@@ -11197,7 +11197,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation>Abrir archivo de guión</translation>
+        <translation>Abrir archivo de script</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11217,7 +11217,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Ejecución de guión</translation>
+        <translation>Ejecución de script</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -11232,12 +11232,12 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation>&amp;Ejecutar guión</translation>
+        <translation>&amp;Ejecutar script</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Open and run a script file</source>
-        <translation>Abrir y ejecutar un archivo de guión</translation>
+        <translation>Abrir y ejecutar un archivo de script</translation>
     </message>
 </context>
 <context>
@@ -11328,7 +11328,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation>Fichero</translation>
+        <translation>Archivo</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11561,7 +11561,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation>Guión</translation>
+        <translation>Scripts</translation>
     </message>
 </context>
 <context>
@@ -12311,7 +12311,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation>Entrar</translation>
+        <translation>Intro</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -13742,7 +13742,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation>&amp;Tutoriales de guiones</translation>
+        <translation>&amp;Tutoriales de scripts</translation>
     </message>
 </context>
 <context>
@@ -14549,7 +14549,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation>Cargar add-ons...</translation>
+        <translation>Cargando complementos...</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -14577,12 +14577,12 @@ ya está en la lista.</translation>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation>Objetos desconocido</translation>
+        <translation>Objetos desconocidos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation>Objeto desconocida</translation>
+        <translation>Objeto desconocido</translation>
     </message>
     <message>
         <location line="+2"/>

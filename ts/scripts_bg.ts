@@ -4043,7 +4043,7 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Заличени записи: %1 от %2 текстови реда</translation>
+        <translation>Начертани записи: %1 от %2 текстови реда</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4053,7 +4053,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>Нищо не е хвърлено.</translation>
+        <translation>Нищо не е начертано.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -5354,7 +5354,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Боядисване на селекцията, имитиращо печат с валяк</translation>
+        <translation>Нанасяне на мотиви върху селекцията, имитиращо валяк с шарка</translation>
     </message>
 </context>
 <context>
@@ -5362,57 +5362,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Опции за рисуване</translation>
+        <translation>Опции за мотива</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Опции за леене на художници</translation>
+        <translation>Опции за нанасяне на мотивите</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Огледални художници над базовата линия.</translation>
+        <translation>Огледално обръщане на мотивите спрямо базовата линия.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Художници Flip Painters</translation>
+        <translation>Обръщане на мотивите</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Групирайте всички отливки в една операция.</translation>
+        <translation>Групиране на всички нанасяния в една операция.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Кастинг в група</translation>
+        <translation>Нанасяне в група</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Заливане на подслой</translation>
+        <translation>Нанасяне върху подслой</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Започнете с леене на начален връх на отворени форми.</translation>
+        <translation>Започване с нанасяне на начален връх при отворени форми.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation>Добавяне Започнете Apex</translation>
+        <translation>Добавяне на начален връх</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Завършете с отливане на крайния връх на отворените форми.</translation>
+        <translation>Завършване с нанасяне на краен връх при отворени форми.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>Добавяне на край на Apex</translation>
+        <translation>Добавяне на краен връх</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5427,67 +5427,67 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Комплект за рисуване</translation>
+        <translation>Набор мотиви</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>Преглед на художниците.</translation>
+        <translation>Преглед на мотивите.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Изберете набор от бои.</translation>
+        <translation>Изберете набор мотиви.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>Завеса</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>Ортогонална лента</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>Глобални ортогонални точки</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>Синусоида</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>Глобална синусоида</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation>Глобална 3-фазна вълна</translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>Триъгълна вълна</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>Зъбчата вълна</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>Квадратна вълна</translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>Стъпаловидна вълна</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5522,7 +5522,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Введете размера на пространството&gt;</translation>
+        <translation>&lt;Въведете размера на празното пространство&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5532,7 +5532,7 @@ is already in the list.</source>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Илюстрация на опциите за леене</translation>
+        <translation>Илюстрация на опциите за нанасяне</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5557,7 +5557,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Въведете ширината на бояджията. (+0)</translation>
+        <translation>Въведете ширината на мотива. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5572,12 +5572,12 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Опции за повтарящ се художник</translation>
+        <translation>Опции за повтарящия се мотив</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Въведете размера на стъпката на главния художник. (+0)</translation>
+        <translation>Въведете размера на стъпката на основния мотив. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5587,7 +5587,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Въведете дължината на основния бояджия. (+)</translation>
+        <translation>Въведете дължината на основния мотив. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5597,12 +5597,12 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>Дръжте художниците пропорционални.</translation>
+        <translation>Запазване на пропорциите на мотивите.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Изберете процент от Stepsize.</translation>
+        <translation>Изберете процент от размера на стъпката.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5642,7 +5642,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Обща информация. (постоянно включено)</translation>
+        <translation>Подробна информация. (постоянно включено)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5652,7 +5652,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Изтрити, боядисани върху базови структури. (постоянна изключена)</translation>
+        <translation>Изтриване на базовите обекти, върху които е нанесен мотив. (постоянно изключено)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12221,7 +12221,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation>Покажи прочит</translation>
+        <translation>Показване на Readme</translation>
     </message>
 </context>
 <context>
@@ -13387,7 +13387,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Изпращане към Назад</translation>
+        <translation>Изпращане на заден план</translation>
     </message>
 </context>
 <context>

@@ -690,14 +690,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation>Min límites</translation>
+        <translation>Límites mín.</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation>Max límites</translation>
+        <translation>Límites máx.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -711,14 +711,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Min extensión</translation>
+        <translation>Extensión mín.</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Max extensión</translation>
+        <translation>Extensión máx.</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+948"/>

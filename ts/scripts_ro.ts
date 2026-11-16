@@ -3590,7 +3590,7 @@ este deja în listă.</translation>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Cast CSV</translation>
+        <translation>Procesează CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5359,7 +5359,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Vopsește peste selecție imitând o ștampilă cu rolă</translation>
+        <translation>Desenează peste selecție, imitând o rolă cu model</translation>
     </message>
 </context>
 <context>
@@ -5367,57 +5367,57 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Opțiuni de pictor</translation>
+        <translation>Opțiuni pentru motive</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Opțiuni de turnare a pictorilor</translation>
+        <translation>Opțiuni de aplicare a motivelor</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Pictori de oglinzi peste linia de bază.</translation>
+        <translation>Oglindiți motivele față de linia de bază.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Întoarceți motivele</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Grupați toate piesele turnate la o singură operațiune.</translation>
+        <translation>Grupați toate aplicările într-o singură operație.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Turnat în grup</translation>
+        <translation>Aplicați în grup</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Turnat pe sub-strat</translation>
+        <translation>Aplicați pe substrat</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Începeți cu turnarea unui apex de început pe forme deschise.</translation>
+        <translation>Începeți prin aplicarea unui vârf de început pe formele deschise.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation>Adăugați Begin Apex</translation>
+        <translation>Adăugați vârf de început</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Închei prin turnarea unui vârf de capăt pe forme deschise.</translation>
+        <translation>Încheiați prin aplicarea unui vârf de capăt pe formele deschise.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>Adăugați End Apex</translation>
+        <translation>Adăugați vârf de capăt</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5432,22 +5432,22 @@ este deja în listă.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Set de pictor</translation>
+        <translation>Set de motive</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>Avanpremieră a pictorilor.</translation>
+        <translation>Previzualizare a motivelor.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Selectați setul de pictori.</translation>
+        <translation>Selectați setul de motive.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>CortinaCârlig</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5497,12 +5497,12 @@ este deja în listă.</translation>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>Formă pătrată</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>Formă pătratăFlexibilitate</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5532,12 +5532,12 @@ este deja în listă.</translation>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation>Cortina de frânghie nod cortina</translation>
+        <translation>Nod de șnur de perdea</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Ilustrația opțiunilor de turnare</translation>
+        <translation>Ilustrația opțiunilor de aplicare</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5562,7 +5562,7 @@ este deja în listă.</translation>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Introduceți lățimea pictorului. (+0)</translation>
+        <translation>Introduceți lățimea motivului. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5577,22 +5577,22 @@ este deja în listă.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Opțiuni repetitive Painter</translation>
+        <translation>Opțiuni pentru motive repetitive</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Introduceți dimensiunea treptelor pictorului principal. (+0)</translation>
+        <translation>Introduceți mărimea pasului motivului principal. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Stepsize :</source>
-        <translation>Mărimea pașilor :</translation>
+        <translation>Mărimea pasului :</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Introduceți lungimea pictorului principal. (+)</translation>
+        <translation>Introduceți lungimea motivului principal. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5602,27 +5602,27 @@ este deja în listă.</translation>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>Păstrați proporționalitatea pictorilor.</translation>
+        <translation>Păstrați motivele proporționale.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Selectați procentul de Stepsize.</translation>
+        <translation>Selectați procentul din mărimea pasului.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed Forms shifting % :</source>
-        <translation>Schimbarea formelor închise % :</translation>
+        <translation>Decalare la forme închise % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Opțiuni de scalare a formularelor deschise</translation>
+        <translation>Opțiuni de scalare a formelor deschise</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Adaptați scalarea f 1.00-0.90 pentru a se potrivi întregului formular.</translation>
+        <translation>Adaptați scalarea f 1.00-0.90 pentru a acoperi întreaga formă.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5632,7 +5632,7 @@ este deja în listă.</translation>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Alinierea cu începe</translation>
+        <translation>Aliniere la început</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5642,22 +5642,22 @@ este deja în listă.</translation>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation>Alinierea cu capătul</translation>
+        <translation>Aliniere la capăt</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Informații detaliate. (persistent on)</translation>
+        <translation>Informații detaliate. (activat permanent)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation>Verbose *</translation>
+        <translation>Detaliat *</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Eliminat vopsit peste entitățile de bază. (persistent off)</translation>
+        <translation>Ștergeți entitățile de bază peste care s-a desenat. (dezactivat permanent)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8762,7 +8762,7 @@ este deja în listă.</translation>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation>Eliberați pentru a opri desenul</translation>
+        <translation>Eliberați pentru a opri desenarea</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>

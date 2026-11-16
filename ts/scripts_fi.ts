@@ -3587,7 +3587,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Cast CSV</translation>
+        <translation>Piirrä CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4043,12 +4043,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Valetut merkinnät: %1 / %2 tekstiriviä</translation>
+        <translation>Piirretyt merkinnät: %1 / %2 tekstiriviä</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Mitään ei ole heitetty.</translation>
+        <translation>Mitään ei piirretty.</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -5362,27 +5362,27 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Maalausasetukset</translation>
+        <translation>Kuvioasetukset</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Maalareiden valuvaihtoehdot</translation>
+        <translation>Kuvioiden sijoitusasetukset</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Käännä Painters</translation>
+        <translation>Käännä kuviot</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Luo ryhmään</translation>
+        <translation>Sijoita ryhmänä</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Luo alitaso</translation>
+        <translation>Sijoita alitasolle</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5402,27 +5402,27 @@ on jo luettelossa.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Maalaussarja</translation>
+        <translation>Kuviosarja</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Peilimaalarit perusviivan yläpuolella.</translation>
+        <translation>Peilaa kuviot perusviivan suhteen.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Ryhmittele kaikki valukappaleet yhteen toimintoon.</translation>
+        <translation>Ryhmittele kaikki sijoitukset yhdeksi toiminnoksi.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Aloita valamalla alku apex avoimiin muotoihin.</translation>
+        <translation>Aloita sijoittamalla aloituspiste avoimiin muotoihin.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Päätä valamalla avoimiin lomakkeisiin päätepiste.</translation>
+        <translation>Päätä sijoittamalla loppupiste avoimiin muotoihin.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5432,12 +5432,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Taidemaalareiden esikatselu.</translation>
+        <translation>Kuvioiden esikatselu.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Valitse maalarijoukko.</translation>
+        <translation>Valitse kuviosarja.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5447,57 +5447,57 @@ on jo luettelossa.</translation>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>Kohtisuora palkki</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>Yleiset kohtisuorat pisteet</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>Siniaalto</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>Yleinen siniaalto</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation>Yleinen 3-vaiheaalto</translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>Kolmioaalto</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>Saha-aalto</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>Kanttiaalto</translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>Porrasaalto</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>Ruudutettu muoto</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>Ruudutettu muototaivutus</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5517,12 +5517,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Valitse Insertion tai Enter void space. (Ei toteutettu)</translation>
+        <translation>Valitse lisäys tai syötä tyhjä väli. (Ei toteutettu)</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Kuva valuvaihtoehdoista</translation>
+        <translation>Kuva sijoitusasetuksista</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5542,32 +5542,32 @@ on jo luettelossa.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Syötä maalarin leveys. (+0)</translation>
+        <translation>Syötä kuvion leveys. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Syötä päämaalarin askelkoko. (+0)</translation>
+        <translation>Syötä pääkuvion askelkoko. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Syötä päämaalarin pituus. (+)</translation>
+        <translation>Syötä pääkuvion pituus. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Pidä maalarit oikeasuhtaisina.</translation>
+        <translation>Pidä kuviot oikeasuhtaisina.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Valitse Stepsize-prosenttiosuus.</translation>
+        <translation>Valitse prosenttiosuus askelkoosta.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Mukauta skaalaus f 1,00-0,90 koko lomakkeelle sopivaksi.</translation>
+        <translation>Mukauta skaalaus f 1,00-0,90 koko muotoon sopivaksi.</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5577,7 +5577,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Poistettu maalattu pohjayksiköiden päälle. (Pysyvä pois päältä)</translation>
+        <translation>Poista päällemaalatut peruskohteet. (pysyvä pois päältä)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5587,7 +5587,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation>Verho köysi solmu</translation>
+        <translation>Verhoköyden solmu</translation>
     </message>
     <message>
         <location line="+546"/>
@@ -5607,7 +5607,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Toistuvat maalausasetukset</translation>
+        <translation>Toistuvan kuvion asetukset</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -8131,7 +8131,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>Pikakuvakkeen aikakatkaisu:</translation>
+        <translation>Pikanäppäimen aikakatkaisu:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -11212,27 +11212,27 @@ on jo luettelossa.</translation>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation>Suorita komentorivisarja</translation>
+        <translation>Suorita skripti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation>A&amp;ja komentorivisarja</translation>
+        <translation>A&amp;ja skripti</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Open and run a script file</source>
-        <translation>Avaa ja suorita komentorivisarjatiedosto</translation>
+        <translation>Avaa ja suorita skriptitiedosto</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Komentorivisarja käynnistetään</translation>
+        <translation>Skriptin suoritus</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Olet aikeissa käyttää seuraavaa komentorivisarjaa:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Tämä komentorivisarja voi mahdollisesti muuttaa piirustuksiasi, muokata tai poistaa tiedostosi tai avata verkkoyhteyden.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;väri:#ff0000;&quot;&gt;On erittäin suositeltavaa käyttää vain luotettavista lähteistä tulevia komentorivisarjoja. &lt;/span &gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Olet suorittamassa seuraavaa skriptiä:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Tämä skripti voi mahdollisesti muuttaa piirustuksiasi, muokata tai poistaa tiedostojasi tai käyttää verkkoyhteyttäsi.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;On erittäin suositeltavaa suorittaa vain luotettavista lähteistä peräisin olevia skriptejä.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11553,7 +11553,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation>Skannaa uudelleen komentorivisarja-kansio käynnistyksessä</translation>
+        <translation>Skannaa skriptikansio uudelleen käynnistyksessä</translation>
     </message>
 </context>
 <context>
@@ -11561,7 +11561,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation>Komentorivisarjan teko</translation>
+        <translation>Skriptaus</translation>
     </message>
 </context>
 <context>
@@ -13387,7 +13387,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Lähetä ta&amp;kaisin</translation>
+        <translation>Siirrä taa&amp;kse</translation>
     </message>
 </context>
 <context>
@@ -13742,7 +13742,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation>Komentorivisarja &amp;opetusohjelmat</translation>
+        <translation>Skriptien &amp;opetusohjelmat</translation>
     </message>
 </context>
 <context>
@@ -14567,22 +14567,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
-        <translation>Esineet</translation>
+        <translation>Objektit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation>Esine</translation>
+        <translation>Objekti</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation>Tuntemattomat esineet</translation>
+        <translation>Tuntemattomat objektit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation>Tuntematon esine</translation>
+        <translation>Tuntematon objekti</translation>
     </message>
     <message>
         <location line="+2"/>

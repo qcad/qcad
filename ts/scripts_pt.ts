@@ -450,7 +450,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation>Ferramentas em arco</translation>
+        <translation>Ferramentas de arco</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5362,27 +5362,27 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Opções de pintor</translation>
+        <translation>Opções de motivo</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Opções de casting de pintores</translation>
+        <translation>Opções de aplicação dos motivos</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Inverter os pintores</translation>
+        <translation>Inverter os motivos</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Casting em grupo</translation>
+        <translation>Aplicar em grupo</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Casting em subcamada</translation>
+        <translation>Aplicar em subcamada</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5402,17 +5402,17 @@ já se encontra na lista.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Padrão</translation>
+        <translation>Conjunto de motivos</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Espelhar os painters sobre a linha de base.</translation>
+        <translation>Espelhar os motivos sobre a linha de base.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Agrupe todas em uma operação.</translation>
+        <translation>Agrupar todas as aplicações em uma operação.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5432,12 +5432,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Pré-visualização dos pintores.</translation>
+        <translation>Pré-visualização dos motivos.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Selecione o conjunto de pintores.</translation>
+        <translation>Selecione o conjunto de motivos.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5517,12 +5517,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Selecione inserção ou entrar espaço vazio. (Não implementado)</translation>
+        <translation>Selecione uma inserção ou informe um espaço vazio. (Não implementado)</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Ilustração das opções de casting</translation>
+        <translation>Ilustração das opções de aplicação</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5542,27 +5542,27 @@ já se encontra na lista.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Introduza a largura do pintor. (+0)</translation>
+        <translation>Informe a largura do motivo. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Entre os passos do pintor principal. (+0)</translation>
+        <translation>Informe o tamanho do passo do motivo principal. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Digite o comprimento do pintor principal. (+)</translation>
+        <translation>Informe o comprimento do motivo principal. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Mantenha os pintores proporcionais.</translation>
+        <translation>Mantenha os motivos proporcionais.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Seleccione a percentagem do tamanho dos degraus.</translation>
+        <translation>Selecione a porcentagem do tamanho do passo.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -5577,12 +5577,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Eliminado pintado sobre as entidades base. (Persistente fora)</translation>
+        <translation>Excluir as entidades base pintadas. (persistente desligado)</translation>
     </message>
     <message>
         <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Enter espaço tamanho&gt;</translation>
+        <translation>&lt;Informe o tamanho do espaço&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5607,12 +5607,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Opções do pintor repetitivo</translation>
+        <translation>Opções do motivo repetitivo</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Stepsize :</source>
-        <translation>Tamanho do degrau:</translation>
+        <translation>Tamanho do passo:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5907,12 +5907,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation>Exiba réguas</translation>
+        <translation>Mostrar réguas</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation>Exiba barras de rolagem</translation>
+        <translation>Mostrar barras de rolagem</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5922,12 +5922,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation>Exiba miras</translation>
+        <translation>Mostrar miras</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation>Exiba miras grandes</translation>
+        <translation>Mostrar miras grandes</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -5937,7 +5937,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Exiba o eixo de origem grande</translation>
+        <translation>Mostrar o eixo de origem grande</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -6590,7 +6590,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation>&amp;Oculte todas as camadas</translation>
+        <translation>&amp;Ocultar todas as camadas</translation>
     </message>
 </context>
 <context>
@@ -12208,7 +12208,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>&amp;Exiba todas as camadas</translation>
+        <translation>&amp;Mostrar todas as camadas</translation>
     </message>
 </context>
 <context>

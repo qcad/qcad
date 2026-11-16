@@ -5357,17 +5357,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>ตัวเลือกตัวระบาย</translation>
+        <translation>ตัวเลือกลวดลาย</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>ตัวเลือกการสร้างของตัวระบาย</translation>
+        <translation>ตัวเลือกการสร้างลวดลาย</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>พลิกตัวระบาย</translation>
+        <translation>พลิกลวดลาย</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5397,12 +5397,12 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>ชุดตัวระบาย</translation>
+        <translation>ชุดลวดลาย</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>สะท้อนตัวระบายข้ามเส้นฐาน</translation>
+        <translation>สะท้อนลวดลายข้ามเส้นฐาน</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5427,12 +5427,12 @@ is already in the list.</source>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>ดูตัวอย่างตัวระบาย</translation>
+        <translation>ดูตัวอย่างลวดลาย</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>เลือกชุดตัวระบาย</translation>
+        <translation>เลือกชุดลวดลาย</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5472,7 +5472,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>คลื่นฟันเลื่อย</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5482,17 +5482,17 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>คลื่นขั้นบันได</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>รูปทรงสี่เหลี่ยม</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>รูปทรงสี่เหลี่ยมแบบโค้งงอ</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5517,7 +5517,7 @@ is already in the list.</source>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>ภาพประกอบตัวเลือกการหล่อ</translation>
+        <translation>ภาพประกอบตัวเลือกการสร้าง</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -11215,7 +11215,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;คุณกำลังจะเรียกใช้สคริปต์ต่อไปนี้:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;สคริปต์นี้อาจแก้ไขแบบร่างของคุณ แก้ไขหรือลบไฟล์ของคุณ หรือเข้าถึงการเชื่อมต่อเครือข่ายของคุณ&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;ขอแนะนำอย่างยิ่งให้รันสคริปต์จากแหล่งที่เชื่อถือได้เท่านั้น&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;คุณกำลังจะเรียกใช้สคริปต์ต่อไปนี้:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;สคริปต์นี้อาจแก้ไขแบบวาดของคุณ แก้ไขหรือลบไฟล์ของคุณ หรือเข้าถึงการเชื่อมต่อเครือข่ายของคุณ&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;ขอแนะนำอย่างยิ่งให้รันสคริปต์จากแหล่งที่เชื่อถือได้เท่านั้น&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>

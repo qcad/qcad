@@ -2327,7 +2327,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation>&amp;Riadiaca čiara</translation>
+        <translation>&amp;Príkazový riadok</translation>
     </message>
 </context>
 <context>
@@ -5125,7 +5125,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>&amp;Transakcia Poslucháč</translation>
+        <translation>&amp;Poslucháč transakcií</translation>
     </message>
 </context>
 <context>
@@ -5359,7 +5359,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Farby na výber napodobňujú pečiatku valčeka</translation>
+        <translation>Maľuje cez výber ako valčeková pečiatka</translation>
     </message>
 </context>
 <context>
@@ -5367,32 +5367,32 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Možnosti Maliara</translation>
+        <translation>Možnosti vzoru</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Možnosti odlievania maliara</translation>
+        <translation>Možnosti nanášania vzorov</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Prevrátiť vzory</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Obsadenie v skupine</translation>
+        <translation>Naniesť ako skupinu</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Obsadenie podvrstvy</translation>
+        <translation>Naniesť na podvrstvu</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Pridať Začať Apex</translation>
+        <translation>Pridať začiatočný vrchol</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5407,27 +5407,27 @@ už existuje v zozname.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Súprava Painter</translation>
+        <translation>Sada vzorov</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Zrkadloví maliari nad základnou líniou.</translation>
+        <translation>Zrkadliť vzory podľa základnej čiary.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Zoskupte všetky odliatky do jednej operácie.</translation>
+        <translation>Zoskupiť všetky nanesené vzory do jednej operácie.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Začnite odlievaním začiatočného vrcholu na otvorených formulároch.</translation>
+        <translation>Začať nanesením začiatočného vrcholu na otvorených tvaroch.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Ukončite odlievaním koncového vrcholu na otvorených formulároch.</translation>
+        <translation>Skončiť nanesením koncového vrcholu na otvorených tvaroch.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5437,12 +5437,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Prehliadka maliarov.</translation>
+        <translation>Náhľad vzorov.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Vyberte sadu maliarov.</translation>
+        <translation>Vyberte sadu vzorov.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5527,7 +5527,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Ilustrácia možností odlievania</translation>
+        <translation>Ilustrácia možností nanášania</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5547,22 +5547,22 @@ už existuje v zozname.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Zadajte šírku maliara. (+0)</translation>
+        <translation>Zadajte šírku vzoru. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Zadajte veľkosť kroku hlavného maliara. (+0)</translation>
+        <translation>Zadajte veľkosť kroku hlavného vzoru. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Zadajte dĺžku hlavného maliara. (+)</translation>
+        <translation>Zadajte dĺžku hlavného vzoru. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Udržujte proporcionálne maliarske práce.</translation>
+        <translation>Zachovať proporcie vzorov.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5572,7 +5572,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Prispôsobte škálovanie f 1,00-0,90 tak, aby vyhovovalo celému formuláru.</translation>
+        <translation>Prispôsobiť mierku f 1,00-0,90 tak, aby sa vyplnil celý tvar.</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5612,7 +5612,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Možnosti opakovaného maľovania</translation>
+        <translation>Možnosti opakovaného vzoru</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5627,12 +5627,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation>Posunutie uzavretých foriem % :</translation>
+        <translation>Posunutie uzavretých tvarov % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Možnosti škálovania otvorených formulárov</translation>
+        <translation>Možnosti škálovania otvorených tvarov</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -6347,7 +6347,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation>Pracovná súprava faktora blednutia:</translation>
+        <translation>Faktor blednutia pracovnej sady:</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -9105,7 +9105,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation>&amp;Poslucháči</translation>
+        <translation>&amp;Poslucháče udalostí</translation>
     </message>
 </context>
 <context>
@@ -9908,7 +9908,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Vložiť</translation>
+        <translation>Prilepiť</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -11234,7 +11234,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Spustiť skript</translation>
+        <translation>Spustenie skriptu</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -13019,7 +13019,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Vložiť</translation>
+        <translation>&amp;Prilepiť</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -13191,7 +13191,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Vložiť</translation>
+        <translation>Prilepiť</translation>
     </message>
     <message>
         <location line="+170"/>

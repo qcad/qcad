@@ -793,7 +793,7 @@
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation>Pola Poligon</translation>
+        <translation>Pola Polyline</translation>
     </message>
     <message>
         <location line="+1"/>

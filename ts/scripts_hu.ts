@@ -5358,17 +5358,17 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Festő opciók</translation>
+        <translation>Mintaelem-beállítások</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Festők létrehozási beállításai</translation>
+        <translation>Mintaelemek létrehozási beállításai</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Festők tükrözése</translation>
+        <translation>Mintaelemek tükrözése</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5398,12 +5398,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Festő készlet</translation>
+        <translation>Mintakészlet</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Festők tükrözése az alapvonalra.</translation>
+        <translation>Mintaelemek tükrözése az alapvonalra.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5428,12 +5428,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Festők előnézete.</translation>
+        <translation>Mintaelemek előnézete.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Válassza ki a festőkészletet.</translation>
+        <translation>Válassza ki a mintakészletet.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5538,27 +5538,27 @@ már szerepel a listában.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Adja meg a festő szélességét. (+0)</translation>
+        <translation>Adja meg a mintaelem szélességét. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Adja meg a fő festő lépésméretét. (+0)</translation>
+        <translation>Adja meg a fő mintaelem lépésméretét. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Adja meg a főfestő hosszát. (+)</translation>
+        <translation>Adja meg a fő mintaelem hosszát. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Tartsa arányosnak a festőket.</translation>
+        <translation>Tartsa arányosnak a mintaelemeket.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Válassza ki a Stepsize százalékos arányát.</translation>
+        <translation>Válassza ki a lépésméret százalékos arányát.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -5603,7 +5603,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Ismétlődő festő opciók</translation>
+        <translation>Ismétlődő mintaelem beállításai</translation>
     </message>
     <message>
         <location line="+65"/>

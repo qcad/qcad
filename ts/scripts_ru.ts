@@ -3590,7 +3590,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>CSV-трансляция</translation>
+        <translation>Разместить CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4046,7 +4046,7 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Полученные записи: %1 из %2 строк текста</translation>
+        <translation>Размещено записей: %1 из %2 строк текста</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5359,7 +5359,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Запечатывает выделение, имитируя роликовый штамп</translation>
+        <translation>Наносит узор на выделение, имитируя роликовый штамп</translation>
     </message>
 </context>
 <context>
@@ -5412,7 +5412,7 @@ is already in the list.</source>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Отражать роликовые штампы над базовой линией</translation>
+        <translation>Отражать роликовые штампы относительно базовой линии.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5427,7 +5427,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Завершить добавлением конечной вершины на открытые формы.</translation>
+        <translation>Завершить размещением конечной вершины на открытых формах.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5447,67 +5447,67 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>Подхват</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>Ортогональная полоса</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>Ортогональные точки (глобально)</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>Синусоидальная волна</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>Синусоидальная волна (глобальная)</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation>Трёхфазная волна (глобальная)</translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>Треугольная волна</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>Пилообразная волна</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>Прямоугольная волна</translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>Ступенчатая волна</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>Прямоугольная форма</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>Прямоугольная форма (изгиб)</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation>Все типы данных роликового штампа</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5582,7 +5582,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Удалить запечатанные роликовым штампом базовые объекты. (постоянно выключено)</translation>
+        <translation>Удалить базовые объекты, на которые нанесён узор. (постоянно выключено)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5637,7 +5637,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation>Динамически масштабировать для вписывания в окно</translation>
+        <translation>Динамически масштабировать для вписывания в форму</translation>
     </message>
     <message>
         <location line="+36"/>

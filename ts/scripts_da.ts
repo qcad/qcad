@@ -3587,7 +3587,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Cast CSV</translation>
+        <translation>Tegn fra CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4043,12 +4043,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Indtastede poster: %1 ud af %2 tekstlinjer</translation>
+        <translation>Tegnede poster: %1 ud af %2 tekstlinjer</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Intet er støbt.</translation>
+        <translation>Intet tegnet.</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -5354,7 +5354,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Overmaler udvælgelsen ved at efterligne et rullemærke</translation>
+        <translation>Maler mønstre over udvælgelsen som et rullestempel</translation>
     </message>
 </context>
 <context>
@@ -5362,37 +5362,37 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Indstillinger for malere</translation>
+        <translation>Mønsterindstillinger</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Malere støbning muligheder</translation>
+        <translation>Indstillinger for påføring af mønstre</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Vend mønstre</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Afstøbning i gruppe</translation>
+        <translation>Påfør som gruppe</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Afstøbning på underlag</translation>
+        <translation>Påfør på underlag</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Tilføj Begynd Apex</translation>
+        <translation>Tilføj startspids</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Tilføj ende Apex</translation>
+        <translation>Tilføj slutspids</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5402,27 +5402,27 @@ er allerede på listen.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Maler sæt</translation>
+        <translation>Mønstersæt</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Spejlmalere over grundlinjen.</translation>
+        <translation>Spejl mønstre over grundlinjen.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Saml alle støbegods til én arbejdsgang.</translation>
+        <translation>Saml alle påførte mønstre i én handling.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Begynd med at støbe en begyndelsesspids på åbne former.</translation>
+        <translation>Begynd med at påføre en startspids på åbne former.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Afslut med at støbe en ende spids på åbne former.</translation>
+        <translation>Afslut med at påføre en slutspids på åbne former.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5432,12 +5432,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Forhåndsvisning af malere.</translation>
+        <translation>Forhåndsvisning af mønstre.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Vælg malersæt.</translation>
+        <translation>Vælg mønstersæt.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5522,7 +5522,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Illustration af støbningsindstillingerne</translation>
+        <translation>Illustration af påføringsindstillingerne</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5542,22 +5542,22 @@ er allerede på listen.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Indtast malerens bredde. (+0)</translation>
+        <translation>Indtast mønsterbredde. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Indtast hovedmalers trinstørrelse. (+0)</translation>
+        <translation>Indtast hovedmønstrets trinstørrelse. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Indtast hovedmalers længde. (+)</translation>
+        <translation>Indtast hovedmønstrets længde. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Hold malerne proportionale.</translation>
+        <translation>Hold mønstrene proportionale.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5567,7 +5567,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation>Tilpasning af skalaen f 1,00-0,90 til hele formularen.</translation>
+        <translation>Tilpas skaleringen f 1,00-0,90, så den passer til hele formen.</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5582,7 +5582,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Udgået malet over basisenheder. (vedvarende slukket)</translation>
+        <translation>Slet overmalede basisenheder. (vedvarende slået fra)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5617,7 +5617,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Muligheder for repetitive Painter</translation>
+        <translation>Indstillinger for gentaget mønster</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5637,7 +5637,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Åbne formularers skaleringsmuligheder</translation>
+        <translation>Skaleringsindstillinger for åbne former</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -6749,7 +6749,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Vend indsatte enheder horisontalt</translation>
+        <translation>Vend indsatte enheder&lt;br&gt;horisontalt</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -7915,7 +7915,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Vend indsatte enheder horisontalt</translation>
+        <translation>Vend indsatte enheder&lt;br&gt;horisontalt</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -9921,7 +9921,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Vend indsatte enheder horisontalt</translation>
+        <translation>Vend indsatte enheder&lt;br&gt;horisontalt</translation>
     </message>
     <message>
         <location line="+14"/>

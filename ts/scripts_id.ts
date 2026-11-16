@@ -1460,7 +1460,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>Pilih segmen garis, busur, lingkaran, elips, spline, atau poligon</translation>
+        <translation>Pilih segmen garis, busur, lingkaran, elips, spline, atau polyline</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1506,7 +1506,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Pilih garis, busur, lingkaran, elips, spline, atau poligon untuk dipecah</translation>
+        <translation>Pilih garis, busur, lingkaran, elips, spline, atau polyline untuk dipecah</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3335,7 +3335,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Pilih garis, busur, lingkaran, elips, spline, atau poligon</translation>
+        <translation>Pilih garis, busur, lingkaran, elips, spline, atau polyline</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3624,7 +3624,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation>Pembulatan poligon memerlukan QCAD Professional, diabaikan. Baris teks: %1</translation>
+        <translation>Pembulatan polyline memerlukan QCAD Professional, diabaikan. Baris teks: %1</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -4319,7 +4319,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Entitas tidak berada dalam himpunan kerja.</translation>
+        <translation>Entitas tidak berada dalam set kerja.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4344,7 +4344,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Entitas bukanlah garis, busur, atau poligon.</translation>
+        <translation>Entitas bukanlah garis, busur, atau polyline.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4369,7 +4369,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Entitas bukanlah garis, busur, spline, busur elips, atau poligon.</translation>
+        <translation>Entitas bukanlah garis, busur, spline, busur elips, atau polyline.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4384,7 +4384,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Entitas bukanlah garis, busur, lingkaran, elips, atau poligon.</translation>
+        <translation>Entitas bukanlah garis, busur, lingkaran, elips, atau polyline.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -5190,7 +5190,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Uraikan spline menjadi poligon dengan segmen garis</translation>
+        <translation>Uraikan spline menjadi polyline dengan segmen garis</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -5215,7 +5215,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Uraikan lingkaran menjadi poligon dengan dua setengah lingkaran</translation>
+        <translation>Uraikan lingkaran menjadi polyline dengan dua setengah lingkaran</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5225,7 +5225,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+80"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Uraikan glif teks menjadi poligon</translation>
+        <translation>Uraikan glif teks menjadi polyline</translation>
     </message>
 </context>
 <context>
@@ -5349,7 +5349,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Cat di atas pilihan meniru stempel rol</translation>
+        <translation>Melukis di atas seleksi menyerupai stempel rol</translation>
     </message>
 </context>
 <context>
@@ -5357,52 +5357,52 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Opsi Pelukis</translation>
+        <translation>Opsi Motif</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Opsi pengecoran pelukis</translation>
+        <translation>Opsi penerapan motif</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Pelukis cermin di atas garis dasar.</translation>
+        <translation>Cerminkan motif terhadap garis dasar.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Pelukis Balik</translation>
+        <translation>Balik Motif</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Kelompokkan semua coran ke dalam satu operasi.</translation>
+        <translation>Kelompokkan semua penerapan menjadi satu operasi.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Dilemparkan dalam kelompok</translation>
+        <translation>Terapkan dalam grup</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Dilemparkan pada sub-lapisan</translation>
+        <translation>Terapkan pada sub-lapisan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Mulailah dengan melemparkan puncak awal pada bentuk terbuka.</translation>
+        <translation>Mulai dengan menerapkan puncak awal pada bentuk terbuka.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation>Tambahkan Mulai Apex</translation>
+        <translation>Tambahkan Puncak Awal</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Akhiri dengan pengecoran ujung ujung pada bentuk terbuka.</translation>
+        <translation>Akhiri dengan menerapkan puncak akhir pada bentuk terbuka.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5422,42 +5422,42 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Set pelukis</translation>
+        <translation>Set motif</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>Pratinjau pelukis.</translation>
+        <translation>Pratinjau motif.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Pilih set pelukis.</translation>
+        <translation>Pilih set motif.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>Tali Tirai</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>Bilah ortogonal</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>Titik OrtogonalGlobal</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>Gelombang Sinusoid</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>SinusoidGelombangGlobal</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5472,7 +5472,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>Gelombang Gigi Gergaji</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5482,7 +5482,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>Gelombang Melangkah</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5492,12 +5492,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>Bentuk SegiempatPelenturan</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation>SemuaJenisData Pelukis</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5527,7 +5527,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Ilustrasi opsi pengecoran</translation>
+        <translation>Ilustrasi opsi penerapan</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5552,7 +5552,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Masukkan lebar pelukis. (+0)</translation>
+        <translation>Masukkan lebar motif. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5567,12 +5567,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Opsi Pelukis Berulang</translation>
+        <translation>Opsi Motif Berulang</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Masukkan ukuran langkah pelukis utama. (+0)</translation>
+        <translation>Masukkan ukuran langkah motif utama. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5582,7 +5582,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Masukkan panjang pelukis utama. (+)</translation>
+        <translation>Masukkan panjang motif utama. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5592,7 +5592,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>Jaga agar pelukis tetap proporsional.</translation>
+        <translation>Jaga agar motif tetap proporsional.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5607,7 +5607,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Opsi penskalaan formulir terbuka</translation>
+        <translation>Opsi penskalaan bentuk terbuka</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5637,7 +5637,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+36"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Info kata kerja. (terus menerus)</translation>
+        <translation>Info terperinci. (tetap aktif)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5647,7 +5647,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Menghapus entitas dasar yang dicat. (terus menerus mati)</translation>
+        <translation>Hapus entitas dasar yang dilukisi. (tetap nonaktif)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6112,7 +6112,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation>Selalu buat poligon dengan lebar khusus setidaknya selebar 1 piksel</translation>
+        <translation>Selalu buat polyline dengan lebar khusus setidaknya selebar 1 piksel</translation>
     </message>
     <message>
         <location line="+798"/>
@@ -6337,7 +6337,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation>Faktor pemudaran setelan kerja:</translation>
+        <translation>Faktor pemudaran set kerja:</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -6729,7 +6729,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Putar entitas yang ditempelkan menurut sudut ini</translation>
+        <translation>Putar entitas yang ditempelkan&lt;br&gt;menurut sudut ini</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -6739,22 +6739,22 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Skala entitas yang disisipkan&lt;br&gt;oleh faktor ini</translation>
+        <translation>Skalakan entitas yang ditempelkan&lt;br&gt;dengan faktor ini</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Membalik entitas yang disisipkan&lt;br&gt; secara horizontal</translation>
+        <translation>Balik entitas yang ditempelkan&lt;br&gt;secara horizontal</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Membalik entitas yang disisipkan secara vertikal</translation>
+        <translation>Balik entitas yang ditempelkan&lt;br&gt;secara vertikal</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Menempelkan semua entitas ke layer saat ini, bukan ke layer asli</translation>
+        <translation>Tempelkan semua entitas&lt;br&gt;ke layer saat ini,&lt;br&gt;bukan ke layer asli</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7895,7 +7895,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Putar entitas yang ditempelkan menurut sudut ini</translation>
+        <translation>Putar entitas yang ditempelkan&lt;br&gt;menurut sudut ini</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -7905,17 +7905,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Skala entitas yang disisipkan&lt;br&gt;oleh faktor ini</translation>
+        <translation>Skalakan entitas yang ditempelkan&lt;br&gt;dengan faktor ini</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Membalik entitas yang disisipkan&lt;br&gt; secara horizontal</translation>
+        <translation>Balik entitas yang ditempelkan&lt;br&gt;secara horizontal</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Membalik entitas yang disisipkan secara vertikal</translation>
+        <translation>Balik entitas yang ditempelkan&lt;br&gt;secara vertikal</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -8913,7 +8913,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+77"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation>Pilih garis dasar, busur, lingkaran, elips, atau poligon</translation>
+        <translation>Pilih garis dasar, busur, lingkaran, elips, atau polyline</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9914,17 +9914,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Membalik entitas yang disisipkan&lt;br&gt; secara horizontal</translation>
+        <translation>Balik entitas yang ditempelkan&lt;br&gt;secara horizontal</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Membalik entitas yang disisipkan secara vertikal</translation>
+        <translation>Balik entitas yang ditempelkan&lt;br&gt;secara vertikal</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Menempelkan semua entitas ke layer saat ini, bukan ke layer asli</translation>
+        <translation>Tempelkan semua entitas&lt;br&gt;ke layer saat ini,&lt;br&gt;bukan ke layer asli</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10205,7 +10205,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Pilih garis, busur, lingkaran, elips, spline, atau poligon untuk dipecah</translation>
+        <translation>Pilih garis, busur, lingkaran, elips, spline, atau polyline untuk dipecah</translation>
     </message>
     <message>
         <location line="+3"/>

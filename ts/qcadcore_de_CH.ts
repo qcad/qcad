@@ -484,7 +484,7 @@
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation>Arbeitsset</translation>
+        <translation>Bearbeitungssatz</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

@@ -4040,12 +4040,12 @@ zaten listede.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Dökülen girişler: %2 metin satırından %1&apos;i</translation>
+        <translation>Oluşturulan girişler: %2 metin satırından %1</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation>Bir şey çıkmadı.</translation>
+        <translation>Hiçbir şey oluşturulmadı.</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -5357,17 +5357,17 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Boyacı Seçenekleri</translation>
+        <translation>Desen Seçenekleri</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Ressamlar döküm seçenekleri</translation>
+        <translation>Desen oluşturma seçenekleri</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Desenleri Çevir</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5382,32 +5382,32 @@ zaten listede.</translation>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Begin Apex Ekle</translation>
+        <translation>Başlangıç Tepe Noktası Ekle</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>End Apex Ekle</translation>
+        <translation>Bitiş Tepe Noktası Ekle</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add Insertions</source>
-        <translation>Eklemeler Ekleme</translation>
+        <translation>Eklemeler Ekle</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Ressam seti</translation>
+        <translation>Desen seti</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Ayna boyacıları, taban çizgisi üzerinde.</translation>
+        <translation>Desenleri taban çizgisine göre aynalayın.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Tüm dökümleri tek bir işlem için gruplayın.</translation>
+        <translation>Oluşturulan tüm desenleri tek bir işlemde gruplayın.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5417,7 +5417,7 @@ zaten listede.</translation>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Açık formlara bir uç tepe noktası dökerek sonlandırın.</translation>
+        <translation>Açık formlarda bir bitiş tepe noktası oluşturarak sonlandırın.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5427,12 +5427,12 @@ zaten listede.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Ressamların önizlemesi.</translation>
+        <translation>Desenlerin önizlemesi.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Boyacı setini seçin.</translation>
+        <translation>Desen setini seçin.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5442,7 +5442,7 @@ zaten listede.</translation>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>OrtogonalBar</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5452,12 +5452,12 @@ zaten listede.</translation>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>SinüzoidDalga</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>SinüzoidDalgaGlobal</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5517,7 +5517,7 @@ zaten listede.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Döküm seçeneklerinin gösterimi</translation>
+        <translation>Oluşturma seçeneklerinin gösterimi</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5537,22 +5537,22 @@ zaten listede.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Boyacı genişliğini girin. (+0)</translation>
+        <translation>Desen genişliğini girin. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Ana boyacı adım boyutunu girin. (+0)</translation>
+        <translation>Ana desen adım boyutunu girin. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Ana boyacı uzunluğunu girin. (+)</translation>
+        <translation>Ana desen uzunluğunu girin. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Boyacıları orantılı tutun.</translation>
+        <translation>Desenleri orantılı tutun.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5572,7 +5572,7 @@ zaten listede.</translation>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Temel varlıklar üzerinde boyalı olarak silindi. (kalıcı kapalı)</translation>
+        <translation>Üzeri boyanan temel varlıkları siler. (kalıcı kapalı)</translation>
     </message>
     <message>
         <location line="-936"/>
@@ -5602,7 +5602,7 @@ zaten listede.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Tekrarlayan Ressam seçenekleri</translation>
+        <translation>Tekrarlayan Desen seçenekleri</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -8131,7 +8131,7 @@ zaten listede.</translation>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation>Liste widget&apos;larında klavye gezintisini etkinleştirme</translation>
+        <translation>Liste widget&apos;larında klavye gezintisini etkinleştir</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -14567,7 +14567,7 @@ zaten listede.</translation>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation>Bilinmeyen Nesneler </translation>
+        <translation>Bilinmeyen Nesneler</translation>
     </message>
     <message>
         <location line="+0"/>

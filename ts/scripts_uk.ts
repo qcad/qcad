@@ -5359,7 +5359,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Зафарбовує виділення, імітуючи роликовий штамп</translation>
+        <translation>Наносить візерунок на виділення, імітуючи роликовий штамп</translation>
     </message>
 </context>
 <context>
@@ -5367,42 +5367,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Параметри штампера</translation>
+        <translation>Параметри штампа</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Параметри генерації елементів</translation>
+        <translation>Параметри нанесення штампів</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Дзеркально відобразити відносно базової лінії.</translation>
+        <translation>Дзеркально відобразити штампи відносно базової лінії.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Віддзеркалити штампер</translation>
+        <translation>Віддзеркалити штампи</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Об&apos;єднати всю генерацію в одну операцію.</translation>
+        <translation>Об&apos;єднати всі нанесення в одну операцію.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Генерувати групою</translation>
+        <translation>Наносити групою</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Генерувати на підшарі</translation>
+        <translation>Наносити на підшар</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Починати генерацію з початкової вершини для відкритих форм.</translation>
+        <translation>Починати з нанесення початкової вершини на відкритих формах.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5412,7 +5412,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Завершувати генерацію кінцевою вершиною для відкритих форм.</translation>
+        <translation>Завершувати нанесенням кінцевої вершини на відкритих формах.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5432,22 +5432,22 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Набір штампера</translation>
+        <translation>Набір штампів</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>Попередній перегляд генерації.</translation>
+        <translation>Попередній перегляд штампів.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Виберіть набір штампера.</translation>
+        <translation>Виберіть набір штампів.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation>Мотузка для штор</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5522,7 +5522,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Виберіть Вставка або Натисніть пропуск. (Не реалізовано)</translation>
+        <translation>Виберіть вставку або введіть розмір пропуску. (Не реалізовано)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5537,7 +5537,7 @@ is already in the list.</source>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Ілюстрація параметрів генерації елементів</translation>
+        <translation>Ілюстрація параметрів нанесення</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5562,7 +5562,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Введіть ширину штампера. (+0)</translation>
+        <translation>Введіть ширину штампа. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5577,12 +5577,12 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Повторювані опції штампера</translation>
+        <translation>Параметри повторюваного штампа</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Введіть основний розмір кроку штампера. (+0)</translation>
+        <translation>Введіть розмір кроку основного штампа. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5592,7 +5592,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Введіть базову довжину штампера. (+)</translation>
+        <translation>Введіть довжину основного штампа. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5602,7 +5602,7 @@ is already in the list.</source>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>Зберігати пропорційність штампера.</translation>
+        <translation>Зберігати пропорції штампів.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5617,7 +5617,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Відкриті опції масштабування форм</translation>
+        <translation>Параметри масштабування відкритих форм</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5627,7 +5627,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation>Динамічно масштабується відповідно до потреб</translation>
+        <translation>Динамічно масштабувати за розміром форми</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -5657,7 +5657,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Видалити зафарбовані базові елементи. (постійно вимкнено)</translation>
+        <translation>Видалити базові об&apos;єкти, на які нанесено штампи. (постійно вимкнено)</translation>
     </message>
     <message>
         <location line="+3"/>

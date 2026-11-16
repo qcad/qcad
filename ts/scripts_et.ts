@@ -95,7 +95,7 @@
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation>Qt tarnitakse koos QCADiga &lt;a href=&apos;%1&apos;&gt;LGPL avatud lähtekoodiga litsentsiga&lt;/a&gt;, mis annab teile kui kasutajale mitmesuguseid õigusi, sealhulgas õiguse Qt raamatukogud teie platvormi jaoks ümber kompileerida. Selleks järgige &lt;a href=&apos;%2&apos;&gt;dokumentatsiooni, mis on esitatud Qt veebilehel&lt;/a&gt;.</translation>
+        <translation>Qt tarnitakse koos QCADiga &lt;a href=&apos;%1&apos;&gt;LGPL avatud lähtekoodiga litsentsiga&lt;/a&gt;, mis annab teile kui kasutajale mitmesuguseid õigusi, sealhulgas õiguse Qt teegid teie platvormi jaoks ümber kompileerida. Selleks järgige &lt;a href=&apos;%2&apos;&gt;dokumentatsiooni, mis on esitatud Qt veebilehel&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -163,7 +163,7 @@
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation>Faili:</translation>
+        <translation>Fail:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -884,7 +884,7 @@ eelistuste muudatused jõustuksid.</translation>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fail</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2202,7 +2202,7 @@ Kas soovite seda taastada?</translation>
         <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
-        <translation>Käsurea</translation>
+        <translation>Käsurida</translation>
     </message>
     <message>
         <location line="-26"/>
@@ -4043,7 +4043,7 @@ on juba loendis.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Valatud kirjed: %1 / %2 tekstirida</translation>
+        <translation>Joonistatud kirjeid: %1 / %2 tekstireast</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4053,7 +4053,7 @@ on juba loendis.</translation>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>Midagi ei ole valatud.</translation>
+        <translation>Midagi ei joonistatud.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -5251,7 +5251,7 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;File</source>
-        <translation>&amp;Faili</translation>
+        <translation>&amp;Fail</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -5354,7 +5354,7 @@ on juba loendis.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Värvib üle valiku jäljendades rullijäljendit</translation>
+        <translation>Värvib valiku üle, jäljendades mustrirulli</translation>
     </message>
 </context>
 <context>
@@ -5362,62 +5362,62 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Maaleri valikud</translation>
+        <translation>Mustri valikud</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Maalrite valuvariandid</translation>
+        <translation>Mustrite pealekandmise valikud</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Peeglimaalijad üle põhijoonte.</translation>
+        <translation>Peegeldage mustrid baasjoone suhtes.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Peegelda mustrid</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Rühmitage kõik valandid ühte toimingusse.</translation>
+        <translation>Rühmitage kõik pealekandmised üheks toiminguks.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Rühma valamine</translation>
+        <translation>Kanna peale rühmana</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Valatud alamkihi</translation>
+        <translation>Kanna peale alamkihile</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Alustage avatud vormidel algava tipu valamisega.</translation>
+        <translation>Alustage avatud vormide korral algustipu pealekandmisega.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation>Lisa Alusta Apex</translation>
+        <translation>Lisa algustipp</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Lõpetage avatud vormidel otsa tipu valamisega.</translation>
+        <translation>Lõpetage avatud vormide korral lõputipu pealekandmisega.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>Lisada lõpp Apex</translation>
+        <translation>Lisa lõputipp</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation>Lisage vahepealsed lisandid, nt vahekaardid, sõlmed. (Ei ole rakendatud)</translation>
+        <translation>Lisage vahele lisandeid, nt vahetükke, sõlmi. (Ei ole rakendatud)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5427,17 +5427,17 @@ on juba loendis.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Maaleri komplekt</translation>
+        <translation>Mustrikomplekt</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>Maalikunstnike eelvaade.</translation>
+        <translation>Mustrite eelvaade.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Valige värvikomplekt.</translation>
+        <translation>Valige mustrikomplekt.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5517,22 +5517,22 @@ on juba loendis.</translation>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Valige Insertion või Enter void space. (Ei ole rakendatud)</translation>
+        <translation>Valige lisand või sisestage tühi vahe. (Ei ole rakendatud)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Siirake ruumi suurus&gt;</translation>
+        <translation>&lt;Sisestage vahe suurus&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation>Kardinate köis sõlme</translation>
+        <translation>Kardinanööri sõlm</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Valuvariantide illustratsioon</translation>
+        <translation>Pealekandmise valikute illustratsioon</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5547,7 +5547,7 @@ on juba loendis.</translation>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation>Dokumendi üksused.</translation>
+        <translation>Dokumendi ühikud.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5557,7 +5557,7 @@ on juba loendis.</translation>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Sisestage maalri laius. (+0)</translation>
+        <translation>Sisestage mustri laius. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5572,22 +5572,22 @@ on juba loendis.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Korduvad Painter valikud</translation>
+        <translation>Korduva mustri valikud</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Sisestage peamaaleri sammu suurus. (+0)</translation>
+        <translation>Sisestage põhimustri sammu suurus. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Stepsize :</source>
-        <translation>Stepsize :</translation>
+        <translation>Sammu suurus :</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Sisestage peamaalri pikkus. (+)</translation>
+        <translation>Sisestage põhimustri pikkus. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5597,12 +5597,12 @@ on juba loendis.</translation>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>Hoidke maalreid proportsionaalselt.</translation>
+        <translation>Hoidke mustrid proportsionaalsed.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Valige protsendimäär Stepsize.</translation>
+        <translation>Valige protsent sammu suurusest.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5627,17 +5627,17 @@ on juba loendis.</translation>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Joondada algusega begin</translation>
+        <translation>Joonda algusega</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation>Keskendatud</translation>
+        <translation>Keskel</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation>Joondage endaga</translation>
+        <translation>Joonda lõpuga</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -5647,12 +5647,12 @@ on juba loendis.</translation>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation>Verbose *</translation>
+        <translation>Üksikasjalik *</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Välja jäetud värvitud alusüksused. (püsivalt välja lülitatud)</translation>
+        <translation>Kustutage ülevärvitud baasüksused. (püsivalt väljas)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5917,7 +5917,7 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation>Näita joonlauad</translation>
+        <translation>Näita joonlaudu</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10800,7 +10800,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fail</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11378,7 +11378,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fail</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11587,7 +11587,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation>&amp;Valige kõik</translation>
+        <translation>&amp;Vali kõik</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12756,7 +12756,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation>Faili</translation>
+        <translation>Fail</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15056,7 +15056,7 @@ on juba loendis.</translation>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation>PDF-faili</translation>
+        <translation>PDF-fail</translation>
     </message>
     <message>
         <location line="+1"/>

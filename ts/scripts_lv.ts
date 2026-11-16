@@ -163,7 +163,7 @@
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation>Datne:</translation>
+        <translation>Fails:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2204,7 +2204,7 @@ Vai vēlaties to atjaunot?</translation>
         <location line="+134"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+14"/>
         <source>Command Line</source>
-        <translation>Komandrindas</translation>
+        <translation>Komandrinda</translation>
     </message>
     <message>
         <location line="-26"/>
@@ -2361,7 +2361,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
-        <translation>Konvertēts zīmējums no %1 uz %2</translation>
+        <translation>Rasējums konvertēts no %1 uz %2</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
@@ -3590,7 +3590,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Cast CSV</translation>
+        <translation>Zīmēt CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4046,7 +4046,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Iemestie ieraksti: %1 no %2 teksta rindām</translation>
+        <translation>Uzzīmētie ieraksti: %1 no %2 teksta rindām</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4056,7 +4056,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>Nekas netika iemests.</translation>
+        <translation>Nekas netika uzzīmēts.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -5311,7 +5311,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation>Lūdzu, izvēlieties iestatījumus, kas tiek izmantoti jauniem zīmējumiem. Visus šos iestatījumus vēlāk var mainīt preferenču dialogā.</translation>
+        <translation>Lūdzu, izvēlieties iestatījumus, kas tiek izmantoti jauniem rasējumiem. Visus šos iestatījumus vēlāk var mainīt preferenču dialogā.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -5344,7 +5344,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation>Pievienot aktīvo apakšlīmeni</translation>
+        <translation>Pievienot aktīvo apakšslāni</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5359,7 +5359,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Krāsas pārkrāso atlasi, imitējot rullīša zīmogu</translation>
+        <translation>Pārzīmē atlasi, imitējot rullīša zīmogu</translation>
     </message>
 </context>
 <context>
@@ -5367,57 +5367,57 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Gleznotāja opcijas</translation>
+        <translation>Raksta opcijas</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Gleznotāju liešanas iespējas</translation>
+        <translation>Rakstu uzklāšanas opcijas</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Spoguļu gleznotāji virs pamatlīnijas.</translation>
+        <translation>Spoguļot rakstus pret bāzes līniju.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Apvērst rakstus</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation>Grupējiet visus lējumus vienā operācijā.</translation>
+        <translation>Grupējiet visus uzklājumus vienā operācijā.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Iemestie grupā</translation>
+        <translation>Uzklāt grupā</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Liešana apakšslānī</translation>
+        <translation>Uzklāt apakšslānī</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Sāciet ar sākuma virsotnes liešanu uz atvērtām formām.</translation>
+        <translation>Sāciet ar sākuma virsotnes uzklāšanu atvērtām formām.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation>Pievienot Sākt Apex</translation>
+        <translation>Pievienot sākuma virsotni</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Noslēdziet ar gala virsotnes liešanu uz atvērtām formām.</translation>
+        <translation>Noslēdziet ar beigu virsotnes uzklāšanu atvērtām formām.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>Pievienot beigu punktu Apex</translation>
+        <translation>Pievienot beigu virsotni</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5432,17 +5432,17 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Gleznotāja komplekts</translation>
+        <translation>Rakstu komplekts</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation>Gleznotāju priekšskatījums.</translation>
+        <translation>Rakstu priekšskatījums.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Izvēlieties gleznotāju komplektu.</translation>
+        <translation>Izvēlieties rakstu komplektu.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5522,12 +5522,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation>Izvēlieties Ievietošana vai Ievadiet tukšu vietu. (Nav ieviests)</translation>
+        <translation>Izvēlieties iestarpinājumu vai ievadiet tukšu atstarpi. (Nav ieviests)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Iekļaut vietas lielumu&gt;</translation>
+        <translation>&lt;Ievadiet atstarpes lielumu&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5537,7 +5537,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+34"/>
         <source>Illustration of the casting options</source>
-        <translation>Liešanas iespēju ilustrācija</translation>
+        <translation>Uzklāšanas opciju ilustrācija</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5557,12 +5557,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+6"/>
         <source>#Undefined#</source>
-        <translation>#Noteikts#</translation>
+        <translation>#Nenoteikts#</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Ievadiet gleznotāja platumu. (+0)</translation>
+        <translation>Ievadiet raksta platumu. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5577,12 +5577,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Atkārtotas krāsotāja opcijas</translation>
+        <translation>Atkārtotā raksta opcijas</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Ievadiet galvenā gleznotāja soļa lielumu. (+0)</translation>
+        <translation>Ievadiet galvenā raksta soļa lielumu. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5592,7 +5592,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Ievadiet galvenā krāsotāja garumu. (+)</translation>
+        <translation>Ievadiet galvenā raksta garumu. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5602,22 +5602,22 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation>Saglabāt proporcionālu krāsotāju.</translation>
+        <translation>Saglabāt rakstu proporcijas.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation>Izvēlieties Stepsize procentuālo daļu.</translation>
+        <translation>Izvēlieties soļa lieluma procentuālo daļu.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed Forms shifting % :</source>
-        <translation>Slēgto formu maiņa % :</translation>
+        <translation>Slēgto formu nobīde % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Atvērt veidlapu mērogošanas opcijas</translation>
+        <translation>Atvērto formu mērogošanas opcijas</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5627,12 +5627,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation>Dinamiski mērogošana, lai atbilstu</translation>
+        <translation>Dinamiski mērogot, lai ietilptu</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Saskaņot ar sākt</translation>
+        <translation>Līdzināt pie sākuma</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5642,22 +5642,22 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation>Saskaņot ar galu</translation>
+        <translation>Līdzināt pie beigām</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Verbose info. (pastāvīgi ieslēgts)</translation>
+        <translation>Detalizēta informācija. (pastāvīgi ieslēgts)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation>Verbose *</translation>
+        <translation>Detalizēti *</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation>Izdzēsts krāsots virs bāzes vienībām. (noturīgs izslēgts)</translation>
+        <translation>Dzēst pārzīmētās bāzes vienības. (pastāvīgi izslēgts)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6347,7 +6347,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation>Darba komplekts izbalēšanas koeficients:</translation>
+        <translation>Darba komplekta izbalēšanas koeficients:</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -6719,7 +6719,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation>Importēt zīmējumu</translation>
+        <translation>Importēt rasējumu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -6784,12 +6784,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Esošo slāņu pārrakstīšana zīmējumā ar slāņiem no starpliktuves</translation>
+        <translation>Esošo slāņu pārrakstīšana&lt;br&gt;rasējumā ar&lt;br&gt;slāņiem no starpliktuves</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Esošo bloku pārrakstīšana zīmējumā ar&lt;br&gt;blokiem no starpliktuves</translation>
+        <translation>Esošo bloku pārrakstīšana&lt;br&gt;rasējumā ar&lt;br&gt;blokiem no starpliktuves</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
@@ -7010,7 +7010,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation>Pievienojiet zīmējumam garumu/aploci</translation>
+        <translation>Pievienojiet rasējumam garumu/aploci</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
@@ -7333,7 +7333,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation>Norādīt struktūru</translation>
+        <translation>Norādīt vienību</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7930,7 +7930,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Esošo slāņu pārrakstīšana zīmējumā ar slāņiem no starpliktuves</translation>
+        <translation>Esošo slāņu pārrakstīšana&lt;br&gt;rasējumā ar&lt;br&gt;slāņiem no starpliktuves</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7945,7 +7945,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Esošo bloku pārrakstīšana zīmējumā ar&lt;br&gt;blokiem no starpliktuves</translation>
+        <translation>Esošo bloku pārrakstīšana&lt;br&gt;rasējumā ar&lt;br&gt;blokiem no starpliktuves</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
@@ -9619,7 +9619,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+16"/>
         <source>Drawing loaded successfully:</source>
-        <translation>Zīmējums ir veiksmīgi ielādēts:</translation>
+        <translation>Rasējums ir veiksmīgi ielādēts:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9739,7 +9739,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Atvērt zīmējumu</translation>
+        <translation>Atvērt rasējumu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9958,12 +9958,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Esošo slāņu pārrakstīšana zīmējumā ar slāņiem no starpliktuves</translation>
+        <translation>Esošo slāņu pārrakstīšana&lt;br&gt;rasējumā ar&lt;br&gt;slāņiem no starpliktuves</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Esošo bloku pārrakstīšana zīmējumā ar&lt;br&gt;blokiem no starpliktuves</translation>
+        <translation>Esošo bloku pārrakstīšana&lt;br&gt;rasējumā ar&lt;br&gt;blokiem no starpliktuves</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
@@ -10421,7 +10421,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation>Automātiski pielāgot zīmējumu papīram?</translation>
+        <translation>Automātiski pielāgot rasējumu papīram?</translation>
     </message>
     <message>
         <location line="+206"/>
@@ -10492,7 +10492,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>Automātiski pielāgot zīmējumu lappusei(-ēm)</translation>
+        <translation>Automātiski pielāgot rasējumu lappusei(-ēm)</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -10552,7 +10552,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
-        <translation>Priekšskatījums, kā tiks drukāts pašreizējais zīmējums</translation>
+        <translation>Priekšskatījums, kā tiks drukāts pašreizējais rasējums</translation>
     </message>
 </context>
 <context>
@@ -11224,12 +11224,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Darbības skripts</translation>
+        <translation>Skripta palaišana</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jūs gatavojaties palaist šādu(-us) skriptu(-us):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Šis skripts potenciāli var mainīt jūsu zīmējumus, modificēt vai dzēst failus vai piekļūt tīkla savienojumam.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Ir stingri ieteicams palaist tikai skriptus no uzticamiem avotiem.&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jūs gatavojaties palaist šādu(-us) skriptu(-us):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Šis skripts potenciāli var mainīt jūsu rasējumus, modificēt vai dzēst failus vai piekļūt tīkla savienojumam.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Ir stingri ieteicams palaist tikai skriptus no uzticamiem avotiem.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11317,7 +11317,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation>Saglabātā datne:</translation>
+        <translation>Saglabātais fails:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13397,7 +13397,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Nosūtīt uz Atpakaļ</translation>
+        <translation>Novietot aizmugurē</translation>
     </message>
 </context>
 <context>
@@ -13405,7 +13405,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>Ielādēt priekšā</translation>
+        <translation>Novietot priekšplānā</translation>
     </message>
 </context>
 <context>
@@ -13706,7 +13706,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>Izvēlēties ierobežojošo struktūru</translation>
+        <translation>Izvēlēties ierobežojošo vienību</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -15036,7 +15036,7 @@ jau ir sarakstā.</translation>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation>Nezināms objekts</translation>
+        <translation>Nezināma vienība</translation>
     </message>
     <message>
         <location line="+108"/>
@@ -15071,7 +15071,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation>PDF/A-1B datne</translation>
+        <translation>PDF/A-1B fails</translation>
     </message>
 </context>
 <context>

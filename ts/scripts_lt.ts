@@ -4327,7 +4327,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Objekto nėra darbiniame rinkinyje.</translation>
+        <translation>Objekto nėra darbo rinkinyje.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5359,7 +5359,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation>Dažai ant pasirinkimo, imituojantys ritininį antspaudą</translation>
+        <translation>Piešia ant pasirinkimo, imituodamas ritininį antspaudą</translation>
     </message>
 </context>
 <context>
@@ -5367,27 +5367,27 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Dailininko parinktys</translation>
+        <translation>Motyvo parinktys</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Dailininkų liejimo parinktys</translation>
+        <translation>Motyvų dėjimo parinktys</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip Painters</translation>
+        <translation>Apversti motyvus</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Grupės liejimas</translation>
+        <translation>Dėti kaip grupę</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Liejimas ant posluoksnio</translation>
+        <translation>Dėti į posluoksnį</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5407,27 +5407,27 @@ jau yra sąraše.</translation>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Dailininko rinkinys</translation>
+        <translation>Motyvų rinkinys</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Veidrodžių tapytojai virš bazinės linijos.</translation>
+        <translation>Atspindėti motyvus bazinės linijos atžvilgiu.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation>Sugrupuokite visus liejinius į vieną operaciją.</translation>
+        <translation>Sugrupuoti visus padėtus motyvus į vieną operaciją.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation>Pradėkite nuo liejimo pradžios viršūnės ant atvirų formų.</translation>
+        <translation>Pradėti dedant pradžios viršūnę ant atvirų formų.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation>Baigti liejant atvirų formų galinę viršūnę.</translation>
+        <translation>Baigti dedant pabaigos viršūnę ant atvirų formų.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5437,12 +5437,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>Dailininkų peržiūra.</translation>
+        <translation>Motyvų peržiūra.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>Pasirinkite dailininko rinkinį.</translation>
+        <translation>Pasirinkite motyvų rinkinį.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5487,7 +5487,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>&quot;SqaureWave&quot;</translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5527,7 +5527,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+49"/>
         <source>Illustration of the casting options</source>
-        <translation>Liejimo parinkčių iliustracija</translation>
+        <translation>Dėjimo parinkčių iliustracija</translation>
     </message>
     <message>
         <location line="+231"/>
@@ -5547,22 +5547,22 @@ jau yra sąraše.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Įveskite dailininko plotį. (+0)</translation>
+        <translation>Įveskite motyvo plotį. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>Įveskite pagrindinio tapytojo žingsnio dydį. (+0)</translation>
+        <translation>Įveskite pagrindinio motyvo žingsnio dydį. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>Įveskite pagrindinio dažytojo ilgį. (+)</translation>
+        <translation>Įveskite pagrindinio motyvo ilgį. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>Laikykite dailininkus proporcingais.</translation>
+        <translation>Išlaikyti motyvų proporcijas.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5612,7 +5612,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>&quot;Repetitive Painter&quot; parinktys</translation>
+        <translation>Pasikartojančio motyvo parinktys</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5637,7 +5637,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation>Dinamiškai mastelio keitimas, kad tilptų</translation>
+        <translation>Dinamiškai keisti mastelį, kad tilptų</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -5657,7 +5657,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose *</translation>
+        <translation>Išsami informacija *</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6347,7 +6347,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation>Darbinis rinkinio išblukimo koeficientas:</translation>
+        <translation>Darbo rinkinio blukinimo koeficientas:</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -6789,7 +6789,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Perrašyti esamus sluoksnius&lt;br&gt;br&gt;brėžinyje su&lt;br&gt;sluoksniais iš iškarpinės</translation>
+        <translation>Perrašyti esamus sluoksnius&lt;br&gt;brėžinyje su&lt;br&gt;sluoksniais iš iškarpinės</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7935,7 +7935,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Perrašyti esamus sluoksnius&lt;br&gt;br&gt;brėžinyje su&lt;br&gt;sluoksniais iš iškarpinės</translation>
+        <translation>Perrašyti esamus sluoksnius&lt;br&gt;brėžinyje su&lt;br&gt;sluoksniais iš iškarpinės</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9963,7 +9963,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Perrašyti esamus sluoksnius&lt;br&gt;br&gt;brėžinyje su&lt;br&gt;sluoksniais iš iškarpinės</translation>
+        <translation>Perrašyti esamus sluoksnius&lt;br&gt;brėžinyje su&lt;br&gt;sluoksniais iš iškarpinės</translation>
     </message>
     <message>
         <location line="+10"/>
