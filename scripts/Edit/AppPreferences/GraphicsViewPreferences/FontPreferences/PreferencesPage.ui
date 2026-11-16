@@ -37,15 +37,6 @@
    <layout class="QVBoxLayout">
     <item>
      <widget class="RFontChooserWidget" name="Ruler" native="true">
-      <property name="font">
-       <font>
-        <family>Helvetica</family>
-        <pointsize>9</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-        <kerning>false</kerning>
-       </font>
-      </property>
       <property name="label" stdset="0">
        <string>Ruler font:</string>
       </property>
@@ -59,12 +50,6 @@
     </item>
     <item>
      <widget class="RFontChooserWidget" name="SnapLabel" native="true">
-      <property name="font">
-       <font>
-        <family>Helvetica</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
       <property name="label" stdset="0">
        <string>Snap label font:</string>
       </property>
