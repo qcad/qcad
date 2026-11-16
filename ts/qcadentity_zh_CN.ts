@@ -710,7 +710,7 @@
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>变暗</translation>
+        <translation>淡入度</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
@@ -959,7 +959,7 @@
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation>文字</translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>

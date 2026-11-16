@@ -990,7 +990,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation>终点</translation>
+        <translation>端点</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1005,12 +1005,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation>垂直</translation>
+        <translation>垂足</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation>切向</translation>
+        <translation>切点</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1020,7 +1020,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation>网格点</translation>
+        <translation>栅格点</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1287,7 +1287,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation>在原地编辑区块时不能编辑区块</translation>
+        <translation>在原地编辑块时不能编辑块</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1341,7 +1341,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation>区块</translation>
+        <translation>块</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1362,7 +1362,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>修复区块名称</translation>
+        <translation>修复块名称</translation>
     </message>
 </context>
 <context>
@@ -1383,7 +1383,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
-        <translation>隐藏内部区块</translation>
+        <translation>隐藏内部块</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1406,7 +1406,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>块引用 ID：</translation>
+        <translation>块参照 ID：</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1424,7 +1424,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>输出区块列表（CSV）</translation>
+        <translation>输出块列表（CSV）</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1434,7 +1434,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>输出区块列表(&amp;E)</translation>
+        <translation>输出块列表(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -1442,7 +1442,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation>导出块引用列表（CSV）</translation>
+        <translation>导出块参照列表（CSV）</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1452,7 +1452,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>导出块引用列表(&amp;E)</translation>
+        <translation>导出块参照列表(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -1557,7 +1557,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation>CAD工具条</translation>
+        <translation>CAD 工具栏</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
@@ -2441,7 +2441,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>使用参考复制(&amp;C)</translation>
+        <translation>带基点复制(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2515,7 +2515,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation>以弧线、圆圈或椭圆绘制中心线十字</translation>
+        <translation>以弧线、圆或椭圆绘制中心线十字</translation>
     </message>
 </context>
 <context>
@@ -2569,7 +2569,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>用参考剪切(&amp;C)</translation>
+        <translation>带基点剪切(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2582,7 +2582,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation>移动实体或引用</translation>
+        <translation>移动实体或参考点</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2674,7 +2674,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>取消选择块引用(&amp;D)</translation>
+        <translation>取消选择块参照(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -2708,7 +2708,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation>弧线和圆圈</translation>
+        <translation>弧线和圆</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2936,7 +2936,7 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>重置了%n尺寸的标签位置。</numerusform>
+            <numerusform>已重置 %n 个标注的标签位置。</numerusform>
         </translation>
     </message>
     <message>
@@ -3180,7 +3180,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Keep proportions</source>
-        <translation>保持纵横比</translation>
+        <translation>保持比例</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -3465,7 +3465,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation>第三条弧线或圆圈</translation>
+        <translation>第三条弧线或圆</translation>
     </message>
 </context>
 <context>
@@ -3629,7 +3629,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>不能切换到不存在的层，被忽略。文本行: %1%2 图层: %3</translation>
+        <translation>不能切换到不存在的图层，被忽略。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3639,12 +3639,12 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation>不是一个正确的 &quot;新层 &quot;开关，被忽略。文本行：%1</translation>
+        <translation>不是一个正确的 &quot;新图层 &quot;开关，被忽略。文本行：%1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>不能隐藏不存在的层，忽略不计。文本行: %1%2 图层: %3</translation>
+        <translation>不能隐藏不存在的图层，忽略不计。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3654,7 +3654,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>不能冻结不存在的层，忽略不计。文本行: %1%2 层: %3</translation>
+        <translation>不能冻结不存在的图层，忽略不计。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3664,7 +3664,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>不能锁定不存在的层，忽略不计。文本行: %1%2 图层: %3</translation>
+        <translation>不能锁定不存在的图层，忽略不计。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3674,7 +3674,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>不能允许不存在的层，被忽略。文本行: %1%2 层: %3</translation>
+        <translation>不能允许不存在的图层，被忽略。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4095,7 +4095,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation>父层不存在。文本行: %1%2 层: %3</translation>
+        <translation>父图层不存在。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -4115,7 +4115,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation>添加/更新层被忽略。</translation>
+        <translation>添加/更新图层被忽略。</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4125,7 +4125,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation>添加了新层：%1</translation>
+        <translation>添加了新图层：%1</translation>
     </message>
     <message>
         <location line="-447"/>
@@ -4324,7 +4324,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>实体在一个锁定的层上。</translation>
+        <translation>实体在一个锁定的图层上。</translation>
     </message>
     <message>
         <location line="+254"/>
@@ -4334,7 +4334,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>实体不是块引用。</translation>
+        <translation>实体不是块参照。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4492,17 +4492,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>选择块引用</translation>
+        <translation>选择块参照</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>从引用编辑块(&amp;d)</translation>
+        <translation>从参照编辑块(&amp;D)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation>从选中的块引用编辑块</translation>
+        <translation>根据所选块参照编辑块</translation>
     </message>
 </context>
 <context>
@@ -4523,7 +4523,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation>编辑层</translation>
+        <translation>编辑图层(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -4802,7 +4802,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation>创建区块</translation>
+        <translation>创建块</translation>
     </message>
 </context>
 <context>
@@ -4810,7 +4810,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation>添加层 &quot;MyLayer&quot;</translation>
+        <translation>添加图层 &quot;MyLayer&quot;</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5334,12 +5334,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation>添加活动子层</translation>
+        <translation>添加活动子图层</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation>FP增加了一层：</translation>
+        <translation>FP 添加了图层：</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
@@ -5357,17 +5357,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>画家选项</translation>
+        <translation>画笔选项</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>画家的铸造选择</translation>
+        <translation>画笔投射选项</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>翻转画师</translation>
+        <translation>翻转画笔</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5377,7 +5377,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>投在子层上</translation>
+        <translation>投在子图层上</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5397,12 +5397,12 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>画家集</translation>
+        <translation>画笔组</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>镜子画家超过基线。</translation>
+        <translation>沿基线镜像画笔。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5427,12 +5427,12 @@ is already in the list.</source>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation>画家的预览。</translation>
+        <translation>画笔预览。</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation>选择油漆工组。</translation>
+        <translation>选择画笔组。</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5537,22 +5537,22 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>输入油漆工的宽度。(+0)</translation>
+        <translation>输入画笔宽度。(+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation>输入主画师的步长。(+0)</translation>
+        <translation>输入主画笔的步长。(+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation>输入主画师的长度。(+)</translation>
+        <translation>输入主画笔的长度。(+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation>保持油漆工的比例。</translation>
+        <translation>保持画笔比例。</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5602,7 +5602,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>重复画图器选项</translation>
+        <translation>重复画笔选项</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5802,12 +5802,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation>双击块引用打开块</translation>
+        <translation>双击块参照打开块</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation>原地编辑块引用</translation>
+        <translation>原地编辑块参照</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5832,12 +5832,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation>选择块的引用和属性</translation>
+        <translation>同时选择块参照及其属性</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation>当块引用被隐藏时隐藏属性</translation>
+        <translation>当块参照被隐藏时隐藏属性</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6759,12 +6759,12 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>粘贴所有实体&lt;br&gt;到当前层&lt;br&gt;而不是原层</translation>
+        <translation>粘贴所有实体&lt;br&gt;到当前图层&lt;br&gt;而不是原图层</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation>至当前层</translation>
+        <translation>至当前图层</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6774,12 +6774,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>覆盖区块</translation>
+        <translation>覆盖块</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>用剪贴板中的层覆盖图中现有层</translation>
+        <translation>用剪贴板中的图层覆盖图中现有图层</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7880,7 +7880,7 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation>将无效的区块名称调整为&quot;%1&quot;</translation>
+        <translation>将无效的块名称调整为&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -7920,7 +7920,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>用剪贴板中的层覆盖图中现有层</translation>
+        <translation>用剪贴板中的图层覆盖图中现有图层</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7930,7 +7930,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>覆盖区块</translation>
+        <translation>覆盖块</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -8213,12 +8213,12 @@ is already in the list.</source>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation>显示所有层</translation>
+        <translation>显示所有图层</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation>隐藏所有层</translation>
+        <translation>隐藏所有图层</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -8233,7 +8233,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Locking all layers</source>
-        <translation>锁定所有层</translation>
+        <translation>锁定所有图层</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8248,17 +8248,17 @@ is already in the list.</source>
     <message>
         <location line="+34"/>
         <source>Default color for new layers:</source>
-        <translation>新层的默认颜色：</translation>
+        <translation>新图层的默认颜色：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>0 层的默认线宽：</translation>
+        <translation>图层 0 的默认线宽：</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Default color for layer 0:</source>
-        <translation>0 层的默认颜色：</translation>
+        <translation>图层 0 的默认颜色：</translation>
     </message>
 </context>
 <context>
@@ -8276,7 +8276,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation>第0层</translation>
+        <translation>图层 0</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8286,12 +8286,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>第 0 层的行为是不同的（最佳的兼容性）。</translation>
+        <translation>图层 0 的行为不同（最佳兼容性）</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>图层 0 上的块中的实体采用块引用的属性和可见性。</translation>
+        <translation>图层 0 上的块中的实体采用块参照的属性和可见性。</translation>
     </message>
 </context>
 <context>
@@ -8300,7 +8300,7 @@ is already in the list.</source>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation>层</translation>
+        <translation>图层</translation>
     </message>
     <message>
         <location line="+158"/>
@@ -8310,12 +8310,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation>层名是空的。</translation>
+        <translation>图层名是空的。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation>层已经存在。</translation>
+        <translation>图层已经存在。</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
@@ -8325,7 +8325,7 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Layer name:</source>
-        <translation>层名：</translation>
+        <translation>图层名：</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -9158,7 +9158,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation>菜单和工具条</translation>
+        <translation>菜单和工具栏(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -9234,7 +9234,7 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>使用当前层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
 </context>
 <context>
@@ -9661,7 +9661,7 @@ is already in the list.</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
+            <numerusform>生成 %n 个同心圆后半径降到 0.0 以下。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -9674,7 +9674,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>偏移量（含距离）</translation>
+        <translation>偏移（按距离）</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9929,12 +9929,12 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>粘贴所有实体&lt;br&gt;到当前层&lt;br&gt;而不是原层</translation>
+        <translation>粘贴所有实体&lt;br&gt;到当前图层&lt;br&gt;而不是原图层</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation>至当前层</translation>
+        <translation>至当前图层</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9944,12 +9944,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>覆盖区块</translation>
+        <translation>覆盖块</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>用剪贴板中的层覆盖图中现有层</translation>
+        <translation>用剪贴板中的图层覆盖图中现有图层</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10508,7 +10508,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation>自动放大到页面</translation>
+        <translation>自动缩放到页面</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10681,7 +10681,7 @@ is already in the list.</source>
     <message>
         <location line="+47"/>
         <source>Display properties of current block and current layer</source>
-        <translation>显示当前块和当前层的属性</translation>
+        <translation>显示当前块和当前图层的属性</translation>
     </message>
     <message>
         <location line="-37"/>
@@ -11101,7 +11101,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>使用当前层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
 </context>
 <context>
@@ -11149,7 +11149,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>使用当前层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
 </context>
 <context>
@@ -11538,7 +11538,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>使用当前层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
 </context>
 <context>
@@ -11593,7 +11593,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>选择块引用(&amp;S)</translation>
+        <translation>选择块参照(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -11660,7 +11660,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>(去)选择轮廓线</translation>
+        <translation>（取消）选择轮廓线</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11700,7 +11700,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Same Layer</source>
-        <translation>同一层</translation>
+        <translation>同一图层</translation>
     </message>
 </context>
 <context>
@@ -11718,12 +11718,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(解除）选择相交的实体</translation>
+        <translation>（取消）选择相交的实体</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation>(去) 选择所有与直线相交的实体</translation>
+        <translation>（取消）选择所有与直线相交的实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -11779,12 +11779,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(解除) 选择图层(&amp;L)</translation>
+        <translation>（取消）选择图层(&amp;L)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>(解除）选择同一图层上的所有实体</translation>
+        <translation>（取消）选择同一图层上的所有实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -11827,12 +11827,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>(去)选择矩形区域</translation>
+        <translation>（取消）选择矩形区域</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation>(解除）选择一个矩形内的所有实体</translation>
+        <translation>（取消）选择一个矩形内的所有实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -11875,12 +11875,12 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation>在&quot;%3 &quot;层上的%1 %2</translation>
+        <translation>图层&quot;%3&quot;上的 %1 %2</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation>%1 %2在 %3层</translation>
+        <translation>%3 个图层上的 %1 %2</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
@@ -11905,7 +11905,7 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform>%n层</numerusform>
+            <numerusform>%n 个图层</numerusform>
         </translation>
     </message>
     <message>
@@ -12418,7 +12418,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>结束</translation>
+        <translation>端点(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -12442,7 +12442,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>交叉点</translation>
+        <translation>交点(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -12507,7 +12507,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation>垂线</translation>
+        <translation>垂足(&amp;P)</translation>
     </message>
 </context>
 <context>
@@ -12531,7 +12531,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation>切向</translation>
+        <translation>切点(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -12539,7 +12539,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation>从 X/Y 点(&amp;X/)</translation>
+        <translation>X/Y 取自点(&amp;X)</translation>
     </message>
 </context>
 <context>
@@ -12547,7 +12547,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation>从 Y/X 点(&amp;Y)</translation>
+        <translation>Y/X 取自点(&amp;Y)</translation>
     </message>
 </context>
 <context>
@@ -12913,7 +12913,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation>使文字适合于直线、弧线或圆圈</translation>
+        <translation>使文字适合于直线、弧线或圆</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13591,7 +13591,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>使用当前层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
 </context>
 <context>
@@ -13678,7 +13678,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>使用当前层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
 </context>
 <context>
@@ -13686,7 +13686,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>选择限制性实体</translation>
+        <translation>选择边界实体</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14453,7 +14453,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>窗口放大</translation>
+        <translation>窗口缩放(&amp;W)</translation>
     </message>
 </context>
 <context>
@@ -14657,22 +14657,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>块引用</translation>
+        <translation>块参照</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation>块引用</translation>
+        <translation>块参照</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>块引用和属性</translation>
+        <translation>块参照和属性</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>块引用和属性</translation>
+        <translation>块参照和属性</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14707,12 +14707,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation>圆圈</translation>
+        <translation>圆</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation>圆圈</translation>
+        <translation>圆</translation>
     </message>
     <message>
         <location line="+2"/>
