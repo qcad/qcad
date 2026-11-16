@@ -6363,12 +6363,12 @@ jest już na liście.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
         <translation>Czcionka linijki:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+13"/>
         <source>Snap label font:</source>
         <translation>Czcionka etykiety przyciągania:</translation>
     </message>

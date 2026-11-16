@@ -6353,12 +6353,12 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
         <translation>標尺字型：</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+13"/>
         <source>Snap label font:</source>
         <translation>捕捉標籤字型：</translation>
     </message>
@@ -13492,7 +13492,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Clear Filter</source>
-        <translation>清除過濾器</translation>
+        <translation>清除篩選</translation>
     </message>
 </context>
 <context>

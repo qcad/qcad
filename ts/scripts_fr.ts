@@ -6358,12 +6358,12 @@ est déjà dans la liste.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
         <translation>Police de la règle :</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+13"/>
         <source>Snap label font:</source>
         <translation>Police de l&apos;étiquette d&apos;accrochage :</translation>
     </message>

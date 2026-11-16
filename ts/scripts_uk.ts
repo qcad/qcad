@@ -6363,12 +6363,12 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
         <translation>Шрифт лінійок:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+13"/>
         <source>Snap label font:</source>
         <translation>Шрифт підпису прив&apos;язки:</translation>
     </message>

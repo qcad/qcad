@@ -899,7 +899,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+913"/>
         <source>By Layer</source>
         <translation>Réteg szerint</translation>
     </message>

@@ -6353,12 +6353,12 @@ zaten listede.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
         <translation>Cetvel yazı tipi:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+13"/>
         <source>Snap label font:</source>
         <translation>Snap etiket yazı tipi:</translation>
     </message>
@@ -13492,7 +13492,7 @@ zaten listede.</translation>
     <message>
         <location line="+10"/>
         <source>Clear Filter</source>
-        <translation>Filtreyi temizle</translation>
+        <translation>Filtreyi Temizle</translation>
     </message>
 </context>
 <context>
