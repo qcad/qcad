@@ -18,6 +18,7 @@
  */
 #include <QAccessible>
 #include <QApplication>
+#include <QToolTip>
 #include <QColor>
 #include <QDir>
 #include <QFileInfo>
@@ -894,9 +895,16 @@ void RSettings::setSnapLabelFont(const QFont& font) {
 
 QFont RSettings::getSnapLabelFont() {
     if (snapLabelFont==NULL) {
-        // get application's default font (pixel size is -1, point size e.g. 10pt):
+        // default: system font used for tool tips (renders the translated
+        // snap labels of all languages correctly, e.g. Chinese):
         QFont font;
-        font.setPointSize(11);
+        if (qobject_cast<QApplication*>(QCoreApplication::instance())!=NULL) {
+            font = QToolTip::font();
+        }
+        if (font.pointSizeF()<=0.0) {
+            // font size defined in pixels or not at all:
+            font.setPointSize(11);
+        }
         snapLabelFont = new QFont(getValue("GraphicsViewFonts/SnapLabel", font).value<QFont>());
     }
     return *snapLabelFont;
