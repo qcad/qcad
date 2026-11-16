@@ -16,8 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDateTime>
 #include <QDir>
 #include <QFileInfo>
+#include <QGlobalStatic>
+#include <QHash>
+#include <QMutex>
+#include <QMutexLocker>
 #if QT_VERSION >= 0x050000
 #include <QGuiApplication>
 #else
@@ -27,6 +32,102 @@
 #include "RImageData.h"
 #include "RPolyline.h"
 #include "RRefPoint.h"
+
+/**
+ * Decoded bitmaps, shared between all image entities which reference
+ * the same file: a drawing which shows the same bitmap more than once
+ * decodes it once and holds it in memory once (QImage is implicitly
+ * shared). The image views can identify shared bitmaps by their
+ * QImage::cacheKey (e.g. to share a texture).
+ *
+ * The cache does not keep bitmaps alive: an entry is dropped when the
+ * last image entity which uses it is gone.
+ */
+class RImageDataCache {
+public:
+    struct Entry {
+        QImage image;
+        // state of the file when it was decoded:
+        QDateTime lastModified;
+        qint64 size;
+    };
+
+    /**
+     * \return The decoded bitmap of the given file or a null image if
+     * the file cannot be decoded.
+     */
+    QImage load(const QString& fullFilePath) {
+        QFileInfo fi(fullFilePath);
+        QString key = fi.canonicalFilePath();
+        if (key.isEmpty()) {
+            key = fullFilePath;
+        }
+
+        QMutexLocker locker(&mutex);
+
+        QHash<QString, Entry>::iterator it = entries.find(key);
+        if (it != entries.end()) {
+            if (it.value().lastModified == fi.lastModified() && it.value().size == fi.size()) {
+                return it.value().image;
+            }
+            // file changed on disk since it was decoded:
+            keys.remove(it.value().image.cacheKey());
+            entries.erase(it);
+        }
+
+        // drop bitmaps which are no longer used by any entity:
+        it = entries.begin();
+        while (it != entries.end()) {
+            if (it.value().image.isDetached()) {
+                keys.remove(it.value().image.cacheKey());
+                it = entries.erase(it);
+            }
+            else {
+                ++it;
+            }
+        }
+
+        Entry entry;
+        if (!entry.image.load(fullFilePath)) {
+            return QImage();
+        }
+        entry.lastModified = fi.lastModified();
+        entry.size = fi.size();
+        entries.insert(key, entry);
+        keys.insert(entry.image.cacheKey(), key);
+        return entry.image;
+    }
+
+    /**
+     * Called after an entity released the bitmap with the given
+     * QImage::cacheKey: drops the bitmap if it is not used anymore.
+     */
+    void released(qint64 cacheKey) {
+        QMutexLocker locker(&mutex);
+        QHash<qint64, QString>::iterator k = keys.find(cacheKey);
+        if (k == keys.end()) {
+            return;
+        }
+        QHash<QString, Entry>::iterator it = entries.find(k.value());
+        if (it != entries.end()) {
+            if (!it.value().image.isDetached()) {
+                // still in use:
+                return;
+            }
+            entries.erase(it);
+        }
+        keys.erase(k);
+    }
+
+private:
+    QMutex mutex;
+    // canonical file path -> decoded bitmap:
+    QHash<QString, Entry> entries;
+    // QImage::cacheKey -> canonical file path:
+    QHash<qint64, QString> keys;
+};
+
+Q_GLOBAL_STATIC(RImageDataCache, imageDataCache)
 
 RImageData::RImageData() :
     brightness(50),
@@ -69,6 +170,12 @@ RImageData::RImageData(const QString& fileName,
 }
 
 RImageData::~RImageData() {
+    if (!image.isNull() && !imageDataCache.isDestroyed()) {
+        // release the shared bitmap (see RImageDataCache):
+        qint64 key = image.cacheKey();
+        image = QImage();
+        imageDataCache()->released(key);
+    }
 }
 
 RImageData& RImageData::operator =(const RImageData& other) {
@@ -305,7 +412,15 @@ void RImageData::load() const {
         return;
     }
 
-    if (!image.load(fullFilePath)) {
+    // image entities which show the same file share one decoded bitmap:
+    if (!imageDataCache.isDestroyed()) {
+        image = imageDataCache()->load(fullFilePath);
+    }
+    else {
+        image.load(fullFilePath);
+    }
+
+    if (image.isNull()) {
         qWarning() << "RImageData::load: failed: " << fullFilePath;
     }
     else {
