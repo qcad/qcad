@@ -49,11 +49,33 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
         widgets["ImageAllocationLimit"].visible = false;
     }
 
+    // number of frames the RHI graphics view can queue for display
+    // (macOS only, see RGraphicsViewRhi3D::limitQueuedFrames). Items are
+    // added before the stored value is restored (item data is stored):
+    var cbDrawables = widgets["RhiMaximumDrawableCount"];
+    cbDrawables.addItem(qsTr("2 (lower latency)"), 2);
+    cbDrawables.addItem(qsTr("3 (smoother under heavy load)"), 3);
+    cbDrawables.currentIndex = 0;
+    var rhiAvailable = hasPlugin("RHI3D") && typeof(RGraphicsViewRhi3D)!=="undefined";
+    if (!rhiAvailable || RS.getSystemId()!=="osx") {
+        cbDrawables.visible = false;
+        widgets["RhiMaximumDrawableCount_Label"].visible = false;
+    }
+
     // RHI based graphics view is only available if the RHI3D plugin is loaded:
-    if (!hasPlugin("RHI3D") || typeof(RGraphicsViewRhi3D)==="undefined") {
+    if (!rhiAvailable) {
         widgets["UseRhiGraphicsView"].visible = false;
     }
     else {
+        // queued frames only apply to the RHI graphics view (enabled when
+        // the check box is restored as checked, see above):
+        cbDrawables.enabled = false;
+        widgets["RhiMaximumDrawableCount_Label"].enabled = false;
+        widgets["UseRhiGraphicsView"].toggled.connect(function(checked) {
+            cbDrawables.enabled = checked;
+            widgets["RhiMaximumDrawableCount_Label"].enabled = checked;
+        });
+
         // the RHI based graphics view always renders at the full
         // resolution of the display (see
         // RSettings::getHighResolutionGraphicsView): the preference only
