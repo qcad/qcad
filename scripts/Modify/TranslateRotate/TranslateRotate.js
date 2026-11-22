@@ -43,7 +43,7 @@ TranslateRotate.prototype = new Translate();
 TranslateRotate.includeBasePath = includeBasePath;
 
 TranslateRotate.getPreferencesCategory = function() {
-    return [qsTr("Modify"), qsTr("Move/Rotate")];
+    return [qsTr("Modify", "PrefSectionTitle"), qsTr("Move/Rotate")];
 };
 
 /**

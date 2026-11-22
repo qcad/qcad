@@ -21,7 +21,7 @@ function ColorPreferences() {
 }
 
 ColorPreferences.getPreferencesCategory = function() {
-    return [qsTr("Graphics View"), qsTr("Colors")];
+    return [qsTr("Graphics View", "PrefSectionTitle"), qsTr("Colors")];
 };
 
 ColorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

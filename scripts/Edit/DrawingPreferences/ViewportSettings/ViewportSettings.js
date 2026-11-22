@@ -24,9 +24,9 @@ function ViewportSettings() {
 
 ViewportSettings.getPreferencesCategory = function(appPreferences) {
     if (appPreferences) {
-        return [ qsTr("Defaults for New Drawings"), qsTr("Layout - Viewports") ];
+        return [ qsTr("Defaults for New Drawings", "PrefSectionTitle"), qsTr("Layout - Viewports") ];
     }
-    return [ qsTr("Layout"), qsTr("Viewports") ];
+    return [ qsTr("Layout", "PrefSectionTitle"), qsTr("Viewports") ];
 };
 
 ViewportSettings.initPreferences = function(pageWidget, calledByPrefDialog, document) {

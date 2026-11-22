@@ -21,7 +21,7 @@ function GraphicsViewPreferences() {
 }
 
 GraphicsViewPreferences.getPreferencesCategory = function() {
-    return [qsTr("Graphics View"), qsTr("Appearance")];
+    return [qsTr("Graphics View", "PrefSectionTitle"), qsTr("Appearance")];
 };
 
 GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

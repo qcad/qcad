@@ -41,7 +41,7 @@ Mirror.prototype = new Transform();
 Mirror.includeBasePath = includeBasePath;
 
 Mirror.getPreferencesCategory = function() {
-    return [qsTr("Modify"), qsTr("Mirror")];
+    return [qsTr("Modify", "PrefSectionTitle"), qsTr("Mirror")];
 };
 
 Mirror.State = {

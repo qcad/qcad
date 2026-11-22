@@ -27,6 +27,6 @@ function LayerCompatibility(guiAction) {
 LayerCompatibility.prototype = new EAction();
 
 LayerCompatibility.getPreferencesCategory = function() {
-    return [qsTr("Layer"), qsTr("Compatibility")];
+    return [qsTr("Layer", "PrefSectionTitle"), qsTr("Compatibility")];
 };
 

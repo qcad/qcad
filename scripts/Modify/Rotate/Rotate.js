@@ -44,7 +44,7 @@ Rotate.prototype = new Transform();
 Rotate.includeBasePath = includeBasePath;
 
 Rotate.getPreferencesCategory = function() {
-    return [qsTr("Modify"), qsTr("Rotate")];
+    return [qsTr("Modify", "PrefSectionTitle"), qsTr("Rotate")];
 };
 
 Rotate.State = {

@@ -22,9 +22,9 @@ function PointDisplaySettings() {
 
 PointDisplaySettings.getPreferencesCategory = function(appPreferences) {
     if (appPreferences) {
-        return [ qsTr("Defaults for New Drawings"), qsTr("Point Display") ];
+        return [ qsTr("Defaults for New Drawings", "PrefSectionTitle"), qsTr("Point Display") ];
     }
-    return [ qsTr("General"), qsTr("Point Display") ];
+    return [ qsTr("General", "PrefSectionTitle"), qsTr("Point Display") ];
 };
 
 PointDisplaySettings.initPreferences = function(pageWidget, calledByPrefDialog, document, preferencesAction) {

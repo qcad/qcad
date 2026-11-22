@@ -35,7 +35,7 @@ function AddLayer(guiAction) {
 AddLayer.prototype = new Layer();
 
 AddLayer.getPreferencesCategory = function() {
-    return [ qsTr("Layer"), qsTr("Add Layer") ];
+    return [ qsTr("Layer", "PrefSectionTitle"), qsTr("Add Layer") ];
 };
 
 AddLayer.prototype.beginEvent = function() {

@@ -24,9 +24,9 @@ function DimensionSettings() {
 
 DimensionSettings.getPreferencesCategory = function(appPreferences) {
     if (appPreferences) {
-        return [ qsTr("Defaults for New Drawings"), qsTr("Dimension Settings") ];
+        return [ qsTr("Defaults for New Drawings", "PrefSectionTitle"), qsTr("Dimension Settings") ];
     }
-    return [ qsTr("Dimension"), qsTr("Dimension Settings") ];
+    return [ qsTr("Dimension", "PrefSectionTitle"), qsTr("Dimension Settings") ];
 };
 
 DimensionSettings.dimx = [

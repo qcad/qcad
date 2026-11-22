@@ -28,9 +28,9 @@ PageSettings.prototype = new Object();
 
 PageSettings.getPreferencesCategory = function(appPreferences) {
     if (appPreferences) {
-        return [ qsTr("Defaults for New Drawings"), qsTr("Printing - Page") ];
+        return [ qsTr("Defaults for New Drawings", "PrefSectionTitle"), qsTr("Printing - Page") ];
     }
-    return [ qsTr("Printing"), qsTr("Page") ];
+    return [ qsTr("Printing", "PrefSectionTitle"), qsTr("Page") ];
 };
 
 /**

@@ -21,5 +21,5 @@ function FontPreferences() {
 }
 
 FontPreferences.getPreferencesCategory = function() {
-    return [qsTr("Graphics View"), qsTr("Fonts")];
+    return [qsTr("Graphics View", "PrefSectionTitle"), qsTr("Fonts")];
 };

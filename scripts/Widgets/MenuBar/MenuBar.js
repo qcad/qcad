@@ -21,5 +21,5 @@ function MenuBar() {
 }
 
 MenuBar.getPreferencesCategory = function() {
-    return [ qsTr("Widgets"), qsTr("Menu Bar") ];
+    return [ qsTr("Widgets", "PrefSectionTitle"), qsTr("Menu Bar") ];
 };

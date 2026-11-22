@@ -27,7 +27,7 @@ function SvgImport(guiAction) {
 SvgImport.prototype = new File();
 
 SvgImport.getPreferencesCategory = function() {
-    return [ qsTr("File"), qsTr("SVG Import")];
+    return [ qsTr("File", "PrefSectionTitle"), qsTr("SVG Import")];
 };
 
 SvgImport.initPreferences = function(pageWidget, calledByPrefDialog, document) {

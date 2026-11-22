@@ -26,7 +26,7 @@ function UiPreferences(guiAction) {
 UiPreferences.prototype = new EAction();
 
 UiPreferences.getPreferencesCategory = function() {
-    return [qsTr("General"), qsTr("User Interface")];
+    return [qsTr("General", "PrefSectionTitle"), qsTr("User Interface")];
 };
 
 UiPreferences.applyPreferences = function(doc, mdiChild) {

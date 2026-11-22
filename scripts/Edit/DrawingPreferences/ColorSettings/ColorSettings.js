@@ -22,9 +22,9 @@ function ColorSettings() {
 
 ColorSettings.getPreferencesCategory = function(appPreferences) {
     if (appPreferences) {
-        return [ qsTr("Defaults for New Drawings"), qsTr("Printing - Colors") ];
+        return [ qsTr("Defaults for New Drawings", "PrefSectionTitle"), qsTr("Printing - Colors") ];
     }
-    return [ qsTr("Printing"), qsTr("Colors") ];
+    return [ qsTr("Printing", "PrefSectionTitle"), qsTr("Colors") ];
 };
 
 ColorSettings.getPreferencesScope = function() {

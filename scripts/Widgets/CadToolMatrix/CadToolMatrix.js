@@ -447,7 +447,7 @@ CadToolMatrix.prototype = new Widgets();
 CadToolMatrix.includeBasePath = includeBasePath;
 
 CadToolMatrix.getPreferencesCategory = function() {
-    return [qsTr("Widgets"), qsTr("Tool Matrix")];
+    return [qsTr("Widgets", "PrefSectionTitle"), qsTr("Tool Matrix")];
 };
 
 CadToolMatrix.applyPreferences = function(doc) {

@@ -44,7 +44,7 @@ SnapIntersectionManual.State = {
 };
 
 SnapIntersectionManual.getPreferencesCategory = function() {
-    return [qsTr("Snap"), qsTr("Intersection Manual")];
+    return [qsTr("Snap", "PrefSectionTitle"), qsTr("Intersection Manual")];
 };
 
 SnapIntersectionManual.prototype.setState = function(state) {

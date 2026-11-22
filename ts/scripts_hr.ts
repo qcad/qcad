@@ -403,6 +403,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Sloj</translation>
     </message>
     <message>
@@ -884,6 +885,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Datoteka</translation>
     </message>
     <message>
@@ -1072,6 +1074,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafički prikaz</translation>
     </message>
     <message>
@@ -1375,6 +1378,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -1557,7 +1561,8 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
-        <translation>Dodatci</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Widgeti</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1610,7 +1615,8 @@ Do you wish to recover it?</source>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
-        <translation>Dodatci</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Widgeti</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2137,6 +2143,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafički prikaz</translation>
     </message>
     <message>
@@ -2150,6 +2157,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zadane postavke za nove crteže</translation>
     </message>
     <message>
@@ -2160,7 +2168,8 @@ Do you wish to recover it?</source>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>Ispisivanje</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Ispis</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2198,6 +2207,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -2400,6 +2410,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -2635,6 +2646,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafički prikaz</translation>
     </message>
     <message>
@@ -3126,6 +3138,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zadane postavke za nove crteže</translation>
     </message>
     <message>
@@ -3137,6 +3150,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Dimenzija</translation>
     </message>
     <message>
@@ -5186,6 +5200,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Izmjena</translation>
     </message>
     <message>
@@ -5710,6 +5725,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafički prikaz</translation>
     </message>
     <message>
@@ -6031,7 +6047,17 @@ večpostoji na popisu.</translation>
         <translation>Koristi RHI grafički prikaz</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+28"/>
+        <source>Frames queued for display:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of frames the RHI graphics view can queue for display (macOS). 2 frames: the view follows the mouse with less delay. 3 frames: fewer dropped frames if the graphics card is slow compared to the drawing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Anti-aliasing on by default</source>
         <translation>Zaglađivanje rubova zadano uključeno</translation>
     </message>
@@ -6072,7 +6098,7 @@ večpostoji na popisu.</translation>
         <translation>Uvijek iscrtavaj polilinije s prilagođenim širinama najmanje 1 piksel široko</translation>
     </message>
     <message>
-        <location line="-162"/>
+        <location line="-209"/>
         <source>Automatically use screen-based linetypes in model view</source>
         <translation>Automatski koristi zaslonske vrste crta u prikazu modela</translation>
     </message>
@@ -6092,7 +6118,7 @@ večpostoji na popisu.</translation>
         <translation>Faktor koji se primjenjuje na debljine crta kada se prikazuju zaslonske debljine crta (npr. 2 prikazuje zaslonske debljine crta dvostruko šire)</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+372"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Prikaži lukove kao linije ispod ovog kuta (stupnjevi):</translation>
     </message>
@@ -6437,6 +6463,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafički prikaz</translation>
     </message>
     <message>
@@ -6445,7 +6472,17 @@ večpostoji na popisu.</translation>
         <translation>Izgled</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+32"/>
+        <source>2 (lower latency)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>3 (smoother under heavy load)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>The RHI graphics view always uses the full resolution of the display</source>
         <translation>RHI grafički prikaz uvijek koristi punu rezoluciju zaslona</translation>
     </message>
@@ -6455,6 +6492,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafički prikaz</translation>
     </message>
     <message>
@@ -6468,6 +6506,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zadane postavke za nove crteže</translation>
     </message>
     <message>
@@ -6479,6 +6518,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Opće</translation>
     </message>
     <message>
@@ -7735,6 +7775,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Opće</translation>
     </message>
     <message>
@@ -8160,6 +8201,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Opće</translation>
     </message>
     <message>
@@ -8201,6 +8243,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Postavke jezika</translation>
     </message>
     <message>
@@ -8277,6 +8320,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Sloj</translation>
     </message>
     <message>
@@ -8372,6 +8416,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+200"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -9077,6 +9122,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zadane postavke za nove crteže</translation>
     </message>
     <message>
@@ -9088,6 +9134,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Opće</translation>
     </message>
     <message>
@@ -9146,6 +9193,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -9177,6 +9225,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Izmjena</translation>
     </message>
     <message>
@@ -9763,6 +9812,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zadane postavke za nove crteže</translation>
     </message>
     <message>
@@ -9773,7 +9823,8 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>Ispisivanje</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Ispis</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9904,7 +9955,8 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
-        <translation>Uređivanje</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Uredi</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10047,6 +10099,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zadane postavke za nove crteže</translation>
     </message>
     <message>
@@ -10058,6 +10111,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Opće</translation>
     </message>
     <message>
@@ -10679,6 +10733,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -10803,6 +10858,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Datoteka</translation>
     </message>
     <message>
@@ -10975,6 +11031,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Izmjena</translation>
     </message>
     <message>
@@ -11336,6 +11393,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Datoteka</translation>
     </message>
     <message>
@@ -11414,6 +11472,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Izmjena</translation>
     </message>
     <message>
@@ -11569,6 +11628,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Skriptiranje</translation>
     </message>
 </context>
@@ -12261,6 +12321,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Hvatanje</translation>
     </message>
     <message>
@@ -12471,6 +12532,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Hvatanje</translation>
     </message>
     <message>
@@ -12645,6 +12707,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -12737,6 +12800,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Datoteka</translation>
     </message>
     <message>
@@ -12819,6 +12883,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -13063,7 +13128,7 @@ večpostoji na popisu.</translation>
         <translation>Ostali...</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+169"/>
         <source>Degree</source>
         <translation>Stupanj</translation>
     </message>
@@ -13340,7 +13405,8 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation>Crtanje</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Crtaj</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13361,6 +13427,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Opće</translation>
     </message>
     <message>
@@ -13487,6 +13554,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widgeti</translation>
     </message>
     <message>
@@ -13529,6 +13597,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Izmjena</translation>
     </message>
     <message>
@@ -13631,6 +13700,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Izmjena</translation>
     </message>
     <message>
@@ -13820,6 +13890,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Opće</translation>
     </message>
     <message>
@@ -13841,6 +13912,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zadane postavke za nove crteže</translation>
     </message>
     <message>
@@ -13852,6 +13924,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Opće</translation>
     </message>
     <message>
@@ -14052,6 +14125,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zadane postavke za nove crteže</translation>
     </message>
     <message>
@@ -14062,6 +14136,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2"/>
         <source>Layout</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Raspored</translation>
     </message>
     <message>

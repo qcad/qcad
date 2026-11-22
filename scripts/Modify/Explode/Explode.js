@@ -27,7 +27,7 @@ function Explode(guiAction) {
 Explode.prototype = new Modify();
 
 Explode.getPreferencesCategory = function() {
-    return [qsTr("Modify"), qsTr("Explode")];
+    return [qsTr("Modify", "PrefSectionTitle"), qsTr("Explode")];
 };
 
 Explode.initPreferences = function(pageWidget, calledByPrefDialog, document) {

@@ -53,7 +53,7 @@ function CadToolBar() {
 //CadToolBar.prototype = new QWidget();
 
 CadToolBar.getPreferencesCategory = function() {
-    return [qsTr("Widgets"), qsTr("CAD Toolbar")];
+    return [qsTr("Widgets", "PrefSectionTitle"), qsTr("CAD Toolbar")];
 };
 
 CadToolBar.applyPreferences = function(doc) {

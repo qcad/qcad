@@ -35,7 +35,7 @@ function SaveAs(guiAction) {
 SaveAs.prototype = new Save();
 
 SaveAs.getPreferencesCategory = function() {
-    return [ qsTr("File"), qsTr("Open/Save")];
+    return [ qsTr("File", "PrefSectionTitle"), qsTr("Open/Save")];
 };
 
 SaveAs.initPreferences = function(pageWidget, calledByPrefDialog, document) {
