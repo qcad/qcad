@@ -91,6 +91,15 @@ File.getTitle = function() {
     return qsTr("&File");
 };
 
+/**
+ * Preferences page File (file dialog preferences). The preferences are
+ * stored under the settings group "SaveAs" (SaveAs/UseSystemFileDialog) for
+ * backwards compatibility, see root widget name in PreferencesPage.ui.
+ */
+File.getPreferencesCategory = function() {
+    return [ qsTranslate("SaveAs", "File", "PrefSectionTitle") ];
+};
+
 File.prototype.getTitle = function() {
     return File.getTitle();
 };

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SaveAs</class>
+ <!--
+  Class (translation context) and root widget name (settings group) are
+  "SaveAs" for backwards compatibility: preferences are stored as SaveAs/...
+  Widgets with SettingsGroup "OpenFile" (OpenFile/Path, OpenFile/AlwaysUsePath)
+  are loaded and saved by OpenFile.js.
+ -->
+ <widget class="QWidget" name="SaveAs">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>554</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="title">
+      <string>Folder</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="PathLabel">
+          <property name="text">
+           <string>Folder for opening files:</string>
+          </property>
+          <property name="buddy">
+           <cstring>Path</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="Path">
+          <property name="SettingsGroup" stdset="0">
+           <string>OpenFile</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="OpenFile">
+          <property name="toolTip">
+           <string>Choose Folder</string>
+          </property>
+          <property name="SettingsGroup" stdset="0">
+           <string>OpenFile</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="AlwaysUsePath">
+        <property name="toolTip">
+         <string>If unchecked, the folder last used to open a file is stored automatically</string>
+        </property>
+        <property name="text">
+         <string>Always use this folder</string>
+        </property>
+        <property name="SettingsGroup" stdset="0">
+         <string>OpenFile</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Opening</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="OpenZeroSizeFile">
+        <property name="text">
+         <string>Allow opening of zero size files (e.g. online files that are not synched to disk)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="UTF8">
+        <property name="text">
+         <string>Decode strings in DXF/DWG as UTF-8 (experimental)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>244</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
