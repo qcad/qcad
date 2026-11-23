@@ -883,9 +883,16 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
     path.translate(x,y);
 
     if (printing) {
+        // entities painted before (e.g. viewports) might have left a
+        // clip rectangle on the painter which would clip page tags:
+        var clipping = painter.hasClipping();
+        painter.setClipping(false);
+
         var of = offset.getNegated();
         path.translate(of.x, of.y);
         painter.drawPath(path);
+
+        painter.setClipping(clipping);
     }
     else {
         painter.addPath(new RPainterPath(path));
@@ -902,7 +909,20 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
  */
 Print.drawPageFooter = function(document, painterOrText, index, border, printing, printerFactor) {
     if (!isNull(Print.proxy)) {
+        // entities painted before (e.g. viewports) might have left a
+        // clip rectangle on the painter which would clip the footer:
+        var isPainter = printing===true && isFunction(painterOrText.hasClipping);
+        var clipping = false;
+        if (isPainter) {
+            clipping = painterOrText.hasClipping();
+            painterOrText.setClipping(false);
+        }
+
         Print.proxy.drawPageFooter(document, painterOrText, index, border, printing, printerFactor);
+
+        if (isPainter) {
+            painterOrText.setClipping(clipping);
+        }
     }
 };
 
