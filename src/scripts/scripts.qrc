@@ -1283,10 +1283,12 @@
     <file alias="scripts/File/OpenFile/OpenFile.js">../../scripts/File/OpenFile/OpenFile.js</file>
     <file alias="scripts/File/OpenFile/OpenFile.svg">../../scripts/File/OpenFile/OpenFile.svg</file>
     <file alias="scripts/File/OpenFile/OpenFileInit.js">../../scripts/File/OpenFile/OpenFileInit.js</file>
+    <file alias="scripts/File/OpenFile/PreferencesPage.ui">../../scripts/File/OpenFile/PreferencesPage.ui</file>
     <file alias="scripts/File/PdfExport/PdfExport-inverse.svg">../../scripts/File/PdfExport/PdfExport-inverse.svg</file>
     <file alias="scripts/File/PdfExport/PdfExport.js">../../scripts/File/PdfExport/PdfExport.js</file>
     <file alias="scripts/File/PdfExport/PdfExport.svg">../../scripts/File/PdfExport/PdfExport.svg</file>
     <file alias="scripts/File/PdfExport/PdfExportInit.js">../../scripts/File/PdfExport/PdfExportInit.js</file>
+    <file alias="scripts/File/PreferencesPage.ui">../../scripts/File/PreferencesPage.ui</file>
     <file alias="scripts/File/Print/Print.js">../../scripts/File/Print/Print.js</file>
     <file alias="scripts/File/Print/Print.svg">../../scripts/File/Print/Print.svg</file>
     <file alias="scripts/File/Print/PrintInit.js">../../scripts/File/Print/PrintInit.js</file>

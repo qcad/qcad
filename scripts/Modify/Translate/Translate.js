@@ -41,7 +41,7 @@ Translate.prototype = new Transform();
 Translate.includeBasePath = includeBasePath;
 
 Translate.getPreferencesCategory = function() {
-    return [qsTr("Modify"), qsTr("Move/Copy")];
+    return [qsTr("Modify", "PrefSectionTitle"), qsTr("Move/Copy")];
 };
 
 Translate.State = {

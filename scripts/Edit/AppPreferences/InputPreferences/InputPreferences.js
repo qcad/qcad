@@ -30,7 +30,7 @@ InputPreferences.prototype = new EAction();
 
 InputPreferences.getPreferencesCategory = function() {
     if (!hasPlugin("PROTOOLS")) {
-        return [qsTr("General"), qsTr("Coordinate Format")];
+        return [qsTr("General", "PrefSectionTitle"), qsTr("Coordinate Format")];
     }
 };
 

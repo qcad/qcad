@@ -31,7 +31,7 @@ function SnapAuto(guiAction) {
 SnapAuto.prototype = new Snap();
 
 SnapAuto.getPreferencesCategory = function() {
-    return [qsTr("Snap"), qsTr("Auto Snap")];
+    return [qsTr("Snap", "PrefSectionTitle"), qsTr("Auto Snap")];
 };
 
 SnapAuto.applyPreferences = function(doc, mdiChild) {

@@ -27,7 +27,7 @@ function CommandLine(guiAction) {
 }
 
 CommandLine.getPreferencesCategory = function() {
-    return [ qsTr("Widgets"), qsTr("Command Line") ];
+    return [ qsTr("Widgets", "PrefSectionTitle"), qsTr("Command Line") ];
 };
 
 CommandLine.prototype = new EAction();

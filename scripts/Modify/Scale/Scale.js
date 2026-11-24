@@ -46,7 +46,7 @@ Scale.prototype = new Transform();
 Scale.includeBasePath = includeBasePath;
 
 Scale.getPreferencesCategory = function() {
-    return [qsTr("Modify"), qsTr("Scale")];
+    return [qsTr("Modify", "PrefSectionTitle"), qsTr("Scale")];
 };
 
 Scale.State = {

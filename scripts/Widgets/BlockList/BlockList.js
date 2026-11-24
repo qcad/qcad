@@ -786,7 +786,7 @@ BlockList.initStyle = function(upd) {
 };
 
 BlockList.getPreferencesCategory = function() {
-    return [ qsTr("Widgets"), qsTr("Block List") ];
+    return [ qsTr("Widgets", "PrefSectionTitle"), qsTr("Block List") ];
 };
 
 BlockList.applyPreferences = function(doc, mdiChild) {

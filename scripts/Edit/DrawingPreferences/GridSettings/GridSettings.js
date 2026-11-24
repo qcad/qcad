@@ -24,9 +24,9 @@ function GridSettings() {
 
 GridSettings.getPreferencesCategory = function(appPreferences) {
     if (appPreferences) {
-        return [ qsTr("Defaults for New Drawings"), qsTr("Grid") ];
+        return [ qsTr("Defaults for New Drawings", "PrefSectionTitle"), qsTr("Grid") ];
     }
-    return [ qsTr("General"), qsTr("Grid") ];
+    return [ qsTr("General", "PrefSectionTitle"), qsTr("Grid") ];
 };
 
 /**

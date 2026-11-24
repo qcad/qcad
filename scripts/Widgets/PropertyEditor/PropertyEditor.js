@@ -2114,7 +2114,7 @@ PropertyEditor.prototype = new EAction();
 PropertyEditor.varies = qsTr("*VARIES*");
 
 PropertyEditor.getPreferencesCategory = function() {
-    return [ qsTr("Widgets"), qsTr("Property Editor") ];
+    return [ qsTr("Widgets", "PrefSectionTitle"), qsTr("Property Editor") ];
 };
 
 PropertyEditor.initPreferences = function(pageWidget, calledByPrefDialog, document) {

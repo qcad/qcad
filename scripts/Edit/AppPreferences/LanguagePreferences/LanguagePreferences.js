@@ -68,7 +68,7 @@ LanguagePreferences.localLanguageName = {
 };
 
 LanguagePreferences.getPreferencesCategory = function() {
-    return [qsTr("Language Settings"), qsTr("Language")];
+    return [qsTr("Language Settings", "PrefSectionTitle"), qsTr("Language")];
 };
 
 LanguagePreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

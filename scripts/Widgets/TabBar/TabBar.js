@@ -21,7 +21,7 @@ function TabBar() {
 }
 
 TabBar.getPreferencesCategory = function() {
-    return [ qsTr("Widgets"), qsTr("Tab Bar") ];
+    return [ qsTr("Widgets", "PrefSectionTitle"), qsTr("Tab Bar") ];
 };
 
 TabBar.applyPreferences = function(doc, mdiChild) {

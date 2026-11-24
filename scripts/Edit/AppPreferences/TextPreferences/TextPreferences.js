@@ -27,7 +27,7 @@ function TextPreferences(guiAction) {
 TextPreferences.prototype = new EAction();
 
 TextPreferences.getPreferencesCategory = function() {
-    return [qsTr("Draw"), qsTr("Text")];
+    return [qsTr("Draw", "PrefSectionTitle"), qsTr("Text")];
 };
 
 TextPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

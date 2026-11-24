@@ -44,7 +44,7 @@ DefaultNavigation.WheelBehavior = {
 };
 
 DefaultNavigation.getPreferencesCategory = function() {
-    return [qsTr("Graphics View"), qsTr("Navigation")];
+    return [qsTr("Graphics View", "PrefSectionTitle"), qsTr("Navigation")];
 };
 
 DefaultNavigation.initPreferences = function(pageWidget, calledByPrefDialog, document) {

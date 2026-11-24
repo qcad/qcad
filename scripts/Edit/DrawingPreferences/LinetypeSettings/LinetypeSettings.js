@@ -22,9 +22,9 @@ function LinetypeSettings() {
 
 LinetypeSettings.getPreferencesCategory = function(appPreferences) {
     if (appPreferences) {
-        return [ qsTr("Defaults for New Drawings"), qsTr("Linetype") ];
+        return [ qsTr("Defaults for New Drawings", "PrefSectionTitle"), qsTr("Linetype") ];
     }
-    return [ qsTr("General"), qsTr("Linetype") ];
+    return [ qsTr("General", "PrefSectionTitle"), qsTr("Linetype") ];
 };
 
 LinetypeSettings.initPreferences = function(pageWidget, calledByPrefDialog, document, preferencesAction) {

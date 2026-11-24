@@ -21,7 +21,7 @@ function BehaviorPreferences() {
 }
 
 BehaviorPreferences.getPreferencesCategory = function() {
-    return [qsTr("Graphics View"), qsTr("Behavior")];
+    return [qsTr("Graphics View", "PrefSectionTitle"), qsTr("Behavior")];
 };
 
 BehaviorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

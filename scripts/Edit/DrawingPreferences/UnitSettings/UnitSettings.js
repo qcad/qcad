@@ -24,9 +24,9 @@ function UnitSettings() {
 
 UnitSettings.getPreferencesCategory = function(appPreferences) {
     if (appPreferences) {
-        return [ qsTr("Defaults for New Drawings"), qsTr("Drawing Unit") ];
+        return [ qsTr("Defaults for New Drawings", "PrefSectionTitle"), qsTr("Drawing Unit") ];
     }
-    return [ qsTr("General"), qsTr("Drawing Unit") ];
+    return [ qsTr("General", "PrefSectionTitle"), qsTr("Drawing Unit") ];
 };
 
 UnitSettings.initPreferences = function(pageWidget, calledByPrefDialog, document, preferencesAction) {

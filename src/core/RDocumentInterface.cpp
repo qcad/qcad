@@ -2516,6 +2516,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     QSet<RLayer::Id> changedLayerIds;
     bool blockHasChanged = false;
     bool blockXRefHasChanged = false;
+    bool xRefCollapseStatusHasChanged = false;
     bool layoutHasChanged = false;
     bool viewHasChanged = false;
     bool entityHasChanged = false;
@@ -2649,6 +2650,14 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         if (type==RS::ObjectBlock) {
             QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
             if (!block.isNull()) {
+
+                if (transaction.isType(RTransaction::LayerCollapseStatusChange)) {
+                    // only the collapsed status of an XRef node in the layer list
+                    // (stored in the XRef block) has changed: no block list update,
+                    // no XRef reload, update layer list (undo / redo):
+                    xRefCollapseStatusHasChanged = true;
+                    continue;
+                }
 
                 if (block->getId()!=document.getCurrentBlockId()) {
                     blockHasChanged = true;
@@ -2804,6 +2813,11 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
             mainWindow->notifyBlockListenersXRef();
             QList<RLayer::Id> layerIds;
             // update all layers:
+            mainWindow->notifyLayerListeners(this, layerIds);
+        }
+        else if (xRefCollapseStatusHasChanged && changedLayerIds.isEmpty()) {
+            QList<RLayer::Id> layerIds;
+            // update all layers (collapsed status of XRef nodes):
             mainWindow->notifyLayerListeners(this, layerIds);
         }
         if (viewHasChanged) {

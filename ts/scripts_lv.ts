@@ -403,6 +403,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Slānis</translation>
     </message>
     <message>
@@ -884,6 +885,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Fails</translation>
     </message>
     <message>
@@ -1072,6 +1074,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafikas skats</translation>
     </message>
     <message>
@@ -1374,6 +1377,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+789"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -1556,6 +1560,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -1609,6 +1614,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -2136,6 +2142,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafikas skats</translation>
     </message>
     <message>
@@ -2149,6 +2156,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Jaunu rasējumu noklusējuma iestatījumi</translation>
     </message>
     <message>
@@ -2159,6 +2167,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+2"/>
         <source>Printing</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Drukāšana</translation>
     </message>
     <message>
@@ -2197,6 +2206,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -2399,6 +2409,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -2634,6 +2645,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafikas skats</translation>
     </message>
     <message>
@@ -3125,6 +3137,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Jaunu rasējumu noklusējuma iestatījumi</translation>
     </message>
     <message>
@@ -3136,6 +3149,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Izmērs</translation>
     </message>
     <message>
@@ -5185,6 +5199,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Mainīt</translation>
     </message>
     <message>
@@ -5709,6 +5724,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafikas skats</translation>
     </message>
     <message>
@@ -6030,7 +6046,17 @@ jau ir sarakstā.</translation>
         <translation>Izmantot RHI grafikas skatu</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+28"/>
+        <source>Frames queued for display:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of frames the RHI graphics view can queue for display (macOS). 2 frames: the view follows the mouse with less delay. 3 frames: fewer dropped frames if the graphics card is slow compared to the drawing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Anti-aliasing on by default</source>
         <translation>Pēc noklusējuma ieslēgta izlīdzināšanas novēršana</translation>
     </message>
@@ -6100,7 +6126,7 @@ jau ir sarakstā.</translation>
         <translation>Maksimāli atlasītās vienības ar attēlotajiem atskaites punktiem:</translation>
     </message>
     <message>
-        <location line="-681"/>
+        <location line="-728"/>
         <source>Automatically use screen-based linetypes in model view</source>
         <translation>Automātiski izmantot ekrānā bāzētus līniju tipus modeļa skatā</translation>
     </message>
@@ -6120,7 +6146,7 @@ jau ir sarakstā.</translation>
         <translation>Koeficients, ko piemēro līniju biezumiem, kad tiek rādīti ekrānā bāzēti līniju biezumi (piem., 2 rāda ekrānā bāzētos līniju biezumus divreiz platākus)</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+190"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Vienmēr attēlot daudzlīnijas ar pielāgotu platumu, kas ir vismaz 1 pikseļa plats</translation>
     </message>
@@ -6436,6 +6462,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafikas skats</translation>
     </message>
     <message>
@@ -6444,7 +6471,17 @@ jau ir sarakstā.</translation>
         <translation>Izskats</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+32"/>
+        <source>2 (lower latency)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>3 (smoother under heavy load)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>The RHI graphics view always uses the full resolution of the display</source>
         <translation>RHI grafiskais skats vienmēr izmanto pilnu displeja izšķirtspēju</translation>
     </message>
@@ -6454,6 +6491,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Grafikas skats</translation>
     </message>
     <message>
@@ -6467,6 +6505,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Jaunu rasējumu noklusējuma iestatījumi</translation>
     </message>
     <message>
@@ -6478,6 +6517,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Vispārīgi</translation>
     </message>
     <message>
@@ -7734,6 +7774,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Vispārīgi</translation>
     </message>
     <message>
@@ -8159,6 +8200,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Vispārīgi</translation>
     </message>
     <message>
@@ -8200,6 +8242,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Valodas iestatījumi</translation>
     </message>
     <message>
@@ -8276,6 +8319,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Slānis</translation>
     </message>
     <message>
@@ -8371,6 +8415,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+200"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -9076,6 +9121,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Jaunu rasējumu noklusējuma iestatījumi</translation>
     </message>
     <message>
@@ -9087,6 +9133,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Vispārīgi</translation>
     </message>
     <message>
@@ -9145,6 +9192,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -9176,6 +9224,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Mainīt</translation>
     </message>
     <message>
@@ -9762,6 +9811,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Jaunu rasējumu noklusējuma iestatījumi</translation>
     </message>
     <message>
@@ -9772,6 +9822,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Printing</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Drukāšana</translation>
     </message>
     <message>
@@ -9903,6 +9954,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Rediģēt</translation>
     </message>
     <message>
@@ -10046,6 +10098,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Jaunu rasējumu noklusējuma iestatījumi</translation>
     </message>
     <message>
@@ -10057,6 +10110,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Vispārīgi</translation>
     </message>
     <message>
@@ -10728,6 +10782,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -10807,6 +10862,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Fails</translation>
     </message>
     <message>
@@ -10979,6 +11035,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Mainīt</translation>
     </message>
     <message>
@@ -11385,6 +11442,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Fails</translation>
     </message>
     <message>
@@ -11418,6 +11476,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Mainīt</translation>
     </message>
     <message>
@@ -11568,6 +11627,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Skriptu rakstīšana</translation>
     </message>
 </context>
@@ -12260,6 +12320,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Piesaiste</translation>
     </message>
     <message>
@@ -12475,6 +12536,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Piesaiste</translation>
     </message>
     <message>
@@ -12679,6 +12741,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -12766,6 +12829,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Fails</translation>
     </message>
     <message>
@@ -12823,6 +12887,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -13062,7 +13127,7 @@ jau ir sarakstā.</translation>
         <translation>Citi...</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+169"/>
         <source>Degree</source>
         <translation>Grāds</translation>
     </message>
@@ -13339,6 +13404,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Zīmēt</translation>
     </message>
     <message>
@@ -13360,6 +13426,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Vispārīgi</translation>
     </message>
     <message>
@@ -13486,6 +13553,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Logrīki</translation>
     </message>
     <message>
@@ -13533,6 +13601,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Mainīt</translation>
     </message>
     <message>
@@ -13630,6 +13699,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Mainīt</translation>
     </message>
     <message>
@@ -13819,6 +13889,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Vispārīgi</translation>
     </message>
     <message>
@@ -13855,6 +13926,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Jaunu rasējumu noklusējuma iestatījumi</translation>
     </message>
     <message>
@@ -13866,6 +13938,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Vispārīgi</translation>
     </message>
     <message>
@@ -14051,6 +14124,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Jaunu rasējumu noklusējuma iestatījumi</translation>
     </message>
     <message>
@@ -14061,6 +14135,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Layout</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Izkārtojums</translation>
     </message>
     <message>

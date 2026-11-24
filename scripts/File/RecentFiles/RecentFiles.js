@@ -32,7 +32,7 @@ RecentFiles.prototype.beginEvent = function() {
 };
 
 RecentFiles.getPreferencesCategory = function() {
-    return [ qsTr("File"), qsTr("Recent Files") ];
+    return [ qsTr("File", "PrefSectionTitle"), qsTr("Recent Files") ];
 };
 
 RecentFiles.hasShortcuts = function() {

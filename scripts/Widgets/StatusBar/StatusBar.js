@@ -29,7 +29,7 @@ function StatusBar(guiAction) {
 StatusBar.prototype = new EAction();
 
 StatusBar.getPreferencesCategory = function() {
-    return [qsTr("Widgets"), qsTr("Status Bar")];
+    return [qsTr("Widgets", "PrefSectionTitle"), qsTr("Status Bar")];
 };
 
 StatusBar.init = function(basePath) {

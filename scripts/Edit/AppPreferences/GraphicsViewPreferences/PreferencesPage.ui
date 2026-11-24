@@ -476,6 +476,53 @@
         </widget>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="RhiMaximumDrawableCountLayout">
+         <item>
+          <spacer name="RhiMaximumDrawableCountIndent">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="RhiMaximumDrawableCount_Label">
+           <property name="text">
+            <string>Frames queued for display:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="RhiMaximumDrawableCount">
+           <property name="toolTip">
+            <string>Number of frames the RHI graphics view can queue for display (macOS). 2 frames: the view follows the mouse with less delay. 3 frames: fewer dropped frames if the graphics card is slow compared to the drawing.</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="RhiMaximumDrawableCountStretch">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
         <widget class="QCheckBox" name="Antialiasing">
          <property name="text">
           <string>Anti-aliasing on by default</string>
@@ -1428,6 +1475,7 @@
   <tabstop>ZeroWeightWeight</tabstop>
   <tabstop>ApplyLineweightToPoints</tabstop>
   <tabstop>UseRhiGraphicsView</tabstop>
+  <tabstop>RhiMaximumDrawableCount</tabstop>
   <tabstop>Antialiasing</tabstop>
   <tabstop>HighResolutionGraphicsView</tabstop>
   <tabstop>Threads</tabstop>

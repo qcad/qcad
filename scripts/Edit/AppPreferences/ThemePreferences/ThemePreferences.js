@@ -32,7 +32,7 @@ ThemePreferences.getPreferencesCategory = function() {
         return undefined;
     }
 
-    return [qsTr("General"), qsTr("Theme")];
+    return [qsTr("General", "PrefSectionTitle"), qsTr("Theme")];
 };
 
 ThemePreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

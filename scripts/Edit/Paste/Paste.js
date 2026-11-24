@@ -49,7 +49,7 @@ Paste.State = {
 };
 
 Paste.getPreferencesCategory = function() {
-    return [qsTr("Edit"), qsTr("Paste")];
+    return [qsTr("Edit", "PrefSectionTitle"), qsTr("Paste")];
 };
 
 Paste.prototype.beginEvent = function() {

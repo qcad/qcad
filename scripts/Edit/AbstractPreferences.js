@@ -477,11 +477,16 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
             item = new QTreeWidgetItem(treeWidget, [ cat[0] ]);
             AbstractPreferences.initAccessibleItemText(item, cat[0]);
             treeWidget.addTopLevelItem(item);
-            if (cat.length === 1) {
-                item.setData(0, Qt.UserRole, i);
-            }
         } else {
             item = items[0];
+        }
+        if (cat.length === 1 && isNull(item.data(0, Qt.UserRole))) {
+            // page of a top level item (e.g. "File"), the item might have
+            // been created by a sub page already:
+            item.setData(0, Qt.UserRole, i);
+            if (className===defaultPage) {
+                item.setSelected(true);
+            }
         }
         var parent = item;
         for (var x = 1; x < cat.length; ++x) {

@@ -1010,6 +1010,35 @@ TextDialog.prototype.colorChanged = function(c) {
 
 TextDialog.prototype.cursorPositionChanged = function() {
     //alignmentChanged(textEdit->alignment());
+
+    // superscript / subscript never wraps around lines:
+    // a new, empty line (Enter, Shift+Enter) always starts with normal
+    // vertical alignment:
+    var cursor = this.textEdit.textCursor();
+    if (cursor.hasSelection()) {
+        return;
+    }
+
+    var va = this.textEdit.currentCharFormat().verticalAlignment();
+    if (va!=QTextCharFormat.AlignSuperScript && va!=QTextCharFormat.AlignSubScript) {
+        return;
+    }
+
+    // check if the cursor is on an empty line
+    // (paragraph and line separators are both line feeds in the plain text):
+    var text = this.textEdit.toPlainText();
+    var pos = cursor.position();
+    var atLineStart = (pos<=0 || text.charAt(pos-1)=="\n");
+    var atLineEnd = (pos>=text.length || text.charAt(pos)=="\n");
+    if (!atLineStart || !atLineEnd) {
+        return;
+    }
+
+    var fmt = new QTextCharFormat();
+    fmt.setVerticalAlignment(QTextCharFormat.AlignNormal);
+    // make sure an empty paragraph does not remember the alignment:
+    cursor.mergeBlockCharFormat(fmt);
+    this.textEdit.mergeCurrentCharFormat(fmt);
 };
 
 /**

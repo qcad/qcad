@@ -35,8 +35,14 @@ function SaveAs(guiAction) {
 SaveAs.prototype = new Save();
 
 SaveAs.getPreferencesCategory = function() {
-    return [ qsTr("File"), qsTr("Open/Save")];
+    return [ qsTr("File", "PrefSectionTitle"), qsTr("Save")];
 };
+
+// Note: the preferences of the pages File (scripts/File/PreferencesPage.ui),
+// File > Open (scripts/File/OpenFile/PreferencesPage.ui) and File > Save
+// (this add-on) are all stored under the settings group "SaveAs" for
+// backwards compatibility (SaveAs/UseSystemFileDialog,
+// SaveAs/OpenZeroSizeFile, SaveAs/UTF8, SaveAs/Filter, ...).
 
 SaveAs.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     var widgets = getWidgets(pageWidget);

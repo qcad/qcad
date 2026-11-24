@@ -21,5 +21,5 @@ function GridPreferences() {
 }
 
 GridPreferences.getPreferencesCategory = function() {
-    return [qsTr("Graphics View"), qsTr("Grid")];
+    return [qsTr("Graphics View", "PrefSectionTitle"), qsTr("Grid")];
 };

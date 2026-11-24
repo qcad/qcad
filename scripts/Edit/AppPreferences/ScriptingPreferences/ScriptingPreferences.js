@@ -21,6 +21,6 @@ function ScriptingPreferences() {
 }
 
 ScriptingPreferences.getPreferencesCategory = function() {
-    return [qsTr("Scripting")];
+    return [qsTr("Scripting", "PrefSectionTitle")];
 };
 

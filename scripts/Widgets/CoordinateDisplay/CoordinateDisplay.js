@@ -26,7 +26,7 @@ function CoordinateDisplay() {
 }
 
 CoordinateDisplay.getPreferencesCategory = function() {
-    return [ qsTr("Widgets"), qsTr("Coordinate Display") ];
+    return [ qsTr("Widgets", "PrefSectionTitle"), qsTr("Coordinate Display") ];
 };
 
 CoordinateDisplay.singleShot = undefined;

@@ -706,8 +706,39 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
     bool fontItalic = textDocument.defaultFont().italic();
     bool fontUnderline = textDocument.defaultFont().underline();
     double fontHeight = textDocument.defaultFont().pointSizeF() / fontHeightFactor;
-    QTextCharFormat::VerticalAlignment fontVerticalAlignment = QTextCharFormat::AlignNormal;
-    QTextCharFormat::VerticalAlignment previousVerticalAlignment = QTextCharFormat::AlignNormal;
+    // stacked text state (superscript / subscript) that is currently open in the output:
+    QTextCharFormat::VerticalAlignment stackState = QTextCharFormat::AlignNormal;
+
+    // emits the markup needed to switch the stacked text state of the output
+    // to the given state:
+    auto setStackState = [&ret, &stackState](QTextCharFormat::VerticalAlignment target) {
+        if (target!=QTextCharFormat::AlignSuperScript && target!=QTextCharFormat::AlignSubScript) {
+            target = QTextCharFormat::AlignNormal;
+        }
+        if (target==stackState) {
+            return;
+        }
+        if (stackState==QTextCharFormat::AlignNormal) {
+            ret += "\\S";
+            if (target==QTextCharFormat::AlignSubScript) {
+                ret += "^";
+            }
+        }
+        else if (stackState==QTextCharFormat::AlignSuperScript) {
+            ret += "^";
+            if (target==QTextCharFormat::AlignNormal) {
+                ret += ";";
+            }
+        }
+        else if (stackState==QTextCharFormat::AlignSubScript) {
+            ret += ";";
+            if (target==QTextCharFormat::AlignSuperScript) {
+                ret += "\\S";
+            }
+        }
+        stackState = target;
+    };
+
     // initial color is color of entity:
     RColor fontColor = initialColor;
     int blockCounter = 0;
@@ -719,6 +750,8 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
     for (QTextBlock block = textDocument.firstBlock(); block.isValid(); block = block.next()) {
         // new paragraph:
         if (blockCounter!=0) {
+            // line feeds are never allowed inside stacked text (\S...;):
+            setStackState(QTextCharFormat::AlignNormal);
             ret += "\\P";
         }
 
@@ -739,7 +772,6 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             bool underlineChanged = false;
             bool colorChanged = false;
             bool heightChanged = false;
-            bool verticalAlignmentChanged = false;
 
             QTextCharFormat format = fragment.charFormat();
             QString ff = RS::getFontFamily(format);
@@ -765,13 +797,6 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             if (format.fontUnderline()!=fontUnderline) {
                 fontUnderline = format.fontUnderline();
                 underlineChanged = true;
-            }
-
-            // detect vertical alignment change (subscript / superscript):
-            if (format.verticalAlignment()!=fontVerticalAlignment) {
-                previousVerticalAlignment = fontVerticalAlignment;
-                fontVerticalAlignment = format.verticalAlignment();
-                verticalAlignmentChanged = true;
             }
 
             // detect font family change:
@@ -846,55 +871,42 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
                 ret += QString("\\H%1;").arg(fontHeight);
             }
 
-            // handle stacked text:
-            if (verticalAlignmentChanged) {
-                if (previousVerticalAlignment==QTextCharFormat::AlignNormal) {
-                    ret += "\\S";
-                    if (fontVerticalAlignment==QTextCharFormat::AlignSubScript) {
-                        ret += "^";
-                    }
+            // split at line separators (shift-enter):
+            // line feeds must never end up inside stacked text (\S...;):
+            QStringList parts = fragment.text().split(QChar(0x2028));
+            for (int i=0; i<parts.length(); i++) {
+                if (i!=0) {
+                    // close stacked text before line feed:
+                    setStackState(QTextCharFormat::AlignNormal);
+                    ret += "\\P";
                 }
-                else if (previousVerticalAlignment==QTextCharFormat::AlignSuperScript) {
-                    ret += "^";
-                    if (fontVerticalAlignment==QTextCharFormat::AlignNormal) {
-                        ret += ";";
-                    }
+
+                QString text = parts[i];
+                if (text.isEmpty()) {
+                    continue;
                 }
-                else if (previousVerticalAlignment==QTextCharFormat::AlignSubScript) {
-                    ret += ";";
-                    if (fontVerticalAlignment==QTextCharFormat::AlignSuperScript) {
-                        ret += "\\S";
-                    }
-                }
+
+                // handle stacked text (superscript / subscript):
+                setStackState(format.verticalAlignment());
+
+                // backslash:
+                text.replace("\\", "\\\\");
+                // curly brakets:
+                text.replace('{', "\\{");
+                text.replace('}', "\\}");
+                // spaces:
+                text.replace(' ', "\\~");
+                text.replace("&nbsp;", "\\~");
+                //text.replace(QChar(QChar::Nbsp), "\\~");
+                // degree (%%d):
+                text.replace(RTextRenderer::chDegree, RTextRenderer::escDegreeStr);
+                // plus minus (%%p):
+                text.replace(RTextRenderer::chPlusMinus, RTextRenderer::escPlusMinusStr);
+                // diameter (%%d):
+                text.replace(RTextRenderer::chDiameter, RTextRenderer::escDiameterStr);
+
+                ret += text;
             }
-
-            QString text = fragment.text();
-
-            //qDebug() << "text frag:";
-            //RDebug::hexDump(text);
-            //qDebug() << "text fragment: " << text;
-//            qDebug() << "  weight: " << format.fontWeight();
-//            qDebug() << "  family: " << RS::getFontFamily(format);
-//            qDebug() << "  italic: " << format.fontItalic();
-//            qDebug() << "  color: " << format.foreground();
-
-            // backslash:
-            text.replace("\\", "\\\\");
-            // replace line separator (shift-enter):
-            text.replace(QChar(0x2028), "\\P");
-            // curly brakets:
-            text.replace('{', "\\{");
-            text.replace('}', "\\}");
-            // spaces:
-            text.replace(' ', "\\~");
-            text.replace("&nbsp;", "\\~");
-            //text.replace(QChar(QChar::Nbsp), "\\~");
-            // degree (%%d):
-            text.replace(RTextRenderer::chDegree, RTextRenderer::escDegreeStr);
-            // plus minus (%%p):
-            text.replace(RTextRenderer::chPlusMinus, RTextRenderer::escPlusMinusStr);
-            // diameter (%%d):
-            text.replace(RTextRenderer::chDiameter, RTextRenderer::escDiameterStr);
 
             /*
             // unicode:
@@ -910,16 +922,11 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             }
             text = t;
             */
-            ret += text;
         }
     }
 
-    if (fontVerticalAlignment==QTextCharFormat::AlignSuperScript) {
-        ret += "^;";
-    }
-    else if (fontVerticalAlignment==QTextCharFormat::AlignSubScript) {
-        ret += ";";
-    }
+    // close stacked text at the end:
+    setStackState(QTextCharFormat::AlignNormal);
 
     //qDebug() << "ret:";
     //RDebug::hexDump(ret);

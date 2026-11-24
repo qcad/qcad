@@ -408,6 +408,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Warstwa</translation>
     </message>
     <message>
@@ -889,6 +890,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="+0"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Plik</translation>
     </message>
     <message>
@@ -1072,6 +1074,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widok graficzny</translation>
     </message>
     <message>
@@ -1382,6 +1385,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="-149"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -1556,6 +1560,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -1609,6 +1614,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -2136,7 +2142,8 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Widok grafiki</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Widok graficzny</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2149,6 +2156,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Domyślne wartości dla nowych rysunków</translation>
     </message>
     <message>
@@ -2159,7 +2167,8 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>Druk</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Drukowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2234,6 +2243,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="-461"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -2419,6 +2429,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -2634,7 +2645,8 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
-        <translation>Widok grafiki</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Widok graficzny</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -3125,6 +3137,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Domyślne wartości dla nowych rysunków</translation>
     </message>
     <message>
@@ -3136,6 +3149,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Wymiar</translation>
     </message>
     <message>
@@ -5185,7 +5199,8 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation>Zmodyfikuj</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Modyfikowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -5709,7 +5724,8 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Widok grafiki</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Widok graficzny</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6015,7 +6031,17 @@ jest już na liście.</translation>
         <translation>Użyj widoku graficznego RHI</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+28"/>
+        <source>Frames queued for display:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of frames the RHI graphics view can queue for display (macOS). 2 frames: the view follows the mouse with less delay. 3 frames: fewer dropped frames if the graphics card is slow compared to the drawing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Użyj pełnej rozdzielczości dla wyświetlacza Retina / wysokiej rozdzielczości</translation>
     </message>
@@ -6051,7 +6077,7 @@ jest już na liście.</translation>
         <translation>Trwała selekcja</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1188"/>
         <source>Color lightness threshold:</source>
         <translation>Próg jasności koloru:</translation>
     </message>
@@ -6076,7 +6102,7 @@ jest już na liście.</translation>
         <translation>Wyświetlanie i wydajność</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+80"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Zawsze renderuj polilinie o niestandardowej szerokości co najmniej 1 piksela</translation>
     </message>
@@ -6091,7 +6117,7 @@ jest już na liście.</translation>
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
-        <location line="-459"/>
+        <location line="-506"/>
         <source>Linetypes and Lineweights</source>
         <translation>Rodzaje i szerokości linii</translation>
     </message>
@@ -6101,7 +6127,7 @@ jest już na liście.</translation>
         <translation>Domyślna szerokość linii:</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+230"/>
         <source>Anti-aliasing on by default</source>
         <translation>Domyślnie włączony antyaliasing</translation>
     </message>
@@ -6436,7 +6462,8 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Widok grafiki</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Widok graficzny</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6444,7 +6471,17 @@ jest już na liście.</translation>
         <translation>Wygląd</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+32"/>
+        <source>2 (lower latency)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>3 (smoother under heavy load)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>The RHI graphics view always uses the full resolution of the display</source>
         <translation>Widok graficzny RHI zawsze używa pełnej rozdzielczości wyświetlacza</translation>
     </message>
@@ -6454,6 +6491,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widok graficzny</translation>
     </message>
     <message>
@@ -6467,6 +6505,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Domyślne wartości dla nowych rysunków</translation>
     </message>
     <message>
@@ -6478,6 +6517,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ogólne</translation>
     </message>
     <message>
@@ -7734,6 +7774,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ogólne</translation>
     </message>
     <message>
@@ -8159,6 +8200,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ogólne</translation>
     </message>
     <message>
@@ -8200,6 +8242,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ustawienia języka</translation>
     </message>
     <message>
@@ -8276,6 +8319,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Warstwa</translation>
     </message>
     <message>
@@ -8371,6 +8415,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+200"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -9076,6 +9121,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Domyślne wartości dla nowych rysunków</translation>
     </message>
     <message>
@@ -9087,6 +9133,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ogólne</translation>
     </message>
     <message>
@@ -9145,6 +9192,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -9176,7 +9224,8 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation>Zmodyfikuj</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Modyfikowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9762,6 +9811,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Domyślne wartości dla nowych rysunków</translation>
     </message>
     <message>
@@ -9772,7 +9822,8 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>Druk</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Drukowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9908,6 +9959,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Edycja</translation>
     </message>
     <message>
@@ -10046,7 +10098,8 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Domyślne dla nowych rysunków</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Domyślne wartości dla nowych rysunków</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10057,6 +10110,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ogólne</translation>
     </message>
     <message>
@@ -10653,6 +10707,7 @@ jest już na liście.</translation>
     <message>
         <location line="+425"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -10807,6 +10862,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Plik</translation>
     </message>
     <message>
@@ -10974,7 +11030,8 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation>Zmodyfikuj</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Modyfikowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11385,6 +11442,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Plik</translation>
     </message>
     <message>
@@ -11413,7 +11471,8 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
-        <translation>Zmodyfikuj</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Modyfikowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11568,6 +11627,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Skrypty</translation>
     </message>
 </context>
@@ -12265,6 +12325,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Przyciąganie</translation>
     </message>
     <message>
@@ -12475,6 +12536,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Przyciąganie</translation>
     </message>
     <message>
@@ -12679,6 +12741,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -12736,6 +12799,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Plik</translation>
     </message>
     <message>
@@ -12823,6 +12887,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -13062,7 +13127,7 @@ jest już na liście.</translation>
         <translation>Inne...</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+169"/>
         <source>Degree</source>
         <translation>Stopień</translation>
     </message>
@@ -13339,6 +13404,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Rysowanie</translation>
     </message>
     <message>
@@ -13360,6 +13426,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ogólne</translation>
     </message>
     <message>
@@ -13486,6 +13553,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Widżety</translation>
     </message>
     <message>
@@ -13528,6 +13596,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Modyfikowanie</translation>
     </message>
     <message>
@@ -13630,7 +13699,8 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation>Modyfikacja</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Modyfikowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13819,6 +13889,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ogólne</translation>
     </message>
     <message>
@@ -13840,6 +13911,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Domyślne wartości dla nowych rysunków</translation>
     </message>
     <message>
@@ -13851,6 +13923,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>General</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Ogólne</translation>
     </message>
     <message>
@@ -14051,6 +14124,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Domyślne wartości dla nowych rysunków</translation>
     </message>
     <message>
@@ -14061,6 +14135,7 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Layout</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Układ</translation>
     </message>
     <message>

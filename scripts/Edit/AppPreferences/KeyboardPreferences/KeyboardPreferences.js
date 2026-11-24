@@ -21,7 +21,7 @@ function KeyboardPreferences() {
 }
 
 KeyboardPreferences.getPreferencesCategory = function() {
-    return [qsTr("General"), qsTr("Keyboard")];
+    return [qsTr("General", "PrefSectionTitle"), qsTr("Keyboard")];
 };
 
 KeyboardPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

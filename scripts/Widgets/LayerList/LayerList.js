@@ -197,7 +197,7 @@ function LayerList(guiAction) {
 LayerList.prototype = new EAction();
 
 LayerList.getPreferencesCategory = function() {
-    return [ qsTr("Widgets"), qsTr("Layer List") ];
+    return [ qsTr("Widgets", "PrefSectionTitle"), qsTr("Layer List") ];
 };
 
 LayerList.applyPreferences = function(doc, mdiChild) {

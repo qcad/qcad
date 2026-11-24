@@ -408,6 +408,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Слой</translation>
     </message>
     <message>
@@ -889,6 +890,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+0"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Файл</translation>
     </message>
     <message>
@@ -1072,6 +1074,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Графический просмотр</translation>
     </message>
     <message>
@@ -1382,6 +1385,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-149"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -1556,6 +1560,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -1609,6 +1614,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -2136,6 +2142,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Графический просмотр</translation>
     </message>
     <message>
@@ -2149,6 +2156,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
@@ -2159,6 +2167,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+2"/>
         <source>Printing</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Печать</translation>
     </message>
     <message>
@@ -2197,6 +2206,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -2419,6 +2429,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -2634,6 +2645,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Графический просмотр</translation>
     </message>
     <message>
@@ -3125,6 +3137,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
@@ -3136,6 +3149,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Размер</translation>
     </message>
     <message>
@@ -5185,6 +5199,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Изменить</translation>
     </message>
     <message>
@@ -5709,6 +5724,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Графический просмотр</translation>
     </message>
     <message>
@@ -6015,7 +6031,17 @@ is already in the list.</source>
         <translation>Использовать графический вид RHI</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+28"/>
+        <source>Frames queued for display:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of frames the RHI graphics view can queue for display (macOS). 2 frames: the view follows the mouse with less delay. 3 frames: fewer dropped frames if the graphics card is slow compared to the drawing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Использовать полное разрешение для дисплея Retina / дисплея с высоким разрешением</translation>
     </message>
@@ -6061,7 +6087,7 @@ is already in the list.</source>
         <translation>Постоянное выделение</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1188"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -6086,7 +6112,7 @@ is already in the list.</source>
         <translation>Отображение и производительность</translation>
     </message>
     <message>
-        <location line="+372"/>
+        <location line="+419"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Отображать объекты с более чем N тире как непрерывные:</translation>
     </message>
@@ -6096,7 +6122,7 @@ is already in the list.</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
-        <location line="-191"/>
+        <location line="-238"/>
         <source>Linetypes and Lineweights</source>
         <translation>Типы и вес линий</translation>
     </message>
@@ -6106,7 +6132,7 @@ is already in the list.</source>
         <translation>Вес линии по умолчанию:</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+244"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Всегда отображать полилинии с пользовательской шириной не менее 1 пикселя</translation>
     </message>
@@ -6436,6 +6462,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Графический просмотр</translation>
     </message>
     <message>
@@ -6444,7 +6471,17 @@ is already in the list.</source>
         <translation>Внешний вид</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+32"/>
+        <source>2 (lower latency)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>3 (smoother under heavy load)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>The RHI graphics view always uses the full resolution of the display</source>
         <translation>Графический просмотр RHI всегда использует полное разрешение экрана</translation>
     </message>
@@ -6454,6 +6491,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Графический просмотр</translation>
     </message>
     <message>
@@ -6467,6 +6505,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
@@ -6478,7 +6517,8 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Основное</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Общее</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -7734,7 +7774,8 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
-        <translation>Основное</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Общее</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8159,7 +8200,8 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation>Основное</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Общее</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8200,6 +8242,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Параметры языка</translation>
     </message>
     <message>
@@ -8276,6 +8319,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Слой</translation>
     </message>
     <message>
@@ -8371,6 +8415,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+200"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -9076,6 +9121,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
@@ -9087,7 +9133,8 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Основное</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Общее</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
@@ -9145,6 +9192,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -9176,6 +9224,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Изменить</translation>
     </message>
     <message>
@@ -9762,6 +9811,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
@@ -9772,6 +9822,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Printing</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Печать</translation>
     </message>
     <message>
@@ -9908,6 +9959,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Edit</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Правка</translation>
     </message>
     <message>
@@ -10046,6 +10098,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
@@ -10057,7 +10110,8 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Основное</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Общее</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
@@ -10685,6 +10739,7 @@ is already in the list.</source>
     <message>
         <location line="-108"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -10807,6 +10862,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Файл</translation>
     </message>
     <message>
@@ -10974,6 +11030,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Изменить</translation>
     </message>
     <message>
@@ -11385,6 +11442,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Файл</translation>
     </message>
     <message>
@@ -11413,6 +11471,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Изменить</translation>
     </message>
     <message>
@@ -11568,6 +11627,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Сценарии</translation>
     </message>
 </context>
@@ -12260,6 +12320,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Прилипание</translation>
     </message>
     <message>
@@ -12475,6 +12536,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Прилипание</translation>
     </message>
     <message>
@@ -12679,6 +12741,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -12736,6 +12799,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Файл</translation>
     </message>
     <message>
@@ -12823,6 +12887,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -13062,7 +13127,7 @@ is already in the list.</source>
         <translation>Другие...</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+169"/>
         <source>Degree</source>
         <translation>Градусы</translation>
     </message>
@@ -13339,6 +13404,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Черчение</translation>
     </message>
     <message>
@@ -13360,7 +13426,8 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
-        <translation>Основное</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Общее</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13486,6 +13553,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Виджеты</translation>
     </message>
     <message>
@@ -13528,6 +13596,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Изменить</translation>
     </message>
     <message>
@@ -13630,6 +13699,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Изменить</translation>
     </message>
     <message>
@@ -13819,7 +13889,8 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation>Основное</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Общее</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13840,6 +13911,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
@@ -13851,7 +13923,8 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Основное</translation>
+        <comment>PrefSectionTitle</comment>
+        <translation>Общее</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -14051,6 +14124,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
@@ -14061,6 +14135,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Layout</source>
+        <comment>PrefSectionTitle</comment>
         <translation>Макет</translation>
     </message>
     <message>

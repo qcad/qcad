@@ -27,7 +27,7 @@ function ToolBarPreferences(guiAction) {
 ToolBarPreferences.prototype = new EAction();
 
 ToolBarPreferences.getPreferencesCategory = function() {
-    return [qsTr("Widgets"), qsTr("Toolbars")];
+    return [qsTr("Widgets", "PrefSectionTitle"), qsTr("Toolbars")];
 };
 
 /**
