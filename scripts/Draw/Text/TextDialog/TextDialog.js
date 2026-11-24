@@ -125,7 +125,7 @@ TextDialog.prototype.show =  function(textDataIn) {
 
     this.actionOk = new QAction(this.dialog);
     this.actionOk.shortcut = new QKeySequence("Ctrl+Return");
-    this.actionOk.triggered.connect(this, this.dialog.accept);
+    this.actionOk.triggered.connect(this.dialog, this.dialog.accept);
     this.dialog.addAction(this.actionOk);
 
     // initialize dialog controls:
