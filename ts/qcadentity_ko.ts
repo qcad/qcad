@@ -20,7 +20,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>센터</translation>
+        <translation>중심</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -225,7 +225,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation>반경</translation>
+        <translation>반지름</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -326,28 +326,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>1번 라인 시작</translation>
+        <translation>선 1 시작</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>2번 라인 시작</translation>
+        <translation>선 2 시작</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>1번 라인 끝</translation>
+        <translation>선 1 끝</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>2번 라인 끝</translation>
+        <translation>선 2 끝</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -383,21 +383,21 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation>치수 라인</translation>
+        <translation>치수선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation>확장 포인트 1</translation>
+        <translation>연장점 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation>확장 포인트 2</translation>
+        <translation>연장점 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -418,7 +418,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation>정의 포인트</translation>
+        <translation>정의점</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -435,7 +435,7 @@
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation>라벨</translation>
+        <translation>레이블</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -446,7 +446,7 @@
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation>상한선</translation>
+        <translation>상한</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -458,7 +458,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation>정의 포인트</translation>
+        <translation>정의점</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -495,7 +495,7 @@
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>자동 라벨</translation>
+        <translation>자동 레이블</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -510,7 +510,7 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>자동 라벨 위치</translation>
+        <translation>자동 레이블 위치</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
@@ -542,7 +542,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation>시작 지점</translation>
+        <translation>시작점</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -552,7 +552,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation>엔드 포인트</translation>
+        <translation>끝점</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -565,7 +565,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation>포인트 1</translation>
+        <translation>점 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -578,7 +578,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation>포인트 2</translation>
+        <translation>점 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -591,7 +591,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation>포인트 3</translation>
+        <translation>점 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -604,7 +604,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation>포인트 4</translation>
+        <translation>점 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
@@ -711,7 +711,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation>버텍스</translation>
+        <translation>정점</translation>
     </message>
     <message>
         <location line="+227"/>
@@ -795,7 +795,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation>중간 지점</translation>
+        <translation>중간점</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
@@ -853,18 +853,18 @@
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
-        <translation>사이즈 1</translation>
+        <translation>크기 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
-        <translation>사이즈 2</translation>
+        <translation>크기 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation>글로벌 Z</translation>
+        <translation>전역 Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -884,7 +884,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation>두 번째 포인트</translation>
+        <translation>두 번째 점</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -917,14 +917,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation>컨트롤 포인트</translation>
+        <translation>조정점</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>핏 포인트</translation>
+        <translation>맞춤점</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -939,26 +939,26 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation>탄젠트 시작 사용</translation>
+        <translation>시작 접선 사용</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>탄젠트 시작</translation>
+        <translation>시작 접선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation>끝 탄젠트 사용</translation>
+        <translation>끝 접선 사용</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation>탄젠트 끝</translation>
+        <translation>끝 접선</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
