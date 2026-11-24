@@ -101,7 +101,7 @@
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation>라이트이어</translation>
+        <translation>광년</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -139,12 +139,12 @@
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation>시안</translation>
+        <translation>청록색</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation>마젠타</translation>
+        <translation>자홍색</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -154,7 +154,7 @@
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation>오렌지</translation>
+        <translation>주황색</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -174,12 +174,12 @@
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>짙은 청록색</translation>
+        <translation>진한 청록색</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation>다크 마젠타</translation>
+        <translation>진한 자홍색</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -189,7 +189,7 @@
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation>블랙</translation>
+        <translation>검은색</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -227,7 +227,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>라인 타입 스케일</translation>
+        <translation>선종류 축척</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -248,7 +248,7 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>숨겨진</translation>
+        <translation>숨김</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -415,7 +415,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>치수 선 간격</translation>
+        <translation>치수선 간격</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -450,7 +450,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>틱 크기</translation>
+        <translation>눈금 크기</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -470,7 +470,7 @@
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation>제로 억제</translation>
+        <translation>0 억제</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -485,12 +485,12 @@
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>각도 제로 억제</translation>
+        <translation>각도 0 억제</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>아키텍처 틱</translation>
+        <translation>건축 눈금</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -532,12 +532,12 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation>라인 타입</translation>
+        <translation>선종류</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>라인 타입 스케일</translation>
+        <translation>선종류 축척</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -596,7 +596,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
-        <translation>위</translation>
+        <translation>상단</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -636,7 +636,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>접힌</translation>
+        <translation>접힘</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -677,7 +677,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation>삽입 베이스</translation>
+        <translation>삽입 기준점</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -717,7 +717,7 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation>개체 보이지 않음</translation>
+        <translation>객체 보이지 않음</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -769,7 +769,7 @@
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation>X 스케일</translation>
+        <translation>X 축척</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -800,12 +800,12 @@
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation>세로</translation>
+        <translation>수직</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>뒤로</translation>
+        <translation>반대로</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -820,20 +820,20 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>켜기</translation>
+        <translation>켜짐</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>보기 중심</translation>
+        <translation>뷰 중심</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>보기 대상</translation>
+        <translation>뷰 대상</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -843,7 +843,7 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation>프로즌 레이어</translation>
+        <translation>동결된 레이어</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -874,7 +874,7 @@
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation>메트릭</translation>
+        <translation>미터법</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -897,133 +897,133 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation>연속</translation>
+        <translation>실선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation>테두리</translation>
+        <translation>경계선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>센터</translation>
+        <translation>중심선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>대시 도트</translation>
+        <translation>일점쇄선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation>대시</translation>
+        <translation>파선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>나누기</translation>
+        <translation>이점쇄선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation>도트</translation>
+        <translation>점선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>숨겨진</translation>
+        <translation>숨은선</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation>팬텀</translation>
+        <translation>가상선</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>ISO 대시</translation>
+        <translation>ISO 파선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation>ISO 대시 공백</translation>
+        <translation>ISO 간격 파선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO 롱 대시 도트</translation>
+        <translation>ISO 1점 장쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation>ISO 롱 대시 더블 도트</translation>
+        <translation>ISO 2점 장쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO 롱 대시 트리플 도트</translation>
+        <translation>ISO 3점 장쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation>ISO 도트</translation>
+        <translation>ISO 점선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO 롱 대시 숏 대시</translation>
+        <translation>ISO 장단 쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO 롱 대시 더블 쇼트 대시</translation>
+        <translation>ISO 장 2단 쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation>ISO 대시 도트</translation>
+        <translation>ISO 1점 쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation>ISO 더블 대시 포인트</translation>
+        <translation>ISO 1점 2줄 쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation>ISO 대시 더블 도트</translation>
+        <translation>ISO 2점 쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation>ISO 이중 대시 이중 점</translation>
+        <translation>ISO 2점 2줄 쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation>ISO 대시 트리플 도트</translation>
+        <translation>ISO 3점 쇄선</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation>ISO 더블 대시 트리플 점</translation>
+        <translation>ISO 3점 2줄 쇄선</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1038,7 +1038,7 @@
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation>가스 라인</translation>
+        <translation>가스관</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1053,17 +1053,17 @@
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>트랙</translation>
+        <translation>선로</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>펜스라인 1</translation>
+        <translation>울타리선 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation>펜스라인 2</translation>
+        <translation>울타리선 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1098,7 +1098,7 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation>커뮤니케이션</translation>
+        <translation>통신</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>오버헤드 전력</translation>
+        <translation>가공 전력선</translation>
     </message>
     <message>
         <location line="+2"/>

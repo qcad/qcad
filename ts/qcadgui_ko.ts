@@ -54,7 +54,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>엔티티에</translation>
+        <translation>엔티티 위</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -64,17 +64,17 @@
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation>탄젠셜</translation>
+        <translation>접선</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation>센터</translation>
+        <translation>중심</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>가운데</translation>
+        <translation>중간점</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -84,7 +84,7 @@
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation>참조</translation>
+        <translation>기준점</translation>
     </message>
     <message>
         <location line="+3"/>
